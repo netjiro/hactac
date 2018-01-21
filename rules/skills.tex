@@ -1,0 +1,1847 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%S K I L L S ,   A B I L I T I E S ,   E T C
+%-------------------------------------------
+
+\cleardoublepage
+
+\phantomsection\addcontentsline{toc}{chapter}{Skills}
+\chapter*{Skills}
+\chaptermark{skills}
+
+
+We'll be using the term "skill" as a compound term for all skills, traits, powers, and abilities that are not character based or expanded traits. This includes regular skills like literacy and counting, weapon skills, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Magical spells, mental and mystical powers, etc, all baked into one.
+
+All skills carry a "skill cost factor" (SCF), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
+\\
+The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
+E.g: training bow to 4 is (1.2 * 4*4) = 19.2 \ca 19xp. \\
+E.g: increasing bow from 4 to 6 is (1.2 * (36-16)) = 24xp. \\
+\\
+Skill costs vary, but the general idea is something like this: \\
+Weapon and main battle skills cost $1.0 \cdot lvl^2$. \\
+Special high power tactical skills cost $1.0 \cdot lvl^2$ or more. \\
+Low power tactical skills and useful miscellanea costs $0.7 \cdot lvl^2$. \\
+General rpg support skills cost $0.5 \cdot lvl^2$. \\
+Basic combat maneuvers cost 10xp. \\
+Low power abilities cost 20xp. \\
+High power abilities cost 30xp. \\
+Massive abilities cost 50xp or more.
+
+\
+
+% NOPE: childhoods and professions are removed for now.
+%Some basic skills are pre-packaged in various starter packs, such as "normal %childhood", "spoiled brat", "slum scum", and such things.
+%
+%\
+%
+Some skills are difficult to come by. They might only be trainable from a specific master, or learned from a musty old book somewhere, or gained by eating or drinking something strange which was bought or found and then paying the XP. Exotic skills and abilities can therefore be difficult to come by, while basic skills can be learned almost anywhere.
+
+The skills pertaining to magic can be found in the "magic" section. %magic.tex
+E.g: magic, power casting, fast magic, and spells
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% combat skills
+%--------------
+
+\phantomsection\addcontentsline{toc}{section}{combat}
+\section*{Combat skills}
+
+The combat skills are generally weapon skills or skills that allow for doing more damage, combining attacks, etc. Further combat oriented support skills, attack maneuvers, etc are found in the maneuvers - attack and abilities sections.
+
+\
+
+\openskillslist
+
+\begin{samepage}
+\skill{Skill: \emph{weapon class}} weapon skills in a weapon class. The chosen level of simplification is that all weapons in any given "class" can be used with the same skill.
+
+\begin{verbatim}
+sword          scf 1.0
+knife          scf 0.7
+axe            scf 0.9
+hammer         scf 0.8
+club           scf 0.6
+staff          scf 0.8
+spear          scf 0.8
+flail          scf 1.0
+shield         scf 0.7
+throw          scf 0.8 (e.g: knife, axe, javelin, improvised)
+bow            scf 1.2
+crossbow       scf 0.8
+\end{verbatim}
+%sling          scf 1.0
+\end{samepage}
+
+Knife is a limited variant of the sword skill. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3.
+
+Training in the knife skill can be converted to training in the sword skill over a weekend course, where $sword = \sqrt{(knife)^2 \cdot 0.7}$ round down, loosing the excess xp. Such courses are available in most larger cities and cost a couple of gold.
+
+Clubs, hammers and axes are somewhat similar.\\
+Axe skill allows the use of: hammers mod-1, clubs mod-1.\\
+Hammer skill allows use of: clubs mod-1, axes mod-2.\\
+Club skill allows use of: hammers mod-2, axes mod-3.
+
+The staff and spear skills are mutually mod-1.
+
+All other melee weapons are mutually mod-3.
+
+All ranged weapons are mutually mod-3.
+
+\emph{But:} similarity modifies never allows for the "other" weapons or weapon groups at levels greater than 9. So, even if someone has axe 14 he will be limited to hammer 9 due to this cap.
+
+Starting to train a new weapon skill while knowing a similar one should also start from the
+
+Melee weapons gives the user the ability to make "attack" and "parry" actions, while ranged weapons only allows for "attack" actions, and cannot be used for parrying.
+
+Most weapons have one or more optional attack/defend action alternatives, but they usually require further XP expenditures to learn. Most cost 5xp and simply gives minor alteration to the weapon stats, e.g. dam-1 pen+1.
+
+
+\skill{Skill cost special "speciality weapon X":} allows to use speciality weapons without the mod-1 that they otherwise impose. Each speciality weapon requires it's own speciality skill. They usually cost 5xp.
+
+
+\skill{Skill scf 0.5 "brawl":} allows for unarmed combat. A character generally has two fists and one kick to use. This can be used with the skills "double" and "triple". Orcs and goblins also have claw and bite attacks.\\
+Fists do str/3 round down damage, fast+1, first two attacks are free \\
+Kicks do 2+str/3 round down damage \\
+Unarmed parry with hands/arms/legs are parry-6 against weapons, or parry-3 if opponent is unarmed. Unarmed parry is always deflect but without the additional deflect mod-3. All parried weapon hits will still do 50\% of the rolled damage, round down, and all parried unarmed hits will still do 33\% of the rolled damage, round down. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3. \\
+First two attacks require no stamina.
+
+
+\skill{Skill scf 1.3 "martial arts":} allows for more effective unarmed combat. A character generally has two fists and two kicks to use. This can be combined with the skills "quadruple", "triple", "double". \\
+Fists do (str+dex)/3 round down damage, toparry-3, toavoid-3, fast+1. \\
+Kicks do 2+(str+dex)/3 round down damage.\\
+First two fists or first kick do  not require stamina. \\
+Martial arts parrying is parry-3 against weapons, or parry-0 if opponent is unarmed. Martial arts parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage, round down. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
+
+\skill{Skill scf 0.5 "lightning strike" (martial arts upgrade):} allows for very fast fist and kick attacks but at the cost of a dam-1 penalty. Fist attacks are fast+2 (1ap) instead of fast+1 (2ap), and kick attacks are fast+1 (2ap) instead of normal (3ap)..
+
+A character cannot have a higher skill level in lightning strike than he has in martial arts.
+
+\skill{Skill scf 0.5 "thunder strike" (martial arts upgrade):} allows for very powerful fist and kick attacks.  Thunderous powerful strikes gain a dam+2 bonus but are slower. Fist attacks are normal speed (3ap) instead of fast+1 (2ap), and kicks are slow-1 (4ap) instead of normal speed (3ap).
+
+A character cannot have a higher skill level in thunder strike than he has in martial arts.
+
+
+\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat and ranged weapons as well as melee weapons.
+
+
+\skill{Skill scf 0.8 "avoid":} is used to try to avoid the incoming melee attack. The user must of course be aware of the incoming attack. Avoid can be used with the "yield" maneuver option, for (usually) a mod+3. To avoid is a defence action, just like parrying. \\
+To avoid falling object, sprung traps etc is generally mod-3 to mod-6, and that usually includes a required yield step to get away from the trapped/target square. \\
+To avoid fast missiles such as arrows, the special maneuver "missile parry" is required, and is generally mod-9. \\
+
+
+\skill{Skill scf 1.0 "disengage":} allows for the character to make a safer movement out of opponent's weapon reach modifying the (possibly) incoming "right to react" attacks triggered by the movement if the opponent has \emph{opportunity} or \emph{intercept}. The level of disengage directly modifies the opponent's attack against the disengaging target.
+Disengaging is a full action, 3ap, per opponent that the character wants to safely disengage from, but requires no rolls.
+
+E.g: Disengaging Dave wants to get away from melee against Mauling Morgan and Striking Stanislav, both of which have \emph{opportunity}. DD has disengage=4 and spends one action (3ap) to move away, out of range from both opponents. However, DD only spent one disengage action, and can thus only mod down one of the opponents. He chooses to mod MM. MM and SS now has the right to react to the movement. MM has a mod-4 when attacking DD due to the DD's disengage action, but SS still has mod-0 for his attack. If DD had paid two actions (6ap) he could have given both MM and SS mod-4 on their "right to react" attacks against him.
+
+
+\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of "fancy attacks" the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Up to the maximum finesse of the weapon.
+
+E.g: Sneaky Sebastian has "fancy attacks"=4 and sword=11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword=5, he will probably not succeed.
+
+
+\skill{Skill scf 1.0 "double":} allows for combining two weapons actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for the primary weapon, and the user has the option to spend another action for the secondary weapon. A weapon skill roll must still be taken for each weapon, and the stamina for extra attacks must be paid as usual.
+
+The double action requires action points equal to the slowest of the actions taken "within" the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
+
+Double attack actions can be parried like normal actions, with two successive parry actions, with the usual multiple actions mods, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.
+If the defender succeeds with a "double" roll before parrying, and has two weapons/shields, he can parry the two attacks with one "double" action.
+
+The "double" actions can be pre-declared and saved for later in the same round. The pre-declared action must be fully declared: e.g: Defend with the shield against an attack from monster X. If the next action the character makes is not the pre-declared action, then the "double" status of that action is wasted and lost.
+
+Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
+
+Double Synchronised parries can attempt to parry twice for the same incoming attack, once for each weapon. Alternatively use the two weapons as one combined parry, where both must succeed, and combine the abs of both weapons to block the attacking damage.
+
+
+\skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions.
+
+
+\skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
+
+Before each attack in a whirlwind sequence the character must pay one stamina and roll a successful whirlwind check.
+
+Each attack can target different enemies. Each attack requires successful whirlwind rolls before the attack roll can be made. When the whirlwind roll fails no more attacks can be done in that whirlwind sequence. The first attack can always be performed even if the first whirlwind roll fails though.
+
+The damage of each successful attack is limited (capped) at the lowest damage rolled through the whirlwind sequence. Roll for damage as normal, but the damage dealt is limited by the lowest so far in the whirlwind sequence.
+
+E.g: Wispy the Waif attacks Monsters m1 m2 m3. She has whirlwind=5, sword=7.
+She declares whirlwind, pays one stamina and normal ap, rolls 3 $\Rightarrow$ success, rolls 5 for the sword attack on monster 1, does 3 in damage. \\
+She continues whirlwind, pays 1 more stamina and 1ap, rolls 4 $\Rightarrow$ success, rolls 6 for sword success against monster 2, then rolls damage 4, but the damage is now limited capped at 3 since that is the lowest damage that has been rolled in the whirlwind sequence. The second sword attack also costs her one more stamina, as usual, beside the cost of the whirlwind roll. \\
+She then tries for a third attack, pays one stamina and 1ap, but rolls 7 and fails the whirlwind. She cannot make another attack in this sequence. She can now start another action with more whirlwind attacks with the damage cap reset.
+
+Whirlwind becomes even more dangerous when combined with for example double... Then each weapon has its own the damage cap track. It can also be combined with different attack maneuvers.
+
+
+\skill{Skill scf 1.5 "quick shot":} reduces snap and quick shot penalties by one for each skill step.
+
+
+\skill{Skill scf 1.0 "sniper":} reduces range penalties by one for each skill level. It also reduces mods from small and covered targets by one for each level. Covered targets includes coverage from shields.
+
+
+\skill{Skill scf 1.0 "lead target":} reduces penalties for shooting fast moving targets by one for each skill step.
+
+
+\skill{Skill cost special "accurate":} allows for the user to generally improve damage when making good, very good or perfect successes with attacks. \\
+lvl 1, cost 10xp: A good (+3) success: roll two damage rolls and choose which to use. (will average \ca 66\%) \\
+lvl 2, cost 20xp: A very good (+6) success: roll three damage rolls and choose which to use. (will average \ca 75\%) \\
+lvl 3, cost 30xp: A perfect (+9) success: roll four damage rolls and choose which to use. (will average \ca 80\%)
+
+
+\skill{Skill cost special "consistent":} allows for the user to generally improve damage when making good, very good, or perfect successes with attacks. \\
+lvl 1, cost 15xp: A good (+3) success always makes at least 33\% (round up) of the maximum damage. (will average \ca 66\%) \\
+lvl 2, cost 30xp: A very good (+6) success always makes at least 66\% (round up) of the maximum damage. (will average \ca 83\%) \\
+lvl 3, cost 45xp: A perfect (+9) success always makes 100\% of the maximum damage.
+
+
+\skill{Skill cost special "precise":} gives extra penetration points to damage for good strikes. \\
+lvl 1, cost 10xp: A good (+3) success gives penetrating+1 to the attack. \\
+lvl 2, cost 20xp: A very good (+6) success gives penetrating+2. \\
+lvl 3, cost 30xp: A perfect (+9) success gives penetrating+3.
+
+
+\skill{Skill cost special "staggering":} makes a good hit more difficult to parry: \\
+lvl 1, cost 10xp: A good (+3) success gives mod-1 to defend against the attack.  \\
+lvl 1, cost 20xp: A good (+6) success gives mod-2 to defend against the attack.  \\
+lvl 1, cost 30xp: A good (+9) success gives mod-3 to defend against the attack.  \\
+
+
+\skill{Skill cost special "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
+lvl  1  costs  10 \\
+lvl  2  costs  20 \\
+lvl  3  costs  30 \\
+lvl  4  costs  50 \\
+lvl  5  costs  75 \\
+lvl  6  costs 100 \\
+lvl +1  costs +30
+
+E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With his slugger=2 he gets one point of damage bonus for each of his two extra strength points. Thus he has dam+2 from his combination of extra strength and slugger.
+
+
+\skill{Skill scf 0.5 "charge":} reduces movement penalties by one for each skill level when the user moves to attack an opponent. The initiative for the attack is also increased equal to the level of "charge". However, the maximum initiative bonus and movement penalty reduction is limited by the number of steps taken to reach the opponent. Also, the attack's maximum damage is increased by one for each tree steps taken to reach the opponent. A charge costs one stamina. A charge must proceed along the shortest possible straight line to the target. If a character turns in a charge then it's only the final straight distance that counts as the distance charged and limits the bonuses.
+
+The charge effects are only applied to the first attack the character makes on the charged target. The charge bonus effects is removed if the Hero takes any other actions on the way to the target.
+
+Both the charge movement and attack is done at elevated initiative. This is meant to decrease the chances of the target, or bystander, interrupting the charge attack in progress.
+
+
+\skill{Skill scf 0.5 "wrestle":} Better grabbing, holding, and breaking free. Characters with wrestling can add their level of wrestling to their str and dex values when grabbing, holding, and breaking loose.
+
+
+\skill{Skill scf 0.5 "tackle":} Better tackles.
+When tackling: add your tackling level to the resistance rolls.
+
+Optional defending: take an action and add your "tackle" or "block" level to the resist roll.
+
+Thus tackle also makes you more likely to remain on your feet since the diff of the resistance roll is applied to the following dex roll.
+
+
+\skill{Skill scf 0.5 "block":} makes it easier to block opponents moving in base contact. Attempts at blocking can ignore initiative if the character passes a block roll. Passing the roll also means the blocking action requires only 1ap instead of 3ap. If the Hero is being tackled he can take a normal 3ap action and add the level of "block" to his resistance roll.
+
+\emph{Note:} that if the attacker has declared "tackle" before the blocker declares "block" it's a reactive block and takes 3ap. If the blocker declares "block" before the passing opponent decides to tackle it only takes 1ap.
+
+If the blocking character declares movement 0, and does not move, he gets a mod+1 to block actions.
+
+
+\skill{Skill scf 0.5 "back stab":} is used to attack an unaware opponent with a melee weapon. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll.
+
+The attacker is probably "behind" (out of vision field) of the target, unless he is exceptionally good at sneaking. First roll for the back stab, then for the weapon attack. A back stab costs 1ap extra above the cost of the weapon attack action.\\
+A failed back stab attack is treated as a normal attack.\\
+A successful +0 back stab attack gives double damage and penetrating +1 \\
+A good +3 back stab attack gives triple damage and penetrating +2 \\
+A very good +6 back stab attack gives quadruple damage and penetrating +3 \\
+A perfect +9 back stab attack gives quintuple damage and penetrating +4 \\
+And so on...
+
+
+\skill{Skill cost special "tank":} Can reduce some penalties of heavy armour, while keeping the good stuff. Penalties to e.g: dexterity, encumbrance, movement, vision, strength requirements are reduced a bit according to the level of the tank skill. The positive benefits of the armour are not affected. \\
+lvl 1, cost 10: chain mail has the modifications of leather, leather has no mods. \\
+lvl 2, cost 20: plate mail has the mods of chain mail \\
+lvl 3, cost 30: full plate has the modifications of plate mail \\
+lvl 4, cost 40: heavy plate has the modifications of full plate \\
+lvl 5-8 cost+15 each: chain, plate, full, heavy: as two classes lighter \\
+lvl 9-11 cost+20 each: plate, full, heavy: as three classes lighter \\
+lvl 12-13 cost+40 each: full, heavy: as four classes lighter \\
+lvl 14 cost+80: heavy plate as five classes lighter, i.e. as no armour.\\
+%I.e: keeping the penalties constant while upgrading to a one class heavier armour costs +50xp. << for old costs @ +10 for all steps
+E.g:\\
+Chain mail as leather: 10xp\\
+Plate as leather: 70xp\\ % diff 60
+Full plate as leather: 140xp\\ % diff 70
+Heavy plate as leather: 240xp\\ % diff 100
+Heavy plate as night gown: 320xp
+
+%  5 +15  55 chain -2
+%  6 +15  70 plate -2
+%  7 +15  85 full  -2
+%  8 +15 100 hvy   -2
+%
+%  9 +20 120 plate -3
+% 10 +20 140 full  -3
+% 11 +20 160 hvy   -3
+%
+% 12 +40 200 full  -4
+% 13 +40 240 hvy   -4
+%
+% 14 +80 320 hvy   -5
+
+
+\skill{Skill scf 0.5 "synchronise":} Characters that pass their "synchronise" rolls can make simultaneous attacks. If they are hacking at the same target, that target cannot take different actions to defend against the attacks. The target can roll for double, triple, etc to defend against several simultaneous attacks in one action however.
+
+Roll for synchronise before making the attacks for each of the attackers to see if they are synchronised. The synchronised actions happen in the lowest initiative of the characters involved.
+
+It is possible to synchronise other actions as well. The characters must be in vision or communication range to be able to synchronise their actions.
+Synchronised "double, triple, etc" attacks must also be defended against in one action.
+
+
+%TODO: ? remove this since it makes positioning less relevant ?
+\skill{Skill cost special "angle of attack":} Characters with angle of attack can make attacks, but not defence, at greater angle from their facing than normal. \\
+lvl 1, cost 10xp: Attacks to the side are at mod-0, attacks diagonally behind is mod-3, while attacks directly behind is mod-6. \\
+lvl 2, cost 20xp: Attacks to the side and diagonally behind is mod-0, attacks directly behind is mod-3. \\
+lvl 3, cost 30xp: Attacks in any direction is mod-0.
+
+
+%TODO: ? should we have a angled defence ?  makes surrounding and most positioning irrelevant, which is kind of shit.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% support skills
+%---------------
+
+\phantomsection\addcontentsline{toc}{section}{support}
+\section*{Support skills}
+
+\openskillslist
+
+
+\skill{Skill scf 1.0 "scary":} The character has spent time, money and effort to adapt a scary demeanour and behaviour. This can be used to strike fear into the opposition, making them easier to vanquish. Scary has a range equal to the level.
+
+To advance into or in the scary range of an opponent one must succeed with a psy+3 vs scary roll.
+
+To initiate melee combat with a scary target one must succeed with a psy vs scary roll.
+
+To make a ranged attack against a scary target when within the scary range one must succeed with a psy+3/scary roll.
+
+A target fail-1 means a wasted action, the character is too afraid to do anything. A target fail-3 means retreat to safe distance. A fail-6 means flee.
+
+If an opponent succeeds overcoming the scary effect once he is immune to it for the rest of the encounter, for that type of action. E.g: if Gergish the goblin manages to advance into scare range of Halfvard the Hero, succeeding with the psy+3 \vs scary roll he doesn't need to roll for future advancing. However he must still roll psy \vs scary for attacking until he has succeeded with that once.
+
+Use aura to denote scary in new maptool.
+
+
+\skill{Skill scf 1.0 "roar":} allows the user to scream great loud intimidating battle roars which might intimidate and scare off the opposition. The bellower will roll roar+str/3 \vs psy+str/3 for each target. On a success the target cannot attack for 1d3 rounds, and will have an initiative-5 mod against the roar:er. If it is a good (3+) success then the targets must flee away from the noise maker, and hopefully towards safety... until he succeeds with a psy roll (one per round), at least one round.
+
+This skill can be used once per new encounter, when reinforcements arrive, etc, but not several times on the same targets.
+
+However, some monsters react in the opposite way to shouting characters, and some monsters just don't care.
+
+
+\skill{Skill scf 1.0 "rousing roar":} The character can give rousing battle screams that energise his companions to do more bloodshed.
+Cost 1 stamina per attempt. Takes 1a (primary). The user and every companion in range 2 regains 1 stamina. I.e. the user spends then regains, ending up with net 0, if he succeeds, otherwise he loses one stamina.
+A group of bellowing barbarians get pumped very quickly...
+
+
+\skill{Skill scf 1.0 "battle cry":} The character can give rousing battle cries that spur his fellow murderers to greater achievements.
+Costs 1 stamina per attempt, Takes 1a. Every companion in range 2 gets mod+1 dam+1 to all attacks in the round.
+
+
+\skill{Skill scf 1.0 "taunt":} The character can taunt the opposition to attack him and not his fellow grave robbers. The taunted gets the taunter's success diff as mod to his int rolls:
+
+The taunted must pass an int roll if he wants to attack anyone other than the taunter. If the target fails-3 he must attack even if it means limited movement. If the target fails-6 or worse he must try to fight his way to the taunter to attack him if there is no clear way to get to him. But no, the grinning goblin cannot force the hair brained hero to go through the minotaur if there is a clear way around it.
+
+Taunting takes one round at normal difficulty, or one action with mod-3. Taunt can target a crowd instead of one monster, but with mod-3. If the target does not understand the language, it is mod-3.
+
+The taunt is in effect success diff rounds, or until the target succeeds with the modified int roll, or the taunter is dead of course.
+
+Each successive taunt attempt against the same target suffers cumulative mod-3, unless successful. E.g: third attempt against the same target is at mod-6.
+
+Leader opponents may still assign minions to do the attacking, unless he fails -3 or worse.
+
+
+\skill{Skill scf 0.5 "Oy!":} The character can activate others in one fast+2 action, costing 1ap, instead of a full action. The target is activated as in the initiative of the activating character as usual.
+Roll for "Oy!" with the usual mods. Range is equal to level of Oy! plus the perception of the target.
+
+If the roll fails the activation action takes a regular full action.
+
+
+\skill{Skill scf 1.0 "rally":} The character can give a short talk to lift the spirits of all his fellows nearby, giving a mod+1 to all actions for a while. Duration charisma/3 (round down) rounds. The range is limited to the perception of affected character for the boost to go into effect, but after being boosted the Hero can move further away. Roll for success subject to normal mod penalties. Rallying takes one action.
+
+Instead of boosting all nearby allies he can choose to boost only one target and get a mod+3 to the rally roll and range. Spending a full round instead of one action on the rallying attempt also gives a mod+3 to the roll and the range.
+
+A target can only get rallying bonuses from one "rallyer" at a time.
+
+
+\skill{Skill scf 1.0 "leader":} The character is a natural leader. He gives a mod+1 to all actions of his fellows within range (level of "leader"), but only to fellows with psy less than or equal to the level of "leader". The leader effect requires no rolls or actions per default.
+
+The leader can spend a normal (3ap) action and get a temporary cha/3 (round down) bonus to his leader skill level for that round.
+
+A target can only get leadership bonuses from one leader at a time.
+
+E.g: Putte Paladin has leader 5. Jolly James stands within 5 range from PP, and has psy 4, he then gets a mod+1. Faraway Fred stands 7 squares away and does not get a mod+1. Strongminded Sam stands next to PP but has psy 8, and does not get a mod+1.
+
+A leader can also give orders to leader/3 (round down) extra characters under his leadership for each action giving orders, activating by Oy!, and similar. Great for handling henchmen.
+
+
+\skill{Skill scf 1.0 "tactician":} The tactician can shout advice to fellow compatriots giving mod+1 to all combat actions. The advice range is limited to the perception of the affected allies. Tactician requires no rolls per default but each "advised" target hero requires one fast+2 (1ap) action. The advice mod+1 bonus persists until end of the round for all combat actions against the original opponent. Tacticians advice does not activate the ally.
+
+The tactician can "cover" a number of characters and monsters combined equal to his level of tactician. The mod+1 only applies to actions done by a "covered" hero against a "covered" opponent. Covering range is limited to line of sight. Characters and monsters of normal size or smaller do not count as blocking line of sight.
+
+The tactician can spend a normal (3ap) action to get an int/3 (round down) bonus to his tactician skill for that round.
+
+A target can only get tactical bonuses from one tactician at a time.
+
+
+%\skill{Skill scf 2.0 "brilliant tactician":} As tactician, but mod+2 bonus.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% other skills
+%-------------
+
+
+\phantomsection\addcontentsline{toc}{section}{other}
+\section*{Other skills}
+
+Miscellaneous skills that are not necessarily combat related.
+
+
+
+\openskillslist
+
+
+\skill{Skill scf 0.5 "jump":} mod+1 to jump actions the for each skill level of jump.
+
+
+\skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb.
+
+
+\skill{Skill scf 1.0 "balance":} A well balanced character is less likely to fall down or loose his footing. A limited skill, but a great way to keep on your feet when tackling, moving about in rough terrain, etc.
+The character can ignore movement and environment modifiers equal to his level of "balance" when rolling dex for balance related events such as running, falling down, etc. % But not for other rolls, actions and activities.
+
+"Balance" also removes modifiers for crappy terrain, half blocked squares, undergrowth, debris, rocks, tunnel walls, etc, equal to the level of balance.
+
+At the start of each round the "balance"d character can also attempt a balance roll to remove success diff modification points from off balance penalties from the previous round. This costs 1 stamina to attempt and is a 1ap action but follows regular initiative order.
+
+
+\skill{Skill scf 0.5 "ride":} is useful when sitting on a horse. Getting the horse to go where you want, take actions from horseback, or special horse maneuvers require rolling for ride. Moving around on horseback doesn't require spending any extra action points, but taking special horse maneuvers do. Don't declare movement for the rider. Instead the Hero declares movement for the horse. The ride skill roll replaces movement mods.
+
+Roll for ride once per round after having declared movement and action points. Any fail diff is applied as mod to all actions taken from horseback for that round. Riding at horse speed maneuver is mod-0, at walk is mod-1, run mod-2, dash mod-3.\\
+Fail-3: the rider has to spend one action to keep control of the horse.\\
+Fail-6: almost falls off, and must spend the round getting back in order.\\
+Fail-9: falls off.
+
+%TODO: ? remove the horse riding destination deviation ?
+%In addition, a fail also means you might not get the horse to the exact square you want when you move it. The final movement destination deviates in direction 1d8 and distance equals to the fail. Distance is capped by movement speed: walk is max 1sq, run is max 3sq, dash is max 6sq.
+
+Also, if you can ride you can drive a horse and cart. Maneuvering the cart in high speed or difficult terrain requires ride rolls.
+
+Ride also increases the travel distance on the world map. The Hero can travel up to his con+ride each day, provided the horse is not the limiting factor. Horses and other riding animals have a cruise rating that sets the cap on how far they can travel each day.
+
+
+\skill{Skill scf 0.5 "travel":} will allow the character to travel the distances on region maps faster. He will add his level of travel to his con when calculating distance per day. Also applies when riding, and can exceed the distance rating of the horse. Just add the level of travel to the base distance.
+
+
+\skill{Skill scf 0.5 "quick draw":} allows the user to draw/ready equipment faster, in a normal 3ap action instead of a full round. Roll for quickdraw to see if it takes one 3ap action or one round to draw/ready. Quickdraw also reduces the rummage time by one round for each skill step. Rummage will always take at least one round though.
+
+Each level of quick draw also allows the character to equip, readily accessibly, one item which he can always draw and ready in one 3ap action instead of a round.
+E.g: Rapid Rudolf has quick draw = 4, he has an axe, a shield and two throwing knives on his body, readily available at all times. Those items he can always draw and ready in one 3ap action.
+
+Optional: A successful quick draw roll on an item in a quick draw slot means the draw action is an instant 0ap action instead of a normal 3ap action. Very useful for quick changing weapons or drawing new arrows and throwing knives.
+
+Optional: When drawing items not in quick draw slots the success level improves the speed:\\
+success+3 means 2ap draw action\\
+success+6 means 1ap draw action\\
+success+9 means an instant 0ap draw action
+
+Quick draw also allows for holstering and stowing away items. Same rules apply as for drawing.
+
+
+\skill{Skill scf 0.25 "häfva":} is the subtle art of emptying a flask straight into your stomach without spilling a drop or shooting it out of your nose. It allows the master practitioner to drink a potion or other liquid dose in one action instead of one round.
+
+Better result means faster drinking:\\
+success+3 takes only 2ap\\
+success+6 takes only 1ap\\
+success+9 is a 0ap instant action
+
+
+\skill{Skill scf 0.5 "dead drunk":} is the reflex of the in-bred reptilian brain to drink when passed out. If the character has a useful potion flask in an easy to reach place he will automatically pull it out and try to drink it in one round. Roll to succeed. The "dead drunk" roll ignores all modifications.
+
+He will only drink one bottle each time he is passed out, but will try several times until successful. If there are different possible bottles he will instinctively choose the right one, the one which best helps the reason why he is passed out.
+
+
+\skill{Skill scf 0.20 "possum":} is for those who want to lie down and take a breather during a fight. The Hero can act dead for a bit, to fool most opponents to pass by and attack something else. A successful roll will fool anyone who does not stop to look (take an action and roll per). An enemy which does stop to take a look has the feign death success diff as negative mod for the per roll. Anyone who stops for a round and tries a "find" on the acting corpse will not be fooled even if they fail their find roll.
+
+Modified by damage:\\
+half hp: mod+1\\
+quarter hp: mod+2\\
+zero hp: mod+3
+
+
+\skill{Skill scf 0.5 "arrow recovery":} allows the happy hunter to recover arrows from downed targets. Any targets, even if they have not been fired upon (GM discretion so it doesn't get out of hand). All arrows recovered are regular  base damage +0 type arrows suitable for the weapon at hand.\\
+Success +0 means the body has one recoverable arrow. \\
+Success +3 gives two arrows, and so on...
+
+Modify the roll with the armour absorption of the target (mod=-abs). Also limit the maximum amount of arrows to one per 5 max hp of the target.
+Searching a target takes one round, but quick looting can be used to reduce the time.
+
+
+\skill{Skill scf 0.5 "gossip":} is a good way to learn what is going on in the region. Are the woods safe to travel? Any clue where that bandit camp might be? Is the merchant trustworthy? What are the general thoughts on the local mayor?
+
+Roll for gossip once per week mod+6, per day mod+3, per evening mod-0, and if visiting multiple sites in an evening it is mod-3 at each site.
+
+Liberal with beer mod+3, stick out mod-3, strange information mod-3, dangerous information mod-3, etc.
+
+Call for gossip rolls when you want information from a general evening out, or special site. Also if you are spending some time with a specific person (mod-3).
+
+E.g: spending an evening in a busy tavern is the typical mod-0 roll.
+
+Also use gossip post-fact to see if the character has knowledge of any "common" facts or information. E.g: Have you heard anything about the BlackStreak raiders?
+
+
+\skill{Skill scf 0.5 "find":} is used for searching specific items/details/etc. Find is great for long term intent searching. The secret lock for the door, the movable book shelf, the small key in the pile of corpses, the hidden trap you know must be there. Find is heavily modified by the environment.
+
+Searching an area with find takes 1r/sqr at normal speed.
+
+Adding 10x time to the search gives mod+3. Adding 100x time to the search gives mod+6. Speedup to half normal time is mod-3, quarter of normal time is mod-6. Subtract 10\% from the time for every success step.
+
+Perception rolls take care of all normal detection, find is useless there.
+
+
+\skill{Skill scf 0.5 "fast find":} is used to quickly search for hidden items/details/etc. The character can make find rolls on a number of squares equal to his fast find level each round. It does not affect the time modifiers for careful finding.
+
+
+%TODO: fix sneak, spotting, hiding, finding
+\skill{Skill scf 0.5 "sneak":} is used to move around unseen and hide from casual inspection. Sneak hides both the Hero and objects the Hero wants to keep unseen. Spending more time, rounds instead of actions, the Hero can seriously camouflage himself, someone else, or hide objects so they are more difficult to find.
+
+Regular combat sneaking: Sneaking costs 1ap for the whole round. Each round will require at least one roll. Sneaking through different terrains and lighting conditions can require several rolls per round. Quickly stuffing away an object out of sight takes one action (3ap).
+
+The sneak success diff is then used as a mod against a spotting opponent's perception roll. See the "Sneaking and Spotting" rules for further info.
+Generally it's important to stay outside the field of vision of any opponents, and very important to stay outside the perception range if within the field of vision.
+
+Action and environment modifiers:\\
+Movement has modifiers as per usual mod stack: movement type and mobile\\
+Standing still and not moving is mod+3\\
+A deep shadow, bush, or partially obscuring object is mod+3\\
+
+When moving through an area:\\
+area is clean/open -3\\
+area has some stuff =0\\
+area is cluttered +3\\
+daylight or otherwise well lit -3\\
+lighting by torch and otherwise dark =0\\
+night or unlit dark area +3\\
+weather is calm, still and quiet -3\\
+weather is as usual, some wind and moving vegetation =0\\
+weather is loud and everything moves, e.g. stormy  +3
+
+E.g: Sneaky Susan wants to get past Drowsy Dory who is on guard duty. She has sneak 7. It's daytime but relatively dense overgrown garden. She has mod-3 for the lighting and mod+3 for the dense vegetation. SS traces a route that should take her past DD's in just 3r at walk speed (giving another mod-2 since she has mobile 1). First round SS is outside DD's field of vision and is safe as long as she passes her sneak roll. Second round she rolls 4, success+1. But since she is now in DD's field of view she can get spotted. DD rolls for perception (mod-1 for SS success diff, and mod-3 for inattentiveness), and fails to spot SS. But third round SS comes too close to DD, within DD's perception radius. Who knew DD had per 8! That's not normal for a sleepy npc guard! Thus DD automatically spots SS when she passes inside the field of view and inside the perception range. Tough luck!
+
+Sneak can also be used to cover trails when travelling. Successful sneak applies the diff as mod to the track roll of potential followers.
+
+One cannot start sneaking while being detected and in the opponent's vision arc. He has to get out of line of sight, either behind walls or objects, then start sneaking. After he successfully sneaks he can move back into line of sight in the same round.
+
+When sneaking around in a dungeon to scout and map out it's easier to just roll every 3, 5, 10r or so, or simply when the environment changes significantly, such as moving into a lit area or when entering a new room which may be occupied. Sneaking past guards and possible opponents should always require rolls.
+
+Hiding things:\\
+Camouflaging oneself, others, and hiding objects takes more time. The sneak roll diff will be the modifier to the find roll for the opponent. The mod is capped by how many rounds was spent hiding or camouflaging, and is also limited by the environment.
+
+E.g: Spending four rounds hiding a loot stash for later pickup and rolling a success+5 still caps the find mod-4 since only four rounds were spent hiding it.
+Hiding something small in a dark pile of rubbish is much easier, perhaps mod+3, then camouflaging an orc in the corner of a somewhat clean dungeon
+
+
+\skill{Skill scf 0.5 "pickpocket":} allows the character to steal things from another character or enemy's person without detection. Requires not being detected, e.g. sneaking. Pick pocket success is applied as a diff against the target's perception roll to see if he notices the theft.
+
+Stealing held item mod-9 and str vs str-3 \\
+Stealing item in front container mod-6 and normal rummage \\
+Stealing item in back container mod-3 and normal rummage \\
+Stealing item in pocket/belt mod=0 \\
+Stealing item hanging free on clothing/belt mod+3
+
+
+\skill{Skill scf 0.5 "locks \& traps":} allows the character to pick locks, disarm traps, or set them, and handle other interesting mechanics which the character might have knowledge of.
+
+Picking a lock usually takes 1d4 rounds or so, depending on the lock. Subtract one round for a good success, and so on. Some locks take longer or have mods on them depending on difficulty. It is also possible to lock a lock.
+Most serious locks require the use of lock picks and special tools. Simple locks might work with improvised or other equipment.
+
+Traps must first be found and identified with "locks \& traps", "find", or "dungeoneering". After that roll for disarming the trap, or perhaps simpler to trigger it in a safe manner? Disarm time and difficulty depends on the type of trap and what tools and equipment is available. But a good start is perhaps 1d6 rounds.
+A regular fail means you didn't manage to disarm the trap, but didn't trigger it either. A fail-3 means you triggered the trap but have one action (and declared movement) to get out of the way before you get hurt. Fail-6 is crap and means you have sprung the trap in a bad way, prepare for pain.
+
+Setting traps takes time. Each kind of trap has its own time requirement. A good success+3 reduces the time by 25\%, A very good success+6 reduces the time by 50\%, and an excellent success+9 reduces the time by 75\%.
+
+
+\skill{Skill scf 1.0 "McGyverism":} is the ability to turn miscellaneous everyday objects and debris into improvised useful gadgets and contraptions. The use of this skill is very much dependent on GM discretion.
+
+All contraptions are built from "stuff", using "tools". A suggested contraption is given "stuff" and "tools" requirements by the GM, along with time and difficulty. This is the minimum requirements to be able to complete the task on regular time and with the expected result. Any lacking points "stuff" is mod-1 and any lacking points of "tools" is mod-3.
+All the required "stuff" is consumed during construction but none of the tools.
+
+Gathering material from the surroundings is common. Use the find skill to see how much "stuff" can be scrounged from the surrounding 3x3sq area. This is heavily influenced by the type of surroundings. Gathering time is 1r per enc stuff or one action per enc stuff if the character can quickloot.
+
+It is a good idea to pack "stuff" to be able to use for the contraptions. Each superfluous enc of "stuff" gives a mod+1 to the roll. Stuff is a special type of equipment that is not really useful for much else. Some regular items can qualify as stuff, but only at half enc. E.g: rope, twine, hide/skin, staffs/spears/knives, cooking utensils, spices, etc.
+
+Tools help. Each superfluous enc of "tools" give mod+1 to the McGyverism roll. Some regular items qualify as "tools" but at half enc. E.g: knives, etc. However, no items can qualify as both stuff and tools at the same time.
+
+After completion and possible use it is possible to recover some of the "stuff" used in construction. Roll again for McGyverism: \\
+Success+0: recover 25\% of the materials in enc rounds. \\
+Success+3: recover 50\% in enc/2 rounds. \\
+Success+6: recover 75\% in enc/3 rounds. \\
+Success+9: recover 100\% in enc/4 rounds. \\
+The character can choose which items of "stuff" to recover first if any specific items were used in the construction.
+
+Example stuff and tools requirements: \\
+small trap: 1d4 enc stuff, 1 enc tools \\
+temporary weapon: 5/success enc stuff \\
+small bridge: sq$^2$ * 10 enc stuff, 2 + sq enc tools.\\
+trap disarm gadget: 1d3 enc stuff, 1d3 enc tools
+
+
+\skill{Skill scf 0.5 "track":} is finding stuff in the wilderness. It is used for following a trail for example, and to forage for food when the provisions run out.
+
+Track can also be used to hide trails when travelling. Successful track applies the diff as mod to the track roll of potential followers.
+
+Track also sets the vision radius of the party when travelling on regional maps.
+
+A track mod-6 can detect followers or other groups within the track radius, mod further if the target is sneaking.
+
+Foraging or hunting takes half a day. Roll against track. If it succeeds the character has found food for the day. Foraged food does not last long and will spoil after three days. \\
+Success +0 found food for this day for one person. \\
+Success +3 found enough for two people. \\
+Success +6 found enough for three people. \\
+Success +9 found enough for five people.
+
+If the tracker also succeeds with a "traps" roll he doubles his food production. If he succeeds with a bow or crossbow he also doubles his production.
+
+Track can be used to find locations in the wilderness. Each day they can move to and search a number of squares equal to their track level, provided they have the con to move far enough. For actively hidden or camouflaged locations they should also pass find rolls.
+
+
+\skill{Skill scf 0.5 "literate":} reading and writing, reading maps, road signs, here be dragons, beware of the beholder, things like that. A quick sign takes an action to read. A note perhaps a round or two. A letter can take ten to a hundred rounds perhaps. \\
+Adding 10x longer time to a small note gives mod+3. This means tens of rounds. \\
+Adding 100x longer time to a small note gives mod+6. This means that it probably requires longer resting periods.
+
+
+\skill{Skill scf 0.5 "counting":} dividing plunder, more for me, less for you. \\
+Adding 10x time to a simple calculation gives a mod+3. Generally while resting. \\
+Adding 100x time to a simple calculation gives a mod+6. Generally when camping.
+
+Counting is modified when under stress unless passing a psy roll. Modify chance with failed psy diff. Counting something simple is a full 1r action. More complex series and expressions normally take 10-int rounds, full round actions.
+
+The problems of miscounting, e.g. calculating division of plunder when one or both of the parties fail their counting rolls: First, roll for counting with a good mod, they can take their time in most situations. Allow mod+3 if they are dividing on the spot after an adventure, mod+6 if they have set up camp etc.
+If one party fails his count then adjust with -10\% of proper value per failure point, unless the other party is honest enough to correct him. If both parties fail then adjust in either direction and no-one will be the wiser.
+
+
+\skill{Skill scf 0.66 "haggle":} is useful when buying and selling items. Make a resistance roll between the seller and buyer and adjust the price by 10\% * diff.
+
+You don't have to haggle, you can just pay the man and be gone. If you do haggle, it might be cheaper, or it might be more expensive...
+
+When dealing with basic uninteresting purchases, just roll for haggle: \\
+success +0 : 10\% cheaper \\
+success +3 : 20\% cheaper \\
+success +6 : 33\% cheaper \\
+success +9 : 50\% cheaper
+
+
+\skill{Skill scf 0.5 "appraise":} is used to estimate the monetary value of weapons, utility items, jewellery, artefacts, etc, and take into account the current market situation, location, etc.
+Success means a good estimate within 25\% of actual value. Success+3 or better means a spot on estimate. Failure gives a wrong estimate, above or below. fail=1: factor 2 off. fail=2: factor 5 off. Fail 3 or worse, no idea of the value.
+
+
+\skill{Skill scf 0.5 "size up":} is the skill of estimating the approximate XP level and characteristics of an opponent or other character close by. It takes an action to make an assessment. Taking full round gives mod+1 and three full rounds give mod+3. \\
+fail -3: within factor two error estimate. \\
+success +0: within $\pm$25\% estimate. \\
+success +3: within $\pm$10\% estimate. \\
+success +6: exact XP value.
+
+
+\skill{Skill scf 1.0 "famous":} are those who get recognised. Good for getting random people to hopefully be impressed and treat you well, bad for when your nemesis sends hired henchmen to track you down for a late night killing.
+
+
+\skill{Skill scf 0.5 "monsterology":} is the study of monsters and their traits and habits. How fast does a troll regenerate? How many bugs can usually be found around a cave troll? What is the maneuver mobility of an orc? How maneuverable are the biterunners and how large are their packs? Things that can be very useful to know for the careful adventurer.
+
+This can also be used to figure out which monsters are up ahead from clues and early warning information. E.g: this particular horrible stench probably means that there are iffygriffs up ahead, or that track is done by a grey stalker demon.
+
+For very simple common monsters such as goblins, orcs, etc one can roll a modified int roll instead of monsterology, but the information gathered that way is less reliable and detailed. E.g: int-3 or -6.
+
+
+\skill{Skill scf 0.5 "dungeoneering":} is there another exit perhaps? Where might the treasure chamber be? Any serious trap construction around? Does this castle have a secret escape tunnel?
+
+For very simple things a modified int roll can substitute a dungeoneering roll, but the information is less detailed and reliable. E.g: int-3 or -6.
+
+
+\skill{Skill scf 0.5 \emph{language}:} might be good to know different languages, like the one that strange ghost spoke, when it warned you about the trap you just triggered.
+
+Adding 3x time to a short text gives mod+1 \\
+Adding 6x time to a short text gives mod+2 \\
+Adding 10x time to a short text gives mod+3
+
+The languages commonly encountered: Common, Ancient, Dwarvish, Elvish, Svartlingo, Lizardzpeak, ...
+
+
+\skill{Skill scf 0.5 "histography":} is the knowing of when and where and what and who of all the far away and long lost places and people of the world.
+
+
+\skill{Skill scf 0.5 "first aid":} heals 1 hp and 1 pain. Max 1 success per wound. "First aid" can be attempted on one self with a mod-3. A healing attempt takes 2+1d4 rounds. The practitioner needs a "first aid kit" to use the skill, or suffer a mod-3. First aid kits usually have limited amount of uses before they need to be restocked.
+
+First aid can also be used to eliminate a poison from doing more damage, and heal one wound if already taken from the poison.
+
+
+\skill{Skill scf 1.0 "medicine":} heals 2+1d4 hp, limited by the damage of the wound. Max one success per wound. Also remove all pain from the wound. Medicine can be attempted on one self with a mod-3. A healing attempt takes 4+1d6 rounds. The practitioner needs a "medicine kit" to use this skill or suffer a mod-3. Medkits usually have limited amount of uses before they need to be restocked.
+
+Medicine can also be used to eliminate a poison from doing more damage, and heal 2+1d4hp of the poison damage.
+
+Medicine can also be used once per day, during relaxed long term treatment, to heal success diff hp to the patient without being applied to specific wounds.
+
+
+\skill{Skill scf 1.0 "acrobatics":} Looks cool and can be of real use. The character can attempt acrobatics to move above, around, through obstacles in the way of getting to the destination. Modified by obstacle difficulty and mod-3 per adjacent obstacle in the path beyond the first, or if there are free squares in between obstacles it is possible to separate into separate acrobatics actions. Must also have enough movement points left to complete the movement or go off balance. Takes one action per obstacle. \\
+fail-[1-2] stops moving. \\
+fail-3 falls down. \\
+fail-6 falls and takes (dex roll: 0/1) damage penetrating.
+
+Acrobatics is modified heavily by encumbrance. Each encumbrance gives mod-3.
+Acrobatics movement ignores the "block" skill.
+
+
+\skill{Skill scf 0.5 "pack mule":} Adds +1 per lvl to the character's strength when calculating encumbrance.
+
+
+\skill{Skill scf 0.5 "animal command":} Can command trained animals. The command is modified by how well the animal is trained. Each animal has a set of commands it knows. Each attempt usually takes 1a (3ap).
+
+A character with animal command can control at most his lvl/2 (round up) animals.
+
+
+\skill{Skill scf 1.0 "companion command":} Can command companions such as henchmen, demons, monsters, critters, etc. The command roll is modified by the ties, training and intelligence of the companion, as well as the nature of the order. Position, attack, and defend orders are simpler when they don't put the companion in mortal danger. Telling even your trusted goblin henchman to attack the charging minotaur is going to be at least a mod-3.
+
+Issuing a command takes 1a and the companion must be within earshot. Commanding companions beyond line of sight is mod-3. Spending a full round gives mod+3 when issuing order.
+
+A character with companion command can control as many companions as his skill level/2 (round up).
+
+
+\skill{Skill scf 2.0 "unfazed":} The character can make as many 45 or 90deg free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action.
+
+
+\skill{Skill scf 0.5 "meditate":} A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
+Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
+
+
+\skill{Skill scf 1.0 "tunnelist":} This Heroic digger can carve out tunnels and hack through objects faster than anyone else. Each level of "tunnelist" increases digging/hacking speed by 50\% of base speed. E.g: A tunnelist 4 is hacking away at 3x the normal speed.
+
+The tunnelist is also less affected by cramped spaces and limited squares. Each level of tunnelist cancels one point of negative mods from limited cramped squares such as from tunnel outcrops and close walls. This effect is the same as for balance, but limited in that it only applies to crap terrain from encroaching walls, outcrops, tunnels, etc.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% meta skills
+%------------
+
+
+\phantomsection\addcontentsline{toc}{section}{meta}
+\section*{Meta skills}
+
+Meta skills don't generally give new actions, boost attacks or rolls, etc. Instead they tend to change the rules of the game.
+
+
+
+\openskillslist
+
+
+\skill{Skill scf 2.0 "focus":} The character can choose to focus more on some actions than others. E.g: focusing more on the 2nd action (attack) than the 1st action (parry).
+
+A character can shift around mods between actions, take heavier mods on an earlier action to relieve mods on a later one, or force heavier mods on future actions to make the current action easier to succeed with. The total amount of mod points that can be focus shifted between actions in a round is equal to the level of focus.
+
+Focus points cannot raise the chance to succeed higher than the original unmodified value. Focus can only cancel out \emph{action point} modifications, not mods from movement, terrain, tohit, toparry, etc.
+
+Saving focus points: Take heavier mods on the current action than necessary.
+E.g: Focused Fred is currently attempting a shield parry with 9 to succeed. He can then take a focus mod-2, making the parry have a chance of 7 to succeed, and save two focus points. Those two focus points can be spent to cancel mods on future actions. E.g: The next action is an attack, and FF has mod-4 total from his declared action points and movement speed. Focused Fred can now spend the two saved focus points to cancel two of the four mod penalties, turning the mod-4 into a mod-2 for the attack.
+
+Saved focus points are lost at the end of the round if they have not been spent before that.
+
+Borrowing focus points: Force heavier mods on future actions to cancel mods on the current action. E.g: Focused Fred wants to attack but suffers a mod-4. He choose to focus +3 points to improve his chances, giving a total mod-1. His next action is another attack, but at a simpler target with only mod-2. He choose to pay back his 3 focused points, giving a total mod-5 for the attack.
+
+A Hero cannot borrow more focus points from future actions than the amount of ap he has left for that round.
+
+Unpaid negative focus points carried over to next round costs one stamina, gives a baseline mod equal to the unpaid points for the round, and deduct one ap per point from the declared action points.
+
+A Hero can spend action points to pay for borrowed focus points. At the end of the round any unused ap will be used to cover borrowed focus points.
+
+Note that even if Focus does stack with Overextend, it doesn't help, since overextend applies the penalty mod immediately.
+
+
+\skill{Skill scf 2.0 "overextend":} to use more action points than was declared for the round. Overextended ap come at a high price and overextend can only be used once per round.
+\begin{itemize}
+    \item When using overextend to get more ap for a round each ap adds mod-1 to the mod stack \emph{before} the action is taken.
+    \item The overextended ap are subtracted from the declared ap in the next round.
+    \item The overextended ap mod is carried over to the next round.
+    \item Overextend costs one stamina to use.
+\end{itemize}
+
+E.g: Overambitious Oscar wants to make two more attacks with his fast daggers (fast+1 actions, 2ap each) but he only has 1 ap left. Luckily, he has overextend 5. Since overextend can only be used once per round he pulls out 3 extra ap, giving him a total of 4 ap. Immediately he takes a mod-3 to his mod stack for this round, one for each extra ap. He pays one stamina. He then makes the two attacks. Then the round ends. In the new round OO now has a mod-3 from the 3 ap overextended, as well as deducting 3 from his declared ap. This round is not looking goood ...
+
+
+\skill{Skill scf 2.0 "multitasking":} allows to declare extra ap to do something else at the same time as performing full round actions. Multitasking costs one stamina to use. Worth noting that most multi-round actions will take the highest mod incurred during any round of the action.
+
+Actions that take a full round or multiple rounds to perform always require the character's base max ap each round. With multitasking the Hero can declare extra ap which can be used for other actions. He can declare one extra ap per level of multitasking.
+
+E.g: Concurrent Claire is shooting a bow, which takes her two rounds. But she also wants to be able to avoid incoming attacks from the goblin close to her. She has 5 base max ap, and multitasking 4. For the first round she declares 8ap, spends a stamina, and takes the usual mod-3 for the 3 extra ap. When the goblin attacks she avoids, spending 3ap, then the 2-round bow fire action eats her 5 base max ap, leaving her with 0ap left. Her ally Heroic Herman kills the goblin. In the next round she declares only 5ap since the goblin is already dead. She completes the bow attack and gets mod-3 to the roll since in round 1 she took a mod-3 from declaring 8ap.
+
+Note: that in round two she could just as well have declared 8ap just like in the first round and still get only mod-3 to the attack, but she didn't want to spend the extra stamina.
+
+
+% kolla kostnaden för quick till olika nivåer:
+
+% 3 -> 4 : 16-9=  7    @2 = 14    @3 = 21    @4 = 28
+% 3 -> 5 : 25-9= 16    @2 = 32    @3 = 48    @4 = 64
+% 3 -> 6 : 36-9= 27    @2 = 54    @3 = 81    @4 =108
+
+% 3 -> 7 : 49-9= 40    @2 = 80    @3 =120    @4 =160
+% 3 -> 8 : 64-9= 55    @2 =110    @3 =165    @4 =220
+% 3 -> 9 : 81-9= 72    @2 =144    @3 =216    @4 =288
+
+%     10         91        182
+%     11        112        224
+%     12        135        270
+
+% 50xp är att höja svärd från 7->10  (100-49 = 51), så redan där är det värt
+% att höja till dubbla actions @2 !   lite tidigt kanske?
+% Å andra sidan är 50xp en bra kostnad för en major ability som reach etc
+
+\skill{Skill scf 4.0 "quick":} gives one extra action point per level. \\
+E.g: base max action points 4 and quick 3 means the Hero can declare 8ap and only take mod-1 action penalty for that round.
+
+
+\skill{Skill scf 3.0 "mobile":} reduces the movement penalties from declaring faster movement by one for each skill level. \\
+E.g: mobile=2 means maneuver mod-0, walk mod-1, run mod-4, dash mod-7.
+
+
+\skill{Skill scf 1.5 "rapid":} Improves initiative by one for each skill level.
+
+
+\skill{Skill scf 1.0 "veteran":} reduces fear, morale, and pain penalties by one for each skill level. Also gives a bonus to psy for rolls against fear and morale equal to level.
+
+
+\skill{Skill scf 1.0 "luck":} The character can re-roll results he is not happy with. The character has a number of re-rolls equal to his luck skill level each dungeon/session/day. However, each re-roll costs XP! The first attempt to re-roll an original roll costs 1xp. Each successive attempt to re-roll the same original roll is at double the xp cost (1, 2, 4, 8, ...).
+
+E.g: three re-rolls on the same original roll costs a total of 7xp. Three re-rolls on different original rolls cost just 3xp. This is kind of expensive stuff. Take care.
+
+Luck is an instantaneous 0ap interrupt effect.
+
+
+\skill{Skill scf 1.0 "black cat":} The character can force re-rolls on the opponent (usually the GM, unless PvP). The amount and cost for the re-rolls are the same as for "luck". Black cat is an instantaneous 0ap interrupt effect.
+
+
+\skill{Skill scf 1.0 "rabbit's foot":} The character can give re-rolls to his fellow compatriots. The amount and cost are the same as the "luck".
+Rabbit's foot is an instantaneous 0ap interrupt effect.
+
+
+\skill{Skill scf 4.0 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can of course only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.
+
+The character can store any kind of die rolls. E.g: d10, d7, d13, but can of course only use them instead of a called for roll of the same kind or "better". E.g: a saved d7 gut feeling can replace a d10 damage roll, but not a d10 skill check. A saved d12 gut feeling cannot replace a d10 damage roll, but can replace a d10 skill check.
+
+
+\skill{Skill scf 1.0 "prescient packing":} The character can pack his luggage with uncanny knowledge of the future. Whenever he needs a special item he can roll for prescient packing. If he succeeds, that item can now be found in his backpack. If he fails, he cannot try again for that item until he re-packs. If he succeeds he can roll for another unit of the same item later on as well.
+The character must already own the items produced, or he can use "prescient shopping" to have already bought them.
+
+The character must also pre-pack his luggage with "useful bundles" that take up space and weight until they are unwrapped and produced as useful items. Prescient packing cannot be used when there are no more useful bundles left in the luggage.
+
+Prescient packing is negatively modified by the weight (encumbrance) of the item, rounded to nearest whole value.
+
+Prescient packing is modded beneficially by the amount of "useful bundles" left in the luggage. Each bundle gives mod+1.
+
+Each "useful bundle" is enc 1 and takes one slot in the pack. When successful, the appropriate amount of bundles are replaced with the item, to cover the item's encumbrance value.
+
+Prescient packing takes a whole rummage action session to attempt. The item is found on a successful roll, otherwise not.
+
+
+\skill{Skill scf 1.0 "prescient shopping":} The character can spend money to purchase items that turn out to be useful for future enterprises. He can spend money to buy "useful bundles". These bundles can then be unwrapped to produce useful items. This is similar to "prescient packing" and works the same way.
+The gold must be spent and the bundles available when rolling. Items cannot be rolled for again, if previously failed, until another shopping spree has refilled the stock of bundles.
+
+Bundles are divided into basic, special, exotic. Basic bundles can produce basic items, special bundles can produce special and basic items, and exotic bundles can produce most kind of stuff. Access to special and exotic bundles is difficult and requires large cities or well stocked speciality stores.
+
+One cannot unwrap items that are worth more than the total value of the bundles of that or a more special type, and each item draws its cost from the value pool of the bundles.
+
+This skill cannot be used to produce custom magical equipment, etc, unless it is clearly available at a previous shopping location, and the massive amounts of gold have been pre-paid.
+
+Prescient shopping goes great with prescient packing.
+
+
+\skill{Skill scf 1.0 "prescient training":} The character can save XP, and spend them on skills and abilities whenever he chooses, not just in the lulls between dungeons and adventures. The character can "insta-train" at most one level of skills and abilities per level of "prescient training" per session/dungeon/adventure, i.e. between two normal "lull" training times.
+
+
+\skill{Skill scf 1.0 "forgiving forgetfulness":} The character can forget skill levels in a skill or ability and get back 50\% of the spent XP. Those regained xp goes back to the pool, and the other 50\% are lost.
+A character can "forget" one level of a skill for each level of "forgiving forgetfulness", or one level of an ability for each three levels of "forgiving forgetfulness".
+
+Skills that are acquired through "similarity modifiers" cannot be forgotten by themselves. The original skill is forgotten with them, or the other way around.
+
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% boost skills
+%-------------
+
+
+\phantomsection\addcontentsline{toc}{section}{boost}
+\section*{Character boost skills}
+
+Not satisfied with that low strength or myopic vision? No problems, just pay some XP and get bulging biceps or crystal 20/20.
+
+The following skills modify the basic character traits, as additive bonuses.
+E.g: Simon Strong has str 7, and strong 3, which gives him an effective str 10.
+The cost for buying strong 3 is \verb|2*3^2=18| points, regardless of the initial str character trait value. Remember to keep track of the character's original values! A good way is to write str 10(7) on the character sheet.
+
+
+\openskillslist
+
+\skill{Skill scf 2.0 "strong"} increases str by one for each skill level. \\
+\skill{Skill scf 2.0 "agile"} increases dex by one for each skill level. \\
+\skill{Skill scf 2.0 "tough"} increases con by one for each skill level. \\
+\skill{Skill scf 2.0 "smart"} increases int by one for each skill level. \\
+\skill{Skill scf 2.0 "determined"} increases psy by one for each skill level. \\
+\skill{Skill scf 2.0 "perceptive"} increases per by one for each skill level. \\
+\skill{Skill scf 2.0 "charming"} increases cha by one for each skill level. \\
+ \\
+\skill{Skill scf 1.0 "hawk eyed"} increases vision by one for each skill level. \\
+\skill{Skill scf 1.0 "fish eyed"} increases vision arc by 10 for each skill level. \\
+\skill{Skill scf 1.0 "resilient"} increases max hitpoints by one for each skill level. \\
+\skill{Skill scf 1.0 "enduring"} increases max stamina by one for each skill level. \\
+\skill{Skill scf 1.0 "powerful"} increases max mana by one for each skill level. \\
+\skill{Skill scf 2.0 "fast"} increases movement. \\
+dash bonus is +fast/1. \\
+run bonus is +fast/2 round up. \\
+walk bonus is +fast/3 round down. \\
+maneuver bonus is +fast/4 round down.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% unsorted skills
+%----------------
+
+
+
+%\phantomsection\addcontentsline{toc}{section}{unsorted}
+%\section*{Unsorted skills}
+
+%\openskillslist
+
+%\closeskillslist
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%S P E C I A L   M A N E U V E R S
+%---------------------------------
+
+
+\phantomsection\addcontentsline{toc}{section}{maneuvers}
+\section*{Maneuvers}
+
+
+Maneuvers are special actions or optional "modifiers" that can be made as part of, or in conjunction with, an action.
+
+\openskillslist
+
+
+\skill{Maneuver (cost 5) "opportunity":}
+Triggers the right to react when an opponent is trying to move out of melee weapons range after he's already engaged in melee. For weapons with reach it also triggers the right to react if the target is moving \emph{away} into a range with a worse reach mod but still within max reach of the weapon. But it only triggers once per attempted movement.
+
+Note: Opportunity does not cover the same situation as "intercept" does, since intercept only applies to targets not engaged in melee with the Hero, while opportunity only applies to targets already engaged in melee with the Hero.
+
+
+\skill{Maneuver (cost 15) "intercept":}
+Triggers the right to react when someone not engaged in melee is moving into melee range (incl reach if relevant). The Hero can choose where in the movement to intercept if more than one movement squares are within melee range.
+
+Note: Intercept does not cover the same situation as "opportunity" does, since opportunity only applies to targets already engaged in melee with the Hero, while intercept only covers targets passing by without being engaged in melee.
+
+If an attacking opponent without \emph{intercept} moves into melee range to attack, the Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
+
+
+\skill{Maneuver (cost 5) "yield":}
+Can be used together with any defensive action like avoid, parry, deflect, where the user moves to end up at least one square further away from the attacker, and (usually) gains a +3 to the avoid or parry action. Some characters have different bonuses to their yield maneuver. The character must end up at least one square distance further away from the attacker than he was before, or he cannot perform the yield maneuver and get the bonus. Just moving to another square at the same distance from the attacker is not a yield.
+
+Upgrade the yield bonus: \\
+cost  10xp: gives +1 extra yield bonus. \\
+cost  20xp: gives +2 extra yield bonus. \\
+cost  30xp: gives +3 extra yield bonus. %\\
+%cost  50xp: gives +4 extra yield bonus. \\
+%cost  75xp: gives +5 extra yield bonus. \\
+%cost 100xp: gives +6 extra yield bonus.
+
+E.g: Slow Sebastian has yield+2 bonus to start with. He curses his genes, spends 20xp, and gets a total of yield+4.
+
+
+\skill{Maneuver (cost 10) "dodge":}
+Gives a bonus to to a defend action if the Hero moves one step with the action. In contrast with yield, dodge does not require that the Hero moves away from the target. Any movement enables dodge, even towards the enemy.
+
+Upgrade dodge:\\
+base dodge: gives +1 extra dodge bonus.\\
+dodge 20xp: gives +2 extra dodge bonus.\\
+dodge 30xp: gives +3 extra dodge bonus.\\
+%dodge 50xp: gives +4 extra dodge bonus.\\
+%dodge 75xp: gives +5 extra dodge bonus.\\
+%dodge 100xp: gives +6 extra dodge bonus.
+
+
+\skill{Maneuver (cost 5) "off balance":}
+Is used to take one extra step beyond declared movement. It can only be done once per turn, and only after all movement has been spent. The off balance move puts a mod-3 base modification to all actions for the rest of the turn, excluding the action taken together with the move, if any. The mod-3 base modification stays in effect for the next round as well.
+
+%TODO add extra off balance step upgrades, need to fix the scripts
+%     perhaps add a new variable: offbalancemod which is incremented
+%     and then reset next round, or use ExtraStep counter...
+%upgrades: give extra off balance steps: \\
+%cost 10xp max two off balance steps per round, total mod-6 \\
+%cost 30xp max three off balance steps per round, total mod-9
+
+
+\skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
+
+
+\skill{Maneuver (cost 20) "side step":} allows for the character to take one extra movement point per round if dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
+
+
+\skill{Maneuver (cost 15xp) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. And together with "diagonal squeeze" the Hero can move through a diagonal between a blocking corner and an enemy.
+
+
+\skill{Maneuver (cost 15xp) "diagonal squeeze":} allows to move between two enemies across a diagonal which would otherwise be blocked by them. And together with "cornering" the Hero can move through a diagonal between a blocking corner and an enemy.
+
+
+\skill{Maneuver (cost 5) "going the distance":}
+Allows the Hero to march on up to double the con each day when travelling the world map. Max stamina is reduced by one for each extra step taken above con until the Hero has rested a full day.
+
+Pushing successive days will go into negative stamina, provided the Hero passes a con roll modified by current negative stamina. One roll for each extra step attempted. Failed roll means either break for the day, or have the entire party loose one step for a resting pause before trying again.
+
+
+\skill{Maneuver (cost 10) "switch":} allows for two friendly willing characters in base contact who both have switch to each take a 3ap action action and switch places. They must pay the movement cost for the move as well. The switch happens in the order of initiative of the character with the lowest initiative. However, the faster character can take one extra action to "activate" the slower character and thus initiate the switch.
+
+Small characters like goblins and halflings can use switch to move past friendly willing characters that do not have switch under normal conditions. This costs one action and double movement. They cannot do so in narrow corridors and confined spaces.
+
+It also makes it easier to pass by a diagonal where both side squares are occupied by objects with "round corners", e.g. friendly characters, etc.
+
+upgrades: faster switching: \\
+cost 20xp switching is a fast (2ap) action \\
+cost 30xp switching is a very fast (1ap) action
+
+
+\skill{Maneuver (cost 10) "careful":} allows the character to make an action with a mod+1 to succeed, and where the "10" roll is not an automatic failure.
+This doubles the ap cost of normal (3ap*2=6ap) or slower actions, and adds 3ap to fast (2ap+3ap=5ap) or very fast (1ap+3ap=4ap) actions.
+Full round actions are also doubled, e.g. shooting a bow normally takes 2r, and with careful it costs 4r.
+
+
+\skill{Maneuver (cost 10) "push":} attack can be used to force opponent back during melee combat. The attack has mod-3 to succeed, and costs 1 stamina extra.
+
+If the attack succeeds, and is not successfully avoided or deflected (not parried), the attacker rolls a str vs str mod with attack diff. If this succeeds the attacker can push the target one square away from him (diagonal ok). Note that this may cause the target to go off balance (or fall down) if he does not have enough movement points left to cover the move. The attack does normal damage if it hits, even if the push does not succeed.
+
+It is also possible to use "push" with a shield parry (parry bonuses applies). Same mod-3 and one stamina cost there as well. The original attacker can choose to take another action to parry or avoid the push parry.
+% Apply the shield tackle bonuses to the shield push?
+% NOPE, already have the parry skill bonuses for the shield applied.
+
+
+\skill{Maneuver (cost 10) "quick parry":} is a faster than normal parry/deflect that is more difficult. It is fast+1 mod-3. It costs 1 stamina extra.
+
+
+\skill{Maneuver (cost 10) "deflect":} is a way of parrying that turns the incoming weapon away from doing a lot of damage instead of taking the damage on the parrying weapon or shield. Deflecting instead of a normal parry incurs a mod-3 difficulty. The benefit is that it is possible to protect against more powerful attacks using deflect than parry. On a successful deflect the weapons used for the deflective parry only has to absorb half (round up) the rolled damage of the incoming strike, instead of all of it. This can mean the difference between breaking the weapon or saving it.
+
+If the deflect succeeds and the weapon can absorb half (round up) the rolled damage, then the attack is successfully deflected. If the deflect succeeds but the weapon cannot absorb half the incoming damage (round up), then the remaining part up to half the rolled damage is passed on to the target character. At least half the damage will be gone from the attack in any case as long as the deflect succeeds. If the deflect does not succeed the target will take full damage as usual of course.
+
+
+\skill{Maneuver (cost 10) "guard":} gives the character the ability to parry attacks that are targeted at adjacent figures, ignoring initiative, as long as he has access to the incoming attack.
+
+The guard defence action has mod penalty depending on where the attack comes from relative to the target and the guarding Hero.
+
+Access to attacks: The guard must have access, i.e. adjacent square or weapon with enough reach, to the base square side of the target the attack is incoming through, and where no object or characters are in the way. Usually this means sides adjacent to own base square. Further away means more difficult.
+
+The guard parry mods are as follows:
+\begin{samepage} \small \begin{verbatim}
+       -0    -3    -6
+         \    |    /
+   ------- -------
+  |       |       |
+  |  own  |  trg  | -- -9
+  |       |       |
+   ------- -------
+         /    |    \
+       -0    -3    -6
+\end{verbatim} \normalsize \end{samepage}
+
+Guard stacks with reach and phalanx as follows:\\
+With reach, e.g. reach 1 mod-3:
+\begin{samepage} \small \begin{verbatim}
+               -3    -6    -9
+                 \    |    /
+   ------- ------- -------
+  |       |       |       |
+  |  own  | empty |  trg  | -- -12
+  |       |       |       |
+   ------- ------- -------
+                 /    |    \
+               -3    -6    -9
+\end{verbatim} \normalsize \end{samepage}
+
+With reach and phalanx the "reached" square can be assigned as the square occupied by the guarded target, thus removing most or all guard angle mods. E.g for a weapon with reach 1 mod-2:
+\begin{samepage} \small \begin{verbatim}
+       -2    -2    -2
+         \    |    /
+   ------- -------
+  |       |       |
+  |  own  |  trg  | -- -2
+  |       |       |
+   ------- -------
+         /    |    \
+       -2    -2    -2
+\end{verbatim} \normalsize \end{samepage}
+
+Keep in mind that facing still matters, and the usual facing mods apply if the guardian is not facing the right way.
+
+
+\skill{Maneuver (cost 10) "sweep":} means that if the weapon kills one opponent and has damage left, the attack can continue into next opponent in base contact with both first opponent and attacker (or within reach of attacker). Another to hit roll must succeed at mod-3 for the left over damage to continue into next attacker. This does not count as multiple actions and thus does not suffer additional action penalties. The next victim can try parrying with an extra mod-6 from the unexpected incoming danger.
+
+Sweep also works the same way if the target avoids, teleports away, or some similar thing that makes the attack able to continue on to the next unfortunate target
+
+
+\skill{Maneuver (cost 10) "missile parry":} means it is possible to parry an incoming missile if the attacker is seen when firing. Usually very difficult action at mod-9. \\
+Parry large incoming object (swords, sticks, stools, runts): mod-3 \\
+Parry thrown projectile (javelin, knife, axe, sword): mod-6 \\
+Parry bow arrows: mod-9 \\
+Parry crossbow bolts: mod-12
+
+Shields gives a ranged attacker penalty modifiers (hitting the shield) instead of being used as missile parry modifiers. This only applies if the shield carrier is behind the shield, as seen from the direction of the incoming missile. Shields can also be used actively to parry missiles, with the usual parry modifications of the shield.
+
+The skills avoid and dodge can also be used with "missile parry" even if it isn't technically a parry any more.
+
+It is recommended to stack missile parry and deflect for the larger and heavier flying items, like rocks. For very large items, like boulders, GM discretion is advised, and then you really have to be good to succeed.
+
+
+\skill{Maneuver (cost 10) "phalanx":} can be used as improved defence of several allies, protecting each others' sides. The phalanx must form a straight line (diagonal is ok).
+Parries and deflection defence actions get a mod+1 for each of the (two possible) sides that the bearer has covered by friends that also has phalanx. Phalanx does not provide a bonus for "avoid" defence, or if the Cowardly Hero yields in a defensive action.
+
+E.g: a three abreast shield line where all users know and use the phalanx maneuver will give a parry mod+1 bonus to the edge fighters, and a parry mod+2 bonus to the centre fighter. If the edge fighters have walls on their "open sides", then they also get the full mod+2 defence bonus from phalanx.
+
+Phalanx also grants the same bonus if a side is "blocked" by a wall or similar large object. A single phalanx character fighting in a narrow tunnel with walls on both sides get mod+2. With a wall or large statue on one side he gets mod+1 even if his other side is open to attack.
+
+Phalanx does not require shields, but the phalanx bonus is only available to parries and deflect defence actions, not to avoids.
+It is not possible to yield while maintaining a phalanx bonus. A phalanx must move together or loose its bonus. Therefore the phalanx usually moves in the lowest initiative of all participants, and cannot yield. A commander or tactician can use the leader or tactics skills to give the phalanx orders to move or act in their initiative.
+
+For weapons with reach 1 or more and poking attacks, such as spears, it allows for the wielders to attack above or through an allied front rank to reach a target. Even if the rank is only one ally wide. The ally in front must also have phalanx for this to work.
+
+For ranged attacks it allows the use of double rank firing lines, where the front line shoots from a kneeling position, and the back line fires above them. It is also possible to shoot over a shield line, but with mod-3.
+
+
+\skill{Maneuver (cost 10) "combat unit":} allows for all people with the same combat unit maneuver to count as one character for the sake of activation, ordering, strategy bonus (when fighting the same strategy covered target), etc. Bonused as one only applies when they are fighting tightly together, and is at GM discretion.
+
+Each combat unit is a unique and named "combat unit" skill. E.g: combat unit dank daredevils, combat unit evil snails, combat unit red peacock, etc.
+
+
+\skill{Maneuver (cost 10) "up close":} cancels the contact mod-3 for ranged attacks when in base contact with target. The short mod+3 is not in effect though.
+
+
+\skill{Maneuver (cost 10) "personal":} the short mod+3 is not cancelled for ranged attacks in base contact.
+
+
+\skill{Maneuver (cost 10) "fire support":} allows to shoot into melee without the mod-3 when the target is engaged by someone who has the \emph{target pointer} skill.
+
+The level of "fire support" determines how large the "target pointer" partner can be:\\
+lvl 1, cost 10xp: tiny target pointer (runt, bird, rat, bug, spider, etc) \\
+lvl 2, cost 20xp: small target pointer (halfling, goblin, dog, etc) \\
+lvl 3, cost 30xp: normal target pointer (human, orc, dwarf, elf, etc)
+
+A fail-3 or worse still hit the target pointer instead of the target.
+
+It is not possible to shoot through an ally to reach the target, a clear path must exist. Skills like \emph{lean} helps here.
+
+If the target is engaged in melee with anyone who does not have the "target pointer" skill the mod-3 still applies. All allies in melee with the target must have "target pointer" for a mod-0 shot.
+
+Upgrades: \\
+"unfriendly fire" cost 10xp: a fail will not hit the "target pointer". \\
+
+
+\skill{Maneuver (cost special) "target pointer":} allows to get support fire from a ranged ally when fighting in melee. The ranged ally must have the "fire support" skill.
+
+The cost of the "target pointer" skill depends on the size of the character: \\
+Size "tiny" cost 5xp: runt, bird, rat, bug, spider, etc. \\
+Size "small" cost 10xp: halfling, goblin, dog, etc. \\
+Size "normal" cost 20xp: human, orc, dwarf, elf, wolf, etc.
+
+
+\skill{Maneuver (cost 10) "anticipate":} allows the character to be waiting for a specific event, and when it occurs gain a mod+3 to the first action against it, ignoring initiative. If it does not, but something else happens the character gets a mod-3 to the first action to react to it. Anticipation status persists over rounds until dropped without further action point cost.
+
+A character can "anticipate" an attack from a specific area, etc. Anticipating the correct event then gives a mod+3 to the first action taken against that occurrence, and can ignore initiative. He also has a mod+6 to all perception rolls against events in that area.
+
+On the other hand, if an event occurs that was not covered by the anticipation, then the anticipating character has mod-3 to the first action taken against that event and the opponent can ignore initiative. It also gives a mod-3 to perception rolls for events outside the area.
+
+E.g: Anticipating Arnold is waiting behind a table, aiming his crossbow into the left corridor a couple of squares away, anticipating monsters to storm out of it. Three rounds later a couple sneaky goblins come rushing out of the right corridor. Anticipating Arnold had been expecting attack from the wrong area. He can not interrupt the goblins attack charge with his ranged weapon since he was anticipating attack from another direction, and he has a mod-3 to the first action.
+
+E.g: A character can be anticipating: \\
+Incoming enemies from a small area. \\
+Movement from an existing enemy. \\
+Specific attacks from an existing enemy. \\
+In general: GM discretion.
+
+It takes a full 3ap action to start anticipating a future event, and no movement faster than maneuver while anticipating. It costs nothing to stop anticipating something, but does not ignore initiative. And since incoming unanticipated enemies can ignore initiative against the anticipating character, he will not generally be able to drop anticipation fast enough, and will thus incur the mod-3 penalty for actions against most unanticipated events.
+
+
+\skill{Maneuver (cost 10) "quick looting":} allows the character to loot a corpse or loot spot in 1a instead of 1r. Loot spots that takes longer to loot now takes half the time (round down).
+
+Upgrades:\\
+lvl 2 cost +10xp: loot in 1ap instead of 3ap, long loot at 33\% of time\\
+lvl 3 cost +10xp: loot in 0ap instead of 1ap, long loot at 20\% of time
+
+
+\skill{Maneuver (cost 10) "ninja looting":} allows the character to loot a corpse or loot spot without his compatriots noticing. This is not possible if the others have declared that they are watching the corpse, and spend 1a (primary) each round actually watching it. This maneuver requires that the character already has "quick looting".
+
+
+\skill{Maneuver (cost 10) "corpse kick":} is useful for moving corpses. Spending just 1a (3ap) the Hero can kick one corpse one sq in any direction.
+
+
+\skill{Maneuver (cost 10) "bashdoor":} allows a character to move through a closed door, bashing it open without spending an extra action. Roll for str with mod+1 for walk, mod+2 for run, mod+3 for dash.
+Sturdy doors will have a negative mod!
+
+If the attempt fails the character stops and the door remains closed. The Halted Hero must pass a dex roll to not fall down.
+
+
+% TODO: fix the aim crap
+%       it doesn't work well
+%\skill{Maneuver (cost 10) "half aim":} allows the character to aim for a half figure area or large body parts such as torso, legs, arms, etc, but not the head.
+%The aimed attack is slow-1. , and it requires a success+3 or better to hit the aimed at area, otherwise it is a regular hit or miss.
+%
+%
+%\skill{Maneuver (cost 10) "small aim":} allows the character to aim for a small area or body parts, such as the head, the stomach, the left upper arm, the right thigh, etc.
+%The aimed attack is slow-3, gives mod+1, and it requires a success+6 or better to hit the aimed at area, otherwise it is a regular hit or miss.
+%
+%The small aim maneuver requires the character to also have the half aim maneuver. Optional: if it is a success [+3,+5] then it can be treated as a successful half aim instead of just a regular hit.
+%
+%
+%\skill{Maneuver (cost 10) "tiny aim":} allows the character to aim for a tiny area, such as the neck, the heart, the knee, the left hand, etc.
+%The aimed attack is a long action and takes one full extra round just for the aiming, giving mod+2, and it requires a success+9 or better to hit the aimed at area, otherwise it is a regular hit or miss.
+%
+%The tiny aim maneuver requires the character to also have the small aim maneuver. Optional: if it is a success [+6,+8] then it can be treated as a successful small aim instead of just a regular hit, and so on to half aim.
+%
+%
+%\skill{Maneuver (cost 10) "micro aim":} allows the character to aim for a microscopic area such as the right eye, the third vertebrae, the left pinky toe, etc.
+%The aimed attack is a long action and takes three extra full rounds just for the aiming, giving a mod+3, and it requires a success+12 or better to hit the aimed at area, otherwise it is a regular hit or miss.
+%
+%The micro aim maneuver requires the character to also have the tiny aim maneuver. Optional: if it is a success [+9,+11] then it can be treated as a successful tiny aim instead of just a regular hit, and so on to small or half aim.
+
+
+\closeskillslist
+
+
+
+
+%-------------------------------------------------------------------------------
+\phantomsection\addcontentsline{toc}{section}{attack}
+\subsection*{Attack maneuvers}
+
+Maneuver (cost varies) \emph{special attack}: are different attack maneuvers that some weapons or wielders have. Special attacks are generally difficult to perform and to defend against, or faster or slower with more or less damage. They mostly carry mod-X for the action, and toparry-X or toavoid-X. The "fancy attacks" skill can be considered the general form of many of these special attack maneuvers, but it has a poor 1:1 ratio of mods to the action and mods to the target. These special maneuvers can have better ratios or other useful effects. Most special maneuvers require one stamina extra, above what the attack would otherwise take.
+
+Note: that the mods toparry, toavoid, todefend, etc require a weapon with enough finesse to cover this difficulty modifier. Otherwise it's capped by the weapon finesse.
+
+
+\openskillslist
+
+
+\skill{Maneuver (cost 5) "poke":} allows for a poke attack which is available with some weapons. It usually has a mod-1 dam-1 pen+1 effect, but some weapons have different effects.
+
+
+\skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow-1 mod-1 dam+2 toavoid+2 effect, but some weapons have different effects.
+
+
+\skill{Maneuver (cost 10) "fjutt":} is a very weak and flimsy but fast attack. It can be performed with any melee weapon unless specified. It costs one extra stamina. The standard stats are:\\
+fast+1 mod-3 with damage 50\% of normal (round down).\\
+
+
+% TODO: fix feint, make it more interesting
+\skill{Maneuver (cost 10) "feint":} is a regular attack but is fast+1, costing one less ap then usual, and does 0 damage. Very good to weaken out the opponent with lots of annoying attacks. The first feint does not cost stamina unless upgraded, and does not count against the number of stamina free attacks for that weapon.
+
+If the target chooses to ignore a feint it can be upgraded to either a weak or full attack:\\
+With a \emph{weak attack} upgrade the whole maneuver has max 50\% damage and costs the usual ap for the attack with that weapon, and one extra stamina.\\
+With a \emph{full attack} upgrade the whole maneuver has full damage but costs one ap more than a normal attack with that weapon, and one extra stamina.
+
+E.g: Feinting Fabio attacks with his rapier, feinting. Target Tom parries. FF's feint costs only 1ap (rapier is fast+1 to begin with), and TT's parry costs 3ap (normal shield). FF continues to attack feint. This time TT ignores the feint, and FF chooses to upgrade to a regular attack at normal damage. FF pays 2ap extra above the 1ap he has already paid for the feint, along with an extra stamina. If this had been done with a regular sword he would have had to pay two stamina, since he has already done one (feint) attack earlier in the round.
+
+%E.g: Feinting Fabio attacks with his longsword, feinting. Target Tom parries. FF's feint costs 2ap, and TT's parry costs 3ap. FF continues with another attack feint, another 2ap and one stamina. TT parries. FF makes a third attack feint, another 2ap and one stamina. TT ignores it. FF upgrades it to a full attack, pays another 2ap since the "full attack" upgrade is total 4ap for the maneuver, and since it's the first real attack in the round it does not cost any more stamina than FF has already paid for it even if it's the third feint.\\
+%FF has thus paid 8ap and 2 stamina for three attacks, but with the certainty that the final attack had already hit since it was an upgraded feint.
+
+
+\skill{Maneuver (cost 10) "wayward strike":} normal ap, mod-1, todefend-3. Takes one extra stamina. Can be used with all weapons that have enough finesse.
+
+
+\skill{Maneuver (cost 10) "roundabout smack"} takes double ap for normal 3ap and slower weapons, and +2ap for fast (2ap+2ap=4ap) and vfast (1ap+2ap=3ap) weapons, mod-3, todefend-6, 75\% dam (round down). Takes one extra stamina. Can be used with any weapon that has enough finesse.
+
+
+\skill{Maneuver (cost 10) "double tap":} slow+1, gives two fast strikes at the target, each with mod-3, damage is 75\% (round down). Takes one extra stamina, plus the normal stamina for the two attacks. Cannot be used with slow weapons.
+
+Two hits can be parried in two actions or one double action. Roll both to hit at the same time, then the target selects his parrying strategy.
+
+
+\skill{Maneuver (cost 10) "massive strike":} costs double ap for normal or slower weapons, +2ap for fast or vfast weapons, mod-1, toavoid+1, 150\% dam (round down). Takes one extra stamina.
+
+
+\skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} allows the Hero to take an extra "free" movement step and a followup attack, ignoring initiative. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can move further away.
+
+The followup attack costs two extra stamina, one for the extra step and one for the next attack, but costs no movement points, even if it's a second diagonal and would normally cost 2mp.
+
+Weapons with reach has an extra mod+1 when used for a followup attack.
+
+
+\skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\% (round down). Requires two weapons, one in each hand, e.g. sword and shield. Can be used with slow weapons, the entire action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
+
+
+\skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage. For each +3 excessive strength he gets damage +1.
+
+
+\skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one extra attack per round that does not cost stamina.
+
+
+\skill{Maneuver (cost 10) "mighty grip":} The character can trade a +6 excessive strength damage bonus (regularly dam+2) to hold a 2h weapon in one hand instead. The weapon gets a slow-1 mod when held in one hand, as well as a mod-1. \\
+The character can also trade a +9 excessive strength to hold it in one hand without the slow-1 penalty, but still with the mod-1 penalty.
+
+
+\skill{Maneuver (cost 10) "fast strength":} A character with enough strength and dexterity can choose to trade excessive strength damage bonus to a fast+1 modifier for the actions with the weapon instead. Also comes with a mod-1 difficulty though. \\
+A slow-2 (5ap) weapon requires str+6 and dex$\geq$3 to be slow-1 (4ap).\\
+A slow-1 (4ap) weapon requires str+6 and dex$\geq$6 to be normal (3ap).\\
+A normal (3ap) weapon requires str+9 and dex$\geq$9 to be fast+1 (2ap).\\
+A fast+1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast+2 (1ap).
+
+
+%TODO fix critical damage once the aim stuff has been fixed
+%\skill{Maneuver (cost 10) "critical damage":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
+
+
+\skill{Maneuver (cost 10) "double arrow":} Like all true action hero archers the character can load two arrows at the same time and shoot at two adjacent targets. The action is slow-2. Both arrows are mod-6 to hit and damage is 75\% (round down), but counts as one attack for the sake of stamina. It is another mod-3 to hit both targets for each empty square between them, starting from the base mod-6 when they are in base contact. The targets cannot be "in line" as seen from the
+Oddly enough this maneuver works just as well with crossbows, throwing daggers, rocks, and other projectiles, as it does with regular bows and arrows.
+
+
+\skill{Maneuver (cost 10) "arrow stab":} Instead of shooting you opponent the Hero can use the projectile to stab the target instead. Damage is 50\% (round down) and penetrating 0. The attack is mod-3 to hit, and a regular 3ap action. It counts as one regular attack for sake of stamina. For the attack skill roll the character can use the highest of either: bow,knife,rapier,sword,spear skills.
+This move was made popular by the heroic dancer Leggy-Lars who used it in the movie "Lard of the Sphinx" to stab an orc in the throat before loading the arrow and shooting the next orc. Since the damage is low it is suggested that it is combined with a "critical damage" maneuver. \\
+It works just as well with rocks, chairs, bottles, and other projectiles as it does with arrows.
+
+
+\skill{Maneuver (scf 0.5) "breaker":} Adds extra "damage" when calculating if a parrying weapon or shield breaks or takes damage when used to parry an attack. It costs 1 stamina extra to make a "breaker" attack. Add "damage" equal to the level of \emph{breaker} when comparing damage vs absorption after a successful parry.
+
+E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a "breaker" attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
+
+
+\skill{Maneuver (cost 10) "knock down" / "trip up":} Two separate attack maneuvers. Both means hit someone so they fall down. "Knockdown" is str based while "trip up" is dex based.
+
+It's a regular attack which costs 1 extra stamina and has mod-3. If successful and not avoided the attacker and target will take a it's a str or dex based resistance roll to determine if the target falls down or not. The attacker takes the knockdown success diff as mod to his side of the resistance roll, and the target takes his defence diff (if successful) to his side of the resistance roll.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%S P E C I A L   A B I L I T I E S
+%---------------------------------
+
+
+\phantomsection\addcontentsline{toc}{section}{abilities}
+\section*{Abilities}
+
+Special abilities are very rare skills, and a bit expensive, but the mark of Real Heroes. They open interesting possibilities in the fight for gold, glory, and more gold.
+
+Some ability skills have a "combination cost factor" (ccf), which affects the cost of training future ability skills. Once a ccf ability has been trained each subsequent ability skill will have it's cost multiplied by the ccf of all previously trained abilities. The combination cost factor does not affect the upgrade training of its own ability. The ccf does not affect regular skills or maneuvers, just the "ability" skills.
+
+E.g: Dastardly Dennis has trained Incorporeal Double which has ccf=1.5. This means that every ability he trains in the future will cost 1.5 * original cost. If he also trains Dominating Stare, with another ccf=1.5, then Dominating stare will cost him 1.5*50=75xp, and all future abilities will cost 1.5*1.5=2.25 times the original cost.
+
+Upgrading an ability does not affect its ccf. E.g: purchasing regeneration twice still gives regeneration ccf=1.5.
+
+Special "abilities" cannot be purchased and trained by XP without first getting the "special component". Special components can be a blessing from a deity, a piece of mutagenic plutonite, bites from radioactive spiders, strange magic gone wrong, secret lore from a legendary book, tutoring by a far away hermit, training at the dojo of awesomeness, the egg of a phoenix, etc. GM discretion.
+
+Such special component items or events can be bought by lots of gold, as part of adventure loot or rewards, end goal for mini quests and adventures, etc. This makes it more tricky and random to get the special abilities. If you, as a GM, want to make an ability available for gold, a good guideline might be to set the price at the XP cost in gold. Special components are always exotic in rarity, and should not always be available even in the largest and richest of trading centres.
+
+But it really is more fun to build a small adventure around the heroes hunting for that elusive Greenulescent Mushroom, rumoured to give anyone who eats it a "Reactive Skin", only to have it give the Hero who eats it a "Damaging Aura" instead. Muahaha.
+
+
+\openskillslist
+
+\skill{Ability cost 30xp ccf 1.0 "Combat Advantage":} When the character makes a successful attack which the opponent parries or avoids he will get the "combat advantage". The advantage kicks in after the completion of the actions taken by the character and the target, and only matters between those two combatants.
+
+From then until the advantage is broken the character gets mod+1 to all his attacks against the target, and the opponent gets mod-1 to all his attacks against him.
+
+The combat advantage is broken when: \\
+The character misses an attack against the opponent. \\
+The character defends against an attack from the opponent. \\
+The opponent chooses to not defend against an attack from the character. \\
+The character attacks someone else, or takes a non combat action.
+
+The combat advantage does not break when: \\
+The character defends from attacks from other enemies. \\
+The round is over. Combat Advantage persists between rounds.
+
+Upgrades: \\
+cost +10: multiple advantage. Maintain mod+1 against more than one simultaneous opponent, following the rules above. Note that the character will loose advantage over any opponent he defends against, but not if he defends against other enemies against which he does not have advantage. \\
+cost +30 ccf is set to 1.3: max +2 advantage. Increases one step at a time, requires two successful attacks in succession to reach mod+2. \\
+cost +50 ccf is set to 1.5: max +3 advantage. Increases one step at a time, requires three successful attacks in succession to reach mod+3.
+
+
+\skill{Ability cost 30xp ccf 1.2 "Captain Cardio":} At the end of each round when the character has not spent any stamina he instead recovers one stamina. When resting he recovers two stamina per round.
+
+
+\skill{Ability cost 30xp ccf 1.2 "Energizer Bunny":} Always spends one stamina less than required each round. Spending zero does not mean gaining one stamina, unless combined with for example "Captain Cardio".
+
+
+\skill{Ability cost 30xp ccf 1.2 "Jack Hammer":} For every attack that the character does pay full stamina for, he is allowed to pay one less stamina for the next attack, within the same round.
+
+
+\skill{Ability cost 10xp ccf 1.0 "Hardened":} Increases pain threshold by one for each level. Each level costs 10xp.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Painless":} Character is immune to pain modifications.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Tasty":} The character is the obvious target, among other equally accessible targets, for monsters lacking int. GM discretion.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Foul":} The character is the last target, among other equally accessible targets, for monsters lacking int. GM discretion.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Annoying":} The character is the obvious target, among equally accessible targets, for monsters who fail their int roll when seeing the character for the first time. GM discretion.
+
+For each extra 5xp spent on upgrading "annoying" the int roll is reduced by 1. The level of annoying can be increased later on as the character progresses.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Bland":}  The character is the last target, among equally accessible targets, for monsters who fail their int roll when seeing the character for the first time. GM discretion.
+
+For each extra 5xp spent on upgrading "bland" the int roll is reduced by 1. The level of bland can be increased later on as the character progresses.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Gapfinder":} The character has an uncanny ability to find gaps and time attacks. He can make reach or ranged attacks through one obstacle in line of sight to hit a target behind it. GM discretion when this applies. A large boulder or wall might not have any gaps, while an inter-spaced opponent probably has. Attacks through gaps are made at mod-3 generally. \\
+Note that this can be used to ignore shooting into melee rules.
+
+Upgrade: \\
+cost +10xp will remove the mod-3 penalty.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Angry":} The character gets angry when wounded. Each active pain point mod gives him dam+1 in melee attacks and str+1 to strength tests (not damage bonus). Pain that is countered by pain killers, painless, etc is not active pain. Pain that is countered by veteran is still active pain.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Divine Retribution":} The character has a vengeful god on his side. When he dies his dying corpus will channel the vengeance of his angry god in form of a divine blast that gives penetrating damage to everyone within range 3. Damage equals his total XP/50 round down. The corpse is mod+3 to all kinds of revive after the divine blast, thanks to the remaining empowerment of the god's energy.
+
+Upgrades: \\
+cost +10xp gives damage+1. \\
+cost +10xp gives range+1.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Divine Favour":} A God, or something, is surely watching over this guy. All opponents suffer tohit-1 when attacking him. This can be purchased multiple times with each level step doubling in cost: lvl 2 +100xp, lvl 3 +200xp, lvl4 +400xp, ... I.e: total cost to lvl 3 is 350xp. Extra levels don't change the ccf cost of the divine favour ability.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Reactive Skin":} The character's skin is strangely alive by itself, and gets pissed when damaged. Each incoming melee attack that fully penetrates the armour, even if it does zero damage to the character, will be answered by a magical dam 1 penetrating chock bolt to the offending opponent.
+
+Upgrades: \\
+Aggressive Skin, cost 20 + scf 5.0: more damage\\
+Stunning Skin, cost 10 + scf 3.0: stun effect
+
+\skill{Ability cost 20 + scf 5.0 "Aggressive Skin":} The Reactive Skin ability does +1 damage penetrating for every level of Aggressive Skin. E.g: at lvl 4 )cost 100xp) the Reactive Skin + Aggressive Skin 4 does a total of 5 damage penetrating.
+% cost levels: 25, 40, 65, 100  ::  100xp for total dam 5
+
+\skill{Ability cost 10 + scf 3.0 "Stunning Skin":} When the Reactive Skin ability does damage it also delivers stun effect equal to the level of Stunning Skin.
+% cost levels: 13, 22, 37, 58, 85, 118  ::  37xp for stun 3, 118xp for stun 6
+
+
+\skill{Ability cost 50xp ccf 1.3 "Regeneration":} The character regenerates 1hp for each 5 rounds regardless of actions. This skill can be purchased several times, with regeneration = 1hp every 5r/lvl (round up).
+
+%TODO rewrite Hand of Deity to have nr of rounds praying increasing chance and effect, but minimum one round! Make effect capped at roll success, but also random: mod+(max(success/3,1d3)) dam+(max(success,1d6)) duration rounds (max(success,1d10))... Spending XP also gives bonus to chance and effect, and short prayers (<1r) should require XP spending.
+\skill{Ability cost 30xp ccf 1.2 "Hand of \emph{Deity}":} The character can pray to be granted combat bonuses from his god. The chance of the prayers to be answered is equal to his total XP/50 (round down). The chance of having the prayers answered are improved if spending extra XP. For each extra XP spent the chance of response is mod+3.
+
+The bonus effect is mod+1 and dam+1 to all actions, and the duration is 3 rounds for every round of prayer, up to max 9r duration.
+
+The character can also spend 1xp on a quick 3ap prayer and have a chance of getting a mod+3 dam+3 for the rest of the round. Or he can spend 2xp to have a chance to get mod+6 dam+6 for two actions in the current round, or 3xp to have a chance to get mod+9 dam+9 for one action in the current. %However, the chance for quick prayer is total XP/100 (round down) instead of XP/50.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will will deal 1 damage penetrating to enemies ending their round in the damaging aura (willingly or not). The aura has radius 1.
+
+Upgrades:\\
+cost +20 radius+1 \\
+cost +20 dam+1
+
+
+\skill{Ability cost 20xp ccf 1.0 "Breathless":} The character does not have to breath. He is thus immune to most gas attacks, drowning, etc.
+
+
+\skill{Ability cost 30xp ccf 1.2 "Engaging Opponent":} An opponent must succeed with a psy roll to be able to disengage from melee combat with an "engaging opponent" character. Disengaging is switching to another target or moving outside of weapon range after having made a previous attack at the engaging opponent. It does not mean that the attacker must continue to make attacks, just that he cannot move away and cannot attack anyone else without first rolling a psy roll.
+
+upgrade: \\
+cost +10 gives target mod-3 to the psy roll. \\
+This upgrade can be purchased multiple times.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Grapple":} The character can force all targets in base contact to be unable to move. They can still take actions, but can not attempt any movement until the "grapple" character has moved out of base contact, been knocked unconscious, etc. \\
+Costs 1 mana to use per round, and requires a normal 3ap action to maintain each round. Note: active affects all characters in base contact.
+
+Upgrades: \\
+cost +50xp gives radius+1.
+
+
+\skill{Ability cost 30xp ccf 1.2 "Decimating Stare":} The hero with the frosty cold gaze can stare down an opponent to make it stop and reconsider it's current activities. The target will cease all offensive actions, stand and stare, or sometimes just wander off for a while. It will still defend itself, but at mod-3.
+
+The initial stare is a normal 3ap action and costs one mana. The hero must succeed with a psy-3 \vs psy resistance roll to initiate the effect. The target must stand in front of the hero, diagonal is ok, and in base contact.
+
+To maintain the effect the hero must spend a normal 3ap action each round, one mana, and succeed with a psy \vs psy roll. The monster must also stay in the field of vision of the hero and throw him a glance at least once per round.
+
+When a target successfully defends against a decimating stare it has mod+3 against future decimation attempts from the aggressor.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Dominating Stare":} The hero with the flaming eyes can stare down an opponent and gain temporary control over it.
+
+The initial stare is a one round action and costs two mana. The hero must succeed with a psy-6 \vs psy resistance roll to gain control over the opponent. The dominated target is then under the control of the hero, but dazed until the beginning of next turn. The target must stand in front of the hero (diagonal ok), in base contact, and be facing him for the attack to be possible.
+
+To maintain control each round, the hero must spend a primary action, one mana, and succeed with a psy-3 \vs psy roll. The opponent must also stay in the field of vision of the hero, and throw him a glance at least once per round.
+
+The monster cannot be commanded to perform actions that would be immediately detrimental to its health. E.g: Cannot commit harakiri, but can gladly attack a large monster.
+
+When a target successfully defends against a dominating stare it has mod+3 against future domination attempts from the aggressor.
+
+
+\skill{Ability cost 50xp ccf 1.5 "Incorporeal Double":} An incorporeal double image, pale and ghostly, can disengage from the hero and move away on it's own. The ghost can pass through other characters and monsters, minor obstacles and doors, but not solid walls. The ghost is immune to normal physical attacks, but can take damage from magical attacks and weapons. If the ghost is damaged it does not loose hp, but half the damage (round down), penetrating, is applied to the hero. The ghost is visible as a misty apparition or ghost, but is not scary.
+
+Forming the ghost takes a full round, with no movement or actions, and it disengages from the hero's body to take up an empty adjacent space.
+
+Dissolving the ghost takes a full round, but requires no actions, and it must be in an empty adjacent space.
+
+The ghost moves at walking speed. Spending one mana+stamina/rnd can move it at running speed. Spending two mana+stamina/rnd can move it at dashing speed. It always flees back to the hero at full dash for free. Spending one mana and one hp and succeeding with a psy roll can dissolve it immediately without having to have it move back.
+It has a 360deg vision with range equal to the hero's perception, and of the same vision type as the hero. Everything the ghost sees the hero sees as if he was there as well.
+
+The hero can spend one action and one mana to immediately switch places with the ghost double. There is no acclimatisation period since the hero is aware of the ghost's environment at all times.
+
+
+%TODO: ? change teleport to base 20 + scf 0.2 regular roll skill ?
+%        and if so, then remove the movement limitations and running teleport
+%        and perhaps also set 3ap and remove fast teleport, or set to 1r
+%TODO: ? cost ?  at 30+0.2 it costs 50xp for teleport+lvl10
+\skill{Ability cost 30xp + scf 0.2 ccf 1.5 "Teleport":} For thieves and fighters alike.\\
+\emph{"Real Heroes go to the toilet without moving!"}\\
+-- Famous quote by Formidable Fabian.\\
+Range, target, speed of activation, acclimatisation, and other factors depend on the Hero and can be independently trained. By default it takes one round to teleport to an unblocked square within line of sight. Each attempt costs one mana or stamina, decide when buying the ability and it cannot be changed later. The range is limited to 3x psyche of the Hero. Accuracy is dependent on an int roll. Success means hitting the designated target, and any fail means deviating diff squares from the target in direction 1D8 (1D6 for hex, and 1D360 for gridless). After teleportation the Hero must roll for perception, and any fail diff will be applied as a negative mod for the rest of the round. For multiple teleportations in the same round the acclimatisation mod is cumulative.
+
+It is possible that the Hero materialises on an already occupied square, or within a solid object. In this case the Hero will be shot to the closest empty square suffering (distance)$^2$ penetrating damage as a result. If multiple closest options exist the Hero can choose if he passes a psyche roll, otherwise enumerate and roll for a random final destination. The (distance)$^2$ is also used as a mod for the acclimatisation perception roll, and for an extra dex roll to see if he can remain on his feet.
+
+Teleporting normally takes a full round, but can be done faster. Attempting to teleport in a normal 3ap action is mod-3, and trying for a very fast 1ap action teleport is mod-6. These mods also affect the max range psy calculation and the accuracy int and acclimatisation per rolls. %TODO ? should it really affect the int and per rolls? more fun if not?
+
+Upgrade: Additional Accuracy\\
+cost +5xp per level: each level gives mod+1 to the intelligence targeting roll.
+
+Upgrade: Accelerated Acclimation\\
+cost +5xp per level: each level gives mod+1 to the acclimatisation perception roll.
+
+Upgrade: Range Extension\\
+cost +5xp per level: each level gives range +3.
+
+Upgrade: Long Range\\
+cost 10xp: Max range can be extended to 3x normal. Landing deviation is (diff)$^2$ instead of diff for the intelligence accuracy roll. Costs one extra mana/stamina.
+
+Upgrade: Sight Range\\
+cost +10xp: Allows for unlimited range when teleporting within line of sight, but costs one extra mana/stamina.
+
+Upgrade: Sight Precision\\
+cost +10xp: Doesn't require an accuracy int roll when teleporting within line of sight, but costs one extra mana/stamina.
+
+Upgrade: WannaGoHome\\
+cost 10xp: The Hero can memorise teleportation target locations which he can teleport to from anywhere with no range limitations. He can keep int/3 (round up) locations in memory, and it takes 10-int+1D3 days to learn a new location.
+
+Upgrade: Recall\\
+cost 10xp: The Hero can memorise an object or location and teleport to it from anywhere within range even if it's out of sight. He can keep int locations or objects in memory, and it takes 10-int+1D3 rounds to memorise a new target.
+
+Upgrade: Backtrack\\
+cost 10xp: The Hero can teleport back to an already explored square within range even if it's no longer in line of sight. A scouted square is any point which is exposed on the map, either by previous knowledge, personal or allied scouting. I.e. it's not necessary that the Hero has personally scouted the region. Allied shared vision/knowledge is sufficient.
+
+Upgrade: Reckless Exploration\\
+cost 10xp: The Hero can designate destination to any square on the map, within range, even if that square has not been scouted yet. \emph{Here, hold me beer...}
+
+Upgrade: Group Hug\\
+cost 20xp per level: The Hero can bring with him any target in touch contact, up to his level of Group Hug. Each target costs an extra mana/stamina. An unwilling target can be brought if the Hero wins a psyche vs psyche resistance roll. Attempting to bring unwilling targets also gives a mod-1 to the destination accuracy int roll per unwilling target.\\
+Touch contact means either the hero is touching the target, or the target is touching the hero. It doesn't have to be skin contact, but it can't be just stringing out a rope that both hold on to. Touching standard equipment close to the body such as clothes or armour is ok, as is a well used primary weapon, e.g. an old staff. A new and unfamiliar weapon might not work...
+
+
+\skill{Ability cost 50xp ccf 1.2 "Reach +1":} The character has an innate reach+1 mod-0 to all attacks regardless of weapon. This is in addition to the reach of the weapon.
+
+E.g: Lars LongArm has Reach+1. He is wielding a spear with reach 1 mod-3. This means that Lars has reach 0 at mod-0, reach 1 at mod-0 and reach 2 at mod-3.
+
+Reach also works fine with shields, and reach + shield + guard is an excellent combination to defend you friends.
+
+
+\skill{Ability cost 30xp ccf 1.3 "Wall Bug":} The character has found a bug in the mesh of reality. He can insert his arm, including weapon, into a solid, vertical, and reasonably smooth surface, and have it emerge from another similar surface. It costs one mana and one action to push through a wall, and the other surface must be in line of sight, with undisturbed vision path. It takes one action to retract the arm, but costs no mana. Fighting through walls is mod-3.
+
+Level 2: two arms, costs +10xp, but still costs only 1 mana and one action to use. Fighting through walls is mod-3.
+
+Level 3: two arms and a head, costs +20xp, but then the character can peek, throw, and shoot via walls. Very useful. Still costs 1 mana and one action. Fighting through walls is mod-0.
+
+Level 4: walk through walls, costs +40xp, but then the character can walk through the wall. Costs 1 mana and 1 stamina 1 extra movement point and 1 action.
+
+Works well with Gapfinder and Lean to improve line of sight.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Lean":} Character can trace vision and line of sight from any non occupied surrounding square. Also applies when making magic or ranged attacks, but not regular melee attacks, not even with reach. Facing direction is maintained.
+
+The leaning character can be attacked by response actions as though he is occupying the leaned into square. He can also be attacked by interrupt actions from enemies with higher initiative during the time he is leaning out.
+
+Maptool: use a small "eye" marker that indicates the lean vision origin.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Tingly magic":} The character will get a tingling feeling when he is subjected to magic or targeted by the buildup of a magic spell. He will not detect clean dormant or inactive magic. He will detect leaking dormant/inactive magic, but only if he is in the spell radius.
+Power of the ability is 0, when resistance vs hidden spells.
+
+The add on skill "extra sensitive", scf 2.0, increases power of "tingly magic" to lvl of "extra sensitivity"
+
+
+\skill{Ability cost 30xp ccf 1.5 "Detonate":} When killing an opponent, the character can cause the target to detonate, doing 1hp damage to all adjacent figures, including friendly fire, but excluding the Hero.
+
+Upgrades:\\
+cost +20xp: +1 damage, can be purchased max 3 times. \\
+cost +20xp: +1 penetrating, can be purchased max 3 times. \\
+cost +20xp: +1 area radius, can be purchased max 2 times. \\
+cost +20xp: no friendly fire \\
+
+
+\skill{Ability cost 30xp ccf 1.0 "Crowdfighter":} When fighting in a crowd, the character gets upset and gets dam+1 per opponent in base contact, beyond the first one.
+
+
+%TODO: instant blink should perhaps be in order of initiative instead of ignoring initiative? as this make it very easy to always escape when the big bad boss is trying to hack you to pieces. And always escaping by blink and spending time off board is kind of boring game play
+\skill{Ability cost 20xp ccf 1.2 "Blink":} The character can blink out of existence for a few rounds, then re-appear in the same place, or closest unoccupied space. It takes one round to activate, costing 3ap, and the character blinks out at the end of the round.
+
+Blinking out costs one mana or one stamina, decide which when buying the skill and it cannot be changed later. The cost is the same regardless of how long the character is away.
+
+When the character blinks back into existence he re-appear at the beginning of the round ignoring initiative. He also has a "stun" mod for one round, during which he re-acclimatises to reality. The mod is equal to -3 per round he was "away", to a max of mod-9, and min of mod-3.
+
+The duration of the blink must be decided when declaring the blink out.
+The character must be away for at least one round. The maximum duration of a blink is the character's psyche rounds.
+
+With upgrades the blinking can become faster and more adaptive. If the character can blink in during a round, and starts that round out of existence, he must still declare movement as usual in reverse order of initiative.
+
+Upgrades: \\
+cost +10xp: adaptive blink, allows the character to choose when he wants to blink back into existence instead of declaring it when he blinks out. \\
+cost +10xp: fast blink, blinks out in one 3ap action, in order of initiative.
+and blinks back into existence in order of initiative. The stun mod is reduced by 3, to a min of mod-3. \\
+cost +10xp: instant blink, blinks out in an instant 0ap action, ignoring initiative. The stun mod is reduced by 6 to a min of mod-3. Requires the "fast blink" upgrade first. \\
+cost +10xp: short blink, can blink in and out of existence in one round. The stun mod is set to mod-3 for less than a round. \\
+cost +10xp: warped blink, if the character is out of existence in the beginning of the round he can choose to declare movement when he blinks in, ignoring initiative.
+
+
+\skill{Ability cost 20xp ccf 1.0 "NullSkull":} When rolling psy vs psy rolls against incoming magic influences the character can add +5 to his psy to resist.
+
+Upgrades:\\
+cost +10xp: +5 extra resistance, can be purchased max 3 times.
+
+
+\skill{Ability cost 100xp ccf 1.0 "Uber":} The character is sooo cool that a roll of 10 is no longer an automatic fail. A natural 10 roll is just like any other roll of the die; if his chance to succeed is 10 or greater, he will succeed.
+
+
+\skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Buy twice for two extra arms. People will probably look at you really strangely from now on...
+
+
+\skill{Ability cost 20xp + scf 0.5 ccf 1.0 "Switcheroo":} The character can change target of an attack after the attack and damage rolls have been made, but before the target spends his reaction action. Both the declared target and the target  switched to have the right to react to the attack.
+
+The new target cannot be further away from the declared target than the level of switcheroo. The new target cannot be harder to hit than the original target.
+
+When the character has reached level 5 he can switch to targets that are more difficult to hit than the original. Adjust the success/failure, and damage accordingly. At level 10 he can declare target after rolling the dice.
+
+For high levels of switcheroo the character can also move after rolling to be able to see other targets. Max movement is lvl-10. This of course costs movement points as usual.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Reactive movement":} The character can always declare movement last, ignoring initiative. When two characters both have reactive movement it is highest total xp that decides who declares last.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Brütal Slaughter":} The character kills his enemies in such horrible ways that the remaining foes must roll fear modified by the overkill damage diff each time he makes a kill in their ranks. Only targets with int. For each kill the opponents get more used to it and get mod+1 to their fear rolls.
+
+
+\skill{Ability cost 30xp ccf 1.0 "Munchkin":} The munchkin can choose one extra occupation for every level of munchkin, with all the bonuses and penalties that come with it.
+
+
+\skill{Ability cost 120xp ccf 2.0 "Ambidextrous":} The character can handle weapons in both arms with equal ease and at the same time. He has an automatic "double" which cannot fail, although it still costs stamina to use.
+
+Upgrades:\\
+cost 50xp: the automatic double does not cost stamina. \\
+cost 50xp: allows triple with one extra arm for people with more extremities.
+
+
+\skill{Ability cost 50xp ccf 1.0 "Cockroach":} The character has a knack of never quite dying. If he gets totally annihilated, dead, and destroyed he still has a 3+((1000 - total XP)/100) (round up) roll of wandering into town in time for the next adventure (not session). He has probably lost most or all of his stuff (GM discretion), but he is still alive.
+
+E.g: After the successful rescue of princess CreamCup, the two remaining Heroes rest at the GoldenFlagon inn, wallowing in their riches. They lost two of their friends in the Dragon's cave; Wandering Wally was spiked to death by a javelin trap and Fat Fabian was eaten by the Dragon. They glance up from their drunken stupor just in time to see Fat Fabian limping up to the bar. He is wearing nothing but rags and his stupid feathered cap, and decorated with some very distinctive bite marks the size of a dragon's maw. How the Hell could he have survived being eaten by the Dragon?
+
+
+%\skill{Ability cost 30xp ccf 1.2 "'tis but a scratch"}
+%\skill{Ability cost 30xp ccf 1.2 "just a flesh wound"}
+\skill{Ability cost 30xp ccf 1.2 "Black Knight"} The Hero doesn't take mod-1 when wounded down to half hp. The Black Knight ability can be bought three times, each costing 30xp (but does not increase ccf), to also eliminate the mod at quarter hp and zero hp. \emph{"'tis but a scratch."}
+
+
+\skill{Ability cost 20 + scf 1.0 ccf 1.2 "Sixth Sense":} The Hero has the ability to sense things that cannot otherwise be detected, and intuit information that cannot otherwise be known. GM discretion. Some examples:
+
+Spotting sneaky villains: The Hero has failed the per check when Sneaky Smith is getting ready to gut him from behind. But passing a Sixth Sense roll will let him know something's up in time to act.
+
+Knowing where to look: The key is hidden somewhere in the room. Sixth Sense has a radius equal to the level. Standing close enough and passing a roll will indicate which squares to concentrate on for the search. GM should probably only allow one roll per "item" or situation. Alternatively, if not in range but still passed the roll, then indicate a larger region as possible location.
+
+Which way: Standing in front of a tunnel crossing, which is the right way to go? Note that "The Right Way" may mean different things to different characters.
+
+
+\skill{Ability cost 20xp ccf 1.2 "Stacking":} Heroes can stack together and occupy the same space. This means they can both stand in, and attack from, the same square. All stacking heroes must have the "stacking" ability to be able to co-exist in the same space.
+
+Attacking a stacked target is mod-3, and fail-1 to fail-3 means hitting one of the other stacked targets.
+
+%Stacking heroes gives all a mod-1 per extra hero occupying the same space.
+% NOPE: adding another 20xp upgrade to remove the mod-1 means it's too expensive for what it's worth, and reducing the initial cost to 20 means the base line is too cheap.
+
+% Stacking works perfectly fine with "guard", giving mod=0 to all angles.
+
+
+\closeskillslist
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%Possible disabilities and curses
+%--------------------------------
+
+
+\phantomsection\addcontentsline{toc}{section}{curses}
+\section*{Disabilities and Curses}
+
+
+Basic stuff:
+Reduced stats, skills or abilities.
+Equipment failures, or losses.
+
+
+Fun stuff:
+Strange equipment failures.
+Causing problems for companions rolls, skills, etc.
+
+
+Curse "Heavy Mana": The character also loses one stamina for each mana he spends or loses.
+
+
+Curse "Slow": The character is slow-1, and all actions that have $\leq$0ap cost now always cost +1ap extra.
+
+
+Curse "unlikely": The character must always roll twice for a required roll, and choose the worst result.
+
+
+Curse "forgetful packer": The character has a certain risk of not having remembered to pack an item, or lost it along the way, when he tries to retrieve it from the back pack.
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%FUTURE SPECIAL ABILITIES, once they can be supported by maptools
+%----------------------------------------------------------------
+
+\phantomsection\addcontentsline{toc}{section}{future}
+\section*{Future stuff, requires MapTool support}
+
+

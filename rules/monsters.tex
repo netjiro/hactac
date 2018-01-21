@@ -1,0 +1,1674 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+% don't add glue spacing between segments, allow ragged bottoms instead
+% turn on \flushbottom in the end.
+\raggedbottom
+
+
+
+
+%-------------------------------------------------------------------------------
+% M O N S T E R S
+%----------------
+
+
+\phantomsection\addcontentsline{toc}{chapter}{monsters}
+\chapter*{Monsters}
+\chaptermark{monsters}
+
+Monsters, critters, adversaries and other evil doers. The monster stats below should be seen as examples. I suggest creating personalised monsters for your encounters. Change a stat here and there to make things more interesting. A good idea is to still keep the critters at the approximate "standard" potency level though, so that your players don't kill their 300xp characters by attacking a goblin soldier. That would likely get them pissed off.
+
+
+
+% Make a simple table:
+%\begin{tabular}{|l|c|r|} % will define a table with lines | between and around
+                         % three columns, aligned left, centre, right
+                         % leave out the | characters to remove lines
+%aaa & bbb & ccc \\   % add the texts aaa bbb ccc to the three columns in a row
+%\hline               % add a horizontal line
+%ddd & eee & fff \\   % add ddd eee fff to the next line in three columns
+%ggg & hhh & iii \\   % add ggg hhh iii, this time without a horizontal line
+%\hline               % another horiz line
+%\end{tabular}        % close the table
+
+% Things to notice:
+%the column entries are separated by the ampersand '&'
+% remember that '$' is a naughty character, and must escape
+% you can get rid of the horizontal lines by deleting the \hline at the end
+% you can get rid of the vertical lines by deleting the '|' symbols at the top of the tabular command
+
+
+
+
+
+Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
+
+% change to smaller font size
+%\small -- nope, go for \tiny
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+con       stamina
+int       vision
+psy       mana
+per       ap
+cha       xp
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+int       mana
+psy       initiative
+per       ap
+----------
+skills
+----------
+spells
+----------
+equipment
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+psy       initiative
+per       ap
+----------
+attacks
+skills
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+per       initiative
+attacks
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+hp abs
+m w r d
+initiative
+attacks
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\subsubsection*{Note on maptool:token size}
+Most standard size humanoids like humans, elves, dwarves, orcs should be set to  normal size tokens. Halflings and goblins should be set to small size, and runts should be set to tiny size.
+
+In general:\\
+1-7hp : tiny size \\
+5-15hp : small size \\
+10-25hp : normal size \\
+20-50hp : large (2x2) \\
+30-100hp : huge (3x3) \\
+Haven't used anything larger yet.
+
+Some examples:\\
+All standard low hp goblin mobs are set to small size even if they only have a couple of hp, while all runt are set to tiny even if they have upwards of 10hp in some cases.\\
+Wolf is set to normal, dog is set to small. Just to better represent the potential danger rather than any actual "realistic" sizes.\\
+Donkeys and cave ponies are set to normal size, but horses are usually set to large 2x2.\\
+Jumping spider spawns are set to tiny, while black bug spawns are set to small size. Jumping spiders will die when you touch them, but the black bugs are more difficult with their abs and behave differently with their cling mods, even if they only have 5hp.
+
+\
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[1]
+\phantomsection\addcontentsline{toc}{section}{animals}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+A N I M A L S
+-------------
+
+The usual stuff you'll find in the forest. Wolves, bears, snakes, etc.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+wolf                       (wolf02)
+-----------------------------------
+str  7    hp 10 abs 0
+dex 10    m2 w6 r12 d20
+psy  5    vision 15
+per  8    initiative 12
+----------
+balance 6
+bite    7 dam 6
+claw    5 dam 3
+charge  6
+avoid   3 yield+3
+===================================
+
+
+
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[2]
+\phantomsection\addcontentsline{toc}{section}{monsters}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+M O N S T E R S
+---------------
+
+All the creepy not-quite-animals critters that spawn from the disturbed
+minds of game masters and story tellers.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+bug                      (beetle01)    set tiny token size
+-----------------------------------
+str  1    hp 2 abs 1 to hit -3 (small) cannot block movement, cannot be blocked
+dex  6    m3 w5 fly10                  (swarming)
+per  2    initiative 10
+bite      5 dam 1, penetrating:
+            armour affects the bug's bite skill instead of damage
+            armour abs > 3 counts as armour 3 (full coverage)
+immune to pain and hp/2 mods
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+black bug                (beetle02)    set small token size (slight reduction)
+-----------------------------------
+str  5    hp 5 abs 2 to hit -1 (small)
+dex  6    m3 w5 r- fly15
+per  5    initiative 8, smell range 6
+charge      6 (fly attack gives mod-3 total)
+bite cling  7 dam 4 once per round only
+              hold after bite (clinging to target)
+              each holding (clinging) bug gives:
+                  mod-3 to all actions
+                  cost+1 movement per step taken
+nibble      5-abs when held dam 1 penetrating
+            once per round
+immune to pain and hp/2 mods
+-----------------------------------
+50%/r to become hostile to non-bug in range
+Will become hostile to any non-bug covered in bug blood/gore
+
+Will try to attack and latch on to slow down for the others,
+then nibble to death.
+
+It takes an action (3ap) and a str-vs-str roll to remove a clinging black bug.
+The bug is placed on an adjacent square chosen by the opponent.
+Others have str+3 when helping the target.
+
+Attacking a bug which is attacked to a target runs the risk of also
+hurting the target you're trying to assist. Any excess damage after
+the bug is dead continues into the target instead.
+A success+3 or better ensures that the target will not get hurt this
+way even if there is excess damage left after the bug died.
+Fail-3 or worse will hit the target instead of the bug.
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+big black bug            (beetle03)    set large token size (2x2)
+-----------------------------------
+str  15    hp 30 abs 3 to hit ranged +3 (large)
+dex  6     m4 w6 run8 fly20
+per  8     initiative 10
+charge     6 (fly attack gives mod-3 total)
+big bite   8 dam 10 pen 1
+             hold after bite (target held in place)
+             held target has:
+                 mod-6 to all actions
+                 cannot move at all
+             str vs str to break free, full round action
+             friends can help lend strength
+nibble       8-abs when held dam 3 penetrating
+             once per round
+ichor spray  template area range 6 90 deg, everyone within the area:
+             tohit: 8-abs
+             damage: poison dam 10 1/3r until wiped clean
+             cleaning it off takes 1d3+2r
+             the ichor stinks and is corrosive.
+             in 5r it's 50% to reduce cloth and leather abs by 1
+             Max 1 spray attack per battle, max 3 per day
+immune to pain and hp/2 mods
+-----------------------------------
+Screech-Whistle will call all small black bugs to immediately come to the
+aid of the Big Black Bug. They will then attack everything in their path.
+
+BBB can coordinate small black bugs in intelligent movement, timing,
+and concentration of force.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+spider                   (spider01)
+-----------------------------------
+str  3    hp 5 abs 1
+dex  5    m2 w6 r10
+per  4    initiative 7
+bite      5 dam 3, poison 5\\con, cumulative mod-1/2r until paralysed
+            poison mod affects ams, dex, str
+spin      5 full round attack
+            each successive spin attack gives a webbing:
+            dex-2, move-2, mod-3 to all actions.
+            break free is 2*spin\\str
+            friend can clean: takes 5r to clean one spin
+            parrying spin with weapon or shield gives mod-1 we accumulation
+            on the item for every parry. Takes 1r to clear 1 mod.
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+huge spider              (spider02)  set large (2x2) token size
+-----------------------------------
+str 20    hp body 30 (+legs 12hp) abs 3 both (size 4sq) ranged to hit+3
+dex  8    m3 w5 r8 d14
+per  4    initiative 12 aggressive, will go first most of the time.
+large target:
+ranged to hit body mod+6, to hit legs mod+0
+melee to hit body mod+3, to hit legs mod+0
+-----------
+double    6 (the two front legs)
+avoid     6 yield+3
+leg stab  5 dam 8, reach 1
+            if it does 4+ damage after armour the leg is stuck,
+            and the target is held. Successful hits with both legs in the
+            same round also holds the target as long as both do at least
+            1 damage after armour is applied.
+            It takes 1a, (str|dex) vs 8 to get free from leg stab hold.
+            Friends can help, spending 1a and adding str (2h) or str/2 (1h).
+            While held all actions, other than freeing, are mod-3.
+bite    3/8 dam 5, poison 8\\con, cumulative mod-1/2r until paralysed
+            poison mod affects ams, dex, str
+            attack has 8 if target is held by leg stab.
+spin    3/8 full round attack
+            each successive spin attack gives a webbing:
+            dex-2, move-2, mod-3 to all actions.
+            break free is 2*spin\\str
+            friend can clean: takes 5r to clean one spin
+            parrying spin with weapon or shield gives mod-1 we accumulation
+            on the item for every parry. Takes 1r to clear 1 mod.
+            attack has 8 if target is held by leg stab.
+All attacks gain mod+1 per web on the target.
+The huge spider has a thick carapace that absorbs 3 damage
+Can be used to make a light weight plate armour.
+
+\end{verbatim} \end{samepage} \begin{samepage} \begin{verbatim}
+Tactics:
+The spider will try to stab-hold a target, then web it fast.
+It will not bite until it has been in battle a few rounds and not been able to
+successfully web the opponent.
+
+Legs or body, disabling:
+In the beginning of the battle the spider will keep the legs wide. During this
+phase melee attackers need reach 1 to attack the body of the spider, otherwise
+they will only hit the legs. The only way to hit the body with a reach 0 melee
+weapon during this phase is to attack after the spider has attempted a bite or
+web attack earlier in the round.
+Once the spider has taken 12 damage to the legs (losing 1 maneuver movement)
+it will keep the legs closer, and the body can now be attacked like normal.
+Melee attackers can choose to target either body or legs during this phase.
+Ranged, but not reach, attacks have mod-3 to hit the legs during any phase.
+
+Each 3 damage to the legs reduces the spider's mobility, giving 1 movement mod.
+m-mod/4 w-mod/3 r-mod/2 d-mod/1.
+However, the leg damage does not count to the total hp of the spider body.
+
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+cave worm                  (worm01)   set large (2x2) token size
+-----------------------------------
+str 10    hp 20 abs 0 tohit+2(melee)/+4(missile) (large)
+dex  3    m1
+per  4    initiative 5     perception smell
+bite   5 dam 8 slow-3, acid drool 20% to reduce abs on contact equipment by 1
+avoid  3
+-----------------------------------
+size large (4sq)
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+slime monster      (slimemonster01)   set large (2x2) token size
+-----------------------------------
+str 15    hp 40 abs 1 to hit +3 (large), tentacles hp 10 abs 1 reg 2/r
+dex  3    m1 w2
+per  2    initiative 5
+4x tentacle grapple  5
+4x tentacle crush    - damage as grapple
+quadruple            3 (triple 6, double 9)
+4x tentacle swat     7 dam 5
+gobble up            - dam 10, need to be grappled for 3r
+                       consecutive damage 1/r in stomach
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+BiteRunners        (toothcritter03)
+-----------------------------------
+str  12   hp 12 abs 0
+dex  12   m8 w12 r16 d28
+psy   5   vision 20 night
+per   6   initiative 16   ap 6
+----------
+bite         6 dam 6
+avoid        4 yield+4
+synchronise  5
+balance      3
+===================================
+High maneuver instead of mobile skill.
+They attack in small groups of 3-6 individuals usually.
+They attack and circle in rapid movement, usually just 1 attack per round.
+Keep at around 3-4 steps out, then move in, bite, move out.
+Preferably they synchronise attacks from different sides.
+Circling, spreading and synchronising.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+iffygriff adult       (demonbird01)             set token size to large 2x2
+-----------------------------------
+str 12    hp 20 abs 1 (hide & feathers)
+dex  8    m 3 w 5 r 10 fly 20
+psy  4    vision 25
+per 10    initiative 10
+----------
+mobile    2
+sneak     6
+avoid     6
+charge    4
+balance   3
+beak peck 8 dam 6
+stench aura radius: (6-dist) vs con or target will loose 1 action to gag reflex.
+                    target gets mod+1 per previous success
+----------
+Will protect it's young to the death.
+If no young around, then flee at hp=6
+or after gaining any hit > 8hp.
+Pain threshold dam/4
+===================================
+
+One or a pair of adults often has 1d4 chicks around and 1d4 eggs in the nest.
+The chicks are used to circle the targets while the adults charge.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+iffygriff chick       (demonbird01)             set token size normal 1x1
+-----------------------------------
+str  6    hp 10 abs 0 (hide & feathers)
+dex  8    m 2 w 4 r 8 fly 15
+psy  3    vision 25
+per  8    initiative 12
+----------
+mobile    1
+sneak     8
+avoid     6
+balance   3
+beak peck 6 dam 4
+stench aura radius: (4-dist) vs con or target will loose 1 action to gag reflex.
+                    target gets mod+1 per previous success
+----------
+Will flee at hp=4
+pain threshold dam/3
+===================================
+
+The nest contains 1d4 iffygriff eggs, enc 2.0 each.
+They can be used to scare off ghosts, spirits etc due to the horrible stench,
+which even permeates the etheric. Lasts only for ~1week,
+then looses it's potency. Worth about 1 gold each in Trade Town.
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+info about iffygriffs: roll int
++0 : bird monster, evil, foul, dangerous
++1 : fast and can fly
++2 : they are very foul fowl, requires strong stomach to stand close.
++3 : will protect it's young
++3 : likes to flank prey using the young.
++4 : their eggs are quite valuable for wizards and the like
++6 : their eggs can keep ghosts and spirits away
+
+When first encountering an iffygriff area the Heroes have some chance of
+realising it's an iffygriff around:
+
+entering the area:
+per+3 : notices strange call and foul stench
+int-3 : it's an iffygriff
+
+seeing the monster:
+int : it's an iffygriff
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[1]
+%\phantomsection \addcontentsline{toc}{subsection}{lizard men}
+\phantomsection \addcontentsline{toc}{section}{lizard men}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+L I Z A R D   M E N
+-------------------
+A group of species and races that form their own sub society in the world.
+Different species and races have different functions in their society.
+They speak lizard tongue.
+
+
+===================================
+lizard hound               (lizard)  set small token size
+-----------------------------------
+str  6    hp 6 abs 0
+dex 10    m3 w6 r12 d20
+per  6    initiative 10
+2x claw   8 dam 3 (2x claw when charging) (1 claw 1 bite in melee)
+bite      6 dam 6 (only when already in melee)
+charge   10
+tackle    6 chase down then 1 claw tackle attack
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+lizardman scout       (lizardman02)  set small token size
+-----------------------------------
+str  3    hp 4 abs 1
+dex  7    m2 w4 r8 d16
+int  3    vision 20
+psy  3    mana 3
+per  7    initiative 12 (quick to flee)
+----------
+mobile       3 (m-0 w-0 r-3 d-6)
+claw         6 dam 1, 2x mod-2
+short sword  4 dam 5, abs 8
+short bow    5 dam 4, quick 1r mod-3, shot 2r mod-0, aimed 3r mod+3
+               range 12, short 6 mod+3, long 18 mod-3,
+               vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
+avoid        8 yield+4
+sneak        8
+find         6
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+lizardman fighter     (lizardman01,10,13)  set small token size
+-----------------------------------
+str  4    hp 6 abs 1
+dex  5    m1 w4 r8 d12
+int  2    vision 15
+psy  4    mana 2
+per  5    initiative 10 (careful)
+----------
+quick         3 (-0 -0 -3 -6)
+mobile        3 (m-0 w-0 r-3 d-6)
+claw          4 dam 1, 2x mod-2
+sword         5 dam 6, abs 10,
+small shield  5 abs 10, parry+2
+avoid         6 yield+4
+sneak         6
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+lizardman warrior      (lizardman04,11,12)
+-----------------------------------
+str  8    hp 12 abs 2
+dex  6    m1 w3 r6 d10
+int  3    vision 10
+psy  5    mana 4
+per  5    initiative 8 (aggressive)
+----------
+quick     2
+mobile    2
+claw      6 dam 2, 2x mod-2
+sword     7 dam 6 abs 13, toparry-1, str 4  (str bonus is toparry-1, fast)
+shield    6 abs 15, parry+3
+avoid     4 yield+3
+veteran   4
+charge    6
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+lizardman chieftain   (lizardman05,14,15)
+-----------------------------------
+str  12   hp 22 abs 3
+dex   8   m1 w3 r6 d8
+con  10   stamina 20
+int   6   vision 10
+psy   6   mana 10
+per   6
+cha   4   initiative 8+1d4
+----------
+quick      4 (-0, -0, -2, -5)
+mobile     2
+claw       8 dam 3, 2x mod-2
+2h sword  10 dam 10, abs 18, toparry-2, fast+1, reach 1 mod-6
+             str 6 (str bonus is toparry-2, fast+1)
+accurate   2  (success+3 2 roll choose best, success+6 3 roll choose best)
+avoid      6 yield+2
+veteran    6
+charge     6
+scary      5
+wrestle    4
+sneak      5
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+lizardman worker      (lizardman03)  set small token size
+-----------------------------------
+str  2    hp 3 abs 0
+dex  5    m2 w4 r6 d8
+per  4    initiative 9 (flee)
+claw      4 dam 1, 2x mod-2
+knife     3 dam 3, parry-2
+spear     3 dam 4, abs 6
+avoid     6 yield+4
+sneak     8
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[2]
+\phantomsection\addcontentsline{toc}{section}{goblins}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+G O B L I N S
+-------------
+
+It is rare, I admit, but not as rare as some seem to think, that boss goblins,
+shamans and old crones have the power to put curses on people with their last
+dying words. The goblin tribes have an unfortunate knack for keeping the old
+black witchcraft alive and flourishing.
+
+
+===================================
+goblin bandit           (goblin02)   set small token size
+-----------------------------------
+str  3    hp 4 abs 0
+dex  5    m1 w3 r5 d7
+int  2    vision 12 dusk
+psy  2    mana 2
+per  6    initiative 6 chicken
+----------
+small club    5 dam 4, abs 8
+avoid         4 yield+4
+sneak         7
+charge        3
+back stab     3
+===================================
+alternatives:
+small spear   5 dam  4/5, abs  5, parry+0/+1, reach 1 mod-6, fast+0/+1
+short sword   5 dam 4(5), abs 7(8) sometimes crappy quality,
+dagger        5 dam 3(4), abs 5(6), sometimes crappy quality
+small shield  4 abs 8(10) parry+2 sometimes crappy quality
+                Ranged attacks mod-1 when in the way.
+                Hiding behind it (primary action) ranged mod-2
+short bow     4 dam 3(4), reload bow, sometimes crappy quality
+                range 10(12), short 5(6) mod+3, long 15(18) mod-3,
+                vlong 20(24) mod-6 dam-1, extreme 30(36) mod-9 dam-2
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin fighter           (goblin02,05)   set small token size
+-----------------------------------
+str  3    hp 5 abs 0
+dex  6    m1 w3 r5 d7
+int  2    vision 10 dusk
+psy  3    mana 0
+per  5    initiative 8
+----------
+small club    6 dam 4, abs 8
+avoid         5 yield+4
+sneak         5
+charge        4
+===================================
+short sword   5 dam 5, abs 8
+small shield  4 abs 8, parry+2
+small spear   5 dam 4/5, abs  6, parry+0/+1, reach 1 mod-3, fast+0/+1
+(1h/2h)         str 3 (max +1 str bonus, extra str bonus are penetrating)
+short bow     5 dam 4, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+3
+                range 12, short 6 mod+3, long 18 mod-3,
+                vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
+                str 2 (no str bonus)
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin warrior           (goblin07)   set small token size
+-----------------------------------
+str  4    hp 6 abs 1
+dex  7    m1 w3 r5 d7
+int  3    vision 12 dusk
+psy  3    mana 0
+per  6    initiative 9
+----------
+short sword   7 dam 5, abs 8
+small shield  6 abs 8, parry+2
+avoid         6 yield+4
+sneak         4
+charge        6
+leather armour abs 1
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin champion          (goblin09)   set small token size
+-----------------------------------
+str  6    hp 8 abs 1
+dex  8    m2 w3 r5 d8
+int  3    vision 12 dusk
+psy  4    mana 4
+per  6    initiative 11
+----------
+quick         2
+mobile        2
+axe           9 dam 7, abs 8
+shield        8 abs 12, parry+3
+avoid         6 yield+4
+sneak         3
+charge        6
+leather armour abs 1
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin soldier           (goblin01)   set small token size
+-----------------------------------
+str  4    hp 6 abs 1 (leather)
+dex  5    m1 w3 r5 d7
+int  2    vision 10 dusk
+psy  3    mana 0
+per  4    initiative 7
+----------
+short sword   6 dam 5, abs 8
+small shield  7 abs 8, parry+2
+avoid         5 yield+3
+veteran       1
+sneak         3
+charge        3
+phalanx       x
+leather armour abs 1
+===================================
+Alternative Weapons (spear+shield or bow+knife4)
+small spear   6 dam 4/5, abs  6, parry+0/+1, reach 1 mod-3, fast+0/+1
+(1h/2h)         str 3 (max +1 str bonus, extra str bonus are penetrating)
+short bow     7 dam 4, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+3
+(no shield)     range 12, short 6 mod+3, long 18 mod-3,
+                vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
+                str 2 (no str bonus)
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin elite soldier    (goblin01b)  set small token size
+-----------------------------------
+str  5    hp 8 abs 2 (thin plate)
+dex  6    m1 w3 r5 d7
+int  3    vision 10 dusk
+psy  4    mana 0
+per  5    initiative 9
+----------
+quick         1
+mobile        1
+sword         8 dam 6, abs 10
+shield        8 abs 12, parry+3
+avoid         5 yield+3
+veteran       2
+sneak         3
+charge        5
+phalanx       x
+accurate      1
+leather armour abs 1
+===================================
+Alternative Weapons (spear+shield or bow+knife4)
+spear          8  dam  5/6, abs  6, parry+0/+1, reach 1 mod-3,
+(1h/2h)           str 3 (max +2 str bonus, extra str bonus are penetrating)
+                  str+6 can instead give fast+1 when 2h grip
+                  finesse-4
+bow            8  dam 5, quick shot 3, sniper 3
+(no shield)       range 16, short 8 mod+3, long 24 mod-3,
+                  vlong 32 mod-6 dam-1, extreme 48 mod-9 dam-2,
+                  str 3 (no str bonus)
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin shaman            (goblin04)   set small token size
+-----------------------------------
+str  2    hp 10 abs 0
+dex  2    m1 w2 r3 d4 (very fat)
+con  4    stamina 3
+int  6    vision 12 dusk
+psy  5    mana 10
+per  4
+cha  2
+----------
+short sword   3(4) dam 4(5), abs 8,       (mod-1 (weak))
+rot           6 cast 3r 1m, dam 4 +1/m 1hp/r, range 8 +2/m, penetrating
+poison gas    4 cast 5r 2m, dam 1/r, size 3x3 +2x2/m, duration 10r +5r/m
+powercasting  3
+sneak         4
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin runt          (goblinrunt01)   set small token size
+-----------------------------------
+str 1     hp 2 abs 0
+dex 4     m1 w2 r4 d6
+int 1     vision 10 dusk
+psy 1     mana 1
+per 4     initiative 5
+----------
+claw      4 dam 1, 2x -3
+bite      4 dam 1
+avoid     5 yield+3
+sneak     6
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+goblin runt knifer   (goblinrunt02)   set small token size
+-----------------------------------
+str 1     hp 3 abs 0
+dex 5     m2 w3 r4 d6
+int 1     vision 10 dusk
+psy 1     mana 1
+per 5     initiative 7
+----------
+claw      4 dam 1, autodouble 2x -3
+bite      4 dam 2
+knife     4 dam 3, fast+1
+avoid     6 yield+3
+sneak     8
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[2]
+\phantomsection\addcontentsline{toc}{section}{orcs}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+O R C S
+-------
+
+
+===================================
+orc fighter                 (orc01,06)
+-----------------------------------
+str 10    hp 16 abs 0
+dex  6    m2 w4 r6 d8
+con  8    vision 12 dusk
+int  4    mana 5
+psy  4    initiative 8
+per  5    ap 4
+----------
+h vl 2h club   6 dam 13(12), abs 18, str 7, slow-1 knockback 1 16vs
+bite           4 dam 3
+punch          6 dam 3
+avoid          4 yield+3
+charge         4
+tackle         4
+wrestle        4
+veteran        4 (1,+3)
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+orc warrior                  (orc02/09)
+-----------------------------------
+str 11    hp 20 abs 1
+dex  7    m2 w4 r6 d8
+con  9    vision 12 dusk
+int  4    mana 5
+psy  4    initiative 9
+per  6    ap 5
+----------
+focus          2
+veteran        6 (incl race bonus)
+vlarge club    7 dam 10(8), abs 15, str 5, finesse-3
+shield         5 abs 13, parry+3, str 4
+bite           5 dam 3
+punch          7 dam 3
+avoid          4 yield+3
+charge         5
+balance        2
+wrestle        5
+tackle         5
+leather armour abs 1
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+orc soldier                  (orc04/07/08/11)
+-----------------------------------
+str  9    hp 16 abs 2
+dex  6    m2 w4 r6 d8
+int  3    vision 10 dusk
+psy  3    mana 2
+per  5    initiative 7
+----------
+focus          3
+veteran        6 (incl race bonus)
+axe/spear      8
+shield         7 abs 13, parry+3, str 4
+bite           4 dam 3
+punch          4 dam 3
+avoid          4 yield+3
+charge         4
+wrestle        5
+tackle         5
+crappy plate armour abs 2
+===================================
+alternatives: axe+shield / spear+shield
+orc war axe         dam 9, abs 12, parry-3, toparry-1, toavoid+1, finesse-2
+                    str 7 (max +6 str bonus)
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+orc war spear       dam 7/8, pen 1/2, abs 10, parry-1/+1, reach 1 mod-3
+1h/2h               str 7 (max +3 str damage bonus, max+3 penetrating bonus)
+                    finesse-3/-5
+orc war shield      abs 14, parry+3,
+                    str 7, or slow-1 str 4
+                    Ranged attacks mod-2 when in the way.
+                    Hiding behind it (3ap) ranged mod-5
+                    tackle mod+3
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+orc champion                 (orc10/05)
+-----------------------------------
+str 12    hp 22 abs 3
+dex  8    m2 w4 r6 d8
+con 10    stamina 14
+int  5    vision 15 dusk
+psy  5    mana 8
+per  7    (@ xp ~334)
+cha  3    initiative 8+d4
+----------
+quick       3 (-0 -0 -3 -6)
+mobile      3 (-0 -0 -3 -6)
+veteran     9 (incl race bonus)
+2h axe      9 dam 16(12), abs 12, parry-3, toparry-2, str 6, finesse-3
+              fast+1 if dam12 with maneuver fast strength
+avoid       7 yield+3
+slugger     4
+charge      6
+tackle      6
+wrestle     6
+roar        6
+scary       6
+plate armour abs 3
+===================================
+alternatives:
+2h flail    8 dam 11(10), abs 10, parry-5, toparry-3, snag-3, str 7, finesse-6
+2h sword    8 dam 12(10), abs 16, toparry-1, str 6, finesse-6
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+orc chieftain            (orc14)
+-----------------------------------
+str 14    hp 22 abs 5 (0 from direct ahead)
+dex  8    m2 w4 r6 d8
+con 10    stamina 14
+int  7    vision 15 dusk
+psy  6    mana 8
+per  8    (@ xp ~334)
+cha  6    initiative 8+d4
+----------
+quick         3 (-0 -0 -3 -6)
+mobile        3 (-0 -0 -3 -6)
+veteran       9 (incl race bonus)
+charge        6
+tackle        6
+wrestle       6
+roar          6
+scary         6
+slugger       3
+command       5
+avoid         7 yield+3
+
+partial armour      abs5 except from direct front where abs0
+                    behaves as plate armour with tank3
+
+heavy spear         dam 10(7) pen 2, abs 8, parry-3, reach 1 mod-3,
+1h                  fast+1 at dam10pen0 with "fast strength"
+                    str 5 (max +3 str bonus, extra str bonus are penetrating)
+                    finesse-3
+
+tower shield        abs 20, parry +5, str 8, slow-1
+                    fast+1 with "fast strength" (push-3) (since slow and fast)
+                    Ranged attacks mod-4 when in the way.
+                    Hiding behind it (primary action) ranged mod-5
+                    tackle mod+3
+
+===================================
+alternatives:
+2h flail    8 dam 11(10), abs 10, parry-5, toparry-3, snag-3, str 7, finesse-6
+2h sword    8 dam 12(10), abs 16, toparry-1, str 6, finesse-6
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+orc shaman                  (orc03)
+-----------------------------------
+str  8    hp 14 abs 2
+dex  4    m w r d
+con  8    stamina 12
+int  6    vision  12 dusk
+psy  6    mana 10
+per  5    initiative 7
+cha  3
+----------
+focus            3
+veteran          6 (incl race bonus)
+heavy long club  6 dam 9(8), abs 18, str 5, parry+1, reach-3, finesse-3
+avoid            4 yield+2
+scary            6
+----------
+magic        4
+black bolt   7 cast 1r 1m, dam 5 +2/m, penetrating, range 10 +5/m, long -2dam
+fire ball    4 cast 3r 2m, dam 5 +1/m, range 10 +5/m, area 3x3 +1x1/m
+heal         5 cast 2r 1m, heal 1 +1/m, time 1r/hp, range contact
+drain        4 cast 2r 0m, psy/psy +3/m, range contact, drains diff mana points
+----------
+very heavy leather armour abs 2
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[2]
+\phantomsection\addcontentsline{toc}{section}{svartfolk}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+S V A R T F O L K ,   o t h e r
+-------------------------------
+
+
+===================================
+small troll               (troll01)    (set token size large (2x2))
+-----------------------------------
+str 15    hp 30 abs 1 (skin)  large target ranged to hit mod+3
+dex  8    m3 w5 r7 d8
+con 10    stamina 20
+int  2    vision 15 dusk
+psy  7    mana 4
+per  5    (@ xp ~130)
+cha  1    initiative 8+d4
+pain threshold 5
+regenerates    1hp/5r
+----------
+veteran     3
+brawling    7
+    punch   dam 6
+    kick    dam 7
+double      5
+throw       5
+avoid       3 yield+2
+charge      6
+tackle      5
+wrestle     5
+roar        - 15 vs (psy+str)
+            success+0: target cannot attack melee 1d3 rounds & initiative-5
+            success+3: target must flee, until successful psy roll (1/r)
+===================================
+alternatives:
+huge club   5 dam 12/15, abs 25, parry-3, toparry-3,
+1h/2h         slow-2, finesse-0, str 15/12, reach 1 mod-3, swipe
+              knockback 1
+large rock  5 dam 8,
+thrown        range 6, short 3 mod+3, long 12 mod-3,
+              str 12
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+basic ogre                 (ogre01)
+-----------------------------------
+str  20   hp 30 abs 1 (skin) large target  ranged tohit+3
+dex   7   m3 w6 r9 d12
+con  13   stamina 25
+int   3   vision
+psy   8   mana
+per   6   cap
+cha   1   xp
+----------
+reach 1
+veteran 6 pain threshold 5
+punch
+kick
+claw sweep
+wrestle
+
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[2]
+\phantomsection\addcontentsline{toc}{section}{dead and undead}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+U N D E A D ,   Z O M B I E S ,   E T C
+---------------------------------------
+
+Braaiiiiin...
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+zombie (slow)            (zombie01)
+-----------------------------------
+str  5    hp 15 abs 0
+dex  2    m1 w2 r- d-
+per  3    initiative 1
+grapple     5 dam 1, penetrating 1, mod+1/zombie in base contact with target
+              break free on (dex|str) vs str, mod-1 / zombie in bc w/ target
+bite        5 dam 3, when grappled
+tear apart  5 dam 5, penetrating 3, when grappled
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+skeleton               (skeleton02)
+-----------------------------------
+str  5    hp 10 abs 0(hack,crush), 2(thrust,pierce)
+dex  5    m1 w3 r- d-
+psy  3    vision 15
+per  3    initiative 6
+----------
+sword     5 dam 6, abs 10
+shield    5 abs 10, parry +3
+----------
+immune to pain and half hp mods
+pain threshold 99
+black knight 1
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+evil skeleton          (skeleton03)
+-----------------------------------
+str  7    hp 20 abs 0(hack,crush), 2(thrust,pierce)
+dex  5    m1 w3 r5 d8
+psy  5    vision 15
+per  4    initiative 8
+----------
+pacing      1 (-2,-2,-6)
+2x sword    8 dam 7(6), abs 10
+double      7
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+mummy                     (mummy01)
+-----------------------------------
+str  8    hp 10 abs 1
+dex  4    m1 w3 r- d-
+psy  5    vision 15
+per  4    initiative 5
+----------
+fist        6 dam 3
+wrestle     5
+crush       dam str\\str diff per round when grappled
+life drain  psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+evil mummy                (mummy02)
+-----------------------------------
+str 10    hp 20 abs 3
+dex  6    m1 w3 r5 d7
+int  7    vision 20
+psy 10    mana 10
+per  6    initiative 8
+----------
+terror howl 8 cast 1a, 1 mana, psy\\psy, duration 2*diff (psy\\psy),
+              success+0: cannot attack. success+3: flee
+              target gets psy+3 cumulative on successive howls.
+focus       3
+double      5
+long sword  8 dam 10(8), abs 12
+shield      8 abs 20, parry+3
+drain aura  - psy\\psy drain 1 mana/rnd
+grapple     8
+crush       - dam str\\str diff per round when grappled
+life drain  - psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[4]
+\phantomsection\addcontentsline{toc}{section}{demons}
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+D E M O N S
+-----------
+
+
+Grey Stalkers:
+Live in hive packs, nomadic. One big and 4-8 small ones is normal.
+Larger packs exist, but are uncommon. Clever, can speak a bit of ancient.
+Aggressive and sneaky. Send in a small one, scout, bring in the large,
+then it brings in the rest of the hive pack. They also have hive vision,
+so one small scout is enough for the large to cast explosion spells etc.
+
+===================================
+big grey stalker         (demon10a)
+-----------------------------------
+str 16    hp 30 abs 3
+dex  7    m2 w6 r12
+int  6    vision 30 arc 360 night
+psy 12    mana 12
+per  8    initiative 10
+----------
+quick          3
+balance        3
+sneak          10
+veteran        3
+ancient        5
+charge         6
+blink          blink out 1a, blink in 1a, out max 5r
+bite           6 dam 8 slow-1
+horn charge    8 dam 8+dst/3, acts like tackle
+leg stab       9 dam 6 fast+1
+----------
+summon         8 1r 3m +1stalker/3m  summons a grey stalker
+                 duration is until the big grey stalker dies
+explosion      8 1r 2m dam 5 +1/r penetrate 1
+                 range 10 radius 1 +1/2m
+portal home    6 10r 6m duration 10r   creates a one way portal home.
+===================================
+hp 30 abs 3  :
+init 10      :
+mana 12      :
+pain t4 v3   :
+hp/2         :
+
+\end{verbatim} \end{samepage} \normalsize
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+grey stalker             (demon10b)
+-----------------------------------
+str  8    hp 12 abs 2
+dex  9    m3 w8 r14
+int  5    vision 30 arc 360 night
+psy 10    mana 8
+per  7    initiative 12
+----------
+quick          3
+balance        3
+sneak          8
+ancient        3
+veteran        2
+charge         6
+blink          blink out 1a, blink in 1a, out max 2r
+bite           5 dam 6 slow-1
+horn charge    7 dam 6+dst/3, acts like tackle
+leg stab       8 dam 4 fast+1
+----------
+summon         4 100r 8m   summons one big grey stalker
+                 duration is permanent
+teleport       6 1r 2m teleport to the big grey stalker
+===================================
+hp 12 abs 2  :
+init 12      :
+mana 8       :
+pain t3 v2   :
+hp/2         :
+
+
+==================== more grey stalker pics in demons dir
+                     esp smaller versions, hivelings
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\pagebreak[4]
+\tiny \begin{samepage} \begin{verbatim}
+The Blackscale Antorg critters that usually live underground, and rarely seen.
+They live in social gangs, where they can metamorphose to suit their role.
+It is not known if they are demons or not, but they have been found in more than
+one world reality. This of course makes them more demon than monsters...
+They dig for copper, and keep slaves of various races to work the digs sites.
+They travel through magical portals which the antorg masters create.
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+===================================
+Blackscale antorg master (demon14a)
+-----------------------------------
+str 15    hp 30  abs 5 (melee&ranged) tohit+3    set size large (2x2)
+dex  5    m1 w2 r4 d6
+int 12    vision 30 magical
+psy 12    mana 30
+per 10    initiative 5
+---skills-------
+bite             8 dam 7
+thunder stick    7 dam 4 +2/charge parry-3  25charges
+                   stun 6 +6/charge
+                   charge effects add to all effects with each charge
+lightning rod    6 dam 5 pen 2 range 10, 15 charges
+                   short 5 mod+3 dam+2, long 15 mod-3 pen 0
+                   normal shot 1a mod-0,
+                   quick shot 1a fast+1 mod-3
+                   aimed shot 1r mod+3
+ancient          5
+common           3
+dwarvish         6
+svartlingo       6
+literate         8
+counting         6
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+---magic-------
+magic 6
+power casting 3
+force bolt   7  cast 1a 1m, dam 5, range 10, long -2dam, penetrating 1
+               cast time 1a means it can be cast multiple times per round
+               with the normal -3 cumulative mod per action
+               int 7, psy 5
+fire storm   7  cast 1r 1m, dam 5 +2/m, range self, radius 1 +1/m,
+                duration 3r +3/m, damage each round,
+                caster is immune to fire for the duration
+ward shield  8 cast 2r 2m, range touch, duration 5r +3r/m
+               charge 5 +3/m (pay on cast)
+               Absorbs incoming damage before it strikes the character
+               or his equipment. Each absorbed damage point costs
+               one charge from the spell.
+force wall   8 cast 1r 1m, size 3 +1/m, duration 5r +3/m, range 5sq +3/m
+               psy vs str +3/m to stop anyone passing the blocked passage
+               missiles and magic will pass through the force wall with a
+               mod-3 to hit or to cast respectively.
+ward wall    8 cast 1r 1m, size 1sq +1/m, duration 5r +3/m, range 5sq +3/m
+               charge 3 +2/m
+               psy vs str +3/m to stop anyone passing the blocked square
+               absorbs incoming magic at 1 charges per mana of incoming spell.
+               absorbs incoming missiles 3dam per charge. at least one charge.
+               absorbs incoming melee strikes at 5dam per charge. 1 charge min.
+sleep gas    7 cast 3r 2m, range 10sq +5/m, area radius 4 +1/m, duration 5r +3/m
+               sleep gas. mods con-3 each round. fall asleep when con=0
+               when gas gone recovers 1 con each round. roll below con
+               each round to see if wakes up.
+blind        6 cast 1r 1m, range 15 +5/m, duration 5r +2/m
+               target gets vision=1 for the duration.
+heal         8 cast 3r 1m, heal 5 +3/m, time 2hp/r, range contact
+mana transfer 5 cast 2r, transfer 3m/r +3/m, range 5,
+                willing target or object only, in/out
+                Transfer is full round action, can only maneuver
+                and do no actions for the duration.
+                Max psy mana per cast.
+drain        7 cast 2r 0m, psy vs psy +3/m, range contact,
+               drains diff mana points
+slow spells (10+r):
+mass teleport, open gate vortex, close gate vortex
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+--equipment--------
+thunder rod
+lightning staff
+
+===================================
+hp 30 abs5   : 30
+mana 30 :30
+no pain
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+Blackscale antorg fighter (demon14b/c)
+-----------------------------------
+str 8     hp 15 abs 3
+dex 8     m1 w2 r5 d8
+int 8     vision 30 magical
+psy 6     mana 10
+per 8     initiative 7
+---skills-------
+---spells-------
+magic          3
+powercasting   3
+heal           7 cast 1r 1m, heal 1 +1/m, time 3hp/r, range 5
+ward flash     8 cast 1a 1m, range personal, duration 1 attack and 1r,
+                 absorbs 5dam +3dam/m on the first attack that hits the caster.
+                 It is only active during the round it has been cast.
+                 Absorbs incoming damage before it strikes the character
+                 or his equipment.
+---equipment-------
+bite             8 dam 6 toparry-3 toavoid-3
+thunder stick    7 dam 4 +2/charge parry-3  25charges
+                   stun 6 +6/charge
+                   charge effects add to all effects with each charge
+lightning rod    6 dam 5 pen 2 stun 3, range 10, 15 charges
+                   short 5 mod+3 dam+2, long 15 mod-3 pen 0
+                   normal shot 1a mod-0,
+                   quick shot 1a fast+1 mod-3
+                   aimed shot 1r mod+3
+===================================
+hp 15 abs3      : 15
+mana 10 : 10
+no pain
+ammo ts : 25
+ammo lr : 15
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\pagebreak[1]
+\tiny \begin{samepage} \begin{verbatim}
+===================================
+Blackscale antorg slave hunter (demon14b/c)
+-----------------------------------
+str 12     hp 20 abs 4
+dex 6      m2 w4 r6 d10
+int 8      vision 30 magical
+psy 8      mana 15
+per 10     initiative 10
+---skills-------
+quick           2
+mobile          2
+quick draw	6	thunder stick and lightning rod in quick draw slots
+claw slash	11 dam7 fast+1
+claw grab	8 dam4
+wrestle	        6
+---spells-------
+magic           3
+powercasting    3
+heal            8 cast 1r 1m, heal 1 +1/m, time 3hp/r, range 5
+ward flash      11 cast 1a 1m, range personal, duration 1 attack and 1r,
+                 absorbs 5dam +3dam/m on the first attack that hits the caster.
+                 It is only active during the round it has been cast.
+                 Absorbs incoming damage before it strikes the character
+                 or his equipment.
+---equipment-------
+bite             8 dam 6 toparry-3 toavoid-3
+thunder stick    9 dam 4 +2/charge, parry-3,  25charges
+                   stun 6 +6/charge
+                   parrying weapon removes abs stun points,
+                   rest continue into holder
+                   charge effects add to all effects with each charge
+                   (both damage and stun)
+lightning rod    8 dam 5 pen 2 stun 3, range 10, 15 charges
+                   short 5 mod+3 dam+2, long 15 mod-3 pen 0
+                   normal shot 1a mod-0,
+                   quick shot 1a fast+1 mod-3
+                   aimed shot 1r mod+3
+===================================
+hp20 abs4      : 20
+mana 15 : 15
+no pain
+ammo ts : 25
+ammo lr : 15
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% change back to normal font size
+%\normalsize
+
+% \raggedbottom command at the top tells to :
+% don't add glue spacing between segments, allow ragged bottoms instead
+%
+% now turn on \flushbottom in the end.
+\flushbottom

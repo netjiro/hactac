@@ -1,0 +1,42 @@
+171113:
+Removed childhoods and professions. They didn't make building characters more interesting. Too easy choice to optimise, and the optimised characters got too op. Also limits future choices since the trade offs will make some purchases completely uninteresting.
+
+
+
+
+170605:
+Starting up new versions of all rules files to make it simpler to piece by piece bring in the old stuff and adapt to the changes moving away from the old ams system to the new ap structure instead.
+
+
+
+
+091216:
+changing to tex instead of just plain text.
+converting to pdf. lots of formating details still to do.
+
+
+
+091118:
+rewriting and merging timing and pacing to work better with mods that are not exact multiples of three.
+
+
+
+
+
+rules 091108 archive:
+Early in changing rules-skills split, before removing duplicate text from the rules section, moving into the skills section.
+Before starting the change from subsegments in round into only whole rounds and random rolls for quick reload, aim, etc.
+
+
+
+
+removing dual text from rules to skills, esp. pacing and timing skill effects.
+removing split rounds details, replacing with rolls
+removing mams, which didn't work out that well
+
+
+
+cleaning up skills to work better with stacking
+
+
+

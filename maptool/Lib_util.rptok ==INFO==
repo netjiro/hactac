@@ -1,0 +1,6 @@
+Lib:util.rptok    <<   RENAMED to Lib_util.rptok
+since the ":" is illegal in win naming.
+BUT, in maptool it has to have the colon naming:
+"Lib:util" when it is imported to a map, 
+and it should only be imported to ONE map in a map set.
+Properties should be lib

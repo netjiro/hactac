@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+
+# rule book components
+
+for f in rules/{book,cam,cha,equ,mag,mon,pri,rul,ski}*.tex
+do
+    aspell -d british -p ./british.dict.hactac \
+        -t --dont-tex-check-comments \
+        --dont-backup \
+        -c "${f}"
+done
+
+
+
+# adventures
+
+for f in adventures/*/*tex
+do
+    aspell -d british -p ./british.dict.hactac \
+        -t --dont-tex-check-comments \
+        --dont-backup \
+        -c "${f}"
+done
+
+
+
+exit 0 # ---------------------

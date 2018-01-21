@@ -1,0 +1,2291 @@
+%===============================================================================
+
+
+
+% Return of Uchly Namen was the first campaign I wrote for what has now become
+% hactac rule set and world setting. It is intended to be an intro start for
+% a handful of newbie characters, fresh out of the Dungeon of Testing.
+
+
+% TODO: update to dap
+% It's not updated properly to current rule set. I'll do that if/when I have
+% the time. The current campaign "Goblin Destiny" has time priority.
+
+% this means it's written for an older rule set version.
+% Mainly: "capacity" should be replaced with "action points"
+% capacity 1-9 should be 3ap base
+% capacity 10-12 is 4ap
+% capacity 13-15 is 5ap.
+% most goblin npcs should have 4-5ap, orcs should have 3-4ap base
+% then add the "quick" level to the base ap:
+% base ap 4, quick 2 :  ap 6(4)
+
+% It was played with maptool 1.2.
+% I'll see if I can realease the maps, images, and maptool campaign files later.
+
+
+
+
+
+%===============================================================================
+
+\documentclass[11pt, twoside, titlepage, a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
+\usepackage{graphicx}   % For eps figures
+\usepackage{epsfig}     % Alternative package
+\usepackage[hang,small,bf]{caption}
+
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+
+\newcommand{\degrees}{$^\circ$~}
+\newcommand{\degree}{$^\circ$}
+
+\newcommand{\vs}{$\backslash\ $}  % "versus" slash
+\newcommand{\bs}{$\backslash\ $}  % just backslash
+
+
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+
+\usepackage{ifthen}
+
+\newboolean{skillsaslist}
+\setboolean{skillsaslist}{true}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
+
+\newboolean{actionsaslist}
+\setboolean{actionsaslist}{true}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+\newboolean{itemsaslist}
+\setboolean{itemsaslist}{true}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+
+\newenvironment{readoutloud}%
+{\begin{quote}\begin{itshape}}%
+{\end{itshape}\end{quote}}%
+
+
+
+
+
+
+
+\begin{document}
+
+
+%-------------------------------------------------------------------------------
+% make a simple title page
+%-------------------------
+
+\begin{titlepage}
+
+\begin{center}
+
+   \vspace{4 cm} % Vertical space
+
+   \textbf{\Huge{Return of}}
+
+   \ % empty paragraph
+
+   \textbf{\Huge{Uchly Namen}}
+
+   \ % empty paragraph
+
+   \textbf{\Large{short campaign for hactac}} \\
+   \textbf{\Large{just a newbie introduction}}
+
+
+   \vspace{4 cm} % Vertical space
+   %\textbf{\Huge{image\\ goes\\ here}}
+   %\vspace{1 cm} % Vertical space
+   \includegraphics[width=120mm]{./figs/negotiate.eps}
+
+   % make it look better in html rendering.
+   \vspace{4 cm} % Vertical space
+
+
+
+   \vfill % Puts what's below at the bottom of the page
+
+   %\textbf{\Large{Author Authorson}} %\hspace{5 cm} \large{author2}}
+
+   \ % empty paragraph
+
+   %\large{company-name}
+
+   %\large{General Academy of Bloody Murder}
+
+   \ % Empty paragraph
+
+   \normalsize{\today}
+
+\end{center}
+
+%\thispagestyle{empty} % No page number on title page.
+
+\end{titlepage}
+
+
+
+
+%-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+
+
+\vspace*{\fill}
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+
+\vspace*{\fill}
+
+
+% Add a table of contents
+\thispagestyle{empty} %set empty, no footers or headers
+\fancypagestyle{plain}
+\cleardoublepage %force next printed page a right hand page.
+\tableofcontents % Always compile twice if you have changed much
+\newpage
+
+
+
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1}
+% This way I don't have to use chapter*{} or section*{} together with manually adding the table of contents lines, which also screws up the page headers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%===============================================================================
+%                         here the adventure begins
+%                         -------------------------
+
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{introduction}
+\section*{Introduction}
+\chaptermark{introduction}
+Hello good folks. This is a small but "complete" campaign written in the old days, for what has now become the hactac rules and world setting. It is intended as an introductory campaign for newbies (both players and characters), to showcase some world intro, basic maps, fighting techniques, etc.
+
+Some of the maps and token images I've found on various rpg amateur user gallery sites and shamelessly used here without proper attribution. If you find your material in here and either want me to remove it or want attribution, please contact me.
+
+The campaign consists of a series of adventures linked together around the return of the demon Uchly Namen and the problems he causes. This is meant to be played as tongue-in-cheek old style gaming and is supposed to be fun and entertaining. Don't bother about realism, dark intrigue, etc. Happily portray the npc characters as cliché cardboard cut-outs, use silly voices, be flexible with the rules, and so on. Maximum fun!
+
+\begin{readoutloud}
+Text looking like this is supposed to be read to your player in true old school style. Don your best silly voice acting hat.
+\end{readoutloud}
+
+I've tried to balance the encounters to fit a group of a few 100xp newbies character, straight rolled and without serious optimization beyond what is recommended in the campaign section of the rulebook.
+It is recommended that all players roll up characters and run through the \emph{Dungeon of Testing} adventure to get used to maptool and the rules. That is also a good way to find glaring tactical holes in the newly created characters.
+
+If you run this campaign for a larger group, more experienced players, or better characters please adjust the opposition. The easiest way is to just increase the amount of critters, or upgrading a couple of them to more potent variants. Most maps have nooks and crannies where reinforcements or hidden reserves can be spawned without breaking the logic of the encounter. Also, if the enemies are overwhelmingly difficult, just delete some of them.
+
+Before actually playing each sub-quest, try to run it through in your mind and consider some possible actions and choices your players might make, and their consequences in terms of outcome and losses. Don't be afraid to kill a character or two every now and then if they are reckless, but the players should be given reasonable warning before heading into a trap which they cannot get out of. Also, it is good to provide avenues of escape and retreat if possible, so that they can flee from enemies that turn out to be too powerful. Live and wisen up for the future.
+
+The different sub-quests are designed to showcase different tactical issues with the hactac rule set and world. The combat power of new player groups vary quite a bit so it's likely that the encounters need to be adjusted to suit your particular group of murderers. Also, veteran tabletop players will probably be better at the early stage optimization of their characters, which means their characters will have more combat prowess per XP than characters created by newbie players.
+
+\
+
+The first run through of the campaign was 2009-12-02 to 2010-05-17. It took a total of 21 weekday evening sessions, of 2-3h each. Our total game time was around 50h. The early sessions had some technical issues that took some time, but all in all the MapTool-1.2-b32 worked quite well, as did Jarnal-917. We started out with skype for voice chat but had to switch since it was way too unreliable and problematic. Teamspeak3 worked much better, but with some minor issues regarding latency. Mumble should be a great replacement, but has not been tested yet. \emph{In late 2017 we run exclusively with mumble and mostly with MapTool-1.4.0.5, with Jarnal not used for a while.}
+
+If I get the time I might update the campaign files to MapTool-1.3 series format, but in the mean time the 1.2-b32 release works well enough.\\
+...\\
+\emph{sometime 2015:} Well now I'm sitting here taking a deep breath and going through the files and dreading all the boring work needed to redo this as maptool version 1.3 campaign files. Blaurgh! Well, we'll just have to see if I have the stamina... or I might need a Quaff!.
+
+The campaign chronology of the first run-through can be found at \\
+\url{http://forums.rptools.net/viewforum.php?f=48} \\
+and the discussion forum for this campaign is located at \\ \url{http://add.url.here.org/sothat/wecan/readit}
+
+\
+
+
+%TODO: \\
+%
+%
+%TOKENS: \\
+%- Pawa civilians \\
+%
+%
+%MAPS: \\
+%-Pawa castle \\
+%-Conq castle \\
+
+
+
+
+
+
+%The Return of Uchly Namen
+%-------------------------
+\clearpage
+\section*{Return of Uchly Namen}
+
+The Baron Evilnius Conq is trying to win more power and wealth by taking over the lands and castle of Baron Massa Pawa. But he cannot do it by ordinary means. Instead he has hired the wizard Deville Sneexious.
+She managed to find a way, by summoning the demon Uchly Namen to do her bidding, and let the demon break into the Pawa castle and kill the nobleman and his guard captain.
+
+The thing is that the demon has been summoned once before, to do exactly the same thing, some 200 years ago, and between the ancestors of the Conq and Pawa lines no less: Moronius Conq, who felt he wanted to kill and supplant Lotsa Pawa, hired the wizard Trygain John to summon the demon and have it attack Castle Pawa. Trygain was a bit fumbly and did a piss poor job of the summoning and subsequent binding, as well as giving the demon very vague commands. The demon attacked the castle half-heartedly for a while, then considered itself finished with the command and went on a rampage across the region for a week or two. Back then some stalwart Heroes with the wizard Honorbliz Wize on point managed to force him back to the summoning site, and finally out and away from this realm. After the fight Honorbliz Wize took upon himself to seal the demon from this world and scatter the binding artifact, a large necklace, in four pieces.
+
+Sneexious have located one of the pieces, the necklace itself, but is missing three gem stones. She knows approximately where they are, but have not been able to find them. The last gang she sent went missing after recovering the RedStone. The village of Sleepy Cove has few heroes, so she has had to lower her standards. And just then the stalwart group of noobs land in the harbour on a warm summer evening...
+
+\
+
+Sneexious is living in Sleepy Cove under the guise of a wise woman scholar, Dyslexia Marigt. An elderly lady who only does good for the fellow villagers around her. The nice old Dyslexia Marigt have dug up the horrible secret of the "Return of Uchly Namen". She will talk to the adventurers and present her plight as follows: \\
+If they cannot find all three gems: RedStone, GreenStone, BlueStone, and bring them to her before the end of the summer, the Demon of Old, Uchly Namen, will rise again. As he did once before, he will lay waste to the region. This happened already some 200 years ago, and the stars are coming into alignment for it to happen again. She must rebuild the binding artifact to prevent the demon from entering this realm.
+
+Now, if the heroes would please be so kind as to find all three gem stones and bring them to her, she will take them to the gate site to "sacrifice the binding artifact" and close the gate \emph{forever}!
+
+In fact she will sacrifice the Heroes, or some unlucky farm girl, to open the gate and bring forth the demon, binding the beast to the command of the bearer of the necklace.
+Most likely the summoning and binding will not go as planned due to the interruption of the heroes, and the demon will emerge unbound, and much more difficult to command. The demon will then start his rampage across the region.
+
+Sneexious will then go to the Old East Tower ruin and meet lord Conq. There she will keep him in the dark about the problems with the demon, and agree to complete the assault on Castle Pawa. She will command the demon to attack, then follow Conq to his castle for the rest of her payment.
+
+The demon will attack the Pawa castle and kill the lord and captain, and anyone else in the way. After that irritating command it wants to kill Sneexious, and heads off towards the west to find her, passing through Sleepy Cove.
+
+Lord Conq has long been waiting for this event, and will take his small army and march into the battered Castle Pawa, to "rescue" and "protect" them from their horrible fate at the hands of the demon monster.
+
+Sneexious has been paid, but must somehow escape both the demon and the agents and assassins she is certain that Conq has sent after her to ensure she banishes the demon, and perhaps kill and rob her anyway afterwards.
+
+It is now up to the heroes to stop the demon from destroying Sleepy Cove. They will fight it valiantly, but it is not enough. In the end the final blow will be dealt by the obnoxious True Hero, Bling SwordSlash.
+
+It is possible that the Heroes choose to get involved with the problems at Pawa castle, but it is unlikely they will be able to do anything useful there. They might succeed in capturing Sneexious though, but that will bring them into conflict with Conq's assassins.
+
+
+
+
+\subsection*{Synopsis}
+\begin{description}
+
+\item[00] Recruitment, find Dyslexia Marigt, get the job, figure out where to start.
+
+
+\item[01] Search for the goblin bandits in the south forest, kill them all, get the RedStone.
+
+
+\item[02] Travel to Eisenkrafs, search for Coal-Black-George, find a way into the mine, down shaft 5-1, into the natural cavern, while getting set up by the mining boss. Find the body of Coal-Black-George and get the GreenStone. Survive to find another way out, since the boss and his gang will kill those who try to leave the way they came in.
+
+
+\item[03] Travel to Honorbliz Wize tower, see the fight between the wizard and Sam Slick. Take side perhaps. Search the tower for the BlueStone, while fighting off the shadow servants. Perhaps figure out that Honorbliz helped banish the demon the first time, that the effective weapons are in Castle Pawa, and that something is wrong with Dyslexia Marigt's story.
+
+
+\item[intermission] Rest and recuperate. Decide whether to continue helping Dyslexia Marigt for some more gold. Perhaps figure out that Dyslexia Marigt is planning on using human sacrifice in her "gate sealing" ritual.
+
+
+\item[04] Gate site, either as unwitting sacrifices, or to save kidnapped girls. Fight the guards, and the wizard, then flee from the demon.
+
+
+\item[05] The Old Eastern Tower Ruins. Meeting between Dyslexia Marigt and Baron Evilnius Conq. Figure out more of the story, and where the demon will be heading.
+
+
+\item[06] Attack on Castle Pawa. perhaps they will just hear of this, not be there. If there, fight the demon, but first find the weapons. The old lance spear and shield.
+
+
+\item[07] The attack on Sleepy Cove. Fight the demon, then Bling SwordSlash will take over, make the killing blow, and get all the credit.
+
+
+
+
+\subsection*{Main NPCs}
+
+\item[Deville Sneexious:] A greedy old wizard. She is not as competent as she thinks, and lazy to boot. She is however great at talking the talk and playing the part. She is hired by Baron Conq to summon Uchly Namen to attack Castle Pawa. Being a bit lazy she delegates the small stuff to the Heroes.
+
+She lives in Sleepy Cove since the winter, under the guise of "Dyslexia Marigt", a pleasant old scholarly woman who is trying to save the region from the impending doom.
+
+
+\item[Bling SwordSlash:] A True Hero of many Great Deeds in far away lands. He is currently summering for a short while in Sleepy Cove. He was there since he heard Sneexious was looking for help with something about a Demon. But since she is paying a pittance for the services she asks for he mostly sits in the inn and drinks. He is enjoying most of the naive young women in the village and is in no hurry to leave.
+
+He started believing the stories about himself a long time ago, and is sooo much better than everyone else. Simply above all the other cretins around, with the correct moral values, only charging reasonable sums of money, etc.
+
+Bling SwordSlash will steal all the Glory and Praise from the Heroes in the conclusion of the campaign, and he should be made to be seriously disliked before that to make the after taste even worse. It should not be hard, just play on his arrogance, obnoxiousness, know-it-all, and "moral values" preaching.
+
+
+\item[Sam Slick:] A roaming cloak and dagger thief, who has caught the scent of gold and foul play in the region. There must be money to be liberated. He is ego focused, direct, and very skilled, with very flexible grey morals. That said, he can be friendly and helpful as long as it doesn't cost him anything.
+
+
+\item[Honorbliz Wize:] is the old wizard who once before helped banish Uchly Namen. He will most likely make a very brief acquaintance with the Heroes before dying.
+
+
+\item[Baron Evilnius Conq:] Spoken of as "The Baron" or "Baron Conq", is a sly evil man in his early 30's. He is power hungry and greedy, missing few opportunities to cook up plots and plans. However, he is not a very bothersome tyrant to the people living on his lands. As long as they pay their taxes he will simply not bother with them at all. They are beneath him.
+
+Instead he focuses all his energy on schemes to increase his power amongst the nobility. His next ploy is to try to take over the Pawa lands and riches. Something his great, great, ..., grandfather tried before him with little success. Evilnius, however, feels he can do better than his ancestor Moronius.
+
+
+\item[RedGuard:] Conq's elite guards. They are dangerous in a fight since they can make multiple accurate attacks with their wicked sharp staffs. Other than fighting they are mostly silent and somber.
+
+
+\item[Baron Massa Pawa:] is the old, wise, honest, and well liked ruler of Castle Pawa and the surrounding lands and villages. The Heroes might seek an audience with him before the attack by Uchly Namen. Otherwise they will just hear of his death.
+
+
+\item[Gebbhard Goebbels:] the mining boss in Eisenkrafs. He is the foul ruthless de facto ruler of the mining village of Eisenkrafs. Fat and 50+ he is still large and strong, and will be a problem for the Heroes unless they find a way around him and his ruffians.
+
+
+\item[Uchly Namen:] A great demon from beyond. He has been called here before. The place has tasty creatures, but the wizards who strive to command him are always a serious pain in the ass. He has no intention of staying longer than he has to, as long as someone has the necklace and is using it to command him. If he can get that effing necklace ... well that would be a whole new situation indeed.
+
+He cannot directly attack the bearer of the necklace, and must obey their commands to some extent, although the control is very limited, and the details up to interpretation. He can only speak Ancient, and does not understand common. After the attack at Castle Pawa he always carries around an old scholar who is forced to translate for him.
+
+He is very powerful and too dangerous to battle without the lance spear and shield from Castle Pawa. There is no use setting numbers to this beast. He will behave according to script to make it dramatic and fun.
+
+
+\end{description}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%                             Introduction
+%                             ------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{player introduction}
+\section*{Player introduction}
+\chaptermark{player intro}
+
+\begin{readoutloud}
+The Heroes have all arrived in Trade Town last week. They have been looking for work, but it has been difficult to get anything worthy of a true Hero wannabe.
+Then suddenly they find the old advertisement proclaiming:
+
+\begin{center}
+\begin{verbatim}
+Dyslexia Marigt, Scholar Supreme,
+is looking for brave adventurers,
+to procure special items and run
+interesting errands.
+Payment in gold, upon delivery!
+Contact D.M. in Sleepy Cove.
+\end{verbatim}
+\end{center}
+
+The advertisement is tattered and worn, but it is the best thing available. The Heroes gather their meager belongings and buy passage on a ship the very next day. After a short and sunny cruise the Heroes finally disembark on the pier of Sleepy Cove harbour, late on a beautiful summer's day.
+
+The smell of adventure, heroic deeds, and gold is in the air.
+\end{readoutloud}
+
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------------
+%00 : The Recruitment - Welcome to Sleepy Cove
+%===============================================================================
+%                              Sleepy Cove
+%                              -----------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{00 recruitment, Sleepy Cove}
+\section*{00: The Recruitment -- Welcome to Sleepy Cove}
+\chaptermark{sleepy cove}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes arrive at Sleepy Cove. They find their way to Dyslexia Marigt and take the job of getting the stones. They get some advice and directions to get started.
+
+
+\subsection*{The Village of Sleepy Cove}
+%------------------------
+\begin{readoutloud}
+A quaint little fishing village. The houses are somewhat askew, the docks need tending, the people look a lot like each other, and a faint lingering smell of fish is everywhere. But the sun is shining and all is good.
+\end{readoutloud}
+
+The village of Sleepy Cove, a small hamlet with a sheltered harbour. It is part of Lord Conq's domain, in the kingdom of KingsLand. It is a small village, mostly fishermen and farmers. The inn "Sleep with the Fishes" is the centre of society, and the general store has basic equipment, and a 10\% chance to have any sought after "special" item available on the shelves.
+
+
+\subsection*{Sleepy Cove gossip: general info}
+%---------------------------------------------
+Gossip success:\\
+-3: There is an actual hero in the village since yesterday. Bling SwordSlash, a powerful hero of many well known deeds.  \\
++0: A scholar, Dyslexia Marigt, is looking for adventurers. \\
++0: Farmer Beard has had problems with gnabbits eating his corn. \\
++0: This is looking to be a good summer. \\
++0: This is looking to be a poor summer. \\
+
+
+\subsection*{Sleepy Cove gossip: Dyslexia Marigt}
+%------------------------------------------------
+Gossip Success:\\
+-3: Nice old lady, lives in that cottage over there...\\
++0: She has been living here since midwinter. \\
++1: She is a bit of a loner, but quite friendly. \\
++2: She has helped diagnose and treat Brutella the Sick's illness. (random info on illness: nightdragons, elfwind, gnomethumb, greenspots, stonestomache) \\
++2: She is looking for a band of adventurers. \\
++3: She hired a couple of adventurers about a month ago. \\
++3: The previous adventurers are said to have disappeared in the South Forest over a week ago. \\
++4: She used to work a couple of months for Baron Conq in his castle before renting a cottage here in Sleepy Cove. \\
+
+
+\subsection*{Dyslexia Marigt}
+%----------------------------
+When entering Dyslexia's house they immediately overhear the end of a heated exchange between Dyslexia Marigt and Bling Swordslash. They hear Bling SwordSlash say:
+\begin{readoutloud}
+\emph{Bling [raised voice, angry]:} Real Heroes don't work for pocket change.
+\end{readoutloud}
+Then he storms out, stops by the heroes and makes a derogatory stare and pff sound, and says:
+\begin{readoutloud}
+\emph{Bling [scornful voice]:} Well, maybe these wannabes do. Good luck with them, Sneexious! Or maybe your Conq guards can do it for free ha? \\
+Maw-Ha-ha-ha!
+\end{readoutloud}
+Bling knows of Deville Sneexious, and is not fooled by her alter ego disguise. He leaves the house laughing.
+Dyslexia Marigt looks real angry, but composes herself fast. She looks at the heroes and smiles:
+\begin{readoutloud}
+\emph{Dyslexia [kind old voice]:} Welcome strangers. Are you here for work? Come on in, please. I have some milk and cookies somewhere.
+
+There is a horrible danger threatening this region. An old lingering evil since the days of yore. The Demon "Uchly Namen" will return to wreak havoc and mayhem for leagues around if we cannot stop his arrival.
+
+The Demon Beast has been here before, some 200 years ago, but was defeated and banished forever, or so they thought. Now, the stars are coming into alignment again, allowing the monster to once again open the gate.
+
+You see, I have learned how to block his passage into this realm, forever sealing the gate that was once left ajar after his last banishment.
+
+I don't expect you to perform such a dangerous task. I plan to seal the gate myself. But I need a few items to do it. Three crystal stones in fact.
+
+I'll pay 5 gold for each of the stones, and I'll double that once I have all three
+
+I found out about the demon when I worked for the Baron Conq a few months ago. I was hired to organise and update his family library and chronicles. There was a mention of a horrendous event some 200 years ago. I have since, through long and painstaking research, found that it was the arrival of a powerful Demon, "Uchly Namen", that caused the chaos. Unfortunately the information is a bit uncertain and incomplete in places. But I believe I've found a way to, once and for all, seal the gate through which the demon enters this world.
+
+I have here an artifact, which, when complete, can be used to seal the gate forever. Will you please help me acquire the three missing crystals?
+
+The first, the RedStone, has been stolen by some goblin bandits, I believe.
+It was over a month since I sent out the request for heroes and I already hired a couple two weeks ago. They set out towards the Dread Duns of Doom, south of the moors, but have since vanished.
+
+I heard a rumour that they had been sighted moving north over the moors, in good health. That was about a week ago.
+
+There is a small band of cowardly goblins in the South Forest, and I believe they have killed your predecessors, and have the RedStone now.
+
+The second, the GreenStone, is in Eisenkrafs. A miner named Coal-Black-George has offered to sell it to me. He was supposed to travel to Sleepy Cove during the summer, but I haven't heard from him in over a month. You'll have to travel up there and get it.
+
+The third, the BlueStone, is in the claws of a villainous old sorcerer, Ho-Bliz Wayze, who lives in the old dark and decrepit tower of his evil ancestors, on the border of Baron Pawa's domain.
+
+He has refused to sell me the stone, even if I have offered a fair price for it. I even told him of it's importance, and he still will not see reason and sell it to me.
+
+Please go to him and persuade him to part with it. I'll give you three gold to pay him. That is more than fair for the stone. It is worth at most a few silver. It is just a common crystal after all, not a true gem.
+
+I'll pay you for each stone when you bring them to me, and double the payment once I have all three. That is 5 gold per stone plus 15 when I have all of them. Agreed?
+\end{readoutloud}
+
+
+Now, will the heroes agree to this? 5+5+5+15 gold is a lot of money, 10g each if they are three people, and then the possibilities for extra loot. This is more money than they have ever had in their life before.
+Of course they can always haggle for it, but then they might end up with less.
+
+
+\begin{readoutloud}
+You can buy supplies in the General Store if you need anything. The store also sells a map of the region. Although finding the south forest is not that hard, just follow the road south.
+
+If you do not have any skill in tracking, I suggest you hire yourselves a guide, or it will be difficult to find the bandits. You might be able to hire John AllBeard for a couple of coppers per day, as long as you don't expect him to do any fighting. Then he will charge you a lot.
+\end{readoutloud}
+
+
+Evilnius Conq has set a RedGuard to protect, and control, Sneexious. She presents him as her body guard here on the outskirts of civilisation.
+
+
+Bling SwordSlash will be in the "Sleep with the Fishes" most of the campaign after leaving Dyslexia Marigt. He is very full of himself, and likes the eager attention of all the naive girls in the village. And they look so much alike, he doesn't even have to bother remembering who is who.
+
+
+\subsection*{The General Store}
+%------------------------------
+Being the only source of commerce in the village, the store charges 20-33\% above list price on just about everything. He has most of the simple basic equipment in the list, but only a 10\% chance of carrying anything special and nothing exotic.
+He will also purchase second hand equipment at very low rates. Good gear at most 50\% value, goblin stuff at around 10\% value, if at all.
+
+
+\subsection*{The "Sleep with the Fishes" inn}
+%--------------------------------------------
+This is the social centre of the village. There are almost always some people here, and it is a great place to do some gossipping to find out what is going on.
+
+After the first day, Bling SwordSlash will be in the inn most of the time, usually surrounded with by a flock of village girls.
+
+Singalot the Bard is in the room in the evenings, entertaining the people by story after story after ballad after song about all the Great Deeds that Bling SwordSlash has done in the far off lands. Singalot is a clever bard and strokes Bling's ego, after which a slightly drunk Bling tips generously.
+It is obvious that Bling's heroics are way off, and leaves a wide wake of destruction:
+He cleaves the horse in two when the farmers argue about it. He kills a whole family to drive out a werewolf: "Just to be safe!". He burns the food store in the middle of the winter in order to kill an Ice Murkler which had been terrorising the village. He kills both twin sisters when he can't be certain about which one is the evil twin.
+
+
+
+\small \begin{verbatim}
+===================================
+RedGuard                    (named)
+-----------------------------------
+str  8    hp 25(18) abs 4 (plate + RedGuard ward rune tattoo)
+dex  7(8) m2 w4 r7(8) d10(12)
+con  7    stamina 12(10)
+int  4    vision 25 160deg
+psy  5    mana 10
+per  6    ap 7(4)
+cha  4    xp -- ( ca 400-ish )
+----------
+quick       3                4.0  36
+mobile      2                3.0  12
+focus       3                1.0   9
+balance     3                1.0   9
+quick draw  6                0.5  18
+avoid       8 yield+4        0.8  51
+sharpstaff 12                1.0 144
+whirlwind   7                1.0  49
+shield      6                0.7  25
+resilient   7                1.0  49
+enduring    2                1.0   4
+fast        2                2.0   8
+----------
+Quaff 2x        restore 4hp and 4sta in one round, readied quick draw from belt
+
+sharpstaff   12 dam 6/7(5/6), penetrating 1, abs 15, parry+0/+1,
+(1h/2h)         reach 1 mod-3, finesse-4
+                str 5 (max +2 str bonus, extra str bonus are penetrating)
+                2h: fast+1 with str 6 and dex 6
+
+heavy RedGuard  abs 3, (less mods than normal plate armour)
+brigandine      dex-1 yield bonus -0
+                run-1, dash-2
+                str 7 (str penalties affect all actions)
+                vision-10\%, cone vision max 270 deg, remember your facing...
+                acrobatics mod-3
+                spellcasting mod-1
+                sneak mod-2
+
+===================================
+Imposing soldier in a strange red plate armour and cloak.
+Armed with a large staff with evil looking metal points in each end.
+He looks like he knows how to fight.
+
+current status
+-------------
+hp 25       :  25
+sta 10      :  10
+
+
+
+
+===================================
+Dyslexia Marigt             (named)
+-----------------------------------
+str  3      hp 9 abs 0 (+5 once)
+dex  5      m1 w3 r5 d7
+con  4      stamina 6
+int  8      vision 16
+psy  10(8)  mana 21(17)
+per  7      ap 4
+cha  7      xp --
+----------
+staff         3
+avoid         3 yield+2
+common       11
+ancient       6
+dwarvish      4
+literate      5
+counting      5
+magic         6
+powercasting  3
+powerful      4
+haggle        8
+----------
+black bolt   9 cast 1r 1m, dam 6 +2/m, range 10 +5/m, long -3dam, penetrating
+               int 7, psy 7
+fire storm   6 cast 1r 1m, dam 5 +2/m, range self, radius 1 +1/m,
+               duration 3r +3/m, damage each round,
+               caster is immune to fire for the duration
+               int 6, psy 8
+slow         8 cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
+               target cannot move faster than maneuver,
+               and any movement gives a mod-3 penalty,
+               and all actions are slow-2, i.e. pushing mod-2 more to ams.
+               continue slow on psy \vs psy +2/m each round (mana paid once
+               on cast) up to the max duration.
+               int 4, psy 3
+paralyse     6 cast 2r 2m, +1target/2m, range 10 +5/m, duration 2r +1/m
+               Target cannot move or take actions that require movement.
+               Continue paralyse on psy \vs psy +2/m each round (mana paid once
+               on cast).
+               int 7, psy 9
+fear         6 cast 1r 1m, psy \vs psy +2/m, range 5 +2/m, area aura,
+               duration 2*diff +5r/m
+               int 4, psy 6
+earthling    8 cast 2r 4m, activation range contact, duration 5r +5/m,
+               power +3/m
+               Gives the target the ability to walk through solid objects
+               at a maximum movement speed of maneuver.
+               The target must pass a psy+power roll each round or bounce
+               back to where he started, taking 1d4 damage penetrating.
+               int 5, psy 6
+----------
+power circlet (psy+2)
+armour rune amulet (armour+5) for 20r when activated (single use)
+walking staff 3 dam 3 abs 6 parry+1
+mana potion  restore 4 mana immediately
+healing potion heal 3hp 1/r
+fine robe
+money ( g s c)
+===================================
+A small old woman with tidy grey hair and a bit too much make-up.
+She is dressed in a fine robe and has a golden circlet on her head.
+
+current status
+-------------
+hp   9       :    9
+sta   6      :    6
+ini 5+d4  :  --
+
+
+
+===================================
+Bling SwordSlash            (named)
+-----------------------------------
+str  9(7)    hp 26(18) abs 2
+dex  11(9)   m2 w4 r8 d12
+con  8(7)    stamina 18(9)
+int  4       vision    (set human good)
+psy  8       mana 15
+per  8       ap 9(4)
+cha  9       xp -- (ca 1000)
+----------
+strong 2
+agile 2
+tough 1
+resilient 8
+enduring 9
+veteran 6
+quick 5
+mobile 5
+balance 4
+famous 8
+slugger 2
+
+sword 16
+fancy attacks 8
+whirlwind 8
+poke
+swing
+
+captain cardio
+energizer bunny
+black knight 2
+über
+----------
+spells
+----------
+equipment
+money ( g s c)
+===================================
+A well known hero. You have heard many songs about his heroic deeds.
+Dressed in fine garments. Blond flowing hair, white glinting teeth.
+Armed with his legendary long sword "Slash", he fights one handed.
+
+
+longsword: "slash"  dam 13(11) abs 30 finesse 8
+    str 7
+
+
+exquisitely tailored brigandine armour abs 2 (behaves as leather)
+
+fasionable legendary plate mail abs 3 (behaves as brigandine)
+
+Bling is too cool for stats, and I'm lazy. He has around 1000xp and a couple of super abilities, like Über, and a lot of powerful fighting skills and maneuvers.
+
+\end{verbatim}\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------
+%01 : The RedStone - The Goblin Bandits
+%===============================================================================
+%                         The camp of the Goblin Bandits
+%                         ------------------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{01 red stone}
+\section*{01: The RedStone -- The Goblin Bandits}
+\chaptermark{red stone}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes will hopefully ask around in Sleepy Cove before setting out to find the Goblin Bandits. The Goblin Bandits will be found in the west parts of the South Woods. The heroes will slay the Goblins, or some might run away. In the cave they will find the bodies of Dyslexia's earlier hirelings. In the Goblins treasure they will find the RedStone.
+
+
+\subsection*{First piece, the RedStone}
+%--------------------------------------
+It has been taken by goblins. Dyslexia's previous hirelings, a couple of adventurers, went to the Dread Duns of Doom in the south to retrieve the RedStone, and were spotted traversing the moors northward a few days later alive and well. Then disappeared passing through the south forest.
+The adventurers are now rotting in the eastern section of the goblin bandits' cave. Hidden in the woman's skirt, in a secret pocket is the RedStone.
+
+
+\subsection*{Sleepy Cove gossip: About the goblin bandits}
+%---------------------------------------------------------
+Gossip success:\\
++0: The goblin boss and his band of goblins bandits have been seen in the south forest and roads. \\
++0: The have ambushed a couple of travellers and stolen their valuables. \\
++1: They are a greedy and cowardly bunch. \\
++2: They are about 10 goblins in the band. \\
++2: The boss is large and strong. \\
++3: They fight mainly with bows and spears. \\
++3: The boss has a magic spear that can turn enemies into frogs. \\
+
+
+\subsection*{The camp site}
+%--------------------------
+
+\begin{readoutloud}
+This is an open area of the forest, but the faint stench of goblins and wood smoke is drifting amongst the trees. You can barely make out some gibberish and occasional yells further north east.
+\end{readoutloud}
+
+The goblin bandits are resting around their fire when the heroes enter the map. They are all unaware, and will only notice the approaching heroes if they fail their sneak rolls.
+
+\begin{readoutloud}
+The Goblin Bandits are sitting around a camp fire, chattering in their goblin gibberish tongue. They seem relaxed, but have weapons close at hand.
+[per]: One is gnawing on what looks like a human hand.
+\end{readoutloud}
+
+Once the heroes are noticed the alarm goes and the leader MuchKlajn GoBoss starts yelling:
+
+\begin{readoutloud}
+Ijm MuchKlajn GoBoss. Dissis mayn Kamp. Killem ogly Hoomans!
+\end{readoutloud}
+
+Wounded or breaking goblins will flee into their cave to wake their sleeping comrades and make another stand. They will release their pet wolf and goad it to attack the heroes when they enter the cave.
+
+Otherwise the goblins will retreat and use their archers as much as possible. Their archers will mainly go into hiding and shoot from cover, giving them a mod-3 to get hit by incoming fire.
+
+
+\subsection*{The cave}
+%---------------------
+Adjust the reinforcements in the cave to suit the situation and make an interesting fight.
+
+\begin{readoutloud}
+A dark foul smelling cave descend into the ground. The stench is horrible and almost overpowering.
+\end{readoutloud}
+
+Roll con+3 to not throw up.
+
+The goblin cave is a dark smelly place.
+The goblins will retreat to the left in the cave, wake their sleeping friends and make an ambush. The first wounded will flee further in to free the wolf. Freeing the wolf takes one round. Then they charge behind the wolf. If it doesn't go well they will try to flee out of the cave.
+
+The treasure trove, furthest in, north of the wolf, is worth about 5 gold in all, including the coin, and requires carrying about 50 items at 20enc back to Sleepy Cove to sell it.
+
+
+\subsection*{Aftermath}
+Dyslexia Marigt will be glad and thankful when they bring back the Red Stone to her. She pays the 5 gold and gives the heroes some cookies and milk.
+
+Once the Red Stone is delivered to Dyslexia Marigt each hero should get 10XP as a sub quest reward.
+
+The heroes now have some time to rest and spend their money and xp before setting out north towards Eisenkrafs to find Coal Black George.
+
+
+
+\small\begin{verbatim}
+bandits 8x: 3x spears, 2x short sword+shield, 3x short bow + knife
++more reinforcements in the cave.
+===================================
+goblin bandit           (goblin05)
+-----------------------------------
+str  3    hp 4 abs 0
+dex  5    m1 w3 r5 d7
+int  2    vision 12 dusk
+psy  2    mana 2
+per  6    initiative 6 chicken
+----------
+avoid         4 yield+4
+sneak         7
+charge        3
+back stab     3
+===================================
+alternatives:
+small spear   5 dam  4/5, abs  5, parry+0/+1, reach 1 mod-6, fast+0/+1
+short sword   5 dam 4(5), abs 7(8) sometimes crappy quality,
+dagger        5 dam 3(4), abs 5(6), sometimes crappy quality
+small shield  4 abs 8(10) parry+2 sometimes crappy quality
+                Ranged attacks mod-1 when in the way.
+                Hiding behind it (primary action) ranged mod-2
+short bow     4 dam 3(4), reload bow, sometimes crappy quality
+                range 10(12), short 5(6) mod+3, long 15(18) mod-3,
+                vlong 20(24) mod-6 dam-1, extreme 30(36) mod-9 dam-2
+-----------------------------------
+Weak looking goblin bandit.
+Armed with a small spear.
+Armed with a short bow.
+Armed with a short sword and a small shield.
+
+
+
+Leader: MuchKlajn GoBoss
+===================================
+goblin warrior           (goblin07)
+-----------------------------------
+str  5    hp 8 abs 1
+dex  7    m1 w3 r5 d7
+int  4    vision 12 dusk
+psy  3    mana 4
+per  6    initiative 9 chicken
+----------
+short sword    7 dam 5, abs 8
+small shield   6 abs 10, parry+2
+throwing knife 5 dam 3, fast+1, readied as quick draw in the belt.
+                 range 8, short 4 mod+3, long 12 mod-3, vlong 16 mod-6 dam-1,
+                 quick 1a mod-3, shot 1r mod-0, aimed 2r mod+3
+                 poisoned: spider poison 5 \vs con, roll each round
+                 gives mod-1 to ams, dex, str, movement each failed con roll.
+avoid          6 yield+4
+sneak          8
+charge         4
+leather armour abs 1
+===================================
+A large fierce looking goblin dressed in a fine red silk shirt and
+matching shawl, as well as leather armour.
+He is armed with a short sword and small shield.
+
+When MuchKlajn GoBoss dies he says:
+    Arrgh, me Die, Like stinky Pie
+    You die Too, You stinky Shoe
+    You be stinkiest of All !
+This is his final dying curse, and the person receiving it will smell
+really bad for a couple of days before the weak magic dissipates.
+The target gets the "Tasty" ability for a few days.
+
+
+
+The pet wolf: Graowl, a half starved poor critter
+===================================
+wolf                       (wolf02)
+-----------------------------------
+str  7    hp 8 abs 0
+dex 10    m2 w6 r12 d20
+psy  5    vision 15
+per  8    initiative 12
+----------
+bite   7 dam 6
+claw   5 dam 3
+charge 6
+avoid  3 yield+3
+===================================
+It takes one round to free the wolf.
+\end{verbatim}\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%---------------------------------------
+%02 : The Green Stone - Eisenkrafs mines
+%===============================================================================
+%                     Eisenkrafs mines and Coal-Black-George
+%                     --------------------------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{02 green stone}
+\section*{02: The Green Stone -- Eisenkrafs mines}
+\chaptermark{green stone}
+
+
+\subsection*{Synopsis}
+%---------------------
+The character might start out asking about Eisenkrafs before travelling there. In Eisenkrafs they will probably ask around for Coal-Black-George. Gebbhard Goebbels will probably contact them and try to scare them with horror stories. When he does not succeed he will "help" them into the cave. They find the body of Coal-Black-George and the GreenStone. If they climb back out they have to battle the miner ruffians and flee or die. They can find a safe way out of the lower cave and escape with the GreenStone.
+
+
+\subsection*{The second piece, the GreenStone}
+%---------------------------------------------
+Coal-Black-George did indeed find the GreenStone in an old abandoned mine cave in the mountains. He realized it was no valuable gem, but that it was a strangely cut crystal. So he sent word to Sleepy Cove to send message to the heralds and jewellers in Trade Town, to see if anyone had any idea of what it might be. Dyslexia sent word back that she would buy it for a gold or two, "out of historical interest". George then went into the mines for his day job, promptly fell into an old shaft and vanished. Find George's body to find the GreenStone.
+
+
+\subsection*{Sleepy Cove gossip: about Eisenkrafs}
+%------------------------------------------------
++0 A mining town in the north hills. \\
++0 They ship iron from our harbour sometimes. \\
++1 It is a horrible sorry place. \\
++2 There are some bandits around there. \\
++3 The mines are dangerous. \\
++4 The mine boss Grobler-something is a slimy fellow, stay clear. \\
+
+
+\subsection*{Approaching Eisenkrafs village}
+%-------------------------------------------
+\begin{readoutloud}
+The mining village of Eisenkrafs is the place where decent civilisation has gone to die, and rot, and smell really really bad. Inhabited by the desperate, the poor, the destitute, the vicious, and the foul, this village is very close to the bottom of the list of summer vacation spots. Small wood huts and hovels are crowded around a few decent houses. The place reeks of desperation and apathy. Even the dark slow smoke leaving the many poorly laid chimneys has lost all hope and energy.
+\end{readoutloud}
+
+
+\subsection*{Eisenkrafs village}
+%-------------------------------
+Eisenkrafs is a horrible little mining town. It is run by Gebbhard Goebbels, foreman of the mine. It is still within the lands of Baron Evilnius Conq, and he does get some taxes from the place, although most of the money disappear into the hands of Goebbels and his folks, a local bandit gang, and some iron merchants in league with Goebbels.
+
+Purchasing food and beer can be done at the "beer house", along with some every day stuff. Equipment, etc, can be purchased from the mining yard. Prices are double the list values. Non essential stuff, not necessary for mining and living has only about 50\% chance of being available.
+
+
+\subsection*{Coal-Black-George}
+%------------------------------
+The disappearance of Coal-Black-George is not that strange. He had found out that the mine boss Gebbhard Goebbels has some shady dealings with a group of bandits in the area. So Gebbhard stabbed George in the back and pushed him into a closed down mine shaft, nr 5-1.
+
+Shaft 5-1 has been closed for years since it opens into a natural cave system which is very deep. Too dangerous to work excavation.
+
+
+\subsection*{Investigating}
+%--------------------------
+A good way is to start asking around in town about Coal-Black-George. Most people knew him as a good miner, "some orc and dwarf blood in those veins I'm sure." He worked hard, drank less than most, and worked even more in shut down tunnels, caves, etc.
+
+
+\subsection*{Eisenkrafs gossip: general}
+%---------------------------------------
++0 The mines are the only way to earn a living around here. \\
++0 There are bandits in the mountains. Stay in town, with people. \\
++1 There are bandits in the area, they are careful and sneaky, and very well informed. \\
++1 Gebbhard Goebbels is boss of the mines. Talk to him about a job. People are always missing around here. \\
++3 Gebbhard Goebbels is a shady fellow, we don't like him much.
+
+
+\subsection*{Eisenkrafs gossip: about Coal-Black-George}
+%-------------------------------------------------------
++0 Coal-Black-George is missing since a few weeks. \\
++1 Coal-Black-George has been eaten by the Grey Worm. \\
++1 Coal-Black-George has been killed by the bandits. \\
++1 Coal-Black-George has left for Sleepy Cove. \\
++2 Coal-Black-George went missing in the mine one day. \\
++3 Coal-Black-George disappeared down shaft 5-1. What was he doing there? That shaft has been closed for years. It opens to natural caves and is too dangerous to work. \\
++4 Coal-Black-George had found some strange green crystal a while back. \\
++6 The boss, Gebbhard Goebbels, had taken a dislike to George just before he disappeared.
+
+
+\subsection*{Gebbhard Goebbels, the boss, comes to talk}
+%-------------------------------------------------------
+Gebbhard Goebbels will contact the Heroes once he finds out that they are asking around in town. He will say the old warrens and closed down areas are swarming with horrible creatures. That it is certain death to go down there.
+
+If he still cannot persuade the characters to give up he will offer to help set up a temporary climb. He will then set a couple of ruffians to guard the shaft for a bit and "help" the heroes get back if they locate George. He will even give them a tainted "healing potion" to give him if they find him. The potion is of course poison. Muahaha.
+
+Gebbhard Goebbels sends two ruffians to "help the heroes down". They will help setup a long rope ladder. After the heroes have descended they will helpfully remove the ladder so that they must climb up the hard way.
+
+This will take be 10 climb+3 rolls. If they have rope it is climb+6 rolls, and with proper climbing gear it is climb+9.
+
+
+\subsection*{Below Shaft 5-1 : The Natural Cave}
+%-----------------------------------------------
+\begin{readoutloud}
+As the last of you steps off the rope ladder leading up through shaft 5-1 you hear a rustling from above the shaft. All of a sudden the ladder is falling down, coiling around your feet. A few seconds later the way up and out is nothing but a large pile of rope, and the weak lantern light coming down from above dims and disappears.
+
+\verb|--- ALTERNATIVE --- raising elevator or rope ladder|
+
+The last of you step off the ladder, looking into the darkness wondering what horrors will be coming to gnaw on your bones if you die here. A rustling behind you turns out the be the ladder disappearing up and away. A few seconds later the way up and out is nothing but the rough bare rock sides of shaft 5-1. The weak lantern light coming down from above then dims and disappears.
+\end{readoutloud}
+
+
+The cave beneath the shaft is populated with all sorts of strange cave critters.
+This is a showcase of some basic cave critters, and cave fighting.
+
+Make clear to the players after a while that there is fresh air circulating through some parts of the cave, i.e: there is at least two natural exits from the cave. This provides alternative exit possibilities to climbing up and fighting with the miner ruffians.
+
+The east exit is blocked by rubble. Had they brought mining equipment (they didn't did they?) it would be possible to break out that way in about a day's work. Without mining equipment it will be impossible, and they must find another way. If for some bizarre reason they actually thought to bring some mining gear, just reward them with a day's digging and some ambushes by bugs, spiders or whatnot.
+
+The south east exit is an open crawlspace, and opens into a natural old water runoff, which leads for a km or two before exiting the mountain side a couple of km from Eisenkrafs. This is the easy way out.
+
+Climbing back up is not that difficult, mod+3. Roll 10 successful climb without falling down. This is made easier if they bring climbing gear to fasten safety rope, or they can improvise with daggers and rope.
+
+If the heroes manage to get back up from the cavern, they will probably know that George was murdered, since there is a knife sticking out of his back. They might even have a suspicion of foul play from Gebbhard Goebbels and his ruffians since the ladder disappeared.
+
+Gebbhard Goebbels will be in the mine yard with some extra ruffians and make sure they do not leave with any "difficult information". His ruffians are spread out over the mine and in the mine yard.
+
+The heroes should be made clear, at least after a little fighting, that they will not be able to fight their way through all the miner ruffians. Instead they will have to retreat down the cave again.
+
+There is another way out of the cave warrens, the south east exit, which ends in the mountain side a bit away from Eisenkrafs. The heroes can escape that way.
+
+
+
+\subsection*{Aftermath}
+When they return to Dyslexia Marigt with the Green Stone she promptly pays them the 5 gold reward and gives them cookies and milk.
+
+The heroes should each get a 10XP sub quest reward once they have delivered the Green Stone to Dyslexia Marigt. Add another 5XP each if they managed to figure out the back story around Gebbhardt Goebbels and either avoided or dealt with that problem.
+
+They can now rest and spend their money and xp before venturing east towards Honorbliz Wize and the Blue Stone.
+
+
+
+\small\begin{verbatim}
+1 Gebbhard Goebbels - the mine Boss
+4 Miner Ruffian
+4 Cave spider
+11 Bug
+1 cave worm
+
+
+===================================
+Gebbhard Goebbels        (specific)
+-----------------------------------
+str  8    hp 12 abs 1
+dex  6    m1 w3 r5 d7
+con  4    stamina 8
+int  7    vision 18
+psy  5    mana 8
+per  3    cap 11
+cha  6    xp --
+----------
+brawl     8
+pick axe 11
+dagger    6
+avoid     5  yield+2
+mining    9
+back stab 7
+sneak     5
+----------
+punch     8 dam 3, parry-6 (unarmed-3) deflecting
+kick      8 dam 4, parry-6 (unarmed-3) deflecting
+pick axe 11 dam 5, penetrating 2, abs 7, parry-1, slow-1
+dagger    6 dam 4,
+leather armour abs 1
+money ( 0g 2s 5c)
+===================================
+A large ugly strong but fat man.
+He looks unpleasant and rough.
+
+
+
+===================================
+Miner Ruffian            (specific)
+-----------------------------------
+str  7    hp 10 abs 0
+dex  5    m1 w3 r6 d9
+con  6    stamina 10
+int  4    vision 20
+psy  4    mana 6
+per  3    cap 10
+cha  3    xp --
+----------
+brawl     6
+pick axe  6
+dagger    4
+avoid     5 yield+3
+sneak     3
+----------
+punch     6 dam 3, parry-6 (unarmed-3) deflecting
+kick      6 dam 4, parry-6 (unarmed-3) deflecting
+pick axe  7 dam 5, penetrating 2, abs 6, parry-2, slow-1
+dagger    4
+money ( 0g 0s 3c)
+===================================
+Rough miner far from civilisation.
+
+
+
+
+===================================
+spider                   (spider01)
+-----------------------------------
+str  3    hp 5 abs 1
+dex  5    m2 w6 r10
+per  4    initiative 7
+bite      5 dam 3, fast+1,
+            poison 5 \vs con, cumulative mod-1/2r until paralysed
+            roll once when bitten instead of each round
+            poison mod affects ams, dex, str, sta, movement
+spin      5 each successive spin attack gives a webbing:
+            dex-2, move-2, mod-3 to all actions.
+            break free is 2*spin \vs str
+            friend can clean: takes 5r to clean one spin
+            parrying spin with weapon or shield gives mod-1 we accumulation
+            on the item for every parry. Takes 1r to clear 1 mod.
+            A missed spin attack gives the opponent a mod+1 to hit the spider.
+avoid     3 yield+2
+-----------------------------------
+Since the web attack opens the spider to counter attack they are cautius to use them. They try mainly when there is low risk of counter attacks.
+They instead use their fast bite attack to poison the target before webbing.
+Spiders do not get mods from low hp and are immune to pain.
+
+
+
+===================================
+bug                      (beetle01)
+-----------------------------------
+str  1    hp 2 abs 1 tohit-3 (small)
+dex  6    m3 w5 fly10
+per  2    initiative 10
+bite      5 dam 1, penetrating:
+            armour affects the bug's bite skill instead of damage
+            armour abs > 3 counts as full coverage, and the bug cannot attack.
+-----------------------------------
+
+
+
+===================================
+cave worm                  (worm01)
+-----------------------------------
+str 10    hp 20 abs 0 tohit+2(melee)/+4(missile) (large)
+dex  3    m1
+per  4    initiative 5     perception smell
+bite   5 dam 8 slow-3, acid drool 20\% to reduce abs on contact equipment by 1
+avoid  3
+-----------------------------------
+size large (4sq)
+\end{verbatim}\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------------
+%03 : The Blue Stone - Honorbliz Wize's Tower
+%===============================================================================
+%                                 Honorbliz Wize
+%                                 --------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{03 blue stone}
+\section*{03: The BlueStone -- Honorbliz Wize's Tower}
+\chaptermark{blue stone}
+
+
+\subsection*{Synopsis}
+%---------------------
+The heroes go find the tower. Is welcomed by the battle between Honorbliz and Sam Slick, will they take part? They fight through the shadow servants. Find the BlueStone in a desk. Can loot money, time flies, and a broken Banor's Gate. Have a chance of finding information about the first battle with Uchly Namen, and figuring out that something is wrong with Dyslexia's story.
+
+
+\subsection*{Third and last piece, the BlueStone.}
+%-------------------------------------------------
+It is in a desk in Honorbliz Wize's tower.
+Here the heroes have a chance to figure out that something is wrong, as Wize's books and a tapestry describe his battle against the demon, and mentions the details around the shattering of the binding necklace.
+Roll per to notice and int to figure out.
+
+A broken Banor's Gate can be found in the tower. The transaxial relocator is broken so the device has a 30\% chance of loosing the link after each usage. Honorbliz Wize was trying to repair it for a team of adventurers, but was killed before he could finish.
+
+
+\subsection*{Sleepy Cove gossip: about Honorbliz Wize}
+%-----------------------------------------------------
++0 Ho-Bliz Wayze? Ah, you mean Honorbliz Wize. An old wizard a bit from here. \\
++0 Honorbliz lives to the north east, on baron Pawa's lands. \\
++1 H Wize is an old wizard who has done some good for the region in the old. \\ days, don't quite know what it could have been. \\
++1 He lives in a tower he does. \\
++2 If you're not careful he might turn you into a toad, or a squirrel. \\
++2 Honorbliz has some mighty strange magical servants. \\
++3 Honorbliz Wize is several hundred years old. \\
++6 Honorbliz Wize and a party of heroes used to roam the land killing horrible monsters
+
+
+\subsection*{Honorbliz Wize's Tower}
+%-----------------------------------
+\begin{readoutloud}
+As you approach the wizards dark abode you hear screams and see flashes of light from the east base of the tower. A wizard and a hooded figure are doing battle.
+\end{readoutloud}
+
+When the characters approach the tower the hear screams and see flashes of light from the east base of the tower. Sam Slick is battling Honorbliz Wize since he wants the blue stone for himself to sell to the highest bidder. Sam has figured out that Honorbliz Wize has the blue stone, and that it is important for summoning Uchly Namen. Sam is planning to steal the blue stone from Honorbliz, and didn't really plan to kill him outright. But it was not that easy to sneak in.
+
+Sam triggered a couple of defensive runes when entering the tower, and had to flee fast. Honorbliz reacted with the traditional "I'll kill him myself" nonsense and went out unprepared onto the steps of the tower. There he proceeded to get poisoned by a throwing knife, taking some hits, and not managing to blast Sam into oblivion. Sam is quite tough.
+
+The battle unfolds approximately like this: \\
+Round 1: \\
+As soon as the heroes see Sam Slick: \\
+\emph{expose the fireball} \\
+Sam tries to evade, is burnt and his cloak keeps smoldering afterwards. \\
+Round 2: \\
+Sam attacks up the stairs, attacks Honorbliz \\
+Round 3: \\
+Honorbliz takes another hit, then casts the blast chock wave. \\
+\emph{expose the blast chock wave} \\
+Sam is thrown north to the ground. \\
+Round 4:  \\
+Sam attacks again, throws a knife then runs up the stairs and attacks again. \\
+Round 5: \\
+Honorbliz falls to the ground, Sam sticks him again, then runs into the house. The cloaked figure is now visibly hurt. \\
+\\
+This all depends on what the characters do also of course.
+
+Do not let Honorbliz Wize survive. The heroes should not be able to heal him. If they try, he has cast a powerful protective spell on him which will easily dispell their healing magic, rendering it ineffective and fizzling out in showers of bright sparks. He should deliver the line about Sneexious' greed, then pass out and die.
+If he is allowed to live he will simply go to Sleepy Cove, kill or imprison Sneexious and the adventure is over. So, don't let him survive.
+
+After defeating Honorbliz in a couple of rounds, Sam is very hurt. He will run into the tower and try to find the BlueStone. The slow Shadow Servants are not an obstacle to him since he can out maneuver them easily. The Heroes might be an issue though, and Sam may hurt one or two before escaping, or he may just flee through a window as soon as they prove to be bothersome. He can't take much damage before he has to flee. He will rummage through the tower as best he can, but will not find the BlueStone.
+
+Sam Slick should not be killed in this encounter. If the heroes pursue him he will escape, perhaps seriously wounding someone in the process, or even killing someone who is very much in the way. Sam should be kept alive for future appearances in this campaign. He is fast enough and competent enough that even if the characters were to get a couple of good hits on him, he will be able to escape with serious wounds. If they manage to cast hold or paralyze on him, allow his amulet of freedom to counter the spells and he will escape anyway. He is also a master of sneak, and can hide just about anywhere once they have lost sight of him around a corner or so.
+
+
+\subsubsection*{Talking to Honorbliz?}
+%----------------------------------
+Honorbliz will at first assume the heroes are working for Sam, unless they start fighting the intruder. Next, he will assume they work for Dyslexia Marigt, whom he recognises as Sneexious. He will spit on Sneexious and say:
+\begin{readoutloud}
+Sneexious, that greedy idiot, she'll never have the stone!
+\end{readoutloud}
+He will start to cast a spell, but collapses and passes out, or dies.
+
+
+
+\subsubsection*{tower ground level}
+%----------------------------------
+\begin{readoutloud}
+\emph{Foyer:}
+The Foyer has seen significant destruction. Magical sparks are still glittering in the debris. Someone must have gotten really hurt here.
+\end{readoutloud}
+
+\begin{readoutloud}
+\emph{Dining hall:}
+The dining hall is spacious and elegant. This must be what a wizard's tower looks like. Elegant furniture, exquisite china, good taste in decoration, pleasant atmosphere. It must be, since there is a wizard living here. The strange magical shadowy servants might be a good indicator of course.
+The walls are tastefully decorated with some trophies and a couple of tapestries depicting heroic battles against large strange looking beasts.
+\end{readoutloud}
+
+
+\subsubsection*{tower level 1}
+%-----------------------------
+\begin{readoutloud}
+The first floor is spacious, light, and well decorated. A large cluttered desk draws the eye, as does the two beautiful statues that decorate the room, the nice rich carpet, and the simple but elegant bed.
+\end{readoutloud}
+
+The BlueStone is in a drawer in the desk (find+3). It is lying way back in a dusty old corner, behind and below a lot of junk from the last 200 years. Beside it is a notebook about the battle, (literate) explaining that the demon was vanquished by the lance spear and shield now hanging in the Pawa hall. Demon hunting was never an interest of Honorbliz, so he didn't take much time to research the event. He managed to figure out that the necklace is the summoning and controlling device. He didn't want to destroy a nice artifact, it could come in handy, so he just took it apart and teleported the parts to "well protected places"; a sealed crypt, a cave in the middle of nowhere, and kept one stone to himself. The necklace piece itself didn't really contain any power, so he sold it for the gold value, a nice 100gold or so. He also describes the demon beast Uchly Namen as a large green humanoid demon with glowing eyes. (int) figures out that it is the one depicted on the tapestry in the dining hall.
+
+All this can be read from his disorganised shorthand notes tucked away with the crystal. Roll for literate in several steps. It takes an hour or so to read each item at normal pace. If the reader fails a little on a section tell him he can't quite make out the passage, but it says something about "a magic spear" or "crystal stones".
+If the reader fail his regular literate rolls, he will need to take a couple of days to read the book at literate+3, or a few weeks at literate+6. This may force them to read the notes when they are resting in Sleepy Cove after delivering the BlueStone.
+\begin{readoutloud}
+\textnormal{+0:} The fumbly idiot Trygain John has summoned the Demon Beast Uchly Namen. The Beast has done a lot of damage to the area. \\
+\textnormal{+0:} Honorbliz Wize, William GreatClub, Drenchdin Blood, and Marco Cardigan has formed a heroes' possee to slay or banish the Demon Foe. \\
+\textnormal{+0:} Baron Lotsa Pawa paid a lot of gold to have a wizard in Trade Town make a magic spear and shield to fight the demon. Drenchdin Blood will use the weapons for the fight, then return them to Castle Pawa. \\
+\textnormal{+0:} They track the demon for a couple of days, then take a fight and lure it to on old dry lake bed and banish it from the realm. \\
+\textnormal{+0:} They fight the demon on the lake bed for a while before Honorbliz Wize manages to banish him and close the gate. \\
+\textnormal{+0:} The heroes get well paid from Baron Lotsa Pawa for their work.\\
+\textnormal{+0:} Baron Pawa's men has caught the wizard Trygain John when he tried to flee the lands. Honorbliz figures out that the binding tool is the large gold necklace with three crystals inset, which they confiscated from Trygain John before killing him.\\
+\textnormal{+0:} Honorbliz Wize knows that the banishment of Uchly Namen is only temporary. He works on a permanent solution for a while, then seems to get bored. Demon hunting is not his main interest. \\
+\textnormal{+0:} He scatters the stones of the binding necklace "in good places", then sells the useless heavy gold necklace itself. The red stone is teleported to some tomb in the south duns. The green stone is teleported to an old forgotten temple cave. The blue stone he keeps for himself for future studies.\\
+\textnormal{+0:} The journal ends with a note that he should try some obscure ritual at the site, but seems to not have bothered with it. That was around 200 years ago. I guess he never got around to it...
+\end{readoutloud}
+
+The desk also contains a small silver box. Touching the box gives a shock dam 4, and significant immediate passing pain. The user must roll a psy mod-3 to maintain hold of the box, and cannot do it on the first attempt. The box contains 6 gold 14 silver and 122 copper, 1 ruby worth 2 gold.
+
+Three Time Flies can be found on the east statue. Identify with int-3 roll, figure out how to use with int-6 roll. They are still uncondensed and weighs 1.0 enc, and requires 2hp damage to break. Which means they can only be used by holding (or quick draw) and throw into the ground rolling 2 or more on str/3 round down. They should be condensed and set in a light leather necklace or some such. Condensing and setting them costs about 1gold each. They can be sold for about 2 gold each in the current state.
+
+The night stand by the desk holds a book. This is the "The Wall Bug" treatise, describing the metamological problems with some smooth vertical surfaces. This book along with the vial of liquid allows for one character to start training the "wall bug" ability. Note that the character still has to pay the full XP for the ability, but now he can at least start training it.
+
+
+\subsubsection*{tower level 2}
+%-----------------------------
+\begin{readoutloud}
+Bright and spacious, light comes through the windows, and is then seemingly multiplied by four large mirrors. An elevated dais seems to be a work area, with strange things spread all over.
+\end{readoutloud}
+
+A large broken Banor's Gate artifact can be found here. Identify on int roll. The transaxial relocator is broken, and is in three pieces on the western work bench. It requires an int roll to figure out that the three pieces can be assembled and go into the artifact.
+Once assembled (int-6) it is still broken, and has a 30\% chance of loosing the bind link after each use. Then it must be re-bound before it can be activated again.
+It costs about 10 gold to have it fixed by a wizard.
+Honorbliz Wize was fixing it for a band of adventurers. They might be upset if it gets stolen. They will likely manage to track down the thieves unless care is taken to keep the Banor's Gate hidden when moving it. But it is large.
+
+
+
+\subsection*{Aftermath}
+%----------------------
+The tower contains quite a few valuables. Most of it is too heavy to bring along, and if the heroes come back to loot with a horse and carriage, they are met by lot of relatives, and their lawyers. The wizard is several hundred years old, and have enormous amounts of children, grand children, etc. The heroes will get nothing more, and if they stick around they might get dragged into a lengthy court battle.
+
+This time when they deliver the Blue Stone to Dyslexia Marigt, she will pay up, but starts to quibble and get into delays when faced with doubling the fee. See the intermission below.
+
+The Heroes should each get a 10XP reward after delivering the Blue Stone to Dyslexia Marigt. Another 5XP each if they have figured out that Honorbliz Wize has battled it before and all that. And another 5XP each if they have figured out that they can get the weapons to fight the demon at castle Pawa.
+
+
+
+\small \begin{verbatim}
+===================================
+Honorbliz Wize              (named)
+-----------------------------------
+str  5       hp 12 abs 0
+dex  5       m1 w3 r6 d8
+con  6       stamina 10
+int  9       vision 23
+psy 12       mana 25
+per  7       cap 10
+cha  3       xp --
+----------
+skills
+----------
+fireball
+shock blast
+etc...
+----------
+equipment
+money ( g s c)
+===================================
+
+
+
+
+===================================
+Sam Slick                   (named)
+-----------------------------------
+str  8(5)    hp 22(17) abs 2 (leather + ward rune tattoo)
+dex 12(8)    m3(2) w5(4) r9(7) d14(10)
+con  7(5)    stamina 12(8)
+int  7       vision 23
+psy  8       mana 7
+per 12(9)    cap 15(12)
+cha  8       xp 12  ~(964)
+----------
+quick      3           36   4.0
+focus      3           18   1.0
+mobile     3           18   2.0
+veteran    6           36   1.0
+luck       3            9
+
+avoid     10 yield+4   80    .8
+sneak     12          108    .75
+find      10           66    .66
+jump       6           18    .5
+climb      6           18    .5
+balance    6           18    .5
+
+double     8           64
+sword     10          100
+fancy attacks  3        4
+backstab   6           27    .75
+throw      8           51    .8
+quick draw 6           18    .5
+
+common    10           free
+literate   6           36
+counting   4           16    .66
+haggle     8           64    .66
+
+strong     3           18
+agile      4           32
+tough      2            8
+perceptive 3           18
+resilient  5           25
+enduring   4           16
+capable    3            9
+fast       4           32
+----------
+yield +4
+deflect
+feint
+----------
+2x fast blades   10 dam 6(5), abs 8, fast+1
+                    str 4 (max +1 str bonus), finesse-6
+
+8x throwing daggers 8 dam 3, penetrating 1, fast+1
+poisoned              range 8, short 4 mod+3, long 12 mod-3,
+                      vlong 16 mod-6 dam-1,
+                      str 2 (no str bonus)
+                      first three attacks do not require stamina
+                      poison is paralyzing and damaging
+                      strength 12, dam is str vs con diff: 1hp/rnd,
+                      paralyzed for 3r per diff.
+
+Amulet of Freedom. Counters magic that hinders the movement of the bearer.
+Will also unbind rope knots and unlock shackles that bind the bearer.
+
+money ( 13g 15s 12c)
+===================================
+
+
+
+
+===================================
+Shadow Servant              (named)
+-----------------------------------
+str  3       hp 5 abs 0
+dex  9       m1 w2 r3 d5
+con  3       stamina inf
+int  3       vision 15 night
+psy  3       mana 5
+per  3       cap 9
+cha  -       xp --
+----------
+quick         3 (0,0,-3,-6)
+claw          8 dam 2 penetrating, 1 icy cold pain, 1 attack per round max.
+avoid         9 dissolve and reappear, weapons passing like through smoke
+scary         3 approach mod-0, melee mod-3, ranged mod-0,
+                fail-3 retreat, fail-6 flee
+===================================
+
+\end{verbatim} \normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%------------------------------------
+%04a : All three stones - Sleepy Cove
+%===============================================================================
+%                           Delivering all Three Stones
+%                           --------------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{intermission, all three stones}
+\section*{All three stones -- Sleepy Cove}
+\chaptermark{all three stones}
+
+
+\subsection*{Synopsis}
+%---------------------
+Deliver the stones to Dyslexia Marigt. Get paid double, then take on "guard duty" when closing the gate for another 10gold? If not, the village will wake one morning after two girls have been kidnapped during the night.
+
+
+\subsection*{Dyslexia Marigt}
+%----------------------------
+Dyslexia Marigt will be very pleased when she has all three stones. She will give them 5 gold of the 15 gold double pay, apologising profusely for not having the gold ready and available. She promises she will have the rest once her credit arrives from Trade Town in a few days. The shipment had been delayed.
+In the mean time she offers them another 10 gold to stand guard over her when she seals the gate in a couple of days.
+
+If the Heroes refuse to give her the stones before full payment she whines a bit, but then gives them a piece of jewelry to hang on to as collateral. It looks worth at least 10-20 gold but it is a well made fake worth about 3 gold. It is an "appraise" mod-3 roll to spot the fake.
+
+If they still won't hand over the last gem she will after a day produce the extra money owed, but complain a lot about it, and say she had to borrow from the townspeople and sell some things. She has indeed sold some old crap at the general store. She is preparing to leave quickly after getting paid by Baron Conq.
+
+She now starts assembling the necklace properly. It will take two days. She also practices the ritual a bit. Sneaking up on her in the woods at night one can observe and roll for int to understand that there will be live sacrifice involved.
+
+
+\subsection*{Gossip in Sleepy Cove: general}
+%-------------------------------------------
++0 Baron Conq was here earlier, visiting Dyslexia Marigt on some important  business. \\
++0 The regular ship from Trade Town is a bit late this week. \\
++1 Baron Conq's RedGuards are very impressive. \\
++3 Dyslexia Marigt has sent for a shipment from Trade Town, which should arrive with the boat in a few days. The regular boat is a bit delayed this week. \\
+
+
+\subsection*{If the characters take the offer of "guard duty"}
+%-------------------------------------------------------------
+The characters have a couple days to spend in Sleepy Cove before Dyslexia Marigt picks them up for travel to the summoning site.
+
+If they don't spy on Dyslexia Marigt themselves, Sam Slick will contact them and want to sell them some very important information for 5 gold. If they pay he will tell them that he has spied on Dyslexia Marigt, training to perform some magical ritual, out in the forest. The ritual definitely requires two live human sacrifices.
+
+When Sam enters the Sleeping with the Fishes to speak to the Heroes, Bling SwordSlash is there as well. Bling nods to Sam, saying a short "Sam", in a displeased manner. Sam in turn nods to Bling, saying a short "Bling", also not pleased.
+
+Bling will interrupt Sam when he tries to sell information to the Heroes.
+\begin{readoutloud}
+I wouldn't trust Sam Slick if I were you. He is a shady character, and lacks the strong moral compass that decent people such as myself has.
+\end{readoutloud}
+Sam looks irritated, but keeps quiet. Then he says to the Heroes
+\begin{readoutloud}
+Bullshit. His strong moral compass and unwavering righteousness has killed more people than most prolific assassins manage in a lifetime. Now, 5 gold for something that will save your lives?
+\end{readoutloud}
+
+Will they accompany Dyslexia to the summoning site?
+
+
+\subsection*{If the characters decline "guarding" for the "gate closing"}
+%------------------------------------------------------------------------
+Dyslexia and her RedGuard will kidnap two young women from the village and pack them on a cart to haul down to the summoning site. They leave in the wee hours of the night.
+
+The village will be terrorised when they find out, and ask for help. Bling SwordSlash will request 100 gold, and the village can't pay. The Heroes will be offered 20 gold to find and bring home the missing women.
+
+Where to start? No one knows. Except Sam Slick, who can be found at the inn in the morning. He will offer to sell them the information for 15 of the 20 gold (can haggle down to 10). He did spy on Dyslexia Marigt and saw an opportunity to score some money when she went out kidnapping the women and leaving in the dead of night.
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------
+% 04x : intermission - Revenge in Eisenkrafs
+%===============================================================================
+%                      Revenge in Eisenkrafs
+%                      ---------------------
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{intermission, revenge in Eisenkrafs}
+\section*{Revenge -- Eisenkrafs}
+\chaptermark{revenge in eisenkrafs}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes return to Eisenkrafs to take avenge on Gebbhardt Goebbels and his minions. They seek him out and fights him. Then they escape with some loot perhaps?
+
+
+\subsection*{Taking Revenge}
+If the heroes do want to take revenge on Goebbels et. al. then let them. In chapter two, when they were just weak newbies it was not likely that they would succeed in fighting their way up through the mines, but after another batch of XP from the lower levels of the caves, as well as perhaps the wizard's tower and all the riches it holds it might be possible to make a raid into Eisenkrafs to kill Goebbels and perhaps some of his minions too.
+
+Gebbhardt Goebbels will be in the mine yard most of the day, with some short trips into the mine. He will be in his house all evening and night. During the night there is 33\% chance that a runner from the Eisenkrafs Bandits will contact him (sneak 10).
+
+The trick to a clean kill is to get at Goebbels when there are few people around him. If the characters walk around town asking for him he will hear of it very soon. If they just hang around he will hear about it the next day, and if they sneak around he might not find out. When Goebbels finds out about them he will take a group of ruffians with him and confront them, being nice but careful in the beginning. It will likely escalate and he has no scruples about killing the Heroes. He will also call in reinforcements again and again.
+
+\subsubsection*{The mine yard}
+Assaulting Goebbels in the mine yard office is a possible heads on approach. Killing Goebbels is not that difficult. He is good with the pick axe, but does not have good defence. However, he can call 5-10 miner ruffians from the mine yard to help him in 1-3 rounds, and another 10+ miners and orcs from the mine entrance 10 rounds after that.
+
+The mine yard office has a total of 8 silver and 24 copper in a couple of pouches locked away in the desks.
+Gebbhardt also has the key to his house if searched (find roll on the corpse).
+
+\subsubsection*{The streets}
+Intercepting Goebbels when he is walking through town is possible if they spy on him. He might have 1-3 ruffians with him, and can call in reinforcements in 15-20 rounds. If he is aware of the Heroes presence in Eisenkrafs he will have a much larger force with him, and reinforcements in about 10 rounds.
+
+\subsubsection*{Goebbel's house}
+Breaking into Goebbels house in the middle of the night is another way. He will be asleep, but his servant wakes very easily and will sound the alarm immediately. Reinforcements can arrive in 30+ rounds.
+The door is locked mod-3 and sturdy abs 8 hp 50. The window shutters are barred mod+3 and sturdy abs 3 hp 10. They are also small and require a dex to climb through.
+
+The house itself is holds about 100enc of loot that is valuable enough with a total value of about 10 gold. Best appraise success can give about 10enc of 3sm/enc.
+A successful find roll on the carpet in the study reveals a well made trap door to the basement. It is locked mod-0 and sturdy abs 5 hp 25.
+
+The trap door leads to a basement tunnel. This is part of an ancient tomb or temple, and stepping down here without safeties is virtual suicide. Be sure to warn the players:
+\begin{readoutloud}
+The trap door ladder is a bit longer than expected, and it leads down to ancient stone set walls, with centuries of slow mineral deposit buildups. You get an eerie feeling crawling down the spine. This might be dangerous.
+\end{readoutloud}
+
+The basement holds some nice things, but is guarded by two ancient sentinel sword ghosts (10 charges, skill 7, dam 4) in the entrance corridor. They will appear once someone steps on the square between them.
+It is a perception roll to notice the strange round thin stone discs on the floor, and an int roll to identify them as ancient sentinel bases. Another int-3 might reveal that they are activated. They will make one attack each per round.
+
+It is possible to run through a sentinel ghost, but the players must figure that out for themselves, and their characters must succeed with a psy vs remaining charge roll to succeed with the dash. Once a hero has been hit a couple of times and seen that the ghost swords pass through shields and armour they might roll an int-6 roll to get the idea that the warriors are not solid, and might be possible to pass through.
+
+In the chests the heroes can find a fine sword mod+1 abs+5 worth about 10 gold, as well as two unused sentinel bases (charge 10, skill 7, dam 4, enc 5) worth 3 gold each. A total of 12 gold 42 silver and 230 copper is also available. The chests are locked mod-0 sturdy abs 4 hp 10.
+
+
+\subsection*{Getting away}
+Regardless of their success in the killing the Heroes can count on problems on their way back. The towns people might be problematic. If they figure out that Goebbel is dead a few will try to avenge him. If the Heroes are carrying loot from Goebbel's house there will be lots of greedy miners who will assault them with rocks, slings, bows, etc, as well as pick axes, spears, etc.
+
+Once the Heroic few manages to escape Eisenkrafs they will be tracked down by the bandits if the rumour is that they have taken anything of value from Goebbel's house. The Bandits will make an assault at night. However they will not pursue south of Castle Conq.
+
+
+\small \begin{verbatim}
+
+
+===================================
+eisenkrafs miner         (specific)
+-----------------------------------
+str  7    hp 10 abs 0
+dex  4    m1 w3 r6 d9
+int  4    vision 20
+psy  4    mana 6
+per  3    initiative 7
+----------
+avoid     5 yield+3
+----------
+pick axe  7 dam 5, penetrating 2, abs 6, parry-2, slow-1
+money ( 0g 0s 5c)
+===================================
+
+
+
+===================================
+eisenkrafs miner orc     (specific)
+-----------------------------------
+str  12   hp 17 abs 0
+dex  6    m1 w3 r6 d9
+int  3    vision 15 dusk
+psy  3    mana 2
+per  2    initiative 8
+----------
+avoid     5 yield+3
+----------
+2h pick axe  5 dam 10(8), penetrating 3, abs 6, parry-3, slow-2
+               or dam 8 slow-1
+money ( 0g 0s 3c)
+===================================
+
+
+
+===================================
+eisenkrafs bandit           (token)
+-----------------------------------
+str  5    hp 10 abs 1
+dex  6    m1 w3 r6 d9
+int  4    vision 20
+psy  5    mana 5
+per  6    initiative 8
+----------
+sneak      6
+avoid      5
+yield     +3
+----------
+axe        7        dam  7, abs  8, parry -3,
+                    str 4 (max +3 str bonus), finesse-3
+shield     7        abs 12, parry +3, str 4
+                    Ranged attacks mod-2 when in the way.
+                    Hiding behind it (primary action) ranged mod-3
+                    tackle mod+1
+===================================
+
+
+===================================
+eisenkrafs bandit           (token)
+-----------------------------------
+str  5    hp 10 abs 1
+dex  6    m1 w3 r6 d9
+int  4    vision 20
+psy  5    mana 5
+per  6    initiative 8
+----------
+sneak      6
+avoid      7
+yield     +3
+snapshot   3
+----------
+short sword   4     dam  5, abs 8,
+                    first two attacks do not require stamina
+                    str 3 (max +1 dam str bonus, max +1 penetrating str bonus),
+                    finesse-5
+bow        7      dam 5,
+                  range 16, short 8 mod+3, long 24 mod-3,
+                  vlong 32 mod-6 dam-1, extreme 48 mod-9 dam-2,
+                  str 3 (no str bonus)
+quick mod-3 1r incl reload from accessible quiver
+shot  mod-0 2r incl reload from accessible quiver
+aimed mod+3 3r incl reload from accessible quiver
+===================================
+
+
+
+
+\end{verbatim} \normalsize
+
+
+
+
+
+%-------------------------------------------------------------------------------
+
+%            TODO:   add section on raiding the Eisenkrafs Bandits
+
+%-------------------------------------------------------------------------------
+
+\subsection*{Raiding the Eisenkrafs Bandits}
+If the characters have managed to get in on the good side with the Eisenkrafs townsfolk, or managed to track down the bandits' stronghold, they can attempt to raid the place and make off with some nice loot.
+
+The Bandits' camp and cave is east of Eisenkrafs. The place probably has only a few guards now that the Heroes have already slaughtered their main force during the assault  ?
+
+
+
+
+
+
+
+
+%------------------------
+%04b : The Summoning Site
+%===============================================================================
+%                               The Summoning Site
+%                               ------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{04 the gate}
+\section*{04: The Summoning -- The Gate Site}
+\chaptermark{summoning site}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes get to the Summoning Site, with or without Dyslexia Marigt. They either get taken for sacrifice, or fight to free the girls. Then Uchly Namen arrives and the heroes must flee for their lives.
+
+
+The Summoning Site is 14-19 steps from Sleepy Cove depending on path.
+
+
+\subsection*{If the heroes have come with Dyslexia Marigt as guards}
+%-------------------------------------------------------------------
+First out, a second RedGuard is waiting for them at the site. He says:
+\begin{readoutloud}
+[gruff stern voice]: Welcome Sneexious. The ritual site is clear and safe.
+\end{readoutloud}
+This is surprising, why would she need another guard if she just hired the Heroes?
+
+Dyslexia Marigt goes to the altar podium, and asks the heroes to stand close "so that they will be safe during the ritual."
+
+She then starts performing the initial steps of the ritual, which takes a few minutes. Nothing much happens.
+She then casts slow, first, (to get better access since she is not as good with paralyse). Then she casts paralyse.
+Roll for int to see if the heroes realize that she it not working on the ritual any more when she is starting to cast slow and paralyse.
+Once slowed or paralysed the RedGuards will move in to grab the heroes and bring them to the altar.
+
+If they get slowed and paralysed by Dyslexia Marigt, Sam Slick will show himself and require 10 gold or the Banor's Gate they stole from Honorbliz Wize's tower as payment to help save them.
+If agreed he will throw a Blast Off! at Dyslexia Marigt, stunning her with the shock, and forcing her to target him instead of the held helpless Heroes.
+He will battle Dyslexia and the guards until he is at 50\% hp, then he will flee, hoping the Heroes have managed to escape.
+During this time the heroes will break free on a successful psy roll.
+
+If they don't escape immediately the demon will still come through after a while, and then they really must escape.
+
+Dyslexia Marigt will shout at them that they are imbeciles and fools. Without the sacrifice he will be uncontrollable. He will lay waste to the entire region! Death to all.
+
+
+\subsection*{If the heroes have come after Dyslexia Marigt, to free the girls}
+%-----------------------------------------------------------------------------
+Sam Slick has come with them to see what is going on. He will show them the site, but not fight. If they get into trouble he will offer to help them out for 10 gold.
+
+When they arrive Dyslexia is on the podium altar, chanting away. The girls are bound down lying on the altar. The two RedGuards stand by the podium on guard.
+
+The heroes now have a short while to try to get the girls free somehow. They can try to lure away the guards, or attack them from a distance, or attack Dyslexia directly somehow. Then they can try to grab a girl and run off with her.
+
+It will probably not go so well, and Sam Slick will offer to help out for 10 gold.
+
+Sooner or later Uchly Namen will come through, and then they will have to run off, with or without the girl.
+
+Dyslexia will shout after them about death and destruction for all from their interference.
+
+
+\subsection*{Aftermath}
+%----------------------
+Once things have relaxed the heroes can roll int to remember the tapestry in Honorbliz' tower. Yep, the same demon. Honorbliz must have info on how it was fought the last time. This if they didn't find the notebook.
+
+Due to the Heroes' interference, Uchly Namen is not properly bound. History repeats itself. This happened very similarly the last time he was summoned.
+He won't be able to harm Dyslexia Marigt or anyone within 10sq from her, but she cannot command him completely.
+He will go on the rampage slowly. Working through farmsteads and villages.
+
+Dyslexia Marigt will meet Baron Evilnius Conq in the old tower ruin and discuss the situation. Then she will send the wayward demon to destroy the Pawa castle, targeting primarily Baron Pawa and his Captain of the Guard.
+
+Sam Slick can track her to the meeting place though, for a price, of course, say 5gold? Or a couple of track rolls from the Heroes might do the same, say one roll per day?
+
+Sam Slick will sneak after her to see what is going on, and can forewarn the Heroes of the pending meeting, for a few gold of course.
+Sam has now seen both the demon, and the picture of the demon in Honorbliz tower. He thus knows that Honorbliz Wize was there fighting the demon. He can inform the heroes about it for 1 gold if they haven't figured it out themselves.
+
+Sneexious will have to kill her RedGuards, perhaps, if she shouts to the heroes that the demon is loose. However, this is not so difficult when you have a huge powerful demon at hand. She will of course blame the interfering heroes when questioned about the guards.
+She will escape by casting invisibility if the Heroes are trying to catch her, then set the Demon after them.
+
+In the mean time, Uchly Namen goes south, away from Sneexious who has some command over him. He comes across Kleinshof, where he wreaks havoc, eating a dozen or so inhabitants before enough people have managed to flee.
+A few houses on fire. Some holes in roofs, some houses and barns razed. Dismembered cattle and people all over the place.
+Kleinshof is only 5 steps due south of the summoning site.
+
+Surviving the summoning by themselves gives the heroes 10XP each. If they are helped by Sam Slick they only get 5XP each. If they also rescue the girls they get another 5XP each.
+
+
+
+\subsection*{Uchly Namen}
+%------------------------
+He is about 4m tall, very powerful, green scaly skin, glowing yellow eyes. Wings for gliding (not flying in this realm). 2 arms with large clawed hands, 2 legs with large clawed feet.
+When he is wounded he bleeds green-yellow glowing thick smoke for a few rounds. Wounds close 1hp per round. (not regenerating, but they don't know that).
+No use setting actual numbers to this monster. It will behave according to script.
+
+\small
+\begin{verbatim}
+===================================
+Trymore John                (named)
+-----------------------------------
+str  3       hp 10 abs 0
+dex  5       m2 w4 r6 d8
+con  8       stamina 10
+int  7       vision 25
+psy  7       mana 15
+per  6       cap 15
+cha  4       xp --
+----------
+sneak      7
+sword      6
+
+----------
+force wall 10
+           cast 1r 1m, size 3 +1/m, duration 5r +5/m
+           2psy vs str +2/m to stop passing the blocked passage
+           int 3, psy 6
+force wall 10
+           cast 1a 1m, size 1 +1/m, duration 2r +2/m
+           psy vs str +3/m to stop passing the blocked passage
+           int 3, psy 6
+teleport   10
+           cast 1r 1m, target 1 +1/2m, range contact.
+           Teleport a willing target to any square in line of sight of the
+           caster, or to any site the caster has memorised for
+           teleportation and marked with a teleport marker.
+           A caster can keep int teleportation sites in memory.
+           Memorising a site takes 10-per rounds (minimum 1r) and then
+           placing a teleport marker on the site.
+           A fail-6 will teleport the target somewhere else.
+           A teleport marker costs ~1g and weighs 0.5enc.
+           It is also possible to teleport unwilling targets, but it
+           requires a psy vs 3psy +1/3m roll and takes 2r instead of 1.
+           int 5, psy 5
+black bolt 8
+           cast 1r 1m, dam 6 +2/m, range 10 +5/m, long -3dam, penetrating
+           int 7, psy 7
+----------
+Stun Dagger 6 dam 3 abs 8 parry-3 toparry-2
+stun:         flashbang, push ams 18-range on targets with line of sight.
+              draws 1 mana, requires code word activation, 1a.
+money ( 2g 15s 45c)
+===================================
+
+
+
+===================================
+RedGuard                    (named)
+-----------------------------------
+str  8    hp 25(18) abs 4 (plate + RedGuard ward rune tattoo)
+dex  7(8) m2 w4 r7(8) d10(12)
+con  7    stamina 10
+int  4    vision 25 160deg
+psy  5    mana 10
+per  6    cap 12
+cha  4    xp -- ( ~ 399 )
+----------
+quick       3 (0,0,-3,-6)    4.0  36
+focus       3                1.0   9
+avoid       8 yield+4        0.8  51
+sharpstaff 12                1.0 144
+whirlwind   7                1.0  49
+shield      6                0.7  25
+consistent  1                spc  10
+quick draw  6                0.5  18
+resilient   7                1.0  49
+fast        2                2.0   8
+----------
+Quaff 2x        restore 4hp and 4sta in one round, readied quick draw from belt
+
+sharpstaff   12 dam 7/8(6/7), penetrating 1, abs 15, parry+0/+1,
+(1h/2h)         reach 1 mod-3, fast+0/+1, finesse-4
+                str 5 (max +2 str bonus, extra str bonus are penetrating)
+
+heavy RedGuard  abs 3, (less mods than normal plate armour)
+brigandine      dex-1 yield bonus -0
+                run-1, dash-2
+                str 7 (str penalties affect all actions)
+                vision-10\%, cone vision max 270 deg, remember your facing...
+                acrobatics mod-3
+                spellcasting mod-1
+                sneak mod-2
+
+===================================
+Imposing soldier in a strange red plate armour and cloak.
+Armed with a large staff with evil looking metal points in each end.
+He looks like he knows how to fight.
+
+current status
+-------------
+hp 25       :  25
+sta 10      :  10
+ini 6+d4  :  --
+
+
+
+
+
+melee tohit+3 (very large, but mobile)
+ranged tohit+6 (very large)
+
+===================================
+Uchly Namen                 (named)
+-----------------------------------
+str  40      hp lots abs 4 skin
+dex   8      m3 w6 r10 d15
+con  30      stamina 30
+int   8      vision 30 arc 180deg, infra soul
+psy  18      mana 30
+per   8      cap 12
+cha   3      xp --
+----------
+quick        3
+swat        10 dam  8, penetrating 2, knockback 3+1d4sq, min 2 dam penetrating
+slash        8 dam 14, knockback 1d3sq, min 1 dam penetrating.
+grab         8 dam  6, crush each round dam 8, break free str vs 10 resistance.
+               or get thrown 5+d5sq taking 2+1d3 penetrating damage.
+bite         - dam 10+d10, penetrating 2
+parry grab   8 will rip weapons out of hands
+parry swat  10 rip weapons out of hand on 10 vs str resistance roll.
+scary        - psy-3 roll to attack, only psy-0 after succeeding once at mod-3
+roar         - psy or flee 1d3 rounds, psy-3 not to back off 1 round.
+===================================
+
+\end{verbatim}
+\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------
+%05 : The meeting, Old East Tower Ruin
+%===============================================================================
+%                              Old East Tower Ruin
+%                              -------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{05 the meeting}
+\section*{05: The Meeting -- Old East Tower Ruin}
+\chaptermark{the meeting}
+
+
+\section*{Synopsis}
+%------------------
+The Heroes will sneak up on a meeting between Sneexious and Baron Conq. They will hear them discuss the assault on Pawa. The will hear Sneexious perform the command to send the Demon to attack Pawa Castle.
+
+
+The Old East Tower Ruin is 8 steps due north of The Summoning Site.
+
+
+\section*{The Meeting}
+%---------------------
+Sneexious is waiting by the ruin for a day or so before Baron Conq arrives.
+
+The Heroes arrive just in time to follow Sneexious up to the ruin and meet Evilnius Conq's guard. Then the Baron Conq himself emerge from the ruin when it is safe:
+
+\begin{readoutloud}
+\emph{Conq [expectant]:} So, Witch. Has it been done. Is the Demon here, ready for my command? \\
+\emph{Sneex [carefully]:} Yes Baron. I have summoned the Beast. Uchly Namen is once again walking this land. \\
+\emph{Conq [evil, pleased]:} Excellent. Well done witch. Here is your 100 gold, as promised, for the first part and you expenses. \\
+Now, command it to attack Castle Pawa. I want that annoying old man dead. Eaten preferably if possible. Command the Beast not to rest until the Baron Pawa and his Captain of the Guard both are dead. But make sure it does not destroy too much of the castle. I don't want to spend too much of Pawa's treasury having to rebuild it once I ..."rescue"... the city from its predicament. \\
+\emph{Sneex [careful, determined]:} Yes, lord. And, as soon as your spies confirm the ruination of Castle Pawa, I expect to have the rest of the payment forthwith. I will have to hurry back to Banish the Demon, and I want my money before my leverage leaves the scene. \\
+\emph{Conq [disdain]:} My dear Sneexious, I'm hurt that you do not trust me. Have I not always settled my debts? \\
+\emph{Sneex [irritable]:} Your way of settling your debts is not always to the liking of your creditors. And seeing as I'm one of them in this case, I'm not inclined to be lenient on the details of the payment. \\
+\emph{Conq [bland]:} Of course, you ride back with me immediately, once you have commanded the Demon of course. \\
+\emph{Sneex []:} Settled then. \\
+\end{readoutloud}
+
+Sneexious now begins a short incantation. She opens a command gate to the demon's position, then shouts her command, in an ancient language, to the demon, who will then slowly have to comply, for a while.
+
+In the next day or two, Uchly Namen will make its way to Castle Pawa and begin the assault.
+
+Once the command ritual is completed, Conq's entourage, and Sneexious, will ride off north.
+
+
+It is unlikely that the Heroes will be able to fight through the RedGuards, even with the (if paid well) aid of Sam Slick. They might be able to interrupt the proceedings, but both Sneexious and Conq's guards will be very intent on killing them if they are found.
+
+
+Uchly Namen is now commanded north east from the region south of Kleinshof, and has 14-16 step journey before he hits Merna. He stops there on the way to Castle Pawa, and wreaks havoc, eating people and cattle left and right, then irritably leaves under command influence and trudges on north east towards Castle Pawa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%------------------------------
+%06 : The Battle of Castle Pawa
+%===============================================================================
+%                       Castle Pawa : Attack of Uchly Namen
+%                       -----------------------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{06 attack on Castle Pawa}
+\section*{06: Castle Pawa -- Attack of Uchly Namen}
+\chaptermark{castle pawa}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes might not be here when it happens. Uchly Namen will attack the castle city. After many hours he will manage to kill Baron Pawa and the Guard Captain. He will then eat some more people, sit and sleep on the gate remnants, then leave around lunch the next day.
+
+
+\subsection*{The Attack of Uchly Namen}
+%--------------------------------------
+Uchly Namen will attack in the Dead of Night. He will start by razing a farm nearby, then pound down the gate and some surrounding structures. Well inside he will start eating people and some cattle left and right until he must search out his commanded targets. It will take him hours to actually figure out who he is supposed to kill. He can't speak the language, and it takes a while before he finds a scholar and manages to torture him into translating for him from his ancient language. This scene is rather weird. He will be picking up people left and right, shouting at them \emph{DO YOU UNDERSTAND WHAT I'M SAYING? (in ancient)}, shaking them, trying again, then tossing them aside when he they just shout and scream.
+
+Many witnesses will be able to repeat the horrible battle cries \emph{(why don't you stupid fleshlings understand me?)} of the demon when questioned, and will describe the process in detail.
+
+
+\subsection*{If the Heroes are there}
+%------------------------------------
+The Heroes will not have a chance to reach Castle Pawa before Uchly Namen, but they can get while the battle still rages. The Heroes have a chance of limiting the destruction of Castle Pawa and it's inhabitants. If they have figured out that the spear and shield from the last banishment of Uchly Namen is kept in the great hall in Castle Pawa they can perhaps sneak during the mayhem and use it to battle the Demon. They are not skilled enough to really do any significant damage to it, but the Demon cannot easily damage the shield carrier. The demon will just whack the shield bearer away all over the courtyard until he gets tired or banged up enough to stop coming after him. But he can be annoying enough that the demon will leave earlier. Just as soon as he has killed Baron Massa Pawa and the Captain of the Guard.
+
+
+\subsection*{Aftermath}
+%----------------------
+Once Castle Pawa is attacked the spies of Baron Conq will ride home (20 steps) during the night and early next day. By the afternoon Conq will have paid Dyslexia Marigt, and she will set off. Officially she is on her way down to the summoning site to banish the demon. However she knows she will not be able to do so. She also knows that Baron Evilnius Conq will not let her get too far with all that gold, and that he has surely sent guards/assassins after her, perhaps to kill her and take the money once the demon is gone, and surely kill her if she does not banish the demon. Her only way out is to actually get down to the summoning site and then somehow trick or kill Conq's agents.
+Likely she will try to summon the demon down there and then try to have him kill the potential assailants.
+
+
+Baron Evilnius Conq will ride out the next day, leading his army towards Castle Pawa, to "rescue" them from the horrible attack of the demon. It will take him about two days to ride the 21 steps north of the forest. He will leave a small guard at home in Castle Conq. Arriving at Castle Pawa he will make a pretty speech, then promptly install himself as the new ruler. Some voices will be raised about sending for Heirling Pawa, the son of Massa Pawa. Those raising the concerns will be invited to a council, from which they will never leave. Conq will then tell the cityfolk \emph{"Those heroic citizens have taken it upon themselves to find and bring back the rightful heir of the land. In the mean time I'll do my best to protect you from the foul horrors of beyond."}
+
+
+Uchly Namen is mighty irritated at Sneexious for commanding him to mess with Castle Pawa. Not only did he get hurt quite a bit from all the soldiers and siege weapons. He also had to spend hours figuring out whom to kill.
+He will now head west, along the road, towards Sleepy Cove and Castle Conq. He wants to figure out a way to kill Sneexious, and he has some ideas. He is wounded, weak, and pissed off. He will be drawn towards the necklace, to kill Sneexious, or whoever is carrying it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------
+%06x Intermission - demons on the loose
+%===============================================================================
+%                            Demons on the loose
+%                            -------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{intermission, demons on the loose}
+\section*{Demons on the Loose}
+\chaptermark{demons}
+
+
+\subsection*{Synopsis}
+%---------------------
+Grey Stalkers might have gotten through the portal Sneexious opened. They will lay in ambush for the heroes when they travel from Castle Pawa.
+
+
+\subsection*{The Ambush}
+If the heroes thwarted Dyslexia Marigt before she managed to complete the summoning ritual, which is very likley, the gate is left a bit ajar, and a pack of Grey Stalkers have managed to get through. They will ambush the heroes when they leave Castle Pawa to track down the Demon.
+
+The Grey Stalkers are dangerous in that they blink out defensively and it is a bit annoying for the players to keep track of where they are. This also makes it more difficult to hurt them in melee fights. They also try to separate the Heroes by doing their tackling horn charges and throwing the targets away from each other.
+
+Open with the small ones on the road charging, and the big one placing an explosion in the middle of the heroes. That is a nice good start to the fight. Remember that the Stalkers are intelligent, have hive vision, and will coordinate their fight very well.
+
+It is possible to talk to the demons if a character can speak ancient, but the characters must present something very nice for the stalkers to be interested in dealing with them. Food, magical thingies, etc, but not gold.
+
+
+\small
+\begin{verbatim}
+
+Grey Stalkers:
+Live in hive packs, nomadic. One big and 4-8 small ones is normal.
+Larger packs exist, but are uncommon. Clever, can speak a bit of ancient.
+Agressive and sneaky. Send in a small one, scout, bring in the large,
+then it brings in the rest of the hive pack. They also have hive vision,
+so one small scout is enough for the large to cast explosion spells etc.
+
+===================================
+big grey stalker         (demon10a)
+-----------------------------------
+str 16    hp 30 abs 3
+dex  7    m2 w6 r12
+int  6    vision 30 arc 360 night
+psy 12    mana 12
+per  8    initiative 10
+----------
+quick          3
+balance        3
+sneak          10
+veteran        3
+ancient        5
+charge         6
+blink          blink out 1a, blink in 1a, out max 5r
+bite           6 dam 8 slow-1
+horn charge    8 dam 8+dst/3, acts like tackle
+leg stab       9 dam 6 fast+1
+----------
+summon         8 1r 3m +1stalker/3m  summons a grey stalker
+                 duration is until the big grey stalker dies
+explosion      8 1r 2m dam 5 +1/r penetrate 1
+                 range 10 radius 1 +1/2m
+portal home    6 10r 6m duration 10r   creates a one way portal home.
+===================================
+hp 30 abs 3  :
+init 10      :
+mana 12      :
+pain t4 v3   :
+hp/2         :
+
+
+===================================
+grey stalker             (demon10b)
+-----------------------------------
+str  8    hp 12 abs 2
+dex  9    m3 w8 r14
+int  5    vision 30 arc 360 night
+psy 10    mana 8
+per  7    initiative 12
+----------
+quick          3
+balance        3
+sneak          8
+ancient        3
+veteran        2
+charge         6
+blink          blink out 1a, blink in 1a, out max 2r
+bite           5 dam 6 slow-1
+horn charge    7 dam 6+dst/3, acts like tackle
+leg stab       8 dam 4 fast+1
+----------
+summon         4 100r 8m   summons one big grey stalker
+                 duration is permanent
+teleport       6 1r 2m teleport to the big grey stalker
+===================================
+hp 12 abs 2  :
+init 12      :
+mana 8       :
+pain t3 v2   :
+hp/2         :
+
+\end{verbatim}
+\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-----------------------
+%07 : Defend Sleepy Cove
+%===============================================================================
+%                              Battle of Sleepy Cove
+%                              ---------------------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{07 battle of Sleepy Cove}
+\section*{07: Battle of Sleepy Cove}
+\chaptermark{battle}
+
+
+\subsection*{Synopsis}
+%---------------------
+The Heroes might figure out a way to save Sleepy Cove by using the spear and shield from Castle Pawa. Otherwise they will have to watch as Bling SwordSlash extorts huge amounts of money and then goes into another Heroic Battle and forces the demon away, somewhere else, not his problem.
+
+
+Uchly Namen is visibly hurt, but still fights like a champ. He ruins houses, eats cattle, and swats people left and right.
+If the heroes attack him with the spear and shield they might hurt him a little every now and then, but take small damages themselves as they fly left and right from his powerful attacks.
+When the heroes have had enough, the demon is almost dead. He has problems standing, he falls every now and then, and slowly rises to fight on. Strange smoke wisp from his many wounds.
+
+This is when Bling SwordSlash seizes the moment. He takes the spear and shield from the heroes:
+
+\begin{readoutloud}
+You should leave this work to Great Men, of Substance, such as Myself! I shall Save the day, and Protect All the people of this quaint little Village!
+Now, Foul Beast, prepare to meet your Doom! I shall thwart thy evil marauding!
+\end{readoutloud}
+
+He then proceeds to advance on the demon. He dodges two attacks then plunges the spear deep into the chest of the beast. The Demon dies, falls on its back, and the scene ends with Bling SwordSlash posing beside the beast with one foot on the shoulder, as the villagers gather to celebrate him.
+
+
+\subsection*{Aftermath}
+%----------------------
+Bling SwordSlash gets 200 gold for slaying the Demon. Sleepy Cove and the other villages pool their money. The Heroes gets nothing of course, since they were saved by Bling SwordSlash.
+
+The villagers have already plundered Dyslexia's house, as well as shipment from the Trade Town. If they bring up the money, they are reminded that they were working for the witch, and might be accomplices. Especially if they push the issue about money... In the mean time they are treated well, but still has to pay for the rooms at Sleeping with the Fishes, until they have recovered enough to travel in search of new adventures.
+
+
+Often in the future, the heroes will hear the ballad of Sleepy Cove, where the valiant Bling SwordSlash defeats the beast Uchly Namen in single combat, and where many lesser men have failed, he succeeds with heroic skill.
+
+
+
+
+\end{document}

@@ -1,0 +1,62 @@
+
+
+hactac: rpg-ish tabletop game for dead tree and digital tables alike
+
+(tactical hacknslash -> tachac -> (eeeh) -> hactac)
+
+
+Current state:
+--------------
+
+This is my personal notes package, not draft quality material intended for release. There is still a lot of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc. I'm updating this package whenever I have the time and inclination.
+
+It is however quite complete. We have been using this for many years and a couple of hundred hours of total gaming time. I have a couple of campaigns and numerous adventures available that I'll add here as I get the time to clean them up somewhat.
+
+Anything you want to change or add? Contact me! Or even better: go to github https://github.com/netjiro/hactac and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I might dig out some time to improve the quality to something closer to an early publishable draft state.
+
+
+
+Repository layout
+-----------------
+
+Unfortunately I can't share all my image material (tokens, battle maps, handouts, etc) together with the game core here. I don't have the copyright. I'll see if it's possible to share the complete media packages elsewhere in some other context, together with the maptool campaign files and automation assist scripts. But for now, it's only the text. I have some maps and token images I've made myself, so I'll add them when I get the time if someone is interested.
+
+My working directory layout looks like this:
+hactac
+    adventures       << the original adventure source files
+    dl               << downloads, images and other stuff not yet in use
+    icons & avatars  << for forums etc
+    live             << save files, notes, etc for current adventures
+    maps             << maptool: maps for quick access
+    maptool          << maptool: misc maptool settings and files, and link tree
+    markers          << maptool: images for marking map spots and such
+    misc             <<
+    objects          << maptool: image objects
+    old              <<
+    rules            << the rule book
+    snapshots        << snapshots of rules and adventure pdfs and historical
+    software         << snapshots of maptool, mumble clients, jarnal, etc
+    states           << maptool: character token state marker images
+    templates        << maptool: map effect template marker images
+    tex              << latex include settings
+    tmp              <<
+    tokens           << maptool: token images
+    tokpic           << maptool: maptool specific token files
+
+Most of the file space is binary stuff like images and campaign files, and I don't generally put them under version control.
+
+
+
+The history:
+------------
+
+The hactac rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Gothenburg for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
+
+That's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming. I inject these adventures to fill the void found in between our long running role playing campaigns and the one shot board games sessions.
+We play this for a couple of few hours every now and then after people have put their kids to sleep.
+
+Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance for more experienced characters. GW is of course notoriously craptitudish at balance design. We also played some Descent, but that requires gathering for a full day, and I usually prefer to play campaigns instead of one shot adventures. There is a gap to fill!
+
+Many years ago, as an early teen, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my "real" rpg campaign, but still wanted to play. That turned out quite well, and was fun despite the extreme simplicity of both the rules and the world. That was an encouraging experience to draw from when I started working on this package.
+
+Here I've tried to go for fast gaming, since we only have a couple of hours each session, while still making the battles tactically interesting and the role playing rewarding, albeit cliché. The combination of cooperation, skills, positioning, and battle maneuvers are very important when fighting critters under this rule set. Just charging in for dps dice rally doesn't cut it. Coordination between characters, positioning, timing, and complementary skills and abilities are very important for fighting success, which makes things more interesting. The role playing aspects are written for comedy. It is supposed to be fun, cliché, and more than a bit silly most of the time.

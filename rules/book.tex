@@ -1,0 +1,482 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+%===============================================================================
+%
+% published on github as "hactac"
+%
+%===============================================================================
+
+
+
+
+% set the general page layout
+\documentclass[11pt, twoside, titlepage, a4paper]{report}
+% adjust the margins
+\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
+
+% set utf8 encoding
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
+
+
+
+
+% For encapsulated postscript figures
+% Use:
+%
+%   \includegraphics{width=10cm, height=10cm}{fig.eps}    or:
+%   \includegraphics{width=10cm, height=10cm, keepaspectratio}{fig.eps}
+%
+% where width and height are optional
+\usepackage{graphicx}   % For eps figures
+
+
+% To get figures, tables, etc. where you want them.
+% Use:
+%
+%   \begin{figure}[H]
+%
+%\usepackage{here}
+
+
+
+%
+% For nicer captions
+%
+% Valid options (between []) are:
+%
+% Indentation: hang, center, centerlast, nooneline
+% Size: scriptsize, small, normalsize, large, Large
+% Style: up, it, sl, sc, md, bf, rm, sf, tt
+%
+\usepackage[hang,small,bf]{caption}
+
+%
+% Want to change font?
+%
+% Uncomment your choice, if all uncommented, Computer Modern Roman is
+% used. Note that some of these don't seem to work properly
+%
+%\usepackage{utopia}
+%\usepackage{pspalatino}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{charter}
+%\usepackage{pifont}
+%\usepackage{chancery}
+%\usepackage{bookman}
+%\usepackage{avant}
+%\usepackage{helvet}
+%\usepackage{zapfchan}
+%\usepackage{courier}
+%\usepackage{newcent}
+
+
+%
+% Some optional packages:
+%
+
+%
+% Index section
+%
+% Put a \index{keyword} at the word in the text, a \printindex where
+% you want the index printed, and run "makeindex <reportname>.idx
+% after LaTeX-compiling (and compile a second time)
+%
+%\usepackage{makeidx} %Index-section
+%\makeindex
+
+%
+% Fancier enumeration
+% You get a new \begin{enumerate}[XXX] where you can specify XXX to be
+% text {i,I,a,A,1}, for example \begin{enumerate}[Uppg. a)] to get a
+% Uppg. a)/b)/c) list.
+%
+%\usepackage{enumerate}
+
+
+
+% add nicer headers and footers  (like armin's thesis)
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+
+% Nicer headers and footers (like F dd reports)
+%
+% \fancyhead[L/C/R]{} to change headers
+% \fancyfoot[L/C/R]{} to change footers
+%\usepackage{fancyhdr}
+%\fancyhead[L]{Left page header}
+%\fancyhead[R]{Right page header}
+%\footrulewidth 0.5pt % Insert a line above the footer
+%\pagestyle{fancy}
+
+
+%\usepackage{pdftex}
+
+%enable good pdf conversions with links and index, etc
+%\usepackage[pdftex, colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%\usepackage[%pdftex,%
+%bookmarks=true,%
+%bookmarksopen=true,%
+%pdfpagelabels,%
+%pagebackref,%
+%colorlinks=true,%
+%linkcolor=blue,%
+%linkbordercolor=white,%
+%citecolor=blue,%
+%citebordercolor=white,%
+%urlcolor=blue,%
+%urlbordercolor=white,%
+%plainpages=false]{hyperref}
+% provide some extra pdf information
+%\pdfinfo{\Title{§title§}\Author{netjiro}\Keywords{game rpg role-playing tabletop tactical virtual}}
+
+% this is the block used in the masters thesis instead of the one in the PhD thesis
+%\usepackage{hyperref}
+%%\hypersetup{pdftex=true}
+%\hypersetup{pdftex}
+%\hypersetup{bookmarks=true}
+%\hypersetup{bookmarksopen=true}
+%\hypersetup{colorlinks=true}
+%\hypersetup{linkcolor=blue}
+%\hypersetup{pagecolor=blue}
+%\hypersetup{citecolor=blue}
+%\hypersetup{urlcolor=blue}
+
+
+%\usepackage[pdftex, colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%          \pdfinfo{
+%            /Title      (Main title goes here)
+%            /Author     (Author Authorson)
+%            /Keywords   (list of keywords)
+%          }
+
+
+
+
+
+
+
+
+
+
+
+% local defines
+
+% couldn't find a degrees marker circle, so here's a quick'n'ugly version
+% the trailing tilde adds an unbreakable, unshrinkable, unenlargable space
+\newcommand{\degrees}{$^\circ$~}
+\newcommand{\degree}{$^\circ$}
+
+
+% can't seem to get this working right for spacing, and when exporting to ebook
+\newcommand{\vs}{$\backslash\ $}  % "versus" slash
+\newcommand{\bs}{$\backslash\ $}  % just backslash
+\newcommand{\ca}{$\approx$}
+% without the last backslash space it would take two spaces to get a space in the text, but with it you will always get a space weather you want or not. This is weird.
+
+
+% don't want outlines and crap around links in the document.
+% notoriously annoying package.
+% info can be found here:
+% http://theory.uwinnipeg.ca/localfiles/infofiles/teTeX/latex/hyperref/manual.pdf
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+
+% I want the possibility of switching between different styles for skills and actions. Either have them as list items or subsections/subsubsections, but without toc entries.
+\usepackage{ifthen}
+
+
+% Below I will now define \openXlist and \closeXlist list commands
+% as well as \skill{} and \action{} itemizers.
+% Then they can be used in the docs as
+%
+% \openskillslist
+% \skill{name1}
+% \skill{name2}
+% \closeskillslist
+%
+% \openactionslist
+% \action{name1}
+% \action{name2}
+% \closeactionslist
+%
+% handy if I want to switch easily between item listing for the pdf version
+% and headings for the html doc version.
+% Just change the \setboolean{skillsaslist} to true or false.
+
+
+% With skillsaslist defined we can use \ifskillsaslist{\begin{description}}
+% as well as \ifskillsaslist{\end{description}} around the skill listings
+\newboolean{skillsaslist}
+\setboolean{skillsaslist}{true}
+
+% Define the \skill{name} to make either of
+%    \item[name]
+%    \subsection{name}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
+
+% Define the \openskillslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
+
+% Define the \closeskillslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
+
+
+
+% With actionsaslist defined we can use \ifactionsaslist{\begin{description}}
+% as well as \ifactionsaslist{\end{description}} around the skill listings
+\newboolean{actionsaslist}
+\setboolean{actionsaslist}{true}
+
+% Define the \action{name} to make either of
+%    \item[name]
+%    \subsection{name}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openskillslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+
+% Define the \closeskillslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+
+
+
+% With itemsaslist defined we can use \ifactionsaslist{\begin{description}}
+% as well as \ifactionsaslist{\end{description}} around the skill listings
+\newboolean{itemsaslist}
+\setboolean{itemsaslist}{true}
+
+% Define the \eqitem{name} to make either of
+%    \item[name]
+%    \subsection{name}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openitemslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+
+% Define the \closeitemslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+
+
+
+
+
+
+
+%===============================================================================
+% And here the document begins!
+% -----------------------------
+
+
+\begin{document}
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% make a simple title page
+%-------------------------
+
+\begin{titlepage}
+
+\begin{center}
+
+   \vspace{4 cm} % Vertical space
+
+   \textbf{\Huge{hactac}}
+
+   \ % empty paragraph
+
+   \textbf{\Large{rpg-ish tabletop hacknslash\\for dead tree and digital tables alike}}\\
+
+
+   \vspace{2 cm} % Vertical space
+   %\textbf{\Huge{image\\ goes\\ here}}
+   %\vspace{1 cm} % Vertical space
+   \includegraphics[width=120mm]{./figs/attack.eps}
+
+   % make it look better in html rendering.
+   \vspace{2 cm} % Vertical space
+
+
+   \ % empty paragraph
+
+   \large{
+       fast and flexible game rules and setting\\
+       for old school silly and cliché role playing\\
+       with interesting tactical monster hack battles\\
+   }
+
+
+
+   \vfill % Puts what's below at the bottom of the page
+
+%   \textbf{\Large{netjiro}} %\hspace{5 cm} \large{author2}}
+
+   \ % empty paragraph
+
+   %\large{Csol}
+
+   %\large{General Academy of Bloody Murder}
+
+   \ % Empty paragraph
+
+   \normalsize{\today}
+
+\end{center}
+
+%\thispagestyle{empty} % No page number on title page.
+
+\end{titlepage}
+
+
+
+
+%-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+\raggedbottom
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% introduction and contribution notes on one sheet
+%-------------------------------------------------
+\cleardoublepage %force next printed page a right hand page.
+\raggedbottom
+%\pagestyle{empty}
+
+\chaptermark{hello}
+\chapter*{hello}
+%\addcontentsline{toc}{section}{introduction}
+
+The \emph{hactac} rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Gothenburg for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
+
+That's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming. I inject these adventures to fill the void found in between our long running role playing campaigns and the one shot board games sessions.
+We play this for a couple of few hours every now and then after people have put their kids to sleep.
+
+Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance for more experienced characters. GW is of course notoriously craptitudish at balance design. We also played some Descent, but that requires gathering for a full day, and I usually prefer to play campaigns instead of one shot adventures. \emph{There is a gap to fill!}
+
+Many years ago, as an early teen, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my "real" rpg campaign, but still wanted to play. That turned out quite well, and was fun despite the extreme simplicity of both the rules and the world. That was an encouraging experience to draw from when I started working on this package.
+
+Here I've tried to go for fast gaming, since we only have a couple of hours each session, while still making the battles tactically interesting and the role playing rewarding, albeit cliché. The combination of cooperation, skills, positioning, and battle maneuvers are very important when fighting critters under this rule set. Just charging in for dps dice rally doesn't cut it. Coordination between characters, positioning, timing, and complementary skills and abilities are very important for fighting success, which makes things more interesting. The role playing aspects are written for comedy. It is supposed to be fun, cliché, and more than a bit silly most of the time.
+
+\newpage
+\section*{note: versions}
+%------------------------
+This is my personal notes package, not draft quality material intended for release. There is still a lot of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc.
+I'm updating this package whenever I have the time and inclination. Use a good diff tool to find what's changed, removed or added. Easiest is of course to go directly to the latex source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested (late 2017) \url{https://draftable.com/compare} and find it ... \emph{acceptable} ... for a simple 2-way diff, though lacking block move support and such real world use thingies.
+
+
+\section*{note: comments and contributions}
+%------------------------------------------
+Anything you want to change or add? Contact me! My handle is \emph{netjiro} on github and gmail. Or even better: go to github \url{https://github.com/netjiro/hactac} and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I \emph{might} dig out some time to improve the quality to something closer to an early draft for publishing review.
+
+
+\section*{note: pronouns}
+%------------------------
+Now, in Swedish we have the newfangled "hen" which essentially indicates someone where the gender is irrelevant in the context. Since the closest I can find in English is s/he, which I don't like, I'll keep using "he, him, his". Just read it as whatever offends you the least.
+
+And just to be unnecessarily clear on this. For me, \emph{personally}: in my mind a "dude" is also of irrelevant gender, and I generally refer to my fun female friends as "dudes"... But I don't do that for boring women ... so I guess I'm not that well reformed.
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% table of contents page(s)
+%--------------------------
+
+% Add a table of contents
+%\pagestyle{plain}
+%\fancypagestyle{plain}
+\cleardoublepage %force next printed page a right hand page.
+\tableofcontents % Always compile twice if you have changed much
+\newpage
+
+
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1}
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% rest of the chapters in separate files
+%---------------------------------------
+%\fancypagestyle{fancy}
+%\pagestyle{fancy}
+%\setcounter{page}{1}
+\flushbottom
+
+
+% Add all the chapters
+\input{rules}
+\input{skills}
+\input{magic}
+\input{campaign}
+
+
+
+% Here the basic chapters are finished, the rest are appendices
+\appendix
+\input{equipment}
+\input{prices}
+\input{monsters}
+\input{characters}
+
+
+
+
+\end{document}

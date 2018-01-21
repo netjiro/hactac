@@ -1,0 +1,18 @@
+#!/bin/bash
+
+latex book.tex
+latex book.tex
+latex book.tex
+
+dvipdf book.dvi
+#pdftex book.tex
+
+#cp book.pdf ~/dl/"rules.`date +%y%m%d:%H%M`.pdf"
+#cp book.pdf ~/dl/"rules.pdf"
+
+rm *{.log,.aux,.toc,.dvi,.out}
+#mv book.pdf ../
+
+#aplay ~/doc/sound/softpop.wav
+
+okular ../book.pdf &

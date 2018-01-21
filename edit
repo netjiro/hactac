@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# set size to 80 columns by 100 rows, that will maximize the window vertically.
+# 51 rows just barely fits in 768 vertical.
+# 80 cols give a window that is 595 px wide
+# (1024-595)/2 = 429/2 ~ 215
+
+
+#nedit -wrap -geometry 80x100+0+0 \
+nedit -wrap -geometry 80x120+1600+600 \
+    ./rules/{ru,eq,ca,mo,ch}*tex \
+    ./rules/lists \
+    ./rules/todo \
+    &
+#    ./rules/old \
+
+
+#nedit -wrap -geometry 80x100-0+0 \
+nedit -wrap -geometry 80x120+2519+600 \
+    ./rules/{sk,ma,pr}*tex \
+    &
+
+
+
+#nedit -wrap -geometry 80x100+250+0 \
+#    ./changelog \
+#    ./info* \
+#    ./software/maptool-cheat-sheet \
+#    ./maillist \
+#    ./rules/book.tex \
+#    &
+
+#nedit -wrap -geometry 80x100+215+0 \
+#    ./adventures/adventure-ideas \
+#    ./adventures/Sko*/adventure \
+#    ./adventures/Liz*/adventure \
+#    ./adventures/Sec*/adventure \
+#    ./Ret*men/adventure.tex \
+#    &
+
+aplay ~/doc/sound/softpop.wav

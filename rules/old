@@ -1,0 +1,979 @@
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+180104 : teleportation partial re-re-write
+Upgrade: Fast Teleportation \\
+cost +10xp: lvl 1 teleport in a normal 3ap action \\
+cost +10xp: lvl 2 teleport in a vfast 1ap action
+
+Upgrade: Running Teleportation\\
+cost +5xp: lvl 1 allows to walk when teleporting\\
+cost +5xp: lvl 2 allows to run when teleporting\\
+cost +5xp: lvl 3 allows to dash when teleporting
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+180109 : old handedness which was commented out earlier
+
+
+% TODO: ? keep or remove separate sword arm / shield arm segment facings ?
+%\subsection*{Shield arm and sword arm, preferred segments}
+%%---------------------------------------------------------
+%This is a very optional rule. Not in play yet, and not tested. \\
+%The left and right arm is better in their own 90deg sectors, and worse in the others. This replaces the Attacking to the side and defending from flanking attacks rules.
+%
+%Divide the areas around the character into four 90deg sectors, dividing the two "front" sectors by the facing direction line.
+%
+%The left arm has mod-0 in the 90deg "left front" sector spanning from the facing to the left side. It has mod-3 to the right front sector, and mod-6 to the left behind sector, and mod-9 to the right behind sector.
+%
+%The right arm has mod-0 to the 90deg "right front" sector spanning from the facing to the right side. It has mod-3 to the left front sector, and mod-6 to the right behind sector, and mod-9 to the left behind sector.
+%
+%The sectors overlap in the squares lying in straight lines (or diagonals when a diagonal facing) straight ahead, right behind, due left, and due right of the character's facing. In those cases use the least severe penalty.
+%
+%Two handed weapons have mod-0 in the 0deg to +/-45deg sector centred at the facing, mod-3 at the +/-45deg to +/-90deg segments, mod-6 in the +/-90 to +/-135deg segments, and mod-9 in the +/-135 to +/-180deg segment.
+
+
+
+
+
+
+
+
+
+
+================================================================================
+180103 : old teleportation stuff
+
+\skill{Ability cost 30xp ccf 1.5 "Psychic Teleportation":} The character can teleport within his vision to an empty square to which he has a clear undisturbed line of sight. The maximum distance is equal to 3$\cdot$psy. The character can spend mana to gain longer distance at cost +2/m.
+
+Teleporting costs 2 mana and is a full round action. The character cannot do anything else, or move faster than maneuver.
+
+Clear line of sight is blocked by monsters of same or larger size. Clear line of sight can be acquired with the "gapfinder" ability if otherwise blocked.
+
+Upgrades : \\
+cost +10xp: lvl 2 allows to teleport in 2a. \\
+cost +20xp: lvl 3 allows to teleport in 1a.  \\
+cost +20xp: cheap teleport costs only 1 mana.
+
+
+\skill{Ability cost 30xp ccf 1.5 "Strenuous Teleportation":} The character can teleport to any empty square to which he has clear undisturbed line of sight. Teleporting is a full round action and costs 2 stamina. The user cannot move faster than maneuver or do anything else.
+
+Clear line of sight is blocked by monsters of same or larger size. Clear line of sight can be acquired with the "gapfinder" ability if otherwise blocked.
+
+Upgrades: \\
+cost +10xp: lvl 2 allows teleportation in 2a. \\
+cost +20xp: lvl 3 allows teleportation in 1a. \\
+cost +20xp: cheap teleport costs only 1 stamina.
+
+
+\skill{Maneuver "Running teleport":} Running teleport counts as upgrade for Psychic Teleportation and Strenuous Teleportation. \\
+lvl 1 cost +10xp allows for walking when teleporting via P.T. or S.T. \\
+lvl 2 cost +10xp allows for running when teleporting via P.T. or S.T. \\
+lvl 3 cost +10xp allows for dashing when teleporting via P.T. or S.T.
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+
+            AAAAA       M      M      SSSSS
+           A     A      MM    MM     S     S
+          A       A     M M  M M     S
+          AAAAAAAAA     M  MM  M      SSSSS
+          A       A     M      M           S
+          A       A     M      M     S     S
+          A       A     M      M      SSSSS
+
+
+================================================================================
+old junk
+--------
+
+
+
+
+old aura versions
+
+\skill{Skill cost 50xp ccf 1.5 "Proximity chock":} The character can choose to inflict damage on targets who move into base contact (not when the character moves into base contact).
+
+\skill{Skill scf 1.0 ccf 1.3 "Damaging chockwave":} The character can inflict damage on everyone in base contact. Spend 1 mana or 1 stamina (decide when buying the skill), take one action, and roll for damaging chockwave. If successful the character inflicts 1 damage penetrating to everyone in base contact.
+
+Heavier Damaging chockwave can be purchased for a multiple of the cost. E.g. 3dam chockwave can be bought for scf 3.0. Minor Damaging chockwave can be upgraded. Just re-calculate the spent XP and upgrade. Or multiple versions of Damaging chockwave can be bought separately.
+
+Longer reaching chockwave, can be bought for a multiple the same way as heavier damaging aura.
+
+E.g: a dam3 range2 aura has scf 6.0.
+
+
+
+
+
+
+old feint text:
+
+is a regular attack until the damage is rolled. If the character chooses to roll a d0 for the damage he has performed a feint. A feint pushes one less mod to the ams than the attack would otherwise do.
+E.g. Feinting Fabio attacks with his rapier, but when the target blocks with his sword Fabio chooses to roll a d0 for damage, performing a feint. Since rapier is a fast+1 weapon, the attack would normally push mod-2 onto the ams, but when feinting it only pushes a mod-1. Very good to weaken out the opponent with lots of annoying attacks.
+
+
+
+
+old stun:
+
+%Stun effects usually simply pushes a large mod on ams. !! nope, no good since then they can still move just fine.
+
+
+
+old tackle skill
+
+Tackle someone to push them out of the way, and hopefully make them fall down. Tackling takes 1 stamina.
+Tackling is a resistance roll:
+attacker:
+
+
+1) Attacker roll for tackle, unmodified by movement
+   If it succeeds
+2) Defender can choose to react (right to react) to the slow incoming tackle.
+
+
+
+Tackling is a resistance roll:
+attacker: tackle + str + speed/3
+defender: str (+3 if taking 0 movement and one action to block).
+The defender
+The tackle roll is not modified by movement
+
+
+Better tackles, and better defending against tackles. An attacking tackler can add the tackle skill lvl to his str+speed/3 when making a tackle.
+A defending tackler can take a defending tackle action and add his tackle lvl to his str for the resistance roll.
+
+
+
+
+
+
+old tackle rules
+
+Tackling someone is done by moving into base contact, then a resistance roll. Since tackling is such a slow attack, the target has the option to take one action to
+attacker : str + speed/3 (round down)
+defender : str
+If successful, the tackler can move the target out of the way in a direction that makes sense (GM discretion). The maximum distance is 1 + diff/3 round down. Large targets reduce the max distance by one for every square they occupy beyond the first.
+Tackling is a slow attack and the defender is allowed to react if he is aware of the incoming attack. He can choose to take one action to "defend" against the attack. If
+
+If successful the tackler can move the target one square out of the way in a direction that makes sense. The attacker must then roll for dex to see if he stands or falls. The target must roll for dex mod -diff to see if he falls.
+If failure the attacker must roll for dex mod -diff to see if he falls.
+
+
+
+
+
+
+
+old rule for long term activity
+
+Long term activity
+------------------
+A character can only be "highly active" for 10*con rounds. He must then rest and let his guard down for 10-con/2 rounds, during which he cannot take actions and cannot move faster than walk or carry anything heavy.
+When exceeding this time without resting the character gets modifications to all actions: mod-(excess/10 round up).
+
+
+
+
+
+old text about actions that take more than one action to perform:
+
+Actions that take more than one action
+---------------------------------------
+Some actions take two or three actions. Those actions create mod penalties for subsequent actions as though they are several actions.
+E.g. a 2action maneuver attack is performed as primary action, first in the round. It takes mod-0 penalty since it is first in the round and the ams is at zero. It pushes mod-6 onto the ams. The following attack action then takes the mod-6 penalty.
+
+
+
+
+old double text, end of skill text
+
+ The parrying actions does not have to be "double", but then normal penalties for multiple actions apply.
+E.g: it can be interesting to roll for double when carrying a shield and a sword, just to save on the actions.
+It is possible to "save" the other double action, and declare it later. It can be saved until performing another action or movement. E.g: when facing an opponent in melee, the character rolls a successful double, using the axe to make an attack, and saving the sword for a later parry, if the opponent does an immediate counter attack. The "saved parry" is discarded the next time he uses the axe, or moves, or does anything at all in fact.
+
+
+
+
+
+old timing and pacing rules:    -- replaced by focus --
+
+Skill cost special "timing": allows for a one step re-arrangement of the order of action penalties. E.g. shifting the order of a mod-0 primary action and mod-3 secondary action to get penalty order: mod-3, mod-0, mod-6, mod-9
+Each skill level of "timing" can be used to make a one step penalty re-arrangement.
+E.g. shifting to mod-3, mod-6, mod-0, mod-9 is a two step re-arrangement.
+E.g. shifting to mod-6, mod-3, mod-0, mod-9 is a three step re-arrangement.
+Timing level 1 costs 10xp
+       level 2 costs 25xp
+       level 3 costs 45xp
+       level 4 costs 70xp
+
+
+Skill cost special "pacing": allows for splitting action penalties according to the "mod -(2/3) of highest" rule. Each level of "pacing" allows to make one split. E.g. splitting to get mod-2, mod-2, mod-6, mod-9 is one split.
+E.g. splitting to get mod-4, mod-4, mod-4, mod-9 are two splits.
+E.g. splitting to get mod-6, mod-6, mod-6, mod-6 are three splits.
+The splitting must start at the first non zero mod in the action list, and progress. This also means that the character must plan ahead if he can push actions with different mods on the action mod stack.
+Timing level 1 costs 15xp
+       level 2 costs 35xp
+       level 3 costs 60xp
+       level 4 costs 90xp
+The resulting mods should be rounded up if they are not even numbers.
+If the character also has quick, then the quick penalty reduction can be applied in any order. E.g:
+quick 2 then pacing 1:
+-0,-3,-6,-9 (quick 2:) -0,-1,-4,-7 (timing 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old speed to hit mods
+
+target declare 1-5   :  mod-0
+               6-8   :  mod-1
+               9-11  :  mod-2
+               12-14 :  mod-3
+               +3    :  -1
+
+
+
+
+Old feints finesse and flair text, it is good, but duplicates the info
+in the "fancy attacks" skill
+
+Feints, finesse, and flair
+--------------------------
+Some melee weapons give the possibility of making more difficult attacks that are also more difficult to parry. For each "difficult maneuver" or "feint" mod the attacker takes, the target will get the same mod to his parry roll. This can break the stale mate that will otherwise develop between good fighters that won't miss their attack or parry rolls on normal difficulty.
+E.g. Weasly Wesley attacks his skilled opponent with a feint-4. He manages to hit with his roll, and the opponent will now have a mod-4 to his parry.
+Some weapons have a finesse limit. E.g. Clubs have finesse-2 as the most difficult and extravagant maneuvers that can be performed, while swords have finesse-6. That means that it is possible to do feints with a mod down to the maximum level. Specialist weapons can have higher finesse, e.g. Long chain flails.
+
+
+
+
+
+old grapple skill text
+
+
+Skill scf 0.66 "grapple": is used to hold opponents in body lock so that they cannot move, and get mod-6 penalties on defend and attack actions.
+Grappling assumes that the attacker has both hands free. He has a mod-3 to all grapple related rolls if he only uses one hand.
+
+Step 1) Grab Hold:
+Roll a grapple attack. If it succeeds and is not parried or avoided, the grappler has managed to lock hold on the target.
+
+If the grapple attack is parried with a weapon, the grappler can choose to grab hold of that weapon (Don't grab a sword. A shield, staff or spear is fine though). Then both parties can try to roll str/str to rip the weapon from each others hands. Tugging at a weapon forces an action on both parties. A success or fail at 3 or greater means that the weapon is lost to the opponent. Just roll once for this, regardless of who initiates.
+
+If the target has grapple he can choose to react with a "counter grapple" instead of avoid or parry. Then it devolves into a resistance roll. Both parties chooses the highest: str or dex, and uses as the stat for the stat vs stat resistance roll. The attacker adds his grapple success to the stat and the target rolls for his grapple and adds the success (not failure) to the stat.
+In this case both parties are counted as attackers. If either wins the diff+stat vs diff+stat roll with a +3 or more, he has successfully locked hold of the opponent.
+
+Step 2) Target is held:
+Holding a target is primary action each round that starts with the target being held. It is not an extra action after the target has been grappled.
+The target can try to break or squirm out of the hold. This is one action. Both the grappler and the target chooses his highest value of str or dex, and uses that for a resistance roll. A success from the target means he breaks free. If he fails he is still held in a lock. Observe that this does not force an extra action onto the grappler.
+If the target manages to break free, the grappler can immediately try a reactive (ignoring initiative) new grapple attack with mod+3, to see if he can manage to grab hold of the target again. Observer that this cannot be a primary action, since the grappler has used his primary action trying to already hold the target at the starting of the round.
+A target that is held has mod-3 to all actions, except trying to break free. If he tries to use an action that requires two hands he has mod-6.
+
+When a target is held, the grappler can choose to spend one action per round to see if he can inflict some crushing damage on the target. He rolls a str/str roll and the diff is the actual damage he will inflict (i.e. don't roll a damage roll from the result of the str/str, instead, apply the entire diff as damage directly).
+dam = str(grappler) - str(target) +5 -d10
+
+Assisting someone to break out of grapple:
+Characters assisting a grappled target to break free can add their str/2 round down to the target's strength or dex when he tries to break free. Assisting is a primary action and takes until the target is free, unless interrupted.
+
+
+
+
+
+
+old tackle skill text
+
+The target can avoid the tackle or break loose with on a roll for dex mod -diff (tackle success).
+The chase roll ignores all movement modifications, but is subject to normal action mod stack penalties.
+The chaser can get a mod+3 if he "throws" himself (maneuver) after the target, like in the movies, but then he will fall for sure this round (taking no damage if he succeeds in the tackle, otherwise normal damage) and must get up next round.
+A successful "tackle" maneuver means that the target must roll for dex with an extra mod-3 or falls to the ground and must get up next round.
+A successful "grab" maneuver means that the chaser can try "grapple action" immediately next round, ignoring initiative.
+To simplify the "chase" roll:
+chance = chase + (speed diff) + dex/dex
+
+
+Skill scf 1.0 "tackle": allows to tackle targets to break through blocks, knock targets out of the path, and to gain ground by pushing them away.
+The user declares a "tackle advance at speed x" and describes a more or less straight path (GM discretion). He then starts moving along the path. At each base contact (also diagonal) he gets with an opponent he can chose to make a "tackle action" and roll for the tackle of that specific opponent. The tackle action ignores movement penalties, but subject to the action mod stack as usual.
+
+Tackling a target: Running into someone to move them while regaining control.
+Roll for tackle. If successful the tackler has retained control and can continue with his movement. If it fails he has still hit his target but lost control and must stop moving, after getting entangled in base contact.
+If fail: tackler must roll a dex - diff or fall.
+
+Moving the target: After running into the target it is a resist roll to see if the target moves or not. If the target has tackle or block skill he can choose to take an action to
+tackler resist value: diff(tackle) + str + speed/2 (round down)
+target resist value:  diff(tackle or block) + str
+If success: tackler can move target one square out of the way in a direction that makes sense.
+
+Target falling?: target rolls a
+
+
+The user declares a "tackle advance at speed x" and describes a more or less straight path (GM discretion). He then starts moving along the path. At each base contact (also diagonal) he gets with an opponent he can chose to make a "tackle action" and roll for the tackle of that specific opponent. The tackle action ignores movement penalties, but subject to the action mod stack as usual.
+
+If the tackle attack roll fails the tackler can either continue to the next target in the path, or he can choose to stop.
+The target can of course choose to interrupt or react to the tackle attack action based on initiative.
+If the tackle roll fails-3 the tackler must roll a dex or fall.
+If the tackle roll fails-6 the tackler must roll a dex-3 or fall.
+If the tackle roll fails-9 the tackler falls.
+
+The target can spend an action to try to resist the tackle. If he resists he stands his ground.
+Resistance roll:
+tackler resist value:   diff(tackle roll) + str + speed/2 (round down)
+target resist value:    (diff tackle or block) + str
+If the defender has tackle or block he can roll for that and add the diff to his own resist value in the resistance roll.
+
+The result of the tackle, or resistance roll if the target resisted:
+success : the tackler can move the target one square out of the way, in such a way as makes sense.
+success+3 : the target must roll a dex or fall
+success+6 : the target must roll a
+
+The resistance roll decides the outcome of the tackle attack action:
+If the attacker succeeds he can choose to move the defender out of the way one square. If moved, the defender must roll a dex mod (resistance roll diff) or be off balance even if he has movement points left. If he has no movement points left he will off balance.
+If the attacker succeeds+3 the defender must roll a dex-3 or fall.
+If the attacker succeeds+6 the defender must roll a dex-6 or fall and take 1d3 damage.
+If the attacker succeeds+9 the defender must roll a dex-9 or fall and take 1d6 damage.
+
+
+
+
+
+
+
+old encumbrance text
+
+A character can carry up to his strength in "encumbrance points" without penalty. Each exceeded multiple of strength yields a mod-1 to all actions. This is approximately the same as mod = load / strength (round down).
+Also, stuff has to be carried somewhere. "Item Slots" are hands, carried over shoulders, hung in belt, put in sacks, etc. Different clothing and carry items allow for different amount of slots.
+E.g: ruck sack 5 items, belt 2 items, belt 4 items,
+Carrying a heavy load also makes it more demanding to run and dash.
+dash requires enc/str round down extra stamina each round.
+run requires end/(2 * str) round down extra stamina each round.
+
+
+
+
+old stat roll rules
+
+
+Stat rolls
+----------
+Some typical stat rolls, not directly related to actions or maneuvers.
+
+Strength (str) rolls:
+1) Break down that door!
+
+Dexterity (dex) rolls:
+1) running on bad ground, e.g. rubble: light rubble mod+3, rubble mod-0, heavy rubble mod-3. Dashing on bad ground is mod-3, relative to run. Walking is mod+3 relative to run.
+One roll per square. Missed dex rolls while running means falling down. Falling while walking means falling on the fail square. Falling while running means falling down on the next square, and taking 1 damage penetrating 1. Falling while dashing means falling two squares away and taking 1d3 damage, penetrating 1.
+
+Constitution (con) rolls:
+1) often used for vs rolls against poisons, disease, etc.
+
+Psyche (psy) rolls:
+1) when facing a superior foe or force, or when your friends are dying around you, or when you are taking lots of damage. Time to see if you will stand your ground, advance or flee. The "veteran" skill will cancel a lot of modifications here.
+Mods are influenced by situation. 50% hp or below mod-1, 75% hp or below mod-3. Superior force mod-0, 2x superior force mod-3, 4x superior force mod-6. Superior force is calculated by total strength stats, or just body numbers if similar character.
+Rolls will be called by GM every now and then.
+A fail means you cannot advance, but can stand your ground.
+A fail-3 or worse means you will retreat.
+A fail-6 or worse means you will flee, and must do an int roll to see if you can think of the best way, instead of just away.
+A fail-9 or worse means you will flee, dropping all discardable equipment, etc, and will have a mod-3 to the int roll to see if it is a good direction
+
+Perception (per) rolls:
+1) Do you notice the sneaky thief, or the hiding goblin?
+
+Charisma (cha) rolls:
+1) Can you dissuade the old witch to not toast you alive?
+
+
+
+
+rules for bows and crossbows
+
+Bows and Arrows
+---------------
+Bows have a limited rate of fire, but cannot generally be parried, and have a good range.
+Bows are normally fired at the end of a round, after a full round "shot".
+The next round is spent reloading the bow.
+The skills "quick shot" and "rapid reload bow" can compress the times for shooting and reloading. The "sniper" skill can reduce modifications for range.
+A "loaded" bow is notched and drawn. Keeping a bow drawn can be maintained at most con rounds. After that it requires one stamina each round.
+A bow can be kept notch but not drawn. Drawing a bow takes 1a, or rest of round regardless of ams.
+
+
+Crossbows
+---------
+Crossbows take a long time reload. Usually a couple of rounds. Snap shot, normal shot, and aimed shots usually take the same time as bows.
+The benefits over the bow is that is does more damage, and can be fired directly after being drawn/readied, without the reload round in between. It is also significantly cheaper to learn the skill.
+The skill "rapid reload crossbow" can reduce reload times.
+
+
+
+
+
+
+skip rapid reload in this form, rewrite with compounded rate of fire rules.
+
+Skill scf special "rapid reload bow": can reload a bow faster, and in "rest of round" with more penalties on the action mod stack.
+lvl 1 (cost 10): reload bow in 2 actions, or "rest of round" with maximum action mod stack at mod-3.
+lvl 2 (cost 15): reload bow in 2 actions, or "rest of round" with maximum action mod stack at mod-6.
+lvl 3 (cost 25): reload bow in 1 action, or "rest of round" with maximum action mod stack at mod-9.
+lvl 4 (cost 35): reload bow in 1 action, or "rest of round" with maximum action mod stack at mod-12.
+lvl 5 (cost 50): reload bow in 0 action, pushing no mod on the action mod stack.
+
+
+Skill scf special "rapid reload crossbow": can reload crossbow type weapon (crossbow, arbalest, ballista (obs, ballista takes 2ppl)) faster than usual. Each skill level reduces the time to reload, according to table below.
+lvl cost     crossbow      h.crossbow      arbalest    l.ballista   ballista
+ 1   10         2              4              6             8          16
+ 2   20         1              3              5             7          14
+ 3   30    2a,ror:mams-3       2              4             6          12
+ 4   40    2a,ror:mams-6       1              3             5          10
+ 5   50    1a,ror:mams-9  2a,ror:mams-3       2             4           8
+ 6   60    1a,ror:mams-12 2a,ror:mams-6       1             3           6
+ 7   70     0a, no mod    1a,ror:mams-9  2a,ror:mams-3      2           4
+ 8   80                   1a,ror:mams-12 2a,ror:mams-6      1           3
+ 9   90                    0a, no mod    1a,ror:mams-9      1           2
+10  100                                  1a,ror:mams-12     1           1
+11  110                                   0a, no mod        1           1
+
+
+
+
+
+
+
+
+skip max mams skill now.
+
+Skill scf 1.0 "max mams": Each level of "max mams" gives one extra point "MAMS" allowance for actions and maneuvers that have MAMS limitations.
+
+
+
+
+
+old hits and damage rules, now in skills
+
+Good hits and Great hits         (really use this ??)
+------------------------
+A good hit (success+3) is -1 to parry.
+A very good hit (success+6) is -2 to parry.
+A perfect hit (success+9) is -3 to parry.
+A very good hit does at least half the damage of the weapon, rounded down.
+A perfect hit also does full damage of the weapon.
+
+
+
+from actions that take more than one action
+
+Also, their penalties cannot be shifted around, but the action will take and yield penalties in the order they are performed.
+
+ The primary-ness and secondary-ness cannot be shifted for this purpose.
+
+ E.g. A primary attack is done with mod-0, then a 2action action is taken as secondary action
+
+
+
+old stuff about not being able to shuffle mods on actions that don't require rolls:
+
+Actions that does not requires rolls
+------------------------------------
+Some actions, like rapid drawing of throwing knives, takes an action but does not require a roll. The natural Munchkin move would of course be to push that action to take the heaviest mod in the round. That is not allowed. Muahaha.
+Since drawing a knife comes before throwing the knife, it will push one regular mod-3 action penalty onto the throwing action.
+
+
+
+
+old end text of the "Actions that do not require rolls" section:
+
+If you try to perform non-roll actions last in the round, then you are limited by the "maximum action mod stack" value.
+A 1a action normally requires that the action mod stack is not worse than mod-6. A 2a action normally requires MAMS-3.
+A 3a action normally requires MAMS-0.
+
+
+
+Old end text of "Time: actions and rounds" section:
+
+Some actions take "rest of round" time to perform and requires that you do not do any other actions that round. They also usually have a limit to how severe the action mod stack is allowed to be for them to take "rest of round" instead of a full round. Usually this is mod-3 or mod-6.
+E.g: if you have a base mod-1 from over encumbrance, then the first action will push another mod-3 onto the action stack, and the total is mod-4. This means that all "rest of round" actions that are limited to a stack of at most mod-3 will now take a full round instead.
+
+
+old round and actions accounting:
+
+actions & rounds accounting
+---------------------------
+One round can for reasons of accounting be considered as three actions long. This has nothing to do with the amount of actions you can perform in one turn, just that for some things it is good to be able to count actions in terms of turns and vice versa.
+You can do as many actions as you have skill levels and modifiers for each turn, until your mod penalty stacks high enough that you cannot possibly succeed.
+1 turn    =   3 actions
+Just for bean counting.
+This is sometimes used when counting speed up of things like reloading etc.
+
+
+
+
+old interrupting and declining initiative:
+
+declining initiative from action mod stack
+------------------------------------------
+Initiative for a battle is decided by dex+1d4. Initiative in each round is reduced by performing actions. Initiative is reduced by actions, but not by movement and other penalties. Thus it might be that slow characters can have higher initiative than fast characters later in the round, if they have performed fewer actions. Initiative is of course reset to initial value with a new round, when AMS is reset to 0.
+
+
+interrupting with higher initiative
+-----------------------------------
+Characters can interrupt actions of slower opponents (lower initiative) as long as their initiative - ams is still +3 higher than the opponents current initiative - ams.
+
+E.g: Rapid Rudolf (i13) wants to attack a target further off, but also wants to strike Sedate Sebastian (i7), who has declared attack on him. Since he has >=+3 higher initiative he can wait until Sedate Sebastian has moved into base contact, then interrupt Sebastian's attack by one of his own, thus saving movement points.
+SS moves into base contact. RR interrupts and attacks, and is successful with a strike. SS chooses to parry the strike under "the right to react" rule. Then RR immediately moves out of base contact, towards his target further down the board.
+
+E.g: Sigurd Slow (i6) is moving toward Fast Fabian (i11) to attack. Fast Fabian has higher initiative, but has an ams mod-3 from a prior attack on Distracting David. At the moment SS has i6-0=i6 and FF has i11-3=i8.
+Fast Fabian can choose to go before Sigurd Slow, since he has higher initiative even with the ams mod, but he cannot choose to interrupt SS after moving in but before the attack, since his modified initiative is only +2 higher than SS.
+
+
+
+
+
+
+old timing and pacing rule text:
+
+rearrange action penalties
+--------------------------
+Players with the "timing" skill can rearrange action penalties;
+e.g. 1st -3, 2nd -0, 3rd -6
+E.g: Hero A wants to be defensive, and thus chooses to save his primary, unmodified, action for a later parry. He attacks with his secondary (mod -3) action. Later in the round monster B attacks him. He then uses his primary (mod -0) action to make a very safe parry. Then monster C also attacks. He now chooses to take another parry action, which is then his tertiary (mod -6) action. This is crappy odds, so he also uses the "yield" maneuver and backs away one square with a remaining movement point. Yield gives him a mod+3, so he then has mod-3 total for this second parry action.
+
+Rearranging the penalties is a way to have the character focus more on some actions than others, e.g. "offensive/defensive stance", etc.
+
+
+split action penalties
+----------------------
+Player with the "pacing" skill can split action penalties so that all or some actions in the round get the same penalties. The actions with split penalties get 2/3 of top penalty (round up):
+2x -2 instead of 1st -0, 2nd -3                  (-2,-2,-6,-9)
+3x -4 instead of 1st -0, 2nd -3, 3rd -6          (-4,-4,-4,-9)
+4x -6 instead of 1st -0, 2nd -3, 3rd -6, 4th -9  (-6,-6,-6,-6)
+and so on
+Split penalty actions can also be rearranged around normal penalty actions. Keep track of the correct penalties though.
+E.g. it is possible to take (-6, -2, -2, -9) with one split and two re-arrange permutation steps.
+
+Just like with rearranging penalties, splitting mods is also a way of giving equal focus to some actions. There are then no primary and secondary actions, but two equal actions instead. E.g. striking a balance between offensive and defensive mode.
+
+
+
+
+
+
+
+
+old MAMS:
+maximum action modification stack (MAMS): Some actions and maneuvers cannot be attempted if the character already have a too severe action mod stack penalty. Usually, actions that take 2a to complete have MAMS-3, which means that they cannot be attempted if the character has already done too many actions before, and have a too severe action modification stack penalty.
+
+
+
+
+
+old initiative interrupt
+(basic version)
+Characters with +3 higher initiative can interrupt slower characters' actions.
+(advanced version)
+
+
+
+old initiative interrupt
+Characters with +3 higher initiative can interrupt slower characters if they succeed a roll of 10 + initiative diff - AMS.
+(alternate advanced version)
+E.g (adv): Sigurd Slow is moving toward Fast Fabian to attack. Fast Fabian has higher initiative, but has a mod-3 from a prior attack on Distracting David.
+Fast Fabian can choose to go before Sigurd Slow, since he has higher initiative, or he can choose to interrupt Sigurd Slow just after Sigurd has moved into base contact but before he can make the attack. If Fabian wants to try interrupting he must succeed a 10-3=7 roll on a d10, or Sigurd will be able to make the attack first.
+
+
+old charge extra
+Additionally the user also gains a +1 mod to the primary attack for declaring a "run" movement and moving at least his walk+1 steps in a straight line (i.e. no waypoints) before encountering the target.
+
+
+old bow reload style
+If the bow is "unloaded" at the start of a round it takes a full round to reload, or a successful "quick draw" to reload in one action. If the quiver is one of the "special access" items for quick draw it can be reloaded in one action without a successful quick draw, or zero actions with a successful quick draw.
+
+
+old stuff from block
+The target can move past on a successful dex/dex mod diff (block success), but breaking through a block counts as an action. The target can also try to break through the block on a str/str mod diff (block success), and that also counts as an action.
+If target is trying to break through the block, the blocker gets one attack at mod-3 "included" in the block action, i.e. no extra action.
+
+
+old stuff from tackle writing attempts
+If the tackle action roll succeeds:
+The tackle roll is as follows: Roll for tackle. If it succeeds then roll a resistance roll:
+attacker has movement/2 (round down) + str + diff (tackle) = vs value
+defender has str. If the defender also has the tackle skill, he can choose to take an action to roll for his tackle and add the diff (success only) to his strength.
+attacker (mov/2 + str + diff)  versus  defender (str + (diff))
+If the attacker is successful he can push the defender out of the way one square. If the defender has movement points left he must roll a dex or go off balance, if he has no movement points left he automatically goes off balance.
+If successful +0-+2 the target must succeed a dex roll or fall.
+If successful +3-+5 the target takes 1 damage, penetrating 1, and must succeed a dex-3 or fall down.
+If successful
+
+str vs str mod diff (tackle). If the opponent also has tackle he can choose to react and take an action to roll for his tackle and add the diff to the above resistance roll.
+
+
+Skill scf 1.0: "rapid reload bow" can reload a bow in "rest of round" with more severe action stack mods. Each skill level allows for one extra action stack mod beyond mod-3. E.g: "rrb"=5 can reload with action mod stack at mod-8.
+At level 3 it is also possible to reload from scratch in 2a. Starting from an action mod stack of at most mod-6 (follows from above).
+At level 6 it is also possible to reload from scratch in 1a. Starting from an action mod stack of at most mod-9 (follows form above).
+At level 9 it is also possible to reload from scratch in 0a, i.e. taking no time and pushing no mod on the action stack.
+
+
+Skill scf 3.0: "rapid reload crossbow" can reload a crossbow type weapon (crossbow, arbalest, ballista) faster than usual. Each skill level reduces the time to reload with one round.
+If the modified reload time is reduced to "0r" it will take 2a. Starting from an action mod stack of
+If it is reduced to "-1r" it takes 1a.
+It if is reduced to "-2r" it takes 0a.
+If the reload time is reduced to 0r it takes 1a to reload. If it is reduced one more step it takes 0a.
+
+
+old grapple text:
+Next round the grappler can try the sty/sty mod grapple diff as primary action to retain hold every round. Or the grappled can try to break free with the same setup. Either or, not both rolls though. Keeping a hold with grapple is a primary action. If the grappled also has grapple he can defend with that to break loose and then use his own grapple mod in the sty vs sty roll.
+Grapple can also be attempted with mod-3 to silence the opponent. Grapple after successful sneak cannot be avoided/parried, and the target is automatically silenced if the attacker so wishes.
+The during a hold the attacker can chose to inflict 1DX damage on the held target, where X is the unmodified success diff from the sty/sty.
+E.g. Stalwart the Strong tries to grapple hold of Flexible Fredrick. SS dex5 str8, grapple 5, and FF dex8, str5: SS rolls 3 for grapple = diff+2, then rolls dex/dex +2 (grapple diff) (=5 vs 8 (=2) + 2 =4 to succeed with the grab) of 3
+
+
+
+from the old grapple text:
+Grapple is dex/dex mod + grapple diff, to first lock hold, then str/str mod + grapple diff each round to retain hold.
+Grapple after successful sneak requires no dex/dex to lock hold, and target is automatically silenced if the attacker so wishes.
+
+
+
+from end of initiative in basic rules (just reiterates what was already said):
+In each round the ones with high initiative can choose when they want to do their actions. They can go before slower characters, or wait and then interrupt other's actions when it suits them. The faster can also split their different actions to fall between the actions of slower characters.
+
+
+
+Reloading and firing with ranged weapons
+----------------------------------------
+Ranged weapons generally require reloading and aiming, giving a much lower "rate of fire" than melee weapons. On the other hand, they are generally impossible to parry.
+
+
+Skill scf 0.5: "rapid reload" reduces the reload time by one "action step" for each skill step. For this purpose, each round is treated as three actions. So, three skill levels reduce the time by one round.
+E.g. Reload time 2r is reduced to 0r2a by rapid reload level 4, and to 0r1a by rapid reload lvl 5. Reload time can never be reduced to less than 1a. And reload is non-roll action, and can not be penalty shuffled against consecutive actions.
+
+
+Skill scf special : "attacks" allows for making more attacks each round. Each skill level of "attacks" allows for taking one attack action each round. This skill is thus required to make more than one attack per round. Everyone has "attacks"=1 for free by default, which allows them to make one attack each round. This skill has no effect on action penalties, they work just as normal. It is just to be able to take multiple attack actions.
+E.g. Fredrick the Fast has "attacks"=3 and can thus try to push three attack actions each round, with the normal mod-0, mod-3, mod-6 action penalties, unless he tries to make other actions in between.
+Each skill level of "attacks" costs 20xp.
+When using "attacks" in conjunction with "double", one double attack is still only one attack, since it is only one action.
+
+
+Skill scf 0.5 : "extra attacks" allows for the character to try to make extra attacks, after the first one, each round. This skill is not necessary for the first attack in each round. To attempt extra attacks, after the first, the character must roll for the extra attacks skill. This roll is modified by the normal action modification stack. If the attempt fails, the action is not wasted, and the character can choose to do something else with it, but not an attack.
+E.g: Dastardly David has just attacked, and now wants to make a second attack. He is just maneuvering and thus has no action stack modification from movement. He now must roll "extra attacks" (6) at mod-3 (the action stack after the first attack) He rolls 2 (success+1) and can thus make a second attack.
+E.g: Fredrik the Fast has "extra attacks"=8, he has already made a first attack, and a parry, and now, for action 3 he wants to try another attack. He has action stack mod-6 after the first two actions, and thus has only a chance of 2 to succeed with "extra attacks". The situation would be the same if he had already done two attacks before attempting the third.
+Note that the "extra attacks" skill is always modified by the entire action modification stack just like the all other actions and action skills. This also means that skills like "quick" and "mobile" will reduce penalties also for "extra attacks", so instead of buying huge skill values of "extra attacks" you might want to buy a few levels in quick and mobile as well...
+
+
+Two Weapons
+-----------
+Or one weapon, one shield, two shields. Wielded one in each hand. When successive actions are performed by alternating between the hands, then the user gets a mod+1.
+E.g. Attacking with sword, primary action mod-0, defending with shield, secondary action mod-3, but, alternate hand, mod+1, total mod-2. Tertiary action, attack with sword, mod-6, alternate hand mod+1, total mod-5.
+E.g. Two swords. Primary attack mod-0, secondary attack other sword mod-3 (action stack) mod+1 (alternating hand), total mod-2, tertiary attack total mod-5.
+Shield parry bonuses already include the "two weapon" bonus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old monster stats:
+
+--------------------------------------------------------------------------------
+L I Z A R D   M E N
+-------------------
+
+
+=====================
+lizard hound (lizard)
+------------
+sty 5     hp 8 abs 0
+smi 10    maneuver 3, walk 6, run 12, dash 20
+fys 5
+int -
+psy -
+2x claw    8 dam 3 (2x claw when charging) (1claw 1bite when melee)
+bite       6 dam 6 (only when in melee)
+charge     6
+
+=============================
+lizardman scout (lizardman02)
+---------------
+sty 3     hp 6 abs 1
+smi 7     maneuver 2, walk 4, run 8, dash 16
+fys 5
+int 3
+psy 3
+sword       4 dam 5
+short bow   4 dam 4, range 12, long -3 dam -1, rof 3, aim +2r +3
+
+
+===============================
+lizardman fighter (lizardman01)
+-----------------
+sty  4    hp 8 abs 1
+smi  5    maneuver 1, walk 4, run 8, dash 12
+fys  6
+int  3
+psy  4
+sword        5 dam 6, abs 8
+small shield  5 abs 10, parry +2
+javelin      5 dam 5, range 10, long -3 -1dam, penetrating 1, 2x
+
+
+===============================
+lizardman warrior (lizardman04)
+-----------------
+sty 8     hp 14 abs 2
+smi 6     maneuver 1, walk 3, run 6, dash 10
+fys 8
+int 3
+psy 5
+sword   6  dam 6, abs 15
+shield  6  abs 15, parry +3
+
+
+=================================
+lizardman chieftain (lizardman05)
+-------------------
+sty 12    hp 22 abs 3
+smi  8    maneuver move 6 dash 10
+fys 10
+int  6
+psy  6
+2h sword       8 dam 10, abs 15, toparry -1
+quick          3
+
+
+==============================
+lizardman worker (lizardman03)
+----------------
+sty 2     hp 4 abs 0
+smi 5     maneuver 2, walk 4, run 6, dash 8
+fys 4
+int 3
+psy 2
+knife   3  dam 3, parry -2
+spear   3  dam 4
+
+
+
+
+--------------------------------------------------------------------------------
+G O B L I N S
+-------------
+
+
+========================
+goblin shaman (goblin04)
+-------------
+sty 2     hp 10 abs 0
+smi 2     maneuver 1, walk 2, run 3, dash 4 (very fat)
+fys 4     mana 10
+int 6
+psy 5
+-----
+sword       3  dam 5, abs 10
+rot         6  cast 3r 1m, dam 4 +1/m 1hp/rnd, range 8 +2/m
+poison gas  4  cast 5r 2m, dam 1/r, size 3x3 +1x1/m, duration 10rnd +5rnd/m
+
+
+======================
+goblin runt (goblin03)
+-----------
+sty 1     hp 3 abs 0
+smi 4     maneuver 1, walk 2, run 4, dash 6
+fys 2
+int 3
+psy 3
+-----
+claw   4  dam 1
+bite   4  dam 1
+
+
+
+
+--------------------------------------------------------------------------------
+U N D E A D ,   Z O M B I E S ,   E T C
+---------------------------------------
+
+
+=================
+zombie (zombie01)
+-----------------
+sty  5    hp 15 abs 0
+smi  2    maneuver 1, walk 2
+fys 10
+int  1
+psy  1
+-----
+grapple     5 dam 1, penetrating 1, mod+1 / zombie in base contact w/ target
+            break free on smi/smi or sty/sty, mod-1 / zombie in bc w/ target
+bite        5 dam 2, when grappled
+tear apart  5 dam 3, penetrating 3, when grappled
+
+
+=====================
+skeleton (skeleton02)
+---------------------
+sty  5    hp 10 abs 0(hack/crush) / 2(stick)
+smi  5    maneuver 1, walk 3
+fys 10
+int  2
+psy  3
+-----
+sword     5 dam 6, abs 10
+shield    5 abs 15, parry +3
+
+
+==========================
+evil skeleton (skeleton03)
+--------------------------
+sty  7    hp 20 abs 0(hack/crush) / 2(stick)
+smi  3    maneuver 1, walk 3, run 5
+fys 10
+int  5
+psy  7
+-----
+2x sword    7 dam 6, abs 10
+double      6
+
+
+===============
+mummy (mummy01)
+---------------
+sty  8    hp 12 abs 1
+smi  4    maneuver 1, walk 2, run 3, dash 4
+fys 10
+int  2
+psy  5
+------
+näve           6
+grab           5 dam 1 smi/smi, break free sty/sty
+crush          - sty/sty dam diff penetrating 1
+livssug        2 psy/psy 1hp/rnd 1try/rnd måste vara grabbed
+
+
+====================
+evil mummy (mummy02)
+--------------------
+sty 10    hp 20 abs 3
+smi  6    maneuver 1, walk 3, run 5, dash 8
+fys 10
+int  7
+psy 10
+------
+skräckvrål     5 psy/psy, 1/5rnd, duration 2*diff on psy/psy roll2, effect flee
+svärd          8 dam 6, abs 15
+sköld          8 abs 20, parry +3
+livssug        3 psy/psy 1hp/rnd 1try/rnd
+
+
+
+
+--------------------------------------------------------------------------------
+M O N S T E R S
+---------------
+
+
+=============================
+slimemonster (slimemonster01)
+------------
+sty 15    hp 40, abs 1
+smi  3    maneuver 1, walk 2
+fys 15    to hit +3 (large)
+int  -
+psy  -
+------
+4x tentacle grab   5 grapple 5/smi, require smi/5 or sty/8 to break free
+4x tentacle crush  - dam 4, penetrating 2, need to be grappled before crush
+gobble up          - dam 10, need to be grappled for 3rnd
+                     consecutive damage 1/rnd in stomach
+
+
+==============
+bug (beetle01)
+---
+sty  1    hp 2, abs 1
+smi  6    maneuver 3, walk 5
+fys  1    to hit -3 (small)
+int  -
+psy  -
+------
+bite      5 dam 1
+
+
+=================
+spider (spider01)
+------
+sty  3    hp 5, abs 1
+smi  5    maneuver 2, walk 6, run 10
+fys  5
+int  -
+psy  -
+------
+bite      5 dam 3, poison fys/fys, paralysing after 15r,
+            poison is gone when 2*all dealt hp are healed.
+spin      5 5/smi, each successive spin gives -1 to target smi and -2 to move,
+            break free is 2*spin/sty,
+            friend can clean: takes 5r to clean off one spin
+
+
+===============
+demon (demon04)
+-----
+sty 10    hp 30, abs 0
+smi  8    maneuver 1, walk 3, run 6, dash 9
+fys 10    to hit +2 (large+close)
+int  -
+psy  -
+------
+bite      8 dam 8
+quick     3 (0,0,-3,-6)
+fast      6 (m0,w0,r0,d-3)
+
+
+
+

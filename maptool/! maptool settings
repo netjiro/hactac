@@ -1,0 +1,38 @@
+
+
+
+make tokens facing 45deg snap on shift+mousewheel
+fine facing adjustments can be made by crtl+shift+mousewheel
+maptool 1.4:
+menu > edit > preferences:
+bottom right:
+	Facing: check both:
+		On Edges     check
+		On Vertices  check
+
+
+enable fog of war on all maps, tooltips
+maptool 1.4:
+menu > edit > preferences:
+top left:
+	New maps have fog of war   check
+top right:
+	use tooltip for inline rolls
+
+
+
+
+Import functions (global):
+file: global-macros.mtmacset
+
+
+library function (library token)
+file: Lib_util.rptok
+name: Lib:util       <<  CRUCIAL !!  the imported token must be named "Lib:util"
+Must be added to ONLY ONE map in the campaign file.
+
+
+campaign functions (specific for each campaign)
+
+
+

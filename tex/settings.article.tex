@@ -1,0 +1,78 @@
+
+\documentclass[11pt, twoside, titlepage, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
+\usepackage{graphicx}   % For eps figures
+\usepackage{epsfig}     % Alternative package
+\usepackage[hang,small,bf]{caption}
+
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}             % no "\chapter" in article doc type
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+
+\newcommand{\degrees}{$^\circ$~}
+\newcommand{\degree}{$^\circ$}
+
+\newcommand{\vs}{$\backslash\ $}  % "versus" slash
+\newcommand{\bs}{$\backslash\ $}  % just backslash
+
+
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+
+\usepackage{ifthen}
+
+
+% \needspace{5\baselineskip}      << reserves approximately 5 lines, leaves raggedbottom, more efficient
+% \Needspace{5\baselineskip}      << reserves exactly 5 lines, leaves raggedbottom, less efficient
+% \Needpsace*{5\baselineskip}     << leaves flushbottom if \flushbottom is in effect, otherwise ragged
+\usepackage{needspace}
+
+
+
+% \skill{blabla}
+\newboolean{skillsaslist}
+\setboolean{skillsaslist}{true}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
+
+% \action{blabla}
+\newboolean{actionsaslist}
+\setboolean{actionsaslist}{true}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+% \eqitem{blabla}
+\newboolean{itemsaslist}
+\setboolean{itemsaslist}{true}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+
+\newenvironment{readoutloud}%
+{\begin{quote}\begin{itshape}}%
+{\end{itshape}\end{quote}}%
+
+
+

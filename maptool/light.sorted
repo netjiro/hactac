@@ -1,0 +1,23 @@
+hacknslash
+----
+embers: circle 2
+candle: circle 3
+lamp: circle 7
+torch: circle 12
+fire: circle 15
+bright: circle 20
+spotlamp: cone arc=90 15
+fightlight: cone arc=120 40
+fightlightsmall: cone arc=120 20
+NPCleader3: aura GM circle 3.5#0000bb
+NPCleader5: aura GM circle 5.5#0000bb
+RPleader3: aura circle 3.5#0000bb
+RPleader5: aura circle 5.5#0000bb
+glow1: circle 1#007700
+glow2: circle 2#008811
+glow3: circle 3#009922
+glow4: circle 4#00aa44
+glow5: circle 5#00bb66
+scary4: aura circle 4.5#aa0000
+scary6: aura circle 6.5#aa0000
+scary8: aura circle 8.5#aa0000

@@ -1,0 +1,1299 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+
+\cleardoublepage
+
+\phantomsection\addcontentsline{toc}{chapter}{equipment}
+\chapter*{Equipment}
+\chaptermark{equipment}
+
+
+
+%-------------------------------------------------------------------------------
+% W E A P O N S  &  A R M O U R
+%------------------------------
+
+\phantomsection\addcontentsline{toc}{section}{weapons and armour}
+\section*{Weapons and armour}
+
+Weapon damage stats are supposed to be read as 1dX. E.g: the dagger does 1d3 damage not always 3. Weapon penetration is however always the max value and is not rolled. E.g: dam 5 pen 2 always does 1D5 damage but ignores up to 2 armour absorption.
+
+The weapons listed below are the common weapon types and sizes. Custom made weapons are treated further down.
+
+%TODO: explain the weapon stats:
+%dam
+%abs
+%reach
+%finesse
+%mod,attack,defend,parry,todefend,toparry,toavoid
+%str, str bonus cap
+%maneuvers, poke, swing, etc
+%stamina free attacks
+
+
+\subsection*{Melee weapons}
+%melee weapons
+%-------------
+\small
+\begin{verbatim}
+Regular Swords
+attack maneuver poke costs 5xp
+attack maneuver swing costs 5xp
+
+small sword         dam 4, abs 6,
+                    str 2 (max +1 str bonus), finesse-6
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+1 todefend+2
+
+sword               dam 6, abs 10,
+                    str 4 (max +2 str bonus), finesse-6
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+large sword         dam 8, abs 14,
+                    str 6 (max +3 str bonus), finesse-6
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+small 2h sword      dam 8, abs 12,
+                    str 4 (max +2 str bonus), finesse-6
+                    reach 1 mod-7
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+2h sword            dam 10, abs 15,
+                    str 6 (max +3 str bonus), finesse-6
+                    reach 1 mod-6
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+large 2h sword      dam 12, abs 18,
+                    str 8 (max +4 str bonus), finesse-6
+                    reach 1 mod-5
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+3 todefend+2
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Infantry Swords
+
+short sword         dam 5, abs 10,
+                    str 3 (max +1 str bonus), finesse-4
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+1 todefend+2
+
+broad sword         dam 7, abs 14,
+                    str 5 (max +2 str bonus), finesse-4
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+long sword          dam 9, abs 18,
+                    str 7 (max +3 str bonus), finesse-4
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+3 todefend+2
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Knives and fast blades
+
+knife               dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
+                    str 1 (no str bonus)
+                    fast+1 if str 2 and dex 4
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+
+dagger              dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
+                    str 2 (no str bonus)
+                    fast+1 if str 3 and dex 5
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+
+rapier              dam 4, abs 4, toparry-2, toavoid-1, finesse-9
+                    str 3 (no str bonus)
+                    fast+1 if str 4 and dex 6
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+
+large rapier        dam 5, abs 5, toparry-2, toavoid-1, finesse-9
+                    str 4 (no str bonus)
+                    fast+1 if str 5 and dex 7
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Speciality Blades   costs 5xp to learn speciality, or suffer mod-1
+
+duelling sword      dam 6, abs 6, toparry-2, toavoid-1, finesse-9
+                    str 5, (no str bonus)
+                    fast+1 if str 6 and dex 8
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+1 todefend+2
+
+large duell. sword  dam 7, abs 7, toparry-2, toavoid-1, finesse-9
+                    str 6, (no str bonus)
+                    fast+1 if str 7 and dex 9
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+1 todefend+2
+
+parrying dagger     dam 3, abs 8, attack-1, parry+1, finesse-6
+                    str 2 (no str bonus)
+                    fast+1 if str 3 and dex 5
+                    poke: mod-1 dam-1 pen+1
+
+baselard            dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-6
+                    str 2 (no str bonus)
+                    fast+1 if str 3 and dex 5
+                    first two attacks don't require stamina
+                    poke: mod-1 dam=1 pen+2
+
+bastard sword       dam 7/9, abs 12, finesse-6
+(1h/2h)             str 5/5
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+great sword         dam 10, abs 20, toavoid+1, finesse-4
+1h                  str 6 slow-1, str 9 normal speed
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+3 todefend+2
+
+claymore            dam 14, abs 28, toavoid+1
+2h                  str 8 slow-1, str 11 normal speed, finesse-4
+                    reach 1 mod-6
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+3 todefend+2
+
+estoc               dam 7, abs 8, toparry-1, toavoid-1, finesse-9
+2h                  str 5 (no str damage bonus, max +1 penetrating bonus)
+                    fast+1 if str 6 and dex 8
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-2 pen+2
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
+2h                  str 7 (no str damage bonus, max +1 penetrating bonus)
+                    fast+1 if str 8 and dex 10
+                    first two attacks don't require stamina
+                    poke: mod-1 dam-2 pen+2
+                    swing: slow-1 mod-1 dam+2 todefend+2
+
+
+
+
+\end{verbatim} \pagebreak[3] \begin{verbatim}
+Regular Axes
+
+small 1h axe        dam 5, abs 6, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 2 (max +2 str bonus)
+                    swing: slow-1 mod-1 dam+2 toavoid+2
+
+1h axe              dam 7, abs 8, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 4 (max +4 str bonus)
+                    swing: slow-1 mod-1 dam+2 toavoid+2
+
+large 1h axe        dam 9, abs 10, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 6 (max +6 str bonus)
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+small 2h axe        dam 9, abs 9, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 4
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+2h axe              dam 11, abs 11, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 6
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+large 2h axe        dam 13, abs 13, parry-3, toparry-1, toavoid+1, finesse-3
+                    str 8
+                    swing: slow-1 mod-1 dam+4 toavoid+2
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Speciality Axes     costs 5xp to learn speciality, or suffer mod-1
+
+battle axe          dam 8, abs 10, parry-2, toparry-2, finesse-4
+1h                  str 5
+                    swing: slow-1 mod-1 dam+2 toavoid+2
+                    poke: mod-2 dam-3 pen+2
+
+great axe           dam 12, abs 14, parry-4, toparry-3, toavoid+2, finesse-2
+1h                  str 6 slow-1
+                    str 9 normal speed
+                    swing: slow-1 mod-1 dam+4 toavoid+2
+
+lochaber            dam 16, abs 20, parry-4, toparry-3, toavoid+2, finesse-2
+2h                  str 8 slow-1
+                    str 11 normal speed
+                    swing: slow-1 mod-1 dam+4 toavoid+2
+
+pick axe            dam 4, pen 4, parry-3, toavoid+2, finesse-2
+2h                  str 4, slow-1
+                    double damage against stone, doors, etc
+                    swing: slow-1 mod-1 dam+1, pen+1, toavoid+2
+
+heavy pick axe      dam 6, pen 4, parry-3, toavoid+2, finesse-2
+2h                  str 6, slow-1
+                    double damage against stone, doors, etc
+                    swing: slow-1 mod-1 dam+1, pen+1, toavoid+2
+
+
+
+
+\end{verbatim} \pagebreak[3] \begin{verbatim}
+Staffs and Spears
+
+light staff         dam 2/3, abs 6, parry+1/+2, reach 1 mod-3, finesse-6/-9
+1h/2h               str 3/2 (max +1/+2 str bonus)
+                    2h: fast+1 if str 4 and dex 4
+
+staff               dam 4/5, abs 8, parry+1/+2, reach 1 mod-3, finesse-6/-9
+1h/2h               str 5/4 (max +1/+2 str bonus)
+                    2h: fast+1 if str 6 and dex 6
+
+heavy staff         dam 6/7, abs 10, parry+1/+2, reach 1 mod-3, finesse-6/-9
+1h/2h               str 7/6 (max +1/+2 str bonus)
+                    2h: fast+1 if str 8 and dex 8
+
+light spear         dam 3/4, pen 1/2, abs 4, parry-1/+1, reach 1 mod-3
+1h/2h               str 2 (max +1 str damage bonus, max+1 penetrating bonus)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-4/-6
+
+spear               dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
+1h/2h               str 4 (max +2 str damage bonus, max+2 penetrating bonus)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-4/-6
+
+heavy spear         dam 7/8, pen 1/2, abs 8, parry-1/+1, reach 1 mod-3
+1h/2h               str 6 (max +3 str damage bonus, max+3 penetrating bonus)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-4/-6
+
+long spear          dam 5, pen 2, abs 7, parry-3, reach 1 mod-0
+2h                  str 4 (max +2 str damage bonus, max+2 penetrating bonus)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-3
+
+heavy long spear    dam 7, pen 2, abs 9, parry-3, reach 1 mod-0
+2h                  str 6 (max +3 str damage bonus, max+3 penetrating bonus)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-3
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Speciality Pole Arms  costs 5xp to learn speciality, or suffer mod-1
+
+pike                dam 6, pen 1, abs 8, parry-6, slow-1
+2h                  reach 0 mod-3, reach 1 mod-0, reach 2 mod-3
+                    str 5 (max +2 str damage bonus, rest is penetrating)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-2
+
+heavy pike          dam 8, pen 1, abs 10, parry-6, slow-1
+2h                  reach 0 mod-3, reach 1 mod-0, reach 2 mod-3
+                    str 7 (max +3 str damage bonus, rest is penetrating)
+                    narrow tip spears can have all str bonus as penetrating
+                    broad tip spears are dam+1 mod-1
+                    finesse-2
+
+halberd             dam 10, pen 3, abs 8, parry-6, slow-2, toavoid+2
+2h                  reach 0 mod-2, reach 1 mod-0, reach 2 mod-5,
+                    str 5
+                    finesse-2
+                    poke: mod-0 dam-3 pen+2
+
+glave               dam 9, pen 2, abs 8, parry-3, slow-1, toavoid+1
+2h                  reach 0 mod-1, reach 1 mod-0, reach 2 mod-6,
+                    str 5
+                    finesse-4
+
+
+
+
+\end{verbatim} \pagebreak[3] \begin{verbatim}
+Clubs, Hammers, Flails
+attack maneuver swing costs 5xp
+
+small club          dam 2/4, abs 6, parry-1, toavoid+1, finesse-2
+1h/2h               str 2 (max +2/+3 str bonus)
+                    1h: str vs str for knockback 1
+                    2h: str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback roll +3
+
+club                dam 4/6, abs 10, parry-1, toavoid+1, finesse-2
+1h/2h               str 4 (max +3/+4 str bonus)
+                    1h: str vs str for knockback 1
+                    2h: str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback roll +3
+
+large club          dam 6/8, abs 14, parry-1, toavoid+1, finesse-2
+1h/2h               str 6 (max +3/+4 str bonus)
+                    1h: str vs str for knockback 1
+                    2h: str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback roll +3
+
+very large club     dam 8/10, abs 18, parry-1, toavoid+1, finesse-2
+1h/2h               str 8  (max +3/+4 str bonus)
+                    1h: str vs str for knockback 1
+                    2h: str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback roll +3
+
+monstrous club      dam 10/12, abs 22, parry-1, toavoid+1, finesse-2
+1h/2h               str 10  (max +3/+4 str bonus)
+                    1h: str vs str for knockback 1
+                    2h: str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback roll +3
+
+heavy clubs         dam+2, abs+50%, parry-3, toavoid+2, finesse-1, slow-1
+                    knockback roll +3
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+1h hammer           dam 6, abs 6, parry-3, toavoid+1, finesse-2, slow-1
+                    str 4 (max +4 str bonus)
+                    str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback+1 (on success)
+
+large 1h hammer     dam 8, abs 8, parry-3, toavoid+1, finesse-2, slow-1
+                    str 6 (max +6 str bonus)
+                    str+3 vs str for knockback 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback+1 (on success)
+
+2h hammer           dam 8, abs 16, parry-3, toavoid+1, finesse-2, slow-1
+                    str 6
+                    knockback 1
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback+1
+
+large 2h hammer     dam 10, abs 20, parry-3, toavoid+1, finesse-2, slow-1
+                    str 8
+                    knockback 1
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback+1
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+1h flail            dam 4, abs 8, parry-6, toparry-3, finesse-6
+                    str 4 (max +2 str bonus), slow-1
+                    reach 1 mod-3, snag-3
+                    swing: slow-1 mod-1 dam+1 toavoid+2
+
+large 1h flail      dam 6, abs 12, parry-6, toparry-3, finesse-6
+                    str 6 (max +4 str bonus), slow-1
+                    reach 1 mod-3, snag-3
+                    swing: slow-1 mod-1 dam+2 toavoid+2
+
+2h flail            dam 8, abs 16, parry-6, toparry-3, finesse-6
+                    str 6, slow-1
+                    reach 1 mod-3, snag-3
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+large 2h flail      dam 10, abs 20, parry-6, toparry-3, finesse-6
+                    str 8, slow-1
+                    reach 1 mod-3, snag-3
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Speciality Bludgeoning Weapons   costs 5xp to learn speciality, or suffer mod-1
+
+heavy hammer        dam 10, abs 20, parry-6, toavoid+2
+1h                  str 7, slow-2
+                    knockback 2
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback+1
+
+maul                dam 14, abs 25, parry-6, toavoid+3
+2h                  str 10, slow-2
+                    knock back 2
+                    slow-3 (6ap): knockback 3 costs one extra stamina
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback+1
+
+morning star        dam 6, pen 1, abs 6, parry-3, toavoid+1, finesse-3
+                    str 5
+                    str vs str for knock back 1
+                    swing: slow-1 mod-1 dam+2 toavoid+2 knockback roll +3
+
+2h morning star     dam 9, pen 2, abs 9, parry-3, toavoid+1, finesse-3
+                    str 7
+                    str+3 vs str for knock back 1
+                    swing: slow-1 mod-1 dam+3 toavoid+2 knockback roll +3
+
+long chain flail    dam 7, abs 7, parry-6, toparry-6, toavoid-3, finesse-9
+                    str 5, slow-2
+                    reach 1 mod-0, snag-0
+                    swing: slow-1 mod-1 dam+2 toavoid+2
+
+2h long chain flail dam 10, abs 10, parry-6, toparry-6, toavoid-3, finesse-9
+                    str 7, slow-2
+                    reach 1 mod-0, snag-0
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+\end{verbatim}
+\normalsize
+
+
+
+
+
+
+\subsection*{Shields and armour}
+%shields and armour
+%------------------
+\small
+\begin{verbatim}
+Shields can be carried on one arm, on the back, or on a backpack.
+
+Heavy version of shields have abs+50% but are either
+slow-1 or require str+3 to retain normal speed
+
+Plated heavy shields have double abs but are either
+slow-2 or require str+3 to be slow-1 or str+6 to be normal speed
+
+buckler             abs 6, parry+1
+                    str 0
+                    fast+1 if str 4 and dex 4
+                    Ranged attacks mod-0 when in the way.
+                    Hiding behind it (3ap) ranged mod-1
+
+small shield        abs 8, parry+2,
+                    str 2
+                    Ranged attacks mod-1 when in the way.
+                    Hiding behind it (3ap) ranged mod-2
+
+shield              abs 10, parry+3,
+                    str 4
+                    Ranged attacks mod-2 when in the way.
+                    Hiding behind it (3ap) ranged mod-4
+                    tackle mod+1
+
+large shield        abs 12, parry+4,
+                    str 6, or slow-1 str 3
+                    Ranged attacks mod-3 when in the way.
+                    Hiding behind it (3ap) ranged mod-6
+                    tackle mod+2
+
+tower shield        abs 14, parry+5,
+                    str 8, or slow-1 str 5
+                    Ranged attacks mod-4 when in the way.
+                    Hiding behind it (3ap) ranged mod-8
+                    tackle mod+3
+
+infantry shield     abs 13, parry+3,
+                    str 5
+                    Ranged attacks mod-2 when in the way.
+                    Hiding behind it (3ap) ranged mod-4
+                    tackle mod+1
+
+
+
+
+\end{verbatim} \pagebreak[3] \begin{verbatim}
+leather armour abs 1
+thick cloth    acrobatics mod-1
+               takes 2 rounds to put on or take off
+
+chain mail     abs 2 ring, scale, brigantine, etc
+scale mail     str 3 (str penalties affect all actions)
+brigandine     dex-1,
+               dash-1,
+               per-1
+               acrobatics mod-3
+               martial arts mod-1
+               spellcasting mod-1
+               sneak mod-3
+               takes 3 rounds to put on or take off
+
+plate or       abs 3 plate armour of various sorts, incl helmet
+heavy scale    str 5 (str penalties affect all actions)
+h brigandine   dex-2, yield bonus -1
+               run-1, dash-2,
+               per-2, vision-20%, cone vision -20% max 270 deg
+               acrobatics mod-6, climb-1, jump-1
+               martial arts mod-3
+               spellcasting mod-2
+               sneak mod-4
+               avoid mod-1
+               max stamina mod-1
+               Turning as separate actions cost more ap:
+               45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
+               (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
+               takes 4 rounds to put on or take off
+
+full plate     abs 4 full plate armour with full helmet
+               str 7 (str penalties affect all actions)
+               dex-3, yield bonus -2
+               run-2, dash-4,
+               per-3, vision-30%, cone vision -30% max 180 deg
+               acrobatics mod-9, climb-3, jump-3
+               martial arts mod-6
+               tackle mod+1
+               spellcasting mod-3
+               sneak mod-5
+               avoid mod-2
+               max stamina mod-2
+               Turning as separate action cost more ap:
+               45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=3ap
+               (hex: 60deg=1ap, 120deg=3ap, 180deg=3ap)
+               takes 7 rounds to put on or take off
+
+heavy plate    abs 5 very heavy full plate armour with all the trimmings.
+               str 9 (str penalties affect all actions)
+               dex-4, yield bonus -3
+               walk-1, run-3, dash-5,
+               per-4, vision-40%, cone vision -40% max 120 deg
+               acrobatics mod-12, climb-6, jump-6
+               martial arts mod-9
+               tackle mod+2
+               spellcasting mod-4
+               sneak mod-6
+               avoid mod-3
+               max stamina mod-3
+               Turning as separate action cost more ap:
+               45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=4ap
+               (hex: 60deg=1ap, 120deg=3ap, 180deg=4ap)
+               takes 10 rounds to put on or take off
+
+\end{verbatim}
+\normalsize
+
+
+
+\subsection*{Ranged weapons}
+%ranged weapons
+%--------------
+%inst  mod-9 1a including draw if quick draw readied in 0a (pushes mod-1)
+%snap  mod-6 1a including draw if quick draw readied in 0a (pushes mod-2)
+%quick mod-3 1a including draw if quick draw readied in 0a (pushes mod-3)
+%quick mod-3 2a including draw if quick draw readied in 1a (pushes mod-6)
+%shot  mod-0 1r incl draw from accessible place
+%aimed mod+3 2r incl draw from accessible place
+\small
+\begin{verbatim}
+first attack with already drawn throwing weapon:
+normal  mod=0 3ap
+aimed   mod+1 1r (or 6ap if so preferred)
+quick   mod-3 fast+1 (2ap)
+snap    mod-6 fast+2 (1ap)
+
+sustained rate of fire for thrown weapons:
+normal  mod=0 1r including draw from accessible location
+aimed   mod+1 2r including draw from accessible location
+quick   mod-3 6ap including draw from quick draw
+              3ap if quick draw roll successful
+snap    mod-6 5ap including draw from quick draw
+              2ap if quick draw roll successful
+
+
+
+
+throwing knife    dam 2
+                  range 8, short 4 mod+1, long 12 mod-3, vlong 16 mod-6 dam-1,
+                  str 1 (no str bonus)
+                  fast+1 if str 2 and dex 4
+                  first three attacks do not require stamina
+
+throwing axe      dam 4,
+                  range 6, short 3 mod+1, long 9 mod-3, vlong 12 mod-6 dam-1,
+                  str 3 (max +1 str bonus)
+                  first two attacks do not require stamina
+
+javelin           dam 5,
+                  range 10, short 5 mod+1, long 15 mod-3, vlong 20 mod-6 dam-1,
+                  str 4 (max +1 dam str bonus, max +2 penetrating str bonus)
+
+heavy javelin     dam 6, penetrating 1,
+                  range 8, short 4 mod+1, long 12 mod-3, vlong 18 mod-6 dam-1,
+                  str 6 (max +2 dam str bonus, rest is penetrating)
+
+
+\end{verbatim} \pagebreak[3] \normalsize
+Bows, crossbows, and ballistas all use arrows or bolts as ammunition.
+If the GM wants the players should keep track of their arrow count, and might be worth investing some xp in arrow recovery.
+%inst  mod-9 3ap if arrow quick drawn from readied quiver
+%snap  mod-6 6ap if arrow drawn from readied quiver
+%quick mod-3 1r (3ap fire) incl reload from accessible quiver
+%shot  mod-0 2r (3ap fire) incl reload from accessible quiver
+%aimed mod+1 3r (3ap fire) incl reload from accessible quiver
+\small \begin{verbatim}
+normal rate of fire for bows:
+this includes reload from accessible quiver.
+normal mod=0 2r (3ap each round, but allows no other actions)
+quick  mod-3 1r (3ap each round, but allows no other actions)
+aimed  mod+1 3r (3ap each round, but allows no other actions)
+
+rapid fire for bows:
+includes reload from quick draw or similar, as described
+snap     mod-6 6ap fire, requires reload from quick draw slot quiver
+                         or arrows pre-stuck into ground or handed by assistant
+insane   mod-9 3ap fire, requires instant 0ap reload action
+                         i.e. quick draw quiver and successful quick draw roll
+
+short bow         dam 3,
+                  range 10, short 5 mod+1, long 20 mod-3,
+                  vlong 25 mod-6 dam-1, extreme 30 mod-9 dam-2
+                  str 3 (no str bonus)
+
+bow               dam 4, penetrating 1
+                  range 14, short 7 mod+1, long 24 mod-3,
+                  vlong 30 mod-6 dam-1, extreme 35 mod-9 dam-2,
+                  str 5 (no str bonus)
+
+heavy bow         dam 5, penetrating 2,
+                  range 15, short 7 mod+1, long 25 mod-3,
+                  vlong 32 mod-6 dam-1, extreme 40 mod-9 dam-2,
+                  str 7 (no str bonus)
+
+longbow           dam 5, penetrating 1,
+                  range 20, short 10 mod+1, long 30 mod-3,
+                  vlong 40 mod-6 dam-1, extreme 60 mod-9 dam-2,
+                  str 6 (no str bonus)
+
+heavy longbow     dam 6, penetrating 2,
+                  range 22, short 9 mod+1, long 33 mod-3,
+                  vlong 44 mod-6 dam-1, extreme 66 mod-9 dam-2,
+                  str 8 (no str bonus)
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+Rate of fire for crossbow, heavy crossbows and arbalests:
+Split between reload and fire actions.
+The first shot with a loaded crossbow is reasonably fast.
+Successive shots require a reload action first, and then it takes a lot of time.
+
+first shot  mod=0 1r
+first aimed mod+1 2r
+first quick mod-3 3ap
+first snap  mod-6 2ap
+first wtf   mod-9 1ap
+
+crossbow          dam 5, penetrating 1,
+                  range 12, short +1, long -3, extreme -6,
+                  str 3 (no str bonus)
+reload times for crossbow:
+reload 6ap if reloading with 0ap successful quick draw roll for quiver
+reload 1r if reloading from quick draw quiver
+reload 2r if reloading from accessible quiver
+
+heavy crossbow    dam 6, penetrating 2,
+                  range 15, short +1, long -3, extreme -6,
+                  str 5 (no str bonus)
+reload times for heavy crossbow:
+reload 1r if reloading with 0ap successful quick draw roll for quiver
+reload 2r if reloading from quick draw quiver
+reload 3r if reloading from accessible quiver
+
+arbalest          dam 7, penetrating 3,
+                  range 18, short +1, long -3, extreme -6,
+                  str 7 (no str bonus)
+                  slow-1 (only affects snap first shots)
+reload times for arbalest:
+reload 2r if reloading with 0ap successful quick draw roll from quiver
+reload 3r if reloading from quick draw quiver
+reload 4r if reloading from accessible quiver
+
+exotic            as the regular crossbows except that they have two first
+double type       shots, which can be used at the same time or separately.
+crossbows         They also require str+2, and take 1r longer to reload.
+                  If both shots are used at the same time (same action)
+                  you should still roll each bolt separately.
+
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+rate of fire for ballistas:
+Ballistas take very long to reload and require two people.
+snap  reload+1r mod-6
+quick reload+2r mod-3
+shot  reload+3r mod=0
+aimed reload+4r mod+1
+
+light ballista    dam 12, penetrating 4, slow-1
+                  range 24, long -3 dam-1, extreme -6 dam-2,
+                  carried: str 10 (no str bonus), mounted: str 3 (no bonus)
+                  reload 5r, tot str 10, max 2ppl (only 1 person +1r)
+
+ballista          dam 15, penetrating 5, slow-2
+                  range 30, long -3 dam-1, extreme -6 dam-2,
+                  carried: str 15 (no str bonus), mounted: str 5 (no bonus)
+                  reload 10r, tot str 15, max 3ppl (only 1 person +2r)
+
+\end{verbatim}
+\normalsize
+
+
+
+
+
+
+
+
+\subsection*{custom weapons}
+% custom weapons
+% --------------
+
+It's always possible to have a craftsman build customised weapons that are suited specifically to the user's strength, dexterity, abs requirements, etc. These weapons cost a lot more, usually several times the normal list price, and require a skilled craftsman and sometimes some special materials.
+
+The general guidelines for weapon classes look something like this:\\
+\small \begin{verbatim}
+1h blade:
+    dam str+2, abs 2*dam-2
+2h blade:
+    dam str+4, abs 2*dam-2
+fast blade:
+    (3ap:) dam str+1, abs dam+0
+    (2ap:) fast+1 if str>=dam+0 dex>=dam+2
+
+1h axe:
+    dam str+3, abs dam+1
+2h axe:
+    dam str+5, abs dam
+
+staff (1h/2h):
+    dam str-1/str+1, abs 2h dam+2
+spear (1h/2h):
+    dam str+0/str+1 and pen 1/2, abs 2h dam
+
+club (1h/2h):
+    dam str+0/+2, abs 2*str+2, knockback 1 str-vs-str
+\end{verbatim} \normalsize
+
+
+
+
+
+
+
+
+\subsection*{monster weapons}
+% monster weapons
+% ---------------
+
+Some races, as NPCs, will sometimes use special versions of weapons which are different than those human craftsmen produce.
+
+Orcs produce simple and heavy weapons. They have higher abs, lower finesse, higher str requirements. The market price is -50\% of human made weapons and their encumbrance is +33\%. When taking damage to abs they loose double abs.
+\small \begin{verbatim}
+orc war axe         dam 9, abs 12, parry-3, toparry-1, toavoid+1, finesse-2
+1h                  str 7 (max +6 str bonus)
+                    swing: slow-1 mod-1 dam+3 toavoid+2
+
+orc war spear       dam 7/8, pen 1/2, abs 10, parry-1/+1, reach 1 mod-3
+1h/2h               str 7 (max +3 str damage bonus, max+3 penetrating bonus)
+                    finesse-3/-5
+
+orc war shield      abs 14, parry+3,
+                    str 7, or slow-1 str 4
+                    Ranged attacks mod-2 when in the way.
+                    Hiding behind it (3ap) ranged mod-5
+                    tackle mod+3
+\end{verbatim} \normalsize
+\pagebreak[1]
+
+Elves produce slender weapons of very high quality. They will last longer and when rolling for weapon breakage they have half the chance of breaking (round down) and their permanent abs damage should be rounded down instead of rounded up. Elven made weapons are very rare and difficult to find outside of elven cities. Their encumbrance is -30\% of the human version, and the price is at least 5x higher than a human made. Probably closer to 5+1d5g + 5x base price.
+
+The elven illspets is used as a fast light defensive weapon which can also be used to attack heavily armoured targets.
+\small \begin{verbatim}
+elven slender sword dam 8, abs 16,
+1h                  str 6 (max +3 str bonus), finesse-9
+                    poke: mod-1 dam-1 pen+1
+                    swing: slow-1 mod-1 dam+2 todefend+2
+                    deflect is mod-1 instead of mod-3
+                    str 8 dex 10 is fast+1
+
+elven illspets      dam 4, pen 4, abs 16, parry+1
+1h                  str 6 (no str dam bonus, max +2 pen str bonus)
+                    poke: mod-1 dam-1 pen+2
+                    deflect is mod-1 instead of mod-3
+                    str 6 dex 8 is fast+1
+
+elven longbow       dam 5, penetrating 2,
+                    range 24, short 12 mod+1, long 36 mod-3,
+                    vlong 48 mod-6 dam-1, extreme 70 mod-9 dam-2,
+                    str 6 (no str bonus)
+\end{verbatim} \normalsize
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% E Q U I P M E N T
+%------------------
+
+\phantomsection\addcontentsline{toc}{section}{other equipment}
+\section*{Other equipment}
+
+
+\small
+\begin{verbatim}
+antidote       counters the effects of a poison, weaker than the antidote's str.
+               Very general antidotes you have here...
+
+pain killer    small white pills, red pills, liquids, etc, with different
+               strengths and side effects.
+               eliminates some pain points equal to strength
+               usually takes a few rounds to have effect.
+
+alcohol        5r to take effect.
+               reduces pain by -1 per dose,
+               adds an inebriation mod-1 per dose above con/3 (round down)
+               to future rounds ams, OR counters one dose of coffee.
+               Effect remains until next day, or until countered.
+
+coffee         5r to take effect, 2r if hot (use a thermos perhaps?)
+               increases current and max stamina by one for each dose,
+               OR if inebriated, then cancels all effects of one dose of
+               alcohol per dose of coffee.
+               After con/3 (round down) doses the character is jittery and must
+               pass a psy roll each round he tries to rest.
+               Effect remains until next day, or until countered.
+
+health elixir  heals 3hp, 1hp/3r, and draws 3mana and 3stamina immediately
+               when quaffed. It has no effect if the mana or stamina draw rolls
+               fail.
+
+health wafer   heals 3hp, 1hp/10r, and modifies max stam-1 until the Hero has
+               slept.
+
+grappling      mod+6 to climb when attached to a rope and successfully flung
+hook           over a wall to get stuck. Roll dex + throw to hook it, 1r action.
+               A careful 3r action gives a mod+3 to hook it
+
+rope           mod+6 to climb
+
+lock picks     mod+X to "pick lock" skill.
+               X depends on the quality of the picks.
+
+tool box       mod+X to "traps" and "McGyverism" skills.
+               X depends on the quantity and quality of the tools.
+
+\end{verbatim} \pagebreak[3]
+
+
+%-------------------------------------------------------------------------------
+% S P E C I A L   E Q U I P M E N T
+%----------------------------------
+
+%Special items are not so easy to come by and their prices vary a bit.
+
+\begin{verbatim}
+cave cart      A small (1sqr) cart that can be dragged (str 5 walk) into the
+               narrow spaces of the caves where monsters and treasure hide.
+               It can load 100 enc. Rummaging on the cart is same as in a normal
+               container, except effective item number is items/10 round up.
+
+Rucksack with  Regular backpack but with a few compartments, which makes it
+compartments   faster when rummaging through it for the required item.
+               Divide the amount of items by 2-4 when calculating rummage time.
+
+tunnel plug    A small (1sqr) cart with a very large and sturdy shield that can
+               be flipped into position to block up to three square wide so
+               pursuing monsters cannot pass or attack through it.
+               The cart can be dragged (str 3 walk) into the narrow spaces of
+               caves, then anchored to the ground when flipping up.
+               Takes 3r to flip up and anchor.
+               plug shield: abs 5, 50hp.
+
+tunnel plug    A medium (2x2) cart with a very large and sturdy shield that can
+large          be flipped into position to block up to four squares wide so
+               pursuing monsters cannot pass or attack through it.
+               The cart can be dragged (str 5 walk) into the narrow spaces of
+               caves, then anchored to the ground when flipping up.
+               Takes 5r to flip up and anchor.
+               plug shield abs 6, 100hp.
+
+portadoor      A portable (enc 5.0) door that can be set up in 3r (full round
+               actions). It can block one square so that pursuing monsters
+               cannot follow or attack through it.
+               abs 4, hp 40.
+
+portagate      A portable (3x enc 5.0) gate that can be set up in 5r (full
+               round actions). It can block one or two squares so that pursuing
+               monsters cannot follow or attack through it.
+               abs 5, hp 50
+
+fightlight     A large brazier with a polished metal mirror behind it, creating
+               a very bright 90deg cone of light, 40sq radius.
+               Just put it on the ground and light it. The expensive models even
+               have a cinder box or a spark lever for fast lighting.
+               enc 10.0
+
+fightlight     As the larger fightlight, but weaker. enc 5.0
+small          90deg cone, 20sq radius
+
+magnifying     Gives mod+3 to find, but takes one round extra for each find
+lens
+
+\end{verbatim}
+\normalsize
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% E X O T I C   E Q U I P M E N T
+%--------------------------------
+
+%Exotic items are difficult to find and their prices vary greatly.
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% T R A P S
+%----------
+
+
+\phantomsection\addcontentsline{toc}{section}{traps}
+\section*{Traps}
+
+Traps are usually the kind of things that you fall into, put spikes into your belly, poke your eyes out, or that prick your finger injecting horribly painful poison. But they can also be your friends. If you have the time and money a few well placed traps can slow down or decimate your enemies as they advance to kill you dead.
+
+All traps have a few different properties such as price and encumbrance when you buy and transport them. Then size, trigger type, damage, time to set up and arm, difficulty to hide, etc. Some traps require that you dig a hole, or hack out some empty space in a wall.
+
+\small \begin{verbatim}
+
+small snare: cost 5c, enc 0.5, size 1sq 50\% chance of triggering.
+    Caught target can break free in one action on str vs 5 roll
+    or disentangle in two rounds after successful int vs 2 roll
+    or loop cut in one round if carrying small blade or similar.
+    Takes 3r to set and must be anchored to something within 5sq.
+    They are easy to hide at mod+3.
+
+large snare: cost 1s, enc 1.0, size 1sq 100\% chance of triggering.
+    Caught target can break free in one action on str vs 8 roll
+    or disentangle in two rounds after successful int vs 2 roll
+    or loop cut in one round if carrying small blade or similar.
+    Takes 5r to set and must be anchored to something within 8sq.
+    They are easy to hide at mod+3.
+
+The common way to anchor snares is around tree trunks or other protruding solid
+objects. Other ways is to use dirt wedges to anchor it in the ground. A dirt
+wedge can be hammered down using heavy blunt object in 2r and can be retrieved
+in 1d5 rounds using similar objects. They have a chance of 3+str to hold when
+loaded. Dirt wedges cost 1s and weigh 0.5enc.
+Snares can also be anchored in some stone walls using rock wedges. A rock wedge
+can be inserted in a crevice using a hammer, butt of an axe, stone, or similar,
+in 2r. It can be retrieved using similar tools in 1d5r. They have a chance of
+5+(best of int or per) to hold when loaded. Rock wedges cost 5c and weigh
+0.25enc.
+
+\end{verbatim} \pagebreak[1] \begin{verbatim}
+spike arm:
+        Pre-made: cost 5s in materials, enc 5+1/dam.
+        Half foraged: cost 3s in materials, enc 3 + 1/2dam + foraging.
+        Completely foraged: cost nothing but requires a knife. not portable.
+        Spike arm traps are the things that usually put a slab of pointy objects
+        into the stomach of people. Excellent to rig just behind a corner or a
+        tree, or perhaps directly in the ground covered by old leaves or snow.
+        A skilled woodsman can forage for all the materials, but that takes 100r
+        per dam extra. A smart man brings some stuff with him, and forages only
+        for the scaffold and such, which takes 5r/dam. When in dungeons etc it
+        might be a good idea to bring all of the materials in a bundle.
+        A pre-made bundle is set in 10+dam rounds.
+        A half foraged trap is rigged in forage time + 15+2*dam rounds.
+        A completely foraged trap is constructed in forage time + 20+4*dam time.
+        Hiding a spike arm trap is mod-0.
+
+pit trap: cost nothing, requires perhaps a canvas, and some shovels to dig with.
+        Pit traps are a cheap and common trap for when you have enough time.
+        1) Dig a pit. In dirt outdoors this takes 100r/sq if the digger has
+        a spade or shovel. Otherwise it takes four times as long. As many
+        people can help as there are connecting side squares of the trap.
+        2) Put down spikes or other nastiness, takes a few rounds per sq.
+        3) Cover with suitably weak material, another few rounds per sq.
+        4) Camouflage the trap, another couple of rounds per sq.
+        A regular pit does 3 dam, a double deep pit does 6 dam, a triple deep
+        pit does 10 dam. With spikes the damage is double, and the spikes get
+        one point of penetrating per depth of the pit, including the first.
+        Deep pits take longer to dig of course.
+        Hiding a pit trap is mod+3.
+
+
+\end{verbatim} \normalsize
+
+
+
+
+%-------------------------------------------------------------------------------
+% T R A I N E D   A N I M A L S
+%------------------------------
+
+\phantomsection\addcontentsline{toc}{section}{trained animals}
+\section*{Trained animals}
+
+Companion animals can be trained to do simple tasks. Each animal has a set of specific commands it knows and can perform. Animals also have a command modifier, depending on how well they are trained, which affect how easy it is to command them. The skill "animal command" is used to handle animals.
+The GM has ultimate control over the details of the animal's actions, but it will follow the given command as it interprets it, and according to situation. The practical movement on the map, rolls, etc is generally handled by the commanding player.
+
+Some smarter trained animals can have skills and xp.
+It can for example be useful for an archer to train their attack hawk or war dog as a "target pointer".
+
+
+
+\openitemslist
+
+\eqitem{Horse:}
+An average horse can carry a rider plus a 20enc pack load in saddle bags without problems, at a daily 10sq distance. Without rider it can take 60enc in sacks. Horses vary greatly in training, movement, travel, carrying capacity, etc.
+\small \begin{samepage} \begin{verbatim}
+===================================
+average horse               (token)  set token size large (2x2)
+-----------------------------------  position rider token at top rear square
+str 20    hp 40 abs 0
+dex  5    m3 w6 r12 d24
+per  8    initiative 8
+rear kick   5 dam8 pen2 knockback 2
+front kick  6 dam4 pen1 knockback 1
+bite        4 dam2
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+
+\eqitem{Donkey:}
+Normal donkeys are not trained for riding, but to carry load or drag a small cart. It carries 50enc in pack sacks for 10sq per day.
+\small \begin{samepage} \begin{verbatim}
+===================================
+donkey                      (token)  set token size normal
+-----------------------------------
+str 10    hp 25 abs 0
+dex  5    m2 w4 r8 d16
+per  8    initiative 8
+rear kick   6 dam6 pen1 knockback 1
+front kick  6 dam3
+bite        7 dam2
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+
+\eqitem{War Dog:}
+Big and dangerous breed of dogs.
+\small \begin{samepage} \begin{verbatim}
+===================================
+war dog                     (token)  set token size small
+-----------------------------------
+str  4    hp 5 abs 0
+dex  8    m2 w4 r8 d16
+per 10    initiative 12
+charge 6
+balance 3
+avoid 4 yield+4 always yield when possible
+bite 5 dam 5
+claw 5 dam 2 fast+1
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+Command: attack target pointed at: Will charge the target and bite and claw. \\
+Command: return to owner \\
+Command: guard spot or small area: Will attack intruders that get within 5 range from the area. \\
+Command: guard person or group: Will attack intruders that get within 5 range from the person or group. This is the default behaviour in combat situations. \\
+Command: follow: Will follow owner and keep calm unless obvious enemy comes within 1d4sq. This is the default non-combat behaviour. \\
+Command: fetch arrow: Will run to a corpse and fetch an arrow. Better trained dogs might fetch more than one. This is not a standard command and costs extra.
+
+
+\eqitem{Attack Hawk:}
+Well trained hawks or other large fast bird of prey. \\
+hp 1, to hit -6 (incl fighting speed), movement fly 20, \\
+claw and beak: 5 damage 1 \\
+avoid  6 (incl always yield) \\
+Command: attack target pointed at: \\
+Will fly to the target and distract it by clawing at it's face. This gives the target a mod-3 to all actions, and must pass an int roll to not try to target the hawk. \\
+Command: return to owner. \\
+Command: follow, will follow the owner or sit on his shoulder.
+
+
+\eqitem{Darkwing:}
+Large bats, not very clever. \\
+hp 1, to hit -8 (incl speed), movement fly 15 \\
+avoid 5 (incl always yield) \\
+Command: scout \\
+Will fly away in the indicated direction. \\
+Return immediately and chatter if found anything that might be dangerous. \\
+Return after a while calmly if it didn't find anything interesting. \\
+Command: follow \\
+Will follow the owner, or cling to his back, and stay out of trouble.
+
+
+\eqitem{Fetching Ferret:}
+hp 1, to hit -6 (incl speed), movement r4 d12 \\
+encumbrance limit 1.0, cannot carry more than that. \\
+Command: fetch \\
+Pick up indicated object and bring it back to owner. \\
+Might not always pick up and bring what you want. \\
+Command: port \\
+Pickup an object from the first indicated person and give to the second. \\
+Might not be what you want unless actually given the item. \\
+Command: return to owner. \\
+Comes back and clings to the owners shoulders or such.
+
+
+\eqitem{Tripping Traccoon:}
+hp 2, to hit-3 (incl speed), movement r4 d12 \\
+encumbrance limit 2.0, cannot carry more than that. \\
+Command: fetch (see ferret) but only stuff that glitters or smells interesting \\
+Command: port (see ferret) \\
+Command: return \\
+returns to owner and follows or clings. \\
+gives track+1
+
+
+\eqitem{Wolverine:}
+Very persistent, inexhaustible endurance, never gives up. With con99 it's just silly, but make it die or limp away when taken suitable amounts of damage for the situation. The maptool implementation means stamina and con must both be set. Also fun that it will always seem "rested" under most normal situations.
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+wolverine                   (token)  set token size small
+-----------------------------------
+str  4    hp 5 abs 0
+dex  8    m2 w4 r6 d12
+con 99    stamina 99 (makes it near impossible to actually kill)
+per 10    initiative 10
+pain threshold 5
+black knight 2
+balance 6
+charge 3
+avoid  4 yield+3 always yields when possible \\
+avoid 4 yield+4 always yield when possible
+claw: 5 dam 3 fast+1
+bite: 6 dam 4 pen 1
+hold: 9 dam 2 pen 2 only after successful bite (prev round ok, no movement)
+                    target has mod-3 to all actions, persists over rounds
+-----------------------------------
+\end{verbatim} \end{samepage} \normalsize
+Command: attack: Attacks indicated target and follows until called back, or target is dead. \\
+Command: return: Returns to owner and follows, does not start fights unless provoked or commanded.
+
+
+\eqitem{Explorat:}
+Small, although large for a rat, curious, can gnaw it's way through most anything given time. \\
+Can be trained to search for one specific thing, like monsters, gold, food, water, etc.\\
+hp 1, to-hit-6, movement 4 \\
+Release and it will return to find you sooner or later, hopefully indicating that it has found what it is trained for. \\
+A few reports have come in that some breeds of explorats have a tendency to spontaneously and violently combust, or explode. This has never been proven and should under no circumstances deter you from purchasing one of this small but very helpful pets.
+
+
+\eqitem{Bright Beetle:}
+Is actually a rather large beetle. It is barely trainable insect, but it's calm and unafraid, and will go where it is commanded. \\
+Command: Go \\
+The beetle will travel to the indicated location, then stay there. \\
+Command: Return \\
+The beetle will return to the owner, then follow. \\
+Command: Target \\
+The beetle will travel to a target then stay a few squares away, following it.\\
+hp 1, to hit-3 (melee) to hit -6 (ranged) \\
+movement walk 3, run 6, fly 9 \\
+It is too small to take up a square and cannot block movement. When killed it explodes doing dam 3 to the square it is on and dam 1 to radius 1.
+
+
+\eqitem{Empowering Brightwing:}
+A medium size very rare and exotic bird. It glows with a yellow light (light source range 5), and empowers those in contact with it with extra energy. A brightwing restores 1 stamina each full round it is sitting on a character's shoulder. It will not land, or stay on a shoulder when the character is moving faster than walk, or when he is in melee combat. When not sitting on its owner's shoulder it tends to stay in the vicinity. \\
+Immune to fire. \\
+hp 3, to hit-6 (incl movement), movement fly 10 \\
+avoid 5 (incl always yield) \\
+Command: go to \\
+Will fly to indicated character and land on his shoulder. \\
+Command: return \\
+Will fly back to the owner and land on his shoulder.
+
+
+\eqitem{Medicinal Serpent:}
+A very rare and exotic snake, about 1-2m long. It is green and oozes slightly of a glowing greenish aura (light source range 2). It rests on a staff or other long stick. For each consecutive two full rounds the snake is coiled around a target the target heals 1hp. The target cannot take any actions, and not move faster than maneuver. The owner of the snake may move at walk speed and take minor actions that do not require much movement. \\
+hp 5, to hit-3 (incl movement), movement slither 4. \\
+Command: engage \\
+The snake will slither onto the indicated target and coil around its abdomen.
+Command: disengage \\
+The snake will uncoil from the target and return to its resting place
+
+
+\eqitem{Glow Fly:}
+Various small critters that glow in the dark. They don't give off much light, but it can be enough to scout some areas, especially for Heroes with dusk vision or night vision. The glow bugs are very small, hp 1, mod-6 to hit them with melee weapons, and mod-9 with ranged weapons. Various bugs have different speeds, from crawl 1 to fly 10. They are impossible to train, and have to be commanded by use of special food pastes. The owner throws a dollop of paste at a location or target and the bug goes there to eat. It will stay for a few rounds depending on the size of the dollop. Roll for animal command, and apply the fail diff as random +/- rounds to the intended time. After it has finished eating it will return to the owner if he is within 10-30 sq, depending on how keen eyes, ears, or nose the bug has. \\
+It is recommended to have the gob dispenser as quick draw, then the "command" of throwing a dollop takes two actions, one for select size and one for throw. Otherwise it takes two rounds. Hitting the intended area with a dollop is a throw roll mod+3. Hitting an intended target is a regular throw roll. Dollop base range is dex+str, but minimum 3sq.
+
+
+\eqitem{Jumping Spider:}
+Aggressive spiders that can barely be trained. Unless directly controlled by animal command the spiders will always attack the nearest living non-spider it can find. This includes allies. They jump onto the target then stays attached,
+making one "bite" attack each round until called off or the target dies.
+\goodbreak \small \begin{verbatim}
+jumping spider: hp 1, move 6, jump 2, all terrain (no water)
+                Tiny target: melee mod-3 ranged mod-6
+jump-attach attack 7 (once per round)
+        The jump attack (2sq) does not count against movement.
+        The spider stays attached until cleaned off or target dies.
+        Each attached spider gives the target mod-1 to all actions.
+bite 8 (mod-1 per abs) (once per round, after attached)
+        dam 1 penetrating
+command: attack (point and whistle, 3ap) max range 6
+        The spider will attack the target until it's dead.
+        Then it will move to attack the closest living non-spider
+        it can find, including allies.
+command: return (whistle, 3ap) max range 15
+        Spiders will disengage and return to handler.
+It takes an action (3ap) and a dex roll to clean off a spider.
+The spider is placed on an adjacent square chosen by the target.
+Others have dex+3 when helping the target.
+Attacking a spider which is attached to a target require success+3
+otherwise rest of the damage hits the target. Fail-3 or worse will
+hit the target.
+\end{verbatim} \normalsize
+Spiders can be housed in a "spider box", or "hive box". A box normally holds max ca 3 spiders per enc. E.g: spider box enc 4 has "ammo" 10+1d4 spiders. A spider box can normally spawn a spider each round.
+
+
+\closeitemslist
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% C O M P A N I O N S
+%--------------------
+
+\phantomsection\addcontentsline{toc}{section}{companions}
+\section*{Companions}
+
+The GM has ultimate control over the details of the companion's actions, but it will follow the given command as interpreted according to situation. The practical movement on the map, rolls, etc is generally handled by the commanding player. The character that handles companions need the companion command skill.
+
+In general, most companions will take or require their fair part of XP and loot.
+
+
+\openitemslist
+
+\eqitem{Henchman:}
+A henchman can be anything from a goblin to an elf, he can be rented for the day or a trusted old friend. Henchmen have a mind of their own and full stats and skills according to a regular character sheet.
+Hiring henchmen is expensive. They generally require both a payment up front and a cut of the treasure. Of course, if he cannot count... But most henchmen can both count and haggle. Annoying, isn't it.
+
+The most expensive part though is that the henchman will also take part of the XP from the adventuring.
+
+
+\eqitem{Demons, spirits, etc:}
+Some heroes can summon strange beings to do their bidding. Some of these odd critters can stay around for a long time, and they might even be difficult to get rid of. Some will require some sort of payment or compensation, be it in gold, blood, xp, special equipment items, or left ears of the righteous.
+
+\closeitemslist
+
+
+For calculating division of plunder when one or both of the parties fail their counting rolls see the "counting" skill description. Some loot requires proper valuation. This is why henchmen often have some levels in the appraise skill.
+
+Each henchman or companion critter have their own personality and goals. It may be nothing special, simple greed, or it may be something which has special meaning in the current adventure or campaign plot arc.
+
+When playing henchmen, be stringent with actually letting them behave in a reasonable way. They don't have magical foresight, perfect sense of tactics, unlimited bravery, or other feats which would be required to act as the players often wish them to act. Henchmen require clear orders, and they will generally adhere to those orders as long as it makes sense and does not send them into unreasonable danger.
+
+Situations often apply where the controlling player might want the henchman to take other actions than he has been ordered to because it is "clearly better". First, would it be better for the henchman? Is it evident for the henchman? Is he smart enough to figure it out (roll int)? Secondly, does the henchman often have enough free reign to ignore orders? Is he often strongly ordered to do dangerous stuff? Does he have the presence of mind to think clearly (roll psy)? And so on.
+
+Most henchmen will try to save their own skin when they start to get hurt. They might disobey orders, hesitate when ordered to attack, be more defensive, etc.
+

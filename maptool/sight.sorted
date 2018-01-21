@@ -1,0 +1,53 @@
+-----below-are-chars----: circle distance=0.5 r0.5
+dwarf average: cone arc=165 distance=20 x1.5 r3.5
+dwarf good: cone arc=210 distance=25 x1.5 r4.5
+dwarf poor: cone arc=120 distance=15 x1.5 r2.5
+elf average: cone arc=265 distance=25 x2 r1
+elf good: cone arc=310 distance=30 x2 r1
+elf poor: cone arc=220 distance=20 x2 r1
+goblin average: cone arc=225 distance=20 x1.5 r1.5
+goblin good: cone arc=270 distance=25 x1.5 r1.5
+goblin poor: cone arc=180 distance=15 x1.5 r1.5
+halfling average: cone arc=315 distance=20 r1
+halfling good: circle distance=25 r1
+halfling poor: cone arc=270 distance=15 r1
+human average: cone arc=225 distance=20 r1
+human good: cone arc=270 distance=25 r1
+human poor: cone arc=180 distance=15 r1
+orc average: cone arc=150 distance=15 x1.5 r1
+orc good: cone arc=180 distance=20 x1.5 r1
+orc poor: cone arc=120 distance=10 x1.5 r1
+track 0: circle distance=1 r1
+track 1: circle distance=1.5 r1.5
+track 2: circle distance=2.5 r2.5
+track 3: circle distance=3.5 r3.5
+track 4: circle distance=4.5 r4.5
+track 5: circle distance=5.5 r5.5
+track 6: circle distance=6.5 r6.5
+track 7: circle distance=7.5 r7.5
+track 8: circle distance=8.5 r8.5
+track 9: circle distance=9.5 r9.5
+ze blinded: circle distance=1 r1
+ze magic 30: circle distance=30 r30
+ze smell 6: circle distance=6 r6.5
+ze start area 5: circle distance=5 r5
+zz Anomali: cone arc=299 distance=25 x3 r1
+zz Asar: cone arc=266 distance=16 x1.5 r1
+zz Besar: cone arc=188 distance=19 x1.5 r1
+zz Bowlas: cone arc=309 distance=27 x2 r1
+zz Datarian Blood: cone arc=243 distance=21 r1
+zz Farsalos: cone arc=295 distance=27 x3 r1
+zz Gorg: cone arc=123 distance=13 x1.5 r1
+zz Kruugar: cone arc=147 distance=16 x1.5 r1
+zz Mandak: cone arc=305 distance=26 x3 r1
+zz Maras Blackhammer: cone arc=125 distance=18 x2 r1
+zz Nostromo: cone arc=160 distance=15 x2 r1
+zz Piggelina: cone arc=240 distance=24 r1
+zz Toby Bloodletter: cone arc=340 distance=16 r1.5
+zz blomling: cone arc=315 distance=23 r1
+zz gobbo Grawa: cone arc=217 distance=20 x1.5 r1.5
+zz gobbo Kizraz: cone arc=237 distance=25 x1.5 r1.5
+zz gobbo Old Maz: cone arc=253 distance=18 x1.5 r1.5
+zz gobbo ala 1: cone arc=204 distance=24 x1.5 r1.5
+zz gobbo ala 3: cone arc=211 distance=24 x1.5 r1.5
+zz gobbo ickyicky: cone arc=300 distance=10 r2.5

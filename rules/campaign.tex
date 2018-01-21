@@ -1,0 +1,454 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+
+\phantomsection\addcontentsline{toc}{chapter}{Campaign}
+\chapter*{Campaign}
+\chaptermark{campaign}
+
+
+The campaign aspect of the net-hack'n'slash project were the most fun, so we'll keep going with that. The death toll was lower than I expected through all the main campaign threads we played. There was a surprisingly strong, but good, effect of Heroes being able to retreat and regroup when things were getting dire.
+
+We'll continue with the usual disconnected reality cliches, either by rules, circumstance, or magic, so that it is trivial to inject and extract characters through the sessions. I expect people to be connecting/disconnecting due to family, scheduling, software, network etc. The campaign style and encounter design must accommodate that.
+
+Reminder of the basic stat acronyms:
+\goodbreak \begin{samepage} \begin{verbatim}
+basic character traits
+----------------------
+(long)        (eng) (old Swedish)
+strength       str   sty
+dexterity      dex   smi
+constitution   con   fys
+intelligence   int   int
+psyche         psy   psy
+perception     per   itf (attention att)
+charisma       cha   kar/per
+
+hitpoints      hp    kp
+absorption     abs   abs
+movement (maneuver walk run dash)   m/w/r/d
+stamina        sta
+vision         vis (distance) arc (angle)
+magic power    mana
+action points  ap
+experience     xp
+
+money          gold silver copper (g s c)
+\end{verbatim} \end{samepage}
+
+
+
+
+
+%===============================================================================
+%                    C R E A T I N G   C H A R A C T E R S
+%                    -------------------------------------
+
+\phantomsection\addcontentsline{toc}{section}{create a character}
+\section*{Creating characters}
+
+For most campaigns I'll keep using the method of pre-rolling a set of potential Heroes for the player to choose from. The simple rollchars.py script rolls up sets of basic characters. It's easy to tweak the selection set of races for a specific campaign or adventure setting.
+For one-off or later added Heroes the player can instead roll a small set and choose a character from there.
+
+Select/roll the character your want to play. Buy skills that makes sense for the profession you want your character to have. Don't spend too much time creating your first character, it will probably die soon anyway, and you'll have to make another, and another, and yet another one again. It might even be a good idea to create a bunch of them in the first place so that you have the queue already waiting by the mouth of the dungeon, ready to charge into the darkness in search of a quick and painful death.
+
+There are a few things you should consider. Focus the character on one role when creating a 100xp newbie. He will not have enough points to get good enough for more than one task. Skills you expect to use regularly should have level 5 or better, and the main combat skill at lvl 7 is a good start. If possible try to spread out some basic support or campaign skills over the party Heroes.
+
+Early on it's good to have a strong defensive option. Shields and two handed staffs are good defensive options since their bonuses makes them more reliable in the early adventures. E.g: The cost to get an effective 8 in parrying defence action varies greatly. For sword it's 64xp, for 2h staff it's 28xp, and for a normal shield it's 17xp. The strongest defensive action is generally "avoid", but that costs 51xp for lvl 8.
+
+A standard fighter should probably have a main weapon and a shield. An alternative if he has good mobility is a two handed high damage weapon and good avoid capacity. A ranged fighter can be fast to stay out of trouble by positioning, or also carry a defensive melee weapon such as a staff or shield. The same goes for spell casters. Close combat tends to come for everyone quite often. Archers should probably also be quick at changing between the bow and the melee weapon.
+
+You can find some example Heroes at various experience levels in the "characters" section later.
+
+Here is the basic character sheet layout. It has already been explained above, in the "rules:character" statistics sheet section.
+
+\goodbreak \begin{samepage} \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str          hp abs
+dex          m w r d
+con          stamina
+int          vision arc
+psy          mana
+per          ap
+cha          xp
+----------
+skills
+----------
+spells
+----------
+equipment
+money ( g s c )
+===================================
+\end{verbatim} \end{samepage}
+
+
+\subsection*{Rolling character stats}
+%------------------------------------
+Further down in this file there are lists of different races and their specific stat rolls. Note that you may use the "hero" version of the rolls if you want, and that you may roll movement instead of choosing the race standard if so desired.
+
+The GM should decide how many times a player is allowed to re-roll when creating characters. However, I suggest allowing the players to roll more humans than dwarves, elves, and orcs. For example, allow the player to roll one elf, or two dwarves or orcs, or four humans, then select the one he wants to play. The humans are less powerful than the other races, although more balanced among the stats. By allowing the player to roll more alternatives this power deficiency is balanced a bit.
+
+To make thing simple I suggest using the "rollchars.py" script. Just change the number of total characters to choose from and run the script. It will roll a selection of characters from all races.
+
+%You may roll as many characters as you want, when rolling manually, one character at a time. You may interrupt and abort the foetus at any point, we are very pro-choice here you see.
+
+%You man also use the rollchars.py script which rolls 10 characters of each race, but only use that once, and choose the one you want among the 60 generated.
+
+
+\subsection*{Buying skills}
+%--------------------------
+The cost of buying skills is the "skill cost factor" (scf) times the square of the skill level, round down. \verb|cost = scf * sl^2|. However, a skill will always cost at least 1xp. \\
+E.g: skill cost factor 1.3 to level 4 costs 1.3*16=20.8 round down ~20. \\
+E.g: raise same skill from 4 to 6: 1.3*(36-16)=26. \\
+Note that it can be a little bit cheaper to raise skills a little bit at a time instead of a lot in one go. However, if you want to do this you have to go adventuring between every skill purchase. \\
+ \\
+%Some skills are free: \\
+%The skill "avoid" is free to lvl = dex/2 (round down). \\
+%The skill "brawling" is free to lvl = dex/3 (round down). \\
+%The skill "throw" is free to lvl = dex/3 (round down). \\
+%The skill "find" is free to lvl = per/2 (round down). \\
+%The skill "gossip" is free to lvl = cha/2 (round down). \\
+%Some languages are generally free to a certain level: \\
+%Common is free for humans and halflings to int+3 \\
+%Common is free for other races to int-3 \\
+%Other races have their respective mother tongue is free to int+3 \\
+% \\
+%Some maneuvers are free: \\
+%maneuver yield: everyone has this ability from the start. \\
+%maneuver off balance: everyone has one step off balance. \\
+%\\
+%These skill levels are free from the start for the newbie character, but does not change if he increases or decreases his base stats during creation or later on in the game.
+
+
+
+%\subsubsection*{some skills to consider}
+%%---------------------------------------
+%There are some basic skills that are worth considering in the early stage of your character development.
+%gossip, find, track, \\
+%avoid, jump, climb, swim, balance, ride, travel, \\
+%literate, counting, (language), lock&traps, sneak, \\
+%histography, monsterology, dungeoneering, first aid, \\
+
+
+
+
+
+%\subsubsection*{Buy a childhood}
+%%----------------------------
+%\subsubsection*{Buy a profession}
+%%--------------------------------
+\subsubsection*{Buy a childhood / Buy a profession}
+%--------------------------------------------------
+Childhoods and professions have been removed.
+They became obvious easy choices and made it
+too simplistic to opt for specific targets.
+Hence the character creation became less interesting.
+That was of course not the intent. So, gone for now, until fixed...
+
+Still available in \emph{childhood-and-profession.tex} file.
+
+
+\subsection*{The character's background}
+%---------------------------------------
+Once the character has a full set of traits, you go ahead and make up a suitably funny background. Also, get some starting gear that makes sense for the character, nothing too flashy and useful. He is a newbie after all. If it is expensive, it should be generally useless for combat and hard to sell.
+
+
+%\subsection*{The inbred rule}
+%----------------------------
+%The shittier the character, the richer he may be. Nobility is rich, and inbred. Therefore, crappy stats \emph{might} mean that he is a dim witted offspring of some nobleman or other. It might also mean that he is a total looser, and poor on top of that.
+
+%A general rule could be that the character may have non-combat equipment to a total value of 1 gold per total point under average in his primary stats (str-cha).
+
+
+\subsection*{Selecting equipment}
+%.-------------------------------
+Any aspiring adventurer can get a "starter kit" suitable for his background, all for free! However, the starter kit equipment is generally of really poor quality. Not 2nd hand, but probably 13th hand. It is generally unsellable stuff. The shitty start equipment will have strange quirks and failure modes, and worse stats and penalties than the standard equipment.
+
+See the "pregen newbies" in the character file for some examples. Some of them have spent money to improve their free starter kit gear.
+
+%The inbred rule can be applied here to give a more expensive, (but generally non combat) gear to chars with lousy stats.
+
+Improving the starer kit can be done by spending money. Look through the equipment list and see what is available. Newbies probably don't have access to exotic equipment, and perhaps only 50\% chance to special equipment.
+
+Some interesting equipment to purchase can be: \\
+light source: torch, lamp, candles, etc. \\
+fire tools: flint and steel, coal box, etc. \\
+food and water \\
+sacks or bags for loot. \\
+backpack for easy carrying of equipment. \\
+rope to help people climb up out of trap pits. \\
+grappling hook if no-one is left outside the pit. \\
+pick axe
+
+Some character backgrounds would allow them to start out rich, and with some expensive equipment, but then it should come with a serious down side. Perhaps the princelings manservant is an evil backstabber, plotting with the local highway robbers to steal everything and kill the little snot in the process?
+
+
+\subsection*{Alternative movement rolls}
+%---------------------------------------
+Instead of taking the base line race movements you can roll the character's movement stats. You can either roll one d10 and apply the result to calculate all the movements, or you can roll for each movement stat.
+
+
+\subsection*{Race traits}
+%------------------------
+All races have their own characteristics. Some make better fighters, others better mages, yet others make great cannon fodder and compost. Some are just for fun.
+
+\emph{Please note:} that the values below are for rolling Heroes and important NPCs. Every Tom, Dick and Harry doesn't have these values. For most NPCs and general uninteresting cannon fodder and back drop characters use the standard race values, and perhaps +/- a few points here and there for variation.
+
+\textbf{TODO:} list the standard race values from the "races" file.
+
+%                 d10/7  1-6               7-10     0,1  60/40
+%                 d10/5  1-4      5-9        10     0-2  meh
+
+%                 d10/6  1-5               6-10     0,1  5-5
+%                 d10/4  1-3      4-7      8-10     0-2  3-4-3
+%                 d10/3  1-2   3-5   6-8   9-10     0-3  2-3-3-2
+%                 d10/2  1  2-3 4-5 6-7 8-9  10     0-5  1-2-2-2-2-1
+
+
+\textbf{TODO:} The race Hero roll listings below are not updated yet! Refer to, and use rollchars.py as up to date.
+
+\
+
+\small \begin{samepage} \begin{verbatim}
+===================================
+human                       (token)
+-----------------------------------
+str  2d5     hp 2d10 abs 0         (alt hp 2d6+8 for heroes [10-20])
+dex  2d5     m1 w3 r6 d9           (alt sta 1d7+3 for heroes [4-10])
+con  2d5     stamina 2d5           (alt movements (all round down))
+int  2d5     vision 15+1d10         m = 1+d10/10
+psy  2d5     mana 2d10              w = 2+d10/4
+per  2d5     cap 7+1d6              r = 5+d10/4
+cha  2d5     xp 100+1d20            d = 8+d10/3
+vision arc 180+1d90 deg
+yield bonus is 2+d10/4 round down
+money 1d4 gold 1d8 silver 1d20 copper
+\end{verbatim} \end{samepage}
+
+\
+
+\pagebreak[1] \begin{samepage} \begin{verbatim}
+===================================
+dwarf                       (token)
+-----------------------------------
+str  2d5+2   hp 2d10+2 abs 0       (alt hp 2d6+10 for heroes [12-22])
+dex  2d5-1   m1 w2 r4 d6           (alt movement (all round down))
+con  2d5+2   stamina 2d5+5          m = 1+d10/8
+int  2d5     vision 15+1d5 infra*   w = 2+d10/6
+psy  2d5     mana 2d10              r = 3+d10/4
+per  2d5     cap 8+1d4              d = 5+d10/4
+cha  2d5-1   xp 110+1d20
+vision arc 120+1d90 deg
+yield bonus is 2+d10/4 round down
+con+3 against poisons
+money 1d10 gold 1d20 silver 1d20 copper + gem stone (5+1d6 gold)
+* infra vision is dusk vision until good implementation exist in maptools
+haggle bonus +3
+dwarves without any gems, or with less than 5 gold total coin
+suffers psy-1 mod until wealthy again
+dwarves with 50+ gold in coin and gems gains psy+1 mod while wealthy.
+\end{verbatim} \end{samepage}
+
+\
+
+\pagebreak[1] \begin{samepage} \begin{verbatim}
+===================================
+elf                         (token)
+-----------------------------------
+str  2d5-2   hp 2d9 abs 0          (alt hp 2d6+6 for heroes [8-18])
+dex  2d5+1   m2 w4 r8 d12          (alt movement (all round down))
+con  2d5     stamina 1d5+7          m = 2+d10/8
+int  2d5+1   vision 20+1d10 night   w = 3+d10/4
+psy  2d5     mana 2d10+4            r = 7+d10/4
+per  2d5+2   cap 9+1d4              d = 11+d10/4
+cha  2d5+2   xp 120+1d20
+vision arc 220+1d90 deg
+yield bonus is 2+d10/3 round down
+immune to poisons
+money, what for?, Well I have 1d4 silver and 1d10 copper somewhere.
+haggle bonus -3
+elves who are staying in a city or cave without access to nature
+suffer psy-1 mod per week to max -3. Immediately restored to mod-0
+when returning to nature.
+\end{verbatim} \end{samepage}
+
+\
+
+\pagebreak[1] \begin{samepage} \begin{verbatim}
+===================================
+halfling                    (token)
+-----------------------------------
+str  2d5-3   hp 2d8 abs 0          (alt hp 2d5+6 for heroes [8-16])
+dex  2d5+2   m2 w3 r6 d8           (alt sta 1d6+2 for heroes [3-8])
+con  2d5-1   stamina 1d5+2         (alt movement (all round down))
+int  2d5     vision 15+1d10         m = 2+d10/10
+psy  2d5     mana 2d10              w = 2+d10/4
+per  2d5+2   cap 8+1d6              r = 4+d10/3
+cha  2d5+1   xp 100+1d20            d = 6+d10/3
+vision arc 270+1d90 deg
+yield bonus is 2+d10/3 round down
+sneak bonus +3
+find bonus +3
+money 1d4 gold 1d8 silver 1d20 copper
+\end{verbatim} \end{samepage}
+
+\
+
+\pagebreak[1] \begin{samepage} \begin{verbatim}
+===================================
+orc                         (token)
+-----------------------------------
+str  2d5+3   hp 2d10+5 abs 0       (alt 2d8+9 for heroes [11-25])
+dex  2d5     m2 w4 r6 d8           (alt movements (all round down))
+con  2d5+3   stamina 2d5+5          m = 1+d10/4
+int  2d5-2   vision 10+1d10 dusk    w = 3+d10/4
+psy  2d5-2   mana 2d10-5            r = 5+d10/4
+per  2d5     cap 7+1d5              d = 6+d10/3
+cha  2d5-3   xp 80+d20
+vision arc 120+1d60 deg
+yield bonus is 2+d10/4 round down
+veteran bonus +3
+brawling bonus +3
+attack: bite 1d4 dam 2+d2 4ap scf 0.75
+double con against poisons
+orcs without any war trophies suffer psy-1 mod.
+money 1d6 silver 1d10 copper 1d4 large teeth/claws
+\end{verbatim} \end{samepage}
+
+\
+
+\pagebreak[1] \begin{samepage} \begin{verbatim}
+===================================
+goblin                      (token)
+-----------------------------------
+str  2d4-2   hp 2d6 abs 0          (alt 2d5+4 for heroes [6-14])
+dex  2d5     m1 w3 r5 d7           (alt movement (all round down))
+con  2d3     stamina 2d5-2          m = 1+d10/10
+int  2d4     vision 15+1d10 dusk    w = 2+d10/4
+psy  2d4     mana 2d8-4             r = 3+d10/3
+per  2d5     cap 6+1d6              d = 5+d10/3
+cha  2d4-2   xp 60+1d20
+vision arc 180+1d90 deg
+yield bonus is 2+d10/3 round down
+sneak bonus +3
+hide bonus +3
+disengage bonus +3
+attack: bite 1d4 dam 1d3 3ap (2ap if both hands free) scf 0.75
+attack: claw 1d4 dam 1 2ap (1ap if both hands free) scf 0.66
+money 1 silver 1d6 copper 1d4 teeth 1d3 stones 1d2 feathers 1d3 glass beads
+
+Goblin runts should be crated from regular goblin rolls:
+str/2, dex+1, con/2,
+hp/2, ap+1, xp-10,
+yield+1, avoid+2, sneak+2,
+common-2, svartlingo-1
+round up on all half values.
+\end{verbatim} \end{samepage}
+
+\normalsize
+
+\
+
+
+
+\subsection*{List of starter equipment kits}
+%-------------------------------------------
+
+Starting out in the Hero Adventuring business segment can be difficult, and it's so useful to have a small knapsack of stuff with you when you leave the old homestead. Character creation is probably also the only time in the game when your Hero can buy equipment for xp instead of silver.
+
+This equipment is of decent quality and not the kind of hand me down rusty old fail-at-the-worst-possible-moment standard starter fare that the less prepared newbie adventurers tote around.
+
+%\tiny\begin{verbatim}
+\small\begin{verbatim}
+Woodsman's backpack (cost 5xp):
+    backpack 5enc, knife, spear or bow + 10 arrows,
+    water bottle, food for 3+1d3 days, fishing gear, snares,
+    flint & steel, tinder, 1d3 torches,
+    water proof hooded cape, 5+D10 copper.
+
+Uncle Smith's well wishes (cost 8xp):
+    sword, shield, warm cape, water bottle, 20+D10 copper.
+
+Farmer Johns goodbye (cost 4xp):
+    knife, staff / axe, shoulder sack, water bottle, food for 5+D10 days,
+    flint \& steel, warm blanket, 10+D10 copper.
+
+Auntie's present (cost 5xp):
+    3x healing salve, first aid kit, warm sweater, 5+D10 copper.
+
+
+\end{verbatim} \normalsize
+
+
+
+
+
+%===============================================================================
+%E X A M P L E   N E W B I E   C H A R A C T E R S
+%-------------------------------------------------
+
+\subsection*{Example characters}
+%-------------------------------
+
+A set of pre-generated newbie characters can be found in the "characters" file (or appendix), amongst those: \\
+ \\
+Newton the Happy Farmboy, a poor farm hand turned wannabe fighter. \\
+Parry Hotter the Fizzler, a young wizard's apprentice. \\
+KrijgRauch EckStein, a young dwarf fighter fresh out of the mountains. \\
+Manny the Mage Trainee, another spellcaster in the making. \\
+Ein von Dääken, a noble fop who would probably do better writing sonnets. \\
+Pyttelina, a halfling thief ready to take (on) the world. \\
+Lars LongShot, a young hunter who is nowadays hunting for gold instead of geese. \\
+
+
+A couple of more experienced characters can also be found after the player and newbie characters.
+
+
+
+
+
+
+
+
+
+
+%===============================================================================
+% A D V E N T U R E S   A N D   C A M P A I G N   G A M I N G
+%------------------------------------------------------------
+
+\phantomsection\addcontentsline{toc}{section}{adventures and campaigns}
+\section*{Adventures and campaign gaming}
+%----------------------------------------
+
+This is of course the main purpose of the exercise, to be able to play interesting adventures and string them together into longer running campaigns. Several adventures were available for download from the rptools / maptool gallery when that service was still up. I'll see if I can put them together again and push them somewhere. In the meantime all adventures (in whatever state of completion or decrepitude) are available from the author.
+
+This project is designed mainly for short evening sessions, two to four hour sessions of gaming on weekday evenings. The guidelines below reflect our experience from this kind of game scheduling.
+
+Balancing character progression has been shown to be difficult for many game designers and is often poorly done in many well known adventure and table top games. By now we have over 100 game sessions under the belt, playing around 15 different characters varying between 100-1000xp. The general quadratic cost of skill progression has been shown to work very well for giving balanced mid and late game play. We have not yet played much with characters over 1000xp, so there is not enough data for very experienced heroes.
+
+A good general idea is to try to design adventures and encounters to give a reward of around 10xp per character per session with another 20-50\% bonus for mission completion or for specific side tasks. This has been shown to give a suitable progression curve as well as the occasional nice payday feeling for the players after special accomplishments.
+Most adventures are designed to take three to six sessions, i.e. 10-20h to play. The longer adventures should give partial completion rewards in between.
+
+Differentiate between "kill xp" and "mission xp". Give kill xp after each session, but only mission xp when specific tasks have been completed.
+Kill xp should be divided between the characters and henchmen. If they are many, then they get less per person. Mission xp on the other hand should be handed out at the full amount to each participant.
+Consider giving full or partial kill xp also for monsters that were avoided, scared away, tricked, or otherwise managed even if they were not killed.
+
+It could also be a good idea to set a minimum base line of ca 5xp or so per session regardless of accomplishments. That way there is always a slow progression ticking away, but nothing game breaking.
+
+
+XP is of course not the only reward. Money and equipment is also common. It is usually a good idea to keep the heroes poor most of the time with short bursts where they can roll in gold. A Quaff or mana potion should always be expensive investments, and not just stuff you buy to pad the equipment list to the next carry limit.
+
+Silver coins in a ratio of 1:1 to 2:1 against XP reward is a decent balance for everyday adventuring, with more lavish pay-outs from some adventures. A lot of "civilised" monsters carry some coin, and their equipment is usually worth a little bit even if it is in really poor shape or of orcish origin. This should be taken into account when calculating rewards if the players are known to scavenge.
+
+Be very careful when handing out magical or master crafted items. Those are worth a lot of money, and they are very powerful in the game. Even a well crafted sword with mod+1 is a significant boost for a normal character, and that bonus is worth a lot of xp in the hands of an experienced character.
+
+
+
+
+
+
+
+

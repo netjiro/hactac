@@ -1,0 +1,636 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+this todo list has input from players as well as author
+lots of comments in swedish, will not translate
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+----------------------- from the adventures/todo-compilation -------------------
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+NEW: ---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+OLD: ---------------------------------------------------------------------------
+
+
+
+
+TODO: ?? should whirlwind be fast+1 instead of fast+2 ??
+
+TODO: fixa till slow (?spell?), stacking med mobile:
+      dubbel step cost instead of -3
+TODO: gör en info rad för porträttet, med arms etc  --  try using label instead
+TODO: draw mana psy roll should faint when fail !
+TODO: heal3 macro, remove pain
+TODO: bygg marshlight spell
+TODO: build lysdjur
+TODO: feign death - charisma roll, mod for damage, etc
+TODO: svärmare, blir bättre ju fler man är runt target
+TODO: ability for mörkerseende.
+TODO: new skill - offra xp för extra skada, after rolls etc.
+      skill = max hp / session/day/etc. each increasing hp doubles xp cost
+TODO: fix raise dead, control dead, etc.
+TODO: killing blow, alltid träffar prone target. "coup de grace" slut på lidande
+      eller snabbare, eller alltid killing ?
+      dock begränsat till max skada på vapen ?
+TODO: paralyse knapp
+TODO: qualify how yielding effects free attacks on disengage.
+TODO: quaffing skall ta hel runda, men blir bara action,
+TODO: right to react, movement för att komma in i närstrid men inte mer
+TODO: roll on stam 0 ?
+TODO: lean - also measure distance from adjacent square, same square.
+      lean can also remove problems with shooting from base contact in some
+      cases.
+TODO: fire damage - at initiative, or beginning of turn ? beginning of turn
+      is probably better !  -  nope, easier but not better
+TODO: yield should say push 3 even if with fast action
+TODO: spells: sticky floor, web, som grapple fast på yta...
+TODO: all abilities should have at least ccf 1.1, so that it matters which and
+      when to buy.
+TODO: kass hp (neg hp) borde sänka initiativ
+TODO: läs TOM beskrivning igen, ang beteende av odöda
+TODO: helmet pot holder, with drinking straws
+TODO: köpa fler off balance, precis som yield, måste fixa macron
+TODO: clarify defensive step must be in yield.
+TODO: clarify acrobatics yield works
+TODO: clarify, phalanx ger bonus även för parader utan sköld.
+TODO: 5 lik på hög, någon gång borde det bli svårare än mod-3 ruta
+TODO: clarify, phalanx works only in straight formations, over shoulders, etc.
+TODO: attacker över phalanx går i lägsta initiativ av de två involverade !
+TODO: corner fighter ...   njae
+TODO: rescue letter cost (1s escrow) rules
+TODO: donkey tecknade :
+      http://www.canpages.ca/blog/wp-content/uploads/2009/03/donkey-irishman.jpg
+      http://www.iconarchive.com/icons/turbomilk/animals/256/donkey-icon.png
+TODO: sänk pris på war dogs ? bättre olika dogs ?
+TODO: run rundan innan kan tillgodoräknas som sats om man fortsätter eller ökar.
+TODO: stora rustning skall ha jump och climb penalties
+TODO: clarify regler gå in och ut ur kassa rutor, samt skog kass jättekass,
+      melee, to hit, ranged in ranged ut, hide, etc.
+TODO: clarify, defensive step fungerar inte när det inte går att ta mer
+      movement, e.g. i vatten då man flyttat ner för att vada 1sq/r
+TODO: drowning damage: con hålla andan rundor, sedan 1hp/r damage
+TODO: fetch arrows  commandupgrade for dog.
+TODO: kolla så att orcherna inte är dolda !!
+TODO: qualify disoriented, ex efter teleportation iaf om man blir teleported
+      av ngn annan
+TODO: förslag: vissa maneuvers kräver att man har tillräckligt mycket fv
+TODO: clarify that looses whirlwind for any actions not in the whirlwind,
+      e.g. taking a tackle hit.
+TODO: build tokens för arrow markers - copy to players
+TODO: spells - bring down a spell before time is psy-spellmana roll
+      spells last even if caster dies
+      healing spells dissipate when victim dies? - antorgs easier, but cannot
+      rescue heroes either by last chance quaff/spell/etc.
+TODO: change all aura and slow area effects to have effect only last in round,
+      not during round. Play round, then when all is done, tally area effects.
+TODO: fix so that heal happends before check for pass out
+TODO: rewrite magic - effect until end, not until pass out/die
+      except for active psy-psy or control spells which fizzle when die/pass out
+TODO: when fixing OnTokenMove, make sure it works with defensive step,
+      off balance etc... manual moves.
+      lean vision - bygg ett litet öga-v token som man kan använda istället
+      för att flytta gubben
+TODO: regenerera pilar som skill ?
+      eller skita i pilar och bara se till att det tar slut
+TODO: bygg bättre icon än prone för sittande skott phalanx
+      parterre
+TODO: area damage - strikt initiativ eller target går in i area självmant
+      inte triggar - jo måste vara så för att man inte skall kunna stå i eld och
+      banka om och om igen utan att ta skada.
+TODO: clarify lean "any adjacent non occupied square the character could move to
+      if he had enough movement points left.
+TODO: state för antorgerna för avstånd och för närstridsklubbor.
+TODO: heal skall fortfarande skriva -heal i woundslistan.
+TODO: lägg till var kusin kan tänkas vara normalt i äventyrets briefing
+      från nurensachs
+TODO: roll initiative skall bara synas för GM:
+      rolling för hidden critters etc.
+TODO: sänk antorgers heal till 2hp/r scale 2hp/m
+TODO: duration skall också skriva i chat bara för SL
+TODO: change antorg mana transfer så att de kan flytta över hur mycket som helst
+      per runda
+TODO: damage taking should not do the kill, unauto, etc.
+      do that in end of turn instead ! ??  - just for antorgs ?
+      -- should be for all characters with active heal --
+TODO: när hela så försvinner pain direkt när helan läggs, inte när helan
+      har tickat in klart. (känns skönt att bli heland)
+TODO: olika kommandon till djur olika svåra (mod+3/0/-3)
+      ex hund kom hit mod+3
+TODO: bleed skill, för tjuvar etc, som i descent
+TODO: aura och reactive skin skall inte slås skada- de ger skada direkt
+TODO: mörker seende droger (morot), ability
+TODO: walkie talkie för att kunna koordinera sneaker och annan
+TODO: flytta ut, tvinga fram slag, och får ett yield tillgodo från någon
+      som hugger frihugg.   eller ?  initiativ, tvinga fram
+TODO: magic carrots / night vision helmet ?
+TODO: fixa så startscript bygger ny rulebook.
+TODO: någon skill som gör att man blir svårare att träffa i närstrid ?
+TODO: multi round macro with healing etc...
+TODO: skall "feint" dra stamina?   borde för stora vapen ?
+TODO: se till att alla har sina maneuvers !!! secondary defence etc.
+TODO: köpa ability/skill chans till critical hits ?
+      naturlig 1 crit , double damage etc...
+TODO: byta actions mot förflyttning ... ?
+      olika ams-kostnad beroende på hur snabb man är och hur snabbt man
+      deklarerat
+TODO: fler formler/effekter som är långsamma low damage area effects.
+      fungera bättre tillsammans med andra små damage effekter, t.ex. reactive
+      skin, aura och liknande
+TODO: veteran borde kosta 2 ?
+      annars är det väldigt lätt att tåla jättemycket skada och psy för
+      brütal slaughter  ?
+TODO: tänk på extra regler för off hand weapon ...
+      annat än bara att ha flexibilitet att ha ett tyngre och ett lättare vapen.
+TODO: skriv fear reglerna
+TODO: sänk sköldar och vapens abs så att man måste använda deflect
+      när det blir för stora värden
+TODO: block parry cannot use yield
+TODO: skall brütal slaughter vara vs eller direkt fear ? se scary ...
+TODO: clarify bland, i vilka situationer och när man huger folk, etc.
+      bara först eller även senare ?
+TODO: clarify shields don't protect against magic, bolts are too clever,
+      and aim on sight/ sort of, but not precise enough to hit specific
+      places
+TODO: clarify move on stun, hur mycket minus ams börjar hindra förflyttning?
+      -1 move per -3 ams ?
+      skall man kunna ta actions som inte kräver rolls ? borde inte ...
+TODO: mer skada när folk inte kan tacklas iväg ?
+      kanske dubbel skada för de tackle stegen som inte kan knuffas bort?
+TODO: problem att man alltid kan tackla ner folk så länge man är snabbare och
+      har högre initiativ !
+TODO: maneuver: takes full round, hits all in base contact
+      howto stack with reach ?
+      drar extra stamina ...
+TODO: skill som avrundar ett ner/upp från tärningsslag
+      typ som gut? ett antal användningar per pass/day ?
+TODO: pre-buy faith points ?   and how about fate points ??
+TODO: lizardmen harrower spears abs 6
+TODO: Dungeon Emergency Device: betala förskott och kunna kalla in förstärkning
+      till en grotta. Hyra in folk.
+TODO: goblin och lizardmen bossarna har teleport activation necklaces.
+      plocka upp dem för att kunna använda teleports
+TODO:  move i närstrid triggar right to react
+TODO: pentagrammet, trollar in i flaska i labbet?
+      eller bara blinkar ut, tills vidare, så att de kan få tillbaka folk
+      kontrollerat
+TODO: ta bort att stamina säger hur mycket som finns kvar
+TODO: !!! GÖR MER UTOMHUSSTRIDER !!!
+TODO: skriv inte exhausted för kritter utan stamina !!
+TODO: dex roll
+TODO: skill - byta XP mot HP  ??
+TODO: big breasted orc healer archer hireling
+TODO: ability - self light   se bättre i mörker
+TODO: från jonas mail: På förekommen anledning: Skillförslag:
+        - To Tough to die
+        Ger bonus för att inte tappa medvetandet när man ligger på negativa HP.
+        - Last stand
+        Ökar skadan med motsvarande hälso och pain mod.
+        - Gritted teeth
+        Ignorera negbonus för låg HP.
+TODO: reminder knapp för vad folk gör tickar rundor
+TODO: skill TOSS - dwarftoss
+      kasta en companion.
+TODO: crowdfighter : borde ge +2dam på tunga vapen?
+TODO: clarify: "opportunity"
+      lämnar baskontakt - kan ej ses borde inte utlösa slag ?
+      eg dyker i vattnet löser ut slag
+      men ej teleportera bort
+TODO: reminder knapp : fråga text och rundor
+TODO: skill/magic maneuver : "efficient casting" drar mindre mana
+      när man lyckas kasta +3, +6, +9 etc.
+TODO: end of round knapp för alla, också visa vilka som inte är klara...
+TODO: sweep fungerar även om folk avoidar
+      och teleporterar
+TODO: färgsträck istället för zick-zack för dörrar
+TODO: kolla priser på unfazed, acrobatics, ...
+TODO: stalkers skall bara defence teleportera 3 steg !
+      eller kostar stamina att försvinna
+TODO: unfazed skall höja initiativ för turn med lvl istället för interrupt
+TODO: skall leader bonus gälla för resistance vs slag, tex str vs str ... ?
+TODO: skall leadership även ge bonus på tex perception rolls - roligare så
+TODO: massive strike el massa skada mot parering kanske skall göra så att
+      man kan tappa vapen (roll str?)
+TODO: slemhög som döda slemmonster - byta image på token ?
+TODO: attack-macron skall inte rulla skada, bara ställa in för rolldam
+TODO: mini skill "corner fight" reducerar -3 till -2 el så för corners
+TODO: mini skill "comfy shoes" walk and recover stamina
+TODO: mini skill "marathon runner" no stam for running
+TODO: skill "xx" reduce stam cost for movements ?
+TODO: behålls penetrating på sweepade slag ?
+TODO: skill / miniskill / maneuver - execute:
+      om fienden tål 1 efter slaget så dör han ändå.
+TODO: enc är str*3 plus en bas för rasen
+TODO: knapp long action som räknar ner och håller koll på max ams...
+TODO: failure of stam check always costs 3 ams
+TODO: liggande är avoid mod-3 och parry mod-3
+      kanske avoid med mod-6? nope -3 är tillräckligt
+TODO: mod+3 att träffa prone i närstrid ? antagligen redan skrivet
+TODO: ligger på dålig ruta, fortfarande mods?
+TODO: the undead hirelings skall vara mer resistenta mot fear
+      eg brütal slaughter, eg mod+6 eller så
+TODO: rest macro button: sets icon rest, set ap=0, set mp=0
+      if moves or actions anyway, then penalties to next round as usual,
+      but still rested.
+TODO: spells should use character stats for more influence on effects:
+      eg: range 5+spy+2/m, damage 2+psy/3+1/2m
+      magic: set things like range of a spell to depend on psyche instead of spell cost depending on psyche
+      e.g. lightning bolt psy+5 range. Fun details.
+TODO: 170606 add ability: reorder: force all combatants to re-roll initiatives,
+      or perhaps selectively...
+TODO: sneak vara action for resting purposes ?
+TODO: sneak: sneak should be an action. I.e: activating sneak should require
+      spending one action. Then sneak is active for that round.
+      Requires changes to back stab: back stab can be used as long as the character is undetected. I.e: sneak up behind in one round, then stab in the next.
+TODO: quick casting: the character gets more action points that he can only
+      spend on casting magic. He will first use his normal action points, then his quick casting action points once he has no normal action points left that round.
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+--------------------------------------------------------------------------------
+from rules.tex
+--------------
+
+
+
+%TODO:
+%-----
+
+% write which abilities and spells that can train without purchasing or finding.
+
+
+% change stamina cost for whirlwind and double
+% they should not cost stamina if they don't succeed.
+% OR ?? this will lead to a lot of rolling,
+% but can make double or whirlwind worth buying even to low skill levels.
+% I'm afraid of the "rulla för double bara för att, patentlösning"
+
+
+% fix different action duration versions
+% skip whole round primary action,
+% just keep whole round - no other actions
+% number of actions action duration, or mod push action duration
+% very fast action mod-1
+% fast action mod-2
+% action mod-3
+% slow action mod-4
+% very slow action mod-5
+% long action mod-6
+% very long action mod-9
+
+
+% change "just passing by", not base contact, but weapon reach instead.
+% Also: add maneuver eller skill för att kunna kuta förbi utan att kunna
+% bli anfallen !! Skill, skill test vs opponent block eller dex ?
+% eller bara skill test ?
+
+
+% which rolls to modify by ams and which to not!
+% some str vs str or psy vs psy etc should not be ams modified
+% tackle rolls ?
+
+
+% which rolls to modify by movement ?
+% dex rolls ?
+
+
+% arc of shields usage , normal 90 deg diagonal,
+% small shields larger arc
+% buckler 180 deg
+% maneuver "shield slinger" allow larger arc for shields, not slow shields
+% cannot use shield to parry attacks out of arc without turning first
+% same with sword etc, just the right arm side, but larger arc
+% some weapons very large arcs, staffs eg.
+
+
+%change movement names:
+%maneuver    careful
+%walk        normal
+%run         fast
+%dash        max
+
+
+% negativa mods när man har negativ stamina
+% mod -stamina
+
+
+% boost formler, ex fast, stronger, etc.
+
+
+% split energizer bunny
+% combat bunny and run bunny - for movement and for combat - stacks
+% can get a bit too powerful when can both run for free and fight one extra
+% attack for free, at 40xp total ?
+
+
+% battle focus damage splitting
+% skip damage on first (normal parried attacks)
+
+
+% defensive resting ?
+% only take defensive actions and maneuver
+
+
+% brutal slaughter -- overkill
+% maneuver, kills in a horrible way, so that the enemies in base contact
+% must roll for psy to not run away from the horrible slaughter immediately.
+
+
+
+
+% allround shield sweep, tvinga alla runt att backa
+
+
+% ability: combatcaster
+% skip vapen casting mods, istället för "trusty" xp på vapen
+
+
+% maneuver:
+% attacks that drains stamina on opponent
+
+
+%simplify:
+%    tackle,
+%    block,
+%    grab/hold/break
+
+
+
+%armour that restores stamina/health  slowly
+
+%stuff that gives skill or stat bonus
+
+%cursed item that forces re rolls of low dice results...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+================================================================================
+                                    N O P E
+                                    -------
+
+Kronologisk ordning på DONE items:
+copy-cut , ctrl-end , paste
+
+SKIP: super success, stuns people due to impressive move....  njae
+SKIP: rest regain stamina automagically -- nah, för mycket händer utanför
+      macro systemet
+NOPE: reach skall stacka med phalanx om det inte står så nu, även om men inte
+      har stickvapen. -- nope, bara med "poke attacks"
+NOPE: dubbla backstab skada efteråt ?    - jaa mycket roligare
+      --neeej fel med accurate etc...
+NOPE: offensive step också, som defensive step ?
+NOPE: already in "leader" and "combat unit"
+      group command: allows for activating more people when spending action to activate. cost as skill, or 10xp per extra person ?
+NOPE: too much work, too many different properties and sights and halos
+      TODO: halos för ranges
+      TODO: halos för movement templates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+================================================================================
+                                    D O N E
+                                    -------
+
+Kronologisk ordning på DONE items:
+copy-cut , ctrl-end , paste
+
+DONE: MACRO:
+fix so that movement declarations change initiative.
+Higher movement should increase initiative so that it is easier to
+get away from ppl when not already in a fight.
+
+171113:
+DONE: ändra near death till dead vid state
+DONE: stutter step walk:
+      moving without taking an action still costs one action point (push ams-1)
+      moving in conjunction (before and/or after) an action costs no AP.
+      This will reduce the incentive to make stutter steps to gain extra
+      diagonal movement distance since we cannot smoothly track diagonal
+      moves.
+DONE: fix con roll for passing out, veteran removes neg mods from damage.
+DONE: charge knappen skall fråga efter max charge (förflyttning till mål)
+DONE: special ability som gör att man kan quaffa när man är medvetslös ?
+      "dead drunk"
+DONE: ändra "Come on and die" ändra death to negative con
+      dör vid exakt negative con
+DONE: check varför ninnei fick -12 i cap
+      undra om pain räknas dubbelt för cap utanför runda ?
+      antagligen alla base-mods som räknas dubbelt, dvs gamla och för nya rundan
+      också - initiativet dras ner för mycket antagligen
+DONE: phalanx och skjuta över folk, clarification
+DONE: build blink in/out knapp som tar bort / lägger till auto/unauto
+DONE: slowheal borde markera i wounds när den tickar in för regenerate "r"
+      eller något sådant
+DONE: spell: open door on distance
+DONE: clarify phalanx med block och sidor/hörnen åt andra hållet.
+      clarify att phalanx inte kan användas tillsammans med yield,
+      eller tvärt om
+DONE: text "staggering"  toparry-1 lägg till toavoid-1
+DONE: slö healing drog, billig, etc.  första hjälpen etc...
+      health elexir, health wafer
+DONE: långsam heal knapp/reg
+DONE: xp uppskatta skill
+DONE: bygg knapp som skriver nuvarande runda i chatten
+DONE: quaffing should require a dex roll dex+6 eller så.
+DONE: lean should be targetable for response actions
+DONE: uppdatera sköldar gamla goblin soldier
+DONE: kolla hergemachers ursprungliga strength och strong 2
+      8 eller 10 i bas. kräver tot 12 för att få fast strength.
+DONE: off balance skall sänka initiativet !
+      CurrentBaseModification dras nu av från initiativet när startar ny runda.
+      detta räknar neg cap lite extra eftersom nextRoundInitiativeBonus
+      räknas ut genom 3*floor(resterande cap / capacity) även negativ,
+      men det borde vara liten extra penalty, max -3 vid dubbel cap
+      övertrassering och det är rätt otroligt.
+DONE: skill "häfva" quaffar en pot i en action istället för
+      en hel runda (primary action)
+DONE: reach måste vara 50 !
+DONE: skill som gör "tumble" att man inte triggar attacker när man passerar ur
+      någons range, eller passerar block
+      eller ex att man får en threat range, så att man kan reagera i anfallarens
+      initiativ och gå fram och slå när de kommer i närheten.
+      --- disengage
+DONE: quaff knapp, rest knapp, stamina tick, mana tick
+DONE: damage macro should clear other states.
+DONE: reach borde vara 50
+DONE: off balance knapp och template
+DONE: reach upgrade ? ännu mer reach, flera ggr ?
+DONE: off balance skiftar initiativ ?  - nope, just movement
+DONE: quickpass som skill ?   skicka över utrustning ?  --  spell: distribute
+DONE: death skall cleara andra states också...
+DONE: skill meditate - regain stamina faster
+DONE: uppdatera hergemacher   ---   saving for captain cardio ? or strength
+      and easy grip.
+DONE: distribute spell ?   get items to characters around the board.
+DONE: skall stun sänka initiativet också kanske, mycket roligare...
+DONE: reach är väldigt bra för 30xp, borde vara 50?
+DONE: duration not say how long for npc spells
+DONE: heal automagical macro
+DONE: lanterna icon
+DONE: bygg dispell magic / anti magic
+DONE: bygg eldpilar, tar lite tid att tända, sedan brinner med light candle ?
+DONE: gas cloud template
+DONE: -- fix so death macro sends arrange order to back if possible.
+DONE: dead ta bort från initiativlistan ...
+DONE: avoid a sweeping attack, går vidare ??  borde nog det...
+DONE: kosta ams att hoppa ? - ja vanlig action
+DONE: maneuver "arrow stab" , "dubbel pil shoota"
+DONE: skicka sentinel token till blom
+DONE: vargar har balance !    -- balance 6
+DONE: maneuver BashDoor in 0a.
+DONE: spell som gör att bara vissa kan höra en  -- teamspeak
+DONE: i macron: fråga innan push så att cancellerade attacker inte drar ap
+DONE: macro knapp MaxAP: declare full ap (MaxActionPoints)
+DONE: macro knapp push round
+DONE: macro knapp push move : allmp
+DONE: klicka att vänta på någon i listan, sätter senare i listan
+      ev kosta 1ap för att vänta...
+      DONE AS: select two chars, click button "wait on other"
+      this will set the faster PC to initiative-1 of the slower token(PC/NPC)
+DONE: "lead target" skill:
+      follow moving target
+      reduces ranged attack penalties for fast moving targets
+      alt, spendera initiativ för
+DONE: råttan skall vara small target (range attack mod-3)
+DONE: "switch" skill : rokad !
+DONE: lägg till initiativ till area formler, så de hamnar i listan.
+DONE-ish: FIX bug duration - update movetoback
+          MANUAL move to back every time... ?
+DONE: multi round counter 1-5 and multi button toggle:
+      press starts multi round counter, press again switches off and resets
+      updatenewround increases counter by 1
+DONE: fixed "util.stamina()" for simplified (MaxStamina==0 && Constitution == 0)
+DONE: maneuver corpse kick, putta undan ett lik en ruta.
+DONE: stun marker bygg, lektro eller nåt ring.
+DONE: shield breaker, add to chance of breaking shields and weapons
+DONE: "cornering" and "diagonal squeeze":
+      corner sneak, gå diagonalt runt hörn, eller med två steg, genom en diagonal som är blockad på två sidor med gubbar/ gubbe-hörn, men inte hörn-hörn för där är det blockat helt.
+DONE: ??? What about not allowing the free 45deg turn before the strike/parry
+      when reacting to an incoming attack or with "right to react"?
+DONE: target pointer & fire support
+      tag team för att skjuta in i närstrid
+      tex bara för small targets (råttan/varg/etc)
+DONE: TurBoots %boots of speed, %blinding speed?
+DONE: knock down & trip up
+DONE: clarify facing och lean.  just lean, not facing , use unfaced
+DONE: armour should give avoid penalties
+DONE: multitasking
+      skill att behålla spellcasting även när man gör annat
+      tex pausar casting en runda
+      eller combatcasting, kan dra loss lite actions för annat än casting.
+DONE: mod-3 to both attack and defence
+      counter attack med ett vapen borde vara slow-1 ? eller lite svårare?
+DONE: autoFF  : knapp spela fram rundor och gör uppdateringar
+DONE: whirlwind now costs 1ap per attack at least.
+      rebalance whirlwind för höga värden
+      egen cap ? el liknande för att inte få oändlig serie med superhöga värden
+      som inte begränsas i skada tack vare höga FV i vapen och consistent/etc
+DONE: resa sig med dex roll, annars försöka igen... annars en runda.

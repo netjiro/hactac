@@ -1,0 +1,440 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+NOT UPDATED TO 2017 declare action point changes
+                    weapon changes
+                    minor cost changes
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+skills
+
+types:
+n  normal cost= scf*lvl^2
+l  list of total costs to reach each level
+u  upgrade to a skill, cost as lists of levels
+
+
+
+
+
+accurate            ---    l 10,20,30 higher damage for better hits
+acrobatics          1.0    n         moving around real cool like
+agile               2.0    n         improved dexterity
+angle of attack     ---    l 10,20,30 easier to attack to the sides
+animal command      0.5    n         pets, evil attack budgies, and rabbits
+appraise            ---    n         take just the good stuff, how much is that jewel worth?
+arrow recovery      0.5    n         get arrows from corpses
+avoid               0.8    n         avoid incoming attacks etc
+axe                 0.8    n         weapons: axes 1h & 2h
+back stab           0.5    n         double damage for back stabbing sneaks
+balance             1.0    n         ignore terrain mods, etc
+battle cry          1.0    n         bellow bonuses to your friends
+black cat           1.0    n         force re-rolls on the GM
+block               0.5    n         block opponent movements and tackles
+bow                 1.2    n         weapons: bows 2h
+brawling            0.8    n         simple unarmed fighting, fists and kicks
+capable             1.0    n         improved capacity
+charge              0.5    n         reduce movement penalty for first attack
+charming            2.0    n         improved charisma
+climb               0.5    n         better climbing
+club                0.7    n         weapons: clubs 1h & 2h
+companion command   1.0    n         tell 'em henchmen what to do
+consistent          ---    l 15,30,45 higher damage for better hits
+counting            0.5    n         dividing plunder, etc
+crossbow            0.8    n         weapons: crossbows 1h & 2h
+dead drunk          0.5    n         drink while passed out
+determined          2.0    n         improved psyche
+double              1.0    n         two weapon actions in one regular action
+dungeoneering       0.5    n         info about dungeons and structures
+enduring            1.0    n         more stamina
+fancy attacks       0.5    n         make attacks difficult to parry
+fast                2.0    n         more movement points
+fast find           0.5    n         search a larger area each round
+find                0.5    n         find hidden things
+first aid           0.5    n         patch your friends back together
+fish eyed           1.0    n         improved vision angle
+flail               1.2    n         weapons: flails 1h & 2h
+focus               2.0    n         take penalties to cancel penalties
+forgiving forget.   1.0    n         change out old XP at 50% cost.
+gossip              0.5    n         find information from the locals
+gut feeling         4.0    n         store rolls and change out others
+haggle              0.5    n         buy cheap, sell expensive
+hammer              0.8    n         weapons: hammers 1h & 2h
+hawk eyed           1.0    n         improved vision distance
+häfva               0.25   n         fast potion quaffing
+jump                0.5    n         better jumping
+knife               0.7    n         weapons: knives and short blades 1h
+language*           0.5    n         learn a foreign language: common, ancient, dwarvish, elvish, darktongue
+leader              1.0    n         give bonuses to friends close by
+lightning strike    ---    u 20      upgrade to "martial arts", faster attacks and deflect parries
+literate            0.5    n         reading and writing
+locks & traps       0.5    n         pick locks, disarm and set traps
+luck                1.0    n         re-rolls
+martial arts        1.3    n         advanced unarmed fighting, hands and feet
+medicine            1.0    n         patch up the friends for more fighting
+meditate            0.5    n         rest to regain stamina faster
+mobile              2.0    n         ignore movement penalties
+monsterology        0.5    n         info about monsters
+Oy!                 0.5    n         fast activating of other character
+pack mule           0.5    n         carry more loot, or gear
+perceptive          2.0    n         improved perception
+pickpocket          0.5    n         steal from a person
+powerful            1.0    n         more mana
+precise             ---    l 10,20,30 higher damage for better hits
+prescient packing   1.0    n         pack what you really need
+prescient shopping  1.0    n         buy what you really need
+prescient training  1.0    n         train what you really need
+quadruple           2.0    n         four weapon actions in one regular action
+quick               4.0    n         ignore action penalties
+quick draw          0.5    n         draw/ready/stow equipment faster
+quick shot          1.5    n         reduce aim penalties for fast shots with ranged attacks
+rabbit's foot       1.0    n         re-rolls to friends
+rally               1.0    n         talk to give friendly bonuses
+rapid               1.5    n         improved initiative
+rapier              1.2    n         weapons: long light blades 1h
+resilient           1.0    n         more hp
+ride                0.5    n         horses and wagons
+roar                1.0    n         scream at the enemies to scare them
+rousing roar        1.0    n         scream to boost stamina to friends
+scary               1.0    n         look scary to the enemies
+shield              0.7    n         weapons: shields 1h & 2h
+sling               1.0    n         weapons: slings 1h & 2h
+slugger             ---    l 10,20,30,50,75,100,+30 higher strength bonus
+smart               2.0    n         improved intelligence
+sneak               0.5    n         stay undetected
+sniper              1.0    n         reduce long range penalties for ranged attacks
+spear               0.8    n         weapons: spears 1h & 2h
+staff               0.8    n         weapons: staves 1h & 2h
+staggering          ---    l 10,20,30 better hits are more difficult to parry
+strong              2.0    n         improve strength
+sword               1.0    n         weapons: regular blades 1h & 2h
+synchronize         0.5    n         time attacks to make difficult to parry
+tackle              0.5    n         better tackling and tackle balance
+tactician           1.0    n         give bonuses to friends via tactical advice
+tank                ---    l 10,+10  make full plate feel like a silk shirt
+taunt               1.0    n         get the enemies to attack you
+throw               0.8    n         weapons: thrown projectiles and improvised weapons
+tough               2.0    n         improved constitution
+track               0.5    n         better regional view, track folks
+travel              0.5    n         longer travel distance per day
+triple              1.5    n         three weapon actions in one regular action
+unfazed             2.0    n         turn facing without penalties
+veteran             1.0    n         ignore pain, better psyche in face of danger, etc
+whirlwind           1.0    n         multiple weapon actions in a sequence
+wrestle             0.5    n         better grabbing, holding, breaking free
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+maneuvers:
+
+
+anticipate          ---       l 10      initiative and bonus when predicting the future
+arrow stab          ---       1 10      melee attack with projectiles
+careful             ---       l 10      no fail on 10, mod+1
+careful attack      ---       l 10      mod+3 attack/defence but takes a round
+counter attack      ---       l 10      parry and attack in one action, two stamina
+critical damage     ---       1 10      good aim multiplies damage
+defensive step      ---       l 10      extra yield step
+deflect             ---       l 10      parrying high damage attacks
+double arrow        ---       1 10      two projectiles in one attack
+double tap          ---       l 10      two fast weak attacks in one action
+feint               ---       l 10      wear out the opponent's defence
+feint and follow    ---       l 10      long attack to pursue yielders
+guard               ---       l 10      defend your friends
+mighty grip         ---       l 10      1h instead of 2h and damage bonus
+missile parry       ---       l 10      parry arrows, rocks, knives, etc
+ninja looting       ---       l 10      loot without your friends noticing.
+personal            ---       l 10      short bonus for ranged attacks even in base contact
+phalanx             ---       l 10      defensive bonus from fighting together, attack over the shoulder of friends
+push                ---       l 10      move opponents in melee
+quick looting       ---       l 10      loot in an action istead of one round
+quick strength      ---       l 10      fast+1 instead of damage bonus
+roundabout smack    ---       l 10      attack that is very difficult to parry
+sweep               ---       l 10      unused damage continues into next target
+up close            ---       l 10      no contact penalties for ranged attacks
+wayward strike      ---       l 10      attack that is more difficult to parry
+yield               ---       l 10,20,30,50,75,100 better yield bonus
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+abilities:
+
+
+angry               ---       l 20      more damage when in pain
+annoying            ---       l 20,+5   become obvious target for enemies
+ambidextrious       ---       l 120,+50 automatic double
+bland               ---       l 30,+5   don't become a target for enemies
+blink               ---       l 20      escape reality for a short while, upgrades available
+breathless          ---       l 20      don't have to breathe
+brutal slaughter    ---       l 30      kill to scare enemies
+captain cardio      ---       l 30      regain stamina faster
+combat advantage    ---       l 30      gain upper hand when pressing attacks
+crowdfighter        ---       l 30      more damage when surrounded by enemies
+damaging aura       ---       l 50      damage everyone near
+decimating stare    ---       l 30      force opponent to not attack
+detonate            ---       l 30,+20  opponents explode when they die, upgrades available
+divine retribution  ---       l 20      a god will avenge your death
+dominating stare    ---       l 50      take control of an enemy
+energizer bunny     ---       l 30      spend less stamina
+engaging opponent   ---       l 30      force enemies to keep fighting
+extra extremity     ---       l 50,+50  extra arm, or two, or three...
+fearless            ---       l 30      immune to fear
+foul                ---       l 30      don't become target for critters
+gapfinder           ---       l 20,30   shoot through obstacles
+grapple             ---       l 50,+50  lock down enemies so they cannot move
+hand of deity       ---       l 30      pray for bonuses, upgrades available
+incorporeal double  ---       l 50      get a ghost double to scout and change places with
+jack hammer         ---       l 30      half stamina for attacks
+lean                ---       l 30      trace line of sight from adjacent squares
+munchkin            ---       l 30,+30  more than one profession
+nullskull           ---       l 20,30,40,50 resistance to magic
+painless            ---       l 30      immune to pain
+psychic teleportation ---     l 30      teleport within psy range, upgrades available
+reach               ---       l 50      increase reach range of melee weapons
+reactive skin       ---       l 50      give damage back to attacker in melee, upgrades available
+regeneration        ---       l 50,100,150,200,250 regenerate hp during fight
+running teleport    ---       u 10,20,30 move faster and teleport, upgrade to teleport abilities
+strenuous teleportation ---   l 50      teleport within line of sight, upgrades available
+tasty               ---       l 20      become obvious target for critters
+tingly magic        ---       l 20      detect magic, upgrades available
+uber                ---       l 100     don't fail on a roll of 10
+wall bug            ---       l 30,40,60,100 attack or move through wall portals
+
+
+
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+magic & spells:
+
+magic               1.0       n         max amount of mana per spell
+power casting       0.5       n         increase chance of success by spending more mana
+fast magic          ---       l 15,30,50,75,125,200 cast spells faster
+
+Har man inte tillräckligt med int, så dubblas kostnaden för att lära sig formlerna för varje saknad int, men det får man göra manuellt tycker jag.
+
+big boss' eye       0.33      n         remote camera
+black bolt          0.33      n         penetrating evil dark death ray
+blind               0.33      n         target gets vision=1
+close door          0.2       n         close a door
+control dead        0.33      n         control the undead or those temporarily raised back to unlife
+darkvision          0.33      n         see in absolute darkness
+detect magic        0.33      n         be aware of magic in spell radius
+dislocate           0.33      n         target forgets all location (map) information
+dispell             0.66      n         dispell existing spell effect
+disrupt             0.66      n         disrupt spell being cast
+distribute          0.33      n         move items between characters
+drain               0.33      n         forcibly drain mana from target
+earthling           0.33      n         move through solid objects
+embed magic         0.25      n         bind a spell into an object, trigger by touch
+encharge            0.33      n         add offensive or defensive bonuses to a weapon
+fear                0.33      n         strike fear in your enemies
+fire ball           0.33      n         area blast fire
+fire blast          0.33      n         weaker faster fire ball
+fire storm          0.33      n         area agressive fire shield
+flying              0.33      n         fly
+force bolt          0.33      n         fast death ray
+force wall          0.33      n         magical barrier which is difficult to pass through
+fortify             0.33      n         improve constitution
+frenzy              0.33      n         target gets frenzied and will attack nearest target
+fumble              0.33      n         target gets mods to all actions for a short duration
+fumbly              0.33      n         target gets mods to all actions for the duration
+generate            1.0       n         generate mana over time
+hasten              0.33      n         speed up target
+heroism             0.33      n         make targets heroic, fear resistant and offensive
+heal                0.33      n         restore target hp
+heal all            0.33      n         heal all targets close by
+hide casting        0.25      n         hide magic being cast
+hide embedding      0.25      n         hide magic embedded in object
+hold                0.33      n         target cannot move, but can perform stationary actions
+identify            0.5       n         identify the magic in an item
+levitate            0.33      n         hover and glide slowly through the air
+lower dead          0.33      n         bring down the undead or temporarily raised
+mana transfer       0.33      n         transfer mana to/from others or objects
+mass control        0.33      n         control many undead
+mass lower          0.33      n         lower many undead
+mass raise          0.33      n         raise many dead
+minion missile      0.33      n         long lived seeking bolts
+nexus               2.0       n         magical nexus that can be tapped of energy over and over again
+open door           0.2       n         open a door
+paralyse            0.33      n         paralyse the target, no movement, no actions
+pain                0.33      n         give target pain
+permanence          1.0       n         make embedded magic permanent
+pilfer              0.33      n         steal an item from target
+poison gas          0.33      n         area effect, damage per round in gas
+raise dead          0.33      n         bring the dead back to temporary unlife
+revive              1.0       n         bring a dead back to real life
+rot                 0.33      n         target starts to rot away
+seal door           0.2       n         seal a door shut
+sentinel            0.66      n         summon ghost warrior defender
+shock bolt          0.33      n         penetrating long range death ray
+slow                0.33      n         slow down your enemies
+staff light         0.2       n         create light source, usually staff.
+stun                0.33      n         stun an opponent
+marsh light         0.2       n         moving light source
+storage             1.0       n         store mana
+strengthen          0.33      n         improve strength
+strike blast        0.33      n         add damage to next weapon attack
+teleport            0.33      n         teleport in line of sight or to marker
+trigger rune        0.33      n         create a smart trigger for an embedded spell
+ward flash          0.33      n         absorb incoming damage
+ward shield         0.33      n         absorb incoming damage
+ward skin           0.33      n         absorb incoming damage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+melee weapons
+name                dam pen abs  parry toparry toavoid fast att fin str maxd maxp reach0 reach1 reach2    enc     price
+
+dagger                4   0   8     -2      -1       0   +1   3  -4   2    0    1      0      -      -    0.5       020
+rapier                3   0   5     -2      -2      -2   +1   3  -7   2    0    0      0      -      -    0.75      080
+short sword           5   0   8      0       0       0    0   2  -5   3    1    1      0      -      -    0.75      060
+sword                 6   0  10      0       0       0    0   1  -6   4    2    0      0      -      -    1.0       100
+broad sword           7   0  14      0       0       0    0   1  -6   5    3    0      0      -      -    1.2       150
+long sword            8   0  12      0       0       0    0   1  -6   6    +    0      0      -      -    1.3       300
+bastard sword 1h      7   0  14      0       0       0    0   1  -6   7    +    0      0      -      -    1.5       500
+bastard sword 2h      9   0  14      0       0       0    0   1  -6   5    +    0      0      -      -    1.5       500
+2h sword             10   0  18      0      -1       0    0   1  -6   6    +    0      0     -6      -    2.0       800
+claymore 2h          12   0  22      0      -2      +1   -1   1  -4   8    +    0      0     -3      -    3.0      1200
+
+light axe             5   0   6     -3       0       0    0   2  -3   2    2    0      0      -      -    0.6       050
+axe                   7   0   8     -3       0       0    0   1  -3   4    3    0      0      -      -    0.8       080
+heavy axe             9   0  10     -3      -1       0    0   1  -3   6    +    0      0      -      -    1.2       120
+2h axe               12   0  12     -3      -2      +1    0   1  -3   6    +    0      0      -      -    2.0       300
+lochaber 2h          15   0  15     -3      -3      +2   -1   1  -2   9    +    0      0     -6      -    3.0       600
+
+pick axe              5*  2   6     -3       0       0   -1   1  -2   4    2    +      0      -      -    1.0       040
+heavy pick axe 2h     8*  3   9     -3       0      +1   -2   1  -2   6    +    0      0      -      -    1.5       070
+
+flail                 6   0   8     -5      -3       0   -1   1  -7   5    3    0      0     -6      -    0.8       300
+2h flail             10   0  10     -5      -4       0   -1   1  -8   7    +    0      0     -3      -    1.6       500
+
+light club            3   0   6     -2       0       0    0   2  -2   3    2    0      0      -      -    0.5       003
+club                  5   0   9     -1       0       0    0   1  -2   5    3    0      0      -      -    0.75      005
+heavy club            7   0  12     -1       0       0   -1   1  -2   7    +    0      0      -      -    1.0       010
+2h club               8   0  15     -1       0      +1    0   1  -2   7    +    0      0      -      -    1.5       015
+heavy 2h club        10   0  20     -2       0      +2   -2   1  -1   9    +    0      0     -6      -    2.0       020
+
+hammer                4   0  10     -3       0       0    0   1  -2   3    3    0      0      -      -    0.6       010
+sledge hammer 2h      6   0  12     -3       0       0   -1   1  -2   4    3    0      0      -      -    1.6       030
+war hammer            7   0  12     -2       0       0    0   1  -3   6    +    0      0      -      -    1.1       100
+2h war hammer         9   0  16     -1      -1       0    0   1  -3   7    +    0      0      -      -    1.5       300
+maul 2h              10   0  18      0      -2      +1   -1   1  -2   8    +    0      0      -      -    2.5       500
+
+staff 1h              3   0   8     +1       0       0    0   1  -6   3    2    0      0     -3      -    1.0       005
+staff 2h              4   0   8     +2       0       0   +1   1  -6   3    2    0      0     -6      -    1.0       005
+spear 1h              5   0   6      0       0       0    0   1  -4   3    2    +      0     -3      -    2.0       030
+spear 2h              6   0   6     +1       0       0    0   1  -4   3    2    +      0     -6      -    2.0       030
+heavy spear 2h        8   0   8     -3       0       0    0   1  -3   5    3    +      0     -3      -    3.0       050
+long spear 2h         8   0   8     -6       0      +1   -1   1  -2   6    3    +     -3      0     -3    4.0       080
+heavy long spear 2h  10   0  10     -6       0      +1   -2   1  -2   7    3    +     -3      0     -3    5.0       100
+
+halberd              10   4  12     -6       0      +2   -2   1  -2   5    +    0     -2      0     -5    5.0       150
+glave                10   2  14     -3       0      +1   -1   1  -4   5    +    0     -1      0     -6    4.0       150
+
+
+
+
+
+
+
+shields
+name                abs  parry fast str     enc     price
+
+buckler               8     +1   +1   0     0.5       020
+small shield         10     +2    0   2     1.0       030
+shield               12     +3    0   4     2.0       050
+large shield         15     +4    0   6     3.0       080
+tower shield         20     +5   -1   8     5.0       150
+
+
+
+
+armour
+name                abs str  dex yield  m  w  r  d cast sta   enc  enc price
+
+leather               1   0    0     0  0  0  0  0    0   0   1.0  2.0   050
+chain                 2   4   -1     0  0  0  0 -1   -1   0   2.0  4.0   400
+plate                 3   6   -2    -1  0  0 -1 -2   -2  -1   3.0  6.0  1000
+full plate            4   8   -3    -2  0  0 -2 -4   -3  -2   4.0 10.0  2500
+heavy plate           5  10   -4    -3  0 -1 -3 -5   -4  -3   5.0 15.0  5000
+
+
+
+
+ranged weapons
+name                dam pen range str maxd maxp     enc     price
+
+throwing knife        3   0     8   2    0    0     0.2       010
+throwing axe          4   0     6   3    1    0     0.33      020
+javelin               5   0    10   4    1    2     0.5       015
+heavy javelin         6   1     8   6    2    +     0.66      025
+
+short bow             4   0    12   2    0    0     0.75      030
+bow                   5   0    16   3    0    0     1.0       060
+heavy bow             7   1    14   7    0    0     1.33      100
+long bow              6   1    20   5    0    0     1.5       120
+heavy long bow        7   2    18   9    0    0     2.0       180
+
+crossbow              6   1    12   3    0    0     1.0       100
+heavy crossbow        7   2    15   5    0    0     1.5       200
+arbalest              8   3    18   7    0    0     2.0       600
+
+
+
+
+
+
+

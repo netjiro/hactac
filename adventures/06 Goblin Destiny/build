@@ -1,0 +1,13 @@
+#!/bin/bash
+
+latex 06*.tex
+latex 06*.tex
+latex 06*.tex
+
+dvipdf 06*.dvi
+
+rm *{.log,.aux,.toc,.dvi,.out}
+
+aplay ~/doc/sound/softpop.wav
+
+okular 06*pdf &
