@@ -668,6 +668,10 @@ Light is an issue. The light bugs are attracted to light, and will get aggressiv
 
 It's ca 30sq to the magic island if they follow the road, so at least 10 rounds at normal pace, and 3-5r if someone manages to dash there to scout. It's about 20sq straight shoot through the trees, so the island can seen after the first tree, or glimpsed if they explore south a bit.
 
+All the wild magic in the area is refreshing for the goblins. Any goblin heroes (not other races) regain 1 mana and 1 stamina each 10r.
+
+The mutamonsters are also randomly magical. If attempting to drain them they will have 1d10 mana available and 1d10 psy for the resistance roll. After 5+1d10r this has "recharged" to a new random amount and protected by new random psy value. It is also possible to push the critters to sleep by draining them this way.
+
 
 \subsection*{opposition}
 
@@ -675,22 +679,26 @@ Mutated monsters: Ranging from very large tentacle crab to tiny explosive light 
 
 The mutamonsters don't attack other mutated beings. So the already mutated runts can move freely in the area. Don't tell the players this though, and see if they notice. The mutated runts don't want to attack the mutamonsters either, so they must be forced to do so.
 
-Start out with a tentacle crab half in the water near the magic island, and 1-2 larva roaming the forest, along with 3-4 moss humps and 6-8 light bugs spread out with another 3 near the magic island.
+Start out with a tentacle crab half in the water near the magic island, and 1-2 larva roaming the forest, along with 5-8 moss humps, 4-6 airfish, and 10-12 light bugs spread out with another 3 near the magic island.
+Before the fighting starts the light bugs and airfish lazily amble around 1-2 sq/r, the rest stay mainly still.
 
 As long as the Heroes are in the area new monsters will come from the forest and the stream, random alone and in waves. Keep the players stressed. This is not just a clear out and rest place. It takes fighting and mobility to stay here any significant time.
 
 \begin{description}
 
-\item[Light bug:] small and slow bugs that buzz around and are attracted to the strongest light source they can find. They have r1 light source but are not attracted to each other's light. If they get close to the Heroes they will attack (dash 8), but won't attack "mutated" Heroes. Explode on contact: r2 dam 4. The explosion cloud lights the area r4, but is removed at end of turn.
+\item[Light bug:] small and slow bugs that buzz around and are attracted to the strongest light source they can find, but not to large fires (e.g. fire balls etc). They have r1 light source but are not attracted to each other's light. If they get close to the Heroes they will kamikaze attack (dash 6), but won't attack "mutated" Heroes. Explode on contact: r2 dam 4. The explosion cloud lights the area r4, but is removed at end of turn.
 They also explode if hit. Since they are difficult to hit with ranged attacks and melee will be within explosion range the only simple and safe way is magic.
+They fly: reach 1 is needed to hit them with melee weapons unless they are making a kamikaze run.
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Mutamonster Light Bug       (token)
 -----------------------------------
 hp 1 abs 0, set size tiny
-m2 w- r- d8
+m2 w- r- d6
 initiative 10
 tiny target: ranged mod-6 melee mod-3
+kamikaze attack 8 toavoid-2, explode on contact
+                  set dash 6 speed when making a kamikaze attack run.
 explode: r2 dam 4, explosion clouds are removed at end of turn.
 -----------------------------------
 \end{verbatim} \normalsize \end{samepage}
@@ -724,6 +732,7 @@ str 8     hp 25 abs 0, set medium size
 dex 3     m3 w- r- d6
 per 4     initiative 4
 pain threshold 99
+black knight 1
 balance 3
 smash: 7 dam 6 toavoid+1
        knockback 1
@@ -735,8 +744,9 @@ Has no defence.
 -----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
-\item[Larva:] is a seriously angry and overgrown tree-grub. The goblins will recognise it as a ThumbGrub. It is usually about the size of a goblin thumb, and very tasty. Now it's a couple of meters long, angry, and out for revenge!
-It will charge with horn attack, then hold down and start chewing.
+\item[Larva:] is a seriously angry and overgrown larva. The goblins will recognise it as a ThumbGrub. It is usually about the size of a goblin thumb, and very tasty. Now it's a couple of meters long, angry, and out for revenge!
+It will charge with horn attack, then grab hold with legs, hold down and start chewing. The two front legs will be used for grab-hold attacks. Either at different targets or both on the same target. Treat each leg separately. Holding with one leg gives mod+3 for the attack with the second leg. Break free from each leg separately as well.\\
+Specifically cutting off a leg requires a cutting weapon, is a mod-3 attack, and must do $\geq$8 damage after abs is deducted.
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Mutamonster Larva           (token)
@@ -752,11 +762,11 @@ horn charge 8: dam 5 pen 2 trip or knockback
                knockback: knock it 1 sq away and see if it falls there (dex-3)
 leg grab hold 6: dam 1 penetrating, str vs 10 to break free 3ap
 chew 7-abs: dam 3 penetrating, only when grabbed-held.
-Has no defence
+Has no defence.
 -----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
-\item[Tentacle Crab:] is a swollen nightmarish mixture of snake nest and freshwater crab mollusc. It will try to grab hold of it's target and drag it to the mouth to eat it. Each tentacle is a separate unit that can stretch out to 2sq away from any part of the crab. It can have up to 6 tentacles at any time, and can grow a new one every round.
+\item[Tentacle Crab:] is a swollen nightmarish mixture of snake nest and freshwater crab mollusc. It will try to grab hold of it's target and drag it to the mouth to eat it. Each tentacle is a separate unit that can stretch out to 2sq away from any part of the crab. It can have up to 6 tentacles at any time, and can grow a new one every round. Treat each tentacle separately.
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Mutamonster Tentacle crab   (token)

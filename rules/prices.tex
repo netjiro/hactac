@@ -390,10 +390,17 @@ The prices vary quite a bit, half or double price is nothing strange.
 10 fine arrows       1 0 0       0.33  tohit+1
 10 barbed arrows       5 0       0.33  dam+1
 10 sharp arrows        5 0       0.33  pen+1
-10 piercing arrows     1 0       0.33  dam-1 pen+1
-10 broadhead arrows    1 0       0.33  dam+1 pen-1
-10 fire arrows           5       0.5   dam-2 tohit-2 range-25\%
-                                       light source as candle, burns 15r
+10 piercing arrows     1 0       0.33  mod-1 dam-1 pen+1
+10 broadhead arrows    1 0       0.33  mod-1 dam+1 pen-1
+10 fire arrows           5       0.5   mod-2 dam-1 range-25%
+                                       oil splash dam 3/r for 5r or until doused
+                                       light source as torch, burns 5r
+                                       light 1a with fire source
+10 torch arrows          5       0.5   mod-2 dam-2 range-25%
+                                       light source as torch, burns 10r
+                                       light 1a with fire source
+10 candle arrows         5       0.5   mod-2 dam-2 range-25%
+                                       light source as candle, burns 20r
                                        light 1a with fire source
 
 \end{verbatim} \pagebreak[1] \begin{verbatim}
@@ -525,6 +532,9 @@ revival powder      15 0 0       1.0   resurrects a character in 10r incl prep
 
 blast off            2 0 0       0.25  restores 5+1d5hp and all stamina in 5r
                                        handle with care.
+                                       Can detonate: stun 9-3/sq from target.
+
+exploway             4 0 0       0.25  maginade: stun 15-3/sq from target.
 
 time fly             5 0 0       0.1   rewinds one action, ignores initiative.
 
