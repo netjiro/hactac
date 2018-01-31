@@ -8,6 +8,7 @@ for f in rules/{book,cam,cha,equ,mag,mon,pri,rul,ski}*.tex
 do
     aspell -d british -p ./british.dict.hactac \
         -t --dont-tex-check-comments \
+        --encoding="utf-8" \
         --dont-backup \
         -c "${f}"
 done
@@ -20,6 +21,7 @@ for f in adventures/*/*tex
 do
     aspell -d british -p ./british.dict.hactac \
         -t --dont-tex-check-comments \
+        --encoding="utf-8" \
         --dont-backup \
         -c "${f}"
 done
