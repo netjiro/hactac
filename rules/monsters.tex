@@ -20,6 +20,8 @@
 
 Monsters, critters, adversaries and other evil doers. The monster stats below should be seen as examples. I suggest creating personalised monsters for your encounters. Change a stat here and there to make things more interesting. A good idea is to still keep the critters at the approximate "standard" potency level though, so that your players don't kill their 300xp characters by attacking a goblin soldier. That would likely get them pissed off.
 
+Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
+
 
 
 % Make a simple table:
@@ -41,14 +43,14 @@ Monsters, critters, adversaries and other evil doers. The monster stats below sh
 
 
 
-
-
-Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
-
 % change to smaller font size
 %\small -- nope, go for \tiny
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+
+\
+
+\raggedbottom
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -67,12 +69,11 @@ spells
 equipment
 money
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -88,12 +89,11 @@ spells
 ----------
 equipment
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -105,45 +105,44 @@ per       ap
 attacks
 skills
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
 str       hp abs
 dex       m w r d
-per       initiative
+per       initiative, ap
 attacks
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
 hp abs
 m w r d
-initiative
+initiative, ap
 attacks
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
+\flushbottom
 
 
 
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\subsubsection*{Note on maptool:token size}
+\subsubsection*{Note on maptool: token size}
 Most standard size humanoids like humans, elves, dwarves, orcs should be set to  normal size tokens. Halflings and goblins should be set to small size, and runts should be set to tiny size.
 
 In general:\\
@@ -169,20 +168,18 @@ Jumping spider spawns are set to tiny, while black bug spawns are set to small s
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[1]
+\goodbreak
+\raggedbottom
 \phantomsection\addcontentsline{toc}{section}{animals}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 A N I M A L S
 -------------
 
 The usual stuff you'll find in the forest. Wolves, bears, snakes, etc.
-\end{verbatim} \end{samepage} \normalsize
 
-\
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
 ===================================
 wolf                       (wolf02)
 -----------------------------------
@@ -197,12 +194,29 @@ claw    5 dam 3
 charge  6
 avoid   3 yield+3
 ===================================
-
-
-
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+bear                        (token)
+-----------------------------------
+str 14    hp 25 abs 1 skin
+dex  8    m1 w4 r10 d16
+psy  8    vision 15
+per  8    initiative 10
+----------
+balance 6
+bite    8 dam 10
+claw    7 dam 5
+charge  3
+avoid   2 yield+2
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
 
 
 
@@ -211,21 +225,19 @@ avoid   3 yield+3
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[2]
+%\pagebreak[2]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{monsters}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 M O N S T E R S
 ---------------
 
 All the creepy not-quite-animals critters that spawn from the disturbed
 minds of game masters and story tellers.
-\end{verbatim} \end{samepage} \normalsize
 
-\
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
 ===================================
 bug                      (beetle01)    set tiny token size
 -----------------------------------
@@ -237,12 +249,11 @@ bite      5 dam 1, penetrating:
             armour abs > 3 counts as armour 3 (full coverage)
 immune to pain and hp/2 mods
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 black bug                (beetle02)    set small token size (slight reduction)
 -----------------------------------
@@ -276,12 +287,11 @@ A success+3 or better ensures that the target will not get hurt this
 way even if there is excess damage left after the bug died.
 Fail-3 or worse will hit the target instead of the bug.
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 big black bug            (beetle03)    set large token size (2x2)
 -----------------------------------
@@ -312,12 +322,11 @@ aid of the Big Black Bug. They will then attack everything in their path.
 
 BBB can coordinate small black bugs in intelligent movement, timing,
 and concentration of force.
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 spider                   (spider01)
 -----------------------------------
@@ -334,12 +343,11 @@ spin      5 full round attack
             parrying spin with weapon or shield gives mod-1 we accumulation
             on the item for every parry. Takes 1r to clear 1 mod.
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 huge spider              (spider02)  set large (2x2) token size
 -----------------------------------
@@ -374,8 +382,7 @@ spin    3/8 full round attack
 All attacks gain mod+1 per web on the target.
 The huge spider has a thick carapace that absorbs 3 damage
 Can be used to make a light weight plate armour.
-
-\end{verbatim} \end{samepage} \begin{samepage} \begin{verbatim}
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 Tactics:
 The spider will try to stab-hold a target, then web it fast.
 It will not bite until it has been in battle a few rounds and not been able to
@@ -397,12 +404,11 @@ m-mod/4 w-mod/3 r-mod/2 d-mod/1.
 However, the leg damage does not count to the total hp of the spider body.
 
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 cave worm                  (worm01)   set large (2x2) token size
 -----------------------------------
@@ -413,12 +419,11 @@ bite   5 dam 8 slow-3, acid drool 20% to reduce abs on contact equipment by 1
 avoid  3
 -----------------------------------
 size large (4sq)
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 slime monster      (slimemonster01)   set large (2x2) token size
 -----------------------------------
@@ -432,12 +437,11 @@ quadruple            3 (triple 6, double 9)
 gobble up            - dam 10, need to be grappled for 3r
                        consecutive damage 1/r in stomach
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 BiteRunners        (toothcritter03)
 -----------------------------------
@@ -457,12 +461,11 @@ They attack and circle in rapid movement, usually just 1 attack per round.
 Keep at around 3-4 steps out, then move in, bite, move out.
 Preferably they synchronise attacks from different sides.
 Circling, spreading and synchronising.
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 iffygriff adult       (demonbird01)             set token size to large 2x2
 -----------------------------------
@@ -488,12 +491,11 @@ Pain threshold dam/4
 
 One or a pair of adults often has 1d4 chicks around and 1d4 eggs in the nest.
 The chicks are used to circle the targets while the adults charge.
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 iffygriff chick       (demonbird01)             set token size normal 1x1
 -----------------------------------
@@ -518,8 +520,7 @@ The nest contains 1d4 iffygriff eggs, enc 2.0 each.
 They can be used to scare off ghosts, spirits etc due to the horrible stench,
 which even permeates the etheric. Lasts only for ~1week,
 then looses it's potency. Worth about 1 gold each in Trade Town.
-
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 info about iffygriffs: roll int
 +0 : bird monster, evil, foul, dangerous
 +1 : fast and can fly
@@ -538,7 +539,7 @@ int-3 : it's an iffygriff
 
 seeing the monster:
 int : it's an iffygriff
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
@@ -550,10 +551,12 @@ int : it's an iffygriff
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[1]
+%\pagebreak[1]
+\goodbreak
 %\phantomsection \addcontentsline{toc}{subsection}{lizard men}
 \phantomsection \addcontentsline{toc}{section}{lizard men}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 L I Z A R D   M E N
 -------------------
@@ -573,12 +576,11 @@ bite      6 dam 6 (only when already in melee)
 charge   10
 tackle    6 chase down then 1 claw tackle attack
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 lizardman scout       (lizardman02)  set small token size
 -----------------------------------
@@ -598,12 +600,11 @@ avoid        8 yield+4
 sneak        8
 find         6
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 lizardman fighter     (lizardman01,10,13)  set small token size
 -----------------------------------
@@ -621,12 +622,11 @@ small shield  5 abs 10, parry+2
 avoid         6 yield+4
 sneak         6
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 lizardman warrior      (lizardman04,11,12)
 -----------------------------------
@@ -645,12 +645,11 @@ avoid     4 yield+3
 veteran   4
 charge    6
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 lizardman chieftain   (lizardman05,14,15)
 -----------------------------------
@@ -675,12 +674,11 @@ scary      5
 wrestle    4
 sneak      5
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 lizardman worker      (lizardman03)  set small token size
 -----------------------------------
@@ -693,7 +691,7 @@ spear     3 dam 4, abs 6
 avoid     6 yield+4
 sneak     8
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 
 
@@ -702,9 +700,11 @@ sneak     8
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[2]
+%\pagebreak[2]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{goblins}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 G O B L I N S
 -------------
@@ -740,12 +740,11 @@ small shield  4 abs 8(10) parry+2 sometimes crappy quality
 short bow     4 dam 3(4), reload bow, sometimes crappy quality
                 range 10(12), short 5(6) mod+3, long 15(18) mod-3,
                 vlong 20(24) mod-6 dam-1, extreme 30(36) mod-9 dam-2
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin fighter           (goblin02,05)   set small token size
 -----------------------------------
@@ -768,12 +767,11 @@ short bow     5 dam 4, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+3
                 range 12, short 6 mod+3, long 18 mod-3,
                 vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
                 str 2 (no str bonus)
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin warrior           (goblin07)   set small token size
 -----------------------------------
@@ -790,12 +788,11 @@ sneak         4
 charge        6
 leather armour abs 1
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin champion          (goblin09)   set small token size
 -----------------------------------
@@ -814,12 +811,11 @@ sneak         3
 charge        6
 leather armour abs 1
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin soldier           (goblin01)   set small token size
 -----------------------------------
@@ -845,12 +841,11 @@ short bow     7 dam 4, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+3
 (no shield)     range 12, short 6 mod+3, long 18 mod-3,
                 vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
                 str 2 (no str bonus)
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin elite soldier    (goblin01b)  set small token size
 -----------------------------------
@@ -881,12 +876,11 @@ bow            8  dam 5, quick shot 3, sniper 3
 (no shield)       range 16, short 8 mod+3, long 24 mod-3,
                   vlong 32 mod-6 dam-1, extreme 48 mod-9 dam-2,
                   str 3 (no str bonus)
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin shaman            (goblin04)   set small token size
 -----------------------------------
@@ -904,12 +898,11 @@ poison gas    4 cast 5r 2m, dam 1/r, size 3x3 +2x2/m, duration 10r +5r/m
 powercasting  3
 sneak         4
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin runt          (goblinrunt01)   set small token size
 -----------------------------------
@@ -924,12 +917,11 @@ bite      4 dam 1
 avoid     5 yield+3
 sneak     6
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin runt knifer   (goblinrunt02)   set small token size
 -----------------------------------
@@ -945,7 +937,9 @@ knife     4 dam 3, fast+1
 avoid     6 yield+3
 sneak     8
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
+
+\
 
 
 
@@ -956,9 +950,11 @@ sneak     8
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[2]
+%\pagebreak[2]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{orcs}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 O R C S
 -------
@@ -983,12 +979,11 @@ tackle         4
 wrestle        4
 veteran        4 (1,+3)
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 orc warrior                  (orc02/09)
 -----------------------------------
@@ -1012,12 +1007,11 @@ wrestle        5
 tackle         5
 leather armour abs 1
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 orc soldier                  (orc04/07/08/11)
 -----------------------------------
@@ -1051,12 +1045,11 @@ orc war shield      abs 14, parry+3,
                     Ranged attacks mod-2 when in the way.
                     Hiding behind it (3ap) ranged mod-5
                     tackle mod+3
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 orc champion                 (orc10/05)
 -----------------------------------
@@ -1085,12 +1078,11 @@ plate armour abs 3
 alternatives:
 2h flail    8 dam 11(10), abs 10, parry-5, toparry-3, snag-3, str 7, finesse-6
 2h sword    8 dam 12(10), abs 16, toparry-1, str 6, finesse-6
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 orc chieftain            (orc14)
 -----------------------------------
@@ -1132,12 +1124,11 @@ tower shield        abs 20, parry +5, str 8, slow-1
 alternatives:
 2h flail    8 dam 11(10), abs 10, parry-5, toparry-3, snag-3, str 7, finesse-6
 2h sword    8 dam 12(10), abs 16, toparry-1, str 6, finesse-6
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 orc shaman                  (orc03)
 -----------------------------------
@@ -1163,7 +1154,9 @@ drain        4 cast 2r 0m, psy/psy +3/m, range contact, drains diff mana points
 ----------
 very heavy leather armour abs 2
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
+
+\
 
 
 
@@ -1171,9 +1164,11 @@ very heavy leather armour abs 2
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[2]
+%\pagebreak[2]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{svartfolk}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 S V A R T F O L K ,   o t h e r
 -------------------------------
@@ -1213,14 +1208,13 @@ huge club   5 dam 12/15, abs 25, parry-3, toparry-3,
 large rock  5 dam 8,
 thrown        range 6, short 3 mod+3, long 12 mod-3,
               str 12
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-basic ogre                 (ogre01)
+basic ogre                 (ogre01)  (set token size large (2x2))
 -----------------------------------
 str  20   hp 30 abs 1 (skin) large target  ranged tohit+3
 dex   7   m3 w6 r9 d12
@@ -1244,7 +1238,10 @@ spells
 equipment
 money
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
 
 
 
@@ -1254,20 +1251,18 @@ money
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[2]
+%\pagebreak[2]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{dead and undead}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 U N D E A D ,   Z O M B I E S ,   E T C
 ---------------------------------------
 
 Braaiiiiin...
-\end{verbatim} \end{samepage} \normalsize
 
-\
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
 ===================================
 zombie (slow)            (zombie01)
 -----------------------------------
@@ -1279,12 +1274,11 @@ grapple     5 dam 1, penetrating 1, mod+1/zombie in base contact with target
 bite        5 dam 3, when grappled
 tear apart  5 dam 5, penetrating 3, when grappled
 -----------------------------------
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 skeleton               (skeleton02)
 -----------------------------------
@@ -1300,12 +1294,11 @@ immune to pain and half hp mods
 pain threshold 99
 black knight 1
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 evil skeleton          (skeleton03)
 -----------------------------------
@@ -1318,12 +1311,11 @@ pacing      1 (-2,-2,-6)
 2x sword    8 dam 7(6), abs 10
 double      7
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 mummy                     (mummy01)
 -----------------------------------
@@ -1337,12 +1329,11 @@ wrestle     5
 crush       dam str\\str diff per round when grappled
 life drain  psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 evil mummy                (mummy02)
 -----------------------------------
@@ -1364,7 +1355,9 @@ grapple     8
 crush       - dam str\\str diff per round when grappled
 life drain  - psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
 ===================================
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
+
+\
 
 
 
@@ -1375,9 +1368,12 @@ life drain  - psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[4]
+%\pagebreak[4]
+%\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{demons}
-\tiny \begin{samepage} \begin{verbatim}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
 D E M O N S
 -----------
@@ -1422,9 +1418,11 @@ mana 12      :
 pain t4 v3   :
 hp/2         :
 
-\end{verbatim} \end{samepage} \normalsize
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 grey stalker             (demon10b)
 -----------------------------------
@@ -1458,25 +1456,31 @@ hp/2         :
 
 ==================== more grey stalker pics in demons dir
                      esp smaller versions, hivelings
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
 
 
 
+
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\pagebreak[4]
-\tiny \begin{samepage} \begin{verbatim}
-The Blackscale Antorg critters that usually live underground, and rarely seen.
+%\pagebreak[4]
+\clearpage
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+The Blackscale Antorg critters usually live underground, and are rarely seen.
 They live in social gangs, where they can metamorphose to suit their role.
 It is not known if they are demons or not, but they have been found in more than
-one world reality. This of course makes them more demon than monsters...
+one world reality. This of course makes them more demon than monster...
 They dig for copper, and keep slaves of various races to work the digs sites.
 They travel through magical portals which the antorg masters create.
+\end{verbatim} \normalsize \end{samepage}
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Blackscale antorg master (demon14a)
 -----------------------------------
@@ -1501,7 +1505,7 @@ dwarvish         6
 svartlingo       6
 literate         8
 counting         6
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 ---magic-------
 magic 6
 power casting 3
@@ -1517,6 +1521,7 @@ ward shield  8 cast 2r 2m, range touch, duration 5r +3r/m
                Absorbs incoming damage before it strikes the character
                or his equipment. Each absorbed damage point costs
                one charge from the spell.
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 force wall   8 cast 1r 1m, size 3 +1/m, duration 5r +3/m, range 5sq +3/m
                psy vs str +3/m to stop anyone passing the blocked passage
                missiles and magic will pass through the force wall with a
@@ -1543,7 +1548,7 @@ drain        7 cast 2r 0m, psy vs psy +3/m, range contact,
                drains diff mana points
 slow spells (10+r):
 mass teleport, open gate vortex, close gate vortex
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 --equipment--------
 thunder rod
 lightning staff
@@ -1552,12 +1557,11 @@ lightning staff
 hp 30 abs5   : 30
 mana 30 :30
 no pain
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Blackscale antorg fighter (demon14b/c)
 -----------------------------------
@@ -1592,12 +1596,11 @@ mana 10 : 10
 no pain
 ammo ts : 25
 ammo lr : 15
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Blackscale antorg slave hunter (demon14b/c)
 -----------------------------------
@@ -1641,22 +1644,9 @@ mana 15 : 15
 no pain
 ammo ts : 25
 ammo lr : 15
-\end{verbatim} \end{samepage} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 \
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

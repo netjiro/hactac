@@ -1,6 +1,8 @@
 
 \documentclass[11pt, twoside, titlepage, a4paper]{article}
+% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 \usepackage{graphicx}   % For eps figures
 \usepackage{epsfig}     % Alternative package
@@ -33,6 +35,11 @@
 
 \newcommand{\vs}{$\backslash\ $}  % "versus" slash
 \newcommand{\bs}{$\backslash\ $}  % just backslash
+
+%link new command names to the original font sizes, for easier to remember smaller font size
+\newcommand{\footnotesize}{\vsmall}  % simpler to remember
+\newcommand{\scriptsize}{\vvsmall}   %
+%\newcommand{\tiny}{\vvvsmall}
 
 
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}

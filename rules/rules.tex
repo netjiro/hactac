@@ -132,15 +132,15 @@ failure -9 is a critical failure or fumble
 \item[Modification, mod, penalty, bonus:] all the same, although penalties tend to be bad for you while bonuses are usually good. Modifications are additive to an action's chance of success. \\
 E.g: skill 5 mod+3 has a chance of 8 on a D10 to succeed, skill 6 mod-2 has 4.
 
-The Action Modification Stack, ams, is the total accumulated mods all stacked together. E.g: walk (mod-3) and below half hp (mod-1) and declaring 5ap (mod-2) gives ams-6.
+The Action Modification Stack, ams, is the total accumulated mods all stacked together. E.g: walk (mod-3) and below half hp (mod-1) and declaring 5ap (mod-2) gives ams:mod-6.
 
 \item[Actions and Action Points:]
 Actions are anything the character actively does, except for movement. Actions cost action points, and most actions cost three action points.
-Action points are declared in the beginning of the round. The more actions points you want to use the more mods you will have on your rolls.
+Action points are declared in the beginning of the round. The more actions points you want to use the more mods you will have on your rolls.\\
 Don't think of action points as units of time.
 
 \item[Movement and Movement Points:]
-Moving the character costs movement points. Movement points are declared in the beginning of the round. The faster you move the more mods you will have on your rolls in that round.
+Moving the character costs movement points. Movement speed is declared in the beginning of the round: maneuver, walk, run, or dash, giving a set amount of movement point. The faster you move the more mods you will have on your rolls in that round.
 
 \item[Skill, spells, magic, trait, ability, power, mutation, psionic, etc:] gives the character the option of performing actions or maneuvers that he otherwise would not have access to, or improves the chances of succeeding for rolls he already has available. The terms are treated as the same thing, similar to skills in regular RPGs. They generally add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
 
@@ -149,10 +149,10 @@ This is also the name of the slowest combat movement mode, sorry about that. I'l
 
 \item[Round:] (r) is a measure of time, one game round. It does not translate to a specific number of seconds. The term "turn" is also frequently used to mean more or less the same thing as a round, although it should more specifically be the time period of one round's actions and movements for one character.
 A round is split into the following phases: declaration, all turns, end.
-During Declaration phase all characters declare movement and action points. Then all characters take their turns. Then the round ends and book keeping is done for the next round.
+During declaration phase all characters declare movement and action points. Then all characters take their turns. Then the round ends and book keeping is done for the next round.
 
-\item[Square] (sq) is used as a measure of distance, i.e. the length of a square on the game map, or more correctly the distance a character travels when moving between two adjacent squares on the game map. This game is generally played on square tiles, but should work on hexes or gridless maps as well with some minor house rules.
-The sq distance on diagonals is usually measured 1-2-1-2-..., meaning the first diagonal counts as distance 1sq, while the second counts as distance 2sq.
+\item[Square] (sq) is used as a measure of distance, i.e. the length of a square on the game map, or more correctly the distance a character travels when moving between two adjacent squares on the game map. The game is generally played on square tiles, but should work on hexes or gridless maps as well with some minor house rules.
+The sq distance on diagonals is usually measured 1-2-1-2-..., meaning the first diagonal counts as distance 1sq, while the second counts as distance 2sq.\\
 In a few cases the sq is also a surface area.
 
 \item[Base contact:] is when two characters are standing in adjacent squares, connected by a side or corner.
@@ -254,9 +254,9 @@ run      -6
 dash     -9
 \end{verbatim}
 
-E.g: Hero A attacks Monster B, then wants to walk. He must take a -3 penalty to all actions that round.
+E.g: in round 5 Heroic Herman wants to attack Monster Mike and then walk 2mp. He then declares movement speed Walk and must take a mod-3 penalty to all actions that round, even if the attack happens before moving.
 
-Movements can be split around actions as well. However, other combatants can react to actions before character can move again. E.g: Character declares run, moves 4sq attacks monster but misses. The monster then attacks back, character chooses avoid and yield and moves two more steps, now out of harms way. Until next round... This is the "right to react" rule, see below.
+Movements can be split around actions as well. However, other combatants can react to actions before character can move again. E.g: Heroic Herman declares run, moves 4sq, attacks Monster Mike but misses. MM then attacks back before HH can move away. HH chooses avoid and yield and then moves two more steps, now out of harms way. Until next round... This is the "right to react" rule, see below.
 
 \begin{verbatim}
 Typical movement (maneuver walk run dash (m w r d)):
@@ -270,7 +270,7 @@ Movement is modified by skills and equipment and differs from the start from cha
 
 \subsection*{High initiative selects order of actions}
 %-----------------------------------------------------
-The order of different characters actions during each round is decided by initiative. Characters with higher initiative can choose when they want to perform movement and actions relative to the action timing of opponents with lower initiative. They can go before slower characters, or wait and then interrupt others actions when it suits them. The faster can thus also split their different actions to fall between the actions of slower characters.
+The order of different characters' actions during each round is decided by initiative. Characters with higher initiative can choose when they want to perform movement and actions relative to the action timing of opponents with lower initiative. They can go before slower characters, or wait and then interrupt others actions when it suits them. The faster can thus also split their different actions to fall between the actions of slower characters.
 
 Initiative is a dex+D4 roll, re-roll every now and then, e.g. each separate battle encounter, or might change in battle lulls.
 
@@ -284,70 +284,16 @@ The reaction action can be interrupted by characters with higher initiative, jus
 
 E.g: Attacking Albin moves in and attacks Defending David since AA has a higher initiative. DD can then parry with one action. Or if AA misses his attack DD can make a return attack under "the right to react", before AA can move out of reach or make another attack.
 
-Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn together, as part of, the defence action, but not only after the attack-defend is completed. %E.g: Attacking Albin strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defense is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defense action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have choosen to move 3sq then skip the defense since by then AA would be out of reach. If DD had higher initiative than AA he could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
-
-
-\subsection*{Action Points raises initiative, and spending decreases}
-%--------------------------------------------------------------------
-Each ap you declare will give initiative+1. And each ap you spend will decrease initiative by 1.
-
-
-\subsection*{Movement raises initiative}
-%---------------------------------------
-The faster movement you declare the higher your initiative becomes. This is to make it easier to move and regroup, which creates more flexibility in skirmishes.
-
-\begin{verbatim}
-Modifications to initiative from declared movement:
-maneuver +0
-walk     +3
-run      +6
-dash     +9
-\end{verbatim}
-
-E.g: Flightful Fred sees Mauling Morgan approaching. FF has initiative 7, MM has initiative 9. FF must declare his movement before MM since he has lower initiative. FF chooses to declare run and gets a +6 to his initiative resulting in 7+6=13. If MM wants to be able to move into strike position first, he must declare a run as well, since a walk (9+3=12) is not enough to catch up.
-
-
-%\subsection*{Spending movement points lowers initiative, just like actions}
-%-------------------------------------------------------------------
-% TODO, first check how things are implemented currently, then see if it would work, and how to deal with the varying speed? A character might well have >3sq movement extra between walk and run, or run and dash, so reducing initiative just by the amount of steps is probably not good. Perhaps just reduce by 3 for every started move? or by 1 for every started move, or ... ?
-
-
-\subsection*{Streamlining initiative list: waiting}
-%--------------------------------------------------
-When there are lots of Heroes and NPCs on the map things tend to get chaotic, especially when high initiative characters choose to wait until some with lower initiative have acted. This leads to having to loop through the upper parts of the initiative list again and again while only the lower initiative characters are acting for the most part.
-
-To get away from this problem we add three new possibilities:\\
-\begin{description}
-\item[wait for other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any APs.
-\item[wait] will retain the initiative but costs one AP.
-\item[done] simply flags that the character is more or less done for the round, unless something happens to him. It has no further effects.
-\end{description}
-
-With this it's possible to enforce a rule where the top initiative always acts, or waits, but at least gets moved down the initiative list or get flagged as waiting. Hopefully it gets rid of the irritation of having to loop through the initiative list over and over to resolve order of actions.
+Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn together, as part of, the defence action, but only after the attack-defend is completed. %E.g: Attacking Albin strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defense is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defense action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have choosen to move 3sq then skip the defense since by then AA would be out of reach. If DD had higher initiative than AA he could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
 
 
 \subsection*{Resistance rolls}
 %-----------------------------
-Resistance rolls. "attack versus defence",  "xxx vs yyy" or "xxx \vs yyy".\\
+Resistance rolls. "attack versus defence",  "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
 Both attacker and defender roll \verb|value - d10| and compare their differences. Best diff wins. The difference between the attack diff and defence diff is how good the success is. I.e. success diff is:\\
 \verb|(attack - d10) - (defence - d10) == attack - defence + d10 - d10|\\ If both attacker and defender have the same value this gives an outcome range of [-9,9], where the usual success=0 is a regular success, success+3 is a good success, success+6 is a very good success, and success+9 is an excellent or perfect success. Same with fail-3, -6, -9. Also note that a natural 10 roll has no "automatic fail" effect in resistance rolls.
 
 In some cases a resistance roll is requested where the defender must or can spend action points only if the attacker actually succeeds with his part of the roll, i.e. \verb|attack - d10| $\geq$ 0.
-
-
-\subsection*{Modified resistance rolls}
-%--------------------------------------
-Resistance rolls are sometimes done as a second step of an action roll. In these cases the resistance rolls are sometimes set to be modified by the success diff of the initiating action.
-
-%TODO: rewrite domination/dominate to instead use skill check then psy check each round.
-%TODO: rewrite this example, don't use domination:
-E.g: Magus King rolls for "domination" against minion Weakie. Domination calls for a skill roll + mod psy vs psy. So, Magus King has domination 6, rolls a 4, which gives diff +2, i.e. he succeeds with +2. That +2 is now used as mod for the psy vs psy resistance roll. Magus King has psy 6, minion Weakie has psy 4. Thus the modified psy vs psy resistance roll is now 6+2 vs 4, i.e. 8 vs 4
-%, and Magus King has a 9 to succeed with the psy vs psy resistance roll for his domination. He rolls a 5 and succeeds with +4. The minion Weakie is now under his control.
-. So Magus King rolls \verb|8-d10| and minion Weakie rolls \verb|4-d10|: Result \verb|8-9 = -1| and \verb|4-7 = -3|. Diff \verb|-1 - -3| is success+2, and minion Weakie is now under his control.
-
-%A mod resistance roll macro for maptools: \\
-%\verb|/roll 5+mod+attack-defence-d10| \\
-%A result $>=0$ is success, $<0$ is failure. \\
 
 
 
@@ -620,11 +566,65 @@ For simplified tabletop gaming the vision arc should probably be simplified to t
 \section*{More rules}
 
 
+\subsection*{Action Points raises initiative, and spending decreases}
+%--------------------------------------------------------------------
+Each ap you declare will give initiative+1. And each ap you spend will decrease initiative by 1.
+
+
+\subsection*{Movement raises initiative}
+%---------------------------------------
+The faster movement you declare the higher your initiative becomes. This is to make it easier to move and regroup, which creates more flexibility in skirmishes.
+
+\begin{verbatim}
+Modifications to initiative from declared movement:
+maneuver +0
+walk     +3
+run      +6
+dash     +9
+\end{verbatim}
+
+E.g: Flightful Fred sees Mauling Morgan approaching. FF has initiative 7, MM has initiative 9. FF must declare his movement before MM since he has lower initiative. FF chooses to declare run and gets a +6 to his initiative resulting in 7+6=13. If MM wants to be able to move into strike position first, he must declare a run as well, since a walk (9+3=12) is not enough to catch up.
+
+
+%\subsection*{Spending movement points lowers initiative, just like actions}
+%-------------------------------------------------------------------
+% TODO, first check how things are implemented currently, then see if it would work, and how to deal with the varying speed? A character might well have >3sq movement extra between walk and run, or run and dash, so reducing initiative just by the amount of steps is probably not good. Perhaps just reduce by 3 for every started move? or by 1 for every started move, or ... ?
+
+
+\subsection*{Streamlining initiative list: waiting}
+%--------------------------------------------------
+When there are lots of Heroes and NPCs on the map things tend to get chaotic, especially when high initiative characters choose to wait until some with lower initiative have acted. This leads to having to loop through the upper parts of the initiative list again and again while only the lower initiative characters are acting for the most part.
+
+To get away from this problem we add three new possibilities:\\
+\begin{description}
+\item[wait for other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any APs.
+\item[wait] will retain the initiative but costs one AP.
+\item[done] simply flags that the character is more or less done for the round, unless something happens to him. It has no further effects.
+\end{description}
+
+With this it's possible to enforce a rule where the top initiative always acts, or waits, but at least gets moved down the initiative list or get flagged as waiting. Hopefully it gets rid of the irritation of having to loop through the initiative list over and over to resolve order of actions.
+
+
 \subsection*{Actions that do not require rolls}
 %------------------------------------------------
 Some actions does not require any rolls. In that case they always succeed. However, in some situations there might be modifications stacked against them. In those cases the roll-less action is considered a "careful 10", meaning it has 10 of 10 to succeed as base chance, and does not fail on a rolled 10.
 
 E.g: The revival powder can be used to bring a fallen comrade back to life. However, if the recently deceased character had the "Hand of Deity" ability he mods all resurrection attempts with mod-3. In this case the revival powder is considered to have a "careful 10" as base chance of success, and will thus have a chance of 7 to succeed in reviving the unfortunate dead.
+
+
+\subsection*{Modified resistance rolls}
+%--------------------------------------
+Resistance rolls are sometimes done as a second step of an action roll. In these cases the resistance rolls are sometimes set to be modified by the success diff of the initiating action.
+
+%TODO: rewrite domination/dominate to instead use skill check then psy check each round.
+%TODO: rewrite this example, don't use domination:
+E.g: Magus King rolls for "domination" against minion Weakie. Domination calls for a skill roll + mod psy vs psy. So, Magus King has domination 6, rolls a 4, which gives diff +2, i.e. he succeeds with +2. That +2 is now used as mod for the psy vs psy resistance roll. Magus King has psy 6, minion Weakie has psy 4. Thus the modified psy vs psy resistance roll is now 6+2 vs 4, i.e. 8 vs 4
+%, and Magus King has a 9 to succeed with the psy vs psy resistance roll for his domination. He rolls a 5 and succeeds with +4. The minion Weakie is now under his control.
+. So Magus King rolls \verb|8-d10| and minion Weakie rolls \verb|4-d10|: Result \verb|8-9 = -1| and \verb|4-7 = -3|. Diff \verb|-1 - -3| is success+2, and minion Weakie is now under his control.
+
+%A mod resistance roll macro for maptools: \\
+%\verb|/roll 5+mod+attack-defence-d10| \\
+%A result $>=0$ is success, $<0$ is failure. \\
 
 
 \subsection*{Declaring defence}
@@ -701,7 +701,19 @@ Unaware and relaxed characters can be surprised. It then takes them one round to
 Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
 
 
-\subsection*{Temporary maptool light and vision}
+\subsection*{Long range vision}
+%-------------------------------
+Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate target properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
+
+
+\subsection*{Simplified tabletop light and vision}
+%-------------------------------------------------
+For daytime people have their normal vision ranges, usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
+
+In low light conditions it's easier to make approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
+
+
+\subsection*{Maptool light and vision}
 %-----------------------------------------------
 Set vision range and arc for each character.
 Light source vision range multiplier should be set as:\\
@@ -716,18 +728,6 @@ night (elf) 2.0\\
 %black     self light up to infra range regardless of light sources
 %\end{verbatim}\normalsize
 Magical dark vision should have different multipliers, or set a personal self light to suitable radius.
-
-
-\subsection*{Long range vision}
-%-------------------------------
-Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate target properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
-
-
-\subsection*{Simplified tabletop light and vision}
-%-------------------------------------------------
-For daytime people have their normal vision ranges, usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
-
-In low light conditions it's easier to make approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
 
 
 

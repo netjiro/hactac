@@ -332,6 +332,7 @@ def rollDwarf():
     char.money = str(d10())+" gold, "+str(d20())+" silver, "+str(d20())+" copper" + ", and a gemstone worth " + str(5+d6()) + " gold"
     char.extras.append("con bonus +3 against poisons")
     char.extras.append("haggle bonus +3")
+    char.extras.append("tackle and block mod+"+str(d3()))
     char.extras.append("Dwarves without any gems, and/or with less than 5 gold total \n" \
                        +"coin suffer psy-1 mod until wealthy again.")
     char.extras.append("Dwarves with 50+ gold in coins and gems gain psy+1 mod while wealthy.")
@@ -437,7 +438,7 @@ def rollHalfling():
     findbonus = d3()
     char.bonuses.append("find bonus +" + str(findbonus))
     gossipbonus = 0
-    if roll(33):
+    if roll(50):
         gossipbonus = d3()
         char.bonuses.append("gossip bonus +" + str(gossipbonus))
     char.yieldBonus = 2 + int(d10() / 3)
@@ -500,7 +501,7 @@ def rollOrc():
     char.skills['Common'] = int(char.int / 3) + d3()
     char.skills['veteran (incl bonus)'] = max(veteranbonus, d3())
     brawlskill = max(brawlbonus, int(char.str / 4) + d3())
-    char.skills['brawling (incl bonus)'] = brawlskill
+    char.skills['brawl (incl bonus)'] = brawlskill
     biteskill = d4()
     char.skills['bite'] = biteskill
     # maneuvers
