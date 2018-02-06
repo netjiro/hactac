@@ -18,7 +18,7 @@
 
 We'll be using the term "skill" as a compound term for all skills, traits, powers, and abilities that are not character based or expanded traits. This includes regular skills like literacy and counting, weapon skills, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Magical spells, mental and mystical powers, etc, all baked into one.
 
-All skills carry a "skill cost factor" (SCF), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
+All skills carry a "skill cost factor" (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
 \\
 The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
 E.g: training bow to 4 is (1.2 * 4*4) = 19.2 \ca 19xp. \\
@@ -46,6 +46,9 @@ Some skills are difficult to come by. They might only be trainable from a specif
 The skills pertaining to magic can be found in the "magic" section. %magic.tex
 E.g: magic, power casting, fast magic, and spells
 
+\
+
+Costs written as "cost 20xp" means that the total cost up to that level of the sill is 20xp. If it's written as "cost +20xp" then the cost to increase the skill from the previous level to to the target level is 20xp. See "tank" for a good example.
 
 
 
@@ -87,23 +90,19 @@ crossbow       scf 0.8
 \end{samepage}
 
 Knife is a limited variant of the sword skill. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3.
-
 Training in the knife skill can be converted to training in the sword skill over a weekend course, where $sword = \sqrt{(knife)^2 \cdot 0.7}$ round down, loosing the excess xp. Such courses are available in most larger cities and cost a couple of gold.
 
-Clubs, hammers and axes are somewhat similar.\\
+Some weapons are similar:\\
+The sword skill allows the use of knives and rapiers at no modification.\\
 Axe skill allows the use of: hammers mod-1, clubs mod-1.\\
 Hammer skill allows use of: clubs mod-1, axes mod-2.\\
 Club skill allows use of: hammers mod-2, axes mod-3.
-
-The staff and spear skills are mutually mod-1.
-
-All other melee weapons are mutually mod-3.
-
-All ranged weapons are mutually mod-3.
-
+The staff and spear skills are mutually mod-1.\\
+All other melee weapons are mutually mod-3.\\
+All ranged weapons are mutually mod-3.\\
 \emph{But:} similarity modifies never allows for the "other" weapons or weapon groups at levels greater than 9. So, even if someone has axe 14 he will be limited to hammer 9 due to this cap.
 
-Starting to train a new weapon skill while knowing a similar one should also start from the
+Starting to train a new weapon skill while knowing a similar one should also start from the shared modified base.
 
 Melee weapons gives the user the ability to make "attack" and "parry" actions, while ranged weapons only allows for "attack" actions, and cannot be used for parrying.
 
@@ -149,26 +148,31 @@ Disengaging is a full action, 3ap, per opponent that the character wants to safe
 E.g: Disengaging Dave wants to get away from melee against Mauling Morgan and Striking Stanislav, both of which have \emph{opportunity}. DD has disengage=4 and spends one action (3ap) to move away, out of range from both opponents. However, DD only spent one disengage action, and can thus only mod down one of the opponents. He chooses to mod MM. MM and SS now has the right to react to the movement. MM has a mod-4 when attacking DD due to the DD's disengage action, but SS still has mod-0 for his attack. If DD had paid two actions (6ap) he could have given both MM and SS mod-4 on their "right to react" attacks against him.
 
 
-\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of "fancy attacks" the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Up to the maximum finesse of the weapon.
+\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of "fancy attacks" the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Limited by the maximum finesse of the weapon.
 
 E.g: Sneaky Sebastian has "fancy attacks"=4 and sword=11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword=5, he will probably not succeed.
 
 
-\skill{Skill scf 1.0 "double":} allows for combining two weapons actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for the primary weapon, and the user has the option to spend another action for the secondary weapon. A weapon skill roll must still be taken for each weapon, and the stamina for extra attacks must be paid as usual.
+\skill{Skill scf 1.0 "double":} allows for combining two weapons actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for the primary weapon, and the user has the option to spend another action for the secondary weapon. A weapon skill roll must still be taken for each weapon, and the stamina for extra attacks must be paid as usual. A "double" action combo costs one extra stamina.
 
-The double action requires action points equal to the slowest of the actions taken "within" the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
+The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
 
-Double attack actions can be parried like normal actions, with two successive parry actions, with the usual multiple actions mods, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.
+Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.
 If the defender succeeds with a "double" roll before parrying, and has two weapons/shields, he can parry the two attacks with one "double" action.
 
-The "double" actions can be pre-declared and saved for later in the same round. The pre-declared action must be fully declared: e.g: Defend with the shield against an attack from monster X. If the next action the character makes is not the pre-declared action, then the "double" status of that action is wasted and lost.
+It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.
+
+Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the "double" roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
 
 Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
 
-Double Synchronised parries can attempt to parry twice for the same incoming attack, once for each weapon. Alternatively use the two weapons as one combined parry, where both must succeed, and combine the abs of both weapons to block the attacking damage.
+Synchronised Double parries can attempt to parry twice for the same incoming attack, once for each weapon. Alternatively use the two weapons as one combined parry, and combine the abs of both weapons to block the attacking damage if both parries are successful.
+
+%TODO: This part made sense somehow, but I can't see it right now, check later
+%The "double" actions can be pre-declared and saved for later in the same round. The pre-declared action must be fully declared: e.g: Defend with the shield against an attack from monster X. If the next action the character makes is not the pre-declared action, then the "double" status of that action is wasted and lost.
 
 
-\skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions.
+\skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions. Any of the "higher" double variant combinations still only cost one extra stamina.
 
 
 \skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
@@ -269,8 +273,10 @@ A very good +6 back stab attack gives quadruple damage and penetrating +3 \\
 A perfect +9 back stab attack gives quintuple damage and penetrating +4 \\
 And so on...
 
+When combined with accurate, consistent, or precise, this becomes brutally lethal.
 
-\skill{Skill cost special "tank":} Can reduce some penalties of heavy armour, while keeping the good stuff. Penalties to e.g: dexterity, encumbrance, movement, vision, strength requirements are reduced a bit according to the level of the tank skill. The positive benefits of the armour are not affected. \\
+
+\skill{Skill cost special "tank":} Can reduce some penalties of heavy armour, while keeping the good stuff. Penalties to e.g: dexterity, encumbrance, movement, vision, strength requirements are reduced a bit according to the level of the tank skill.\\
 lvl 1, cost 10: chain mail has the modifications of leather, leather has no mods. \\
 lvl 2, cost 20: plate mail has the mods of chain mail \\
 lvl 3, cost 30: full plate has the modifications of plate mail \\
@@ -1061,10 +1067,10 @@ Can be used together with any defensive action like avoid, parry, deflect, where
 Upgrade the yield bonus: \\
 cost  10xp: gives +1 extra yield bonus. \\
 cost  20xp: gives +2 extra yield bonus. \\
-cost  30xp: gives +3 extra yield bonus. %\\
-%cost  50xp: gives +4 extra yield bonus. \\
-%cost  75xp: gives +5 extra yield bonus. \\
-%cost 100xp: gives +6 extra yield bonus.
+cost  30xp: gives +3 extra yield bonus. \\
+cost  50xp: gives +4 extra yield bonus. \\
+cost  75xp: gives +5 extra yield bonus. \\
+cost 100xp: gives +6 extra yield bonus.
 
 E.g: Slow Sebastian has yield+2 bonus to start with. He curses his genes, spends 20xp, and gets a total of yield+4.
 
@@ -1076,9 +1082,9 @@ Upgrade dodge:\\
 base dodge: gives +1 extra dodge bonus.\\
 dodge 20xp: gives +2 extra dodge bonus.\\
 dodge 30xp: gives +3 extra dodge bonus.\\
-%dodge 50xp: gives +4 extra dodge bonus.\\
-%dodge 75xp: gives +5 extra dodge bonus.\\
-%dodge 100xp: gives +6 extra dodge bonus.
+dodge 50xp: gives +4 extra dodge bonus.\\
+dodge 75xp: gives +5 extra dodge bonus.\\
+dodge 100xp: gives +6 extra dodge bonus.
 
 
 \skill{Maneuver (cost 5) "off balance":}
@@ -1415,6 +1421,9 @@ This move was made popular by the heroic dancer Leggy-Lars who used it in the mo
 It works just as well with rocks, chairs, bottles, and other projectiles as it does with arrows.
 
 
+\skill{Maneuver (cost 10) "shoota-inna-back":} Easier to hit and does extra damage when attacking fleeing targets. Even when using melee weapons. The attack is mod+1 dam+1 if the target is running away at run or dash speed.
+
+
 \skill{Maneuver (scf 0.5) "breaker":} Adds extra "damage" when calculating if a parrying weapon or shield breaks or takes damage when used to parry an attack. It costs 1 stamina extra to make a "breaker" attack. Add "damage" equal to the level of \emph{breaker} when comparing damage vs absorption after a successful parry.
 
 E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a "breaker" attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
@@ -1453,7 +1462,7 @@ Some ability skills have a "combination cost factor" (ccf), which affects the co
 
 E.g: Dastardly Dennis has trained Incorporeal Double which has ccf=1.5. This means that every ability he trains in the future will cost 1.5 * original cost. If he also trains Dominating Stare, with another ccf=1.5, then Dominating stare will cost him 1.5*50=75xp, and all future abilities will cost 1.5*1.5=2.25 times the original cost.
 
-Upgrading an ability does not affect its ccf. E.g: purchasing regeneration twice still gives regeneration ccf=1.5.
+Upgrading an ability does not affect its ccf. E.g: purchasing regeneration twice still gives regeneration ccf=2.0.
 
 Special "abilities" cannot be purchased and trained by XP without first getting the "special component". Special components can be a blessing from a deity, a piece of mutagenic plutonite, bites from radioactive spiders, strange magic gone wrong, secret lore from a legendary book, tutoring by a far away hermit, training at the dojo of awesomeness, the egg of a phoenix, etc. GM discretion.
 
@@ -1541,14 +1550,15 @@ Upgrades: \\
 Aggressive Skin, cost 20 + scf 5.0: more damage\\
 Stunning Skin, cost 10 + scf 3.0: stun effect
 
-\skill{Ability cost 20 + scf 5.0 "Aggressive Skin":} The Reactive Skin ability does +1 damage penetrating for every level of Aggressive Skin. E.g: at lvl 4 )cost 100xp) the Reactive Skin + Aggressive Skin 4 does a total of 5 damage penetrating.
+\skill{Ability cost 20 + scf 5.0 "Aggressive Skin":} The Reactive Skin ability does +1 damage penetrating for every level of Aggressive Skin. E.g: at lvl 4 (cost 100xp) the Reactive Skin + Aggressive Skin 4 does a total of 5 damage penetrating.
 % cost levels: 25, 40, 65, 100  ::  100xp for total dam 5
 
 \skill{Ability cost 10 + scf 3.0 "Stunning Skin":} When the Reactive Skin ability does damage it also delivers stun effect equal to the level of Stunning Skin.
 % cost levels: 13, 22, 37, 58, 85, 118  ::  37xp for stun 3, 118xp for stun 6
 
 
-\skill{Ability cost 50xp ccf 1.3 "Regeneration":} The character regenerates 1hp for each 5 rounds regardless of actions. This skill can be purchased several times, with regeneration = 1hp every 5r/lvl (round up).
+\skill{Ability cost 50xp ccf 2.0 "Regeneration":} The character regenerates 1hp for each 5 rounds regardless of actions. This skill can be purchased several times, with regeneration = 1hp every 5r/lvl (round up). Upgrading does not affect the ccf.
+
 
 %TODO rewrite Hand of Deity to have nr of rounds praying increasing chance and effect, but minimum one round! Make effect capped at roll success, but also random: mod+(max(success/3,1d3)) dam+(max(success,1d6)) duration rounds (max(success,1d10))... Spending XP also gives bonus to chance and effect, and short prayers (<1r) should require XP spending.
 \skill{Ability cost 30xp ccf 1.2 "Hand of \emph{Deity}":} The character can pray to be granted combat bonuses from his god. The chance of the prayers to be answered is equal to his total XP/50 (round down). The chance of having the prayers answered are improved if spending extra XP. For each extra XP spent the chance of response is mod+3.
@@ -1770,7 +1780,7 @@ E.g: After the successful rescue of princess CreamCup, the two remaining Heroes 
 
 %\skill{Ability cost 30xp ccf 1.2 "'tis but a scratch"}
 %\skill{Ability cost 30xp ccf 1.2 "just a flesh wound"}
-\skill{Ability cost 30xp ccf 1.2 "Black Knight"} The Hero doesn't take mod-1 when wounded down to half hp. The Black Knight ability can be bought three times, each costing 30xp (but does not increase ccf), to also eliminate the mod at quarter hp and zero hp. \emph{"'tis but a scratch."}
+\skill{Ability cost 30xp ccf 1.2 "Black Knight"} The Hero doesn't take mod-1 when wounded down to half hp. The \emph{Black Knight} ability can be bought three times, each costing 30xp (but does not increase ccf), to also eliminate the mod at quarter hp and zero hp. \emph{"'tis but a scratch."}
 
 
 \skill{Ability cost 20 + scf 1.0 ccf 1.2 "Sixth Sense":} The Hero has the ability to sense things that cannot otherwise be detected, and intuit information that cannot otherwise be known. GM discretion. Some examples:
@@ -1791,6 +1801,62 @@ Attacking a stacked target is mod-3, and fail-1 to fail-3 means hitting one of t
 
 % Stacking works perfectly fine with "guard", giving mod=0 to all angles.
 
+
+\skill{Ability cost 30xp ccf 1.2 "TronVol":} Heroes can meld together to form one large super critter. All Heroes in the TronVol merge must have the TronVol ability, and each TronVol merge target is a separate TronVol ability (does not incur extra ccf beyond the first.
+E.g: TronVol:\emph{PurplePanickler} is formed by the Heroes Purple Pete and Pinky Panickler, and is a malformed large hodgepodge monster with three legs, two arms, two heads, a tail, and some tentacles.
+
+Forming and splitting a TronVol monster takes 3r. Forming costs one mana from each Hero, but splitting is free. The Heroes can upgrade the TronVol monster to form faster by collectively spend xp: +10xp form/split in 2r, +20xp form/split in 1r.
+
+When forming the TronVol monster, calculate current hp, stamina, and mana as the average percentage of the Heroes' current values. The monster forms with no pain mods. When splitting again, push half of the monster's taken damage onto the heroes, collectively, and let them argue on how to split it. None of the monster's pain mods are transferred to the Heroes. The Heroes of course keep all the damage and pain they had before forming the TronVol monster. If the monster's stamina and mana is lower when splitting than when it was formed, then push half the diff collectively onto the Heroes.
+
+The TronVol monster has stats something like the following, and roll to add/deduct points here and there to give it some variation.
+\small\begin{verbatim}
+str:      sum(heroes)
+dex:      min(heroes) -1
+con:      max(heroes) +3
+int:      min(heroes) +1
+psy:      max(heroes) +1
+per:      max(heroes) -1
+cha:      min(heroes) -3
+
+hp:       sum(heroes) *1.5, round down
+abs:      sqrt(number of heroes) +1, round down
+m:        min(heroes) +1
+w:        min(heroes) +2
+r:        min(heroes) +3
+d:        min(heroes) +4
+sta:      max(heroes) * sqrt(number of heroes), round down
+vis,arc:  avg(heroes)
+mana:     sum(heroes)
+ap:       max(heroes) -1
+
+pain threshold: 3 + (number of heroes)
+avoid,dodge:  min(heroes) -3, and yield/dodge bonus 0
+double bonus: sqrt(number of heroes) *3, round down
+other skills: max(heroes)
+\end{verbatim}\normalsize
+
+TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting xp, the TronVol constituent heroes still count separately.
+
+For the general shape, either find something fun and suitable, or roll up some random body: humanoid, lizard, bear, demon, cryptomythologial mixture, etc. Roll for extra/fewer arms, tails, horns, claws, tentacles, fur, scales, etc.
+
+Adding heroes to an existing TronVol monster constellation is possible, and modifies stats, skills, and body configuration as suitable.
+
+Use larger tokens for merged Heroes. E.g: Maptool: with 2-5 merged heroes set large size: 2x2, with 6-11 heroes set 3x3, and for 12+ set 4x4.
+
+
+\skill{Ability cost 30xp ccf 1.5 "Ghoul":} Mmm, Braiiiiin... Sooo Tasty!
+The Hero(?) can regenerate hp by eating the corpses of his enemies. For each 3r spent eating the Ghoul will heal 1hp every 10r after completing the meal. A meal cannot be larger (in hp healing points) than the minimum of the Ghoul's con and one quarter the original hp of the victim (round down). A new meal cannot be started before the previous has been depleted by healing the prepared hp.
+
+The corpses must be fresh. The meal value of the corpse is decreased by one for every round it's been dead before the Ghoul starts eating.
+
+And, as they say, \emph{You Are What You Eat}, so the stats of the Ghoul will change based on the source of food. For every meal each stat of the Ghoul is reduced or increased by one in the direction towards the original stats of the victim. Positive effects last (meal size)/2 days (round down), while negative effects last (meal size) + 1d3 days. For multiple meals the effects stack to a maximum of +/-3.
+
+Upgrades:\\
+Fast Food (cost 10xp): eating each "hp prep" in 2r instead of 3r.\\
+Fast Metabolism (scf 5): each level reduces the healing interval by one, to a minimum of 3r/hp.\\
+Live Food (cost 20xp): eating live food also restores one stamina and one mana in addition to the hp regeneration, at the same speed.\\
+Old Food (cost 10xp): can get full meal value from corpses which are up to a day old.
 
 \closeskillslist
 
@@ -1834,6 +1900,17 @@ Curse "unlikely": The character must always roll twice for a required roll, and 
 
 
 Curse "forgetful packer": The character has a certain risk of not having remembered to pack an item, or lost it along the way, when he tries to retrieve it from the back pack.
+
+
+Curse "squeamish": The character has reduced pain threshold and even small cuts give pain.
+
+
+Curse "undiagonal": The character can never move diagonally
+
+
+Curse "prediagonal": The character always starts each round with the FirstDiagonalTaken flagged as 1, giving the movement cost as: 2-1-2-1...
+
+
 
 
 

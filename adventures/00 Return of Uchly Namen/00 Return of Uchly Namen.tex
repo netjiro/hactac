@@ -1,3 +1,5 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
 %===============================================================================
 
 
@@ -33,6 +35,8 @@
 %\usepackage[latin1]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
+% These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
+% meaning a 300dpi image is around 1600 pixels wide
 \usepackage{graphicx}   % For eps figures
 \usepackage{epsfig}     % Alternative package
 \usepackage[hang,small,bf]{caption}
@@ -61,10 +65,16 @@
 
 \newcommand{\degrees}{$^\circ$~}
 \newcommand{\degree}{$^\circ$}
+\newcommand{\ca}{$\approx$}
 
 \newcommand{\vs}{$\backslash\ $}  % "versus" slash
 \newcommand{\bs}{$\backslash\ $}  % just backslash
 
+%link new command names to the original font sizes,
+%for easier to remember smaller font size
+\newcommand{\vsmall}{\footnotesize}  % simpler to remember
+\newcommand{\vvsmall}{\scriptsize}   %
+%\newcommand{\vvvsmall}{\tiny}
 
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
 
@@ -423,16 +433,14 @@ We start with a traditional narrator voice read out, to get your players in gear
 The newbie Heroes have all arrived in Trade Town last week. They have been looking for work, but it has been difficult to get anything worthy of a true Hero wannabe.
 Then suddenly they find an old advertisement proclaiming:
 
-\begin{center}
-\begin{verbatim}
+\begin{center} \begin{verbatim}
 Dyslexia Marigt, Scholar Supreme,
 is looking for brave adventurers,
 to procure special items and run
 interesting errands.
 Payment in gold, upon delivery!
 Contact D.M. in Sleepy Cove.
-\end{verbatim}
-\end{center}
+\end{verbatim} \end{center}
 
 The advertisement is tattered and worn, but it is the best thing available. The Heroes gather their meagre belongings and buy passage on a ship the very next day. After a short and sunny cruise the Heroes finally disembark on the pier of Sleepy Cove harbour, late on a beautiful summer's day.
 
@@ -451,17 +459,8 @@ The smell of adventure, heroic deeds, and gold is in the air...
 The Heroes will spend most of the time making expeditions out of Sleepy Cove, a slow little fishing village in Baron Conq's domain, a short boat ride from Trade Town.
 
 \begin{center}
-%\vspace{4 cm} % Vertical space
-%\textbf{\Huge{image\\ goes\\ here}}
-\vspace{1 cm} % Vertical space
-% for regular "latex" compile:
-%\includegraphics[width=150mm,natwidth=50mm,natheight=64mm]{./maps/region-gm.jpg}
-% for "pdflatex" compile:
-%\includegraphics[width=150mm]{./maps/region-gm.jpg} %  << needs pdflatex to work
+\vspace{1 cm}
 \includegraphics[width=1.0\linewidth]{./maps/region-gm.jpg}
-%\vspace{1 cm} % Vertical space
-% make it look better in html rendering.
-%\vspace{4 cm} % Vertical space
 \end{center}
 
 
@@ -499,18 +498,7 @@ The village of Sleepy Cove, a small hamlet with a sheltered harbour. It is part 
 
 
 \begin{center}
-%\vspace{4 cm} % Vertical space
-%\textbf{\Huge{image\\ goes\\ here}}
-%\vspace{1 cm} % Vertical space
-% for regular "latex" compile:
-%\includegraphics[width=140mm,natwidth=100mm,natheight=100mm]{./maps/Sleepy-Cove.jpg}
-% for "pdflatex" compile:
-%\includegraphics[width=140mm]{./maps/Sleepy-Cove-(32+0+0).jpg}
-%\includegraphics[width=140mm]{./maps/Sleepy-Cove-(100x100,16+0+0).jpg}
 \includegraphics[width=1.0\linewidth]{./maps/Sleepy-Cove-(100x100,16+0+0).jpg}
-%\vspace{1 cm} % Vertical space
-% make it look better in html rendering.
-%\vspace{4 cm} % Vertical space
 \end{center}
 
 
@@ -528,11 +516,12 @@ Gossip success:\\
 %------------------------------------------------
 Gossip Success:\\
 -3: Nice old lady, lives in that cottage over there...\\
+-3: She is looking for a band of adventurers. \\
 +0: She has been living here since midwinter. \\
++0: She always has one of Baron Conq's personal body guards with her. \\
 +1: She is a bit of a loner, but quite friendly. \\
 +2: She has helped diagnose and treat Brutella the Sick's illness. (random info on illness: nightdragons, elfwind, gnomethumb, greenspots, stonestomache) \\
-+2: She is looking for a band of adventurers. \\
-+3: She hired a couple of adventurers about a month ago. \\
++2: She hired a couple of adventurers about a month ago. \\
 +3: The previous adventurers are said to have disappeared in the South Forest over a week ago. \\
 +4: She used to work a couple of months for Baron Conq in his castle before renting a cottage here in Sleepy Cove. \\
 
@@ -621,12 +610,12 @@ He cleaves the horse in two when the farmers argue about it. He kills a whole fa
 
 \raggedbottom
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 RedGuard                    (named)
 -----------------------------------
 str  8    hp 25(18) abs 4 (plate + RedGuard ward rune tattoo)
-dex  8(9) m2 w4 r7(8) d10(12)
+dex  8(9) m2 w4 r7(8,7) d10(12,10)
 con  7    stamina 12(10)
 int  4    vision 25 160deg
 psy  5    mana 10
@@ -639,17 +628,18 @@ focus       2
 overextend  2
 balance     3
 quick draw  6
+consistent  2
 avoid       8 yield+4
 brawl       7
 sharpstaff 12
 whirlwind   7
 shield      6
-resilient   7
-enduring    2
-fast        2
 sharpstaff  x
 poke        x
 swing       x
+resilient   7
+enduring    2
+fast        2
 ----------
 Ward Rune tattoo: Dray 1 mana to absorb 1hp from an incoming strike.
                 Automatic until mana reaches 0, does not over draw.
@@ -667,7 +657,7 @@ heavy RedGuard  abs 3, (less mods than normal plate armour)
 brigandine      dex-1 yield bonus -0
                 run-1, dash-2
                 str 7 (str penalties affect all actions)
-                vision-10\%, cone vision max 270 deg, remember your facing...
+                vision-10%, cone vision max 270 deg
                 acrobatics mod-3
                 spellcasting mod-1
                 sneak mod-2
@@ -675,12 +665,12 @@ brigandine      dex-1 yield bonus -0
 ===================================
 Imposing soldier in a strange red plate armour and cloak.
 Armed with a large staff with evil looking metal points in each end.
-He looks like he knows how to fight.
+He sure looks like he knows how to fight.
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Dyslexia Marigt             (named)
 -----------------------------------
@@ -744,7 +734,7 @@ She is dressed in a fine robe and has a golden circlet on her head.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Bling SwordSlash            (named)
 -----------------------------------
@@ -792,7 +782,7 @@ Armed with his legendary long sword "Slash", he fights one handed.
 longsword: "slash"  dam 13(11) abs 30 finesse 8
     str 7
 
-fashionable equisite brigandine armour abs 2 (behaves as leather)
+fashionable exquisite brigandine armour abs 2 (behaves as leather)
 or
 legendary plate mail abs 3 (behaves as brigandine)
 
@@ -801,6 +791,7 @@ and a couple of super abilities, like Über, and a lot of powerful
 fighting skills and maneuvers.
 \end{verbatim} \normalsize \end{samepage}
 
+\
 
 \flushbottom
 
@@ -882,12 +873,21 @@ The Goblin Bandits are sitting around a camp fire, chattering in svartlingo. The
 Once the heroes are noticed the alarm goes and the leader MuchKlajn GoBoss starts yelling:
 
 \begin{readoutloud}
-Ijm MuchKlajn GoBoss. Dissis mayn Kamp. Killem ogly Hoomans!
+\emph{GoBoss [tiny angry voice]:} Ijm MuchKlajn GoBoss. Dissis mayn Kamp. Killem ogly Hoomans!
 \end{readoutloud}
 
 Wounded or breaking goblins will flee into their cave to wake their sleeping comrades and make another stand. They will release their pet wolf and goad it to attack the heroes when they enter the cave.
 
 Otherwise the goblins will retreat and use their archers as much as possible. Their archers will mainly go into hiding and shoot from cover, giving them a mod-3 to get hit by incoming fire.
+
+\begin{center}
+\includegraphics[width=1.0\linewidth]{./maps/goblin-camp-(32+0+0).jpg}
+\end{center}
+
+\
+
+%\vfill
+
 
 
 \subsection*{The cave}
@@ -906,6 +906,14 @@ The goblins will retreat to the left in the cave, wake their sleeping friends an
 The treasure trove, furthest in, north of the wolf, is worth about 5 gold in all, including the coin, and requires carrying about 50 items at 20enc back to Sleepy Cove to sell it.
 
 Let the RedStone be found either among the treasure or hidden away in a secret pocket in the dress of the dead adventurers.
+
+\begin{center}
+\includegraphics[width=1.0\linewidth]{./maps/goblin-cave-(32+0+0).jpg}
+\end{center}
+
+\
+
+%\vfill
 
 
 \subsection*{Opposition}
@@ -935,7 +943,7 @@ The heroes now have some time to rest and spend their money and xp before settin
 
 \raggedbottom
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 goblin bandit           (goblin05)
 -----------------------------------
@@ -968,7 +976,7 @@ Armed with a short sword and a small shield.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 The pet wolf: Graowl, a half starved poor critter
 ===================================
 wolf                       (wolf02)
@@ -990,7 +998,7 @@ It takes one round to free the wolf.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 Leader: MuchKlajn GoBoss
 ===================================
 goblin warrior           (goblin07)
@@ -1027,6 +1035,7 @@ really bad for a couple of days before the weak magic dissipates.
 The target gets the "Tasty" ability for a few days.
 \end{verbatim} \normalsize \end{samepage}
 
+\
 
 \flushbottom
 
@@ -1054,6 +1063,7 @@ The target gets the "Tasty" ability for a few days.
 \phantomsection\addcontentsline{toc}{section}{02 green stone}
 \section*{02: The Green Stone -- Eisenkrafs mines}
 \chaptermark{green stone}
+\label{sec:02GreenStone}
 
 
 \subsection*{Synopsis}
@@ -1189,17 +1199,28 @@ They can now rest and spend their money and xp before venturing east towards Hon
 
 \subsection*{Opposition}
 
-1 Gebbhard Goebbels - the mine Boss
-4 Miner Ruffian
-4 Cave spider
-11 Bug
-1 cave worm
-
-
 \raggedbottom
 
+\begin{samepage} \vsmall \begin{verbatim}
+Eisenkrafs:
+  Gebbhard Goebbels      the mine Boss
+  Miner Ruffian          4x
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+Mines and Caves:
+  Brown spider           4x   as listed in rules
+  Bug                   11x   as listed in rules
+  Cave Worm              3x   as listed in rules
+  Troll, small           1x
+
+Bandit assault:
+  Bandit Fighter         2x
+  Bandit Archer          2x
+  Dog                    2x   as listed in rules
+\end{verbatim} \normalsize \end{samepage}
+
+
+
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Gebbhard Goebbels        (specific)
 -----------------------------------
@@ -1236,7 +1257,7 @@ He looks unpleasant and rough.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Miner Ruffian            (specific)
 -----------------------------------
@@ -1268,70 +1289,9 @@ Rough miner far from civilisation.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-spider                   (spider01)
------------------------------------
-str  3    hp 5 abs 1
-dex  5    m2 w6 r10
-per  4    initiative 7
-bite      5 dam 3, fast+1,
-            poison 5 \vs con, cumulative mod-1/2r until paralysed
-            roll once when bitten instead of each round
-            poison mod affects ams, dex, str, sta, movement
-spin      5 each successive spin attack gives a webbing:
-            dex-2, move-2, mod-3 to all actions.
-            break free is 2*spin \vs str
-            friend can clean: takes 5r to clean one spin
-            parrying spin with weapon or shield gives mod-1 we accumulation
-            on the item for every parry. Takes 1r to clear 1 mod.
-            A missed spin attack gives the opponent a mod+1 to hit the spider.
-avoid     3 yield+2
------------------------------------
-Since the web attack opens the spider to counter attack they are cautious to
-use them. They try mainly when there is low risk of counter attacks.
-They instead use their fast bite attack to poison the target before webbing.
-Spiders do not get mods from low hp and are immune to pain.
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-bug                      (beetle01)
------------------------------------
-str  1    hp 2 abs 1 tohit-3 (small)
-dex  6    m3 w5 fly10
-per  2    initiative 10
-bite      5-abs dam 1, penetrating:
-          armour affects the bug's bite skill instead of damage
-          armour abs > 3 counts as full coverage, and the bug cannot attack.
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-cave worm                  (worm01)
------------------------------------
-str 10    hp 20 abs 0 large target: ranged tohit+3
-dex  3    m1, ap 3
-per  4    initiative 5     perception smell 5sq
-pain threshold 5
-bite   5  dam 8 acid drool 20\% to reduce abs on contact equipment by 1
-avoid  3
------------------------------------
-size large (4sq)
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-eisenkrafs miner         (specific)
+Eisenkrafs miner         (specific)
 -----------------------------------
 str  7    hp 10 abs 0
 dex  4    m1 w3 r6 d9
@@ -1353,9 +1313,9 @@ money ( 0g 0s 5c)
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-eisenkrafs miner orc     (specific)
+Eisenkrafs miner orc     (specific)
 -----------------------------------
 str  12   hp 17 abs 0
 dex  3    m1 w3 r5 d7
@@ -1377,9 +1337,9 @@ money ( 0g 0s 3c)
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-eisenkrafs bandit fighter   (token)
+Eisenkrafs bandit fighter   (token)
 -----------------------------------
 str  5    hp 10 abs 1
 dex  6    m1 w3 r6 d9
@@ -1390,7 +1350,7 @@ per  6    initiative 8, ap 5(3)
 quick      2
 mobile     1
 sneak      8
-avoid      5 yield+3
+avoid      4 yield+3
 backstab   5
 ----------
 1h axe     7
@@ -1411,9 +1371,9 @@ money ( 0g 2s 8c)
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-eisenkrafs bandit archer    (token)
+Eisenkrafs bandit archer    (token)
 -----------------------------------
 str  5    hp 10 abs 1
 dex  6    m1 w4 r7 d11
@@ -1423,7 +1383,7 @@ per  6    initiative 8, ap 3
 ----------
 mobile     2
 sneak      6
-avoid      7 yield+3
+avoid      6 yield+3
 quick shot 3
 ----------
 bow        7     (1r-0, 2r-0, 3r+1), 20 arrows in quiver
@@ -1443,6 +1403,7 @@ money ( 0g 1s 12c)
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
+\
 
 \flushbottom
 
@@ -1613,8 +1574,9 @@ This time when they deliver the Blue Stone to Dyslexia Marigt, she will pay up, 
 The Heroes should each get a 10xp reward after delivering the Blue Stone to Dyslexia Marigt. Another 5xp each if they have figured out that Honorbliz Wize has battled it before and all that. And another 5xp each if they have figured out that they can get the weapons to fight the demon at castle Pawa.
 
 
+\raggedbottom
 
-\small \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Honorbliz Wize              (named)
 -----------------------------------
@@ -1636,10 +1598,12 @@ equipment
 money ( g s c)
 ===================================
 
-He's here to die, so let's not waste time on his stats.
+He's here to die on script, so let's not waste time on his stats.
+\end{verbatim} \normalsize \end{samepage}
 
+\
 
-\end{verbatim} \goodbreak \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Sam Slick                   (named)
 -----------------------------------
@@ -1709,11 +1673,11 @@ the bearer. Draws 3 mana per automatic use.
 
 money ( 13g 15s 12c)
 ===================================
+\end{verbatim} \normalsize \end{samepage}
 
+\
 
-
-
-\end{verbatim} \goodbreak \begin{verbatim}
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Shadow Servant              (named)
 -----------------------------------
@@ -1736,10 +1700,11 @@ The Shadow Servants will slowly close in on any intruders, using their icy
 tricky claw attacks to slowly disable them and the magical avoid to stay
 alive despite the low hp. They are tricky to kill unless the Heroes team up
 and coordinate multiple attacks on each shadow servant in each round.
+\end{verbatim} \normalsize \end{samepage}
 
-\end{verbatim} \normalsize
+\
 
-
+\flushbottom
 
 
 
@@ -1837,7 +1802,7 @@ Where to start? No one knows. Except Sam Slick, who can be found at the inn in t
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{intermission, revenge in Eisenkrafs}
 \section*{Revenge -- Eisenkrafs}
-\chaptermark{revenge in eisenkrafs}
+\chaptermark{revenge in Eisenkrafs}
 
 
 \subsection*{Synopsis}
@@ -1861,7 +1826,7 @@ Gebbhard also has the key to his house on his person (find roll on the corpse).
 
 
 \subsubsection*{The streets}
-Intercepting Goebbels when he is walking through town is possible if they spy on him. He might have 1-3 ruffians with him, and can call in reinforcements in 10 rounds. If he is aware of the Heroes presence in Eisenkrafs he will have a much larger force with him, and reinforcements in about 5 rounds.
+Intercepting Goebbels when he is walking through town is possible if they spy on him. He might have 1-3 ruffians with him, and can call in reinforcements in 10 rounds. If he is aware of the Heroes' presence in Eisenkrafs he will have a much larger force with him, and reinforcements in about 5 rounds.
 
 
 \subsubsection*{Goebbels' house}
@@ -1884,6 +1849,20 @@ It is possible to run through a sentinel ghost, but the players must figure that
 In the chests the heroes can find a fine sword parry+1 abs+5 worth about 10 gold, as well as two unused sentinel bases (charge 10, skill 7, dam 4, enc 5) worth 3 gold each. A total of 12 gold 42 silver and 230 copper is also available. The chests are locked mod-0 sturdy abs 4 hp 10.
 
 
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Goebbels-House.jpg}
+%\end{center}
+%
+%\
+
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Goebbels-Basement.jpg}
+%\end{center}
+%
+%\
+
 \subsection*{Getting away}
 Regardless of their success the Heroes can count on problems on their way back. The towns people might be problematic. If they figure out that Goebbels is dead a few will try to avenge him. If the Heroes are carrying loot from Goebbels' house there will be lots of greedy miners who will assault them with hunting weapons and mining implements, as well as whatever else they can find lying around.
 
@@ -1891,7 +1870,7 @@ Once the Heroic Few manage to escape Eisenkrafs they will be tracked down by the
 
 
 \subsection*{Bandit Attack}
-The Eisenkrafs Bandits attack in the dark, somewhere along the route south. They will sneak up, then focus ruthlessly to stop any wagons and pack animals. They will run around, sneak and hide, then pop out and shoot.
+The Eisenkrafs Bandits attack in the dark, somewhere along the route south. They will sneak up, then focus to stop any wagons and pack animals from getting away. They will run around, sneak and hide, then pop out and shoot. After first bandit dies the rest will flee at half hp or when half their numbers are gone.
 
 
 
@@ -1906,11 +1885,6 @@ The Eisenkrafs Bandits attack in the dark, somewhere along the route south. They
 
 
 
-%-------------------------------------------------------------------------------
-
-%            TODO:   add section on raiding the Eisenkrafs Bandits
-
-%-------------------------------------------------------------------------------
 
 
 %-----------------------------------------
@@ -1921,21 +1895,87 @@ The Eisenkrafs Bandits attack in the dark, somewhere along the route south. They
 
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{intermission, raiding the bandits}
-\subsection*{Raiding the Eisenkrafs Bandits}
+\section*{Raiding the Eisenkrafs Bandits}
 \chaptermark{raiding the bandits}
 
 If the Heroes have managed to get in on the good side with the Eisenkrafs townsfolk, or managed to track down the bandits' stronghold, they can attempt to raid the place and make off with some nice loot.
 
-The Bandits' camp and cave is east of Eisenkrafs. The place probably has only a few guards now that the Heroes have already slaughtered their main force during the assault?
+The Bandits' camp and cave is southeast of Eisenkrafs. The place is probably lightly populated if the Heroes have already slaughtered part of their force during the bandit's previous assault?
 
 
 \subsection*{Synopsis}
 %---------------------
+Find the Bandits' Camp southeast of Eisenkrafs. Battle through the camp, then into the cave. Kill and loot to take revenge and retrieve what has been stolen.
 
 
-\subsection*{The Camp and the Cave}
-%----------------------------------
+\subsection*{Opposition: The Eisenkrafs Bandit Gang}
+%---------------------------------------------------
+The bandits are mostly archers and fighters. Both described above, under section \hyperref[sec:02GreenStone]{"02 The GreenStone -- Eisenkrafs Mines"}. There is no noticeable boss amongst the bandits.
 
+All bandits will try to flee and regroup when at or below half hp.
+
+
+\subsection*{The Camp}
+%---------------------
+Entering the camp map from the southeast corner the Heroes must either swim the stream or use the bridge. The entrance to the cave is in the northwest corner. A successful track+3 will allow the Heroes to get ready and scout (if they think about it) before the bandits' lookout can spot them.
+
+The eastern wooden huts are used for holding ransom prisoners or guests. Currently one of them holds two shackled sex slaves, a young brother and sister kidnapped from a farm north of Castle Conq. They are in bad shape and will scream and cry if the Heroes can even remotely be mistaken for bandits.
+
+The tents and southwest hut is used as sleeping quarters and temporary storage for the bandits that can't sleep in the cave.
+
+Careful Heroes will send a scout to reconnoitre the area before barging in. Roll sneak+3 to see if the scout can avoid getting spotted by the lookout. If the Heroes are detected the Bandits will be ready, lying in wait.
+
+The bandits will protect the bridge by placing archers hidden behind the rocks and statue, also giving them mod-3 to be hit when they show themselves to fire. Bandit fighters will also hide behind the rocks to rush the bridge head to block incoming Heroes and protect the archers. This will force the attacking Heroes to either try to tackle or hack through, or retreat, while taking fire from archers at short range.
+
+When the bandits start falling the rest will retreat into the cave to regroup.
+
+\begin{center}
+\includegraphics[width=1.0\linewidth]{./maps/Eisenkrafs-Bandits-Camp-(32+0+0).jpg}
+\end{center}
+
+\
+
+%\vfill
+
+The southwest hut and the tents hold ca 100enc worth of misc loot, with a total value of around 5g. Successful appraise gives a best value density around 2s/enc for 10enc.
+
+
+\subsection*{The Cave}
+%---------------------
+The cave is unhealthy, some evil power lurks in the rock walls. For every 10r in the cave roll psy, with everyone failing getting a cumulative mod-1 to all rolls until they exit the cave. The mod is cumulative to a maximum mod-3, after that they start loosing 1 mana and 1 hp for every further failed psy roll. The mods are lost with 1 per round when outside the cave, but the mana and hp are restored with rest and time as usual.
+
+This does not affect the bandits, but only a few of them can actually live in the cave without getting ill.
+
+\begin{readoutloud}
+There is a foul oppressing power in the air in here. Don't dwell too long.
+\end{readoutloud}
+
+The cave is divided in sections with locked bar partitions to make it easy to defend against intruders. The bars doors are str 15 to bash down, mod+3 to pick, or hp20 abs5 to destroy. Archers can fire through the bars at mod-1. Attacking through the bars with melee weapons is mod-6.
+
+The secret passage doors are mod-6 to find by a passive perception roll but mod+3 if searching with a find roll. The passages are narrow and cost double mp and are mod-6 cramped terrain. The Secret door to the treasure chest chamber is locked str 8 to bash, mod+0 to pick, hp10 abs3 to destroy.
+
+The bandits will retreat section by section and lock the bars behind them while they pepper the Heroes with arrows.
+
+\begin{center}
+\includegraphics[width=1.0\linewidth]{./maps/Eisenkrafs-Bandits-Cave-(32+0+0).jpg}
+\end{center}
+
+\
+
+%\vfill
+
+The loot trough in the cave holds around 100enc of loot, worth ca 5g. A successful appraise gives a best value density around 3s/enc for 10enc.
+
+The secret treasure chamber holds 3g 23s 160c, a ruby worth 15s, and a bracelet worth 8s. The bracelet is cursed. It seems to give the bearer cha+3, but it actually gives cha-3. If a Hero is using it and succeeds [+0,+3] he actually fails anyway. The player will hopefully notice that something is not right, sooner or later, as the GM says that obvious success rolls are failures...
+
+
+
+\subsection*{Aftermath}
+%----------------------
+If the kidnapped siblings are returned to their farm the parents will pay 8s 15c as reward and be extremely grateful. This is all the money they have and make sure to impress upon the Heroes that the farm is poor and that the father literally upends and empties the small treasure box to pay them, handing over his last coin while crying, relieved to have his children back.
+The father also tells the Heroes that he tried to get Baron Conq to send soldiers to free the children, but that the Baron refused.
+
+If the Heroes travel to Baron Conq's castle to say that they have killed the Bandits they will be denied an audience, but the Master of the Guard will see them. If they have proof (severed heads, recognisable equipment, etc) the Master will pay 5s per dead bandit. He will only pay for bandits he thinks he recognises, and there is only 66\% chance per head. Roll as he carefully studies each head in turn.
 
 
 
@@ -1956,7 +1996,7 @@ The Bandits' camp and cave is east of Eisenkrafs. The place probably has only a 
 
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{04 summoning the demon}
-\section*{04: The Summoning -- The Gate Site}
+\section*{04: The Summoning of Uchly Namen}
 \chaptermark{summoning site}
 
 
@@ -2048,8 +2088,9 @@ He is about 4m tall, very powerful, green scaly skin, glowing yellow eyes. Wings
 When he is wounded he bleeds green-yellow glowing thick smoke for a few rounds. Wounds close 1hp per round. (not regenerating, but they don't know that).
 No use setting actual numbers to this monster. It will behave according to script.
 
-\goodbreak
-\small \begin{verbatim}
+\raggedbottom
+
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Uchly Namen                 (named)
 -----------------------------------
@@ -2076,13 +2117,19 @@ scary        - psy-3 roll to attack, only psy-0 after succeeding once at mod-3
 roar         - psy or flee 1d3 rounds, psy-3 not to back off 1 round.
 ancient     11 well spoken, if you know the language
 ===================================
+\end{verbatim} \normalsize \end{samepage}
 
-\end{verbatim}
-\normalsize
+\
+
+\flushbottom
 
 
-
-
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Summoning-Site.jpg}
+%\end{center}
+%
+%\
 
 
 
@@ -2149,6 +2196,12 @@ It is unlikely that the Heroes will be able to fight through the RedGuards, even
 Uchly Namen is now commanded north east from the region south of Kleinshof. But he's very quick, and the Heroes won't be able to get to Castle Pawa in time to warn them. If they go quickly they can reach it just as the battle is still raging inside.
 
 
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Old-East-Tower.jpg}
+%\end{center}
+%
+%\
 
 
 
@@ -2177,7 +2230,7 @@ Uchly Namen is now commanded north east from the region south of Kleinshof. But 
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{06 attack on Castle Pawa}
 \section*{06: Castle Pawa -- Attack of Uchly Namen}
-\chaptermark{castle pawa}
+\chaptermark{castle Pawa}
 
 
 \subsection*{Synopsis}
@@ -2213,6 +2266,12 @@ He will now head west, drawn to the summoning/binding necklace. He wants to figu
 Following the road he will first pass through Merna, staying a bit to wreak havoc. Then continue to Sleepy Cove.
 
 
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Castle-Pawa.jpg}
+%\end{center}
+%
+%\
 
 
 
@@ -2249,6 +2308,7 @@ Grey Stalkers might have gotten through the portal Sneexious opened. They will l
 
 
 \subsection*{The Ambush}
+%-----------------------
 If the heroes interfered with Dyslexia Marigt before she managed to properly complete the summoning ritual, which is very likely, the gate is left a bit ajar and a pack of Grey Stalkers have managed to get through. They will ambush the heroes when they leave Castle Pawa to track down the Demon.
 
 The Grey Stalkers are dangerous in that they blink out defensively and it is a bit annoying for the players to keep track of where they are. This also makes it more difficult to hurt them in melee fights. They also try to separate the Heroes by doing their tackling horn charges and throwing the targets away from each other.
@@ -2258,71 +2318,28 @@ Open with the small ones on the road, charging, and the big one placing an explo
 It is possible to talk to the demons if a character can speak ancient, but the Heroes must present something very nice for the stalkers to be interested in dealing with them. Food, magical thingies, etc, but not gold.
 
 
-\small
-\begin{verbatim}
+\subsection*{The Opposition}
+%---------------------------
+At this point the Heroes should be quite powerful, but the Grey Stalkers are difficult to fight. The horn charge, blink, teleport, and explosion effects make them quite deadly. One can charge then blink out while the next charges, staggered attacks, then they blink in together. And as they get damaged they flee back to the big one by teleport.
+
+It's likely that the Heroes will only be able to drive the stalkers away.
+
+\begin{samepage} \vsmall \begin{verbatim}
 Grey Stalkers:
-Live in hive packs, nomadic. One big and 4-8 small ones is normal.
-Larger packs exist, but are uncommon. Clever, can speak a bit of ancient.
-Aggressive and sneaky. Send in a small one, scout, bring in the large,
-then it brings in the rest of the hive pack. They also have hive vision,
-so one small scout is enough for the large to cast explosion spells etc.
+  big grey stalker         1x   as listed in the rules
+  grey stalker             5x   as listed in the rules
+\end{verbatim} \normalsize \end{samepage}
 
 
-\end{verbatim} \goodbreak \begin{verbatim}
-===================================
-big grey stalker         (demon10a)
------------------------------------
-str 16    hp 30 abs 3, set size 2x2
-dex  7    m2 w6 r12
-int  6    vision 30 arc 360 night
-psy 12    mana 12
-per  8    initiative 10, ap 5
-----------
-balance        6
-sneak          10
-veteran        3
-ancient        5
-charge         6
-blink          blink out 1a, blink in 1a, out max 5r
-bite           6 dam 8 slow-1
-horn charge    8 dam 8+dst/3, acts like tackle
-leg stab       9 dam 6 fast+1
-----------
-summon         8 1r 3m +1stalker/3m  summons a grey stalker
-                 duration is until the big grey stalker dies
-explosion      8 1r 2m dam 5 +1/r penetrate 1
-                 range 10 radius 1 +1/2m
-portal home    6 10r 6m duration 10r   creates a one way portal home.
-===================================
+%\begin{center}
+%\vspace{1 cm}
+%\includegraphics[width=1.0\linewidth]{./maps/Demons-Road.jpg}
+%\end{center}
+%
+%\
 
 
-\end{verbatim} \goodbreak \begin{verbatim}
-===================================
-grey stalker             (demon10b)
------------------------------------
-str  8    hp 12 abs 2
-dex  9    m3 w8 r14
-int  5    vision 30 arc 360 night
-psy 10    mana 8
-per  7    initiative 12, ap 6
-----------
-balance        3
-sneak          12
-ancient        3
-veteran        2
-charge         6
-blink          blink out 1a, blink in 1a, out max 2r
-bite           5 dam 6 slow-1
-horn charge    7 dam 6+dst/3, acts like tackle
-leg stab       8 dam 4 fast+1
-----------
-summon         4 100r 8m   summons one big grey stalker
-                 duration is permanent
-teleport       6 1r 2m teleport to the big grey stalker
-===================================
 
-\end{verbatim}
-\normalsize
 
 
 

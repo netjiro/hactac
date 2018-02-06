@@ -573,7 +573,7 @@ def rollGoblin():
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d3()
     char.skills['Common'] = int(char.int / 3) + d3()
-    char.skills['brawling'] = int(max(char.dex,char.str) / 4) + d3()
+    char.skills['brawl'] = int(max(char.dex,char.str) / 4) + d3()
     char.skills['avoid'] = int(char.dex / 4) + d3()
     char.skills['sneak (incl bonus)'] = max(sneakbonus, int(char.per / 4) + d2())
     if disengagebonus > 0:
@@ -581,17 +581,20 @@ def rollGoblin():
     else:
         char.skills['disengage'] = int(char.dex / 4) + d2()
     char.skills['throw'] = int(char.dex / 4) +d2()
-    #char.skills['brawling bite'] = biteskill
     bitedam = 1+int(d10()/3)                             # 1-4 (2,3,3,2)
-    #char.skills['brawling scratch'] = scratchskill
     scratchdam = int(1+d10()/10)                       # 1-2 (9,1)
     # maneuvers
     char.maneuvers.append('yield')
     char.maneuvers.append('off balance')
     # extras
     char.extras.append("goblins can live on half rations, and can eat spoiled food")
-    char.extras.append("bite: dam "+str(bitedam)+" 3ap (2ap if both hands free)")
-    char.extras.append("scratch: dam "+str(scratchdam)+" 2ap (1ap if both hands free) every third attack costs 1 stamina")
+    char.extras.append("brawl bite: dam "+str(bitedam)+" 3ap (2ap if both hands free)")
+    char.extras.append("brawl scratch: dam "+str(scratchdam)+" 2ap (1ap if both hands free) every third attack costs 1 stamina")
+    if roll(33):
+        clawbonus = 1
+        if roll(33):
+            clawbonus = 2
+        char.extras.append("brawl claw: dam(fist)+"+str(clawbonus)+" fast+1 first two attacks don't require stamina")
     char.money = str(int(d10()/4))+" silver, "+str(d12())+" copper" +", "+ str(d4())+" teeth, " \
                  + str(d3())+ " stones, "+ str(d2())+ " feathers, "+ str(d3())+" glass beads"
     # done

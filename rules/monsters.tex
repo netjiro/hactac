@@ -241,13 +241,13 @@ minds of game masters and story tellers.
 ===================================
 bug                      (beetle01)    set tiny token size
 -----------------------------------
-str  1    hp 2 abs 1 to hit -3 (small) cannot block movement, cannot be blocked
-dex  6    m3 w5 fly10                  (swarming)
-per  2    initiative 10
+str  1    hp 2 abs 1    tohit-3 tiny target    cannot block movement
+dex  6    m3 w5 fly10   tohit-6 when flying    cannot be blocked
+per  2    initiative 10, ap 5
 bite      5 dam 1, penetrating:
             armour affects the bug's bite skill instead of damage
             armour abs > 3 counts as armour 3 (full coverage)
-immune to pain and hp/2 mods
+no pain or low hp mods
 -----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
@@ -328,21 +328,29 @@ and concentration of force.
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-spider                   (spider01)
+brown spider             (spider01)
 -----------------------------------
 str  3    hp 5 abs 1
 dex  5    m2 w6 r10
-per  4    initiative 7
-bite      5 dam 3, poison 5\\con, cumulative mod-1/2r until paralysed
-            poison mod affects ams, dex, str
-spin      5 full round attack
+per  4    initiative 7, 5ap
+bite      5 dam 3, fast+1,
+            poison 5 vs con, cumulative mod-1/2r & mp-1/2r until paralysed
+            roll once when bitten instead of each round
+            poison mod affects ams, dex, str, sta, movement
+spin web  5 full round attack
             each successive spin attack gives a webbing:
             dex-2, move-2, mod-3 to all actions.
-            break free is 2*spin\\str
-            friend can clean: takes 5r to clean one spin
-            parrying spin with weapon or shield gives mod-1 we accumulation
-            on the item for every parry. Takes 1r to clear 1 mod.
+            break free is 2*spin vs str
+            friend can clean: takes 5r to clean one web
+            parrying web with weapon or shield gives mod-1 web accumulation
+            on the item for every parry. Takes 1r to clear 1 web mod.
+            A missed spin attack gives the opponent a mod+3 to hit the spider.
+avoid     3 yield+2
 -----------------------------------
+Since the web attack opens the spider to counter attack they are cautious to
+use them. They try mainly when there is low risk of counter attacks.
+They instead use their fast bite attack to poison the target before webbing.
+Spiders do not get mods from low hp and are immune to pain.
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1177,13 +1185,13 @@ S V A R T F O L K ,   o t h e r
 ===================================
 small troll               (troll01)    (set token size large (2x2))
 -----------------------------------
-str 15    hp 30 abs 1 (skin)  large target ranged to hit mod+3
+str 15    hp 30 abs 1 (skin)           large target ranged to hit mod+3
 dex  8    m3 w5 r7 d8
 con 10    stamina 20
 int  2    vision 15 dusk
 psy  7    mana 4
-per  5    (@ xp ~130)
-cha  1    initiative 8+d4
+per  5    initiative 10
+cha  1    ap 4
 pain threshold 5
 regenerates    1hp/5r
 ----------
@@ -1221,8 +1229,8 @@ dex   7   m3 w6 r9 d12
 con  13   stamina 25
 int   3   vision
 psy   8   mana
-per   6   cap
-cha   1   xp
+per   6   initiative 10
+cha   1   ap 5
 ----------
 reach 1
 veteran 6 pain threshold 5
@@ -1386,17 +1394,21 @@ Aggressive and sneaky. Send in a small one, scout, bring in the large,
 then it brings in the rest of the hive pack. They also have hive vision,
 so one small scout is enough for the large to cast explosion spells etc.
 
+It is possible to talk and deal with the Grey Stalkers. They are interested in
+exotic foods, in strange knowledge, in rare objects (for them). They don't care
+about precious metals, jewels,etc.
+
+
 ===================================
 big grey stalker         (demon10a)
 -----------------------------------
-str 16    hp 30 abs 3
+str 16    hp 30 abs 3, set size 2x2
 dex  7    m2 w6 r12
 int  6    vision 30 arc 360 night
 psy 12    mana 12
-per  8    initiative 10
+per  8    initiative 10, ap 6
 ----------
-quick          3
-balance        3
+balance        6
 sneak          10
 veteran        3
 ancient        5
@@ -1412,12 +1424,6 @@ explosion      8 1r 2m dam 5 +1/r penetrate 1
                  range 10 radius 1 +1/2m
 portal home    6 10r 6m duration 10r   creates a one way portal home.
 ===================================
-hp 30 abs 3  :
-init 10      :
-mana 12      :
-pain t4 v3   :
-hp/2         :
-
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1430,15 +1436,14 @@ str  8    hp 12 abs 2
 dex  9    m3 w8 r14
 int  5    vision 30 arc 360 night
 psy 10    mana 8
-per  7    initiative 12
+per  7    initiative 12, ap 6
 ----------
-quick          3
 balance        3
-sneak          8
+sneak          12
 ancient        3
 veteran        2
 charge         6
-blink          blink out 1a, blink in 1a, out max 2r
+blink          blink out 1a, blink in 1a, out max 3r
 bite           5 dam 6 slow-1
 horn charge    7 dam 6+dst/3, acts like tackle
 leg stab       8 dam 4 fast+1
@@ -1447,15 +1452,6 @@ summon         4 100r 8m   summons one big grey stalker
                  duration is permanent
 teleport       6 1r 2m teleport to the big grey stalker
 ===================================
-hp 12 abs 2  :
-init 12      :
-mana 8       :
-pain t3 v2   :
-hp/2         :
-
-
-==================== more grey stalker pics in demons dir
-                     esp smaller versions, hivelings
 \end{verbatim} \normalsize \end{samepage}
 
 \

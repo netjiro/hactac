@@ -55,20 +55,25 @@ OLD: ---------------------------------------------------------------------------
 
 
 
-
+TODO: bygg liten lätt area effekt skada formel
+      ?? kanske ok för att rensa småknott, 3ap dam1 pen0 darkflash radius 3
+TODO: skriv att man kan trolla på att skjuta över små allied
+      när man trollar på ett större mål, tex:
+      allied goblin i vägen och trollar mot human/orc etc.
+TODO: reminder knapp för vad folk gör tickar rundor
+      multi ? fast med extra info rad i porträtten ?
+      typ: "trollar" / "siktar" / "rummaging"
 TODO: ?? should whirlwind be fast+1 instead of fast+2 ??
-
 TODO: fixa till slow (?spell?), stacking med mobile:
       dubbel step cost instead of -3
 TODO: gör en info rad för porträttet, med arms etc  --  try using label instead
-TODO: draw mana psy roll should faint when fail !
-TODO: heal3 macro, remove pain
+TODO: draw mana psy roll should faint when fail ?
 TODO: bygg marshlight spell
 TODO: build lysdjur
 TODO: feign death - charisma roll, mod for damage, etc
 TODO: svärmare, blir bättre ju fler man är runt target
 TODO: ability for mörkerseende.
-TODO: new skill - offra xp för extra skada, after rolls etc.
+TODO: skill : offra xp för extra skada, after rolls etc.
       skill = max hp / session/day/etc. each increasing hp doubles xp cost
 TODO: fix raise dead, control dead, etc.
 TODO: killing blow, alltid träffar prone target. "coup de grace" slut på lidande
@@ -211,25 +216,23 @@ TODO: Dungeon Emergency Device: betala förskott och kunna kalla in förstärkni
       till en grotta. Hyra in folk.
 TODO: goblin och lizardmen bossarna har teleport activation necklaces.
       plocka upp dem för att kunna använda teleports
-TODO:  move i närstrid triggar right to react
+TODO: move i närstrid triggar right to react
 TODO: pentagrammet, trollar in i flaska i labbet?
       eller bara blinkar ut, tills vidare, så att de kan få tillbaka folk
       kontrollerat
 TODO: ta bort att stamina säger hur mycket som finns kvar
-TODO: !!! GÖR MER UTOMHUSSTRIDER !!!
+TODO: gör mer utomhusstrider, request from blom
 TODO: skriv inte exhausted för kritter utan stamina !!
 TODO: dex roll
 TODO: skill - byta XP mot HP  ??
 TODO: big breasted orc healer archer hireling
 TODO: ability - self light   se bättre i mörker
 TODO: från jonas mail: På förekommen anledning: Skillförslag:
-        - To Tough to die
-        Ger bonus för att inte tappa medvetandet när man ligger på negativa HP.
-        - Last stand
-        Ökar skadan med motsvarande hälso och pain mod.
-        - Gritted teeth
-        Ignorera negbonus för låg HP.
-TODO: reminder knapp för vad folk gör tickar rundor
+      - To Tough to die
+      Ger bonus för att inte tappa medvetandet när man ligger på negativa HP.
+      - Last stand
+      Ökar skadan med motsvarande hälso och pain mod.
+      - Gritted teeth
 TODO: skill TOSS - dwarftoss
       kasta en companion.
 TODO: crowdfighter : borde ge +2dam på tunga vapen?
@@ -457,7 +460,7 @@ SKIP: rest regain stamina automagically -- nah, för mycket händer utanför
       macro systemet
 NOPE: reach skall stacka med phalanx om det inte står så nu, även om men inte
       har stickvapen. -- nope, bara med "poke attacks"
-NOPE: dubbla backstab skada efteråt ?    - jaa mycket roligare
+NOPE: dubbla backstab skada efteråt ?
       --neeej fel med accurate etc...
 NOPE: offensive step också, som defensive step ?
 NOPE: already in "leader" and "combat unit"
@@ -465,6 +468,8 @@ NOPE: already in "leader" and "combat unit"
 NOPE: too much work, too many different properties and sights and halos
       TODO: halos för ranges
       TODO: halos för movement templates
+NOPE: heal3 macro, remove pain
+      unnecessary, can't easily parse and make sense of the wounds list
 
 
 
@@ -634,3 +639,21 @@ DONE: whirlwind now costs 1ap per attack at least.
       egen cap ? el liknande för att inte få oändlig serie med superhöga värden
       som inte begränsas i skada tack vare höga FV i vapen och consistent/etc
 DONE: resa sig med dex roll, annars försöka igen... annars en runda.
+DONE: Ignorera negbonus för låg HP.
+      Black Knight
+DONE: off balance and base mods !! kizras hade dubbel base mod
+      off balance men base-6
+      FIXED: BUG: satte basemod 3 för både extra mp och för state offbalance.
+                  disabled för offbalance state, nu bara för extramp
+DONE: wait on other -- DONT use the "common macros" - scroll down to use char
+DONE: bug in wait on other !
+      log in with client and try debug
+DONE: wait on other ändrade fel initiativ  tror det är för att trycker
+      "common macros" istället för individens macro
+DONE: ability: helar när man äter lik :)
+      Ghoul
+DONE: bygg dex roll knapp
+DONE: bygg re-roll damage knapp, som använder last roll och last max dam etc
+DONE: "rrdam" knapp : re-roll damage, using LastMaxDam LastBasePen LastResult
+DONE: shoot-inna-back   mer skada på att skjuta folk som springer och flyr
+      maneuver shoota-inna-back 10xp mod+1 dam+1 against fleeing (R/D) targets

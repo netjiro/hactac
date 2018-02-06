@@ -438,9 +438,12 @@ mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
 mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
                int 8, psy 8, scf 0.66
 
-drain          cast 2r 0m, psy vs psy +3/m, range contact,
-               drains diff mana points
-               must be in contact for the last round of casting.
+drain          cast 2r 1m, psy vs psy +3/m, range contact,
+               drains diff mana points.
+               Must be in contact for the last round of casting.
+               Cannot drain the target below 0 mana. If draining the target to
+               0 mana the target must roll psy or falls unconscious.
+               Roll psy once per round to wake up again.
                int 5, psy 8
 
 darkvision     cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
