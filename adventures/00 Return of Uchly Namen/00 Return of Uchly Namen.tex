@@ -30,85 +30,7 @@
 
 
 %===============================================================================
-
-\documentclass[11pt, twoside, titlepage, a4paper]{report}
-%\usepackage[latin1]{inputenc}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
-% These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
-% meaning a 300dpi image is around 1600 pixels wide
-\usepackage{graphicx}   % For eps figures
-\usepackage{epsfig}     % Alternative package
-\usepackage[hang,small,bf]{caption}
-
-\usepackage[yyyymmdd]{datetime}
-\renewcommand{\dateseparator}{--}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-% with this we ensure that the chapter and section
-% headings are in lowercase.
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\fancyhf{} % delete current setting for header and footer
-\fancyhead[LE,RO]{\bfseries\thepage}
-\fancyhead[LO]{\bfseries\rightmark}
-\fancyhead[RE]{\bfseries\leftmark}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-\addtolength{\headheight}{0.5pt} % make space for the rule
-\fancypagestyle{plain}{%
-    \fancyhead{} % get rid of headers on plain pages
-    \renewcommand{\headrulewidth}{0pt} % and the line
-}
-
-
-\newcommand{\degrees}{$^\circ$~}
-\newcommand{\degree}{$^\circ$}
-\newcommand{\ca}{$\approx$}
-
-\newcommand{\vs}{$\backslash\ $}  % "versus" slash
-\newcommand{\bs}{$\backslash\ $}  % just backslash
-
-%link new command names to the original font sizes,
-%for easier to remember smaller font size
-\newcommand{\vsmall}{\footnotesize}  % simpler to remember
-\newcommand{\vvsmall}{\scriptsize}   %
-%\newcommand{\vvvsmall}{\tiny}
-
-\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
-
-
-\usepackage{ifthen}
-
-\newboolean{skillsaslist}
-\setboolean{skillsaslist}{true}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
-
-\newboolean{actionsaslist}
-\setboolean{actionsaslist}{true}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
-
-\newboolean{itemsaslist}
-\setboolean{itemsaslist}{true}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
-
-
-\newenvironment{readoutloud}%
-{\begin{quote}\begin{itshape}}%
-{\end{itshape}\end{quote}}%
-
-
-
-
-
-
+\input{../../tex/settings}
 
 \begin{document}
 
@@ -173,6 +95,7 @@
 %-------------------------------------------------
 
 \raggedbottom
+
 %\vspace*{\fill}
 
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
@@ -184,10 +107,7 @@ If you want to use it in any other fashion please contact the author.
 
 
 % Add a table of contents
-\thispagestyle{empty} %set empty, no footers or headers
-\fancypagestyle{plain}
-%\cleardoublepage %force next printed page a right hand page.
-\clearpage %force next printed page a right hand page.
+\clearpage
 \flushbottom
 \tableofcontents % Always compile twice if you have changed much
 \newpage % don't allow anyting else on the same page, regardless
@@ -223,6 +143,8 @@ If you want to use it in any other fashion please contact the author.
 
 %\cleardoublepage
 \clearpage
+%\mainmatter  -- nope, not in article or report ?
+\setcounter{page}{1}
 \flushbottom
 \phantomsection\addcontentsline{toc}{section}{introduction}
 \section*{Introduction}
@@ -427,7 +349,7 @@ He is very powerful and too dangerous to battle without the lance spear and shie
 \section*{Player introduction}
 \chaptermark{player intro}
 
-We start with a traditional narrator voice read out, to get your players in gear:
+Open the game by showing the players the region map. Say they all come from the west to TradeTown in search for Gold and Glory! Then continue with a traditional narrator voice and read out the section below:
 
 \begin{readoutloud}
 The newbie Heroes have all arrived in Trade Town last week. They have been looking for work, but it has been difficult to get anything worthy of a true Hero wannabe.
@@ -442,14 +364,18 @@ Payment in gold, upon delivery!
 Contact D.M. in Sleepy Cove.
 \end{verbatim} \end{center}
 
-The advertisement is tattered and worn, but it is the best thing available. The Heroes gather their meagre belongings and buy passage on a ship the very next day. After a short and sunny cruise the Heroes finally disembark on the pier of Sleepy Cove harbour, late on a beautiful summer's day.
-
+The advertisement is tattered and worn, but it is the best thing available. The Heroes gather their meagre belongings and buy passage on a ship the very next day. After a short and sunny cruise the Heroes finally disembark on the pier of Sleepy Cove harbour, late on a beautiful summer's day.\\
 The smell of adventure, heroic deeds, and gold is in the air...
 
 \
 
 ... and it also smells a bit of fish.
 \end{readoutloud}
+
+\
+
+This should get the Heroes in gear. Show them the map of Sleepy Cove and place their figure tokens on the pier. Then let them decide what to do from there. Likely they'll go into town, ask around for Dyslexia Marigt, the inn, or the store to get equipment.
+
 
 
 
@@ -870,15 +796,18 @@ The Goblin Bandits are sitting around a camp fire, chattering in svartlingo. The
 [per]: One is gnawing on what looks like a human hand.
 \end{readoutloud}
 
-Once the heroes are noticed the alarm goes and the leader MuchKlajn GoBoss starts yelling:
+It is possible to actually talk with the goblins instead of just killing them. They have not found the RedStone on the corpse, but they can search them and will sell the RedStone for 1g. The difficulty is getting through the first few moments peacefully, as the Heroes show up in the camp. They goblins will likely just see them as potential food. A truly impressive or scary Hero might give them pause.
+
+Once the heroes are noticed the alarm goes and the leader MuchKlajn GoBoss starts yelling \emph{(unless a peaceful opening is reached quickly)}:
 
 \begin{readoutloud}
 \emph{GoBoss [tiny angry voice]:} Ijm MuchKlajn GoBoss. Dissis mayn Kamp. Killem ogly Hoomans!
 \end{readoutloud}
 
-Wounded or breaking goblins will flee into their cave to wake their sleeping comrades and make another stand. They will release their pet wolf and goad it to attack the heroes when they enter the cave.
+Wounded or breaking goblins will flee into their cave to wake their sleeping comrades and make their stand. They will release their pet wolf and goad it to attack the heroes when they enter the cave.
 
-Otherwise the goblins will retreat and use their archers as much as possible. Their archers will mainly go into hiding and shoot from cover, giving them a mod-3 to get hit by incoming fire.
+Otherwise the goblins will retreat and use their archers as much as possible. Their archers will mainly go into hiding and shoot from cover, giving anyone shooting at them a mod-3 for target in cover.
+This can be a frustrating fight if the goblins run around a lot and the Heroes are too slow or lacking stamina.
 
 \begin{center}
 \includegraphics[width=1.0\linewidth]{./maps/goblin-camp-(32+0+0).jpg}
@@ -917,7 +846,7 @@ Let the RedStone be found either among the treasure or hidden away in a secret p
 
 
 \subsection*{Opposition}
-This is probably the first group fight for the newly minted Heroes. Finding a good balance for the opposition is not trivial.
+This is probably the first group fight the newly minted Heroes have gotten themselves into. Finding a good balance for the opposition is not trivial.
 
 Start out slightly low in the camp and see how well it goes. You can bring in some reinforcement from the cave.
 Then, as they progress into the cave, you balance the number and composition on how well the Heroes did in the camp, and their hp and mana status.
@@ -941,43 +870,19 @@ Once the Red Stone is delivered to Dyslexia Marigt each hero should get 10xp as 
 The heroes now have some time to rest and spend their money and xp before setting out north towards Eisenkrafs to find Coal Black George.
 
 
+\subsection*{Opposition stat sheets}
+%-----------------------------------
+
 \raggedbottom
 
-\goodbreak \begin{samepage} \vsmall \begin{verbatim}
-===================================
-goblin bandit           (goblin05)
------------------------------------
-str  3    hp 4 abs 0
-dex  5    m1 w3 r5 d7
-int  2    vision 12 dusk (set goblin average)
-psy  2    ap 4
-per  6    initiative 7, ap 3, chicken
-----------
-avoid         4 yield+4
-sneak         7
-charge        3
-back stab     3
-===================================
-alternatives:
-small club    6 dam 4, abs 7 crappy quality,
-small spear   5 dam 4/5, pen 0/1, abs  5, parry+0/+1, reach 1 mod-6, fast+0/+1
-small shield  6(4) abs 8 parry+2 crappy quality
-                Ranged attacks mod-1 when in the way.
-                Hiding behind it (primary action) ranged mod-2
-short bow     4 dam 3, 2r fire, no snap fire, crappy quality
-                range 10, short 5 mod+3, long 15 mod-3
-knife         5 dam 2, abs 5, crappy quality
------------------------------------
-Weak looking goblin bandit.
-Armed with a small spear.
-Armed with a short bow.
-Armed with a short sword and a small shield.
-\end{verbatim} \normalsize \end{samepage}
+The standard goblins bandits should be taken straight from the rule book.
+The most common weaponry is clubs and spears, 2h or with shields, and some with short bows and knives.
 
 \
 
 \goodbreak \begin{samepage} \vsmall \begin{verbatim}
 The pet wolf: Graowl, a half starved poor critter
+This one is weaker than the rule book standard wolves.
 ===================================
 wolf                       (wolf02)
 -----------------------------------
@@ -1000,42 +905,53 @@ It takes one round to free the wolf.
 
 \goodbreak \begin{samepage} \vsmall \begin{verbatim}
 Leader: MuchKlajn GoBoss
+He is a slightly more powerful version of the goblin warrior.
 ===================================
 goblin warrior           (goblin07)
 -----------------------------------
 str  5    hp 8 abs 1
 dex  7    m1 w3 r5 d7
 int  4    vision 16 dusk (set goblin good)
-psy  4    ap 5
+psy  4    ap 5(4)
 per  6    initiative 10, ap5, aggressive
 ----------
+quick          1
 mobile         1
 avoid          6 yield+4
 sneak          8
 charge         4
-short sword    7 dam 7, abs 9 old and worn
-small shield   8(6) abs 10, parry+2
-throwing knife 5 dam 3, fast+1, readied as quick draw from belt.
-                 range 8, short 4 mod+3, long 12 mod-3, vlong 16 mod-6 dam-1,
-                 quick 1a mod-3, shot 1r mod-0, aimed 2r mod+3
-                 poisoned: spider poison 5 \vs con, roll each round
-                 gives mod-1 to ams, dex, str, movement each failed con roll.
+quickdraw      5
+poke           x
+swing          x
+short sword    8 dam 5, abs 10,
+                 str 3 (max +1 str bonus), finesse-4
+                 poke: mod-1 dam-1 pen+1
+                 swing: slow-1 mod-1 dam+1 todefend+2
+small shield   8(6) abs 8, parry+2,
+                 str 2
+                 Ranged attacks mod-1 when in the way.
+                 Hiding behind it (3ap) ranged mod-2
+throwing knife 5 dam 2, fast+1, readied as quick draw from belt
+                 range 8, short 4 mod+1, long 12 mod-3, vlong 16 mod-6 dam-1,
+                 str 1 (no str bonus)
+                 fast+1 if str 2 and dex 4
+                 first three attacks do not require stamina
 leather armour abs 1
 ===================================
 A large fierce looking goblin dressed in a fine red silk shirt and
 matching shawl, as well as leather armour.
 He is armed with a short sword and small shield.
-
-When MuchKlajn GoBoss dies he says:
-    Aaargh, me Die, Like stinky Pie
-    You die Too, You stinky Shoe
-    You be stinkiest of All !
-This is his final dying curse, and the person receiving it will smell
-really bad for a couple of days before the weak magic dissipates.
-The target gets the "Tasty" ability for a few days.
 \end{verbatim} \normalsize \end{samepage}
 
-\
+When MuchKlajn GoBoss dies he says:
+\begin{readoutloud}
+    Aaargh, me Die, Like stinky Pie!\\
+    You die Too, You stinky Shoe!\\
+    You be stinkiest of All !
+\end{readoutloud}
+This is his final dying curse, and the person receiving it will smell
+really bad for 2d3 days before the weak magic dissipates.
+The target gets the "Tasty" ability for the duration.
 
 \flushbottom
 

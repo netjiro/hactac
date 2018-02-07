@@ -254,6 +254,12 @@ no pain or low hp mods
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
+They attack on "sight"(smell), ca 10sq. There is a 50\% chance that they
+will become hostile and attack each round when a potential target is in
+their smell range. Mostly they stand around or mill around slowly.
+Normally they are independent and uncoordinated. They will however attack
+any non-bug who has bug blood/gore on them, since it signals an enemy.
+
 ===================================
 black bug                (beetle02)    set small token size (slight reduction)
 -----------------------------------
@@ -261,7 +267,7 @@ str  5    hp 5 abs 2 to hit -1 (small)
 dex  6    m3 w5 r- fly15
 per  5    initiative 8, smell range 6
 charge      6 (fly attack gives mod-3 total)
-bite cling  7 dam 4 once per round only
+bite cling  7 dam 4 once per round
               hold after bite (clinging to target)
               each holding (clinging) bug gives:
                   mod-3 to all actions
@@ -270,8 +276,15 @@ nibble      5-abs when held dam 1 penetrating
             once per round
 immune to pain and hp/2 mods
 -----------------------------------
-50%/r to become hostile to non-bug in range
-Will become hostile to any non-bug covered in bug blood/gore
+Mostly they stand around or mill around slowly.
+Normally they are independent and uncoordinated.
+They will however attack any non-bug who has bug
+blood/gore on them, since it signals an enemy.
+
+The Big Black Bug can breed them to ignore certain types of non-bug creatures.
+
+50%/r to become hostile to non-bug in smell range.
+Will become hostile to any non-bug covered in bug blood/gore.
 
 Will try to attack and latch on to slow down for the others,
 then nibble to death.
@@ -292,6 +305,10 @@ Fail-3 or worse will hit the target instead of the bug.
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
+The Big Black Bug is the hive mommy. It can can direct the normal
+smaller black bugs to attack in a coordinated fashion. It can also
+start spawning more black bug critters if attacked. Spawning one
+black bug per round for 1d5 rounds, then one every 3 rounds.
 ===================================
 big black bug            (beetle03)    set large token size (2x2)
 -----------------------------------
@@ -300,12 +317,10 @@ dex  6     m4 w6 run8 fly20
 per  8     initiative 10
 charge     6 (fly attack gives mod-3 total)
 big bite   8 dam 10 pen 1
-             hold after bite (target held in place)
-             held target has:
-                 mod-6 to all actions
-                 cannot move at all
-             str vs str to break free, full round action
-             friends can help lend strength
+             hold after bite (target held in place):
+                 mod-6 to all actions, cannot move
+                 str vs str to break free, full round action
+                 friends can help lend strength
 nibble       8-abs when held dam 3 penetrating
              once per round
 ichor spray  template area range 6 90 deg, everyone within the area:
@@ -314,7 +329,7 @@ ichor spray  template area range 6 90 deg, everyone within the area:
              cleaning it off takes 1d3+2r
              the ichor stinks and is corrosive.
              in 5r it's 50% to reduce cloth and leather abs by 1
-             Max 1 spray attack per battle, max 3 per day
+             Max 2 spray attack per 100r, max 3 per day
 immune to pain and hp/2 mods
 -----------------------------------
 Screech-Whistle will call all small black bugs to immediately come to the
@@ -322,6 +337,10 @@ aid of the Big Black Bug. They will then attack everything in their path.
 
 BBB can coordinate small black bugs in intelligent movement, timing,
 and concentration of force.
+
+BBB can breed the small black bugs to ignore certain
+types of non-bug creatures.
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -724,30 +743,29 @@ black witchcraft alive and flourishing.
 
 
 ===================================
-goblin bandit           (goblin02)   set small token size
+goblin bandit           (goblin05)
 -----------------------------------
 str  3    hp 4 abs 0
 dex  5    m1 w3 r5 d7
-int  2    vision 12 dusk
-psy  2    mana 2
-per  6    initiative 6 chicken
+int  2    vision 12 dusk (set goblin average)
+psy  2    ap 4
+per  6    initiative 7, ap 3, chicken
 ----------
-small club    5 dam 4, abs 8
-avoid         4 yield+4
 sneak         7
 charge        3
 back stab     3
+avoid         4 yield+4
 ===================================
 alternatives:
-small spear   5 dam  4/5, abs  5, parry+0/+1, reach 1 mod-6, fast+0/+1
-short sword   5 dam 4(5), abs 7(8) sometimes crappy quality,
-dagger        5 dam 3(4), abs 5(6), sometimes crappy quality
-small shield  4 abs 8(10) parry+2 sometimes crappy quality
+small club    6 dam 2/4, abs 6, parry-1, toavoid+1
+small spear   5 dam 3/4, pen 0/1, abs 4, parry-1/+1, reach 1 mod-5
+small shield  5(3) abs 8 parry+2 crappy quality
                 Ranged attacks mod-1 when in the way.
                 Hiding behind it (primary action) ranged mod-2
-short bow     4 dam 3(4), reload bow, sometimes crappy quality
-                range 10(12), short 5(6) mod+3, long 15(18) mod-3,
-                vlong 20(24) mod-6 dam-1, extreme 30(36) mod-9 dam-2
+short bow     4 dam 3, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+1
+                range 12, short 6 mod+3, long 18 mod-3,
+                str 2 (no str bonus)
+knife         3 dam 2, abs 5, crappy quality
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -760,21 +778,22 @@ str  3    hp 5 abs 0
 dex  6    m1 w3 r5 d7
 int  2    vision 10 dusk
 psy  3    mana 0
-per  5    initiative 8
+per  5    initiative 8, ap 4, chicken
 ----------
-small club    6 dam 4, abs 8
-avoid         5 yield+4
 sneak         5
 charge        4
+avoid         5 yield+4
 ===================================
-short sword   5 dam 5, abs 8
-small shield  4 abs 8, parry+2
-small spear   5 dam 4/5, abs  6, parry+0/+1, reach 1 mod-3, fast+0/+1
-(1h/2h)         str 3 (max +1 str bonus, extra str bonus are penetrating)
-short bow     5 dam 4, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+3
+small club    7 dam 2/4, abs 6, parry-1, toavoid+1
+small spear   6 dam 3/4, pen 0/1, abs 4, parry-1/+1, reach 1 mod-5
+small sword   5 dam 4, abs 6
+small shield  6(4) abs 8 parry+2
+                Ranged attacks mod-1 when in the way.
+                Hiding behind it (primary action) ranged mod-2
+short bow     5 dam 3, reload bow: quick 1r mod-3, norm 2r mod-0, aim 3r mod+1
                 range 12, short 6 mod+3, long 18 mod-3,
-                vlong 24 mod-6 dam-1, extreme 36 mod-9 dam-2
                 str 2 (no str bonus)
+knife         4 dam 2, abs 3, parry-2, toparry-2, toavoid-1
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -787,13 +806,14 @@ str  4    hp 6 abs 1
 dex  7    m1 w3 r5 d7
 int  3    vision 12 dusk
 psy  3    mana 0
-per  6    initiative 9
+per  6    initiative 9, ap 5, chicken
 ----------
+sneak         4
+charge        6
+axe           8 dam 7, abs 7, parry-3, toparry-1, toavoid+1
 short sword   7 dam 5, abs 8
 small shield  6 abs 8, parry+2
 avoid         6 yield+4
-sneak         4
-charge        6
 leather armour abs 1
 ===================================
 \end{verbatim} \normalsize \end{samepage}
@@ -808,7 +828,7 @@ str  6    hp 8 abs 1
 dex  8    m2 w3 r5 d8
 int  3    vision 12 dusk
 psy  4    mana 4
-per  6    initiative 11
+per  6    initiative 11, ap 7, careful
 ----------
 quick         2
 mobile        2
@@ -918,7 +938,7 @@ str 1     hp 2 abs 0
 dex 4     m1 w2 r4 d6
 int 1     vision 10 dusk
 psy 1     mana 1
-per 4     initiative 5
+per 4     initiative 7
 ----------
 claw      4 dam 1, 2x -3
 bite      4 dam 1
@@ -933,15 +953,15 @@ sneak     6
 ===================================
 goblin runt knifer   (goblinrunt02)   set small token size
 -----------------------------------
-str 1     hp 3 abs 0
+str 2     hp 3 abs 0
 dex 5     m2 w3 r4 d6
 int 1     vision 10 dusk
 psy 1     mana 1
-per 5     initiative 7
+per 6     initiative 9
 ----------
 claw      4 dam 1, autodouble 2x -3
 bite      4 dam 2
-knife     4 dam 3, fast+1
+knife     4 dam 2, abs 3, fast+1
 avoid     6 yield+3
 sneak     8
 ===================================
@@ -1288,19 +1308,49 @@ tear apart  5 dam 5, penetrating 3, when grappled
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-skeleton               (skeleton02)
+skeleton grunt         (skeleton02)
 -----------------------------------
-str  5    hp 10 abs 0(hack,crush), 2(thrust,pierce)
+str  6    hp 10 abs 0
 dex  5    m1 w3 r- d-
 psy  3    vision 15
-per  3    initiative 6
+per  3    initiative 6, ap 4
 ----------
+immune to pain
+no low hp mods (Black Knight 3)
+takes half hp from thrust/pierce attacks (arrows, spears, etc)
+----------
+spear     5 dam 5/6, pen 1/2, abs 8, reach 1 mod-3
 sword     5 dam 6, abs 10
-shield    5 abs 10, parry +3
+shield    8 abs 10, parry+3
+-----------------------------------
+healthy: >5hp : 3ap M, NO parry, just attack
+damaged: will parry
+===================================
+aka: skeleton grunt, skeleton soldier
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+skeleton guard         (?)
+-----------------------------------
+str  9    hp 15 abs 2
+dex  5    m2 w4 r6 d8
+psy  3    vision 15
+per  9   initiative 8, 8ap
 ----------
-immune to pain and half hp mods
-pain threshold 99
-black knight 1
+immune to pain
+no low hp mods (Black Knight 3)
+takes half hp from thrust/pierce attacks (arrows, spears, etc)
+----------
+glave      8 dam 9, pen 2, abs 8, parry-3, slow-1, toavoid+1
+             reach 0 mod-1, reach 1 mod-0, reach 2 mod-6,
+avoid      7 yield+3
+-----------------------------------
+healthy >5hp : 8ap M, NO parry, just attack  :  2x attack glave
+damaged: 8ap will avoid  :  1/2x avoid / 1x attack glave
+glave attack, avoid defence
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
@@ -1310,14 +1360,17 @@ black knight 1
 ===================================
 evil skeleton          (skeleton03)
 -----------------------------------
-str  7    hp 20 abs 0(hack,crush), 2(thrust,pierce)
+str  7    hp 20 abs 0
 dex  5    m1 w3 r5 d8
 psy  5    vision 15
-per  4    initiative 8
+per  4    initiative 8, ap 5
 ----------
-pacing      1 (-2,-2,-6)
-2x sword    8 dam 7(6), abs 10
+immune to pain
+no low hp mods (Black Knight 3)
+takes half hp from thrust/pierce attacks (arrows, spears, etc)
+----------
 double      7
+2x sword    8 dam 7(6), abs 10
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 

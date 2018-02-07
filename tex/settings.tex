@@ -45,10 +45,19 @@
 \newcommand{\vvsmall}{\scriptsize}   %
 %\newcommand{\vvvsmall}{\tiny}
 
+
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
 
 
 \usepackage{ifthen}
+
+
+% \needspace{5\baselineskip}      << reserves approximately 5 lines, leaves raggedbottom, more efficient
+% \Needspace{5\baselineskip}      << reserves exactly 5 lines, leaves raggedbottom, less efficient
+% \Needpsace*{5\baselineskip}     << leaves flushbottom if \flushbottom is in effect, otherwise ragged
+\usepackage{needspace}
+
+
 
 % \skill{blabla}
 \newboolean{skillsaslist}
@@ -64,10 +73,10 @@
 \ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
 \ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
 
-% \equiten{blabla}
+% \eqitem{blabla}
 \newboolean{itemsaslist}
 \setboolean{itemsaslist}{true}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\eqitem}[1]{\subsubsection*{#1}}}
 \ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
 \ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
 

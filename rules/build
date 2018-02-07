@@ -15,4 +15,4 @@ rm *{.log,.aux,.toc,.dvi,.out}
 
 #aplay ~/doc/sound/softpop.wav
 
-okular ../book.pdf &
+okular ./book.pdf &

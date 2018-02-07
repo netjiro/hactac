@@ -3,9 +3,9 @@
 
 hactac: rpg-ish tabletop game for dead tree and digital tables alike
 
-Start with the simple basic rules, play through "Dungeon of Testing" a few times to get yourself and your players familiar with the system. Then play "Return of Uchly Namen".
+Start with the simple basic rules, play through "Dungeon of Testing" with each player individually to get yourself and your players familiar with the system as they create their characters. Then play "Return of Uchly Namen" together.
 
-As you get used to the system add and delete from the more complex rules, skills, etc until you find a good trade off between speed and complexity, suitable to your specific gaming group.
+As you get used to the system, add and delete from the more complex rules, skills, etc until you find a good trade off between speed and complexity, suitable to your specific gaming group.
 
 
 
@@ -22,8 +22,18 @@ Anything you want to change or add? Contact me! Or even better: go to github htt
 
 
 
+Currently in the repo
+---------------------
+
+the book: rules, setting, skills, equipment, monsters, etc
+00 Dungeon of Testing
+00 Return of Uchly Namen  (undergoing cleanup)
+06 Goblin Destiny  <<  current campaign, not completed yet
+
+
+
 Coming soon(tm)
-----------------------------------
+---------------
 
 I'll be adding the campaigns as i get the time to clean them out enough for public consumption:
 
@@ -70,13 +80,19 @@ Most of the file space is binary: images and campaign files, and I don't general
 The history:
 ------------
 
-The hactac rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Gothenburg for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
+The hactac rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
 
-That's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming. I inject these adventures to fill the void found in between our long running role playing campaigns and the one shot board games sessions.
-We play this for a couple of few hours every now and then after people have put their kids to sleep.
+So that's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, a bit silly, but with significant tactical depth.
 
-Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance for more experienced characters. GW is of course notoriously craptitudish at balance design. We also played some Descent, but that requires gathering for a full day, and I usually prefer to play campaigns instead of one shot adventures. There is a gap to fill!
+I inject these adventures to fill the void found in between sessions of our long running role playing campaigns and the occasional one shot board game days.
+We play this for a couple of hours in the evenings every now and then after people have put their kids to sleep.
 
-Many years ago, as an early teen, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my "real" rpg campaign, but still wanted to play. That turned out quite well, and was fun despite the extreme simplicity of both the rules and the world. That was an encouraging experience to draw from when I started working on this package.
+Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also play some Descent occasionally, but that requires gathering for a full day, and I usually prefer campaigns instead of one shot adventures.
 
-Here I've tried to go for fast gaming, since we only have a couple of hours each session, while still making the battles tactically interesting and the role playing rewarding, albeit cliché. The combination of cooperation, skills, positioning, and battle maneuvers are very important when fighting critters under this rule set. Just charging in for dps dice rally doesn't cut it. Coordination between characters, positioning, timing, and complementary skills and abilities are very important for fighting success, which makes things more interesting. The role playing aspects are written for comedy. It is supposed to be fun, cliché, and more than a bit silly most of the time.
+Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my real rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world. That was my base idea when I started working on this package.
+
+I've split the rules into the very basic fundamentals, and the rest. Just choose what to include to the point where it is a good fit for your group. Find your own trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set is more suitable for a script assisted virtual tabletop like maptool, etc.
+
+At the base it's simple enough for young kids to understand. At full complexity it requires quite a bit more since I have tuned it for my regular players who are mostly engineers and scientists.
+
+Fast gaming is crucial for us since we only have a couple of hours each session. The battles must be tactically interesting and the role playing rewarding. Coordination, timing, positioning, complementary skills and battle maneuvers are very important. Just charging in for dps dice rally doesn't cut it. This brings the tactical depth. The role playing aspects are written for comedy. In the end it is supposed to be fun, cliché, and more than a bit silly most of the time.

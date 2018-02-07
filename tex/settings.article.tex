@@ -17,7 +17,7 @@
 \pagestyle{fancy}
 % with this we ensure that the chapter and section
 % headings are in lowercase.
-%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}             % no "\chapter" in article doc type
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}  % no "\chapter" in article doc type
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{} % delete current setting for header and footer
 \fancyhead[LE,RO]{\bfseries\thepage}
@@ -76,7 +76,7 @@
 % \eqitem{blabla}
 \newboolean{itemsaslist}
 \setboolean{itemsaslist}{true}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\eqitem}[1]{\subsubsection*{#1}}}
 \ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
 \ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
 
