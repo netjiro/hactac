@@ -13,6 +13,8 @@
 % It's not updated properly to current rule set. I'll do that if/when I have
 % the time. The current campaign "Goblin Destiny" has time priority.
 
+% note, ed 180208: mostly updated to DAP ...
+
 % this means it's written for an older rule set version.
 % Mainly: "capacity" should be replaced with "action points"
 % capacity 1-9 should be 3ap base
@@ -23,7 +25,7 @@
 % base ap 4, quick 2 :  ap 6(4)
 
 % It was played with maptool 1.2.
-% I'll see if I can realease the maps, images, and maptool campaign files later.
+% I'll see if I can package the maps, images, and maptool campaign files later.
 
 
 
@@ -43,27 +45,26 @@
 
 \begin{center}
 
-   \vspace{4 cm} % Vertical space
+   \vspace{4 cm}
 
    \textbf{\Huge{Return of}}
 
-   \ % empty paragraph
+   \
 
    \textbf{\Huge{Uchly Namen}}
 
-   \ % empty paragraph
+   \
 
    \textbf{\Large{newbie introduction campaign}}
 
-   \vspace{2 cm} % Vertical space
+   \vspace{2 cm}
    \includegraphics[width=120mm]{./figs/negotiate.eps}
 
    % make it look better in html rendering.
-   \vspace{2 cm} % Vertical space
+   \vspace{2 cm}
 
    \normalsize
-   four main adventures\\
-   plus side quests\\
+   four main adventures, plus side quests\\
    ca 50h game time
 
 
@@ -71,13 +72,13 @@
 
    %\textbf{\Large{Author Authorson}} %\hspace{5 cm} \large{author2}}
 
-   \ % empty paragraph
+   \
 
    %\large{company name}
 
    %\large{General Academy of Bloody Murder}
 
-   \ % Empty paragraph
+   \
 
    \normalsize{\today}
 
@@ -98,19 +99,26 @@
 
 %\vspace*{\fill}
 
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
+\thispagestyle{empty} % no header on this page
+
+\vsmall \noindent
+This work is licensed under a Creative Commons \\
+Attribution-NonCommercial-ShareAlike 4.0 International License. \\
+(CC BY-NC-SA 4.0).\\
 \url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
 \url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
 If you want to use it in any other fashion please contact the author.
+\normalsize
 
-\vspace*{\fill}
+%\vspace*{\fill}
+\vfill
 
 
 % Add a table of contents
-\clearpage
+\clearpage              % don't allow anything else, above, on the TOC pages.
 \flushbottom
-\tableofcontents % Always compile twice if you have changed much
-\newpage % don't allow anyting else on the same page, regardless
+\tableofcontents        % Always compile twice if you have changed much
+\newpage                % don't allow anything else, below, on the TOC pages.
 
 
 
@@ -149,9 +157,9 @@ If you want to use it in any other fashion please contact the author.
 \phantomsection\addcontentsline{toc}{section}{introduction}
 \section*{Introduction}
 \chaptermark{introduction}
-Hello good folks. This is a small but "complete" campaign written in the old days, for what has now become the hactac rules and world setting. It is intended as an introductory campaign for newbies (both players and characters), to showcase some world intro, basic maps, fighting techniques, etc.
+Hello, good folk. This is a small but complete campaign written back in the old days, for what has now become the hactac rules and world setting. It is intended as an introductory campaign for newbies (both players and characters), to showcase some world intro, basic maps, fighting techniques, etc.
 
-Some of the maps and token images I've found on various rpg amateur user gallery sites and shamelessly used here without proper attribution. If you find your material in here and either want me to remove it or want attribution, please contact me.
+Some of the maps and token images I've found on various rpg and table top user gallery sites and shamelessly used here without proper attribution. If you find your material in here and either want me to remove it or want proper attribution, please contact me.
 
 The campaign consists of a series of adventures linked together around the return of the demon Uchly Namen and the problems he causes. This is meant to be played as tongue-in-cheek old style gaming and is supposed to be fun and entertaining. Don't bother about realism, dark intrigue, etc. Happily portray the npc characters as cliché cardboard cut-outs, use silly voices, be flexible with the rules, and so on. Maximum fun!
 
@@ -189,6 +197,8 @@ If I get the time I might update the campaign files to MapTool-1.3 series format
 The campaign chronology of the first run-through can be found at \\
 \url{http://forums.rptools.net/viewforum.php?f=48} \\
 and the discussion forum for this campaign is located at \\ \url{http://add.url.here.org/sothat/wecan/readit}
+
+I have also reproduced it here as an appendix. The \hyperref[sec:playthrough]{"Playthrough section"} is the original posted chronology, but cleaned up.
 
 \
 
@@ -596,9 +606,10 @@ He sure looks like he knows how to fight.
 
 \
 
+%TODO: write invisibility spell for her
 \goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-Dyslexia Marigt             (named)
+Dyslexia Marigt / Deville Sneexious             (named)
 -----------------------------------
 str  3      hp 9 abs 0 (+5 once)
 dex  5      m1 w3 r5 d7
@@ -701,21 +712,19 @@ spells
 equipment
 money ( g s c)
 ===================================
+legendary longsword: "slash"  mod+1 dam 13(11) abs 30 finesse 8, str 7
+fashionable exquisite brigandine armour abs 2 (behaves as leather), or,
+legendary plate mail abs 3 (behaves as brigandine)
+\end{verbatim} \normalsize \end{samepage}
+
 A well known hero. You have heard many songs about his heroic deeds.
 Dressed in fine garments. Blond flowing hair, white glinting teeth.
 Armed with his legendary long sword "Slash", he fights one handed.
 
-longsword: "slash"  dam 13(11) abs 30 finesse 8
-    str 7
-
-fashionable exquisite brigandine armour abs 2 (behaves as leather)
-or
-legendary plate mail abs 3 (behaves as brigandine)
-
 Bling is too cool for stats, and I'm lazy. He has around 1000xp
 and a couple of super abilities, like Über, and a lot of powerful
 fighting skills and maneuvers.
-\end{verbatim} \normalsize \end{samepage}
+
 
 \
 
@@ -863,9 +872,9 @@ Balance the camp fight for fun: reinforcements or fleeing into the cave, or both
 
 
 \subsection*{Aftermath}
-Dyslexia Marigt will be glad and thankful when they bring back the Red Stone to her. She pays the 5 gold and gives the heroes some cookies and milk.
+Dyslexia Marigt will be glad and thankful when they bring back the RedStone to her. She pays the 5 gold and gives the heroes some cookies and milk.
 
-Once the Red Stone is delivered to Dyslexia Marigt each hero should get 10xp as a sub quest reward.
+Once the RedStone is delivered to Dyslexia Marigt each hero should get 10xp as a sub quest reward.
 
 The heroes now have some time to rest and spend their money and xp before setting out north towards Eisenkrafs to find Coal Black George.
 
@@ -945,9 +954,9 @@ He is armed with a short sword and small shield.
 
 When MuchKlajn GoBoss dies he says:
 \begin{readoutloud}
-    Aaargh, me Die, Like stinky Pie!\\
-    You die Too, You stinky Shoe!\\
-    You be stinkiest of All !
+    Aaargh, me Die, Like Stinky Pie.\\
+    You die Too, You Stinky Shoe.\\
+    You be StinkiEst of All !
 \end{readoutloud}
 This is his final dying curse, and the person receiving it will smell
 really bad for 2d3 days before the weak magic dissipates.
@@ -968,8 +977,8 @@ The target gets the "Tasty" ability for the duration.
 
 
 
-%---------------------------------------
-%02 : The Green Stone - Eisenkrafs mines
+%--------------------------------------
+%02 : The GreenStone - Eisenkrafs mines
 %===============================================================================
 %                     Eisenkrafs mines and Coal-Black-George
 %                     --------------------------------------
@@ -977,7 +986,7 @@ The target gets the "Tasty" ability for the duration.
 
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{02 green stone}
-\section*{02: The Green Stone -- Eisenkrafs mines}
+\section*{02: The GreenStone -- Eisenkrafs mines}
 \chaptermark{green stone}
 \label{sec:02GreenStone}
 
@@ -1108,9 +1117,9 @@ One or two will sneak around and try to come up from behind to steal coin or bac
 \subsection*{Aftermath}
 When they return to Dyslexia Marigt with the GreenStone she promptly pays them the 5 gold reward and gives them cookies and milk.
 
-The heroes should each get a 10xp sub quest reward once they have delivered the Green Stone to Dyslexia Marigt. Add another 5xp each if they managed to figure out the back story around Gebbhard Goebbels and either avoided or dealt with that problem.
+The heroes should each get a 10xp sub quest reward once they have delivered the GreenStone to Dyslexia Marigt. Add another 5xp each if they managed to figure out the back story around Gebbhard Goebbels and either avoided or dealt with that problem.
 
-They can now rest and spend their money and xp before venturing east towards Honorbliz Wize and the Blue Stone.
+They can now rest and spend their money and xp before venturing east towards Honorbliz Wize and the BlueStone.
 
 
 \subsection*{Opposition}
@@ -1341,7 +1350,7 @@ money ( 0g 1s 12c)
 
 
 %--------------------------------------------
-%03 : The Blue Stone - Honorbliz Wize's Tower
+%03 : The BlueStone - Honorbliz Wize's Tower
 %===============================================================================
 %                                 Honorbliz Wize
 %                                 --------------
@@ -1385,7 +1394,7 @@ A broken Banor's Gate can be found in the tower. The transaxial relocator is bro
 As you approach the wizards dark abode you hear screams and see flashes of light from the east base of the tower. A wizard and a hooded figure are fighting each other.
 \end{readoutloud}
 
-When the characters approach the tower the hear screams and see flashes of light from the east base of the tower. Sam Slick is battling Honorbliz Wize since he wants the blue stone for himself to sell to the highest bidder. Sam has figured out that Honorbliz Wize has the blue stone, and that it is important for summoning Uchly Namen. Sam is planning to steal the blue stone from Honorbliz, and didn't really plan to kill him outright. But it was not that easy to sneak in.
+When the characters approach the tower the hear screams and see flashes of light from the east base of the tower. Sam Slick is battling Honorbliz Wize since he wants the BlueStone for himself to sell to the highest bidder. Sam has figured out that Honorbliz Wize has the BlueStone, and that it is important for summoning Uchly Namen. Sam is planning to steal the BlueStone from Honorbliz, and didn't really plan to kill him outright. But it was not that easy to sneak in.
 
 Sam triggered a couple of defensive runes when entering the tower, and had to flee fast. Honorbliz reacted with the traditional "I'll kill him myself" nonsense and went out unprepared onto the steps of the tower. There he proceeded to get poisoned by a throwing knife, taking some hits, and not managing to blast Sam into oblivion. Sam is surprisingly tricky to fight.
 
@@ -1457,7 +1466,7 @@ If the reader fail his regular literate rolls, he will need to take a couple of 
 \textnormal{+0:} The heroes get well paid from Baron Lotsa Pawa for their work.\\
 \textnormal{+0:} Baron Pawa's men has caught the wizard Trygain John when he tried to flee the lands. Honorbliz figures out that the binding tool is the large gold necklace with three crystals inset, which they confiscated from Trygain John before killing him.\\
 \textnormal{+0:} Honorbliz Wize knows that the banishment of Uchly Namen is only temporary. He works on a permanent solution for a while, then seems to get bored. Demon hunting is not his main interest. \\
-\textnormal{+0:} He scatters the stones of the binding necklace "in good places", then sells the useless heavy gold necklace itself. The red stone is teleported to some tomb in the south duns. The green stone is teleported to an old forgotten temple cave. The blue stone he keeps for himself for future studies.\\
+\textnormal{+0:} He scatters the stones of the binding necklace "in good places", then sells the useless heavy gold necklace itself. The RedStone is teleported to some tomb in the south duns. The GreenStone is teleported to an old forgotten temple cave. The BlueStone he keeps for himself for future studies.\\
 \textnormal{+0:} The journal ends with a note that he should try some obscure ritual at the site, but seems to not have bothered with it. That was around 200 years ago. I guess he never got around to it...
 \end{readoutloud}
 
@@ -1485,9 +1494,9 @@ Honorbliz Wize was fixing it for a band of adventurers. They might be upset if i
 %----------------------
 The tower contains quite a few valuables. Most of it is too heavy to bring along, and if the heroes come back to loot with a horse and carriage, they are met by lot of relatives, and their lawyers. The wizard is several hundred years old, and have enormous amounts of children, grand children, etc. The heroes will get nothing more, and if they stick around they might get dragged into a lengthy court battle.
 
-This time when they deliver the Blue Stone to Dyslexia Marigt, she will pay up, but starts to quibble and get into delays when faced with doubling the fee. See the intermission below.
+This time when they deliver the BlueStone to Dyslexia Marigt, she will pay up, but starts to quibble and get into delays when faced with doubling the fee. See the intermission below.
 
-The Heroes should each get a 10xp reward after delivering the Blue Stone to Dyslexia Marigt. Another 5xp each if they have figured out that Honorbliz Wize has battled it before and all that. And another 5xp each if they have figured out that they can get the weapons to fight the demon at castle Pawa.
+The Heroes should each get a 10xp reward after delivering the BlueStone to Dyslexia Marigt. Another 5xp each if they have figured out that Honorbliz Wize has battled it before and all that. And another 5xp each if they have figured out that they can get the weapons to fight the demon at castle Pawa.
 
 
 \raggedbottom
@@ -1521,80 +1530,6 @@ He's here to die on script, so let's not waste time on his stats.
 
 \goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
-Sam Slick                   (named)
------------------------------------
-str  8(5)    hp 22(17) abs 2 (leather + ward rune tattoo)
-dex 12(8)    m3(2) w5(4) r9(7) d14(10)
-con  7(5)    stamina 12(8)
-int  7       vision 23
-psy  8       mana 7
-per 12(9)    ap 7(4)
-cha  8       xp 12 (ca 1000xp)
-----------
-quick      3
-focus      3
-mobile     3
-veteran    6
-luck       3
-black cat  3
-
-avoid     10 yield+4
-sneak     12
-find      10
-jump       6
-climb      6
-balance    6
-
-double     8
-sword     12
-fancy attacks  5
-backstab   9
-throw      9
-quick draw 7
-
-common    10
-literate   6
-counting   4
-haggle     8
-
-strong     3
-agile      4
-tough      2
-perceptive 3
-resilient  5
-enduring   4
-capable    3
-fast       4
-----------
-yield +4
-deflect
-feint
-----------
-2x fast blades   10 dam 6(5), abs 12, fast+1
-                    str 4 (max +1 str bonus), finesse-6
-                    fast+1: str 6 dex 8
-
-8x throwing daggers 8 dam 3, penetrating 1, fast+1
-poisoned              range 8, short 4 mod+3, long 12 mod-3,
-                      vlong 16 mod-6 dam-1,
-                      str 2 (no str bonus)
-                      first three attacks do not require stamina
-                      poison is paralysing and damaging
-                      strength 12, dam is str vs con diff: 1hp/rnd,
-                      paralysed for 3r per diff.
-
-Amulet of Freedom. Counters magic that hinders the movement or actions
-of the bearer. Will also unbind rope knots and unlock shackles that bind
-the bearer. Draws 3 mana per automatic use.
-
-money ( 13g 15s 12c)
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \vsmall \begin{verbatim}
-===================================
 Shadow Servant              (named)
 -----------------------------------
 str  3       hp 5 abs 0
@@ -1616,6 +1551,66 @@ The Shadow Servants will slowly close in on any intruders, using their icy
 tricky claw attacks to slowly disable them and the magical avoid to stay
 alive despite the low hp. They are tricky to kill unless the Heroes team up
 and coordinate multiple attacks on each shadow servant in each round.
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \vsmall \begin{verbatim}
+===================================
+Sam Slick                   (named)
+-----------------------------------
+str  8(5)    hp 22(17) abs 2 (leather + ward rune tattoo)
+dex 12(8)    m3(2) w5(4) r9(7) d14(10)
+con  7(5)    stamina 12(8)
+int  7       vision 23
+psy  8       mana 7
+per 12(9)    ap 7(4)
+cha  8       xp 20 (ca 1000xp)
+----------
+strong 3, agile 4, tough 2, perceptive 3
+resilient 5, enduring 4, fast 4, rapid 5
+quick 3, focus 3, overextend 3, mobile 3
+luck 3, black cat 3
+balance    6, jump 6, climb 6, swim 6
+veteran    6
+
+sneak     12
+avoid     10 yield+4
+double     8
+sword     12
+fancy attacks  5
+backstab   9
+throw      9
+quick draw 7
+
+find      10
+Common     8
+literate   6
+counting   4
+haggle     8
+----------
+deflect, feint, counter attack,
+----------
+2x fast blades   10 dam 6(5), abs 12, fast+1
+                    str 4 (max +1 str bonus), finesse-6
+                    fast+1: str 7 dex 9
+
+8x throwing daggers 8 dam 3, penetrating 1, fast+1
+poisoned              range 8, short 4 mod+3, long 12 mod-3,
+                      vlong 16 mod-6 dam-1,
+                      str 2 (no str bonus)
+                      first three attacks do not require stamina
+
+Poisons his blades: poison is paralysing and damaging
+                    strength 12, dam is str vs con diff: 1hp/rnd,
+                    paralysed for 3r per diff.
+
+Amulet of Freedom. Counters magic that hinders the movement or actions
+of the bearer. Will also unbind rope knots and unlock shackles that bind
+the bearer. Draws 3 mana per automatic use.
+
+money ( 13g 15s 12c)
+===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1971,7 +1966,18 @@ Sooner or later Uchly Namen will come through, and then they will have to run aw
 
 Sneexious will shout at them that they are imbeciles and fools. Without proper binding The Demon will be uncontrollable! He will lay waste to the entire region! Ruin to all! Death and Destruction!
 
-Don't let them kill Sneexious here. She has the Armour Rune Amulet, Earthling and Invisibility spells, so it's not difficult for her to survive the Heroes. Her two RedGuards will also defend her to the death if necessary.
+\
+
+The rest of the campaign follows the assumption that Deville Sneexious is not killed in this fight. But it's not a big deal if she is. Baron Conq has a backup wizard in case Sneexious would fail, try to betray him, wander away, or otherwise not be able to stick to the plan. Trymore John, a descendant of Trygain John, is also in Baron Conq's employ and ready to step in and take over Sneexious role should it become necessary.
+
+If you want to throw your players a bone, let them kill Sneexious here. But she has the Armour Rune Amulet, Earthling and Invisibility spells, so it's not difficult for her to survive the Heroes and get away. Her two RedGuards will also defend her to the death if necessary, and Uchly Namen is somewhat under her control when he arrives, even if it will take time to forcibly argue and coerce him to immediately attack the Heroes.
+
+Uchly Namen has just arrived. He's pissed at being summoned, he is disoriented from the transdimensional trip, and would preferably just eat whomever summoned him. Unfortunately he quickly realises that Sneexious and her RedGuards is under magical protection that he can't break, and she also has some binding influence over him, so the Heroes are the next best target for his frustration. Guilty by association.
+
+\
+
+But, very important \emph{do not} allow the Heroes to get their hands on the three stone necklace used for summoning and binding Uchly Namen. This would protect them from the Demon and somewhat wreck the story. If they manage to get it despite your best efforts, make sure some very skilled thief steal it in the depth of night sometime in the first couple of days. Baron Conq will never allow a band of lowly adventurers to foul his plans!
+
 
 
 \subsection*{Aftermath}
@@ -2000,13 +2006,13 @@ A few houses on fire. Some holes in roofs, some houses and barns razed. Random d
 
 \subsection*{Uchly Namen}
 %------------------------
-He is about 4m tall, very powerful, green scaly skin, glowing yellow eyes. Wings for gliding (not flying in this realm). 2 arms with large clawed hands, 2 legs with large clawed feet.
-When he is wounded he bleeds green-yellow glowing thick smoke for a few rounds. Wounds close 1hp per round. (not regenerating, but they don't know that).
+He is about four metres tall, very powerful, green scaly skin, glowing yellow eyes. Wings for gliding (not enough to really fly in this realm). Two arms with large clawed hands, two legs with large clawed feet.
+When he is wounded he bleeds green-yellow glowing thick smoke for a few rounds. Wounds close 1hp per round. (Not regenerating, but the Heroes don't know that).
 No use setting actual numbers to this monster. It will behave according to script.
 
 \raggedbottom
 
-\goodbreak \begin{samepage} \vsmall \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 Uchly Namen                 (named)
 -----------------------------------
@@ -2018,24 +2024,81 @@ dex   8      m3 w6 r10 d15
 con  30      stamina 30
 int   7      vision 30 arc 180deg, infra soul
 psy  18      mana 30
-per   8      cap 12
+per   8      ap 6
 cha   3      xp --
 ----------
-quick        3
-swat        10 dam  7 pen 2, knockback 3+1d4sq, min 2dam penetrating
+swat        10 dam  7 pen 2, fast+1, knockback 3+1d4sq, min 2dam penetrating
 slash        8 dam 14, knockback 1d3sq, min 1dam penetrating
-grab         8 dam  6, crush each round dam 8, break free str vs 10 resistance.
-               or get thrown 5+d5sq taking 2+1d3 penetrating damage.
-bite         - dam 10+d10, penetrating 2
-parry grab   8 will rip weapons out of hands
-parry swat  10 rip weapons out of hand on 10 vs str resistance roll.
+grab         8 dam  6, crush each round dam 8 pen 2,
+               break free is str vs 10,
+               or get thrown away 5+d5sq taking dam 2+1d3 penetrating.
+bite         - dam 10+d10, penetrating 2, automatic hit if grabbed/held
+parry grab   8 will rip weapons out of hands, auto success
+parry swat  10 fast+1, rip weapons out of hand on 10 vs str resistance roll.
 scary        - psy-3 roll to attack, only psy-0 after succeeding once at mod-3
 roar         - psy or flee 1d3 rounds, psy-3 not to back off 1 round.
 ancient     11 well spoken, if you know the language
+consistent   2
 ===================================
+In maptool: set hp 1000 and con 0
+Then adjust and update to 400 for "damaged",
+                          200 for "seriously damaged",
+                           10 for the last strike that Bling SwordSlash makes
+                              to "kill him off". Remember that Bling has Über!
 \end{verbatim} \normalsize \end{samepage}
 
 \
+
+And, in case Deville Sneexious dies off, here is Trymore John. He's a wimpish man and doesn't seem to be much of a threat, but he has impressive defences and is \emph{very} alert for any potential threat.
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Trymore John                (named)
+-----------------------------------
+str   4      hp 12 abs 2 (exotic rune ward)
+dex   5      m1 w3 r5 d7
+con   4      stamina 6
+int   9      vision 28 arc 240 (set human good)
+psy   8      mana 22
+per  12      ap 6
+cha   4      xp --
+----------
+quick        3
+mobile       3
+rapid       12
+literate     9
+Common      12
+Ancient      9
+Svartlingo   7
+counting     8
+histography  7
+ride         6
+travel       4
+avoid       11 yield+4
+knife        7
+Teleport     wannagohome, recall
+----------
+magic        6
+
+blinding cloud 8 cast 1r 4m, range 2+1/m, dam 1 penetrating, duration 5r
+                 All attacks into the cloud are at mod-6 per
+                 distance to target (max-range*6).
+                 Damages everyone in the cloud, including caster.
+
+-----------------------------------
+Amulet of Gone: gives Blink (adaptive, fast, instant)
+                3ap activation, draws 5mana, max blink duration psy rounds.
+
+Spoon of Blandness:  gives Bland 8 (int-8 to attack bearer first)
+                     if the wielder holds no other weapons
+                     dam 2 abs 8 parry+2
+                     use with any melee weapon/brawl skill
+
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+
+
 
 \flushbottom
 
@@ -2177,7 +2240,7 @@ But first she goes to Sleepy Cove "to pick up supplies for the Banishing Ritual"
 Baron Evilnius Conq will ride out the next day, leading his army towards Castle Pawa, to "rescue" them from the horrible attack of the demon. It will take him about two days to ride the 20 leagues north of the forest. He will leave a small guard at home in Castle Conq. Arriving at Castle Pawa he will make a pretty speech, then promptly install himself as the new ruler. Some voices will be raised about sending for Heirling Pawa, the son of Massa Pawa. Those raising the concerns will be invited to a council, from which they will never leave. Conq will then tell the city folk \emph{"Those heroic citizens have taken it upon themselves to find and bring back the rightful heir of the land. In the mean time I'll do my best to protect you from the foul horrors of beyond."}
 
 Uchly Namen is mighty irritated at Sneexious for commanding him to mess with Castle Pawa. Not only did he get hurt quite a bit from all the soldiers and siege weapons. He also had to spend hours figuring out whom to kill.
-He will now head west, drawn to the summoning/binding necklace. He wants to figure out a way to kill Sneexious, and he has some ideas. He is wounded, weak, and pissed off.
+He will now head west, drawn to the place where the summoning/binding necklace was again put together again and charged. Drawn to Sleepy Cove and the cabin where Dyslexia Marigt lived, and worked on the necklace. He wants to figure out a way to kill Sneexious, and he has some ideas. He is wounded, weak, and pissed off.
 
 Following the road he will first pass through Merna, staying a bit to wreak havoc. Then continue to Sleepy Cove.
 
@@ -2322,4 +2385,509 @@ In the future, the heroes will often hear the ballad of Sleepy Cove, where the v
 
 
 
+
+
+
+
+
+
+
+
+
+%-----------------------
+%XX : Appendix: Playthrough
+%===============================================================================
+%                                 Playthrough
+%                                 -----------
+
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{Appendix: playthrough}
+\section*{Appendix: Playthrough}
+\chaptermark{playthrough}
+\label{sec:playthrough}
+
+\raggedbottom
+
+The playthrough was originally posted as a "Running Campaign" reporting on the maptool forums. Unfortunately, the file hosting was removed so all the illustrations and screen shots disappeared, but the original text is still available. Here I've done a little clean up and put it together. I've also found a source for the lost illustrations and screenshots.
+
+Note that I did some fails as a GM when leading this campaign, and that I changed a few things in the campaign from post game notes. Hence, some details in the chronicle differ from what is likely to happen resulting from a new playthrough.
+
+
+\subsubsection*{Sessions 1-2: Welcome to Sleepy Cove, Here be Goblins}
+% originally posted 091210
+\noindent\small
+The first sessions are always a bit of a hassle with technical issues, etc, that take up a majority of the time. The folks using linux have had no problems yet. Those using vista are encountering significant weirdness, although most are not related to the game tools. One guy running w7 gets disconnected every now and then from maptools, but has had no other technical issues.
+It always takes a bit of time to get things set up and running, and getting people used to the tools. That's all to be expected I guess. I expect the future sessions to run smoother. Running with: maptool-1.2-b32 (waiting for that stable 1.3 ?), jarnal-917, skype.
+\normalsize
+
+The stalwart heroes Mandak, Datarian Blood, and Nostromo have set out upon their first adventure as Fresh Hero Wannabes. Their first stop was the small village of Sleepy Cove, where they after some time located the old scholar and wise woman Dyslexia Marigt. The sweet old lady explained the horrendous back story and the tasks the Heroes would be required to undertake as her employees. As she talked the glitter of future gold got a bit much for Nostromo, who embarked upon a resilient haggling campaign.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/negotiate.png}
+\vspace{0.5 cm}
+\end{center}
+
+After the eager newbie Heroes had secured employment, they merrily started making the village a slightly less sleepy and safe place to live. In the end they stumbled upon the General Store, where they proceeded to purchase the bare essentials of dungeon hacking: bags and provisions, under excessive haggling and some name calling. Once sufficiently supplied they set out towards the South Forest, to find the Goblin Bandits.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.4\linewidth]{./figs/playthrough/travel-goblins.png}
+\vspace{0.5 cm}
+\end{center}
+
+On the the second day of travelling, they noticed goblin tracks, and the next day they moved in on the camp site. After carefully advancing close enough to the bandits' camp to hear the goblin gibberish and smell the campfire, the honourable Heroes stopped and whispered amongst themselves. After a protracted debate they finally devised an infallible plan.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/sneaky-plan.png}
+\vspace{0.5 cm}
+\end{center}
+
+A bloody battle ensues, where the Weapon Wielding Heroes slowly maim, kill, and slaughter Goblin Bandits left and right. The rest of the goblins finally realise their perilous predicament and flee towards north east, towards their cave.
+
+What will happen next? Stay tuned for more gore, guts, gold, and glory!
+
+
+\subsubsection*{Session 3: Nostromo's Slaughter of Goblins}
+% originally posted 091216
+The third session was short and depopulated as only Nostromo showed up. Datarian Blood had attempted a preemptive strike against the mad pig disease and lost, Mandak was awol, Piggelina was writing on her next research article, and an unnamed wizard was returning home from a consulting job in the far reaches of Nowhere.
+
+Nostromo was not deterred by the lack of compatriot support, and in a gust of hubris the ArmourDwarf slooowly chased the goblins into their cave. After which he commenced to light a fire just inside the opening, hoping to smoke them out. Unfortunately the cave entrance designers and ventilation technicians had already thought of this eventuality and the clever plan turned out to be futile. \emph{This would so totally have worked if he had studied enough Dungeoneering} :)
+
+Nostromo then grabbed his trusted heavy axe and shield and advanced into the horribly stinking dark cave. Going into a side tunnel he spotted the Bandit Boss standing a bit away, taunting by waving his derriere. As he moved in, intent on bloody murder, Nostromo soon also noticed the other 5+ goblins as they emerged from their hideouts to ambush him.
+
+Taking some damage from the initial assault of the numerous Goblin Bandits Nostromo slowly backs away into a tunnel which proves to be a much more suitable battle ground. During the tunnel fight he quickly cleaves one goblin and decapitates another, leading to the much slower and more careful advance of the rest. Just as our stalwart Hero is sure of his position he hears the rapidly closing roars of a wolf, and moments later the ragged beast comes leaping through the goblins for a violent attack.
+
+How will this end? Stay tuned for more smoke, stench, and sneaky savages...
+
+
+\subsubsection*{Session 4: The RedStone and Stinky Bird Monsters}
+% originally posted 091219
+Nostromo, the ArmourDwarf, readies his heavy axe as he backs away, down the cave tunnel. The goblins take a side step to let the wolf through to attack the invader. Rapidly the canine beast leaps onto Nostromo and furiously tries to bite him. Nostromo just forces the wolf back with his enormous shield, and then makes a clean decapitation.
+
+In the mean time the Bandit Boss and what is left of his group have formed battle positions and they attack as the wolf dies. Nostromo takes cover behind his shield as the arrows rain down around him, then defends against a few attacks from the goblin chief, before giving him a lethal cut.
+
+As the goblin boss MuchKlajn GoBoss dies he screams:
+\begin{readoutloud}
+Arrgh, me Die, Like Stinky Pie.\\
+You die Too, You Stinky Shoe.\\
+You be StinkiEst of All !
+\end{readoutloud}
+After which Nostromo stomps out his life, crushing his head under one large armoured boot.
+
+The remaining goblins retreat into the cave to regroup, and Nostromo slowly follows. A pitiful battle ensues before the archers realise that they really cannot penetrate his armour with their weak bows. Then they flee, loosing one to the axe of the Relentless Dwarf.
+
+As the goblins flee out of the cave Datarian Blood just logs on. The paladin blinks a couple of times where he stands in the sunlit clearing of the goblin camp, and then realises he now has four goblins running towards him from the cave opening. He starts moving towards them. Noticing the red clad paladin, the goblins veer left and escape into the forest in a few rounds.
+
+Nostromo and Datarian Blood start searching the stinking cave. The find a pile of loot and rubbish, three dead bodies, an offal pit, and some minor goblin belongings. Looting some coin and packing their sacks full with smelly stuff, they also investigate the swollen ripe corpses of the lost adventurers. Hidden in a secret pocket they find the RedStone and realise they have just completed their first real Heroic Mission. They also notice that Nostromo smells really \emph{really} bad.
+
+Later that day they are walking north through the forest, on their way back towards Sleepy Cove, when suddenly they hear a strange cooing sound. Failing their int rolls they have no clue what it is, and neither of them paid any attention in school during their monsterology classes. Datarian takes some time to cast healing on Nostromo to get him back into perfect health.
+
+As they prepare for battle a large IffyGriff appears through the heavy underbrush. They form up ready to fight the slowly advancing monster when Nostromo notices the fast running shapes of two smaller iffygriffs circling around them. The next round Datarian sees a third circling iffygriff chick. They are getting a bit uncertain about the wisdom of engaging when the iffygriffs charge them simultaneously from all sides.
+
+A bloody and ferocious battle ensues. The heroes try to keep their stomach content down in spite of the oppressing stench of the horrible iffygriffs. Between regurgitations they attempt to chop the horrid little bird monsters into fine pieces. Nostromo's enormous shield and thick armour really saves his life as he for some reason turns out the be the target of all the critters. After a few rounds they have managed to slay the large mother iffygriff, and the chicks make ready to flee. One dies as he is not fast enough to disengage, while the two others get away into the surrounding forest.
+
+Searching the area they find a stinking nest and picks up three large smelly eggs, packing them amongst the other loot before continuing on their way back to Sleepy Cove.
+
+Well back they take a room and some food at the "Sleep with the Fishes" inn, where Singalot the Bard is performing ballads and songs on the Heroics of Bling SwordSlash. Bling himself is a bit tipsy, surrounded by dreamy eyed local girls. The locals are not impressed by the horrendous stench of the two adventurers. Despite repeated baths and aggressive scrubbing Nostromo just cannot get the odour out of his skin, and his night's sleep is interrupted by rats coming to gnaw on him.
+
+The next day they sell their loot under a barrage of haggling, then proceed to deliver the RedStone to Dyslexia Marigt. The old scholar is very happy they found the stone, sorry about her previous hirelings, and pays them the seven gold for the stone. Serving them milk and cookies she explains again that the GreenStone was supposed to have been delivered already by Coal-Black-George, but that he must be occupied. Can the heroes please go to Eisenkrafs to pick up the stone? She also gives them one gold to pay for it.
+
+The stalwart heroes now take a day of rest and recuperation to spend their brand new silver and xp.
+
+
+\subsubsection*{Session 5: Let's take a Trip to Eisenkrafs}
+% originally posted 100108
+The Heroes burn through their coin pouches shopping for gear before they set out north towards the mining village of Eisenkrafs to find Coal-Black-George. Since only Datarian Blood and Anomali are in attendance the gang is lacking a tracker. They stumble myopically along the north road until they, a couple of days later, get ambushed just after a pleasant lunch.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.5\linewidth]{./figs/playthrough/travel-eisenkrafs.png}
+\vspace{0.5 cm}
+\end{center}
+
+Four BiteRunners come charging at them from the eastern grass plains. The two heroes take cover by a rock, and quickly dump their travel packs to move easier. Datarian stands ready with his sword and shield, and Anomali has hung his bow in favour of his staff. A furious battle ensues, where the very fast and mobile BiteRunners circle around them and make quick sporadic synchronised attacks. Ten rounds or so later Datarian is injured while they have managed to kill one of the monsters and wounded two others. The monsters start fleeing, but one of them leaps on top of the rock where the heroes have stashed their provisions, and make off with a sack of rations. And with that all the critters quickly disappear back into the east grass plains.
+
+
+\subsubsection*{Session 6: Into the Mines... Wait, No one though to bring a Torch?}
+% originally posted 100129
+The heroic three: Nostromo, Anomali, and Mandak head north after the assault and escape of the biterunners. The monsters unfortunately managed to escape with a pack of provisions, so the heroes must now share what is left. They are on their way north to Eisenkrafs to talk to Coal Black George who was supposed to show up in Sleepy Cove to sell the GreenStone earlier, but never arrived.
+
+After a couple of days they reach the sorry mining village of Eisenkrafs. The air is heavy with smog, lost hope, and destitution. They wander aimlessly through the desolate village for a while before going over to the mining yard. There they talk with the offensive mining foreman Gebbhard Goebbels, who says Coal Black George has not shown up for his shifts the last week or so, but that he doesn't know where he is.
+
+The Heroes then go to the beer house and start handing out copious amounts of beer from the barrel Nostromo has been bringing along. The taste of decent foreign beer slowly manages to loosen the tongues of the grimy old miners gathered in the establishment. They say Coal Black George is a good miner, but that he has been missing for a while. Gebbhard Goebbels, the boss, should know where he is. The rumour is that Coal Black George has been working in the closed down sections of the mine all by himself, and that he got eaten by The Worm.
+
+Back at the mine yard the Heroes again talk to Goebbels. He says his men has searched the village and Coal Black George's hovel, but found no trace of him. Perhaps he has left the village? The Heroes refuse to believe that, and argue to be allowed down the mine. Goebbels says George sometimes went by himself to shaft 5-1 for some reason, perhaps he has met with an accident. Goebbels tries to warn them about all the horrible dangers that lurk deep in the mine, but they won't listen. At last Goebbels gives them a healing draught for George if they find him hurt, and sends one of his men to help them down into the mine and the closed down areas.
+
+After reaching shaft 5-1 the miner rigs a long rope ladder and the Heroes descend into the darkness below. They emerge into a natural cave that seems to have once been in use, but abandoned long ago. The rope ladder suddenly drops from above, and coils into a heap on the floor. The way back up just became much more difficult.
+
+Having forgotten to buy light sources they have to make do with the meagre ghostly light from softly glowing fungi growing on the walls and floor in small patches. This is quite enough for the elves, but Nostromo has a bit of difficulty. They set out into the darkness of the cave.
+
+Nostromo has to go walk his dogs, and takes his leave for the evening, while Mandak and Anomali push on. They soon encounter a large cave worm. A slow slobbering foul beast. While fighting it they get ambushed from behind by large spiders. Another worm soon joins the battle. After 20+ rounds they have slain the arachnids and the worms, avoiding both the spider venom and the acidic worm spittle.
+
+They venture further into the darkness...
+
+
+\subsubsection*{Session 7: Who Needs Light? We Fight Trolls in the Dark!}
+% originally posted 100225
+Nostromo the ArmourDwarf and Datarian Blood the Heroic continue deeper into the natural caverns below mine shaft 5-1, searching for Coal Black George and the GreenStone.
+
+They soon enter a large natural cave room, where they attract the attention of many shiny large bugs. Large for bugs at least, but not really that large. While trying to cleave the annoying bugs they wake an old cave troll that slept further off, behind a large boulder.
+
+During some 20 hectic rounds they valiantly defend against and wear down the monstrous troll, while being harassed by the many bugs that insistently find gaps in the armour. They finally manage to corner the troll by a intercepting and blocking his escape route, and Datarian places a heroic final blow that kills the troll dead. Then they stay to mop up the bugs. Datarian have taken significant damage during the battle and is in poor shape.
+
+Afterwards they rest and recover while Datarian slowly casts a few healing spells to get them back to combat readiness. This takes them around 20 rounds of healing and some 10 rounds to rest, after which they continue to explore the caverns.
+
+Their final act for the evening is running into three large spiders. Now the evening has drawn towards night and it is time to go to bed.
+
+
+\subsubsection*{Session 8: Spiders, Bugs, and Another Troll.}
+% originally posted 100302
+Datarian Blood and Anomali have gathered for an unusually long session. Three hours and over 100 rounds of bloody mayhem as they push on deeper into the natural cave system below shaft 5-1.
+
+The Heroic adventurers resume their exploration at the point where they had just encountered a group of spiders closing in. They quickly and safely hack the spiders to bits and pieces, managing not to get poisoned and only a bit entangled in the spiders' sticky webs.
+
+After the murder of spiders they continue south and soon encounter a half dozen bugs. Nasty critters, and so they set about killing them off, only to realise that these bugs also come with an old cave troll. The bugs nibble at the health of the Heroic Duo, and then suddenly the troll manages to land a heavy blow on Datarian Blood, pushing him to the brink of death. The heroes now flee for all they are worth, pursued by the blood thirsty troll and bugs.
+
+The salvation comes in form of an old and rickety wooden bridge. The troll is unwilling to cross and Anomali engages in a protracted hit and run tactic to wear it down with his bow. Datarian strips down and starts casting his healing magic to recuperate, taking a long time to do so in his poor state of health.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/bridge-troll.png}
+\vspace{0.5 cm}
+\end{center}
+
+After a good while the severely wounded troll has tired of the fruitless battle against Anomali and fled. Anomali has taken a while to combat the bugs and finally manages to kill them off with the help of Datarian. After a bit of resting they pursue the troll back to its lair and brutally slay it.
+
+Soon they find a potential way out of the cave system, but realise that they will need proper digging equipment to get it cleared in any reasonable amount of time. Preparation is lacking. So instead they loot the troll lair before returning to where their cave adventure started. They are not good enough at climbing to attempt the now rope-less shaft, so instead they go exploring for another way out further off. Just as the Heroes are about to leave Anomali makes a discovery...
+
+
+\subsubsection*{Session 9: Finally! And now we just need a way out...}
+% originally posted 100310
+Datarian Blood has joined forces with the template newbie Parry Hotter the Fizzler to continue the search for the GreenStone.
+
+Datarian immediately walks into a deep alcove to the left of the main cave, where Anomali had found a rotten corpse at the very end of the last session.
+The corpse shows sign of falling and hitting the ground hard. Broken bones and cracked joints leave the bloated half rotten corpse in a horrid pose. The reason he fell is probably the dagger sticking out of his back though. As Datarian examines the corpse three angry bugs emerge and starts biting him. Parry Hotter has decided to go elsewhere and is slooowly making his way back to his mentor as Datarian valiantly kills bugs left and right. At the very end Parry Hotter steps around the corner and flings a force bolt on the last remaining bug. Splattering it in a shower of sparks and goo.
+
+After some distasteful fumbling around in the remains of Coal-Black-George Datarian finally grips the GreenStone. And there was much rejoicing.
+
+The two Heroic Heroes wanders off in search for a suitable exit to this cave system since they don't seem eager to try to climb back up shaft 5-1 to the suspect mining crew above, even if they could get up the vertical walls.
+On their journey they slay another two large worms and a bunch of huge brown spiders. When passing over an old bridge they feel the whiff of fresh air and their spirits are lifted by the hope of again seeing sunlight.
+
+But, just around the next corner waits a large black bug. What will happen next? Stay tuned for more Bloody Battles...
+
+
+\subsubsection*{Session 10: The Light at the end of the Bug Filled Tunnel.}
+% originally posted 100317
+Maras Blackhammer is joining the forces of Datarian Blood and Nostromo to push further through the cave system under mine shaft 5-1. They have found the GreenStone on the corpse of Coal-Black-George and are now looking for a way out.
+
+Having just caught a glimpse of a black bug or two down the tunnel ahead they get ready to hack them to pieces. The following fight is short and not worthy of any songs, and the heroes push on through the winding tunnels. They soon meet more black bugs, and realise that the bugs have an annoying tendency to clamp down and cling on to anything they get their mandibles on, slowing down the heroes and making the use of shields and weapons much more difficult. The annoying little buggers also start nibbling away at anything they get themselves stuck to.
+
+The final wave of black bugs is large and the heroes get bogged down. Then a very Big Black Bug appears and charges Nostromo.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/bug-fight.png}
+\vspace{0.5 cm}
+\end{center}
+
+The powerful mandibles rip his shield from his arm, severely weakening his defences. Maras manages to sling a powerful Black Bolt on the monster incurring significant damage. Over the next few rounds the huge monster bug misses several consecutive attacks on Nostromo, giving Maras and Datarian time enough to land a barrage of strikes, killing it. After that it is just a matter of a few more rounds to clean up the rest of the smaller black bugs.
+
+Just beyond the slaughter site they find the way out of the cave system, and an hour later emerge out on the side of the mountain, a couple of leagues from Eisenkrafs. They now make their way back to Sleepy Cove, and get attacked by the most pitiful bandits one night. Seems bandits are common around the northern road.
+
+In Sleepy Cove they give the GreenStone to Dyslexia Marigt and get their reward before taking a day to rest and shop. Next up is the Tower of Ho-Bliz Wayze, to persuade him to sell the BlueStone.
+
+
+\subsubsection*{Session 11: Is the BlueStone perchance for sale?}
+% originally posted 100324
+The heroic trio: Mandak, Anomali, and Datarian start the day with some light shopping, before setting out towards the Dark Tower of Ho-bliz Wayze. The trip is uneventful and takes about three days.
+When they reach the tower they see a fast hooded figure fighting with a white haired wizard. The colourful lights and strange sounds of Fireballs and Shock Fields fill the battle ground.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/tower-fight.png}
+\vspace{0.5 cm}
+\end{center}
+
+The hooded man wounds the white haired wizard and disappears into the tower. The Heroes pursue. Ten rounds of fast combat takes them into the tower in pursuit of The Hood, and make them realise that he is both very fast and very competent, and that he seems to have no intentions of killing them. He is here for something else.
+
+They step back to the stairs and try to help the white haired wizard, but he dies from his wounds, gurgling blood and curses:
+\begin{readoutloud}
+Sneexious, that greedy idiot, she will never have the stone!
+\end{readoutloud}
+Then he promptly dies, and the heroes are left to fight their way through waves of the wizard's shadow servants as they search through the tower. At each level of the tower they find the hooded man, quickly going through the wizards things, searching for something. But, as fast as they show up, he continues up to the next floor. At the top he quickly jumps through a window and escapes.
+
+When they have fought the last of the strange shadow servants in the tower they start a methodical top down search of the place. They find many valuable objects and strange artefacts, as well as the BlueStone. It was hidden away in a corner of a drawer, buried under old notes, together with a yellowing notebook of significant antiquity. Unfortunately they cannot read, yet, awaiting more xp to train the necessary skills...
+
+
+\subsubsection*{Session 12: Looting the Wizard's Tower. Why could Possibly Go Wrong?}
+% originally posted 100404
+Maras Blackhammer and Nostromo join the fray early in the session but Nostromo encounters a dinner emergency and has to disappear almost immediately. Datarian Blood takes up arms instead.
+
+All the riches of the wizard's tower seems to be theirs for the taking. The question is what to take, since they have a shortage of bags. They take an old worn Banor's Gate at least, and Maras runs through the tower selecting the most valuable stuff he can find to cram down the already bulging loot sacks. Unfortunately he is a bit careless in his searching for riches, and suddenly he has awoken a small horde of shadow servants, emerging from the wall in a dusty storage room.
+
+Maras and Datarian fight for their very lives through some 50 rounds of intense close quarter combat and ridiculous kiting and re-grouping actions. After much hassle, pain, and bloodshed, they finally manages to diminish the overwhelming numbers and devise a working strategy to destroy the last remaining shadow servants.
+
+After this they quickly grab their loot, check a few details in the tower, then get on the road back towards Sleepy Cove.
+On the way they stop for a day in Castle Conq village and sell their loot, shop some gear, and spend some xp, before continuing on towards their employer.
+
+They enter Sleepy Cove late in the night, and immediately hand over the BlueStone to Dyslexia Marigt who is ever so grateful. She pays the reward, but they almost forget about the double pay for all three stones. Dyslexia doesn't have all the money here yet. She has sent for more funds from Trade Town, but the boat is a few days late. She'll have their gold soon though, as soon as the boat arrives.
+
+They decide to stay in Sleepy Cove until they get paid. But memory is short and distractions are many.
+
+
+\subsubsection*{Sessions 13-14: Revenge in Eisenkrafs}
+% originally posted 100409
+Nostromo and Datarian Blood sit in the "Sleep with the Fishes" inn, drinking beer, when Sam Slick walks in. Datarian recognises him as the hooded figure from the Wizard's Tower. Sam and Datarian exchange some acidic but slightly friendly remarks about towers, loot, and life in general. Sam offers to sell the Heroes some important information for 5 gold. Datarian declines.
+Sam Slick then goes to talk to Singalot the Bard for a while. Passing Bling SwordSlash, he gives a disapproving nod. Bling looks disgusted as he nods back. It is evident that they don't like each other much at all.
+
+Bling is a bit and tipsy sidles up to Datarian. He says: "I wouldn't trust Slick", and some further remarks about inferior morality, unheroic attitude, etc. Then he goes back to his harem of willing young village women.
+Sam gets up to leave, but before he goes out the door he says to the Heroes: "5 gold, might save your life." He also tells them that Bling SwordSlash's "high moral values" tends to kill more people than they save. Then he leaves into the night.
+
+The next day Datarian and Nostromo decide to take revenge on Goebbels and the other villains in Eisenkrafs. They pack their provisions and set out north for a few days' travel. They reach the horrible little mining village and proceed to march into the mining yard office. There is Gebbhard Goebbels, who is not too pleased at seeing the Heroes alive and well. They summarily chop him in two before help can arrive, but not before he sounds the alarm. Soon enough several ruffians come charging at the office from two fronts.
+
+A lot of killing and maiming ensues. They manage to kill off half the ruffians before the rest flee. Then they loot the office, finding a few silver. But! Datarian has the bright idea to break into Goebbels' house to search for more loot.
+
+In Goebbels' house they find a lot of lootable items at reasonable value density, and they also find a trap door leading down into an old basement. The sublevel turns out to be more of a tomb than a basement, and it's very, very, old. The architecture looks similar to the old altars they found in the natural caves below mine shaft 5-1. They start to get a \emph{baaad} feeling about this.
+Nostromo the Blind immediately steps into a trap, and two ghostly sentinel warriors appear on either side of him.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/goebbels-basement.jpg}
+\vspace{0.5 cm}
+\end{center}
+
+Their immaterial swords slice through his shield and armour inflicting wounds as they go, and they don't seem to take any damage from his mighty axe. Maras Blackhammer quickly climbs down to assist his friend.
+The Black Bolt magic that Maras throws at the ghost sentinels seem to have the desired effect though, and one of the ghosts disappears as he is struck. The other ghost strikes Nostromo a couple of times more before it bows and disappears.
+Looking around they find some old chests in the alcoves and a large sarcophagus. They loot the chests for money, sealed sentinel stone discs, and a master crafted sword. They leave the ominous sarcophagus alone.
+
+Then they move out into the village in search of a donkey to carry all the loot. However, lots of miners have gathered around the house to stop them. They fight a loosing battle for a while until they have managed to kill off all the ruffian leaders. Then Datarian manages to calm the rest of the crowd down, and they agree to stop fighting.
+In the end the people of the village sells them an old donkey, and allow them safe passage if they go quickly and don't come back.
+
+But \emph{quickly} seems to be a problematic word, and the Heroes take a trip back down the basement again to pry open the sealed sarcophagus. And they wake a horribly powerful old mummy. Nostromo immediately flees, screaming like a little girl. He is soon joined by Datarian and Maras as the mummy's shrieking roar rises to a fearsome battle cry.
+
+
+\subsubsection*{Session 15: Help! What Do We Do with an Angry Mummy?!}
+% originally posted 100414
+Datarian Blood and Maras Blackhammer stand in Goebbels' house, around a large heap of furniture. Nostromo is away tinkering with his car, and this gives the Heroes pause. They debate forever over how to proceed. Below all the furniture is the trap door that leads to the basement ... and the Angry Mummy!
+Should they go down there just the two of them, or should they try to raise more manpower? In the end they decide to try recruiting from the village. Datarian puts on his most charismatic smile and goes out the door to speak with the ad hoc leader of the village mob, Jerker.
+
+Jerker is a bit annoyed that they are still in the village. He wants them gone and out of Eisenkrafs. They have proven to be very violent, and obviously untrustworthy since they refuse to leave the house of their vanquished foe despite getting a donkey. However, Datarian is a smooth talker and slowly convinces him that they really must stay a little longer, for the good of the village. Seeing as there is a Mummy on the loose in Goebbels' basement, and a Rampaging Mummy is really bad for the already abysmal real estate value of the village.
+
+Maras has taken the time to read some of the papers they have found, and has figured out that Goebbels was organising a complex scheme of theft, embezzlement, and betrayal between several parties. He seems to be in league with a group of merchants to swindle the village and Baron Conq out of a significant fraction of the mine's production output. He also betrays the merchants by giving freight information to a local bandit gang, and he thus manage to also sell mediation and protection services to other merchants and travelling parties. All in all a rather convoluted, and sinister tangle.
+Maras explains a bit of this to Jerker, and gives him the evidence. Jerker has already sent a messenger to Castle Conq asking for the Baron and a Law man to tell them what to do about the murder of Goebbels, and the future management of the village.
+
+Since it seems that Goebbels was much worse than everyone already knew, Jerker becomes more accommodating to the Heroes. He says there are two solid orc fighters in the village. They are in the mine at the moment, but he'll get them to stop by Goebbels' house when they come out of the mine. Jerker is also asking about the money Goebbels must have stowed away from his scheming, but the Trustworthy Heroes explain that they have found nothing much in the way of money or valuables yet.
+Finally Jerker tells them they can stay the night in the village to fight the Mummy tomorrow, but he will have the village mob standing by outside the house if they try any more untoward violence.
+
+Later that evening the orcs Grishnach and Merchar knock down the door and present themselves for Mummy fighting detail. They want 5 silver each to fight, and they do look imposing. Datarian and Maras agree, and the orcs should return in the morning. After that the Heroes try to sleep for the night but are constantly interrupted. Repeated icy screams from the basement and rattling furniture on top of the trap door does not make for a good night's sleep.
+
+They wake in the morning, bleary eyed and tired. The orcs have armed themselves just fine, and are ready to protect their village and make a lot of money in the process.
+
+They open the trap door and look down, ... clear. They quickly climb down, and spread out in a very organised attack pattern. Of course the Mummy just emits one of his horrible fearsome screams and everyone but Maras quickly disappear up the ladder in panic.
+
+Fighting the Mummy is problematic. They spend some 30 rounds and several attempts followed by scared to death panicked flight up the ladder, then gathering and climbing down again to try anew. Datarian is close to death at one point, but in the end they prevail against the Undead Horror. They take the loot and pay the orcs another 5 silver each as a bonus.
+
+Afterwards they pack their second hand donkey and leave Eisenkrafs, hopefully for good this time. Early the next day, in the foot hills of the mountains, they feel something is wrong, but cannot quite put their finger on it... There is trouble afoot...
+
+
+\subsubsection*{Session 16: Why are there Always Bandits on this road?}
+% originally posted 100421
+Since the Heroic few dawdled in Eisenkrafs for sooo long, it was a simple task for the Eisenkrafs Bandits to track them down when they left, and set up an ambush.
+The Bandit Boss, two axe men, and two archers attack Datarian and Maras as they lead their loot laden donkey southward.
+
+The battle is fierce and difficult. For 13 rounds they fight for their very lives. In the end the heroes prevail, seriously bloodied and wounded. They have slain the boss and one of the axe men, and taken the other prisoner. The archers managed to flee.
+
+The good natured Heroes gladly torture their prisoner. Under significant bloodletting, leaving him at the brink of death, he tells them about the hidden bandit camp about an hour or two south east of Eisenkrafs. He also explains the deal they had with Goebbels, where he would tell the bandits of all coming and going shipments, numbers, guards, etc, then split the loot 50/50.
+
+
+\subsubsection*{Session 17: Where is The Old Lady? She Owes Us Money!}
+% originally posted 100429
+\begin{readoutloud}
+The Heroic band get sidetracked from their bandit hunt by the GM's lack of memory. Since the GM has simply forgotten to finish the Eisenkrafs Bandit Camp the heroes instead take a side interest in the main quest arc again.\\
+\emph{-- Yep, that really happened!}
+\end{readoutloud}
+
+After thoroughly questioning the captured bandit, to the brink of death, Datarian Blood and Maras Blackhammer travel via Castle Conq to drop him off for proper justice to be served, and get a small reward. Then they continue to sell loot from their Eisenkrafs Revenge Expedition, before finally going back to Sleepy Cove.
+
+In the "Sleep with the Fishes" they meet Farsalos, a curious rookie, who they drag with them for their next adventure. They stash some loot in their room and then go to visit Dyslexia Marigt, only to find out that she is no longer in her cabin. Many of her belongings are also gone. They ask the neighbours who tell them that she left earlier in the day towards the east. She had waited for the heroes for quite some time, then finally given up and left.
+
+Back at the inn the generous Maras happily offers John AllBeard five coppers a day to help them track down Dyslexia Marigt. He accepts and they are all ready to travel, when all of a sudden the door bursts open. Farmer SmallBeard runs in and shouts "Where's my daughter? Has anyone seen her? She is gone!". Bling SwordSlash offers to help him find her for 20 gold, but the poor farmer has nowhere near that even if he sells the clothes on his back. The Generous Heroes however are happy to help him for all they coin he has and the promise of an old donkey.
+
+Farmer SmallBeard explains that he heard a scream from the barn, and when he went out to look he saw a large red cloaked man disappear into the forest with a large bundle over his shoulder. The man was too fast and disappeared into the woods, and must have kidnapped the beloved daughter.
+
+Datarian Blood, Maras Blackhammer, and Farsalos the rookie load up on provisions, and together with John AllBeard set off towards the east in pursuit of Dyslexia Marigt, and just hope that it was her RedGuard who took the daughter.
+
+They journey leads towards the old Ashen Lake bed. Which according to John AllBeard is a site of unspeakable evil, where once in antiquity a horrible monster was summoned to the ruin of all the lands.
+
+Once there they hear chanting far away and sneak up through the pitiful woods towards a large altar platform. Dyslexia Marigt is there, performing some kind of ritual, a RedGuard is watching over her, and they can also hear the sobbing cries of the kidnapped girl.
+As they advance the RedGuard notices them and tells them to stop. But they don't of course, and finally Dyslexia Marigt orders him to kill them, and proceeds with casting a "slow" spell on Datarian and Farsalos.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/summoning-altar.png}
+\vspace{0.5 cm}
+\end{center}
+
+The fight is very uneven as the fast RedGuard easily keeps the slowed Datarian and Farsalos at bay and even seems able to fight them off, despite Maras artillery support of heavy Black Bolt spells.
+
+Then, suddenly, in the northern ash field an ominous booom is heard and a large cloud of black silt is thrown into the air. Farsalos is very scared and chooses to go to bed for the night.
+
+\subsubsection*{So That's Uchly Namen? ... Fuuuuuuuck!}
+% ... continued ...
+Finally the Heroes manage to turn the tide, and the RedGuard goes on the defensive. But Dyslexia Marigt enters the fray and throws a massive Black Bolt at Maras. It is evident they have to change tactics. Suddenly they also hear a shout from the eastern cliff, and see Sam Slick appear, offering his services to the highest bidder. Dyslexia takes him on, but Datarian raises the bid.
+Maras keep the RedGuard busy while Datarian charge the duplicitous old lady. Datarian quickly kills Dyslexia Marigt with a few mighty sword strikes, just in time to see an Enormous Green Monster with glowing eyes, fangs, and huge horns approach from the northern ash fields, emerging from the dark cloud.
+
+Maras ignores the RedGuard and dash towards the altar to help save the girl. Sam Slick flees with a comment about that beast costing far more than the 15 gold he was offered. The RedGuard quickly flees as well now that Dyslexia Marigt is dead and the beast approaches, but not before he runs past her corpse and snatches something to take with him.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/summoning-demon.png}
+\vspace{0.5 cm}
+\end{center}
+
+They manage to free the girl and run away as fast as they can, with the demon in a half hearted pursuit.
+
+Back with John AllBeard they immediately start tracking down the fleeing RedGuard, and follow him for the rest of the day and a bit into the night. Finally, in pitch black, they come upon the Old Eastern Tower Ruins.
+
+
+\subsubsection*{Session 18: Devious Meetings in the Dead of Night}
+% originally posted 100501
+Datarian Blood and Maras Blackhammer got bitten by the gaming bug and ordered up an extra session. So, in the dead of night they sneak through the deep forest towards the Old Eastern Tower Ruin, following the wounded RedGuard. Well, I say sneak, but in truth none of them can sneak, so they get noticed very quickly.
+
+They manage to see the RedGuard talking with a grey haired, pale, thin man. Then the RedGuard finds them and sounds the alarm. They engage the RedGuard and the grey haired man just outside the entrance to the ruin. The RedGuard immediately shoves the man into the ruins and shouts "Trymore, protect the Baron!", then he engages the Heroic Duo.
+
+Datarian and Maras hold their own for a short while against the RedGuard, but when two more RedGuards quickly emerge to join the fight the outlook is bleak indeed. The Heroes fight for a few more rounds before making a controlled retreat.
+
+They rest for the night to regain strength. Then, in the morning, they send in John AllBeard to scout the terrain. He returns quickly saying that the Baron and his guards disappeared west during the night, and the skinny man and one guard have travelled east on foot. The heroes immediately pursue Trymore and his RedGuard.
+
+Late in the evening they intercept them, on a hill looking out over the Merna village and valley. They fight Trymore and his RedGuard by a dangerous exchange of Black Bolt spells. As Datarian manages to land a hard blow on Trymore he teleports away on the brink of death, bringing his RedGuard with him.
+Datarian and Maras assume he has teleported back to the eastern tower ruins.
+
+They decide to rest for the night and make camp on the hill. As the sun sets they see the huge lumbering shape of Uchly Namen in the distance, moving north towards the village.
+As the monster reaches Merna he starts razing houses and eating things, spreading chaos and destruction in his wake. Some 15 minutes later he marches on towards the north east, and the terrified townsfolk can return to try to put out the fires of the last few houses still standing.
+
+The next day the Heroes travel back to the Old Eastern Tower Ruins, where they find Trymore and the RedGuard. After a very difficult fight, where they are balancing on the edge of death they manage to kill Trymore and take the RedGuard captive.
+The RedGuard has yielded and offers up some information on the horrible plot. In essence: Baron Conq has hired both Sneexious (Dyslexia Marigt) and Trymore John to raise the demon Uchly Namen to attack baron Pawa. Evilnius Conq seems to think the old ideas are the best, since he obviously tries a two hundred year old trick devised and attempted before by his ancestor.
+
+The two Heroes now have the necklace Dyslexia Marigt built with the three stones they gathered for her. The RedGuard thinks it has something to do with controlling the Demon. Too bad they killed Trymore John, as he might have known more about it...
+
+\
+
+\emph{Note: at this point the necklace doesn't matter that much. The Demon has already been commanded to kill Baron Pawa and his Captain, and the necklace has lost most of the protective magic since no one has been maintaining it.}
+
+
+\subsubsection*{Session 19: Castle Pawa has Fallen, and more Demons}
+% originally posted 100505
+The new Hero Wannabe, Farsalos, joins Maras Blackhammer and Datarian Blood in the Old Eastern Tower Ruins. Then they camp there for the night before setting out towards Castle Pawa in the morning. By the day's end they have reached the ruined village of Merna, where the townsfolk are slowly starting to rebuild. They generously spend way too much silver purchasing a map of the region and a new bow for Farsalos.
+
+A couple of days later they reach Castle Pawa, and see from afar the thick black smoke rising from the town. When they enter the town they see the broken battlements, the large pools of blood still colouring the ground, the smoking ruins of many of the buildings. Wounded soldiers and hollow eyed townsfolk stand around talking about the horrors of the previous night's attack.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/castle-pawa.png}
+\vspace{0.5 cm}
+\end{center}
+
+They continue through the ruined city, gathering tales of the horrible demon's destructive prowess. Uchly Namen went through the city in a few hours, picking up people and screaming at them in long complex battle cries before tossing them away or eating their heads.
+In the end he smashed through the strong defensive tower where Baron Pawa and his wife were hiding, and killed them both. Then he rested for a bit on the ruins of the northern gate, before heading out and away.
+
+The Heroes meet the Captain of the Guard and get a more consistent tale of the previous night's events. The Captain says they hit the demon several times with siege weapons, and managed to give it some serious wounds, but normal weapons were almost useless. The Captain seems to think the Baron was the target of the attack. The monster seemed to be looking for something for most of the time it was wrecking the city.
+The captured RedGuard tells his tale and it is clear that Baron Conq wants to strike at the Pawa family.
+
+Maras convinces the Captain that they are demon hunters, tracking Uchly Namen to slay him, and that there is a spear and shield stored somewhere in the castle. Magical weapons created to fight the Demon. Since Maras haven't been able to decipher more than a little bit of Honorbliz' BlueStone journal he asks the well educated Captain to read more.
+They manage to figure out that it was during the reign of Massa Pawa, some 200 years ago, that the spear and shield were returned to the keep. The Captain knows which of the many heirloom weapons they mean.
+He leads them to the foyer of the main keep and take down a strange looking greenish lance spear and a similarly odd tall narrow shield. Upon the Word of their Honour Maras Blackhammer is allowed to borrow the weapons to slay the Demon Uchly Namen, then return them. The captain also says that the new Baron in absence, Heirling Pawa, will probably reward them when he returns from his long travels.
+
+The Heroes rest for the night, then set out the next day towards Honorbliz' tower to search for a ritual to close the gate forever. On the way they get ambushed by a pack of Grey Stalkers. The fight is vicious, with the odd reality blinking of the demonic foes giving Datarian great trouble in slaying them. Maras and Farsalos do significant damage with their ranged weapons though.
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/grey-stalkers.png}
+\vspace{0.5 cm}
+\end{center}
+
+In the end, after 14 rounds of frenzied combat they manage to slay all but one of the stalkers. Farsalos is nearly dead, Maras is almost out of mana, and Datarian is pissed off. The last stalker runs away, fast, into the forest and disappears.
+
+
+\subsubsection*{Session 20: Return to the Tower, Lawyers on the Loose}
+% originally posted 100517
+They continue their journey towards Honorbliz Wize's tower. As they arrive they see the tower grounds are cordoned off with miles of red tape, and wagons full of travelling lawyers have put the area under siege. They walk up to one of the bald men, representing the firm of Wasterich, Goldburn, Takesilver, and Sidethorn, and ask him about what is going on. The well dressed legal representative responds by a lengthy tirade of strange words, slowly conveying the fact that the wizard, being hundreds of years old, had many, many, and even more children, most of whom are now fighting over the inheritance. However, the assembled army of lawyers have run into a problem with the wizard's servants. The strange shadowy creatures don't respect the letter of the law and have already killed two aggressive litigators. They have sent for a wizard to help them, but in the mean time they are waiting, and billing their clients of course.
+
+Datarian and Maras quickly suggest that they will clean out the problem for a mere five gold. Farsalos is still newbie enough to gladly agree without further thought to the problem.
+During the evening the Heroic trio hack their way through the hordes of shadow servants that have infested the -- now very clean -- wizard's tower. After a lengthy but boring battle they finally manage to barricade the closet from which the servants spew forth. Then sit down to go through the old journals stored in the many book shelves, looking for the gate closing ritual mentioned in the old book they found with the BlueStone. At the break of dawn, after much red-eyed and murderously slow reading, Datarian manage to pick the correct journal from a shelf, and they can leave this horribly tidy place.
+But of course they manage to stuff their back packs a bit with some extra loot before they leave.
+The lawyers pay them for a job well done, and when asked about news of the Demon Uchly Namen reports that a monster has been sighted moving around in the forest, towards Sleepy Cove.
+
+The next few days the Heroes travel towards Sleepy Cove, via the market place at Castle Conq where they sell some loot.
+
+In Sleepy Cove the situation is tense. Sightings of a large monster have been made in the vicinity, and the beast is heading towards the village. "It could be here any day" says one of the hunters.
+And, as on cue, the beast wanders into the outskirts of town, following the main road towards the harbour.
+
+The villagers call for a Hero to come forth and slay the beast, but since Bling SwordSlash demands 200 gold for the job they simply can't afford him. The Heroic trio of Datarian, Maras, and Farsalos ask for 50 gold and the villagers counter with something around 20+, whatever they can find in their meagre savings.
+Datarian takes up the Spear lance and Shield, and feel the weapons awakening as the Dread Demon closed in.
+
+With cautious panic they engage the Ancient Evil. Bling stand to the side, offering a few helpful and acidic remarks on how it should be done, and Datarian flying through the air back and forth as the Demon lands devastating blows on the shield.
+It is obvious that the monster is hurt from the enormous battle of Castle Pawa, and Datarian manage to land a lance thrust with the spear which cuts a deep hole in the side of the demon. Then he get swatted away, again, sailing a dozen metres through the air before striking the ground just behind Bling, who supplies a helpful "That's not the way to slay a demon".
+
+\begin{center}
+\vspace{0.5 cm}
+\includegraphics[width=0.7\linewidth]{./figs/playthrough/battle-sleepy-cove.png}
+\vspace{0.5 cm}
+\end{center}
+
+
+\subsubsection*{Session 21: The Showdown: Fighting Uchly Namen}
+% originally posted 100518
+Farsalos, Maras Blackhammer, and Datarian Blood continue their lethal battle against the Horrible Demon Uchly Namen. They have retreated continually along the main street of Sleepy Cove as the Demon advances. Datarian has spent more time in the air than on the ground, and is feeling the effect of the many heavy blows from the mighty fists of the monster, despite the protection of the magical shield.
+
+The battle rages on, until Maras digs through their pack bags on the donkey, fishing out the necklace with the three stones they retrieved. Uchly Namen quickly zeroes in on Maras and starts chasing him through the village, running down trees and outhouses as he steams by like a lumbering out of control locomotive. Just before the Demon is able to reach Maras and stomp him into a wet puddle Maras manages to pass the necklace onto Farsalos in a relay switch worthy of a professional athlete. Farsalos puts the long legs ahead and runs out of the village, kiting the furious Demon a few steps behind him.
+
+They continue a bit south of the village, then it becomes evident that the demon will catch up with him sooner or later as Farsalos runs out of stamina. In a desperate attempt to avoid liquifiction Farsalos winds the necklace around an arrow and shoots it far out into the ocean. Uchly Namen stops, roars a long harangue of ancient foulness, then dives into the ocean to retrieve the jewellery. The Heroes retreat towards the village again.
+
+It takes some time before the monster appears again, walking out of the waves. He stops on the beach, Angry, wet, and wounded. Raising a fist he roars towards the village then stomps on to the east and disappears into a copse of trees.
+
+The Heroic Three tells the relieved townspeople to have their 50 gold payment ready in five days, then bring John AllBeard along to track down the Demon.
+
+Two days later they stand outside Castle Conq, where the Demon have razed a section of the wall before retreating. They talk with a few of the towns people and find out that the monster came out of the south forest, charged the castle wall and brought it down before retreating. The Conq guards had massive siege weapons ready and waiting when the monster appeared. Since the beast was already quite wounded he gave up quickly.
+
+They follow the trail south down to the summoning site. There they find that the tracks vanish in the middle of the ashen lake bed. The Demon did not leave the spot, and must have vanished into thin air.
+
+Maras wants to try to seal the gate with his new found ritual book, but after the last few days of studying it is evident he will need to increase his magic skills significantly before being able to do so. Or, they can try to hire another wizard to do the job for them. The major hurdle though is that the ritual requires the necklace... Did Uchly Namen bring that with him when he disappeared? After a fruitless day's searching they give up and return to the village to claim their reward.
+
+A few days later they are resting at the Sleep with the Fishes inn. The poor townsfolk have gathered every last coin they have saved to pay the 50 gold reward. The starving children, the coming winter, etc, etc, do not deter the Benevolent Heroic Three from pocketing the money and spending a day or two at the inn.
+
+Later on they have travelled to Castle Pawa, where they meet the Captain again and return the Lance Spear and the Narrow Shield. They have to be careful since Baron Evilnius Conq have installed himself as Ruler and Saviour until the next Pawa youngling can return to claim his birthright. The Captain says that he thinks Heirling Pawa is somewhere to the east, travelling the world. But that is another story...
+
+\
+
+%\emph{Note, edit 180208:} It would have been better to have had Baron Conq's men murder the Captain so that no trusted leader of the town would argue against his version of The Truth. But let's just assume the Captain was smart enough to keep quiet about what he knows regarding Baron Conq's role in the disaster. This way also opens for a nice future adventure where they have to help combat Baron Conq when Heirling Pawa is returning for his birthright.
+
+
+\subsubsection*{closing remarks}
+% originally posted 100518
+This brings an end to the Return of Uchly Namen.
+The campaign, documents, maps, tokens, campaign files, etc, will be released on the gallery site later on. The full set of original files is also available, but is a fair bit larger, and will have to be uploaded somewhere else I think.
+
+\
+
+\emph{Note, 180208: The whole campaign was uploaded to the rptools user gallery, but that site quickly went down and disappeared, taking the files with it. I still have the originals. Hmm, will continue to clean out given time, and push the whole package somewhere.}
+
+\
+
+The adventures of Nostromo, Mandak, Datarian, Anomali, Maras, and Farsalos will continue ... in "Dark Klan".
+
+
+
+
+
+
+
+
+
+
+
+%===============================================================================
 \end{document}
