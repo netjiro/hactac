@@ -89,7 +89,9 @@ crossbow       scf 0.8
 %sling          scf 1.0
 \end{samepage}
 
-Knife is a limited variant of the sword skill. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3.
+Sword skill covers all blade weapons including knives, rapiers, etc.
+
+Knife is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3.
 Training in the knife skill can be converted to training in the sword skill over a weekend course, where $sword = \sqrt{(knife)^2 \cdot 0.7}$ round down, loosing the excess xp. Such courses are available in most larger cities and cost a couple of gold.
 
 Some weapons are similar:\\
@@ -360,16 +362,16 @@ To advance into or in the scary range of an opponent one must succeed with a psy
 
 To initiate melee combat with a scary target one must succeed with a psy vs scary roll.
 
-To make a ranged attack against a scary target when within the scary range one must succeed with a psy+3/scary roll.
+To make a ranged attack against a scary target when within the scary range one must succeed with a psy+3 vs scary roll.
 
 A target fail-1 means a wasted action, the character is too afraid to do anything. A target fail-3 means retreat to safe distance. A fail-6 means flee.
 
-If an opponent succeeds overcoming the scary effect once he is immune to it for the rest of the encounter, for that type of action. E.g: if Gergish the goblin manages to advance into scare range of Halfvard the Hero, succeeding with the psy+3 \vs scary roll he doesn't need to roll for future advancing. However he must still roll psy \vs scary for attacking until he has succeeded with that once.
+If an opponent succeeds overcoming the scary effect once he is immune to it for the rest of the encounter, for that type of action. E.g: if Gergish the goblin manages to advance into scare range of Halfvard the Hero, succeeding with the psy+3 vs scary roll he doesn't need to roll for future advancing. However he must still roll psy vs scary for attacking until he has succeeded with that once.
 
 Use aura to denote scary in new maptool.
 
 
-\skill{Skill scf 1.0 "roar":} allows the user to scream great loud intimidating battle roars which might intimidate and scare off the opposition. The bellower will roll roar+str/3 \vs psy+str/3 for each target. On a success the target cannot attack for 1d3 rounds, and will have an initiative-5 mod against the roar:er. If it is a good (3+) success then the targets must flee away from the noise maker, and hopefully towards safety... until he succeeds with a psy roll (one per round), at least one round.
+\skill{Skill scf 1.0 "roar":} allows the user to scream great loud intimidating battle roars which might intimidate and scare off the opposition. The bellower will roll roar+str/3 vs psy+str/3 for each target. On a success the target cannot attack for 1d3 rounds, and will have an initiative-5 mod against the roar:er. If it is a good (3+) success then the targets must flee away from the noise maker, and hopefully towards safety... until he succeeds with a psy roll (one per round), at least one round.
 
 This skill can be used once per new encounter, when reinforcements arrive, etc, but not several times on the same targets.
 
@@ -468,6 +470,10 @@ Miscellaneous skills that are not necessarily combat related.
 
 
 \skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb.
+
+%TODO: fixa till swim
+\skill{Skill scf 0.5 "swim":}
+con -1 per runda som man inte lyckats simma
 
 
 \skill{Skill scf 1.0 "balance":} A well balanced character is less likely to fall down or loose his footing. A limited skill, but a great way to keep on your feet when tackling, moving about in rough terrain, etc.

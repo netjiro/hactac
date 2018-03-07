@@ -18,7 +18,7 @@ This is my personal notes package, not draft quality material intended for publi
 
 It is however quite complete. We have been using it for many years. I'll be adding the rest of the campaigns and adventures as I get the time to clean them up somewhat.
 
-Anything you want to change or add? Contact me! Or even better: go to github https://github.com/netjiro/hactac and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I might dig out some time to improve the quality to something closer to an early publishable draft state.
+Anything you want to change or add? Contact me! Or even better: go to github https://github.com/netjiro/hactac and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I might dig out some time to improve the quality to something closer to a publication draft.
 
 
 
@@ -49,7 +49,7 @@ I'll be adding the campaigns as i get the time to clean them out enough for publ
 Repository layout
 -----------------
 
-Unfortunately I can't share all my image material (tokens, battle maps, handouts, etc) together with the game core here. I don't have the copyright licenses. I'll see if it's possible to share the complete media packages elsewhere in some other context, together with the maptool campaign files. But for now, it's only the text and the automation scripts for the maptool virtual tabletop software. I have some maps and token images I've made myself, so I'll add them when I get the time if someone is interested.
+Unfortunately I can't share all my image material (tokens, battle maps, handouts, etc) together with the core game here. I'll see if it's possible to share the complete media packages elsewhere, together with the maptool campaign files. But for now, it's only the text and the automation scripts for the maptool virtual tabletop software. I have some maps and token images I've made myself, so I'll add them when I get the time if someone is interested.
 
 My working directory layout looks like this:
 hactac

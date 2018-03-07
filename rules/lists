@@ -1,6 +1,8 @@
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 
+NOT UPDATED TO 2018 skills, maneuvers, weapons, etc missing from lists
+
 NOT UPDATED TO 2017 declare action point changes
                     weapon changes
                     minor cost changes
@@ -25,7 +27,7 @@ acrobatics          1.0    n         moving around real cool like
 agile               2.0    n         improved dexterity
 angle of attack     ---    l 10,20,30 easier to attack to the sides
 animal command      0.5    n         pets, evil attack budgies, and rabbits
-appraise            ---    n         take just the good stuff, how much is that jewel worth?
+appraise            ---    n         how much is that jewel worth? Gold/enc?
 arrow recovery      0.5    n         get arrows from corpses
 avoid               0.8    n         avoid incoming attacks etc
 axe                 0.8    n         weapons: axes 1h & 2h
@@ -35,7 +37,7 @@ battle cry          1.0    n         bellow bonuses to your friends
 black cat           1.0    n         force re-rolls on the GM
 block               0.5    n         block opponent movements and tackles
 bow                 1.2    n         weapons: bows 2h
-brawling            0.8    n         simple unarmed fighting, fists and kicks
+brawl               0.8    n         simple unarmed fighting, fists and kicks
 capable             1.0    n         improved capacity
 charge              0.5    n         reduce movement penalty for first attack
 charming            2.0    n         improved charisma
@@ -67,7 +69,7 @@ hawk eyed           1.0    n         improved vision distance
 häfva               0.25   n         fast potion quaffing
 jump                0.5    n         better jumping
 knife               0.7    n         weapons: knives and short blades 1h
-language*           0.5    n         learn a foreign language: common, ancient, dwarvish, elvish, darktongue
+language*           0.5    n         learn a foreign language: common, ancient, common, ancient, dwarvish, elvish, darktongue, lizardzpeak
 leader              1.0    n         give bonuses to friends close by
 lightning strike    ---    u 20      upgrade to "martial arts", faster attacks and deflect parries
 literate            0.5    n         reading and writing

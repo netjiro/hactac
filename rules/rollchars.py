@@ -13,8 +13,8 @@ import sys
 
 # ------------- for regular quick roll selection, just change here -------------
 #distribution = "standard_set"     # standard selection of chars, 18 dudes
-#distribution = "small_set"     # small but representative set of chars, 10 dudes
-distribution = "min_set"     # minimal set, 7 dudes
+distribution = "small_set"     # small but representative set of chars, 10 dudes
+#distribution = "min_set"     # minimal set, 7 dudes
 #distribution = "goblin_destiny"  # special set for goblin destiny campaign
 #distribution = "goblinsonly"     # test selection for ap changes, test 2
 #-------------------------------------------------------------------------------
@@ -28,23 +28,23 @@ distribution = "min_set"     # minimal set, 7 dudes
 
 
 # First have to declare which race, then choose from those available
-# total 18 dudes are too many, will get too many good ones
+# total 16 dudes are too many, will get too OP stats
 if distribution == "standard_set" :
     humans =       3
     dwarves =      2
     elves =        2
     halflings =    3
     orcs =         2
-    goblins =      6
+    goblins =      4
 
-# 10 total, minimum reasonable representation if choosing from all races
+# 10 total, reasonable representation if choosing from all races
 if distribution == "small_set" :
     humans =       2
     dwarves =      1
     elves =        1
-    halflings =    1
+    halflings =    2
     orcs =         1
-    goblins =      4
+    goblins =      3
 
 # 7 total, minimal set if choosing from all races
 if distribution == "min_set" :

@@ -24,7 +24,7 @@ xp     # 101-120 110         # 106-125 115         # 111-130 120         # 101-1
 
 
 For regular npcs, i.e. not important ones, use the following baseline:
-       hum   dwf   elf   hlf   orc   gob
+       hum   dwf   elf   hfl   orc   gob
 str      5     7     4     3     7     3
 dex      5     4     6     6     5     7
 con      5     7     5     4     7     3
@@ -38,7 +38,7 @@ m        1     1     2     2     2     1
 w        3     2     4     3     4     3
 r        6     4     8     5     6     5
 d        9     6    12     8     8     7
-sta      5     8     7     5     8     3
+sta      5     8     7     5     7     3
 vis     20    18    25    20    15    20
 arc    225   165   265   315   150   225
 
