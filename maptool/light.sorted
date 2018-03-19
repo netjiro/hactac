@@ -11,6 +11,7 @@ fightlight: cone arc=120 40
 fightlightsmall: cone arc=120 20
 NPCleader3: aura GM circle 3.5#0000bb
 NPCleader5: aura GM circle 5.5#0000bb
+NPCleader8: aura GM circle 8.5#0000bb
 RPleader3: aura circle 3.5#0000bb
 RPleader4: aura circle 4.5#0000bb
 RPleader5: aura circle 5.5#0000bb
@@ -23,5 +24,6 @@ glow5: circle 5#00bb66
 scary4: aura circle 4.5#aa0000
 scary5: aura circle 5.5#aa0000
 scary6: aura circle 6.5#aa0000
+scary7: aura circle 7.5#aa0000
 scary8: aura circle 8.5#aa0000
 
