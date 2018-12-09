@@ -1,0 +1,495 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+% don't add glue spacing between segments, allow ragged bottoms instead
+% turn on \flushbottom in the end.
+\raggedbottom
+
+
+
+
+%-------------------------------------------------------------------------------
+% N P C s
+%--------
+
+
+\phantomsection\addcontentsline{toc}{chapter}{npcs}
+\chapter*{NPCs}
+\chaptermark{NPCs}
+
+NPCs (Non Player Characters) are the ususal common folk, the watchmen and soldiers, the farmers and merchants, as well as the unique individuals that the Heroes encounter on their travels.
+
+Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
+
+\
+
+\raggedbottom
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+con       stamina
+int       vision
+psy       mana
+per       ap
+cha       xp
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+int       mana
+psy       initiative
+per       ap
+----------
+skills
+----------
+spells
+----------
+equipment
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+name                        (token)
+-----------------------------------
+str       hp abs
+dex       m w r d
+psy       initiative
+per       ap
+----------
+attacks
+skills
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\flushbottom
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\subsubsection*{Note on maptool: token size}
+Most standard size humanoids like humans, elves, dwarves, orcs should be set to  normal size tokens. Halflings and goblins should be set to small size, and runts should be set to tiny size.
+
+\
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+\goodbreak
+\raggedbottom
+\phantomsection\addcontentsline{toc}{section}{city watch and soldiers}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================================================================================
+W A T C H   &   S O L D I E R S
+-------------------------------
+
+The brave who protect all the common folk.
+
+
+Patrol Soldier
+================== human ===================
+str  6                    hp 12(15) abs 2
+dex  5                    m1 w4 r7 d10
+con  7                    stamina 7
+int  4                    vision 24 day 256  human good
+psy  4                    mana 15
+per  6                    action points 3
+cha  4                    xp 3 (110)
+--------------------------------------------
+Common     7
+avoid      3
+throw      2
+veteran    1    1.0  1
+crossbow   5    0.8  20
+spear      7    0.8  39
+shield     6    0.7  25
+travel     4    0.5  8
+track      3    0.5  4
+phalanx    x    spc  10
+ride       5    0.5  12  << group leader only
+--------------------------------------------
+yield +4
+off balance
+--------------------------------------------
+money: 0 gold, 2 silver, 12 copper
+
+spear      7
+1h/2h  dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
+       str 4 (max +2 str damage bonus, max+2 penetrating bonus)
+       finesse-4/-6
+
+shield     8(5)
+       abs 10, parry+3,
+       str 4
+       Ranged attacks mod-2 when in the way.
+       Hiding behind it (3ap) ranged mod-4
+       tackle mod+1
+
+crossbow   5
+       dam 5, penetrating 1,
+       range 12, short +1, long -3, extreme -6,
+       str 3 (no str bonus)
+reload 6ap if reloading with 0ap successful quick draw roll for quiver
+reload 1r if reloading from quick draw quiver
+reload 2r if reloading from accessible quiver
+first shot  mod=0 1r
+first aimed mod+1 2r
+first quick mod-3 3ap
+first snap  mod-6 2ap
+--------------------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================== human ==================
+str  5                    hp 10 abs 0
+dex  5                    m1 w3 r6 d9
+con  5                    stamina 5
+int  5                    vision 20 day 180
+psy  5                    mana 5
+per  5                    action points 3
+cha  5                    xp 112
+--------------------------------------------
+Common   7
+throw    5 (3)	0.8  12
+ride     5	0.5  12
+avoid    5 (3)	0.8  12
+brawl    3	0.6  5
+knife    5	0.7  17
+animal command  3	0.5  4
+axe/spear/bow   7	ca 1.0 50
+--------------------------------------------
+yield +3
+off balance
+--------------------------------------------
+money: 3 gold, 1 silver, 10 copper
+Farmers knows knife and one weapon skill like:
+
+knife               5
+	dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
+	str 1 (no str bonus)
+	fast+1 if str 2 and dex 4
+	first two attacks don't require stamina
+	poke: mod-1 dam-1 pen+1
+
+1h axe             8
+	dam 7, abs 8, parry-3, toparry-1, toavoid+1, finesse-3
+	str 4 (max +4 str bonus)
+	swing: slow-1 mod-1 dam+2 toavoid+2
+
+spear              6 2h: parry 8
+1h/2h	dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
+	str 4 (max +2 str damage bonus, max+2 penetrating bonus)
+	narrow tip spears can have all str bonus as penetrating
+	broad tip spears are dam+1 mod-1
+	finesse-4/-6
+
+bow	7 1r-3, 2r=0, 3r+1
+	dam 4, penetrating 1
+	range 14, short 7 mod+3, long 24 mod-3,
+	vlong 30 mod-6 dam-1, extreme 35 mod-9 dam-2,
+	str 5 (no str bonus)
+--------------------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%\pagebreak[2]
+\goodbreak
+\phantomsection\addcontentsline{toc}{section}{TODO: other ppl}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================================================================================
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%\pagebreak[1]
+\goodbreak
+%\phantomsection \addcontentsline{toc}{subsection}{lizard men}
+\phantomsection \addcontentsline{toc}{section}{other ppl}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================================================================================
+O T H E R   P P L
+-----------------
+bla bla bla
+
+
+===================================
+asfasdf
+-----------------------------------
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%\pagebreak[2]
+\goodbreak
+\phantomsection\addcontentsline{toc}{section}{other ppl}
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================================================================================
+O T H E R   P P L
+-----------------
+bla bla bla
+
+
+===================================
+asfasdf
+-----------------------------------
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+
+
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% N P C s
+%--------
+
+
+
+
+
+
+
+
+
+% change back to normal font size
+%\normalsize
+
+% \raggedbottom command at the top tells to :
+% don't add glue spacing between segments, allow ragged bottoms instead
+%
+% now turn on \flushbottom in the end.
+\flushbottom

@@ -33,9 +33,49 @@ lots of comments in swedish, will not translate
 NEW: ---------------------------------------------------------------------------
 
 
+181205:
+TODO: skall man sänka stavars abs med 1 ?
+TODO: för billigt att skaffa sig snabba boltar ?
+      och se till att massa folk inte har någon magi, eller
+      mycket magic -3mod modifikationer eller så från födsel
+TODO: mindre mana på de flesta gubbar
+TODO: 2x pil bågskyttar för billigt
+TODO: force bolt 3ap 1mana 5dam pen1  (normal int/psy)
+      1xp magic 28xp skill 30xp fast magic > 2ap
+TODO: forrest walk - gå obehindrat genom skog och sly
+TODO: forest hugg - slå obehnidrat i skog
+      olika mods för olika vapen  i sly ?
+TODO: need line of sight för att lägga area spells
+      lyckat perception slag för dåld sikt tex genom eld/rök
+TODO: skill: lazy walk : gå W och få tillbaka stamina
+TODO: skill: masochist : ger bonus när man tar pain...
+TODO: skill: pole vault : hoppa med spjut/stav hoppa över hinder/folk
 
+181203: mail
+TODO: multiple points in mail 181203:1155 to hack'n'slash group
+     https://mail.google.com/mail/u/0/#inbox/QgrcJHrnzwjsWwWfkvxbWrzFSWVqTkxrjkL
+TODO: differentiera vapen bättre: tyngd, längd, speed
+      skill "heavy weapons" samt:
+      vapentyngd + str vs vapentyngd + str
+      skill "tight fight" och "long arm" som kan motverka varandra
+      vapenlängd, men inte bara att längre är bättre
+      längre är sämre i defense mot kortare vid tight fight
+      och kortare är sämre i defense mot längre vid long arm
+      liknande också för snabbare vapen utan att det hamnar på ap2/4
+TODO: ser över stridsmanövrer, de används inte mycket i spel nu
+TODO: skadetyper slashing/piercing/crushing/magic/[elemental]
 
+181128:
+TODO: skall man tvingas deklarera W för att gå genom knölig mark med 1mp M ?
+TODO: skill AFK  - ger xp även om man inte är med på passet
+TODO: skill "I Almost Had Him"  full XP även för folk som flyr
+TODO: kolla om det skall vara minus på magi genom eld  -  nope enligt tidigare diskussion
 
+181122:
+TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin inte skall ha ccf från reactive skin, se räkneexemplet
+
+181114:
+TODO:  movement state "ride" som sätter move declared men 0
 
 
 
@@ -657,3 +697,17 @@ DONE: bygg re-roll damage knapp, som använder last roll och last max dam etc
 DONE: "rrdam" knapp : re-roll damage, using LastMaxDam LastBasePen LastResult
 DONE: shoot-inna-back   mer skada på att skjuta folk som springer och flyr
       maneuver shoota-inna-back 10xp mod+1 dam+1 against fleeing (R/D) targets
+181029:
+DONE: avsvimmad skall clear move och ta bort autodeclare.
+DONE: auto round skall skriva vilken runda sista i chatten
+181203:
+DONE: sänka chanserna att få riktigt höga ap från start för goblins och halflings
+      sänkte goblins max till 5 och ändrade chans,
+      tror ändrade chans för halfling också
+181204:
+DONE: sätt mods för låga hp till 66%,33%,0% istället för 50%,25%,0%
+      changed in util.totmod CurrentOneThirdHitpoints CurrentTwoThirdHitpoints
+181206:
+DONE: skriv om häxans shock bolt knapp så den inte skriver skada öppet
+DONE: äta lik knapp för icky  -  slowheal
+DONE: bygg push mp knapp

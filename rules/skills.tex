@@ -318,13 +318,14 @@ It is possible to synchronise other actions as well. The characters must be in v
 Synchronised "double, triple, etc" attacks must also be defended against in one action.
 
 
+%DONE: 181115: removed "angle of attack", reduces positioning
 %TODO: ? remove this since it makes positioning less relevant ?
-\skill{Skill cost special "angle of attack":} Characters with angle of attack can make attacks, but not defence, at greater angle from their facing than normal. \\
-lvl 1, cost 10xp: Attacks to the side are at mod-0, attacks diagonally behind is mod-3, while attacks directly behind is mod-6. \\
-lvl 2, cost 20xp: Attacks to the side and diagonally behind is mod-0, attacks directly behind is mod-3. \\
-lvl 3, cost 30xp: Attacks in any direction is mod-0.
+%\skill{Skill cost special "angle of attack":} Characters with angle of attack can make attacks, but not defence, at greater angle from their facing than normal. \\
+%lvl 1, cost 10xp: Attacks to the side are at mod-0, attacks diagonally behind is mod-3, while attacks directly behind is mod-6. \\
+%lvl 2, cost 20xp: Attacks to the side and diagonally behind is mod-0, attacks directly behind is mod-3. \\
+%lvl 3, cost 30xp: Attacks in any direction is mod-0.
 
-
+%DONE: 181115: NOPE! no "angle of defence" either.
 %TODO: ? should we have a angled defence ?  makes surrounding and most positioning irrelevant, which is kind of shit.
 
 
@@ -424,7 +425,7 @@ E.g: Putte Paladin has leader 5. Jolly James stands within 5 range from PP, and 
 A leader can also give orders to leader/3 (round down) extra characters under his leadership for each action giving orders, activating by Oy!, and similar. Great for handling henchmen.
 
 
-\skill{Skill scf 1.0 "tactician":} The tactician can shout advice to fellow compatriots giving mod+1 to all combat actions. The advice range is limited to the perception of the affected allies. Tactician requires no rolls per default but each "advised" target hero requires one fast+2 (1ap) action. The advice mod+1 bonus persists until end of the round for all combat actions against the original opponent. Tacticians advice does not activate the ally.
+\skill{Skill scf 1.0 "tactician":} The tactician can shout advice to fellow compatriots giving mod+1 to all combat actions. The advice range is limited to the perception of the affected allies. Tactician requires no rolls per default but giving advice to a target hero costs the tactician a 1ap action. The advice mod+1 bonus persists until end of the round for all combat actions against the original opponent. Tactician's advice does not activate the target hero.
 
 The tactician can "cover" a number of characters and monsters combined equal to his level of tactician. The mod+1 only applies to actions done by a "covered" hero against a "covered" opponent. Covering range is limited to line of sight. Characters and monsters of normal size or smaller do not count as blocking line of sight.
 
@@ -471,9 +472,12 @@ Miscellaneous skills that are not necessarily combat related.
 
 \skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb.
 
+
 %TODO: fixa till swim
-\skill{Skill scf 0.5 "swim":}
-con -1 per runda som man inte lyckats simma
+\skill{Skill scf 0.5 "swim":} TODO: fix swim \\
+Careful swimming: 1sq/r mod+3, requires $\leq$str encumbrance.\\
+Swimming speed is swim/3 round down sq/r, but reduced for \\
+%con-1 for each round of failed swimming. Recover con+1 each round of successful swimming. When con goes below 0 the Hero must start rolling against psy modified by con (negative) each round or go into panic and
 
 
 \skill{Skill scf 1.0 "balance":} A well balanced character is less likely to fall down or loose his footing. A limited skill, but a great way to keep on your feet when tackling, moving about in rough terrain, etc.
@@ -494,7 +498,7 @@ Fail-9: falls off.
 %TODO: ? remove the horse riding destination deviation ?
 %In addition, a fail also means you might not get the horse to the exact square you want when you move it. The final movement destination deviates in direction 1d8 and distance equals to the fail. Distance is capped by movement speed: walk is max 1sq, run is max 3sq, dash is max 6sq.
 
-Also, if you can ride you can drive a horse and cart. Maneuvering the cart in high speed or difficult terrain requires ride rolls.
+If you can ride you can also drive a horse and cart. Maneuvering the cart in high speed or difficult terrain requires ride rolls, mods as with ride.
 
 Ride also increases the travel distance on the world map. The Hero can travel up to his con+ride each day, provided the horse is not the limiting factor. Horses and other riding animals have a cruise rating that sets the cap on how far they can travel each day.
 

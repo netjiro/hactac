@@ -37,12 +37,12 @@ if distribution == "standard_set" :
     orcs =         2
     goblins =      4
 
-# 10 total, reasonable representation if choosing from all races
+# 9 total, reasonable representation if choosing from all races
 if distribution == "small_set" :
     humans =       2
     dwarves =      1
     elves =        1
-    halflings =    2
+    halflings =    1
     orcs =         1
     goblins =      3
 
@@ -56,23 +56,23 @@ if distribution == "min_set" :
     goblins =      2
 
 
-# 13 total
+# 8 total, 7 goblins
 if distribution == "goblin_destiny" :
     humans =       1
     dwarves =      0
     elves =        0
     halflings =    1
     orcs =         1
-    goblins =      10
-# 10 gobbos, choose two to play:
+    goblins =      5
+# 8 gobbos, choose two to play:
 if distribution == "goblinsonly" :
     humans =       0
     dwarves =      0
     elves =        0
     halflings =    0
     orcs =         0
-    goblins =     10
-# should try 6 gobbos? 10 Gobbos seems to give too good results.
+    goblins =      8
+# should try 6 gobbos? 10 Gobbos seems to give too good results. Try 8 ?
 
 
 
@@ -312,7 +312,7 @@ def rollDwarf():
     char.visArc = 120 + d90()             # 121-210 165
     char.visMode = "infra/dusk"
     char.mana = r2d10()                   #  2 - 20  11
-    char.ap = 3 + int(d10() / 8)          #  3 -  4   7,3
+    char.ap = 3 + int(d10() / 9)          #  3 -  4   8,2
     char.xp = 105 + d20()                 # 106-125 115
     # fixup
     char.w = max(char.m + 1, char.w)
@@ -408,7 +408,7 @@ def rollHalfling():
     char.race = "halfling"
     # primary
     char.str = r2d4() -1                  #  1 -  7   4
-    char.dex = r2d5() +2                  #  4 - 12   7
+    char.dex = r2d5() +2                  #  4 - 12   8
     char.con = r2d5() -1                  #  1 -  9   5
     char.int = r2d5()                     #  2 - 10   6
     char.psy = r2d5()                     #  2 - 10   6
@@ -520,9 +520,19 @@ def rollOrc():
     # extras
     char.extras.append("double con against poisons")
     char.extras.append("Orcs without any war trophies suffer psy-1 mod, until honour reclaimed.")
-    char.extras.append("bite "+str(biteskill)+" dam " + str(int(char.str/6)+d3()) + " slow-1 scf 0.5")
-    char.extras.append("brawl fist "+str(brawlskill)+" dam "+str(int(char.str/3)) + " fast+1")
-    char.extras.append("brawl kick "+str(brawlskill)+" dam "+str(int(char.str/3)+2))
+    bitedam = int(char.str/6)+d3()                     # 1-5 (3,6,2) : (0-3)+d3
+    fistdam = int(char.str/3)                          # 1-4 (1,3,3,2)
+    kickdam = int(char.str/3)+2                        # 3-6
+    char.extras.append("brawl bite: "+str(brawlskill)+" dam " + str(bitedam) + " slow-1, gives +1 extra pain")
+    char.extras.append("brawl fist: "+str(brawlskill)+" dam "+str(fistdam) + " fast+1")
+    char.extras.append("brawl kick: "+str(brawlskill)+" dam "+str(kickdam))
+    if roll(33):
+        clawdam = fistdam -1
+        if roll(50):
+            clawdam = fistdam +1
+            if roll(25):
+                clawdam = fistdam +2
+        char.extras.append("brawl claw: "+str(brawlskill)+" dam "+str(clawdam)+" fast+1 first two attacks don't require stamina")
     # done
     return char
 
@@ -534,24 +544,24 @@ def rollGoblin():
     char.race = "goblin"
     # primary
     char.str = r2d4() -2                  #  0 -  6   3
-    char.dex = r2d5() +2                  #  4 - 12   8
-    char.con = r2d4()                     #  2 -  8   5
+    char.dex = r2d6()                     #  2 - 12   7
+    char.con = r2d5() -2                  #  0 -  8   4
     char.int = r2d5() -2                  #  0 -  8   4
     char.psy = r2d5() -2                  #  0 -  8   4
     char.per = r2d5()                     #  2 - 10   6
     char.cha = r2d4() -2                  #  0 -  8   3
     # secondary                                       1,2,3,4,5,6,7,8
-    char.hp = 6 + r2d4()                  #  8 - 14  11
+    char.hp = 6 + r2d3()                  #  8 - 12  10
     char.m = 1 + int(d10() / 10)          #  1 -  2   9,1
     char.w = 2 + int(d10() / 4)           #  2 -  4     3,4,3
     char.r = 3 + int(d10() / 3)           #  3 -  6       2,3,3,2
     char.d = 5 + int(d10() / 3)           #  5 -  8           2,3,3,2
     char.stam = 2+d5()                    #  4 -  7   5
-    char.visRange = 15 + d10()            # 16 - 25  20
+    char.visRange = 10 + d15()            # 11 - 25  20
     char.visArc = 180 + d90()             # 181-270 225
     char.visMode = "dusk"
     char.mana = r2d8()-4                  # -2 - 12   5
-    char.ap = 4 + int(d10() / 4)          #  4 -  6   3,4,3
+    char.ap = 3 + int(d10() / 3)          #  3 -  6   2,3,3,2
     char.xp = 80 + d20()                  # 81 -100  90
     # fixup
     char.w = max(char.m + 1, char.w)
@@ -573,7 +583,8 @@ def rollGoblin():
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d3()
     char.skills['Common'] = int(char.int / 3) + d3()
-    char.skills['brawl'] = int(max(char.dex,char.str) / 4) + d3()
+    brawlskill = int(max(char.dex,char.str) / 4) + d3()
+    char.skills['brawl'] = brawlskill
     char.skills['avoid'] = int(char.dex / 4) + d3()
     char.skills['sneak (incl bonus)'] = max(sneakbonus, int(char.per / 4) + d2())
     if disengagebonus > 0:
@@ -581,20 +592,20 @@ def rollGoblin():
     else:
         char.skills['disengage'] = int(char.dex / 4) + d2()
     char.skills['throw'] = int(char.dex / 4) +d2()
-    bitedam = 1+int(d10()/3)                             # 1-4 (2,3,3,2)
-    scratchdam = int(1+d10()/10)                       # 1-2 (9,1)
     # maneuvers
     char.maneuvers.append('yield')
     char.maneuvers.append('off balance')
     # extras
-    char.extras.append("goblins can live on half rations, and can eat spoiled food")
-    char.extras.append("brawl bite: dam "+str(bitedam)+" 3ap (2ap if both hands free)")
-    char.extras.append("brawl scratch: dam "+str(scratchdam)+" 2ap (1ap if both hands free) every third attack costs 1 stamina")
+    char.extras.append("goblins can live on half rations and can eat spoiled food")
+    bitedam = 1+int(d10()/3)                           # 1-4 (2,3,3,2)
+    scratchdam = int(1+d10()/10)                       # 1-2 (9,1)
+    char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam)+" 3ap (2ap if both hands free)")
+    char.extras.append("brawl scratch: "+str(brawlskill)+" dam "+str(scratchdam)+" 2ap (1ap if both hands free) every third attack costs 1 stamina")
     if roll(33):
-        clawbonus = 1
+        clawdam = 1
         if roll(33):
-            clawbonus = 2
-        char.extras.append("brawl claw: dam(fist)+"+str(clawbonus)+" fast+1 first two attacks don't require stamina")
+            clawdam = 2
+        char.extras.append("brawl claw: "+str(brawlskill)+" dam "+str(clawdam)+" fast+1 first two attacks don't require stamina")
     char.money = str(int(d10()/4))+" silver, "+str(d12())+" copper" +", "+ str(d4())+" teeth, " \
                  + str(d3())+ " stones, "+ str(d2())+ " feathers, "+ str(d3())+" glass beads"
     # done
