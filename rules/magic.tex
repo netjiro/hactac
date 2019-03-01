@@ -21,50 +21,23 @@
 
 All magic skills and spells must be learned from a teacher, book, or similar. They cannot be trained from nothing without guidance like normal skills. This includes the base skill \emph{magic}, as well as the improvement skills like \emph{power casting}, and all spells.
 
-Teachers can be the village witch, a professor at the City Magic College, or an ally in the party who happen to know that spell. When creating a new character with magic skills and spells it's assumed that he had access to some magic training when growing up, and can thus choose quite freely from the lists.
+Teachers can be the village witch, a professor at the City Magic College, an ally in the party who happen to know that spell, or the enemy wizard you captured a few weeks ago and been torturing ever since (\emph{but would you trust him?}). When creating a new character with magic skills and spells it's assumed that he had access to some magic training when growing up, perhaps 1d3 spells.
 
 
 \begin{description}
 
 
-\item[Skill scf 1.0: "magic":] The caster can not spend more mana in one casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round.
+\item[Skill scf 2.0: "magic":] The caster can not spend more mana on each spell casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round.
 
 The magic skill is also used when activating certain magical devices that require external mana power, when trying to understand magical texts and foreign spells and devices, etc.
 
 
-\item[Skill scf 0.5: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more mana than his skill points in Power Casting. This cannot be used to raise the end total chance of success above 9.
+\item[Skill scf 1.0: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more mana than his skill in power casting. This cannot be used to raise the end total chance of success above 9.
 
-Mana spent for "power casting" is not counted to the maximum total limit set by the casters "magic" skill level.
-
-
-\item[Skill cost special "fast magic":] Casting spells faster than normal. Most magic is cast in time resolution of whole rounds, for which the caster generally don't suffer action mods. But, if the Hero has to fling that black bolt a bit faster he can use fast magic and declare lots of ap to squeeze out the magic a bit quicker and perhaps manage to do something else that round as well. \\
-For the purpose of casting spells faster than the time resolution of 1r, a casting time of one round is considered to be 9ap.
-E.g: a 3r spell with fast magic 2 will take 2r to cast. A 1r spell will take 6ap to cast. A 2r spell will take 1r + 3ap to cast, or 0r + 12ap, if the Hero so prefers.
-
-The caster can always choose to cast an Xap (X<9) spell in a full round instead, and take no action mod from having to declare too many ap. But then he can't do anything else in that round of course.
-
-\small \begin{verbatim}
-lvl 1, cost  15: spells cast in 75% of the time (round up).
-lvl 2, cost  30: 66%
-lvl 3, cost  50: 50%
-lvl 4, cost  75: 40%
-lvl 5, cost 125: 33%
-lvl 6, cost 200: 25%
-\end{verbatim} \normalsize
+Mana spent for power casting is not counted to the maximum total limit set by the caster's magic skill level.
 
 
-\item[Maneuver cost 10: "held casting":] is used in conjunction with casting spells, delaying the final touch of the spell, so that the effect can appear at very short notice and with great control. Primarily used together with "anticipate" to inject the effects of a prepared multi-round-casting spell at precise points in the action sequence of a battle round. It costs 3ap to cast a held spell.
-
-
-%TODO ? really keep efficient casting ?
-%     this can make casting cost too little mana.
-%\item[Maneuver cost special: "efficient casting":] reduces the mana cost when succeeding well with casting spells. A spell always costs at least 1 mana  to cast though.
-%\small \begin{verbatim}
-%lvl 1, cost  20: success+3 reduces the cost by 1 mana
-%lvl 2, cost  30: success+6 reduces the cost by 2 mana
-%lvl 3, cost  40: success+9 reduces the cost by 3 mana
-%\end{verbatim} \normalsize
-%The mana must first be successfully drawn, and the reduction amount is then returned if successful.
+\item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear at very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
 
 \end{description}
@@ -82,54 +55,223 @@ lvl 6, cost 200: 25%
 \section*{Magic spells}
 
 Magic spells cannot be trained from nothing without the user learning the spell from a master, scroll, grimoire, etc. Purchasing a spell text costs 1-10 gold depending on the rarity, strangeness, power of the spell, etc. GM discretion.
-Spells can also be deduced from magical objects and other sources, with a lot of study and some heavily modified "magic" rolls.
+Spells can also be deduced from magical objects and other sources, with a lot of study and some modified magic rolls.
 
-Consider the spells listed below to be suggestions only. Feel free to build individual spells to make the use of magic more varied and unreliable. Perhaps the Hero wants to purchase a "Black Bolt" spell, but the grey old master only teaches him the "Thread of Dread Darkness" which is very similar to the "Black Bolt" but with some minor changes in range, effect, etc.
+Consider the spells listed below to be suggestions only. Build individual spells to make the use of magic more varied and unreliable. Perhaps the Hero wants to purchase a Black Bolt spell, but the grey old master only teaches him the Thread of Dread Darkness which is very similar to the Black Bolt but with some minor changes in range, effect, etc.
 
 Magic spells are generally slow to cast. A normal time spell takes 1-2r to cast, a slow spell can take 3r or longer. A fast spell takes a couple of actions or one round.
 
 When casting a spell, each mana pumped into the spell, including casting cost, reduces the chance of success by one. I.e. a black bolt with two extra mana for damage and one for range will cost 4 mana to cast and carry a mod-4 to cast.
 
+Spells that have range don't allow for short,long,vlong,extreme range modifications of any sort unless explicitly stated. E.g: a black bolt r10 will not reach a target 11sq away from caster, but a shock bolt r20 can reach 30sq at dam-3.
+
 
 \begin{description}
 
-\item[Skill scf x.x: \emph{spell}] Most spells have a skill cost factor of 0.33. Some spells are cheaper, some more expensive. Some spells have minimum requirements on psy or int. If the character does not meet the int requirements, then the cost of the spell is doubled for each missing int point: e.g: Wizard Woolhead has int 4 and wants to learn an int 7 spell. He is missing 3 int points, thus the spell costs $2^3=8$ times as much to learn. He then spends his xp on a simpler spell.
+\item[Skill scf x.x: \emph{spell}] Most spells have a default skill cost factor of 0.33. Some spells are cheaper, some more expensive. Some spells have minimum requirements on psy or int. 
+
+If the character does not meet the int requirements, then the cost of the spell is doubled for each missing int point: e.g: Wizard Woolhead has int 4 and wants to learn an int 7 spell. He is missing 3 int points, thus the spell costs $2^3=8$ times as much to learn. He then spends his xp on a simpler spell.
 
 If the character does not meet the psy requirements he will have mod-1 per missing psy when casting the spell.
 
 \end{description}
 
-These spells should be seen as examples, different masters teach their students different variations, some better, some worse, some just different. It is likely that most wizards spells will be different from each other.
+These spells should be seen as examples, different masters teach their students different variations, some better, some worse, some just different. It is likely that most wizards' spells will be different from each other.
 
-Spells are trained as regular skills and have scf 0.33 if not specified otherwise.
+Spells with more complexity or targets have higher int requirements, and spells with higher power or control influence has higher psy requirements.
 
-Spells with more complexity have higher int requirements, and spells with higher inherent control power has higher psy requirements.
+
+% typical: relative base, 1h/2h  dam , extras
+% sword    +2   +2/+4                             finesse 6
+% axe      +3   +3/+6                             parry-3 toparry-1 toavoid+1
+% spear    +1   +1/+2 pen 0/1 parry -1/+1         reach
+% staff    -1   -1/+1 parry +1/+2                 fast, reach
+% braw     -3                                     (at str 6)
+%   fist   -4                                     fast, deflect
+%   kick   -2                                     deflect
+%
+% bow      =0   --/=0                             range, pen, 1/r
+% crossbow +3   --/++ pen 1-3                     range, pen, 1/2r
+%
+%
+% typical psy int =6, mana 15
+%             assume armour2 for ppp
+% blkblt1  =0 +2p                                 r10, ppp, 1/r
+% blkblt2  +3 +5p                                 r10, ppp, 1/2r
+% shkblt1  =0 +2p                                 r15, ppp, 1/r
+% shkblt2  -1 +1p                                 r20, ppp, 1/2r
+% frcblt3  -1 =0p                                 r10, p1,  3ap
+% frcblt3  -3 -1p                                 r10, p2,  3ap
+
+
+% guide lines ?
+% psy - power, damage, effect
+% int - speed, complexity, range, multi-target, control
+%
+% assume baseline psy+3 dam+pen, count full penetration as pen2 on average
+% ok to have psy+3 dam+pen + scale (psy+3)/4 per mana for 1-2r casting
+% range 10 as baseline, trade 1dam/pen for 5 range
+% usually no extended ranges, all based on one max range, some with long etc
+% 
+
+
+% damage psy based, parity with sword, alpha boost (dam/3) / mana
+% medium range as base range for bolts
+% no parry or avoid defense against bolts
+% no shield defense or cover for bolts
+% no shooting into melee mods
+% no movement speed mods
+% 
+% base dam  psy+2
+% base range 10
+% base cast 2r
+% 
+% dam 1-3    1a
+% dam 4-6    1r
+% dam 7-9    2r
+% dam 10-12  3r
+% ? but can't generally scale base damage higher than (psy dam) / mana
+% ? even at long times
+% 
+% treat penetrating as dam+2 on average
+% 
+% cast 3r > 2r        dam-3 /  psy+3 & int+3
+% cast 2r > 1r        dam-3 /  psy+3 & int+3
+% cast 1r > 3ap       dam-3 /  psy+3 & int+3
+% 
+% range 10 > 15       dam-2 / cast+1r
+% range 10 > 20       dam-3 / cast+1r
+% allow long @dam-2   dam-1
+% area effect         dam-2 per radius+1
+% 
+% 
+% int 4 as base for normal complexity
+% int+2 for multi target
+% int+2 for area effect, int+1 per extra radius+1
+% int+1 for extra range / mana
+% int+1 for extra damage / mana
+% int+1 for pen1-2, int+2 for pen3-ppp
+% int+1 for buffer / hold effect
+% trade int-1 for psy+1 or mana+1 cost
+% trade int-1 for +1r cast time
+% trade range-5 for int-1
+% trade range touch for int-3 ?
+% 
+% 
+% black bolts  cast 2r  !! dam 9 
+%              dam psy+0 dam+/m ppp         base psy+2, dam-2 ppp, int+1
+%              range 10 (med)               int,psy +0
+%              range +5/m                   int+1
+%              >>                           int 6, psy 9
+%
+% shock bolt   cast 2r  !! dam 9 fundament  range 20  dam-3 
+%              dam psy+0 dam+/m ppp         base psy+2, dam-2 ppp, int+1
+%              range 20                     range 20  dam-3
+%              range long @dam-3            dam-1, but take int+2 instead ?
+%              range+/m                     int+1
+%              >>                           int 8, psy 9
+% 
+% force bolt   cast 3ap      (2r>>3ap : dam-3, psy+3 & int+3)  psy+2,-3=psy-1
+%              range 10                     --
+%              
+
+
+%TODO remove or switch to this:   check how it looks with spells as list -------
+%\openspellslist
+%
+%\spell{Ur Bolt} cast 2r 1m, 
+%dam 6, 
+%range 10, 
+%int 4 psy 4\\
+%\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
+%
+%\spell{Onsager Spear} cast 3r 1m, 
+%dam 10 +3/m, 
+%range 10 +5/m, 
+%int 6 psy 7
+%
+%\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts.}
+%
+%\spell{Black Bolt} cast 2r 1m,
+%dam 9 +3/m penetrating,
+%range 10 +5/m,
+%int 6 psy 7
+%
+%\spell{Black Bolt}
+%               cast 1r 1m, 
+%               dam 6 +2/m penetrating,
+%               range 10 +5/m,
+%               int 6 psy 9
+%
+%\closespellslist
+
+
+\subsection*{Bolts, lances, missiles, strikes, sparks, etc}
+%----------------------------------------------------------
+Many offensive spells have similar general mechanics. 
+
+\begin{description}
+
+\item{bolt, zap, flash:}
+Bolts don't take target \emph{to hit} modifications that affect the spell casting. They ignore things like target partial cover, shields partially in the way, target movement speed, partially obstructed view by fire, etc.
+
+\item{spear, lance, dart, arrow, quarrel, missile:}
+These work similar to bow arrows. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take, except from 
+
+\item{strike, spark:} % mental lock spells ignore cover etc, but mods by psy etc
+
+%              ignores target move mods, shooting into melee mods
+%              BUT: they take cast mods for target psy, if target resists,
+%                   and if the target knows magic skill.
+%                   mod -(target psy / 3), 
+%                   mod -3 if target takes a 3ap action to resist 
+%                   mod -(target magic lvl) 
+%              Hence, almost useless against
+
+
+\end{description}
+
+
+%no mods (old style):  bolt, zap, flash, 
+%arrow style:          spear, lance, dart, arrow, quarrel, missile, 
+%psy modded:           strike, spark, 
+
 
 \small \begin{verbatim}
 
+ur bolt        cast 2r 1m, dam 6
+               range 10
+               int 4, psy 4
+
+Onsager Spear  cast 3r 1m, dam 10 +3/m,
+               range 10 +5/m
+               int 6, psy 7
+               
 black bolt     cast 2r 1m, dam 9 +3/m, penetrating,
-               range 10 +5/m, long -3dam,
-               int 7, psy 7
+               range 10 +5/m, 
+               int 6, psy 9
 
 black bolt     cast 1r 1m, dam 6 +2/m, penetrating,
-               range 10 +5/m, long -3dam,
-               int 7, psy 7
+               range 10 +5/m,
+               int 6, psy 9
 
-shock bolt     cast 2r 1m, dam 7 +2/m, penetrating,
+shock bolt     cast 2r 1m, dam 5 +2/m, penetrating,
                range 20 +10/m, long -3dam,
-               int 7, psy 7
+               int 8, psy 8
 
-shock bolt     cast 1r 1m, dam 5 +1/m, penetrating,
-               range 15 +10/m, long -3dam,
-               int 5, psy 5
+shock bolt     cast 1r 1m, dam 4, penetrating,
+               range 15 +7/m, long -2dam,
+               int 6, psy 6
 
-force bolt     cast 3ap 1m, dam 5, penetrating 1,
-               range 10, long -2dam,
-               int 7, psy 5
+force bolt     cast 3ap 1m, dam 3
+               range 10
+               int 7, psy 4
 
-force bolt     cast 3ap 1m, dam 6 +1/m, penetrating 2,
+force bolt     cast 3ap 1m, dam 5 +1/m
                range 10 +5/m, long -2dam,
-               int 10, psy 8
+               int 10, psy 6
+
+---===### current above ###===---
 
 fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round
@@ -155,6 +297,7 @@ minion missile cast 1r 1m, dam 4 +2/m, speed 20, seeking 10 -2/r,
                penetrating 1, lifetime 20r +10/m,
                Hover by caster until target assigned,
                then seeks target until missed seeking or max lifetime.
+               Seeking does not fail on roll of 10 as normal.
                They are smart enough to curve around objects and avoid obstacles
                unless they miss their seek roll (one per rnd). The target does
                not have to be in line of sight from the caster once assigned.
@@ -179,7 +322,7 @@ ward shield    cast 1r 2m, range touch, duration 5r +3r/m
                Ignores penetrating, i.e. penX just passes through the spell.
 
 ward flash     cast 3ap 1m, range personal, duration 1r first attack only,
-               absorbs 5dam +3dam/m on the first attack that hits the caster.
+               absorbs 5dam +3/m on the first attack that hits the caster.
                Absorbs incoming damage before it strikes the character
                or his equipment.
                Ignores penetrating, i.e. penX just passes through the spell.
@@ -251,7 +394,7 @@ slow           cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
                Full/multi-round actions take +1r
                Continue slow on psy vs psy +2/m each round (mana paid once
                on cast) up to the max duration. First round auto success.
-               Once slow is lost on one target that target is free from
+               Once slow is lost on a target that target is free from
                the spell.
                int 4, psy 3
 
@@ -306,7 +449,9 @@ open door      cast 3ap 1m, range 15 +10/m, targets +1/m
                scf 0.2
 
 close door     cast 3ap 1m, range 15 +10/m, targets +1/m
-               close a door.
+               Close a door.
+               If caster has seen the door before he doesn't need line of 
+               sight if he can pass an int-3 roll.
                scf 0.2
 
 seal door      cast 3ap 1m, range 15 +10/m, targets +1/m, duration 10r +5/m
@@ -323,7 +468,7 @@ dislocate      cast 2r 1m, range 20 +5/m, target 1 +2/m, psy vs psy +3/m
                int 5, psy 5
 
 pilfer         cast 2r 1m, range 5 +5/m,
-               Can steal one item that is not held from the target.
+               Can steal one item from the target.
                If the item is unseen (e.g: in a container) than it is a random
                item from among the potential items.
                A held item can be stolen with a successful psy-6 vs psy +1/m
@@ -398,7 +543,7 @@ mana transfer  cast 2r 1m, transfer 3m/r +3/m, range 5,
                Max psy mana per cast.
                int 3, psy 3
 
-raise dead     cast 5r 2m, duration 3*diff +10r +10r/m, range touch
+raise dead     cast 5r 2m, duration 10r + 3*diff +10r/m, range touch
                Immediately activates control dead, with same diff, if the
                caster knows the control dead spell. If not ...
                int 4, psy 4
@@ -418,7 +563,7 @@ control dead   cast 2r 1m, psy vs psy +1/m +diff
 lower dead     cast 3r 1m, psy vs psy +1/m, range 5 +5/m
                int 5, psy 7
 
-mass raise     cast 10r 3m, duration 3*diff +10r +20/m, range 5 +5/m
+mass raise     cast 10r 3m, duration 10r + 3*diff +20/m, range 5 +5/m
                target diff +1/m
                int 8, psy 8, scf 0.66
 
@@ -449,7 +594,7 @@ drain          cast 2r 1m, psy vs psy +3/m, range contact,
 darkvision     cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
                int 3, psy 2
 
-rot            cast 2r 1m, dam 4 +1/m 1hp/rnd penetrating, range 8 +2/m,
+rot            cast 2r 1m, dam 4 +1/m 1hp/r penetrating, range 8 +2/m,
                magical rotting disease is doing the damage.
                one pain per damage dealt.
                int 6, psy 5
@@ -591,7 +736,7 @@ disrupt        cast 1r 2m, range 5 +5/m,
                int 8, psy 8, scf 0.66
 
 dispell        cast 2r 3m, range 3 +3/m,
-               dispell an existing spell effect, requires resistance roll.
+               dispell an existing spell effect, requires resistance roll:
                dispeller: psy-3 + 1/2m
                target spell: psy(caster) + spell mana
                int 8, psy 3, scf 1.0
@@ -751,7 +896,7 @@ Quaff! the     Metal tin with a golden glowing liquid. Generally costs ~1gold.
 soft drink     Restores 4 hitpoints and 4 stamina in one round.
 of heroes      Has a tendency to be addictive.
                Advertisement: Yngolf Storpec says it even tastes good.
-               (The fine print: all side-effects are purely co-incidental
+               (The fine print: All side-effects are purely co-incidental
                and have never been scientifically or thaumaturgically proven
                to be caused by the use of Quaff! Quaff corp is not responsible
                for any mental or physical disturbances, changes, manifestations,
@@ -782,10 +927,10 @@ Bow            range mods as regular bow, rate of fire as regular bow,
 
 Sledge hammer  dam 5, abs 14, str 5, finesse-0
 of solitude    After a hit the user can choose to spend 1 mana to:
-               roll psy+str vs opponent str. Effect = diff/3 (round down)
+               roll psy+str vs opponent str. Effect = diff/3
                For every effect point the opponent is dealt 1 damage
                penetrating and knocked back 1 square.
-               Charisma -1 while owned (grumpy).
+               Charisma -2 while owned (grumpy).
 
 Mostly         dam 7(12), abs 15, str 7, finesse-2
 Magical        On each hit, roll for 3 on a d10, if successful the MMM activates
@@ -794,7 +939,7 @@ Morningstar    and forcibly draws 1 mana from the user,
                Activation adds 5 extra to max damage of the weapon (12) for the
                strike that just hit.
                All damage is treated as both physical and magical damage for
-               purposes of damaging magical and non magical creatures.
+               purposes of damaging magical and non magical living creatures.
 
 Terribly       A magical torch with a perpetual soft bioluminescence (range 8).
 Tasty          It grows magical glowing mushrooms from the top.
@@ -922,7 +1067,7 @@ Glowrb         A crystal orb which when touched starts to glow with a bright
 PortaPortal    Two large metal discs, comes as matched pairs. When both are
                placed on the ground and both seals are broken it creates a
                short lived portal between the disks. The portal usually lasts
-               for about 10r. A disks must not be moved once the seal has
+               for about 10r. A disk must not be moved once the seal has
                been broken and that end of the portal activated.
                Often used to bring in a party to areas which is otherwise
                difficult to get in to, such as a well guarded keep, a remote
@@ -1097,3 +1242,5 @@ Familiars and other magical companions are more intelligent than trained animals
 
 
 
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80

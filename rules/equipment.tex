@@ -33,6 +33,17 @@ The weapons listed below are the common weapon types and sizes. Custom made weap
 
 % finesse is the limit of how extra difficult the attacks can be made for the target to defend agaist, using the fancy attacks skill or tricky attack maneuvers. E.g: Fancy Fred has fancy attacks 5 but swinging an axe which has finesse-3 and toparry-1 toavoid+1. FF cannot make the attacks more difficult than toparry-4 and toavoid-2, since the weapon finesse is the limiting factor. With a proper sword the FF could use his whole fancy attacks 5 giving his attacks a todefend-5 difficulty.
 
+% typical: relative base, 1h/2h  dam , extras
+% sword    +2   +2/+4                             finesse 6
+% axe      +3   +3/+6                             parry-3 toparry-1 toavoid+1
+% spear    +1   +1/+2 pen 0/1 parry -1/+1         reach
+% staff    -1   -1/+1 parry +1/+2                 fast, reach
+% braw     -3                                     (at str 6)
+%   fist   -4                                     fast, deflect
+%   kick   -2                                     deflect
+%
+% bow      =0   --/=0                             range, pen, 1/r
+% crossbow +3   --/++ pen 1-3                     range, pen, 1/2r
 
 \subsection*{Melee weapons}
 %melee weapons
@@ -246,6 +257,7 @@ heavy pick axe      dam 6, pen 4, parry-3, toavoid+2, finesse-2
 
 \end{verbatim} \pagebreak[3] \begin{verbatim}
 Staffs and Spears
+spear slash maneuver costs 5xp and does slashing instead of piercing damage
 
 light staff         dam 2/3, abs 6, parry+1/+2, reach 1 mod-3, finesse-3/-5
 1h/2h               str 3/2 (max +1/+2 str bonus)
@@ -259,41 +271,47 @@ heavy staff         dam 6/7, abs 10, parry+1/+2, reach 1 mod-3, finesse-3/-5
 1h/2h               str 7/6 (max +1/+2 str bonus)
                     2h: fast+1 if str 8 and dex 8
 
-light spear         dam 3/4, pen 1/2, abs 4, parry-1/+1, reach 1 mod-3
-1h/2h               str 2/1 (max +1 str damage bonus, max+1 penetrating bonus)
+light spear         dam 3/4, pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
+1h/2h               str 2/1 (str bonus max +1 dam then max +1 pen)
                     narrow tip spears can have all str bonus as penetrating
+                    narrow tip spears are dam-1 pen+1 mod-1
                     broad tip spears are dam+1 mod-1
                     slash: mod-2, dam-1
                     finesse-4/-6
 
-spear               dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
-1h/2h               str 4/3 (max +2 str damage bonus, max+2 penetrating bonus)
+spear               dam 5/6, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
+1h/2h               str 4/3 (str bonus max +1 dam then max +2 pen)
                     narrow tip spears can have all str bonus as penetrating
+                    narrow tip spears are dam-1 pen+1 mod-1
                     broad tip spears are dam+1 mod-1
-                    slash: mod-2, dam-2
+                    slash: mod-2, dam-1
                     finesse-4/-6
 
-heavy spear         dam 7/8, pen 1/2, abs 8, parry-1/+1, reach 1 mod-3
-1h/2h               str 6/5 (max +3 str damage bonus, max+3 penetrating bonus)
+heavy spear         dam 7/8, pen 0/1, abs 8, parry-1/+1, reach 1 mod-3
+1h/2h               str 6/5 (str bonus max +1 dam then max +3 pen)
                     narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
-                    slash: mod-2, dam-3
+                    narrow tip spears are dam-1 pen+1 mod-1
+                    broad tip spears are dam+1 pen-1 mod-1
+                    slash: mod-2, dam-1
                     finesse-4/-6
 
-long spear          dam 5, pen 2, abs 7, parry-3, reach 1 mod-0
-2h                  str 4 (max +2 str damage bonus, max+2 penetrating bonus)
+long spear          dam 5, pen 1, abs 7, parry-3, reach 1 mod-0
+2h                  str 4  (str bonus max +1 dam then max +2 pen)
                     narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
+                    narrow tip spears are dam-1 pen+1 mod-1
+                    broad tip spears are dam+1 pen-1 mod-1
                     finesse-3
 
-heavy long spear    dam 7, pen 2, abs 9, parry-3, reach 1 mod-0
-2h                  str 6 (max +3 str damage bonus, max+3 penetrating bonus)
+heavy long spear    dam 7, pen 1, abs 9, parry-3, reach 1 mod-0
+2h                  str 6 (str bonus max +1 dam then max +3 pen)
                     narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
+                    narrow tip spears are dam-1 pen+1 mod-1
+                    broad tip spears are dam+1 pen-1 mod-1
                     finesse-3
 
-infantry spear      dam 6/7, pen 1/2, abs 10, parry-1/+1, reach 1 mod-3
-1h/2h               str 5 (max +3 str damage bonus, max+3 penetrating bonus)
+infantry spear      dam 6/7, pen 0/1, abs 10, parry-1/+1, reach 1 mod-3
+1h/2h               str 5 (str bonus max +1 dam then max +3 pen)
+                    slash: mod-2, dam-1
                     finesse-3/-5
 
 
@@ -575,99 +593,113 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
 
 
 \subsection*{Ranged weapons}
-%ranged weapons
-%--------------
-%inst  mod-9 1a including draw if quick draw readied in 0a (pushes mod-1)
-%snap  mod-6 1a including draw if quick draw readied in 0a (pushes mod-2)
-%quick mod-3 1a including draw if quick draw readied in 0a (pushes mod-3)
-%quick mod-3 2a including draw if quick draw readied in 1a (pushes mod-6)
-%shot  mod-0 1r incl draw from accessible place
-%aimed mod+3 2r incl draw from accessible place
-\small
-\begin{verbatim}
-first attack with already drawn throwing weapon:
-normal  mod=0 3ap
-aimed   mod+1 1r (or 6ap if so preferred)
-quick   mod-3 fast+1 (2ap)
-snap    mod-6 fast+2 (1ap)
 
-sustained rate of fire for thrown weapons:
-normal  mod=0 1r including draw from accessible location
-aimed   mod+1 2r including draw from accessible location
-quick   mod-3 6ap including draw from quick draw
-              3ap if quick draw roll successful
-snap    mod-6 5ap including draw from quick draw
-              2ap if quick draw roll successful
+Are the monsters a little too far away for your sword? Are you just a bit too lazy to walk up and say hi with your huge axe, or perhaps a tad shy? Then why not send a friendly murder greeting with a crossbow or throw them a heart felt javelin?
 
+\
 
+Thrown weapons include anything from knives and javelins to improvised missiles like beer bottles, rocks, and mistuned musical instruments.
 
+Thrown weapons can also be used as poor versions of similar melee weapons in a pinch and with some mods. Regular melee weapons can often also be used as thrown weapons but often with mod-3 to mod-6 and 33\% to 66\% of the normal damage. When a thrown weapon is used as a temporary melee weapon it uses the melee weapon class skill, and when a melee weapon is used as a thrown weapon it uses the throw skill.
+
+\small \begin{verbatim}
+Throwing an already held weapon is a regular 3ap action. Drawing and throwing 
+in one go is a 1r action. Faster throwing gives mods which can be mitigated by 
+quick shot. Manually drawing with quickdraw then throwing as already held might 
+be faster if the user is skilled in quickdraw.
+
+Draw and throw:
+normal  1r  mod=0
+aimed   2r  mod+1
+quick   6ap mod-3
+snap    3ap mod-6
+insane  2ap mod-9
+
+Throwing already held weapon:
+normal  3ap mod=0
+aimed   6ap mod+1
+quick   2ap mod-3
+snap    1ap mod-6
+insane  0ap mod-9
+
+range for thrown weapons:
+short    mod+1
+long     mod-3
+vlong    mod-6 dam-1
+extreme  mod-9 dam-2
 
 throwing knife    dam 2
-                  range 8, short 4 mod+1, long 12 mod-3, vlong 16 mod-6 dam-1,
+                  range 6 + str/2
                   str 1 (no str bonus)
                   fast+1 if str 2 and dex 4
-                  first three attacks do not require stamina
-
-throwing axe      dam 4,
-                  range 6, short 3 mod+1, long 9 mod-3, vlong 12 mod-6 dam-1,
-                  str 3 (max +1 str bonus)
                   first two attacks do not require stamina
+                  melee: knife mod-1, dam 2, abs 2, fancy-2
+                  fast+1 if str 2 and dex 4
 
-javelin           dam 5,
-                  range 10, short 5 mod+1, long 15 mod-3, vlong 20 mod-6 dam-1,
-                  str 4 (max +1 dam str bonus, max +2 penetrating str bonus)
+throwing axe      dam 4
+                  range 4 + str/2
+                  str 3 (max +1 str bonus)
+                  melee: axe mod-1, dam 5, abs 7, parry-3, toparry-1, fancy-2
+                  str 3 (max +1 str bonus)
 
-heavy javelin     dam 6, penetrating 1,
-                  range 8, short 4 mod+1, long 12 mod-3, vlong 18 mod-6 dam-1,
-                  str 6 (max +2 dam str bonus, rest is penetrating)
+javelin           dam 3, penetrating 1
+                  range 4 + str
+                  str 4 (max +1 dam str bonus, max +1 penetrating str bonus)
+                  melee: spear mod-1, dam 3, abs 3, no reach or parry mods, fancy-3
+                  str 4 (max +1 dam str bonus, max +1 penetrating str bonus)
 
+heavy javelin     dam 5, penetrating 1,
+                  range 2 + str
+                  str 6 (max +1 dam str bonus, max +2 penetrating str bonus)
+                  melee: spear mod-1, dam 5, abs 5, no reach or parry mods, fancy-3
+                  str 6 (max +1 dam str bonus, max +2 penetrating str bonus)
+
+dart              dam 0, penetrating 2
+                  range 4 + str
+                  str 1 (max +1 pen str bonus)
 
 \end{verbatim} \pagebreak[3] \normalsize
-Bows, crossbows, and ballistas all use arrows or bolts as ammunition.
-If the GM wants the players should keep track of their arrow count, and might be worth investing some xp in arrow recovery.
-%inst  mod-9 3ap if arrow quick drawn from readied quiver
-%snap  mod-6 6ap if arrow drawn from readied quiver
-%quick mod-3 1r (3ap fire) incl reload from accessible quiver
-%shot  mod-0 2r (3ap fire) incl reload from accessible quiver
-%aimed mod+1 3r (3ap fire) incl reload from accessible quiver
+
+
+Bows, crossbows, and ballistas all use arrows or bolts as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar.
+
+If you choose the optional rule that characters need to keep track of their ammunution instead of just assuming "enough arrows" it might be worth investing some xp in arrow recovery.
+
+Bows and crossbows have one less damage reduction on long ranges: Long dam-0, vlong dam-1, extreme dam-2.
+
 \small \begin{verbatim}
 normal rate of fire for bows:
 this includes reload from accessible quiver.
 normal mod=0 2r
-quick  mod-3 1r
+quick  mod-3 1r / 9ap
 aimed  mod+1 3r
 
 rapid fire for bows:
-includes reload from quick draw or similar, as described
-snap     mod-6 6ap fire, requires reload from quick draw slot quiver
-                         or arrows pre-stuck into ground or handed by assistant
-insane   mod-9 3ap fire, requires instant 0ap reload action
-                         i.e. quick draw quiver and successful quick draw roll,
-                         or an extra arm or two to draw arrows while shooting.
+Quick fire is 1r/9ap at mod-3. For every ap reduced below quick fire the
+archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8. 
+Since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
+An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
+Rapid fire from bows include reload from accessible quiver, arrows stuck 
+in the ground, or similar.
 
 short bow         dam 3,
-                  range 10, short 5 mod+1, long 20 mod-3,
-                  vlong 25 mod-6 dam-1, extreme 30 mod-9 dam-2
+                  range 10
                   str 3 (no str bonus)
 
-bow               dam 4, penetrating 1
-                  range 14, short 7 mod+1, long 24 mod-3,
-                  vlong 30 mod-6 dam-1, extreme 35 mod-9 dam-2,
+bow               dam 4, pen 1,
+                  range 14
                   str 5 (no str bonus)
 
-heavy bow         dam 5, penetrating 2,
-                  range 15, short 7 mod+1, long 25 mod-3,
-                  vlong 32 mod-6 dam-1, extreme 40 mod-9 dam-2,
+heavy bow         dam 5, pen 2,
+                  range 17
                   str 7 (no str bonus)
 
-longbow           dam 5, penetrating 1,
-                  range 20, short 10 mod+1, long 30 mod-3,
-                  vlong 40 mod-6 dam-1, extreme 60 mod-9 dam-2,
+longbow           dam 5, pen 1,
+                  range 20
                   str 6 (no str bonus)
 
-heavy longbow     dam 6, penetrating 2,
-                  range 22, short 9 mod+1, long 33 mod-3,
-                  vlong 44 mod-6 dam-1, extreme 66 mod-9 dam-2,
+heavy longbow     dam 6, pen 2,
+                  range 25
                   str 8 (no str bonus)
 
 Bows allow the use of different kinds of arrows:
@@ -692,7 +724,9 @@ candle arrows     mod-2 dam-2 range-25%
 Rate of fire for crossbow, heavy crossbows and arbalests:
 Split between reload and fire actions.
 The first shot with a loaded crossbow is reasonably fast.
-Successive shots require a reload action first, and then it takes a lot of time.
+Successive shots require reload actions between each shot.
+The reload times assume readily available bolts in a 
+quiver, stuck in ground, or similar.
 
 first shot  mod=0 1r
 first aimed mod+1 2r
@@ -701,34 +735,25 @@ first snap  mod-6 2ap
 first wtf   mod-9 1ap
 
 crossbow          dam 5, penetrating 1,
-                  range 12, short +1, long -3, extreme -6,
+                  range 12
                   str 3 (no str bonus)
-reload times for crossbow:
-reload 6ap if reloading with 0ap successful quick draw roll for quiver
-reload 1r if reloading from quick draw quiver
-reload 2r if reloading from accessible quiver
+                  reload 2r (str 9 1r)
 
 heavy crossbow    dam 6, penetrating 2,
-                  range 15, short +1, long -3, extreme -6,
+                  range 15
                   str 5 (no str bonus)
-reload times for heavy crossbow:
-reload 1r if reloading with 0ap successful quick draw roll for quiver
-reload 2r if reloading from quick draw quiver
-reload 3r if reloading from accessible quiver
+                  reload 3r (str 12 2r)
 
 arbalest          dam 7, penetrating 3,
-                  range 18, short +1, long -3, extreme -6,
+                  range 18
                   str 7 (no str bonus)
                   slow-1 (only affects snap first shots)
-reload times for arbalest:
-reload 2r if reloading with 0ap successful quick draw roll from quiver
-reload 3r if reloading from quick draw quiver
-reload 4r if reloading from accessible quiver
+                  reload 4r (str 15 3r)
 
 exotic            as the regular crossbows except that they have two first
 double type       shots, which can be used at the same time or separately.
 crossbows         They also require str+2, and take 1r longer to reload.
-                  If both shots are used at the same time (same action)
+                  If both shots are fired at the same time (same action)
                   you should still roll each bolt separately.
 
 Some crossbows allow the use of speciality bolts:
@@ -741,21 +766,26 @@ broadhead bolts   mod-1 dam+1 pen-1
 
 \end{verbatim} \pagebreak[1] \begin{verbatim}
 rate of fire for ballistas:
-Ballistas take very long to reload and require two people.
+Ballistas take very long to reload and require at least two people.
 snap  reload+1r mod-6
 quick reload+2r mod-3
 shot  reload+3r mod=0
 aimed reload+4r mod+1
 
-light ballista    dam 12, penetrating 4, slow-1
-                  range 24, long -3 dam-1, extreme -6 dam-2,
-                  carried: str 10 (no str bonus), mounted: str 3 (no bonus)
-                  reload 5r, tot str 10, max 2ppl (only 1 person +1r)
+light ballista    dam 12, penetrating 4, knockback 1
+                  range 24
+                  carried: str 20 (no str bonus), mounted: str 3 (no bonus)
+                  reload 5r, tot str 10, max 3ppl (only 1 person +1r)
 
-ballista          dam 15, penetrating 5, slow-2
-                  range 30, long -3 dam-1, extreme -6 dam-2,
-                  carried: str 15 (no str bonus), mounted: str 5 (no bonus)
-                  reload 10r, tot str 15, max 3ppl (only 1 person +2r)
+ballista          dam 15, penetrating 5, knockback 2
+                  range 30
+                  carried: str 30 (no str bonus), mounted: str 5 (no bonus)
+                  reload 10r, tot str 15, max 4ppl (only 1 person +3r)
+
+heavy ballista    dam 20, penetrating 6, knockback 3
+                  range 40
+                  carried: str 40 (no str bonus), mounted: str 7 (no bonus)
+                  reload 15r, tot str 20, max 5ppl (only 1 person +5r)
 
 \end{verbatim}
 \normalsize

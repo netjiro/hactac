@@ -194,6 +194,8 @@
 % the trailing tilde adds an unbreakable, unshrinkable, unenlargable space
 \newcommand{\degrees}{$^\circ$~}
 \newcommand{\degree}{$^\circ$}
+%\newcommand{\degs}{$^\circ$}    << command \deg already defined (also skip degs)
+%\newcommand{\deg}{$^\circ$~}    << command \deg already defined (also skip degs)
 
 
 % can't seem to get this working right for spacing, and when exporting to ebook
@@ -246,7 +248,7 @@
 
 % Define the \skill{name} to make either of
 %    \item[name]
-%    \subsection{name}
+%    \subsubsection{name}
 \ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
 
 % Define the \openskillslist to either of
@@ -268,7 +270,7 @@
 
 % Define the \action{name} to make either of
 %    \item[name]
-%    \subsection{name}
+%    \subsubsection{name}
 \ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
 
 % Define the \openskillslist to either of
@@ -291,19 +293,55 @@
 
 % Define the \eqitem{name} to make either of
 %    \item[name]
-%    \subsection{name}
+%    \subsubsection{name}
 \ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
 
 % Define the \openitemslist to either of
 %    \begin{description}
 %    -- nothing --
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openitemslist}{}}
 
 % Define the \closeitemslist to either of
 %    \end{description}
 %    -- nothing --
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeitemslist}{}}
 
+
+
+
+
+% With spellsaslist defined we can use \ifspellsaslist{\begin{description}}
+% as well as \ifspellsaslist{\end{description}} around the spell listings
+\newboolean{spellsaslist}
+\setboolean{spellsaslist}{true}
+
+% Define the \spell{name} to make either of
+%    \item[name]
+%    \subsubsection{name}
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\spell}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openspellslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\openspellslist}{\begin{description}}}{\newcommand{\openspellslist}{}}
+
+% Define the \closespellslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\closespellslist}{\end{description}}}{\newcommand{\closespellslist}{}}
+
+
+
+% comment notes escaping list segment, if spellsaslists is set
+\ifthenelse{\boolean{spellsaslist}} {
+    \newcommand{\spellslistnote}[1]{
+        \closespellslist \textit{#1} \openspellslist
+    }
+} {
+    \newcommand{\spellslistnote}[1]{
+        \textit{#1}
+    }
+}
 
 
 
@@ -411,24 +449,24 @@ If you want to use it in any other fashion please contact the author.
 
 The \emph{hactac} rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
 
-So that's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, a bit silly, but with significant tactical depth.
+So that's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, silly, but with significant tactical depth.
 
 I inject these adventures to fill the void found in between sessions of our long running role playing campaigns and the occasional one shot board game days.
 We play this for a couple of hours in the evenings every now and then after people have put their kids to sleep.
 
 \
 
-Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also play some Descent occasionally, but that requires gathering for a full day, and I usually prefer campaigns instead of one shot adventures.
+Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also play some Descent occasionally, but that requires gathering for a full day, and I usually prefer campaigns over one shot adventures.
 
 Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my \emph{real} rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world. That was my base idea when I started working on this package.
 
 \
 
-I've split the rules into the very basic fundamentals, and the rest. Just choose what to include to the point where it is a good fit for your group. Find your own trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set is more suitable for a script assisted virtual tabletop like maptool, etc.
+I've split the rules into the very basic fundamentals, and the rest. Just pick and choose what to include to the point where it is a good fit for your group. Find your own trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set is more suitable for a script assisted virtual tabletop like maptool, etc.
 
 At the base it's simple enough for young kids to understand. At full complexity it requires quite a bit more since I have tuned it for my regular players who are mostly engineers and scientists.
 
-Fast gaming is crucial for us since we only have a couple of hours each session. The battles must be tactically interesting and the role playing rewarding. Coordination, timing, positioning, complementary skills and battle maneuvers are very important. Just charging in for dps dice rally doesn't cut it. This brings the tactical depth. The role playing aspects are written for comedy. In the end it is supposed to be fun, cliché, and more than a bit silly most of the time.
+Fast gaming is crucial for us since we only have a couple of hours each session. The battles must be tactically interesting and the role playing fun and rewarding. Coordination, timing, positioning, complementary skills and battle maneuvers are very important. Just charging in for dps dice rally doesn't work. This brings the tactical depth. The role playing aspects are written for comedy. In the end it is supposed to be fun, cliché, and more than a bit silly most of the time.
 
 
 
@@ -436,8 +474,8 @@ Fast gaming is crucial for us since we only have a couple of hours each session.
 \newpage
 \section*{note: versions}
 %------------------------
-This is my personal notes package, not draft quality material intended for release. There is still a lot of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc.
-I'm updating this package whenever I have the time and inclination. Use a good diff tool to find what's changed, removed or added. Easiest is of course to go directly to the latex source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested (late 2017) \url{https://draftable.com/compare} and find it ... \emph{acceptable} ... for a simple 2-way diff, though lacking block move support and such real world use thingies.
+This is my personal notes package, not a draft for publication. There are still lots of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc.
+I'm updating whenever I have the time and inclination. Use a good diff tool to find what's changed, removed or added. Easiest is of course to go directly to the latex source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested (late 2017) \url{https://draftable.com/compare} and find it ... \emph{acceptable} ... for a simple 2-way diff. %, though lacking block move, 3-way, etc.
 
 
 \section*{note: comments and contributions}
@@ -447,9 +485,9 @@ Anything you want to change or add? Contact me! My handle is \emph{netjiro} on g
 
 \section*{note: pronouns}
 %------------------------
-Now, in Swedish we have the newfangled "hen" which essentially indicates someone where the gender is irrelevant in the context. Since the closest I can find in English is s/he, which I don't like, I'll keep using "he, him, his". Just read it as whatever offends you the least.
+In Swedish we have the newfangled "hen" which essentially indicates someone where the gender is irrelevant in the context. Since the closest I can find in English is s/he, which I don't like, I'll keep using "he, him, his". Just read it as whatever offends you the least.
 
-And just to be unnecessarily clear on this. For me, \emph{personally}: in my mind a "dude" is also of irrelevant gender, and I generally refer to my fun female friends as "dudes"... But I don't do that for boring women ... so I guess I'm not that well reformed after all.
+%And just to be unnecessarily clear on this. For me, \emph{personally}: in my mind a "dude" is also of irrelevant gender, and I generally refer to my fun female friends as "dudes"... But I don't do that for boring women ... so I guess I'm not that well reformed after all.
 
 
 

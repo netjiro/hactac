@@ -33,6 +33,11 @@ lots of comments in swedish, will not translate
 NEW: ---------------------------------------------------------------------------
 
 
+
+TODO: Goblin Destiny : add gossip lists for situations where they meet ppl
+      towns, patrols, possible other goblins they capture / trade with
+
+
 181205:
 TODO: skall man sänka stavars abs med 1 ?
 TODO: för billigt att skaffa sig snabba boltar ?
@@ -711,3 +716,6 @@ DONE: sätt mods för låga hp till 66%,33%,0% istället för 50%,25%,0%
 DONE: skriv om häxans shock bolt knapp så den inte skriver skada öppet
 DONE: äta lik knapp för icky  -  slowheal
 DONE: bygg push mp knapp
+181220-190107:
+DONE casting is exhausting  --  every mana drawn also draws one stamina
+s
