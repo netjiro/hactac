@@ -213,20 +213,25 @@ Many offensive spells have similar general mechanics.
 \begin{description}
 
 \item{bolt, zap, flash:}
-Bolts don't take target \emph{to hit} modifications that affect the spell casting. They ignore things like target partial cover, shields partially in the way, target movement speed, partially obstructed view by fire, etc.
+Bolts don't take target \emph{to hit} modifications on the spell casting roll. They ignore things like target partial cover, shields partially in the way, target movement speed, partially obstructed view by fire, etc.
+Generally these magic energies don't travel in a straight line from caster to target but might curve, form a branched lightning tree, split and reform, or snake forward erratically.
 
 \item{spear, lance, dart, arrow, quarrel, missile:}
-These work similar to bow arrows. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take, except from 
+These work similar to bow arrows. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. %TODO: Think there are edge cases where this will not work right
+Often the spell formation shoots in a rapid straight line to the target.
 
-\item{strike, spark:} % mental lock spells ignore cover etc, but mods by psy etc
-
+\item{strike, spark, chock:} % mental lock spells ignore cover etc, but mods by psy etc
 %              ignores target move mods, shooting into melee mods
 %              BUT: they take cast mods for target psy, if target resists,
 %                   and if the target knows magic skill.
 %                   mod -(target psy / 3), 
 %                   mod -3 if target takes a 3ap action to resist 
 %                   mod -(target magic lvl) 
-%              Hence, almost useless against
+%              Hence, almost useless against wizards
+These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods based on target:\\
+mod -(target psy / 3)\\
+mod -3 if target takes a 3ap action to resist the spell\\
+mod -(target magic lvl / 3)\\
 
 
 \end{description}
@@ -271,7 +276,7 @@ force bolt     cast 3ap 1m, dam 5 +1/m
                range 10 +5/m, long -2dam,
                int 10, psy 6
 
----===### current above ###===---
+%---===### current above ###===---
 
 fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round

@@ -290,13 +290,16 @@ The right to react gives the right to perform one action, including movement bef
 
 The reaction action can be interrupted by characters with higher initiative, just like any other action, \emph{but not by the original attacker}.
 
-E.g: Attacking Albin moves in and attacks Defending David since AA has a higher initiative. DD can then parry with one action. Or if AA misses his attack DD can make a return attack under the right to react, before AA can move out of reach or make another attack.
+E.g: Attacking Albin moves in and attacks Defending David. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
 
 Right to react continues in a chain if the two keep attacking each other.
 
 E.g: Attacking Albin attacks Defending Dave but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if he wants, also under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.
 
-Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn together, as part of, the defence action, but only after the attack-defend is completed. 
+% is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here somewhere...
+Optional: If using the rule where spending action points decreases in round initiative it is possible that the participants drop in initiative order to the point where other characters can interrupt and intervene in a right to react action chain. However, the right to react by the target will not disappear even if a third party injects an action in the chain.
+
+Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn as part of the defence action but only after the attack-defend is resolved and completed. 
 
 %E.g: Attacking Albin strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defence is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defence action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have choosen to move 3sq then skip the defence on grounds that by then AA would be out of reach. If DD had higher initiative than AA he could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
 
@@ -306,7 +309,7 @@ Note: defence actions are treated slightly differently from other reactive actio
 %-----------------------------
 % original [-5,4] version, which only have one roll
 Resistance rolls. "attach versus defence", "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
-The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\geq$0 the attacker has succeeded with the action, with the diff indicating the level of success as with a normal roll. Note that a roll of "10" does not mean an automatic failure in the context of resistance rolls.
+The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\geq$0 the attacker has succeeded with the action, with the diff indicating the level of success as with a normal roll. Note that a roll of 10 does not mean an automatic failure in the context of resistance rolls.
 %-----------------------------
 % 2018 [-9,9] version, has issues
 %Resistance rolls. "attack versus defence",  "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
@@ -361,32 +364,31 @@ Parry is a form of "defend" action. Some weapons or attack maneuvers have todefe
 \action{Action: "holster/stow/put away"} put something back in the inventory. Sheath a sword, hang a bow, etc. Takes a full round, with a dex+9 roll. It only takes a 0ap free action to drop something, but then you might not have that item available if you need it later.
 
 
-\action{Actions: "give \& receive"} hand over an item between characters. It takes one action to give and one action to receive. Both actions requires a dex+9 roll. Normally this will never fail, even for the very fumbly, but when the action mods starts piling up and people try running around the chance might drop below 10.
+\action{Actions: "give \& receive"} hand over an item between characters. It takes one action to give and one action to receive. Both actions requires a dex+9 roll. Normally this will not fail but when the action mods are piling up and people try running around the chances can drop.
 
 
 \action{Actions: "put down \& pick up"} are normal 3ap actions with dex+9 roll. Just dropping things takes no time and requires no rolls, but grabbing always does.
 
 
-\action{Action: "drink a potion"} is a normal 3ap action and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back. The skills quick draw and häfva can drastically reduce the time required to draw and drink a potion.
+\action{Action: "drink a potion"} is a full round action (1r) and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back. The skills quick draw and häfva can drastically reduce the time required to draw and drink a potion.
 
 
 \action{Actions: "crouch, sit, lie, stand"} all takes a normal 3ap action that requires no roll. Rising after falling is a normal 3ap action with a dex+9 roll.
 
 
-\action{Action: "jump"} an obstacle or chasm requires a dex roll.
-The jump is modified by the distance. A mod-3 for every square the character tries to jump over beyond the first one. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll.
+\action{Action: "jump"} an obstacle or chasm requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll.
 
-Jump action does not take any negative modifications from movement speed. It instead gets mod + speed/3, where speed is the speed of approach (see below).
-E.g: moving 7sq before the jump gives jump mod+2. It is the actual distance moved in a straight line \emph{before} the jump that counts.
+Jump action does not take any negative modifications from movement speed. It instead gets mod +speed/3, where speed is the speed of approach: the number of squares moved in a straight line \emph{before} the jump (\hyperref[approach]{see below}).
+E.g: Dashing 7sq before the jump gives Flying Fritz a jump mod+2..
 
-The jump movement also costs movement points as normal though. If the character moves further than his max movement including the jump he will continue the jump but fall on landing and go off balance for the next round, mod-3 per excessive mp spent in the jump.
+The jump movement also costs movement points as normal. If the character moves further than his max movement including the jump he will continue the jump but fall on landing unless he can go off balance enough to cover the difference.
 
-On a fail -1 to -2 the character came up short and missed the mark, but managed to grab hold with his hands. He now hangs from the ledge, if that is possible on the material and square, and must climb up next round. On a fail-3 or worse jump roll, the distance short is fail/3. Then the character is probably on his way towards a spiky/fiery/wet meeting further down.
+On a fail -1 to -2 the character came up short and missed the mark but managed to grab hold with his hands. He now hangs from the ledge, if that is possible on the material and square, and must climb up next round. On a fail-3 or worse jump roll, the distance short is fail/3. Then the character is probably on his way towards a spiky/fiery/wet meeting further down.
 
-The "jump" skill will improve the odds when jumping. Note that the jump action roll ignores the usual movement mods, but it does not ignore other mods to actions such as having declared high ap, low hp, off balance, or other effects.
+The jump skill will improve the odds when jumping. Note that the jump action roll ignores the usual movement mods, but it does not ignore other mods to actions such as having declared high ap, low hp, off balance, or other effects.
 
 
-\action{Action: "climb"} allows to climb one vertical square per 3ap action, after successful dex roll. Fail -1 to -2 means the character is stuck this round. Fail-3 means slip down one square, and fail-6 means falling. Each climb action also costs one movement point (1mp).
+\action{Action: "climb"} allows to climb one vertical square per 3ap action and requires a normal dex roll. Fail -1 to -2 means the character is stuck this round. Fail-3 means slip down one square, and fail-6 means falling. Each climb action also costs one movement point (1mp).
 
 Climbing is modified by the difficulty of the wall. A regular cliff face or uneven castle wall is mod-0. A smooth castle wall is mod-3 or mod-6. A simple tree is mod+3. Equipment such as rope is also helpful, e.g. mod+3.
 
@@ -433,7 +435,7 @@ The character's statistics sheet holds the basic information describing the char
 
 The specifics of rolling characters is explained in the "campaign" chapter.
 
-When playing, always keep track of the "original" rolled stats of the character. Write the current stat first, summed up from the base original stat and all modifications from skills, abilities, equipment, etc. Then write the original base stat behind, in parenthesis. This way it is easy to track and recalculate the current stat values. With a lot of skills and modifications, as might happen with experienced characters, it's good to have the baseline written down.
+When playing, always keep track of the "original" rolled stats of the character. Write the current stat first, summed up from the base original stat and all modifications from skills, abilities, equipment, etc. Then write the original base stat behind, in parenthesis. E.g: "hp 14(11)". This way it is easy to track and recalculate the current stat values. With a lot of skills and modifications, as might happen with experienced characters, it's good to have the baseline written down.
 
 \goodbreak
 \begin{samepage} \begin{verbatim}
@@ -460,10 +462,9 @@ money ( g s c)
 
 \subsection*{First column character stats}
 
-
 \begin{description}
 
-\item[str] Strength is the physical strength of the character. It determines how heavy weapons he can use, how much he can carry, what his chances are to prevail or loose in a wrestling bout, etc.
+\item[str] Strength is the physical strength of the character. It determines how large weapons he can use, how much he can carry, what his chances are to prevail or loose in a wrestling bout, etc.
 
 \item[dex] Dexterity is the character's balance, agility, coordination, precision, etc. It determines if he remains standing after a tackle, if he falls when running over the rubble, how fast weapons he can use, etc.
 
@@ -475,7 +476,7 @@ money ( g s c)
 
 \item[per] Perception is the character's general alertness to his surroundings. It determines if he manages to spot hidden monsters and items, as well as incoming attacks from behind, etc.
 
-\item[cha] Charisma describes how pleasant or trustworthy the character seems to be. It determines if npcs will like him or not, as well as his chances of acting and bluffing, etc.
+\item[cha] Charisma describes how pleasant or trustworthy the character seems to be. It determines if npcs will like him or not, if henchmen will stick around, what info an evening in the ale house will yield, as well as his chances of acting and bluffing, etc.
 
 \end{description}
 
@@ -486,25 +487,25 @@ money ( g s c)
 
 \item[hp] Hitpoints is the amount of damage the character can take before running the risk of falling unconscious or dying.
 
-\item[abs] Absorption is the amount of damage that the character's skin, clothing, armour, etc will remove from the incoming attack.
+\item[abs] Absorption is the amount of damage that the character's skin, clothing, armour, etc will subtract from incoming attacks.
 
 \item[m w r d] Movement: maneuver, walk, run, dash. These are the four movement speeds the character can use. It determines how many squares the character can move in one round, as well as the negative modification he takes to rolls that round due to movement.
 
-\item[sta] Stamina is the endurance under high physical activity. It determines how much high activity the character can perform before he has to rest.
+\item[sta] Stamina is the endurance under high physical activity. It determines how long the character can move at high speed and how many strenuous actions he can perform before he has to rest.
 
-\item[vision] Vision is the distance the character can see clearly, as well as the kind of light sensitivity he has. E.g: "20 dusk" means that the character can see 20sq clearly, and that he is light sensitive enough to retain full sight under "dusk" light conditions.
+\item[vision] Vision is the distance the character can see clearly, as well as the kind of light sensitivity he has. E.g: "20 dusk" means that the character can see 20sq clearly, and that his eyes are light sensitive enough to retain full sight under dusk-like brightness conditions.
 
 \item[arc] Arc is the total angle of vision, centred around the facing of the character. I.e: the character sees arc/2 degrees to each side of his facing.
 
 \item[mana] Mana is the magical energy the character can spend on casting spells and empowering magical equipment and such.
 
-\item[ap] is short for Action Points and determines how many action points the character can declare in a round before taking action mod penalties.
+\item[ap] base Action Points determine how many action points the character can declare in a round before taking action mod penalties.
 
-\item[xp] Experience points are the current and total experience the character has accumulated through his life. The current xp is the "xp pool" that can be used to buy new skills, use special meta skills, etc. Keep the total XP in parenthesis behind the current XP pool. Some effects in the game are calculated from the total XP.
+\item[xp] Experience points are the current and total experience the character has accumulated through his life. The current xp is the "xp pool" that can be used to buy new skills, use special meta skills, etc. Keep the total XP in parenthesis behind the current XP pool, e.g: 14(195). Some effects in the game are calculated from the total XP.
 
 \end{description}
 
-For simplified tabletop gaming the vision arc should probably be simplified to the following possible values: 90, 180, 270, 360deg. Since that is simple to trace visually on a square board. On a hex board it's easier with 120, 180, 240, 360deg. With virtual tabletop tools like maptool the actual 1deg resolution is sometimes supported.
+For simplified tabletop gaming the vision arc should probably be ignored or simplified to the following possible values: 90, 180, 270, 360deg. Since that is quick to trace visually on a square board. On a hex board it's easier with 120, 180, 240, 360deg. With virtual tabletop tools like maptool the actual 1deg resolution is sometimes supported.
 
 
 
@@ -532,7 +533,7 @@ Each ap you declare will give initiative+1. And each ap you spend will decrease 
 
 \subsection*{Movement raises initiative}
 %---------------------------------------
-The faster movement you declare the higher your initiative becomes. This is to make it easier to move and regroup, which creates more flexibility in skirmishes.
+The faster movement you declare the higher your initiative becomes. This is to make it easier to move and regroup which creates more flexibility in skirmishes.
 
 \begin{verbatim}
 Modifications to initiative from declared movement:
@@ -554,14 +555,16 @@ E.g: Flightful Fred sees Mauling Morgan approaching. FF has initiative 7, MM has
 %--------------------------------------------------
 When there are lots of Heroes and NPCs on the map things tend to get chaotic, especially when high initiative characters choose to wait until some with lower initiative have acted. This leads to having to loop through the upper parts of the initiative list again and again while only the lower initiative characters are acting for the most part.
 
-To get away from this problem we add:\\
+To get away from this problem we add:
 \begin{description}
-\item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any APs.
-\item[wait] will retain the initiative but costs one AP.
-\item[done] simply flags that the character is more or less done for the round, unless something happens to him. It has no further effects.
+\item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any AP. The character moves down the initiative list.
+\item[wait] will retain the initiative but costs one AP. This flags the character with a clearly visible "wait" marker in the initiative list and makes it clear he's ready to jump into action at any time. The player must clearly and quickly speak up when he wants to take action again.
+\item[done] simply flags that the character is more or less done for the round, unless something happens to him. This clearly marks the character with a big "done" marker in the initiative list and on the map, notifying that the character won't take more actions and movement unless his situation changes significantly.
 \end{description}
 
 With this it's possible to enforce a rule where the top initiative always have to take some action, or choose a wait state. The Hero can wait on a target for free, but sacrifices initiative. Wait flexibly but costing 1ap, or flagging as done but can only take reactive actions if the situation around him changes significantly.
+
+For battles with 30+ characters involved this will speed up the process significantly.
 
 
 \subsection*{Actions that do not require rolls}
@@ -623,13 +626,13 @@ The GM can of course roll the perception rolls hidden from the players, but that
 
 \subsection*{Sneaking and Spotting}
 %----------------------------------
-All the environmental modifiers apply to the sneaking roll, then the sneak diff is applied as a mod to the perception and find spotting rolls.
+Roll for sneak: All environmental modifiers apply to the sneaking roll, then the sneak roll diff is applied as a mod to the perception and find spotting rolls.
 
-Sneaking and hiding, both self and other objects, are both done by the sneak skill. Functionally equivalent to some extent in that the target is not really hidden from view, just partially obstructed, in shadow, or placed/moving so that it is less likely to be noticed.
+Sneaking and hiding, both self and other objects, are done with the sneak skill. Conceptually equivalent to some extent in that the target is not really hidden from view, just partially obstructed, in shadow, or placed/moving so that it is less likely to be noticed.
 
 Some basic sneak modifiers:\\
 area is clean/open -3\\
-area has some stuff =0\\
+area has some stuff around =0\\
 area is cluttered +3\\
 daylight or otherwise well lit -3\\
 lighting by torch and otherwise dark =0\\
@@ -642,7 +645,7 @@ Spending rounds, not actions, to seriously camouflage a character or hide an obj
 
 For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
 
-Spotting when the character is inattentive, sleepy, or busy doing something else like fighting in melee is generally mod-3 to the perception roll, but can be worse.
+Spotting by characters that are inattentive, sleepy, or busy doing something else like fighting in melee is generally mod-3 to the perception roll, but can be worse.
 
 
 \subsection*{How often to roll for sneaking and spotting?}
@@ -652,7 +655,7 @@ Under normal action conditions roll for sneak once per round when the character 
 
 \subsection*{Surprise}
 %---------------------
-Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. During the surprise round they have int-10 as a primary mod to all actions and half initiative. They cannot move faster than maneuver that round.
+Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. During the surprise round they have int-10 (never positive) as a primary mod to all actions and half initiative. They cannot move faster than maneuver that round.
 
 
 \subsection*{Unaware opponents}
@@ -667,9 +670,9 @@ Past his vision radius the character cannot discern details and must ask the GM 
 
 \subsection*{Simplified tabletop light and vision}
 %-------------------------------------------------
-For daytime people have their normal vision ranges, usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
+In daylight people have their normal vision ranges and usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
 
-In low light conditions it's easier to make approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
+In low light conditions it's easier to approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
 
 
 \subsection*{Maptool light and vision}
@@ -678,7 +681,8 @@ Set vision range and arc for each character.
 Light source vision range multiplier should be set as:\\
 normal 1.0\\
 dusk (orc,goblin,dwarf) 1.5\\
-night (elf) 2.0\\
+night (elf) 2.0
+
 %\small\begin{verbatim}
 %normal    all light sources have the specified range: humans, halflings
 %dusk      1.5x range of light sources: dwarfs, orcs, goblins
@@ -686,6 +690,7 @@ night (elf) 2.0\\
 %dark      3.0x range of light sources:
 %black     self light up to infra range regardless of light sources
 %\end{verbatim}\normalsize
+
 Magical dark vision should have different multipliers, or set a personal self light to suitable radius.
 
 
@@ -727,7 +732,7 @@ The facing of a character is generally the same as the direction of the last leg
 
 Maneuver movement is in any direction, and the character does not have to be facing in the direction he is moving.
 
-Note that turning to any facing is generally free if done at the end of a movement. It's not free to move then take action then turn. In that case the turn is separate or together with the action and may cost ap or mp.
+Note that turning to any facing is generally free when done together with movement. It's not free to move then take action then turn. In that case the turn is separate or together with the action and may cost ap or mp.
 
 
 \subsection*{Turning}
@@ -744,7 +749,7 @@ Certain armour and equipment will make it more costly to turn.
 
 On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 
-\emph{Note:} Defensive actions such as parry and avoid do not allow a free 45deg turn before the action. This includes parry and avoid actions. Offensive action generally do allow a free 45deg turn as part of the action.
+\emph{Note:} Defensive actions such as parry and avoid do not allow a free 45deg turn \emph{before} the action. Offensive action generally do allow a free 45deg turn as part of the action done before \emph{or} after.
 
 
 \subsection*{Flanking attacks}
@@ -752,7 +757,7 @@ On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 Attacks from the side or back are more difficult to parry. Attacks incoming at 90deg from the character's facing are mod-3 to parry. At 145deg it's mod-6 and at 180deg it's mod-9.\\
 For hex boards: 60deg is mod=0, 90deg (reach) is mod-3, 120deg is mod-6, and 180deg is mod-9.
 
-The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45deg turn together with the action after the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement.
+The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45deg turn together with the action after the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
 
 The target is also not allowed to spend ap or mp before a defensive action unless he has a higher initiative, since the right to react only allows for one activation, where the defend (parry, avoid, etc) must come first.
 
@@ -774,28 +779,28 @@ Even if the target is unaware of the attack and does not pass the perception rol
 
 \subsection*{Attacking to the side}
 %---------------------------------
-Attacking forward or diagonally forward, within +/- 45deg from facing, is normal, no mod. \\
-Attacking an enemy to the side (90deg+) is mod-3. \\
-Attacking an enemy diagonally back (135deg+) is mod-6. \\
+Attacking forward or diagonally forward, within +/- 45deg from facing, is normal and carries no modification. \\
+Attacking an enemy to the side ($\ge$90deg) is mod-3. \\
+Attacking an enemy diagonally back ($\ge$135deg) is mod-6. \\
 Attacking an enemy directly behind (180deg) is mod-9. \\
 The enemy must be within the cone of vision for the attack to be possible at all. \\
 These are the same mods as for parrying incoming strikes from the sides or behind.
 
-On a hex grid it's: 60deg mod-0, 90deg mod-3 (reach attack), 120deg mod-6, 180deg mod-9.
+On a hex grid it's: 60deg mod=0, 90deg mod-3 (reach attack), 120deg mod-6, 180deg mod-9.
 
 
 \subsection*{Partial squares \& difficult terrain}
 %------------------------------------------------
-A square that is only part clear is still possible to stand on, but will give a mod-X to actions performed while standing there, or passing through it. The typical mod for a partially blocked square is mod-3, while severely blocked squares can be mod-6 to mod-9 depending on surroundings and situation.
+A square that is only partly clear is still possible to stand on, but will give a mod-X to actions performed while standing there, or passing through it. The typical mod for a partially blocked square is mod-3, while severely blocked squares can be mod-6 to mod-9 depending on surroundings and situation.
 
-Some squares contain difficult terrain, such as rubble, debris, etc. These squares also give mods to all actions performed while standing or moving through the are. E.g: Light rubble and undergrowth mod-3, heavy debris or marshland mod-6, etc.
+Some squares contain difficult terrain, such as rubble, debris, etc. These squares also give mods to all actions performed while standing or moving through the area. E.g: Light rubble and undergrowth mod-3, heavy debris or marshland mod-6, etc.
 
-Moving through difficult terrain or partially blocked squares require a dex+9 roll, modified by movement speed as usual and by the modification of the square.
+Moving through difficult terrain or partially blocked squares require a dex+9 roll, modified by ams as usual and the terrain modification of the square.
 
 
 \subsection*{Crawl spaces and tight tunnels}
 %------------------------------------------
-Severely blocked squares may not allow for normal actions and movement, but will only allow for crawling through. Crawl speed is 1sq/r.
+Severely blocked squares may not allow for normal actions and movement, but will only allow for crawling through. Crawl speed is dex/3 sq/r.
 
 Small character such as goblins and halflings will be able to run or dash in areas where larger characters can only maneuver or walk.
 
@@ -803,20 +808,21 @@ Common narrow tunnels will allow movement as follows: \\
 Humans and orcs can only maneuver. \\
 Elves can walk. \\
 Dwarves can run. \\
-Halflings and Goblins can dash. \\
+Halflings and Goblins can dash.
 
 
 \subsection*{Off Balance}
 %------------------------
-Extra movement, beyond declared, causes the character to fall down. This can be avoided by having the maneuver skill "off balance", which most races have from the start.
+Extra movement, beyond declared, causes the character to fall down. This can be avoided by having the maneuver skill \emph{off balance}, which most races have from the start.
 
-When a character goes off balance he immediately suffers a mod-3 movement mod, and the off balance effect and mod persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". Then he must spend one extra movement point which he does not have for the yield action. This will cause him to go off balance, incurring the mod-3 which will persist for the next round.
+When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the yield action. This will cause him to go off balance, incurring the mod-3 which will persist for the next round.
 
 It's possible to have multiple off balance if the character purchases the skills.
 When the character tries, or is forced, to move beyond his off balance level he will fall down, just as if he didn't have off balance.
 
 
 \subsection*{speed \& distance of approach}
+\label{approach}
 %-----------------------------------------
 Some skills/actions like jump, tackle, charge have bonuses based on the speed/distance moved in a straight line just before the action.
 
@@ -844,30 +850,36 @@ Normally the bonus from speed/distance of approach is the distance/3.
 %-----------------------------------
 A normal action takes "one action (1a)" time to perform and costs 3ap. Some actions cost more, some cost less.
 
+\noindent
 A very fast action costs 1ap (vfast / fast+2) \\
 A fast action costs 2ap (fast / fast+1) \\
 A normal action costs 3ap \\
 A slow action costs 4ap (slow / slow-1) \\
 A very slow action costs 5ap (vslow / slow-2)
 
+\noindent
+Under special circumstances some actions are 0ap instant actions and take no time at all.
+
 
 \subsection*{Actions that take a full round}
 %-------------------------------------------
-Throwing a javelin takes a full round, that means the character can take no other actions that round. He will fire in order of initiative. A high initiative character can choose to fire before or after a low initiative character.  Penalties that are forced onto the character will affect the roll.
+Throwing a javelin takes a full round, that means the character can take no other actions that round. He will fire in order of initiative. A high initiative character can choose to fire before or after a low initiative character.
 
 A full round action is considered to take all the ap the character can declare without incurring extra action mods. E.g: The Hero had max action points 3 when rolled up, then bought quick 2, giving him a base ap of 5. For him all full round actions will take 5ap. This is mostly irrelevant but important for some skills and situations.
 
-In some cases it's relevant to calculate divisions of rounds, in which case a round is generally considered to be three actions (3a), and nine ap (9ap). %Hence a super fast character ($>$9ap) can in some cases be considered to be able to take more than a full round action per round.
-E.g: fast magic 3 allows to cast spells in half the time. A one round spell would then take 5ap.
+In some cases it's relevant to calculate divisions of rounds, in which case a round is generally considered to be three actions (3a), and nine ap (9ap). 
+%Hence a super fast character ($>$9ap) can in some cases be considered to be able to take more than a full round action per round.
+%TODO: change example
+%E.g: fast magic 3 allows to cast spells in half the time. A one round spell would then take 5ap.
 
 
 \subsection*{Actions that takes more than one round}
 %--------------------------------------------------
-Some actions takes one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they would have possibly taken through all the rounds during the performance. The roll is done in the end though, just before the action comes into effect.
+Some actions takes one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they have taken through all the rounds during the performance. The roll is done at the end though, just before the action comes into effect.
 
-E.g: Aiming the arrow. Assassin OilySnake is reloading and aiming his crossbow for three rounds before firing. During these rounds he better be sitting very still, since otherwise he will be taking movement penalty. He also should not take any other actions during this time since that will require him to declare more ap than he can do without modification, and thus incur an action mod. So, in the end of round three he fires, rolls a 5. He has crossbow 4 (not a good assassin), aim mod+1. He succeeds +0. If he had moved much or taken any other actions he would have missed.
+E.g: Aiming the arrow. Assassin OilySnake is reloading and aiming his crossbow for three rounds before firing. During these rounds he better be sitting very still, since otherwise he will be taking movement penalties. He also should not take any other actions during this time since that will require him to declare more ap than he can do without modification, and thus incur an action mod. So, in the end of round three he fires, rolls a 5. He has crossbow 4 (shitty assassin), aim mod+1. He succeeds =0. If he had moved much or taken any other actions he would have missed.
 
-E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slowly the first three rounds, casting with continuous primary action. But in round four he walks and gets a mod-3. In the last casting round, round five, he is again maneuvering slowly. So at the end of round five, he rolls his casting StaffLight casting skill roll, but with a mod-3 for the walking in round four. He has StaffLight 7, rolls a 6, fails -2, and as the spell fizzles out he curses the damned goblin that forced him to move too fast.
+E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slowly the first three rounds, busy building the spell. But in round four he walks and gets a mod-3. In the last casting round, round five, he is again maneuvering slowly. So at the end of round five, he rolls his casting StaffLight casting skill roll, but with a mod-3 for the walking in round four. He has StaffLight 7, rolls a 6, fails -2, and as the spell fizzles out he curses the damned goblin that forced him to move too fast.
 
 
 
@@ -888,23 +900,36 @@ E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slow
 
 \subsection*{Stamina}
 %--------------------
-Stamina is a measure of how long the character can keep up with high power activity, such as hard battling, running, etc. When the stamina runs out the character will have problems performing taxing actions and movements. \\
-\\
+Stamina is a measure of how long the character can keep up with high power activity, such as hard battling, running, etc. When the stamina runs out the character will have problems performing taxing actions and movements.
+
+\noindent
 Every attack after the first one each round costs one stamina point. \\
 Every round you run cost one stamina point. \\
 Every round you dash cost two stamina points. \\
-Some skills and maneuvers also require drawing stamina. \\
+Some skills and maneuvers also require drawing stamina.
+
 Every round you do nothing (rest) you regain one stamina. You can maneuver while resting, but not walk, run, or dash. You can take no actions while resting.
 %If you take damage (actually reduce hp) while resting you regain no stamina.
 
 If stamina reaches 0, you must start rolling for con for every action that would have required a stamina point. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
 
 When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
-E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting instead of smiting the giggling goblin.
+E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.
 
 
 
+\subsection*{Stamina (alt model)}
+%--------------------
+A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round.
 
+Movement speed maneuver costs no stamina but walk costs 1 stamina, run costs 2, and dash costs 3. Each attack generally costs 1 stamina, but some weapons and attack maneuvers differ. Defence actions do not cost any stamina.
+
+Characters with low con regain stamina slower than normal:\\
+con=2 regains 1stam/2r\\
+con=1 regains 1stam/4r\\
+con=0 regains 1stam/10r\\
+con<0 does not regain stamina without long rest outside combat.
+% implement: round modulus check: if con<3: round modulus 2/4/10 == 0
 
 
 
@@ -924,7 +949,7 @@ E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He ma
 
 \subsection*{Encumbrance}
 %------------------------
-If a character carries too much stuff he gets encumbered and will get modifications to movement and actions.
+If a character carries too much stuff he gets encumbered and will have modifications to movement and actions.
 
 Encumbrance is calculated as: \\
 encumbrance = total weight carried / str.
@@ -934,20 +959,20 @@ E.g: Trekking Tom has str 6, and carries a total load of 4.0 enc. His encumbranc
 Each full encumbrance gives modifications: \\
 All actions are mod-1 per encumbrance \\
 Dash speed is mod -encumbrance \\
-Run speed is mod  -encumbrance/2 \\
+Run speed is mod -encumbrance/2 \\
 Walk speed is mod -encumbrance/3 \\
 Maneuver speed is mod -encumbrance/4 \\
 Long distance travel is also reduced by -encumbrance.
 
-%Movement also require more stamina when heavily encumbered: \\
-%Dash requires +1 stamina per encumbrance \\
-%Run requires +1 stamina per encumbrance/2 \\
-%Walk requires +1 stamina per encumbrance/3 \\
-%Maneuver requires +1 stamina per encumbrance/4 \\
+Movement also require more stamina when heavily encumbered: \\
+Dash requires +1 stamina per encumbrance \\
+Run requires +1 stamina per encumbrance/2 \\
+Walk requires +1 stamina per encumbrance/3 \\
+Maneuver requires +1 stamina per encumbrance/4
 
 Containers are also good in that they can reduce the enc of items. A good backpack halves the enc from all items in it.
 
-Also, stuff has to be carried somewhere. "Item slots" are hands (one in each), shoulder and back (three slots (slung left, right and centred)). Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
+Also, stuff has to be carried somewhere. "Item slots" are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
 
 Containers are useful in that they only take one slot, while providing several slots for items.
 
@@ -959,9 +984,9 @@ Carrying heavy objects require 1 stamina each round.
 
 If several characters cooperate to carry a heavy object they must each have the required diff to be able to move faster, not the diff in total.
 
-E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires str 6 to carry. Rock has str 8 and Cliff has str 9. They each carry 3 of the 6 points of weight of the stretcher. Rock has diff=+5 and Cliff has diff=+6. Since Rock only has +5 he cannot run. Even if Cliff had taken a greater part of the load they would not be able to run with the loot, since he would then be below +6.
+E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires str 6 to carry. Rock has str 8 and Cliff has str 9. They each carry 3 of the 6 points of weight of the stretcher. Rock has diff=+5 and Cliff has diff=+6. Since Rock only has +5 he cannot run. Even if Cliff had taken a greater part of the load they would not be able to run with the loot, since he would then be below +6 instead of Rock.
 
-%Alternative: \\
+%NOPE:  Alternative: \\
 %Heavy objects count to encumbrance just like other gear. That stretcher, heavily loaded with loot, might have enc 100.0 or 200.0, making it very slow and stamina sucking to carry around.
 
 
@@ -997,9 +1022,9 @@ Antidotes, first aid, and medicine can be used to counter or limit the effects o
 
 
 \item[Stun]
-A stunned target will get a "stun" mod that affects his actions and movements. Each stun point removes one movement point, one action point, and pushes a mod-1 to the mod stack. At the end of each round the character will remove stun points equal to his constitution value.
+A stunned target will get a stun mod that affects his actions and movements. Each stun point removes one movement point, one action point, and pushes a mod-1 to the mod stack. At the end of each round the character will remove stun points equal to his constitution value.
 
-E.g: Stunned Steve was bitten by an Elequito and got a stun 5. He immediately looses 5mp, 5ap, and has mod-5 to all actions. He has con 4, so at the end of the round he removes 4 stun points, giving him a stun 1 for the next round. For the next round he starts with 1mp less than declared, 1ap less than declared, and mod-1 to all actions. The following round his con removes the remaining stun 1.
+E.g: Stunned Steve was bitten by an Elequito and got a stun 5. He immediately looses 5mp, 5ap, and has mod-5 to all actions. He has con 4, so at the end of the round he removes 4 stun points, giving him a stun 1 for the next round. For the next round he starts with 1mp less than declared, 1ap less than declared, and mod-1 to all actions. Before the third round his con removes the remaining stun 1.
 
 %TODO: rewrite stun macro
 
@@ -1020,7 +1045,7 @@ Items accumulate mod-1 when used to parry spin web attacks, until cleaned off. C
 \item[Knock back]
 The target is moved one space away for each point of knock back. 
 Large targets, with size more than one square, ignore one point of knock back for each occupied square after the first one. E.g: a 2x2sq troll ignores 3 knock back points.
-Some targets have knock back reductions even if they are smaller than multiple squares.
+Some creatures have knock back reductions even if they are smaller than multiple squares.
 
 
 \end{description}
@@ -1057,7 +1082,7 @@ Pick axes and hammers are meant to be used against objects, and suffer no damage
 %--------------------------------------------
 All weapons require a certain strength. If that is not met, then the user takes a dam-1 and mod-1 penalty for each missing str point. For weapons with a minimum dexterity requirement each lacking dex point will cause a mod-1 and costing (lacking dex)/3 round up extra action points.
 
-E.g: Willow the Weak has str 4 and tries wielding a broad sword, which requires str 5, he then has a dam-1 modifier and mod-1 to hit and parry.
+E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires str 5, he then has a dam-1 modifier and mod-1 to all actions with the sword.
 
 
 \subsection*{Excessive str bonus}
@@ -1068,7 +1093,7 @@ Heroes with higher strength than the weapon requires can use certain skills to g
 \subsection*{Reach}
 %------------------
 Weapons with the reach property can "reach" one extra square per level.
-E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. In the case of the spear, that means the weapon can also be used to attack over the shoulder or shield of a friend in a two layer advance maneuver. However, attacking with reach is usually more difficult, and most reach weapons have a mod-x when using reach.
+E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. However, attacking with reach is usually more difficult, and most reach weapons have a mod-x when using reach.
 
 
 \subsection*{Initiative when attacking against ranged and long weapons}
@@ -1091,26 +1116,27 @@ It is possible to make a tug of war to rip weapons out of the opponents hands wh
 
 \subsection*{Pain makes life more difficult}
 %-------------------------------------------
-Major wounds give "permanent" pain modifiers to the action modification stack.
+Major wounds give pain modifiers to the action modification stack until healed enough to be minor wounds.
 A wound gives dam/3 pain penalty mod points that go to the action mod stack and stays there until the wound is treated, pain killers are taken, or some such action is taken to reduce the pain. This is why it is important to track each wound hp on the stat sheet instead of just the total remaining hp.
 Veteran is a great skill to have.
 
-Some creatures have different pain threshold and the wounds then give pain equal to damage/threshold instead of dam/3.
+Optional: Some creatures have different pain threshold and the wounds then give pain equal to damage/threshold instead of dam/3.
 
 
 \subsection*{Wounds make life more difficult}
 %--------------------------------------------
-When a character gets severely wounded he becomes weaker and this makes it harder to perform actions. These modifications are not reduced by the veteran skill. As the hp drop it gets worse:\\
+When a character gets severely wounded he becomes weaker and this makes it harder to perform actions. These modifications are not reduced by the veteran skill. As hitpoints drop it gets worse:\\
 At 66\% hp he has a mod-1 to all actions. \\
 At 33\% hp he has a mod-2 to all actions and cannot dash. \\
-At 0 hp he has mod-3 to all actions and cannot run or dash.
+At 0 hp he has mod-3 to all actions and cannot run or dash.\\
+Black Knight can ignore some mods like this.
 
 
 \subsection*{Come on and die already}
 %------------------------------------
 When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll a con modified with the negative hp. If he fails he loses consciousness. Regain consciousness is a con roll modified by negative hp, can roll each round. The veteran skill helps to reduce the modification of the con rolls.
 
-Characters die when they reach -con hp. E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con - 3 = 4 roll each round or pass out. At -6 hp he would normally die, but since he has con 7 he dies at -7 hp.
+Characters die when they reach -con hp. E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
 
 \subsection*{Regaining hit points}
@@ -1119,33 +1145,35 @@ A character generally regains con/3 hp per day. If the character has con = 2 he 
 
 A daily successful medical treatment roll also heals success diff hp even if all wounds have been treated, see \emph{medicine}.
 
-Optional: if tracking wounds list for pain purposes: Wounds heal one point at a time in order of acquisition. E.g: if the wounds list is: 5,2,4, then after healing 5hp it would be: 3,0,3. Still giving two pain.
+Optional: if tracking wounds list for pain purposes, wounds heal one point at a time in order of acquisition. E.g: if the wounds list is: 5,2,4, then after healing 5hp it would be: 3,0,3. Still giving two pain.
 
 
 \subsection*{Travelling the region and area maps}
 %-----------------------------------------------
-When moving around between encounters the heroes probably traverse some large region map or area map. Their movement on the region map is limited by the character with the lowest constitution. A character can move his con steps on a region map each day.
+When moving around between encounters the heroes probably traverse some regional map. The scale of the regional map is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution.
 
-The party's vision on the region map is equal to the highest value in the "track" skill. Parties without "track" can only see the square of the region map they are currently occupying.
+The party's vision on the regional map is equal to the highest value of the track skill of any member. Parties without track only have regional vision of the square they are currently occupying.
 
-Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride), and limited by the quality of the horse. A horse has a cruise speed rated in region steps per day. Better horses can ride further. A decent horse is around 10-15 steps/day.
+Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride), and limited by the quality of the horse. A horse has a cruise speed rated in leagues per day. A decent horse is around 10-15 steps/day.
 
-When riding in a wagon or cart the distance is not limited to the characters con and ride skill, but only to the draft animals travel distance and the wagon's mods. Someone needs the skill "ride" to drive the cart though.
+When riding in a wagon or cart the distance is not limited to the characters' con and ride skill, but only to the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
 
-Travelling by horse and cart is convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such, but very slow or impossible in forests, hills, and mountains.
+Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. But it can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains.
 
-One square on the region maps is about one league on the side. How long that league is, is another matter altogether. However, when describing distances to the players, the distance is in leagues, i.e. in squares on the region maps.
+%Region maps generally have the scale of 1 sq = 1 league. And a league is about how far a character with con=1 can travel per day. A con=5 character can travel 5 leagues per day.
+%
+%One square on the region maps is about one league of distance. How long that league is, is another matter altogether. However, when describing distances to the players, the distance is in leagues, i.e. in squares on the region maps.
 
 %In historical reality a league was often the flexible distance that someone walks in about an hour on easy terrain. A Hero with con X will travel X leagues per day without being overly tired afterwards. If you \emph{really must} have a real world reference, think of it as about 5km.
 
-The "travel" skill improves long distance travelling speed.
+The travel skill improves long distance travelling speed.
 
 
 \subsection*{Hunger and thirst}
 %------------------------------
 The character must eat and drink. Each day he is without food his constitution and stamina drops by -1. Each day he is without water his con and sta drops with -3. When either con or stamina reaches 0, further mods go directly to ams for all rounds until recovered. The character dies at -con.
 
-When food and water is available again the character recovers con and stamina at con/2 per day.
+When food and water is available again the character recovers con and stamina at con/3 per day.
 
 
 
@@ -1160,7 +1188,7 @@ When food and water is available again the character recovers con and stamina at
 
 \subsection*{Ranged weapons}
 %---------------------------
-Ranged weapons have the benefit of attacking distant targets, and generally being impossible to parry. They do however have a lower rate of fire and do not do as much damage as heavy melee weapons.
+Ranged weapons have the benefit of attacking distant targets and are generally mpossible to parry. They do however have a lower rate of fire and do not do as much damage as melee weapons.
 
 
 \subsection*{Short and Long Ranges}
@@ -1190,11 +1218,11 @@ Note that the attacker is not affected by base contact with other characters tha
 
 \subsection*{Firing into melee}
 %-----------------------------
-Firing into melee is tricky. If the intended target is first in missile flight path, then to hit is mod-3, If target is second in flight path then to hit mod is -6 (i.e. shooting through friendly to hit foe).
+Firing into melee is tricky. If the intended target is first in missile flight path the to hit is mod-3, If target is second in flight path the to hit mod is -6 (i.e. shooting through friendly to hit foe).
 
-And to make it more interesting, if you fail -3 or worse you hit a friendly melee participant in base contact, in missile flight, path instead if there is one. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order. The miss will never hit a "better" target for the attacker.
+And to make it more interesting, if you fail -3 or worse you hit a friendly melee participant in base contact instead, in missile flight path if possible. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order. The miss will never hit a "better" target for the attacker.
 
-If you fail -6 or worse you might also hit melee-ers in base contact with target, but perpendicular to missile flight path (i.e. to the side of the target, viewed from the missile). Which target is random, but must be friendly or it's a miss as usual.
+If you fail-6 or worse you might also hit melee-ers in base contact with target, but perpendicular to missile flight path (i.e. to the side of the target, viewed from the missile). Which target is random, but must be friendly or it's a miss as usual.
 
 This penalty does not apply if the target is engaged in melee against the firing character. In this case the "Too short range" penalty above will usually be in effect. Therefore it is a bad idea to attack a ranged fire opponent with reach attacks.
 
@@ -1203,11 +1231,11 @@ The maneuvers "fire support" and "target pointer" change this behaviour.
 
 \subsection*{Arrow recovery}
 %---------------------------
-To make life simple one can ignore missile ammo for most dungeon situations. A quiver of 30 arrows will be seen as enough for a normal dungeon with city access before and after. Special arrows, smaller quivers, large complexes or series of complexes will require ammunition accounting.
+To make life simple one can ignore missile ammo for most dungeon situations. A quiver of 30 arrows will be seen as enough for a normal dungeon with city access before and after. Special arrows, smaller quivers, large complexes or series of fights will require keeping track of ammunition.
 
 Optional: The fights can get more interesting if it's necessary to keep track of ammunition count.
 Arrows and bolts have a 50\% chance of being recoverable after hitting a "soft target", and 50\% of breaking. For a quick measure just assume you can recover half the arrows (rounded down) you shot at a target when you reach the corpse.
-Missed arrows cannot be recovered unless they strike a "soft" surface, and most dungeons are stone...
+Missed arrows cannot be recovered unless they strike a soft surface, and most dungeons are made of stone...
 
 The skill arrow recovery is another fun option to keeping track of the survivability of arrows and which corpse is kindly holding them for you.
 
@@ -1317,8 +1345,8 @@ All mana is regained when the caster has rested fully from a good nights sleep. 
 Wise wizards and skilled sorcerers alike usually carry mana restoring potions, crystal ball batteries, power staffs, etc, when they go hunting for gold and glory.
 
 
-\subsection*{casting is exhausting}
------------------------------------
+\subsection*{Casting is exhausting}
+%-----------------------------------
 Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spell will fail.
 
 If the Hero tries to draw stamina when starting from 0 or negative stamina he must roll con modified by negative stamina once for the whole spell. The Hero can roll con before starting casting the spell instead of when he finishes casting it if he so wishes. The roll is valid as long as he doesn't loose stamina while casting.

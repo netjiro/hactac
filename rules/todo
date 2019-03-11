@@ -32,10 +32,24 @@ lots of comments in swedish, will not translate
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
 
+190306:
+TODO: rewrite: all characters regain con/3 stamina per round
+      con=2: 1stam/2r
+      con=1: 1stam/3r
+      con=0: 1stam/4r
+      stamina costs: m=0, w-1, r-2, d-3
+                     all attacks cost 1stam
+                     some very heavy weapons cost double stamina
+                     some very light weapons cost half, skip stamina for every other attack
+      affects jackhammer, energizer bunny
 
 
 TODO: Goblin Destiny : add gossip lists for situations where they meet ppl
       towns, patrols, possible other goblins they capture / trade with
+
+
+190306: höcker
+TODO:  Excessive strength borde göra rustningar lättare också.
 
 
 181205:
@@ -47,10 +61,10 @@ TODO: mindre mana på de flesta gubbar
 TODO: 2x pil bågskyttar för billigt
 TODO: force bolt 3ap 1mana 5dam pen1  (normal int/psy)
       1xp magic 28xp skill 30xp fast magic > 2ap
-TODO: forrest walk - gå obehindrat genom skog och sly
+TODO: forest walk - gå obehindrat genom skog och sly
 TODO: forest hugg - slå obehnidrat i skog
       olika mods för olika vapen  i sly ?
-TODO: need line of sight för att lägga area spells
+TODO: need line of sight till rutan för att lägga area spells
       lyckat perception slag för dåld sikt tex genom eld/rök
 TODO: skill: lazy walk : gå W och få tillbaka stamina
 TODO: skill: masochist : ger bonus när man tar pain...
@@ -80,7 +94,9 @@ TODO: kolla om det skall vara minus på magi genom eld  -  nope enligt tidigare 
 TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin inte skall ha ccf från reactive skin, se räkneexemplet
 
 181114:
-TODO:  movement state "ride" som sätter move declared men 0
+TODO:  movement state "ride" som sätter movement undeclared at 0mp
+       scripten kollar om man har mp kvar eller förhindrar move
+       om man har movement declared flaggat
 
 
 
@@ -350,14 +366,6 @@ TODO: quick casting: the character gets more action points that he can only
 from rules.tex
 --------------
 
-
-
-%TODO:
-%-----
-
-% write which abilities and spells that can train without purchasing or finding.
-
-
 % change stamina cost for whirlwind and double
 % they should not cost stamina if they don't succeed.
 % OR ?? this will lead to a lot of rolling,
@@ -409,10 +417,6 @@ from rules.tex
 %dash        max
 
 
-% negativa mods när man har negativ stamina
-% mod -stamina
-
-
 % boost formler, ex fast, stronger, etc.
 
 
@@ -435,8 +439,6 @@ from rules.tex
 % must roll for psy to not run away from the horrible slaughter immediately.
 
 
-
-
 % allround shield sweep, tvinga alla runt att backa
 
 
@@ -444,15 +446,13 @@ from rules.tex
 % skip vapen casting mods, istället för "trusty" xp på vapen
 
 
-% maneuver:
-% attacks that drains stamina on opponent
+% maneuver:   attacks that drains stamina on opponent
 
 
 %simplify:
 %    tackle,
 %    block,
 %    grab/hold/break
-
 
 
 %armour that restores stamina/health  slowly
@@ -484,13 +484,6 @@ from rules.tex
 
 
 
-
-
-
-
-
-
-
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 ================================================================================
@@ -498,7 +491,7 @@ from rules.tex
                                     -------
 
 Kronologisk ordning på DONE items:
-copy-cut , ctrl-end , paste
+copy-cut , ctrl-end , paste,   (new line if necessary)
 
 SKIP: super success, stuns people due to impressive move....  njae
 SKIP: rest regain stamina automagically -- nah, för mycket händer utanför
@@ -551,11 +544,6 @@ NOPE: heal3 macro, remove pain
 
 Kronologisk ordning på DONE items:
 copy-cut , ctrl-end , paste
-
-DONE: MACRO:
-fix so that movement declarations change initiative.
-Higher movement should increase initiative so that it is easier to
-get away from ppl when not already in a fight.
 
 171113:
 DONE: ändra near death till dead vid state
@@ -718,4 +706,12 @@ DONE: äta lik knapp för icky  -  slowheal
 DONE: bygg push mp knapp
 181220-190107:
 DONE casting is exhausting  --  every mana drawn also draws one stamina
-s
+18xxxx:
+DONE: MACRO: fix so that movement declarations change initiative.
+    Higher movement should increase initiative so that it is easier to
+    get away from ppl when not already in a fight.
+190307:
+DONE: enforce negative stamina affects ams. mod=-stam
+      easy to automate in util.totmod().
+      see rules.tex ca line 914, subsection*{Stamina}
+DONE: write which abilities and spells that can train without purchasing or finding.
