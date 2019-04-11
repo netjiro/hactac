@@ -282,6 +282,8 @@ A tackle sequence is a dance for two, and it can go a few different ways:
 \end{itemize}
 After a tackle success the target is knocked back 1 + success/3 sq away in suitable direction, choosen by the tackler (GM discretion). The movement costs mp and can force the target to go off balance or fall from lack of mp.
 
+\emph{Note} that a character must have some level in tackle or block to be able to take tackle or block actions. E.g: resisting a tackle also requires tackle or block skill, otherwise the target resistance result is set to 0.
+
 
 %TODO: should block also allow for some 1ap overwatch style fixed position sentry ?
 \skill{Skill scf 0.5 "block":} makes it possible to stop opponents from moving past the Hero in base contact. It also helps resist incoming tackles. Blocking is a 3ap action and is reactive to the target trying to move past, ignoring initiative.
@@ -291,7 +293,7 @@ Blocker: str \emph{or} dex + block \\
 Target: str \emph{or} dex + tackle \\
 Both blocker and target choose individually if they want to use str or dex.
 
-It costs the target 3ap to make the resistance roll. If he chooses not to, or can't, take the resistance action he will have str/2 or dex/2 in the resistance roll and can't add tackle skill level.
+It costs the target 3ap to make the resistance roll. If he chooses not to, or can't, take the resistance action the resistance result is set to 0.
 
 If the blocker succeeds with the resistance roll the target cannot move past, and must stop. The target can move again later, some other way, but cannot move past the blocker the attempted way this round.
 
@@ -616,7 +618,7 @@ Possum is modified by damage, but ignores all other mods:\\
 zero hp: mod+3
 
 
-\skill{Skill scf 0.5 "arrow recovery":} allows the happy hunter to recover arrows from downed targets. Any targets, even if they have not been fired upon (GM discretion so it doesn't get completely out of hand). All arrows recovered are regular  base damage +0 type arrows suitable for the weapon at hand.\\
+\skill{Skill scf 0.5 "arrow recovery":} allows the happy hunter to recover arrows from downed targets. Any targets, even if they have not been fired upon (GM discretion so it doesn't get completely out of hand). All arrows recovered are regular base damage mod+0 type arrows suitable for the weapon at hand.\\
 Success +0 means the body has one recoverable arrow. \\
 Success +3 gives two arrows, and so on...\\
 Searching a target takes one round, but quick looting can be used to reduce the time.
@@ -1204,7 +1206,8 @@ cost +30xp max three off balance steps per round, total mod-9
 
 
 \skill{Maneuver (cost 10) "anchor":} allows the Hero to firmly plant his feet and ignore 1 sq incoming knockback effect.\\
-anchor +1 cost +10 ignore +1 knockback.
+anchor +1 cost +10 ignore +1 knockback.\\
+Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
 \skill{Maneuver (cost special) "extra gear X"} is a new movement speed, beyond M/W/R/D, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the dash maximum mp.
@@ -1216,7 +1219,7 @@ E.g: Full plate armour gives run-2sq, meaning an egX based on run also suffers -
 E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any egX based on R/D.\\
 E.g: DD trains fast 4, changing M1 to M2, and thus eg3 to eg4.
 
-The cost of an extra gear starting from Maneuver speed is 15xp, from Walk speed is 10xp, and from Run speed is 5xp.
+The cost of an extra gear starting from Maneuver speed is 15xp per extra movement point, from Walk speed is 10xp per extra movement point, and from Run speed is 5xp per extra movement point.
 
 
 \skill{Maneuver (cost 5) "going the distance":}

@@ -309,7 +309,7 @@ Note: defence actions are treated slightly differently from other reactive actio
 %-----------------------------
 % original [-5,4] version, which only have one roll
 Resistance rolls. "attach versus defence", "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
-The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\geq$0 the attacker has succeeded with the action, with the diff indicating the level of success as with a normal roll. Note that a roll of 10 does not mean an automatic failure in the context of resistance rolls.
+The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\ge$0 the attacker has succeeded with the action, with the diff indicating the level of success as with a normal roll. Note that a roll of 10 does not mean an automatic failure in the context of resistance rolls.
 %-----------------------------
 % 2018 [-9,9] version, has issues
 %Resistance rolls. "attack versus defence",  "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
@@ -317,7 +317,7 @@ The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\geq$0 the att
 %\verb|(attack - d10) - (defence - d10) == attack - defence + d10 - d10|\\ If both attacker and defender have the same value this gives an outcome range of [-9,9], where the usual success=0 is a regular success, success+3 is a good success, success+6 is a very good success, and success+9 is an excellent or perfect success. Same with fail-3, -6, -9. Also note that a natural 10 roll has no "automatic fail" effect in resistance rolls.
 %
 %TODO: skip this ?
-%In some cases a resistance roll is requested where the defender must or can spend action points only if the attacker actually succeeds with his part of the roll, i.e. \verb|attack - d10| $\geq$ 0.
+%In some cases a resistance roll is requested where the defender must or can spend action points only if the attacker actually succeeds with his part of the roll, i.e. \verb|attack - d10| $\ge$ 0.
 
 
 
@@ -745,8 +745,7 @@ One can also turn by spending action points. The cost is dependent on the amount
 Turning 45deg is free with (before or after) most actions \\
 Turning 90deg costs 1ap \\
 Turning 135-180deg costs 2ap \\
-Certain armour and equipment will make it more costly to turn.
-
+Certain armour and equipment will make it more costly to turn.\\
 On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 
 \emph{Note:} Defensive actions such as parry and avoid do not allow a free 45deg turn \emph{before} the action. Offensive action generally do allow a free 45deg turn as part of the action done before \emph{or} after.
@@ -791,7 +790,7 @@ On a hex grid it's: 60deg mod=0, 90deg mod-3 (reach attack), 120deg mod-6, 180de
 
 \subsection*{Partial squares \& difficult terrain}
 %------------------------------------------------
-A square that is only partly clear is still possible to stand on, but will give a mod-X to actions performed while standing there, or passing through it. The typical mod for a partially blocked square is mod-3, while severely blocked squares can be mod-6 to mod-9 depending on surroundings and situation.
+A square that is only partially clear is still possible to stand on, but will give a mod-X to actions performed while standing there. The typical mod for a partially blocked square is mod-3, while severely blocked squares can be mod-6 to mod-9 depending on surroundings and situation.
 
 Some squares contain difficult terrain, such as rubble, debris, etc. These squares also give mods to all actions performed while standing or moving through the area. E.g: Light rubble and undergrowth mod-3, heavy debris or marshland mod-6, etc.
 
@@ -802,13 +801,18 @@ Moving through difficult terrain or partially blocked squares require a dex+9 ro
 %------------------------------------------
 Severely blocked squares may not allow for normal actions and movement, but will only allow for crawling through. Crawl speed is dex/3 sq/r.
 
-Small character such as goblins and halflings will be able to run or dash in areas where larger characters can only maneuver or walk.
-
+Small character such as goblins and halflings will be able to run or dash in areas where larger characters can only maneuver or walk. 
 Common narrow tunnels will allow movement as follows: \\
 Humans and orcs can only maneuver. \\
 Elves can walk. \\
 Dwarves can run. \\
 Halflings and Goblins can dash.
+
+
+\subsection*{Small characters can pass friendly diagonals}
+%----------------------------------------------------------
+Goblins and Halflings are considered small characters and can pass through a "friendly diagonal", i.e: a diagonal between two friendly characters which are considered to have "round corners". 
+Normal size characters such as humans, orcs, dwarves, elves, etc cannot.
 
 
 \subsection*{Off Balance}
@@ -873,9 +877,9 @@ In some cases it's relevant to calculate divisions of rounds, in which case a ro
 %E.g: fast magic 3 allows to cast spells in half the time. A one round spell would then take 5ap.
 
 
-\subsection*{Actions that takes more than one round}
+\subsection*{Actions that take more than one round}
 %--------------------------------------------------
-Some actions takes one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they have taken through all the rounds during the performance. The roll is done at the end though, just before the action comes into effect.
+Some actions take one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they have taken through all the rounds during the performance. The roll is done at the end though, just before the action comes into effect.
 
 E.g: Aiming the arrow. Assassin OilySnake is reloading and aiming his crossbow for three rounds before firing. During these rounds he better be sitting very still, since otherwise he will be taking movement penalties. He also should not take any other actions during this time since that will require him to declare more ap than he can do without modification, and thus incur an action mod. So, in the end of round three he fires, rolls a 5. He has crossbow 4 (shitty assassin), aim mod+1. He succeeds =0. If he had moved much or taken any other actions he would have missed.
 
@@ -970,17 +974,15 @@ Run requires +1 stamina per encumbrance/2 \\
 Walk requires +1 stamina per encumbrance/3 \\
 Maneuver requires +1 stamina per encumbrance/4
 
-Containers are also good in that they can reduce the enc of items. A good backpack halves the enc from all items in it.
-
 Also, stuff has to be carried somewhere. "Item slots" are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
 
-Containers are useful in that they only take one slot, while providing several slots for items.
+Containers are useful in that they only take one slot, while providing several slots for items. Containers are also good in that they can reduce the enc of items. A good backpack halves the enc from all items in it.
 
 
 \subsection*{Carrying heavy objects}
 %-----------------------------------
 Some objects require a certain str to be carried. If the character has 0 to 2 more strength he can only move maneuver while carrying the object. If he has +3 strength he can walk, and with +6 he can run with the object, +9 for dash.
-Carrying heavy objects require 1 stamina each round.
+Carrying heavy objects costs 1 + required strength / 3 stamina each round.
 
 If several characters cooperate to carry a heavy object they must each have the required diff to be able to move faster, not the diff in total.
 
@@ -1016,7 +1018,7 @@ Some attacks have special effects that take place when the attacks succeeds. Som
 \item[Poison]
 Poisons do damage over time. A poison has a few characteristics: strength, duration, and damage per round. Each round roll poison strength \vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
 
-Poisons do not have to do damage, they may just paralyse the victim, confuse it, or other strange effect.
+Poisons do not have to do damage, they may just paralyse the victim, confuse it, or have other strange effect.
 
 Antidotes, first aid, and medicine can be used to counter or limit the effects of poisons.
 
@@ -1035,7 +1037,7 @@ A typical spider web effect is dex-2, move-2, mod-3 to all actions until the eff
 
 Some webs have residual effects such as requiring time to clean off. E.g: a persistent mod-1 to all actions and mp-1 to movement until someone spends an action, or several, cleaning it off.
 
-Breaking a spider web is str \vs web str action, note that it's modified by the web, or multiple webs in some cases.
+Breaking a spider web is str vs web str action, note that it's modified by the web, or multiple webs in some cases.
 
 Friends can help break loose by adding their str, and can help clean by spending cleaning actions.
 
@@ -1046,6 +1048,10 @@ Items accumulate mod-1 when used to parry spin web attacks, until cleaned off. C
 The target is moved one space away for each point of knock back. 
 Large targets, with size more than one square, ignore one point of knock back for each occupied square after the first one. E.g: a 2x2sq troll ignores 3 knock back points.
 Some creatures have knock back reductions even if they are smaller than multiple squares.
+
+
+\item[Knock down]
+The target will be knocked down and go prone unless they pass a dex roll modified by ams and the knock down effect.
 
 
 \end{description}
@@ -1073,32 +1079,33 @@ If the weapon does not break, it still gets a permanent -1 abs per every 3 exces
 \subsection*{Hacking through objects}
 %------------------------------------
 Hacking away at large objects such as doors, walls, statues, etc are at mod+6. If you have skills that improve damage for good strikes it should be quick work.
-Also, some weapons are not meant to be used against objects. Using your sword or axe to hack away at a stone statue or stone wall will have a 10\% chance each strike to reduce the abs of the weapon by 1.
+Some weapons are not meant to be used against objects. Using your sword or axe to hack away at a stone statue or stone wall will have a 10\% chance each strike to reduce the abs of the weapon by 1.
 
 Pick axes and hammers are meant to be used against objects, and suffer no damage. They usually also do extra damage to objects of certain type or material.
 
 
-\subsection*{Insufficient strength penalties}
-%--------------------------------------------
-All weapons require a certain strength. If that is not met, then the user takes a dam-1 and mod-1 penalty for each missing str point. For weapons with a minimum dexterity requirement each lacking dex point will cause a mod-1 and costing (lacking dex)/3 round up extra action points.
+\subsection*{Insufficient strength or dexterity penalties}
+%---------------------------------------------------------
+All weapons require a certain strength. If that is not met the user takes a dam-1 and mod-1 penalty for each missing str. For weapons with a minimum dexterity requirement each lacking dex point will cause a mod-1 and cost (lacking dex)/3 round up extra action points.
 
 E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires str 5, he then has a dam-1 modifier and mod-1 to all actions with the sword.
+And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder requires dex 7. Fabian thus takes mod-1 and +1ap, which means his fast rapier is now just 3ap normal speed. So unfortunate...
 
 
 \subsection*{Excessive str bonus}
-%---------------------------------------
-Heroes with higher strength than the weapon requires can use certain skills to get bonus effects to damage, reduced stamina cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects. E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 or for two extra attacks that do not require stamina, or for dam+1 and one extra attack without stamina cost.
+%--------------------------------
+Heroes with higher strength than the weapon requires can use certain skills to get bonus effects to damage, reduced stamina cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects. E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 \emph{or} for two attacks that do not require stamina, or for dam+1 and one attack without stamina cost.
 
 
 \subsection*{Reach}
 %------------------
-Weapons with the reach property can "reach" one extra square per level.
-E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. However, attacking with reach is usually more difficult, and most reach weapons have a mod-x when using reach.
+Weapons with the reach property can hit targets one extra square away per level.
+E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. However, attacking with reach is usually more difficult and most reach weapons have a mod-x when using reach.
 
 
 \subsection*{Initiative when attacking against ranged and long weapons}
 %----------------------------------------------------------------------
-If attacking an opponent with a weapon with longer reach than yourself the opponent can (if the attack is noticed) interrupt your attack with one of his own even if you have higher initiative. But then the interrupt attack must be taken at longer reach then you were going to attack at. This does not apply if the target is already in base contact.
+If moving closer to attack an opponent wielding a weapon with longer reach than yourself the opponent can, if the attack is noticed, interrupt your attack with an attack against you instead, even if you have higher initiative. But then the interrupt attack must be taken at longer reach then you were going to attack at. This does not apply if you are not moving closer to attack.
 
 E.g: Albin and David stand 3sq apart. Albin has initiative 10 and a sword and wants to attack David who has initiative 6 and a spear. Albin must first move in to base contact, then attack. However, that means David can choose to make an interrupt attack at reach 1 mod-3 before Albin has closed to base contact. David cannot choose to make a reach 0 mod-0 interrupt attack.
 
@@ -1107,11 +1114,11 @@ Ranged weapons, e.g. bows and crossbows, don't have this benefit. There the orde
 
 \subsection*{Snag}
 %-----------------
-Weapons with the "snag" property can entangle the parrying weapon or shield. The snag maneuver is tricky and carries a mod-x. Snag also happens (if you do not try to snag) on a fail-6 or worse.
+Weapons with the \emph{snag} property can entangle the parrying weapon or shield. The snag maneuver is tricky and carries a mod-x. Snag also happens on a fail-6 or worse if you do not try to snag.
 
 The two weapons are entangled until the end of the round, unless some cool maneuver or action can untangle them quicker.
 
-It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified), If any side wins with +3 or more he has managed to rip the weapon loose.
+It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified). If any side wins with +3 or more he has managed to rip the opponent's weapon loose.
 
 
 \subsection*{Pain makes life more difficult}
@@ -1134,9 +1141,9 @@ Black Knight can ignore some mods like this.
 
 \subsection*{Come on and die already}
 %------------------------------------
-When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll a con modified with the negative hp. If he fails he loses consciousness. Regain consciousness is a con roll modified by negative hp, can roll each round. The veteran skill helps to reduce the modification of the con rolls.
+Characters die when they reach -con hp. When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll con modified with the negative hp. If he fails he loses consciousness. Regain consciousness is also a con roll modified by negative hp. Passed out characters can roll at the beginning of each round. The veteran skill helps to reduce the modification of the con rolls.
 
-Characters die when they reach -con hp. E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
+E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
 
 \subsection*{Regaining hit points}
@@ -1150,23 +1157,22 @@ Optional: if tracking wounds list for pain purposes, wounds heal one point at a 
 
 \subsection*{Travelling the region and area maps}
 %-----------------------------------------------
-When moving around between encounters the heroes probably traverse some regional map. The scale of the regional map is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution.
+When moving around between encounters the heroes probably traverse a regional map. The scale is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution. The travel skill improves long distance travelling speed.
 
 The party's vision on the regional map is equal to the highest value of the track skill of any member. Parties without track only have regional vision of the square they are currently occupying.
 
-Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride), and limited by the quality of the horse. A horse has a cruise speed rated in leagues per day. A decent horse is around 10-15 steps/day.
+Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride) but also limited by the quality of the horse. A horse has a cruise speed rated in leagues per day. A decent horse is around 10-15 steps/day.
 
-When riding in a wagon or cart the distance is not limited to the characters' con and ride skill, but only to the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
+When riding in a wagon or cart the distance is not based on the character's con and ride skill, but only determined by the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
 
-Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. But it can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains.
+Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severly limited even in hilly terrain.
+
 
 %Region maps generally have the scale of 1 sq = 1 league. And a league is about how far a character with con=1 can travel per day. A con=5 character can travel 5 leagues per day.
 %
 %One square on the region maps is about one league of distance. How long that league is, is another matter altogether. However, when describing distances to the players, the distance is in leagues, i.e. in squares on the region maps.
 
 %In historical reality a league was often the flexible distance that someone walks in about an hour on easy terrain. A Hero with con X will travel X leagues per day without being overly tired afterwards. If you \emph{really must} have a real world reference, think of it as about 5km.
-
-The travel skill improves long distance travelling speed.
 
 
 \subsection*{Hunger and thirst}
@@ -1188,12 +1194,12 @@ When food and water is available again the character recovers con and stamina at
 
 \subsection*{Ranged weapons}
 %---------------------------
-Ranged weapons have the benefit of attacking distant targets and are generally mpossible to parry. They do however have a lower rate of fire and do not do as much damage as melee weapons.
+Ranged weapons have the benefit of attacking distant targets and are generally impossible to parry. They do however have a lower rate of fire and do not do as much damage as melee weapons.
 
 
 \subsection*{Short and Long Ranges}
-%------------------
-Each range weapon has a base range where the attack is mod=0 and normal damage. Short range normally gives a small positive mod. Longer ranges have negative mods and damage reduction.
+%----------------------------------
+Each ranged weapon has a base range where the attack is mod=0 and do normal damage. Short range normally gives a small positive mod. Longer ranges have negative mods and damage reduction.
 \small \begin{verbatim}
 Short is base range / 2                  mod+1
 Normal range is base range               mod-0
@@ -1211,74 +1217,81 @@ The faster the character fires the more difficult the attack will be. In some ca
 
 \subsection*{Too short range, base contact}
 %------------------------------------------
-Ranged weapons suffer mod-3 when used against a target in base contact with the attacker. There should be at least one empty square between the attacker and the target. The short mod+3 is also not in effect in base contact. So, the attack has a total mod-3.
+Ranged weapons suffer mod-3 when used against a target in base contact with the attacker. There should be at least one empty square between the attacker and the target. The short mod+1 is also not in effect in base contact so the attack has a total mod-3.
 
-Note that the attacker is not affected by base contact with other characters than the target, or if the target is in base contact with any other characters. If the target is engaged in melee however, then there is a penalty, see below under "firing into melee".
+Note that the attacker is not affected by base contact with other characters than the target, or if the target is in base contact with any other characters. If the target is engaged in melee however, then there is a penalty, see below under \emph{firing into melee}.
 
 
 \subsection*{Firing into melee}
 %-----------------------------
-Firing into melee is tricky. If the intended target is first in missile flight path the to hit is mod-3, If target is second in flight path the to hit mod is -6 (i.e. shooting through friendly to hit foe).
+Firing into melee is tricky. If the intended target is first in missile flight path the attack is mod-3. If target is second in flight path it's mod-6, i.e. shooting through friendly to hit foe.
 
-And to make it more interesting, if you fail -3 or worse you hit a friendly melee participant in base contact instead, in missile flight path if possible. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order. The miss will never hit a "better" target for the attacker.
+And to make it more interesting, if you fail-3 or worse you hit a friendly melee participant in base contact instead, in missile flight path if possible. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order. The miss will never hit a "better" target for the attacker.
 
-If you fail-6 or worse you might also hit melee-ers in base contact with target, but perpendicular to missile flight path (i.e. to the side of the target, viewed from the missile). Which target is random, but must be friendly or it's a miss as usual.
+If you fail-6 or worse you might also hit melee-ers in base contact with target but perpendicular to missile flight path (i.e. to the side of the target, viewed from the missile). Which target gets hit is random, but must be friendly or it's a miss as usual.
 
-This penalty does not apply if the target is engaged in melee against the firing character. In this case the "Too short range" penalty above will usually be in effect. Therefore it is a bad idea to attack a ranged fire opponent with reach attacks.
+This penalty does not apply if the target is engaged in melee against the firing character. In this case the \emph{too short range} penalty above will usually be in effect. Therefore it is a bad idea to attack a ranged fire opponent with reach attacks.
 
-The maneuvers "fire support" and "target pointer" change this behaviour.
+The maneuvers \emph{fire support} and \emph{target pointer} change this behaviour.
 
 
 \subsection*{Arrow recovery}
 %---------------------------
-To make life simple one can ignore missile ammo for most dungeon situations. A quiver of 30 arrows will be seen as enough for a normal dungeon with city access before and after. Special arrows, smaller quivers, large complexes or series of fights will require keeping track of ammunition.
+To make life simple one can ignore missile ammo for most dungeon situations. A quiver of 30 arrows will be seen as enough for a normal dungeon with shopping access before and after. Special arrows, smaller quivers, large complexes or series of fights will require keeping track of ammunition. Assume half the arrows need to be replaced, or one arrow per 2r of combat.
 
 Optional: The fights can get more interesting if it's necessary to keep track of ammunition count.
-Arrows and bolts have a 50\% chance of being recoverable after hitting a "soft target", and 50\% of breaking. For a quick measure just assume you can recover half the arrows (rounded down) you shot at a target when you reach the corpse.
+Arrows and bolts have a 50\% chance of being recoverable after hitting a "soft target", and 50\% of breaking. For a quick measure just assume you can recover half the arrows you shot at a target when you reach the corpse.
 Missed arrows cannot be recovered unless they strike a soft surface, and most dungeons are made of stone...
 
-The skill arrow recovery is another fun option to keeping track of the survivability of arrows and which corpse is kindly holding them for you.
+The skill \emph{arrow recovery} is another fun option to keeping track of the survivability of arrows and which corpse is kindly holding them for you.
 
 
 \subsection*{Fast moving targets}
 %---------------------------------
-It is more difficult to hit fast moving targets. Speed is the declared max speed of the target, not the distance in squares it has moved. This only applies to missile attacks. Melee attacks don't get the mods. The skill "lead target" reduces these mods. \\
+It is more difficult to hit fast moving targets. Speed is the declared max speed of the target, not the distance in squares it has moved. This only applies to missile attacks. Melee attacks don't get the mods. The skill \emph{lead target} reduces these mods. \\
 To hit mod is speed / 3
 
-E.g: Fast Fabian dashes at 14, and is then mod-4 to hit, even if he has only moved five squares since the beginning of the turn when he is getting attacked.
+E.g: Fast Fabian dashes at 14 and is mod-4 to hit even if he has only moved 5 squares since the beginning of the turn.
 
 
 \subsection*{Stationary targets}
 %-------------------------------
-Melee attacks against a target that is unaware of you, lying on the ground, sitting still, etc, and is not in combat mode and moving around will give mod+3. Stationary targets in combat mode will not give mods. I.e. targets that declare move 0, will still not be "still" enough, since they are assumed to move around a bit in combat.
+Melee attacks against a target that is unaware of you, lying on the ground, sitting still, etc, and is not in combat mode and moving around will give mod+3. Stationary targets in combat mode will not give mods. I.e. targets that declare move 0 will still not be "still" enough since they are assumed to move around a bit in combat.
+Prone targets are also considered as mod+3 stationary for melee attacks even if they are awake and on the way to rise and run away later in the round.
 
-Ranged attacks against a totally stationary target gets a mod+1.
+Ranged attacks against a totally stationary target gets a mod+1 but this does not apply to prone targets.
 
 
 \subsection*{Targets behind cover}
 %---------------------------------
-Attacks against targets that are behind significant cover is mod-3. E.g: half person cover. \\
-Attacks against targets that are mostly behind cover is mod-6. E.g: someone peeking out behind a large boulder.
+Attacks against targets that are behind significant cover is mod-3. E.g: half person cover, or an archer shooting from behind a rock. \\
+Attacks against targets that are mostly behind cover is mod-6. E.g: someone peeking out behind a large boulder, or a crossbowman shooting from behind a battlement or through a crenel.
 
 
 \subsection*{Shields are in the way of ranged attacks}
 %-----------------------------------------------------
-Attacking someone standing behind a shield, i.e. the shield is in the way as seen along the flight path of the projectile, pushes a mod on the attack depending on how large the shield is, and how well the person is using it.
-Some very skilled people can sometimes attempt to parry incoming projectiles, but it requires the maneuver "missile parry" and very high skill.
+Attacking someone standing behind a shield, i.e. the shield is in the way as seen along the flight path of the projectile, pushes a mod on the attack depending on how large the shield is and how well the person is using it.
+
+Some very skilled people can sometimes attempt to parry incoming projectiles but it requires the maneuver \emph{missile parry} and very high skill.
 
 
 \subsection*{Cover from shields, hiding behind shields}
 %------------------------------------------------------
 Most shields have a modifier against ranged attacks that is a form of cover, when attacked from the shield side. This rule will be simplified until partial area arc visuals can be used in Maptools.
 
-Shield cover is the 90deg region centred on (+/-45deg) the facing of the character.
+%Shield cover is the 90deg region centred on (+/-45deg) the facing of the character.
 %Shield side is the 90deg region centred on (+/-45deg) the diagonal forward of the shield arm. I.e: left shield arm covers 0-90deg counter clockwise from the heroes facing, while right shield arm covers 0-90deg clockwise from the heroes facing.
 
-Heroes hiding behind his shield covers +/-45deg from his direct facing. Hiding behind the shield is a normal action, but requires no roll and can be extended indefinitely in time, until the character does something else. Some actions can be taken while still hiding behind the shield.
+Heroes hiding behind their shields have covers +/-45deg from their direct facing. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield.
 
 
+\subsection*{Initiative of area effects}
+%---------------------------------------
+Persistent area effects, e.g. fire spells, poison clouds, etc either have an initiative of their own or inherit the initiative from the action that created them. They "act" in order of initiative just like everything else.
 
+E.g: At initiative 9 Wizzy Wizard casts a Fire Ball with duration 3r. It does damage immediately when it's created, then again at initiative 9 in each of the following 2 rounds. Anyone stuck in the fire at the end of the first round better make sure to have initiative above 9 next round and enough mp to be able to escape, or take damage again at initiative 9 when the fire effect "activates" again.
 
+Also, anyone running into an effect area has that effect applied immediately upon entry, but only once per round even if leaving and entering multiple times in one round.
 
 
 
@@ -1297,26 +1310,28 @@ Heroes hiding behind his shield covers +/-45deg from his direct facing. Hiding b
 \section*{Magic}
 
 
-Spells often take several rounds to cast. Spells come into effect in the last round of casting, in order of initiative. Some spells have casting time counted in actions, 1a (one action), 2a, etc, and should be treated just like a normal actions, usually costing 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells follow initiative unless stated otherwise.
-
-A spellcaster can always choose to cast a spell that takes $\leq$9ap in one full round instead, declaring only base ap for the round and potentially skipping some heavy action mods. This does not apply when spellcasting have been shortened by "fast magic".
-
-Casting spells require concentration. Spellcasting often takes several rounds. The spell roll is subject to the highest action stack modification that the character has had during the casting period. See the "actions that take more than one round" rule above.
+Wave'em hands and mumble something mysterious. Sure to transmogrify your internal mana to sparkling effects of death and mayhem afflicting friends and foe alike.
 
 
-\subsection*{When and how can spells be cast}
+\subsection*{When and how spells can be cast}
 %--------------------------------------------
+Casting spells require concentration, voice, and gestures. Spellcasting often takes several rounds and the spells take effect in the last round of casting following order of initiative.
+
+The spell roll is subject to the highest action stack modification that the character has had during the casting period. See the "actions that take more than one round" rule above.
+
+%TODO: rewrite all Xa spells to Xap instead.
+Some spells have casting time counted in actions, 1a, 2a, etc, and should be treated just like normal actions at 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells follow initiative unless stated otherwise.
+
 Spells that take one round or less to cast can be cast whenever in the round, according to initiative, just like performing regular actions. That means they can also be cast as reactionary defence actions, like a parry, or retaliations after incoming attacks.
-
-Spells that take more than one round can be cast whenever in their final round of casting, following initiative and reaction rules, just like spells that take shorter time to cast.
-
 E.g: it's possible to summon a ward flash defence to reduce the damage of an incoming attack, just like parrying with a regular shield.
+
+A spellcaster can always choose to cast a spell that takes $\le$9ap in one full round instead, declaring only his base ap for the round and potentially skipping some heavy action mods. This does not apply when spellcasting have been shortened by \emph{fast magic}.
 
 
 \subsection*{No power draw unless successful}
 %--------------------------------------------
-Casting spells that fail and fizzle causes no mana loss, unless it is a large failure. \\
-Fail-3 or worse will cause 1 mana lost. \\
+Casting spells that fail and fizzle causes no mana loss, unless it is a serious failure. I.e: fail-1/-2. \\
+Fail-3 or worse is 1 mana lost. \\
 Fail-6 or worse will cause the loss of the full cost of the spell.
 
 This is to make spell casters more enduring in game. It also fits well with the image of the wizard building the spell, then empowering it.
@@ -1327,7 +1342,7 @@ This is to make spell casters more enduring in game. It also fits well with the 
 Many spells have optional power effects, such as increasing damage, range, or duration by spending more mana. Mana must be spent for these effects individually.
 
 E.g: Warlock Warner casts Shock Bolt, with normal cost 1m, but adds two mana for extra damage and one mana for extra range. The total cost is now four mana.
-Just make sure you have enough levels in the "magic" skill to be able to spend that much mana in one go.
+Just make sure you have enough levels in the magic skill to be able to spend that much mana in one go.
 
 
 \subsection*{Duration of spells}

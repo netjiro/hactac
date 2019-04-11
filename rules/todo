@@ -2,7 +2,7 @@
 %       10        20        30        40        50        60        70        80
 
 
-this todo list has input from players as well as author
+this todo list has input from players as well as author,
 lots of comments in swedish, will not translate
 
 
@@ -31,6 +31,34 @@ lots of comments in swedish, will not translate
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
+
+
+190410:
+TODO: tackle utan resist borde inte aktivera ?
+      tackle kan inte blocka om man inte har tackle/block ?
+      kan inte tackla utan skill tackle ?
+TODO: overextend knapp
+TODO: fixa så att det är lätt att göra EG knappar  extra gear
+TODO: kolla upp om "breaker" skall skala med vapnet istället för fixed värde med lvl ?
+TODO: kan man släppa en aktiv formel ?  utan dispell ?
+      eg firestorm, johmenvisst
+TODO: powernap få tillbaka mana även när man bara sover någon runda eller så
+      eller stamina / mana
+TODO: bitch slap - som ignorerar pansar, ger ett pain, tar bort ett ap ?
+TODO: Excessive strength borde göra rustningar lättare också.
+
+
+190320:
+TODO: stamina changes: fix jackhammer, energizer bunny
+TODO: rest button: stamina +con/3 (-1 for implementation where stam+1/r auto)
+TODO: skall det gå att kasta 1r actions som response actions?
+      tex en 1r spell som en parry reaction?
+      Eller skall Xap spells följa initiativ, men inte response/right to react?
+      Men att bryta right to react förstör en hel del i spelet. Mycket taktiskt
+      meckel med att banka på folk i rätt ordning...
+TODO: light strength / tank strength strength bonus for armour mods
+      höcker föreslog att överstarka nissar skall ha mindre mods för sina pansar
+
 
 190306:
 TODO: rewrite: all characters regain con/3 stamina per round
@@ -88,7 +116,8 @@ TODO: skadetyper slashing/piercing/crushing/magic/[elemental]
 TODO: skall man tvingas deklarera W för att gå genom knölig mark med 1mp M ?
 TODO: skill AFK  - ger xp även om man inte är med på passet
 TODO: skill "I Almost Had Him"  full XP även för folk som flyr
-TODO: kolla om det skall vara minus på magi genom eld  -  nope enligt tidigare diskussion
+TODO: kolla om det skall vara minus på magi genom eld  
+      NOPE enligt tidigare diskussion
 
 181122:
 TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin inte skall ha ccf från reactive skin, se räkneexemplet
@@ -113,8 +142,6 @@ TODO:  movement state "ride" som sätter movement undeclared at 0mp
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 OLD: ---------------------------------------------------------------------------
-
-
 
 TODO: bygg liten lätt area effekt skada formel
       ?? kanske ok för att rensa småknott, 3ap dam1 pen0 darkflash radius 3
@@ -148,8 +175,6 @@ TODO: roll on stam 0 ?
 TODO: lean - also measure distance from adjacent square, same square.
       lean can also remove problems with shooting from base contact in some
       cases.
-TODO: fire damage - at initiative, or beginning of turn ? beginning of turn
-      is probably better !  -  nope, easier but not better
 TODO: yield should say push 3 even if with fast action
 TODO: spells: sticky floor, web, som grapple fast på yta...
 TODO: all abilities should have at least ccf 1.1, so that it matters which and
@@ -715,3 +740,22 @@ DONE: enforce negative stamina affects ams. mod=-stam
       easy to automate in util.totmod().
       see rules.tex ca line 914, subsection*{Stamina}
 DONE: write which abilities and spells that can train without purchasing or finding.
+190316:
+DONE: stamina changes: always stam+1/r, M0,W1,R2,D3, all attacks costs stam-1
+      rest: M 0ap, stam +con/3 
+190320:
+DONE: fire damate at order of initiative - inherits initiative from
+      when the spell is cast. 
+      Can force chars to declare high speed to get initiative enough to flee
+      out of area before the fire does second damage again.
+190411:
+DONE: FIXED : ändrade stamina draw i alla attack scripts
+      stamina dras även om con=0 och om stamina = =0
+      ELLER: antagligen attacker som drar stamina oavsett !!
+      stamina rest el likn för con måste ha floor inte float 
+DONE: FIXED : update character doesn't flag state.Dead == 1 as state.Done=1
+      dead skall ta bort done
+DONE: clearLights() called in util.damage() death section
+      kan man få dead att stänga av scary lights ?
+DONE: uppdatera    stamina prysslarna
+DONE: goblins får gå genom friendly diagonals för de är mindre
