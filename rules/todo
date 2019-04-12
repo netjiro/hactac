@@ -11,67 +11,54 @@ lots of comments in swedish, will not translate
 
 
 
-
-
-
-%--------|---------|---------|---------|---------|---------|---------|---------|
-%       10        20        30        40        50        60        70        80
------------------------ from the adventures/todo-compilation -------------------
-
-
-
-
-
-
-
-
-
-
-
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
 
 
+
+TODO: fix util.declareMove() to also accept mp numbers as argument
+TODO: roll initiative skall bara synas för GM:
+      rolling för hidden critters etc.
+TODO: duration skall också skriva i chat bara för SL
+TODO: ta bort att stamina säger hur mycket som finns kvar
+TODO: skriv inte exhausted för kritter utan stamina !!
+
+
+
 190410:
-TODO: tackle utan resist borde inte aktivera ?
-      tackle kan inte blocka om man inte har tackle/block ?
-      kan inte tackla utan skill tackle ?
 TODO: overextend knapp
 TODO: fixa så att det är lätt att göra EG knappar  extra gear
 TODO: kolla upp om "breaker" skall skala med vapnet istället för fixed värde med lvl ?
+TODO: powernap få tillbaka mana även när man bara sover någon runda eller så ?
+      eller stamina / mana ?
+TODO: bitch slap - som ignorerar pansar, 0dam? ger ett pain?   tar bort ett ap ?
+TODO: Excessive strength borde göra rustningar lättare också.
+
 TODO: kan man släppa en aktiv formel ?  utan dispell ?
       eg firestorm, johmenvisst
-TODO: powernap få tillbaka mana även när man bara sover någon runda eller så
-      eller stamina / mana
-TODO: bitch slap - som ignorerar pansar, ger ett pain, tar bort ett ap ?
-TODO: Excessive strength borde göra rustningar lättare också.
+prev: spells - bring down a spell before time is psy-spellmana roll
+      spells last even if caster dies
+      healing spells dissipate when victim dies? - antorgs easier, but cannot
+      rescue heroes either by last chance quaff/spell/etc.
+prev: rewrite magic - effect until end, not until pass out/die
+      except for active psy-psy or control spells which fizzle when die/pass out
 
 
 190320:
 TODO: stamina changes: fix jackhammer, energizer bunny
 TODO: rest button: stamina +con/3 (-1 for implementation where stam+1/r auto)
-TODO: skall det gå att kasta 1r actions som response actions?
+TODO: skall det gå att kasta 1r actions som response actions?   Japp!
       tex en 1r spell som en parry reaction?
       Eller skall Xap spells följa initiativ, men inte response/right to react?
       Men att bryta right to react förstör en hel del i spelet. Mycket taktiskt
       meckel med att banka på folk i rätt ordning...
+      MEN inte kasta multiround actions som response actions
 TODO: light strength / tank strength strength bonus for armour mods
       höcker föreslog att överstarka nissar skall ha mindre mods för sina pansar
 
 
 190306:
-TODO: rewrite: all characters regain con/3 stamina per round
-      con=2: 1stam/2r
-      con=1: 1stam/3r
-      con=0: 1stam/4r
-      stamina costs: m=0, w-1, r-2, d-3
-                     all attacks cost 1stam
-                     some very heavy weapons cost double stamina
-                     some very light weapons cost half, skip stamina for every other attack
-      affects jackhammer, energizer bunny
-
-
 TODO: Goblin Destiny : add gossip lists for situations where they meet ppl
       towns, patrols, possible other goblins they capture / trade with
 
@@ -98,6 +85,7 @@ TODO: skill: lazy walk : gå W och få tillbaka stamina
 TODO: skill: masochist : ger bonus när man tar pain...
 TODO: skill: pole vault : hoppa med spjut/stav hoppa över hinder/folk
 
+
 181203: mail
 TODO: multiple points in mail 181203:1155 to hack'n'slash group
      https://mail.google.com/mail/u/0/#inbox/QgrcJHrnzwjsWwWfkvxbWrzFSWVqTkxrjkL
@@ -117,10 +105,11 @@ TODO: skall man tvingas deklarera W för att gå genom knölig mark med 1mp M ?
 TODO: skill AFK  - ger xp även om man inte är med på passet
 TODO: skill "I Almost Had Him"  full XP även för folk som flyr
 TODO: kolla om det skall vara minus på magi genom eld  
-      NOPE enligt tidigare diskussion
+      NOPE enligt tidigare diskussion, omvärdera nu med olika typer av formler ?
 
 181122:
-TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin inte skall ha ccf från reactive skin, se räkneexemplet
+TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin 
+      inte skall ha ccf från reactive skin, se räkneexemplet
 
 181114:
 TODO:  movement state "ride" som sätter movement undeclared at 0mp
@@ -158,7 +147,6 @@ TODO: gör en info rad för porträttet, med arms etc  --  try using label inste
 TODO: draw mana psy roll should faint when fail ?
 TODO: bygg marshlight spell
 TODO: build lysdjur
-TODO: feign death - charisma roll, mod for damage, etc
 TODO: svärmare, blir bättre ju fler man är runt target
 TODO: ability for mörkerseende.
 TODO: skill : offra xp för extra skada, after rolls etc.
@@ -167,9 +155,10 @@ TODO: fix raise dead, control dead, etc.
 TODO: killing blow, alltid träffar prone target. "coup de grace" slut på lidande
       eller snabbare, eller alltid killing ?
       dock begränsat till max skada på vapen ?
+      Nah, nog med att det är mod+3 att träffa ?
 TODO: paralyse knapp
-TODO: qualify how yielding effects free attacks on disengage.
-TODO: quaffing skall ta hel runda, men blir bara action,
+TODO: qualify how yielding affects free attacks on disengage / opportunity
+TODO: quaffing skall ta hel runda, men blir bara action ?
 TODO: right to react, movement för att komma in i närstrid men inte mer
 TODO: roll on stam 0 ?
 TODO: lean - also measure distance from adjacent square, same square.
@@ -180,13 +169,14 @@ TODO: spells: sticky floor, web, som grapple fast på yta...
 TODO: all abilities should have at least ccf 1.1, so that it matters which and
       when to buy.
 TODO: kass hp (neg hp) borde sänka initiativ
-TODO: läs TOM beskrivning igen, ang beteende av odöda
 TODO: helmet pot holder, with drinking straws
-TODO: köpa fler off balance, precis som yield, måste fixa macron
+TODO: köpa fler off balance, precis som yield, 
+      ? behöver fixa macron som räknar extra steg ?
 TODO: clarify defensive step must be in yield.
 TODO: clarify acrobatics yield works
-TODO: clarify, phalanx ger bonus även för parader utan sköld.
+TODO: clarify phalanx ger bonus även för parader utan sköld.
 TODO: 5 lik på hög, någon gång borde det bli svårare än mod-3 ruta
+      mod-3 per lik ?
 TODO: clarify, phalanx works only in straight formations, over shoulders, etc.
 TODO: attacker över phalanx går i lägsta initiativ av de två involverade !
 TODO: corner fighter ...   njae
@@ -195,30 +185,22 @@ TODO: donkey tecknade :
       http://www.canpages.ca/blog/wp-content/uploads/2009/03/donkey-irishman.jpg
       http://www.iconarchive.com/icons/turbomilk/animals/256/donkey-icon.png
 TODO: sänk pris på war dogs ? bättre olika dogs ?
-TODO: run rundan innan kan tillgodoräknas som sats om man fortsätter eller ökar.
-TODO: stora rustning skall ha jump och climb penalties
+TODO: run rundan innan kan tillgodoräknas som sats om man fortsätter eller ökar ?
 TODO: clarify regler gå in och ut ur kassa rutor, samt skog kass jättekass,
       melee, to hit, ranged in ranged ut, hide, etc.
 TODO: clarify, defensive step fungerar inte när det inte går att ta mer
       movement, e.g. i vatten då man flyttat ner för att vada 1sq/r
 TODO: drowning damage: con hålla andan rundor, sedan 1hp/r damage
 TODO: fetch arrows  commandupgrade for dog.
-TODO: kolla så att orcherna inte är dolda !!
 TODO: qualify disoriented, ex efter teleportation iaf om man blir teleported
       av ngn annan
 TODO: förslag: vissa maneuvers kräver att man har tillräckligt mycket fv
 TODO: clarify that looses whirlwind for any actions not in the whirlwind,
       e.g. taking a tackle hit.
 TODO: build tokens för arrow markers - copy to players
-TODO: spells - bring down a spell before time is psy-spellmana roll
-      spells last even if caster dies
-      healing spells dissipate when victim dies? - antorgs easier, but cannot
-      rescue heroes either by last chance quaff/spell/etc.
 TODO: change all aura and slow area effects to have effect only last in round,
       not during round. Play round, then when all is done, tally area effects.
 TODO: fix so that heal happends before check for pass out
-TODO: rewrite magic - effect until end, not until pass out/die
-      except for active psy-psy or control spells which fizzle when die/pass out
 TODO: when fixing OnTokenMove, make sure it works with defensive step,
       off balance etc... manual moves.
       lean vision - bygg ett litet öga-v token som man kan använda istället
@@ -236,12 +218,8 @@ TODO: state för antorgerna för avstånd och för närstridsklubbor.
 TODO: heal skall fortfarande skriva -heal i woundslistan.
 TODO: lägg till var kusin kan tänkas vara normalt i äventyrets briefing
       från nurensachs
-TODO: roll initiative skall bara synas för GM:
-      rolling för hidden critters etc.
 TODO: sänk antorgers heal till 2hp/r scale 2hp/m
-TODO: duration skall också skriva i chat bara för SL
-TODO: change antorg mana transfer så att de kan flytta över hur mycket som helst
-      per runda
+TODO: change antorg mana transfer så att de kan flytta över mer per runda
 TODO: damage taking should not do the kill, unauto, etc.
       do that in end of turn instead ! ??  - just for antorgs ?
       -- should be for all characters with active heal --
@@ -289,8 +267,8 @@ TODO: clarify move on stun, hur mycket minus ams börjar hindra förflyttning?
       skall man kunna ta actions som inte kräver rolls ? borde inte ...
 TODO: mer skada när folk inte kan tacklas iväg ?
       kanske dubbel skada för de tackle stegen som inte kan knuffas bort?
-TODO: problem att man alltid kan tackla ner folk så länge man är snabbare och
-      har högre initiativ !
+TODO: ? problem att man alltid kan tackla ner folk så länge man är snabbare och
+      har högre initiativ
 TODO: maneuver: takes full round, hits all in base contact
       howto stack with reach ?
       drar extra stamina ...
@@ -306,9 +284,7 @@ TODO: move i närstrid triggar right to react
 TODO: pentagrammet, trollar in i flaska i labbet?
       eller bara blinkar ut, tills vidare, så att de kan få tillbaka folk
       kontrollerat
-TODO: ta bort att stamina säger hur mycket som finns kvar
 TODO: gör mer utomhusstrider, request from blom
-TODO: skriv inte exhausted för kritter utan stamina !!
 TODO: dex roll
 TODO: skill - byta XP mot HP  ??
 TODO: big breasted orc healer archer hireling
@@ -333,10 +309,8 @@ TODO: end of round knapp för alla, också visa vilka som inte är klara...
 TODO: sweep fungerar även om folk avoidar
       och teleporterar
 TODO: färgsträck istället för zick-zack för dörrar
-TODO: kolla priser på unfazed, acrobatics, ...
 TODO: stalkers skall bara defence teleportera 3 steg !
       eller kostar stamina att försvinna
-TODO: unfazed skall höja initiativ för turn med lvl istället för interrupt
 TODO: skall leader bonus gälla för resistance vs slag, tex str vs str ... ?
 TODO: skall leadership även ge bonus på tex perception rolls - roligare så
 TODO: massive strike el massa skada mot parering kanske skall göra så att
@@ -353,9 +327,8 @@ TODO: skill / miniskill / maneuver - execute:
 TODO: enc är str*3 plus en bas för rasen
 TODO: knapp long action som räknar ner och håller koll på max ams...
 TODO: failure of stam check always costs 3 ams
-TODO: liggande är avoid mod-3 och parry mod-3
+TODO: prone/liggande är avoid mod-3 och parry mod-3
       kanske avoid med mod-6? nope -3 är tillräckligt
-TODO: mod+3 att träffa prone i närstrid ? antagligen redan skrivet
 TODO: ligger på dålig ruta, fortfarande mods?
 TODO: the undead hirelings skall vara mer resistenta mot fear
       eg brütal slaughter, eg mod+6 eller så
@@ -396,19 +369,6 @@ from rules.tex
 % OR ?? this will lead to a lot of rolling,
 % but can make double or whirlwind worth buying even to low skill levels.
 % I'm afraid of the "rulla för double bara för att, patentlösning"
-
-
-% fix different action duration versions
-% skip whole round primary action,
-% just keep whole round - no other actions
-% number of actions action duration, or mod push action duration
-% very fast action mod-1
-% fast action mod-2
-% action mod-3
-% slow action mod-4
-% very slow action mod-5
-% long action mod-6
-% very long action mod-9
 
 
 % change "just passing by", not base contact, but weapon reach instead.
@@ -533,6 +493,9 @@ NOPE: too much work, too many different properties and sights and halos
       TODO: halos för movement templates
 NOPE: heal3 macro, remove pain
       unnecessary, can't easily parse and make sense of the wounds list
+NOPE: tackle utan resist borde inte aktivera ?  jo, det behöver aktivera
+NOPE: unfazed skall höja initiativ för turn med lvl istället för interrupt
+      remove unfazed, reduces tactical depth
 
 
 
@@ -759,3 +722,16 @@ DONE: clearLights() called in util.damage() death section
       kan man få dead att stänga av scary lights ?
 DONE: uppdatera    stamina prysslarna
 DONE: goblins får gå genom friendly diagonals för de är mindre
+DONE: can't take tackle/block nor active/resist action without tackle/block skill
+DONE: rewrite: all characters regain con/3 stamina per round
+      con=2: 1stam/2r
+      con=1: 1stam/3r
+      con=0: 1stam/4r
+      stamina costs: m=0, w-1, r-2, d-3
+                     all attacks cost 1stam
+                     some very heavy weapons cost double stamina
+                     some very light weapons cost half, skip stamina for every other attack
+      affects jackhammer, energizer bunny
+DONE: possum:
+      feign death - charisma roll, mod for damage, etc
+DONE: stora rustning skall ha jump och climb penalties
