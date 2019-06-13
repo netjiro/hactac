@@ -142,14 +142,14 @@ attacks
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\subsubsection*{Note on maptool: token size}
+\subsubsection*{Notes on maptool: token size}
 Most standard size humanoids like humans, elves, dwarves, orcs should be set to  normal size tokens. Halflings and goblins should be set to small size, and runts should be set to tiny size.
 
 In general:\\
 1-7hp : tiny size \\
 5-15hp : small size \\
-10-25hp : normal size \\
-20-50hp : large (2x2) \\
+10-30hp : normal size \\
+20-60hp : large (2x2) \\
 30-100hp : huge (3x3) \\
 Haven't used anything larger yet.
 
@@ -157,7 +157,7 @@ Some examples:\\
 All standard low hp goblin mobs are set to small size even if they only have a couple of hp, while all runt are set to tiny even if they have upwards of 10hp in some cases.\\
 Wolf is set to normal, dog is set to small. Just to better represent the potential danger rather than any actual "realistic" sizes.\\
 Donkeys and cave ponies are set to normal size, but horses are usually set to large 2x2.\\
-Jumping spider spawns are set to tiny, while black bug spawns are set to small size. Jumping spiders will die when you touch them, but the black bugs are more difficult with their abs and behave differently with their cling mods, even if they only have 5hp.
+Jumping spider spawns are set to tiny, while black bug spawns are set to small size. Jumping spiders will die when you hit them, but the black bugs are more difficult with their abs and behave differently with their cling mods, even if they only have 5hp.
 
 \
 
@@ -255,10 +255,13 @@ no pain or low hp mods
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 They attack on "sight"(smell), ca 10sq. There is a 50\% chance that they
-will become hostile and attack each round when a potential target is in
-their smell range. Mostly they stand around or mill around slowly.
-Normally they are independent and uncoordinated. They will however attack
-any non-bug who has bug blood/gore on them, since it signals an enemy.
+will become hostile and attack each round when a potential target is in 
+their smell range. Mostly they just mill around slowly, independent 
+and uncoordinated. They will however attack any non-bug who has bug 
+blood/gore on them, since it signals an enemy.
+Killing a bug risks spreading gore on the attacker if he's close. Use e.g: 
+splatterchance : 3*overkill on a d10. Gore takes several rounds to clean 
+off and requires water.
 
 ===================================
 black bug                (beetle02)    set small token size (slight reduction)
@@ -274,7 +277,7 @@ bite cling  7 dam 4 once per round
                   cost+1 movement per step taken
 nibble      5-abs when held dam 1 penetrating
             once per round
-immune to pain and hp/2 mods
+immune to pain and low hp mods
 -----------------------------------
 Mostly they stand around or mill around slowly.
 Normally they are independent and uncoordinated.

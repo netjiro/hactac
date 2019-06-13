@@ -212,15 +212,17 @@ Many offensive spells have similar general mechanics.
 
 \begin{description}
 
-\item{bolt, zap, flash:}
+\item[bolt, zap, spark, lightning:]
 Bolts don't take target \emph{to hit} modifications on the spell casting roll. They ignore things like target partial cover, shields partially in the way, target movement speed, partially obstructed view by fire, etc.
 Generally these magic energies don't travel in a straight line from caster to target but might curve, form a branched lightning tree, split and reform, or snake forward erratically.
 
-\item{spear, lance, dart, arrow, quarrel, missile:}
-These work similar to bow arrows. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. %TODO: Think there are edge cases where this will not work right
-Often the spell formation shoots in a rapid straight line to the target.
+\item[spear, lance, dart, arrow, quarrel, missile:]
+These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. 
+%TODO: think there are edge cases where this will not work right
+Often the spell formation shoots in a rapid line to hit the target, or whatever gets in the way. A failed casting, which would have succeeded if not for to hit mods from cover, can be interpreted as a successfully cast spell which strikes cover or near the target instead
+%TODO: should this then still draw full mana, or reduced mana for minor fail? Can draw reduced mana and still make a nice flashy effect.
 
-\item{strike, spark, chock:} % mental lock spells ignore cover etc, but mods by psy etc
+\item[strike, chock, flash:] % mental lock spells ignore cover etc, but mods by psy etc
 %              ignores target move mods, shooting into melee mods
 %              BUT: they take cast mods for target psy, if target resists,
 %                   and if the target knows magic skill.
@@ -233,9 +235,10 @@ mod -(target psy / 3)\\
 mod -3 if target takes a 3ap action to resist the spell\\
 mod -(target magic lvl / 3)\\
 
-
 \end{description}
 
+
+%TODO: the later two classes should have reduced cost or int/psy requirements relative to the original bolt class, since that doesn't take mods.
 
 %no mods (old style):  bolt, zap, flash, 
 %arrow style:          spear, lance, dart, arrow, quarrel, missile, 
@@ -277,6 +280,11 @@ force bolt     cast 3ap 1m, dam 5 +1/m
                int 10, psy 6
 
 %---===### current above ###===---
+\end{verbatim} \normalsize
+\noindent Spells listed below are not re-balanced yet.
+See balance guidelines in comment segment above.
+\small \begin{verbatim}
+
 
 fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round
@@ -853,6 +861,38 @@ hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
 
 
 
+More spells on the way, not balanced 
+
+\small \begin{verbatim}
+destructive dispell
+    cast 1r, 1m, range 20 +10/m, 
+    psy+3/m vs psy+mana
+    blast with range of target spell mana
+    damage is target spell mana
+    i.e. target spell disintegrates in a blast with damage and radius equal to mana
+
+destructive feedback
+    cast 1r, 1m, range 20
+    psy+3/m vs psy
+    damage 6 penetrating and draws equal mana from target
+    i.e. target's mana is damaging
+
+invisibility
+    cast 1r, 1m, personal +1 target/2m touch
+    duration 3r +2/m
+
+elsewhere
+    cast 3ap, 1m, personal
+    teleport 2D4-5 sq X/Y (+/-3sq)
+    jump teleport anywhere else, away from incoming blow
+    (alternatives: 2D6-7 +/-5sq , 2D3-4 +/-2sq)
+\end{verbatim} \normalsize
+
+
+
+
+
+
 %-------------------------------------------------------------------------------
 %M A G I C A L   E Q U I P M E N T
 %---------------------------------
@@ -862,9 +902,7 @@ hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
 
 Wizards and Warriors alike can gain great power by wielding the arcane artefacts imbued with various magical energies. Below are some suggestions of magical items and artefacts. Make up your own to suit your adventure.
 
-\small
-\begin{verbatim}
-
+\small \begin{verbatim}
 sacrificial    dam 1, penetrating 1, ritual sacrifice 10r,
 dagger         drains-converts 1hp to 1m /r,
                until the target dies from hp or mana loss.
@@ -900,12 +938,12 @@ powerstaff     dam 3/4 (1h/2h), abs 10, str 3 (max +1 str bonus)
 Quaff! the     Metal tin with a golden glowing liquid. Generally costs ~1gold.
 soft drink     Restores 4 hitpoints and 4 stamina in one round.
 of heroes      Has a tendency to be addictive.
-               Advertisement: Yngolf Storpec says it even tastes good.
-               (The fine print: All side-effects are purely co-incidental
+               Advertisement: "Yngolf Storpec says it even tastes good."
+               The fine print: All side-effects are purely co-incidental
                and have never been scientifically or thaumaturgically proven
                to be caused by the use of Quaff! Quaff corp is not responsible
                for any mental or physical disturbances, changes, manifestations,
-               or other interesting or harmful events.)
+               or other interesting or harmful events.
 
 Blast Off      Beautiful crystal vial of clear liquid. Costs ~5gold.
                restores 5+1d5 hitpoints and all stamina in 5 rounds.
@@ -914,7 +952,7 @@ Blast Off      Beautiful crystal vial of clear liquid. Costs ~5gold.
                Everyone caught in the blast get 2 stamina restored.
 
 Long Sword of  dam 8, abs 14, str 6
-Irdereng       on successful attack the attacker can choose to roll psy,
+Irdereng       on successful hit the attacker can choose to roll psy,
                if successful the attack does diff (psy roll) extra damage,
                penetrating, and draws one mana point from the user.
 
@@ -928,7 +966,7 @@ Bow            range mods as regular bow, rate of fire as regular bow,
                range 10 regardless where it is aimed (except user).
                Outside range 10 it gives a mod+1 to hitting the selected target.
                Largest is decided by base size, or str.
-               And yes, it likes friendly fire.
+               Fuck-off Fred swears it seems to like friendly fire.
 
 Sledge hammer  dam 5, abs 14, str 5, finesse-0
 of solitude    After a hit the user can choose to spend 1 mana to:
@@ -1067,7 +1105,7 @@ Tattoo         attacked the tattoo flares up and protects him.
 Glowrb         A crystal orb which when touched starts to glow with a bright
                white light. It stays alight for 1000r or until touched again.
                Single use, charge, or permanent, depending on price and quality.
-               enc 3.0-5.0
+               enc 3.0 - 5.0
 
 PortaPortal    Two large metal discs, comes as matched pairs. When both are
                placed on the ground and both seals are broken it creates a
@@ -1084,7 +1122,7 @@ PortaPortal    Two large metal discs, comes as matched pairs. When both are
                make sure the monsters don't follow you through.
                Usually activates in 1-3r depending on quality.
                Single use only.
-               enc 3.0-10.0 x2, usually ~5.0
+               enc 3.0 - 10.0 x2, usually ~5.0
 
 Amulet of      When the character is taking hp damage the amulet activates and
 random         absorbs 1d3 damage, draining one mana in the process.
@@ -1101,14 +1139,11 @@ TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
                of movement or fall.
                Get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
-\end{verbatim}
-\normalsize
+\end{verbatim} \normalsize
 
 There are of course also more "normal" boring magical items, weapons, and artefacts.
 
-\small
-\begin{verbatim}
-
+\small \begin{verbatim}
 weapon +x     A weapon that is easier to use or does more damage. It can give
               the user a bonus to his weapon skill, or to his damage roll, or
               to both.
@@ -1120,9 +1155,7 @@ stamina potion
 [ability] potion
 [skill boost] potion
 [stat boost] potion
-
-\end{verbatim}
-\normalsize
+\end{verbatim} \normalsize
 
 
 \textbf{TODO:} custom magical stuff is not finished yet...

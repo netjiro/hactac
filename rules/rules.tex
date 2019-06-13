@@ -271,7 +271,7 @@ elven bladesman   m2 w4 r8 d12
 
 E.g: Heroic Herman wants to move 2mp . He then declares movement speed Walk and must take a mod-3 penalty to all actions that round, even if the action is taken before HH moves.
 
-Movements can be split around actions. However, other combatants can often react to actions before character can move again. E.g: Heroic Herman declares run, moves 4sq, attacks Monster Mike but misses. MM then attacks back before HH can move away. HH chooses avoid and yield and then moves two more steps, now out of harms way. Until next round... This is the \emph{right to react} rule, see below.
+Movements can be split around actions. However, other combatants can often react to actions before character can move again. E.g: Heroic Herman declares run, moves 4sq, attacks Monster Mike but misses. MM then attacks back before HH can move away. HH chooses avoid and yield and then moves two more steps, now out of harms way. Until next round... This is the \emph{right to react} rule, (\hyperref[righttoreact]{see below}).
 
 
 \subsection*{High initiative selects order of actions}
@@ -284,6 +284,7 @@ Characters with lower initiative must also declare action points and movement sp
 
 
 \subsection*{The right to react}
+\label{righttoreact}
 %-------------------------------
 All characters can react to actions being performed to them. This means that a slower character can choose to perform one action in response to actions being done to them by faster characters with higher initiative.
 The right to react gives the right to perform one action, including movement before and/or after that action. The reaction action does not have to target the attacking character, but can be a non target action or target any other character.
@@ -378,7 +379,7 @@ Parry is a form of "defend" action. Some weapons or attack maneuvers have todefe
 
 \action{Action: "jump"} an obstacle or chasm requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll.
 
-Jump action does not take any negative modifications from movement speed. It instead gets mod +speed/3, where speed is the speed of approach: the number of squares moved in a straight line \emph{before} the jump (\hyperref[approach]{see below}).
+Jump action does not take any negative modifications from movement speed. It instead gets mod +speed/3, where speed is the speed of approach: the number of squares moved in a straight line \emph{before} the jump, (\hyperref[approach]{see below}).
 E.g: Dashing 7sq before the jump gives Flying Fritz a jump mod+2..
 
 The jump movement also costs movement points as normal. If the character moves further than his max movement including the jump he will continue the jump but fall on landing unless he can go off balance enough to cover the difference.
@@ -825,7 +826,7 @@ It's possible to have multiple off balance if the character purchases the skills
 When the character tries, or is forced, to move beyond his off balance level he will fall down, just as if he didn't have off balance.
 
 
-\subsection*{speed \& distance of approach}
+\subsection*{Speed \& distance of approach}
 \label{approach}
 %-----------------------------------------
 Some skills/actions like jump, tackle, charge have bonuses based on the speed/distance moved in a straight line just before the action.
@@ -866,6 +867,7 @@ Under special circumstances some actions are 0ap instant actions and take no tim
 
 
 \subsection*{Actions that take a full round}
+\label{multiroundactions}
 %-------------------------------------------
 Throwing a javelin takes a full round, that means the character can take no other actions that round. He will fire in order of initiative. A high initiative character can choose to fire before or after a low initiative character.
 
@@ -907,33 +909,23 @@ E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slow
 Stamina is a measure of how long the character can keep up with high power activity, such as hard battling, running, etc. When the stamina runs out the character will have problems performing taxing actions and movements.
 
 \noindent
-Every attack after the first one each round costs one stamina point. \\
-Every round you run cost one stamina point. \\
-Every round you dash cost two stamina points. \\
+Each attack generally costs one stamina point. \\
+Defence actions cost no stamina.\\ 
+Every round you walk costs one stamina point. \\
+Every round you run costs two stamina point. \\
+Every round you dash costs three stamina points. \\
 Some skills and maneuvers also require drawing stamina.
 
-Every round you do nothing (rest) you regain one stamina. You can maneuver while resting, but not walk, run, or dash. You can take no actions while resting.
-%If you take damage (actually reduce hp) while resting you regain no stamina.
-
-If stamina reaches 0, you must start rolling for con for every action that would have required a stamina point. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
+The characters generally regain one stamina at the start of each round. If stamina reaches 0, you must start rolling for con for every action that would have required a stamina point. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
 
 When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
 E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.
 
-
-
-\subsection*{Stamina (alt model)}
-%--------------------
-A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round.
-
-Movement speed maneuver costs no stamina but walk costs 1 stamina, run costs 2, and dash costs 3. Each attack generally costs 1 stamina, but some weapons and attack maneuvers differ. Defence actions do not cost any stamina.
-
-Characters with low con regain stamina slower than normal:\\
+A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round. Characters with low con regain stamina slower than normal:\\
 con=2 regains 1stam/2r\\
-con=1 regains 1stam/4r\\
-con=0 regains 1stam/10r\\
+con=1 regains 1stam/3r\\
+con=0 regains 1stam/4r\\
 con<0 does not regain stamina without long rest outside combat.
-% implement: round modulus check: if con<3: round modulus 2/4/10 == 0
 
 
 
@@ -1092,9 +1084,33 @@ E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires s
 And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder requires dex 7. Fabian thus takes mod-1 and +1ap, which means his fast rapier is now just 3ap normal speed. So unfortunate...
 
 
+§TODO: rewrite excessive strength bonus points allocation structure
 \subsection*{Excessive str bonus}
 %--------------------------------
-Heroes with higher strength than the weapon requires can use certain skills to get bonus effects to damage, reduced stamina cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects. E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 \emph{or} for two attacks that do not require stamina, or for dam+1 and one attack without stamina cost.
+Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
+
+
+
+TODO: meh, rewrite, change
+Always use the highest base strength requirement of all equipment, manuvers, skills, etc when calculating the free excessive strength points.
+E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str3 in 2h grip) the excessive strength available 
+
+%TODO: rewrite example, after changes to stamina
+E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 \emph{or} for two attacks that do not require stamina, or for dam+1 and one attack without stamina cost.
+
+% new allocation example, including stronk tank
+E.g: Giant Gerda has str 13, 
+plate armour (str5)
+tower shield (str8 or slow-1 str5)
+great axe (str9 or slow-1 str6)
+
+
+She has slugger 3, stronk tank 2, fast strength.
+She can spend 6 excessive strength to reduce her armour penalty class by two levels, to have the plate feel like a leather armour, and 
+
+Reallocating extra strength points takes one round per point, unless the Hero has flexible muscles.
+
+\emph{Note:} that high dexterity requirements do not work the same way. High dex is generally just a threshold cutoff. If the character has high enough dex the bonus is available, regardless if there are other bonuses that have dex requirements that are active at the same time.
 
 
 \subsection*{Reach}
@@ -1288,11 +1304,11 @@ Heroes hiding behind their shields have covers +/-45deg from their direct facing
 
 \subsection*{Initiative of area effects}
 %---------------------------------------
-Persistent area effects, e.g. fire spells, poison clouds, etc either have an initiative of their own or inherit the initiative from the action that created them. They "act" in order of initiative just like everything else.
+Persistent area effects, e.g. fire spells, poison clouds, etc either have an initiative of their own or inherit the initiative from the action that created them. They act and apply effect in order of initiative just like everything else.
 
-E.g: At initiative 9 Wizzy Wizard casts a Fire Ball with duration 3r. It does damage immediately when it's created, then again at initiative 9 in each of the following 2 rounds. Anyone stuck in the fire at the end of the first round better make sure to have initiative above 9 next round and enough mp to be able to escape, or take damage again at initiative 9 when the fire effect "activates" again.
+E.g: At initiative 9 Wizzy Wizard casts a Fire Ball with duration 3r. It does damage immediately when it's created, then again at initiative 9 in each of the following 2 rounds. Anyone stuck in the fire at the end of the first round better make sure to have initiative above 9 next round and enough mp to be able to escape, or take damage again at initiative 9 when the fire effect activates again.
 
-Also, anyone running into an effect area has that effect applied immediately upon entry, but only once per round even if leaving and entering multiple times in one round.
+Also, anyone running into an effect area has that effect applied immediately upon entry, but only once per round even if leaving and entering multiple times in one round or if the effect activates after the target entered and was affected.
 
 
 
@@ -1316,9 +1332,9 @@ Wave'em hands and mumble something mysterious. Sure to transmogrify your interna
 
 \subsection*{When and how spells can be cast}
 %--------------------------------------------
-Casting spells require concentration, voice, and gestures. Spellcasting often takes several rounds and the spells take effect in the last round of casting following order of initiative.
+Casting spells require concentration, voice, and gestures. Spellcasting often takes several rounds and the spell takes effect in the last round of casting following order of initiative.
 
-The spell roll is subject to the highest action stack modification that the character has had during the casting period. See the "actions that take more than one round" rule above.
+The cast roll is subject to the highest action stack modification that the character has had during the casting period. \hyperref[multiroundactions]{See \emph{actions that take more than one round} above.}
 
 %TODO: rewrite all Xa spells to Xap instead.
 Some spells have casting time counted in actions, 1a, 2a, etc, and should be treated just like normal actions at 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells follow initiative unless stated otherwise.
@@ -1348,24 +1364,17 @@ Just make sure you have enough levels in the magic skill to be able to spend tha
 
 \subsection*{Duration of spells}
 %-------------------------------
-A spell casting completes in the last round it is being cast, in order of initiative. The spell caster can now choose when it should "begin" to take effect: \\
-The spell's effect can start immediately, and then that round counts as the first round of it's duration. Or: \\
+A spell casting completes in the last round it is being cast, in order of initiative. The spell caster can now choose when the spell should begin to take effect: \\
+The spell's effect can start immediately after casting and then that round counts as the first round of it's duration. Or: \\
 The spell's effect can start at the very beginning of the next turn, and have that turn count as the first round of the duration, ignoring initiative.
 
-This can be important e.g: if the wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will most likely benefit his friends faster if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he cannot take any more actions the round of the casting.
+This can be important. E.g: The wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will most likely benefit his friends faster if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he probably cannot take any more actions in the round of the casting.
 
 
 \subsection*{Regaining mana}
 %---------------------------
-All mana is regained when the caster has rested fully from a good nights sleep. Some dungeons allow for casters to regain some mana when resting fully a number of turns, or when spending time at a certain location.
-Wise wizards and skilled sorcerers alike usually carry mana restoring potions, crystal ball batteries, power staffs, etc, when they go hunting for gold and glory.
-
-
-\subsection*{Casting is exhausting}
-%-----------------------------------
-Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spell will fail.
-
-If the Hero tries to draw stamina when starting from 0 or negative stamina he must roll con modified by negative stamina once for the whole spell. The Hero can roll con before starting casting the spell instead of when he finishes casting it if he so wishes. The roll is valid as long as he doesn't loose stamina while casting.
+All mana is regained when the caster has rested fully from a good night's sleep. Some dungeons allow for casters to regain some mana when resting fully a number of turns, or when spending time at a certain location.
+Wise wizards and skilled sorcerers alike sometimes carry mana restoring potions, crystal ball batteries, power staffs, etc, when they go hunting for gold and glory.
 
 
 \subsection*{Casting when dry}
@@ -1375,9 +1384,16 @@ Trying to cast with no mana left? Try rolling against psy. At each attempt; the 
 E.g: Crimson Caster is at mana -1, tries to cast a cost 3 spell and must roll psy-4 to be able to cast. He has psy=7 and rolls an 9, which means failure=-5. He falls unconscious. Following rounds he rolls psy-1 once per round until he wakes up again.
 
 
+\subsection*{Casting is exhausting}
+%-----------------------------------
+Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spell casting will fail.
+
+If the Hero tries to draw stamina when starting from 0 or negative stamina he must roll con modified by negative stamina once for the whole spell. The Hero can roll con before starting casting the spell instead of when he finishes casting it if he so wishes. The roll is valid as long as he doesn't loose stamina while casting.
+
+
 \subsection*{Lacking psy}
 %------------------------
-Most spells have a minimum psy requirement to cast. If the character does not meet them, the casting of that skill will take a mod equal to the missing psy.
+Most spells have a minimum psy requirement to cast. If the character does not meet them the casting of that skill will take a mod equal to the missing psy.
 E.g: Wizard Woosey wants to cast a psy 7 spell, he has psy 5, thus all casting of that spell will be at mod-2.
 
 
@@ -1388,11 +1404,11 @@ Most spells have a minimum int requirement. For every lacking int the spell beco
 
 \subsection*{Sacrificing permanent psy}
 %--------------------------------------
-A caster can sacrifice a permanent psy to get 10 mana points (can increase the total mana past the characters maximum) and a mod+3 to all spells cast until the "sacrificial" mana points are gone. And for all the munchkins: yes, he casts using the "extra mana" first.
+A caster can sacrifice a permanent psy to get 10 mana points (can increase the total mana past the character's maximum) and a mod+3 to all spells cast until the "sacrificial" mana points are gone. And for all the munchkins: yes, he casts using the "extra mana" first.
 
 Sacrificed psy ends up as a permanent mod to the original psy stat. Keep track of it separately if there is any way in the campaign where they might be recovered. Divine intervention, or similar...
 
-This is a very taxing action and can only be done once for each adventure.
+This is a very taxing action and can only be done once for each adventure. The sacrificial action takes a full round.
 
 
 \subsection*{Hands and mouth free}
@@ -1420,9 +1436,10 @@ A wizard can have more than one at the same time (max 3), and can stack bonuses 
 %---------------------------------
 Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard can spend those extra 5xp to get his staff to mod+1.
 
-Or the paladin can get the "tank" skill and cancel the armour penalties that way.
+Or the paladin can get the tank skill to reduce or cancel the armour penalties that way.
 
-Don't forget to also pay to cancel the mods from sword and shield...
+Don't forget to also pay "trusty old" xp to cancel the mods from sword and shield...
+
 
 
 
@@ -1446,12 +1463,12 @@ Don't forget to also pay to cancel the mods from sword and shield...
 \phantomsection\addcontentsline{toc}{section}{simplifications}
 \section*{Playing the monsters}
 
-It is necessary to simplify the workload for the GM who has to manage all the monsters. Monsters are not generally long lived. They usually die within a few rounds of appearing. Most monsters can be very simplified, and their handling made quicker by ignoring a lot of effects.
+It is necessary to simplify the workload for the GM who has to manage all the monsters. Monsters are not generally long lived. They usually die within a few rounds of appearing. Most monsters can be very simplified and their handling made quicker by ignoring a lot of effects.
 
 
 \subsection*{Some simplifications:}
 
-Ignore stamina, but don't let monsters use a lot of stamina all the time either. They can use some, but not several stamina continuously round after round. Some monsters, like orcs, tend to have massive stamina, and can gladly spend a lot, but keep it reasonable.
+Ignore stamina, but don't let monsters use a lot of stamina all the time. They can use some, but not several stamina continuously round after round. Some monsters, like orcs, tend to have massive stamina and can gladly spend a lot, but keep it reasonable.
 
 Ignore some pain, a lot of monsters don't react the same way to pain as heroes. A lot of monsters will instead influence their decision making by how much damage or pain they have taken. For single monsters or humanoid monsters it might be interesting to apply pain when appropriate.
 
@@ -1461,19 +1478,19 @@ Let the monsters die at hp=0, instead of having them linger around rolling for c
 
 Don't let monsters have too many advanced skills. It is better to keep the skills that add a lot of complexity to the more special monsters. The bosses, the leaders, the sneaky bastards, etc. Most should just have basic attacks and movements, perhaps a special maneuver or so.
 
-These simplifications are great for "cannon fodder" critters, and that saves time enough so that you can play the bosses and interesting antagonists with "real" rules.
+These simplifications are great for "cannon fodder" critters, and that saves time enough so that you can play the bosses and interesting antagonists with more depth.
 
 
 \subsection*{Things to think about:}
 
-Most monsters are not suicidal. They will run away when they meet overpowering enemies, if they can. Some monsters might run headlong into certain death, but it is not the norm.
+Most monsters are not suicidal. They will run away when they meet overpowering enemies, if they can. Some monsters might run headlong into certain death but it is not the norm.
 
 Intelligent monsters will instead flee, re-group, sound the alarm, make ambushes and traps instead of direct open battle.
 
 
 \subsection*{Finding stuff:}
 
-Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of "asked" vs "real" roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
+Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of asked vs real roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
 
 I prefer asking for rolls in most situations, then roll hidden every now and then anyway.
 

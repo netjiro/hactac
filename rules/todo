@@ -16,14 +16,28 @@ lots of comments in swedish, will not translate
 NEW: ---------------------------------------------------------------------------
 
 
+TODO: with stamina changes: go through all skills etc and remove all
+      "first two attacks require no stamina" and similar 
+TODO: light weapons should cost less stamina to use
+      eg: every other attack should be free
 
 TODO: fix util.declareMove() to also accept mp numbers as argument
+      ? duplicate function ?
 TODO: roll initiative skall bara synas för GM:
       rolling för hidden critters etc.
 TODO: duration skall också skriva i chat bara för SL
 TODO: ta bort att stamina säger hur mycket som finns kvar
 TODO: skriv inte exhausted för kritter utan stamina !!
 
+
+190605:
+TODO: !! kolla om detta är fixat eller ej !! ??
+      kan inte attackera eller göra andra offensiva actions även om 
+      circumstances change, bara defensiva.
+TODO: bug: script: hidden msg not enough stamina, but still draws stamina
+      Kizraz:
+      makes heavy staff 2h attack « roll = D10 = roll = 5 = 5 » « result = skill + focmod - CurrentTotalModification + mod - roll = result = (12 + 0 - -1 + 0 - 5) = 8 » success = 8 with roll 5. doing damage = 5 pen 1   « msg = NOT ENOUGH STAMINA »   drawing 1 stamina 
+TODO: skriv equipment, tent, bedroll, tarp, 
 
 
 190410:
@@ -735,3 +749,10 @@ DONE: rewrite: all characters regain con/3 stamina per round
 DONE: possum:
       feign death - charisma roll, mod for damage, etc
 DONE: stora rustning skall ha jump och climb penalties
+190612:
+DONE: remove unfazed, eller flytta till heroic abilities
+      flyttade unfazed till abilities, cost 20xp, ccf 1.2 +10xp per extra level
+DONE: HADE TYDLIGEN TVÅ STAMINA BLOCK ??  i primary attack macro
+      kolla bug kring stamina hantering.
+      kizras slog en gång, men tydligen drogs två stamina
+

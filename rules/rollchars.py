@@ -120,6 +120,12 @@ def d15():
     return die(15)
 def d20():
     return die(20)
+def d30():
+    return die(30)
+def d40():
+    return die(40)
+def d50():
+    return die(50)
 def d60():
     return die(60)
 def d90():
@@ -348,7 +354,7 @@ def rollDwarf():
     char.d = 5 + int(d10() / 4)           #  5 -  7           3,4,3
     char.stam = 5 + r2d5()                #  7 - 15  11
     char.visRange = 15 + d5()             # 16 - 20  18
-    char.visArc = 120 + d90()             # 121-210 165
+    char.visArc = 150 + d60()             # 151-210 180
     char.visMode = "infra/dusk"
     char.mana = r2d10()                   #  2 - 20  11
     char.ap = 3 + int(d10() / 9)          #  3 -  4   8,2
@@ -546,11 +552,11 @@ def rollOrc():
     char.cha = r2d5() -3                  # -1 -  7   3
     # secondary                                       1,2,3,4,5,6,7,8,9
     char.hp = 7 + r2d10()                 #  9 - 25  18
-    char.m = 1 + int(d10() / 4)           #  1 -  3   3,4,3
-    char.w = 3 + int(d10() / 4)           #  3 -  5       3,4,3
-    char.r = 5 + int(d10() / 4)           #  5 -  7           3,4,3
+    char.m = 1 + int(d10() / 5)           #  1 -  3   4,5,1
+    char.w = 2 + int(d10() / 3)           #  2 -  5     2,3,3,2
+    char.r = 4 + int(d10() / 3)           #  4 -  7         2,3,3,2
     char.d = 6 + int(d10() / 3)           #  6 -  9             2,3,3,2
-    char.stam = 5 + r2d5()                #  7 - 15  11
+    char.stam = 3 + d10()                 #  4 - 14   8
     char.visRange = 10 + d10()            # 11 - 20  15
     char.visArc = 120 + d60()             # 121-180 150
     char.visMode = "dusk"

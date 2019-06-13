@@ -16,15 +16,15 @@
 \chaptermark{skills}
 
 
-We'll be using "skill" as the general term for all skills, traits, powers, and abilities that are not basic character stats. This includes regular skills like literacy and counting, weapon skills, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Also have magical spells, mental and mystical powers, etc, all baked into one group: \emph{skills}.
+We'll be using \emph{skill} as the general term for all skills, traits, powers, and abilities that are not basic character stats. This includes regular skills like literacy and counting, weapon skills like sword and axe, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Also have magical spells, mental and mystical powers, etc, all baked into one group: \emph{skills}.
 
-Most skills carry a "skill cost factor" (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
+Most skills carry a \emph{skill cost factor} (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
 \\
 The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
 E.g: training bow to 4 is (1.2 * 4*4) = 19.2 \ca 19xp. \\
-E.g: increasing bow from 4 to 6 is (1.2 * (36-16)) = 24xp. \\
+E.g: increasing bow from 4 to 6 is (1.2 * (6*6 - 4*4)) = 24xp. \\
 \\
-Skill costs vary, but the general idea is something like this: \\
+Skill costs vary, but the general idea goes something like this: \\
 Weapon and main battle skills cost $1.0 \cdot lvl^2$. \\
 Special high power tactical skills cost $1.0 \cdot lvl^2$ or more. \\
 Low power tactical skills and useful miscellanea costs $0.7 \cdot lvl^2$. \\
@@ -34,7 +34,7 @@ Low power abilities cost 20xp. \\
 High power abilities cost 30xp. \\
 Massive abilities cost 50xp or more.
 
-Costs written as "cost 20xp" means that the total cost up to that level of the skill is 20xp. If it's written as "cost +20xp" then the cost to increase the skill from the previous level to to the target level is 20xp. See "tank" for a good example of both.
+Costs written as "cost 20xp" means that the total cost up to that level of the skill is 20xp. If it's written as "cost +20xp" then the cost to increase the skill from the previous level to to the target level is 20xp. See the tank skill for an example of both.
 
 % file: magic.tex :
 The skills pertaining to magic can be found in the "magic" section.
@@ -85,24 +85,23 @@ sword          scf 1.0
 knife          scf 0.7
 axe            scf 0.9
 hammer         scf 0.8
-club           scf 0.6
+club           scf 0.7
 staff          scf 0.8
-spear          scf 0.8
+spear          scf 0.9
 flail          scf 1.0
 shield         scf 0.7
-throw          scf 0.8 (anything throwable: knives, bottles, chairs, ...)
+throw          scf 0.7 (anything throwable: knives, bottles, chairs, ...)
 bow            scf 1.2
 crossbow       scf 0.8
 \end{verbatim}
 %sling          scf 1.0
 \end{samepage}
 
-Sword skill covers all blade weapons including knives, rapiers, etc.
-
+Sword skill covers all blade weapons including knives, rapiers, etc. \\
 Knife is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3. Thus sword skill can be trained from knife-3.
 
 Some weapons are similar:\\
-The sword skill allows the use of knives and rapiers at no modification.\\
+The sword skill allows the use of all blades at no modification.\\
 Knife skill allows use of all swords and rapiers at mod-3.\\
 Axe skill allows the use of: hammers mod-1, clubs mod-1.\\
 Hammer skill allows use of: clubs mod-1, axes mod-2.\\
@@ -110,38 +109,40 @@ Club skill allows use of: hammers mod-2, axes mod-3.\\
 The staff and spear skills are mutually mod-1.\\
 All other melee weapon skills are mutually mod-3.\\
 All ranged weapons are mutually mod-3.\\
-% NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 \emph{But:} similarity modifies never allows for the "other" weapons or weapon groups at levels greater than 9. So, even if someone has axe 14 he will be limited to hammer 9 due to this cap.
+
+% OLD - NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 
 Starting to train a new weapon skill while knowing a similar one should start from the shared modified base. Make a note of it on the character sheet history since it can be important to know later on as the characters progress.
 
 Melee weapons gives the user the ability to make attack and parry actions, while ranged weapons only allows for attack actions, and cannot be used for parrying.
 
-Most weapons have one or more optional attack/defend action alternatives, but they usually require further xp expenditures to learn. Most cost 5xp and simply gives minor alteration to the weapon stats, e.g. dam-1 pen+1 mod-1.
+Most weapons have one or more optional attack/defend action alternatives. Sometimes they require further xp expenditures to learn. Most cost 5xp and simply give minor alteration to the weapon stats, e.g. dam-1 pen+1 mod-1.
 
 
 \skill{Skill cost special "speciality weapon X":} allows to use speciality weapons without the mod-1 that they otherwise impose. Each speciality weapon requires it's own speciality skill. They usually cost 5xp.
 
 
 \skill{Skill scf 0.5 "brawl":} allows for unarmed combat. A character generally has two fists and one kick to use. This can be used with the skills double and triple. Orcs and goblins also have claw and bite attacks.\\
-Fists do str/3 damage, fast+1, first two attacks require no stamina \\
+Fists do str/3 damage, fast+1, every second attack cost no stamina \\
 Kicks do 2+str/3 damage
 
 Unarmed parry with hands/arms/legs are parry-6 against weapons, or parry-3 if opponent is unarmed. Unarmed parry is always deflect but without the additional deflect mod-3. All parried weapon hits will still do 50\% of the rolled damage, and all parried unarmed hits will still do 33\% of the rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
 
-Brawling also includes grab, hold, break loose. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both.
+Brawling also includes grab, hold, break loose actions. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both participants if the target is resisting. 
 Each arm/tentacle/other used in the grab/hold/break actions allows the character to use 50\% of their str or dex unless the appendage has specific str/dex values specified.
 If the target cannot pay the 3ap cost of the resistance roll action the grabbing/breaking character wins success=0 by default.
 
 Holding a target doesn't cost actions until he tries to break free. But it means the holding Hero can't move, and a few arms are occupied holding. A held character cannot move either, and must break free first. All physical actions other than break free suffers mod-3 when held.
 
-Brawl is not a weapon skill but allows for use of knife and club at mod-3.
+Brawl allows for use of knife and club at mod-3 up to a maximum of 9 after the mod.
 
 
 \skill{Skill scf 1.3 "martial arts":} allows for more effective unarmed combat. A character generally has two fists and two kicks to use. This can be combined with the skills "quadruple", "triple", "double". \\
 Fists do (str+dex)/3 damage, toparry-3, toavoid-3, fast+1. \\
 Kicks do 2+(str+dex)/3 damage.\\
-First two fists or first kick do  not require stamina. \\
+Fist attacks cost stamina for the first attack followed by two free.\\
+Kick attacks have every second attack at no stamina cost. \\
 Martial arts parrying is parry-3 against weapons, or parry-0 if opponent is unarmed. Martial arts parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
 
 \skill{Skill scf 0.5 "lightning strike" (martial arts upgrade):} allows for very fast fist and kick attacks but at the cost of a dam-1 penalty. Fist attacks are fast+2 (1ap) instead of fast+1 (2ap), and kick attacks are fast+1 (2ap) instead of normal (3ap).
@@ -157,27 +158,28 @@ A character cannot have a higher skill level in thunder strike than he has in ma
 
 
 \skill{Skill scf 0.8 "avoid":} is used to try to avoid the incoming melee attack. The user must of course be aware of the incoming attack. Avoid can be used with the yield maneuver option, for (usually) a mod+3. To avoid is a defence action, just like parrying. \\
-To avoid falling object, sprung traps etc is generally mod-3 to mod-6, and that usually includes a required yield step to get away from the trapped/target square. \\
+To avoid falling objects and sprung traps, etc, is generally mod-3 to mod-6 and that usually includes a required yield step to get away from the trapped/target square. \\
 To avoid fast missiles such as arrows, the special maneuver missile parry is required, and is generally mod-9.
 
 
 \skill{Skill scf 1.0 "disengage":} allows for the character to make a safer movement out of opponent's weapon reach modifying the (possibly) incoming right to react attacks triggered by the movement if the opponent has \emph{opportunity} or \emph{intercept}. The level of disengage directly modifies the opponent's attack against the disengaging target.
-Disengaging is a full action, 3ap, per opponent that the character wants to safely disengage from, but requires no rolls.
 
-E.g: Disengaging Dave wants to get away from melee against Mauling Morgan and Striking Stanislav, both of which have \emph{opportunity}. DD has disengage=4 and spends one action (3ap) to move away, out of range from both opponents. However, DD only spent one disengage action, and can thus only mod down one of the opponents. He chooses to mod MM. MM and SS now has the right to react to the movement. MM has a mod-4 when attacking DD due to the DD's disengage action, but SS still has mod-0 for his attack. If DD had paid two actions (6ap) he could have given both MM and SS mod-4 on their "right to react" attacks against him.
+%NOPE: just a simple modifier, no action, no cost, no roll. -- Disengaging is a full action, 3ap, per opponent that the character wants to safely disengage from, but requires no rolls.
+% rewrite example
+%E.g: Disengaging Dave wants to get away from melee against Mauling Morgan and Striking Stanislav, both of which have \emph{opportunity}. DD has disengage=4 and spends one action (3ap) to move away, out of range from both opponents. However, DD only spent one disengage action, and can thus only mod down one of the opponents. He chooses to mod MM. MM and SS now has the right to react to the movement. MM has a mod-4 when attacking DD due to the DD's disengage action, but SS still has mod-0 for his attack. If DD had paid two actions (6ap) he could have given both MM and SS mod-4 on their "right to react" attacks against him.
 
 
-\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of fancy attacks the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Limited by the maximum finesse of the weapon.
+\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of fancy attacks the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Limited by the finesse of the weapon.
 
-E.g: Sneaky Sebastian has fancy attacks 4 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 5, he will probably not succeed.
+E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 7, he will probably not succeed.
 
 
 \skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action with one of the weapons. A weapon skill roll must still be taken for each weapon, and the stamina for extra attacks must be paid as usual.
 
 The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
 
-Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.
-If the defender succeeds with a "double" roll before parrying, and has two weapons/shields, he can parry the two attacks with one "double" action.
+Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
+If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
 
 It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.
 
@@ -185,7 +187,9 @@ Combining a double defence with yield or dodge bonus applies the bonus to both d
 
 Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
 
-Synchronised Double parries can attempt to parry twice for the same incoming attack, once for each weapon. Alternatively use the two weapons as one combined parry, and combine the abs of both weapons to block the attacking damage if both parries are successful.
+Double parries can attempt to parry twice for the same incoming attack, once for each weapon. Alternatively use the two weapons as one combined parry, and combine the abs of both weapons to block the attacking damage if both parries are successful.
+
+Double can also be combined with e.g. whirlwind and different attack maneuvers.
 
 %TODO: This part made sense somehow, but I can't see it right now, check later
 %The "double" actions can be pre-declared and saved for later in the same round. The pre-declared action must be fully declared: e.g: Defend with the shield against an attack from monster X. If the next action the character makes is not the pre-declared action, then the "double" status of that action is wasted and lost.
@@ -196,24 +200,27 @@ Synchronised Double parries can attempt to parry twice for the same incoming att
 
 \skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
 
-Before each attack in a whirlwind sequence the character must pay one stamina and roll a successful whirlwind check.
+Before each attack in a whirlwind sequence the character must pay one extra stamina and roll a successful whirlwind check.
 
 Each attack can target different enemies. Each attack requires successful whirlwind rolls before the attack roll can be made. When the whirlwind roll fails no more attacks can be done in that whirlwind sequence. The first attack can always be performed even if the first whirlwind roll fails though.
 
 The damage of each successful attack is limited (capped) at the lowest damage rolled through the whirlwind sequence. Roll for damage as normal, but the damage dealt is limited by the lowest so far in the whirlwind sequence.
 
 E.g: Wispy the Waif attacks Monsters m1 m2 m3. She has whirlwind=5, sword=7.
-She declares whirlwind, pays one stamina and normal ap, rolls 3 $\Rightarrow$ success, rolls 5 for the sword attack on monster 1, does 3 in damage. \\
-She continues whirlwind, pays 1 more stamina and 1ap, rolls 4 $\Rightarrow$ success, rolls 6 for sword success against monster 2, then rolls damage 4, but the damage is now limited capped at 3 since that is the lowest damage that has been rolled in the whirlwind sequence. The second sword attack also costs her one more stamina, as usual, beside the cost of the whirlwind roll. \\
-She then tries for a third attack, pays one stamina and 1ap, but rolls 7 and fails the whirlwind. She cannot make another attack in this sequence. She can now start another action with more whirlwind attacks with the damage cap reset.
+She declares whirlwind sword attacks, 
+pays 1 stamina for whirlwind, rolls 3 for success, pays 1 stamina and 3ap for sword attack, rolls 5 for successful attack on monster m1, rolls 3 for damage. \\
+She continues whirlwind, pays 1 stamina for whirlwind, rolls 4 for whirlwind success, pays 1 stamina and 1ap (fast+2) for sword attack, rolls 6 for successful attack, then rolls damage 4, but the damage is now limited capped at 3 since that is the lowest damage that has been rolled in the whirlwind sequence. \\
+She then tries for a third attack, pays 1 stamina for whirlwind, rolls 7 and fails to continue the whirlwind. The damage cap of 3 is now reset. \\
+She can either fall back to a normal 3ap attack in this initiative or wait on her next initiative to restart a new whirlwind attack sequence.
 
 Whirlwind becomes even more dangerous when combined with for example double... Then each weapon has its own the damage cap track. It can also be combined with different attack maneuvers.
 
 
-\skill{Skill scf 1.5 "quick shot":} reduces snap and quick shot penalties by one for each skill step.
+\skill{Skill scf 1.5 "quick shot":} reduces snap and quick shot penalties by one for each skill level.
 
 
 \skill{Skill scf 1.0 "sniper":} reduces range penalties by one for each skill level. It also reduces mods from small and covered targets by one for each level. Covered targets includes coverage from shields.
+
 E.g: Archer Arthur is trying to give Hiding Hedvig a bad day. HH is in long range (mod-3) and partially covered by a shield (mod-4). AA has sniper 5 which is enough to cancel the the range -3 mod and two points of the coverage mod, for a total of mod-2 to the shot.
 
 
@@ -224,6 +231,7 @@ E.g: Archer Arthur is trying to give Hiding Hedvig a bad day. HH is in long rang
 lvl 1, cost 10xp: A good (+3) success: roll two damage rolls and choose which to use. (will average \ca 66\%) \\
 lvl 2, cost 20xp: A very good (+6) success: roll three damage rolls and choose which to use. (will average \ca 75\%) \\
 lvl 3, cost 30xp: A perfect (+9) success: roll four damage rolls and choose which to use. (will average \ca 80\%)
+%TODO: perhaps lvl 3 should be 5 dice, average ca 84%
 
 
 \skill{Skill cost special "consistent":} allows for the user to generally improve damage when making good, very good, or perfect successes with attacks. \\
@@ -244,7 +252,7 @@ lvl 1, cost 20xp: A very good (+6) success gives mod-2 to defend against the att
 lvl 1, cost 30xp: An exceptional (+9) success gives mod-3 to defend against the attack.  \\
 
 
-\skill{Skill cost special "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
+\skill{Skill cost special "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
 lvl  1  costs  10 \\
 lvl  2  costs  20 \\
 lvl  3  costs  30 \\
@@ -252,6 +260,7 @@ lvl  4  costs  50 \\
 lvl  5  costs  75 \\
 lvl  6  costs 100 \\
 lvl +1  costs +30
+%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
 
 E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With his slugger=2 he gets one point of damage bonus for each of his two extra strength points. Thus he has dam+2 from his combination of extra strength and slugger.
 
@@ -610,9 +619,9 @@ success+9 is a 0ap instant action
 He will only drink one bottle each time he is passed out, but will try several times until successful. If there are different possible bottles he will instinctively choose the right one, the one which best helps the reason why he is passed out.
 
 
-\skill{Skill scf 0.20 "possum":} is for those who want to lie down and take a breather during a fight. The Hero can act dead for a bit to fool most opponents to pass by and attack something else. A successful roll will fool anyone who does not stop to look (take an action and roll per). An enemy which does stop to take a look has the feign death success diff as negative mod for the per roll. Anyone who stops for a round and tries a "find" on the acting corpse will not be fooled even if they fail their find roll.
+\skill{Skill scf 0.20 "possum":} is for those who want to lie down and take a breather during a fight. The Hero can act dead for a bit to fool most opponents to pass by and attack something else. A successful roll will fool anyone who does not stop to look (take an action and roll per). An enemy which does stop to take a look has the \emph{possum} success diff as negative mod for the per roll. Anyone who stops for a round and tries a "find" roll on the acting corpse will not be fooled by possum unless they fail-3 or worse.
 
-Possum is modified by damage, but ignores all other mods:\\
+Possum is \emph{positively} modified by damage, but ignores all other mods:\\
 66\% hp: mod+1\\
 33\% hp: mod+2\\
 zero hp: mod+3
@@ -852,9 +861,6 @@ A character with animal command can control at most his lvl/2 (round up) animals
 Issuing a command takes 1a and the companion must be within earshot. Commanding companions beyond line of sight is mod-3. Spending a full round gives mod+3 when issuing order.
 
 A character with companion command can control as many companions as his skill level/2 (round up).
-
-
-\skill{Skill scf 2.0 "unfazed":} The character can make as many 45 or 90deg free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action.
 
 
 \skill{Skill scf 0.5 "meditate":} A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
@@ -1512,6 +1518,7 @@ Weapons with reach has an extra mod+1 when used for a followup attack.
 \skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage. For each +3 excessive strength he gets damage +1.
 
 
+%TODO: rewrite after stamina change
 \skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one extra attack per round that does not cost stamina.
 
 
@@ -1520,7 +1527,7 @@ The character can also trade a +9 excessive strength to hold it in one hand with
 
 
 \skill{Maneuver (cost 10) "fast strength":} A character with enough strength and dexterity can choose to trade excessive strength damage bonus to a fast+1 modifier for the actions with the weapon instead. Also comes with a mod-1 difficulty though. \\
-A slow-2 (5ap) weapon requires str+6 and dex$\geq$3 to be slow-1 (4ap).\\
+A slow-2 (5ap) weapon requires str+3 and dex$\geq$3 to be slow-1 (4ap).\\
 A slow-1 (4ap) weapon requires str+6 and dex$\geq$6 to be normal (3ap).\\
 A normal (3ap) weapon requires str+9 and dex$\geq$9 to be fast+1 (2ap).\\
 A fast+1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast+2 (1ap).
@@ -1528,6 +1535,27 @@ A fast+1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast+2 (1ap).
 
 %TODO fix critical damage once the aim stuff has been fixed
 %\skill{Maneuver (cost 10) "critical damage":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
+
+
+%\skill{Maneuver (cost 10) "puny metal strength":}
+\skill{Maneuver (cost 10) "stronk tank":} 
+Dedicate excessive strength to carrying your heavy armour with easier mods.\\
+lvl 1: cost 10xp, str+3 makes the armour one class easier to wear\\
+lvl 2: cost 20xp, str+6 makes the armour two classes easier to wear\\
+lvl 3: cost 30xp, str+9 makes the armour three classes easier to wear
+
+E.g: Wearing a full plate with str 10 and dedicating the extra 3 str to the armour means it has mods like a plate armour.
+
+Dedicating strength works just like the various strength bonus maneuvers. You can't use the same excessive strength points for more than one thing.
+
+
+\skill{Maneuver (cost 5 + scf 0.5) "flexible muscles":}
+Without rolling the Hero can reallocate extra strength points as an action at a rate of 1 strength point per action point (ap). Optionally spending 1 stamina and rolling for flexible muscles he can reallocate success diff points as a 0ap action.
+
+The Hero can reallocate any amount of strength points as a full round action.
+This gives a lot of flexibility for the strong. Note that it is possible to buy just the cost 5 flexible muscles to level 0 if you only want the 1str/ap or full round ability withtout the 1stam 0ap roll option.
+
+\noindent \textit{Stop for a bit and flex 'em pecs! Shake it till you make it!}
 
 
 \skill{Maneuver (cost 10) "double arrow":} Like all true action hero archers the character can load two arrows at the same time and shoot at two adjacent targets. The action is slow-2. Both arrows are mod-6 to hit and damage is 75\%, but counts as one attack for the sake of stamina. It is another mod-3 to hit both targets for each empty square between them, starting from the base mod-6 when they are in base contact. The targets cannot be "in line" as seen from the
@@ -1919,7 +1947,8 @@ For high levels of switcheroo the character can also move after rolling to be ab
 \skill{Ability cost 30xp ccf 1.0 "Brütal Slaughter":} The character kills his enemies in such horrible ways that the remaining foes must roll fear modified by the overkill damage diff each time he makes a kill in their ranks. Only targets with int. For each kill the opponents get more used to it and get mod+1 to their fear rolls.
 
 
-\skill{Ability cost 30xp ccf 1.0 "Munchkin":} The munchkin can choose one extra occupation for every level of munchkin, with all the bonuses and penalties that come with it.
+%NOTE: munchkin disabled since occupations and childhoods are disabled
+%\skill{Ability cost 30xp ccf 1.0 "Munchkin":} The munchkin can choose one extra occupation for every level of munchkin, with all the bonuses and penalties that come with it.
 
 
 \skill{Ability cost 120xp ccf 2.0 "Ambidextrous":} The character can handle weapons in both arms with equal ease and at the same time. He has an automatic "double" which cannot fail, although it still costs stamina to use.
@@ -1962,6 +1991,7 @@ Attacking a stacked target is mod-3, and fail-1 to fail-3 means hitting one of t
 E.g: TronVol:\emph{PurplePanickler} is formed by the Heroes Purple Pete and Pinky Panickler, and is a malformed large hodgepodge monster with three legs, two arms, two heads, a tail, and some tentacles.
 
 Forming and splitting a TronVol monster takes 3r. Forming costs one mana from each Hero, but splitting is free. The Heroes can upgrade the TronVol monster to form faster by collectively spend xp: +10xp form/split in 2r, +20xp form/split in 1r.
+Forming TronVol requires that all constituent heroes are present for the merge.
 
 When forming the TronVol monster, calculate current hp, stamina, and mana as the average percentage of the Heroes' current values. The monster forms with no pain mods. When splitting again, push half of the monster's taken damage onto the heroes, collectively, and let them argue on how to split it. None of the monster's pain mods are transferred to the Heroes. The Heroes of course keep all the damage and pain they had before forming the TronVol monster. If the monster's stamina and mana is lower when splitting than when it was formed, then push half the diff collectively onto the Heroes.
 
@@ -1992,11 +2022,11 @@ double bonus: sqrt(number of heroes) *3
 other skills: max(heroes)
 \end{verbatim}\normalsize
 
-TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting xp, the TronVol constituent heroes still count separately.
+TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting received xp the TronVol constituent heroes count separately, but the TronVol monster also gets the same xp as the heroes without counting as a separate share. E.g: Three heroes split 12xp to 4xp each, and their tronvol also gets 4xp even if it did not dilute the xp split. But TronVol only gets it's extra xp if all it's heroes get xp.
 
 For the general shape, either find something fun and suitable, or roll up some random body: humanoid, lizard, bear, demon, cryptomythologial mixture, etc. Roll for extra/fewer arms, tails, horns, claws, tentacles, fur, scales, etc.
 
-Adding heroes to an existing TronVol monster constellation is possible, and modifies stats, skills, and body configuration as suitable.
+Adding heroes to an existing TronVol monster constellation is possible, and modifies stats, skills, and body configuration as suitable. Heroes can also be part of more than one TronVol constellation. But all included heroes must still be present for the forming merge.
 
 Use larger tokens for merged Heroes. E.g: Maptool: with 2-5 merged heroes set large size: 2x2, with 6-11 heroes set 3x3, and for 12+ set 4x4.
 
@@ -2013,6 +2043,13 @@ Fast Food (cost 10xp): eating each "hp prep" in 2r instead of 3r.\\
 Fast Metabolism (scf 5): each level reduces the healing interval by one, to a minimum of 3r/hp.\\
 Live Food (cost 20xp): eating live food also restores one stamina and one mana in addition to the hp regeneration, at the same speed.\\
 Old Food (cost 10xp): can get full meal value from corpses which are up to a day old.
+
+
+\skill{Ability cost 20xp, ccf 1.2 "unfazed":} The character can make as many 45 or 90deg free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action.\\
+Each additional level of unfazed costs +10xp.
+
+
+
 
 \closeskillslist
 
