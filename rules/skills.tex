@@ -178,10 +178,12 @@ E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attac
 
 The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
 
-Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
+Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
 If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
 
-It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.
+It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
+It is possible to completely avoid a double attack with two avoid actions, both at mod-6.\\
+For the really slick avoider it is possible to avoid a double attack with one avoid action but at mod-9.
 
 Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the double skill roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
 
@@ -191,7 +193,7 @@ Double parries can attempt to parry twice for the same incoming attack, once for
 
 Double can also be combined with e.g. whirlwind and different attack maneuvers.
 
-%TODO: This part made sense somehow, but I can't see it right now, check later
+%TODO: This part made sense somehow at some time, but I can't see it right now, check later:
 %The "double" actions can be pre-declared and saved for later in the same round. The pre-declared action must be fully declared: e.g: Defend with the shield against an attack from monster X. If the next action the character makes is not the pre-declared action, then the "double" status of that action is wasted and lost.
 
 
@@ -863,7 +865,8 @@ Issuing a command takes 1a and the companion must be within earshot. Commanding 
 A character with companion command can control as many companions as his skill level/2 (round up).
 
 
-\skill{Skill scf 0.5 "meditate":} A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
+\skill{Skill scf 0.5 "meditate":} §TODO: update after stamina changes!!\\
+A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
 Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
 
 
@@ -979,6 +982,9 @@ E.g: mobile=2 means maneuver mod-0, walk mod-1, run mod-4, dash mod-7.
 \skill{Skill scf 1.0 "veteran":} reduces fear, morale, and pain penalties by one for each skill level. Also gives a bonus to psy for rolls against fear and morale equal to level.
 
 
+\skill{Skill scf 1.0 "tireless":} reduces mods to actions due to negative stamina by one for each level.
+
+
 \skill{Skill scf 1.0 "luck":} The character can re-roll results he is not happy with. The character has a number of re-rolls equal to his luck skill level each dungeon/session/day. However, each re-roll costs XP! The first attempt to re-roll an original roll costs 1xp. Each successive attempt to re-roll the same original roll is at double the xp cost (1, 2, 4, 8, ...).
 
 E.g: three re-rolls on the same original roll costs a total of 7xp. Three re-rolls on different original rolls cost just 3xp. This is kind of expensive stuff. Take care.
@@ -991,11 +997,6 @@ Luck is an instantaneous 0ap interrupt effect.
 
 \skill{Skill scf 1.0 "rabbit's foot":} The character can give re-rolls to his fellow compatriots. The amount and cost are the same as for the luck skill.
 Rabbit's foot is an instantaneous 0ap interrupt effect.
-
-
-\skill{Skill scf 4.0 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.
-
-The character can store any kind of die rolls. E.g: d10, d7, d13, but can of course only use them instead of a called for roll of the same kind or better. E.g: a saved d7 gut feeling can replace a d10 damage roll, but not a d10 skill check. A saved d12 gut feeling cannot replace a d10 damage roll, but can replace a d10 skill check.
 
 
 \skill{Skill scf 1.0 "prescient packing":} The character can pack his luggage with uncanny knowledge of the future. Whenever he needs a special item he can roll for prescient packing. If he succeeds, that item can now be found in his backpack. If he fails, he cannot try again for that item until he re-packs. If he succeeds he can roll for another unit of the same item later on as well.
@@ -1259,12 +1260,13 @@ It is also possible to use "push" with a shield parry (parry bonuses applies). S
 % NOPE, already have the parry skill bonuses for the shield applied.
 
 
-\skill{Maneuver (cost 10) "quick parry":} is a faster than normal parry/deflect that is more difficult. It is fast+1 mod-3. It costs 1 stamina extra.
-
-
 \skill{Maneuver (cost 10) "deflect":} is a way of parrying that turns the incoming weapon away from doing a lot of damage instead of taking the damage on the parrying weapon or shield. Deflecting instead of a normal parry incurs a mod-3 difficulty. The benefit is that it is possible to protect against more powerful attacks using deflect than parry. On a successful deflect the weapons used for the deflective parry only has to absorb half (round up) the rolled damage of the incoming strike, instead of all of it. This can mean the difference between breaking the weapon or saving it.
 
 If the deflect succeeds and the weapon can absorb half (round up) the rolled damage, then the attack is successfully deflected. If the deflect succeeds but the weapon cannot absorb half the incoming damage (round up), then the remaining part up to half the rolled damage is passed on to the target character. At least half the damage will be gone from the attack in any case as long as the deflect succeeds. If the deflect does not succeed the target will take full damage as usual of course.
+
+
+\skill{Maneuver (cost 20) "quick defense":} is a faster than normal avoid/parry/deflect but is more difficult. It is fast+1 mod-3. It costs 1 stamina extra.
+Yield and dodge have the same bonuses with quick defense as with a normal defense action.
 
 
 \skill{Maneuver (cost 10) "guard":} gives the character the ability to parry attacks that are targeted at adjacent figures, ignoring initiative, as long as he has access to the incoming attack.
@@ -1604,15 +1606,14 @@ It's a regular attack which costs 1 extra stamina and has mod-3. If successful a
 
 Special abilities are very rare skills, and a bit expensive, but the mark of Real Heroes. They open interesting possibilities in the fight for gold, glory, and more gold.
 
-Some ability skills have a "combination cost factor" (ccf), which affects the cost of training future ability skills. Once a ccf ability has been trained each subsequent ability skill will have it's cost multiplied by the ccf of all previously trained abilities. The combination cost factor does not affect the upgrade training of its own ability. The ccf does not affect regular skills or maneuvers, just the "ability" skills.
-
+Some ability skills have a "combination cost factor" (ccf), which affects the cost of training future ability skills. Once a ccf ability has been trained each subsequent ability skill will have it's cost multiplied by the ccf of all previously trained abilities. The combination cost factor does not affect the upgrade training of its own ability. The ccf does not affect regular skills or maneuvers, just the "ability" skills. 
 E.g: Dastardly Dennis has trained Incorporeal Double which has ccf=1.5. This means that every ability he trains in the future will cost 1.5 * original cost. If he also trains Dominating Stare, with another ccf=1.5, then Dominating stare will cost him 1.5*50=75xp, and all future abilities will cost 1.5*1.5=2.25 times the original cost.
 
 Upgrading an ability does not affect its ccf. E.g: purchasing regeneration twice still gives regeneration ccf=2.0.
 
 Special "abilities" cannot be purchased and trained by XP without first getting the "special component". Special components can be a blessing from a deity, a piece of mutagenic plutonite, bites from radioactive spiders, strange magic gone wrong, secret lore from a legendary book, tutoring by a far away hermit, training at the dojo of awesomeness, the egg of a phoenix, etc. GM discretion.
 
-Such special component items or events can be bought by lots of gold, as part of adventure loot or rewards, end goal for mini quests and adventures, etc. This makes it more tricky and random to get the special abilities. If you, as a GM, want to make an ability available for gold, a good guideline might be to set the price at the XP cost in gold. Special components are always exotic in rarity, and should not always be available even in the largest and richest of trading centres.
+Such special component items or events can be bought with lots of gold, found as part of adventure loot or rewards, perhaps the end goal for mini quests and adventures, etc. This makes it more tricky and random to get the special abilities. If you, as a GM, want to make an ability available for gold, a good guideline might be to set the price at the XP cost in gold. Special components are always exotic in rarity, and should not always be available even in the largest and richest of trading centres.
 
 But it really is more fun to build a small adventure around the heroes hunting for that elusive Greenulescent Mushroom, rumoured to give anyone who eats it a "Reactive Skin", only to have it give the Hero who eats it a "Damaging Aura" instead. Muahaha.
 
@@ -1621,12 +1622,11 @@ But it really is more fun to build a small adventure around the heroes hunting f
 
 \skill{Ability cost 30xp ccf 1.0 "Combat Advantage":} When the character makes a successful attack which the opponent parries or avoids he will get the "combat advantage". The advantage kicks in after the completion of the actions taken by the character and the target, and only matters between those two combatants.
 
-From then until the advantage is broken the character gets mod+1 to all his attacks against the target, and the opponent gets mod-1 to all his attacks against him.
+From then until the advantage is broken the Hero gets mod+1 to all his attacks against the target, and the opponent gets mod-1 to all his attacks against the Hero.
 
 The combat advantage is broken when: \\
 The character misses an attack against the opponent. \\
 The character defends against an attack from the opponent. \\
-The opponent chooses to not defend against an attack from the character. \\
 The character attacks someone else, or takes a non combat action.
 
 The combat advantage does not break when: \\
@@ -1634,12 +1634,12 @@ The character defends from attacks from other enemies. \\
 The round is over. Combat Advantage persists between rounds.
 
 Upgrades: \\
-cost +10: multiple advantage. Maintain mod+1 against more than one simultaneous opponent, following the rules above. Note that the character will loose advantage over any opponent he defends against, but not if he defends against other enemies against which he does not have advantage. \\
+cost +10: multiple advantage. Maintain mod+1 against more than one simultaneous opponent, following the rules above but does not break advantage when attacking another target covered within multiple advantage. Note that the character will loose advantage over any opponent he defends against, but not if he defends against other enemies against which he does not have advantage. The upgrade cost is +10xp per extra target. \\
 cost +30 ccf is set to 1.3: max +2 advantage. Increases one step at a time, requires two successful attacks in succession to reach mod+2. \\
 cost +50 ccf is set to 1.5: max +3 advantage. Increases one step at a time, requires three successful attacks in succession to reach mod+3.
 
 
-\skill{Ability cost 30xp ccf 1.2 "Captain Cardio":} At the end of each round when the character has not spent any stamina he instead recovers one stamina. When resting he recovers two stamina per round.
+\skill{Ability cost 30xp ccf 1.2 "Captain Cardio":} At the end of each round when the character has not spent any stamina he recovers one extra stamina.
 
 
 \skill{Ability cost 30xp ccf 1.2 "Energizer Bunny":} Always spends one stamina less than required each round. Spending zero does not mean gaining one stamina, unless combined with for example "Captain Cardio".
@@ -1715,7 +1715,7 @@ The bonus effect is mod+1 and dam+1 to all actions, and the duration is 3 rounds
 The character can also spend 1xp on a quick 3ap prayer and have a chance of getting a mod+3 dam+3 for the rest of the round. Or he can spend 2xp to have a chance to get mod+6 dam+6 for two actions in the current round, or 3xp to have a chance to get mod+9 dam+9 for one action in the current. %However, the chance for quick prayer is total XP/100 instead of XP/50.
 
 
-\skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will will deal 1 damage penetrating to enemies ending their round in the damaging aura (willingly or not). The aura has radius 1.
+\skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will will deal 1 damage penetrating to enemies ending their round in the damaging aura, willingly or not. The aura has radius 1.
 
 Upgrades:\\
 cost +20 radius+1 \\
@@ -1725,7 +1725,7 @@ cost +20 dam+1
 \skill{Ability cost 20xp ccf 1.0 "Breathless":} The character does not have to breath. He is thus immune to most gas attacks, drowning, etc.
 
 
-\skill{Ability cost 30xp ccf 1.2 "Engaging Opponent":} An opponent must succeed with a psy roll to be able to disengage from melee combat with an "engaging opponent" character. Disengaging is switching to another target or moving outside of weapon range after having made a previous attack at the engaging opponent. It does not mean that the attacker must continue to make attacks, just that he cannot move away and cannot attack anyone else without first rolling a psy roll.
+\skill{Ability cost 30xp ccf 1.2 "Engaging Opponent":} An opponent must succeed with a psy roll to be able to disengage from melee combat with an "engaging opponent" character. Disengaging is switching to another target or moving outside of weapon range after having made a previous attack against the engaging opponent. It does not mean that the attacker must continue to make attacks, just that he cannot move away and cannot attack anyone else without first rolling a psy roll.
 
 upgrade: \\
 cost +10 gives target mod-3 to the psy roll. \\
@@ -1926,7 +1926,10 @@ cost +10xp: +5 extra resistance, can be purchased any mount of times.
 %The mana must first be successfully drawn, and the reduction amount is then returned if successful.
 
 
-\skill{Ability cost 100xp ccf 1.0 "Uber":} The character is sooo cool that a roll of 10 is no longer an automatic fail. A natural 10 roll is just like any other roll of the die; if his chance to succeed is 10 or greater, he will succeed.
+\skill{Ability cost 100xp ccf 1.0 "Über":} The True Hero is sooo cool that a roll of 10 is no longer an automatic fail. A natural 10 roll is just like any other roll of the die; if his chance to succeed is 10 or greater, he will succeed.
+
+
+\skill{Ability cost 100xp ccf 1.0 "Ünder":} The True Hero is so lucky that a roll of 1 is an automatic success=0 in stead of a fail if he had 0 or lower chance of success.
 
 
 \skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Buy twice for two extra arms. People will probably look at you really strangely from now on...
@@ -2047,6 +2050,13 @@ Old Food (cost 10xp): can get full meal value from corpses which are up to a day
 
 \skill{Ability cost 20xp, ccf 1.2 "unfazed":} The character can make as many 45 or 90deg free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action.\\
 Each additional level of unfazed costs +10xp.
+
+
+\skill{Ability cost 10xp, ccf 1.2, scf 4.0 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.
+
+The character can store any kind of die rolls. E.g: d10, d7, d13, but can only use them instead of a called for roll of the same kind or better. E.g: a saved d7 gut feeling can replace a d10 damage roll, but not a d10 skill check. A saved d12 gut feeling cannot replace a d10 damage roll, but can replace a d10 skill check.
+
+Buying gut feeling to lvl 0 costs the 10xp ability cost and imposes ccf 1.2. Then each level is scf 4.0. E.g: gut feeling to lvl 3 costs 10 + 4.0 * (3*3) = 46xp. Gut feeling to lvl 1 costs 10 + 4.0 + (1*1) = 14xp.
 
 
 

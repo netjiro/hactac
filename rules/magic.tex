@@ -217,10 +217,11 @@ Bolts don't take target \emph{to hit} modifications on the spell casting roll. T
 Generally these magic energies don't travel in a straight line from caster to target but might curve, form a branched lightning tree, split and reform, or snake forward erratically.
 
 \item[spear, lance, dart, arrow, quarrel, missile:]
-These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mods the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. 
+These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mod the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. 
 %TODO: think there are edge cases where this will not work right
-Often the spell formation shoots in a rapid line to hit the target, or whatever gets in the way. A failed casting, which would have succeeded if not for to hit mods from cover, can be interpreted as a successfully cast spell which strikes cover or near the target instead
+Often the spell formation shoots in a rapid line to hit the target, or whatever gets in the way. A failed casting, which would have succeeded if not for the \emph{to hit} mods from cover, movement, target size, etc can be interpreted as a successfully cast spell which strikes cover or near the target instead.
 %TODO: should this then still draw full mana, or reduced mana for minor fail? Can draw reduced mana and still make a nice flashy effect.
+
 
 \item[strike, chock, flash:] % mental lock spells ignore cover etc, but mods by psy etc
 %              ignores target move mods, shooting into melee mods
@@ -279,7 +280,7 @@ force bolt     cast 3ap 1m, dam 5 +1/m
                range 10 +5/m, long -2dam,
                int 10, psy 6
 
-%---===### current above ###===---
+---===### current above ###===---
 \end{verbatim} \normalsize
 \noindent Spells listed below are not re-balanced yet.
 See balance guidelines in comment segment above.
@@ -507,7 +508,7 @@ heal           cast 2r 1m, heal 3 +2/m, time 2hp/r, range contact
 heal           cast 2r 1m, heal 2 +2/m, time 3hp/r, range contact
                int 7, psy 6
 
-heal           cast 3r 1m, heal 5 +3/m, time 2hp/r, range contact
+heal           cast 3r 1m, heal 5 +3/m, time 1hp/r, range contact
                int 7, psy 7
 
 heal           cast 1r 1m, heal 1 +1/m, time 3hp/r, range contact
@@ -731,7 +732,7 @@ detect magic   cast 1r 1m, radius 5r +3/m, power per/3 +1/m
 big boss' eye  cast 2r 1m, duration 10r +5/m, move 5sq/r +3/m,
                vision 20 +10/m 360deg +dusk=1m +night=2m
                Creates an almost invisible eye per-6 to notice, which floats
-               high in the air. The eye cannot pass through solid (1+sq) walls,
+               in the air. The eye cannot pass through solid (1+sq) walls,
                but can pass through doors, thin walls, etc.
                The caster will see everything the eye sees as if he was there.
                Great for getting sight to other spell targets...

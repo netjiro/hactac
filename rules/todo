@@ -15,7 +15,48 @@ lots of comments in swedish, will not translate
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
 
+190703:
+TODO: CHECK: fixa så att util.declareMovement() använder calls till util.declareMP()
+      istället för att skriva om variablerna själv internt.
+      NOPE: gå igenom och ta bort refs till util.declareMovement() ?  behåll util.declareMP()  ?
+      verkar som om declareMP() är en nyare och renare version av declareMovement()
+      BECAUSE: declareMP() och declareMovement() har olika användning
+      declareMovement() är för "m", "walk", etc parametrar medan declareMP() tar mp,mod,initiativmod params
+TODO: hit ridande mod-1, avoid när rider mod-3
+TODO: distraction on miss, tungt vapen smackar i backen och skrämmer folk 
+TODO: skill som tar bort penaltis för skog
+TODO: skog ger penalties för movement och huggande
+TODO: kolla mod scripts för overextend extra step etc
+TODO: attack maneuver : synchronized side attack : 
+      target cannot choose which of multiple synchronized attacks he wants to parry.
 
+
+190626:
+TODO: fixa skademacro så att skadan ses inte göms för sl only
+TODO: fixa så att inte formler drar mana om stamina fails
+TODO: fixa litfeldts stamina bössor med frislag etc
+TODO: bygg rest status på gubben
+TODO: rest borde flytta ner initiativ
+TODO: check large target archer +1 istället för +3 !!!  
+TODO: mcgyverism eller engineering skill för att kunna bygga pyssel
+      tex fyrspann för åsnor att dra stora vagnen
+      ev locks and traps ??
+TODO: skill "a cunning plan" för att kunna ditt och datt ?
+
+
+1906++:
+TODO: side stab: - som back stab, backstab, 
+      men gäller i strid när någon annan distraherar målet. tex 
+      target distracted, attacker roll first per vs per-3/engaged other excl side stabber to find a gap to stab (similar to back stab have to sneak up behind, or target not aware).
+      then roll side stab, 1ap? (similar to back stab 1ap or double 1stam ?
+      similar damage multipliers as back stab ?
+TODO: rapid strike : heroic ? 
+      allows for more than one strike not triggering right to react if target is not aware of attacker before first attack.
+      1) must remain above target in initiative list
+      2) must succeed rapid strike
+
+
+1905++:
 TODO: with stamina changes: go through all skills etc and remove all
       "first two attacks require no stamina" and similar 
 TODO: light weapons should cost less stamina to use
@@ -755,4 +796,7 @@ DONE: remove unfazed, eller flytta till heroic abilities
 DONE: HADE TYDLIGEN TVÅ STAMINA BLOCK ??  i primary attack macro
       kolla bug kring stamina hantering.
       kizras slog en gång, men tydligen drogs två stamina
+DONE: build stun macro - checked: stun macro 
+      checked: util.updateNewRound(), util.declareMovement(), util.declareMP(), util.declareAP()
+
 
