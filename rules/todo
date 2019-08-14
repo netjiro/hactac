@@ -15,20 +15,50 @@ lots of comments in swedish, will not translate
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
 
+omvänd kronologisk ordning av TODO items
+
+
+190807:
+TODO: knock back skill? heroic? vs slag som 
+TODO: skill persuade/charm el likn
+TODO: build with dungeoneering, locks & traps, mcgyverism ?
+
+
+190731:
+TODO: insta-light-torch - exotic equipment   draw and autolights
+TODO: remove duration token from auto button
+TODO: se till att attackmacron skriver hits och skada öppet istället för hidden gm
+TODO: avoid defence skall också skriva öppet
+TODO: spell: släcka facklor
+
+
+190724:
+TODO: snabb likätare - som quaff fast för äta döingar i full fart
+
+
+190710:
+TODO: right to react : NO move shoot move - before target can move and strike.
+      Correct: move shoot - target right to react and move strike before attacker can move further, but attacker can continue to move as part of the same initiative and action (shooting)
+TODO: hide - gömma alla, gömma fotbollslag i skogen är vanligt hide slag
+      skurkarna har inga hundar med sig
+TODO: skademacro skall skriva skada
+TODO: declare move skall fixa util.stamina()
+TODO: right to react : NO move shoot move - before target can move and strike
+      correct: move shoot - target right to react and move strike before attacker can move further, but attacker can continue to move as part of the same initiative and action (shooting)
+
+
 190703:
-TODO: CHECK: fixa så att util.declareMovement() använder calls till util.declareMP()
-      istället för att skriva om variablerna själv internt.
-      NOPE: gå igenom och ta bort refs till util.declareMovement() ?  behåll util.declareMP()  ?
-      verkar som om declareMP() är en nyare och renare version av declareMovement()
-      BECAUSE: declareMP() och declareMovement() har olika användning
-      declareMovement() är för "m", "walk", etc parametrar medan declareMP() tar mp,mod,initiativmod params
-TODO: hit ridande mod-1, avoid när rider mod-3
+TODO: fixa regler kring styrka och kasta saker : range, damage
+TODO: tohit mounted target is mod-1, avoid action when mounted is mod-3
+      avoid action for mount requires that mount has avoid skill, or rider avoid mod-6
 TODO: distraction on miss, tungt vapen smackar i backen och skrämmer folk 
-TODO: skill som tar bort penaltis för skog
 TODO: skog ger penalties för movement och huggande
+TODO: skill som tar bort penaltis för skog
 TODO: kolla mod scripts för overextend extra step etc
 TODO: attack maneuver : synchronized side attack : 
-      target cannot choose which of multiple synchronized attacks he wants to parry.
+      target cannot choose which of multiple synchronized or double/triple/etc attacks he wants to parry. The attacker chooses which the target must parry
+TODO: discerning defender: choose what to parry with more info
+      for multiple incoming simultaneous attacks (double, synchronised, etc) the defender can see the attack damage and effects before choosing which of the attacks to parry. Also negates the synchronised side attack 
 
 
 190626:
@@ -61,7 +91,6 @@ TODO: with stamina changes: go through all skills etc and remove all
       "first two attacks require no stamina" and similar 
 TODO: light weapons should cost less stamina to use
       eg: every other attack should be free
-
 TODO: fix util.declareMove() to also accept mp numbers as argument
       ? duplicate function ?
 TODO: roll initiative skall bara synas för GM:
@@ -72,9 +101,6 @@ TODO: skriv inte exhausted för kritter utan stamina !!
 
 
 190605:
-TODO: !! kolla om detta är fixat eller ej !! ??
-      kan inte attackera eller göra andra offensiva actions även om 
-      circumstances change, bara defensiva.
 TODO: bug: script: hidden msg not enough stamina, but still draws stamina
       Kizraz:
       makes heavy staff 2h attack « roll = D10 = roll = 5 = 5 » « result = skill + focmod - CurrentTotalModification + mod - roll = result = (12 + 0 - -1 + 0 - 5) = 8 » success = 8 with roll 5. doing damage = 5 pen 1   « msg = NOT ENOUGH STAMINA »   drawing 1 stamina 
@@ -89,7 +115,6 @@ TODO: powernap få tillbaka mana även när man bara sover någon runda eller s�
       eller stamina / mana ?
 TODO: bitch slap - som ignorerar pansar, 0dam? ger ett pain?   tar bort ett ap ?
 TODO: Excessive strength borde göra rustningar lättare också.
-
 TODO: kan man släppa en aktiv formel ?  utan dispell ?
       eg firestorm, johmenvisst
 prev: spells - bring down a spell before time is psy-spellmana roll
@@ -109,17 +134,11 @@ TODO: skall det gå att kasta 1r actions som response actions?   Japp!
       Men att bryta right to react förstör en hel del i spelet. Mycket taktiskt
       meckel med att banka på folk i rätt ordning...
       MEN inte kasta multiround actions som response actions
-TODO: light strength / tank strength strength bonus for armour mods
-      höcker föreslog att överstarka nissar skall ha mindre mods för sina pansar
 
 
 190306:
 TODO: Goblin Destiny : add gossip lists for situations where they meet ppl
       towns, patrols, possible other goblins they capture / trade with
-
-
-190306: höcker
-TODO:  Excessive strength borde göra rustningar lättare också.
 
 
 181205:
@@ -143,7 +162,7 @@ TODO: skill: pole vault : hoppa med spjut/stav hoppa över hinder/folk
 
 181203: mail
 TODO: multiple points in mail 181203:1155 to hack'n'slash group
-     https://mail.google.com/mail/u/0/#inbox/QgrcJHrnzwjsWwWfkvxbWrzFSWVqTkxrjkL
+      https://mail.google.com/mail/u/0/#inbox/QgrcJHrnzwjsWwWfkvxbWrzFSWVqTkxrjkL
 TODO: differentiera vapen bättre: tyngd, längd, speed
       skill "heavy weapons" samt:
       vapentyngd + str vs vapentyngd + str
@@ -155,6 +174,7 @@ TODO: differentiera vapen bättre: tyngd, längd, speed
 TODO: ser över stridsmanövrer, de används inte mycket i spel nu
 TODO: skadetyper slashing/piercing/crushing/magic/[elemental]
 
+
 181128:
 TODO: skall man tvingas deklarera W för att gå genom knölig mark med 1mp M ?
 TODO: skill AFK  - ger xp även om man inte är med på passet
@@ -162,9 +182,11 @@ TODO: skill "I Almost Had Him"  full XP även för folk som flyr
 TODO: kolla om det skall vara minus på magi genom eld  
       NOPE enligt tidigare diskussion, omvärdera nu med olika typer av formler ?
 
+
 181122:
 TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin 
       inte skall ha ccf från reactive skin, se räkneexemplet
+
 
 181114:
 TODO:  movement state "ride" som sätter movement undeclared at 0mp
@@ -186,6 +208,7 @@ TODO:  movement state "ride" som sätter movement undeclared at 0mp
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 OLD: ---------------------------------------------------------------------------
+
 
 TODO: bygg liten lätt area effekt skada formel
       ?? kanske ok för att rensa småknott, 3ap dam1 pen0 darkflash radius 3
@@ -211,7 +234,6 @@ TODO: killing blow, alltid träffar prone target. "coup de grace" slut på lidan
       eller snabbare, eller alltid killing ?
       dock begränsat till max skada på vapen ?
       Nah, nog med att det är mod+3 att träffa ?
-TODO: paralyse knapp
 TODO: qualify how yielding affects free attacks on disengage / opportunity
 TODO: quaffing skall ta hel runda, men blir bara action ?
 TODO: right to react, movement för att komma in i närstrid men inte mer
@@ -387,9 +409,6 @@ TODO: prone/liggande är avoid mod-3 och parry mod-3
 TODO: ligger på dålig ruta, fortfarande mods?
 TODO: the undead hirelings skall vara mer resistenta mot fear
       eg brütal slaughter, eg mod+6 eller så
-TODO: rest macro button: sets icon rest, set ap=0, set mp=0
-      if moves or actions anyway, then penalties to next round as usual,
-      but still rested.
 TODO: spells should use character stats for more influence on effects:
       eg: range 5+spy+2/m, damage 2+psy/3+1/2m
       magic: set things like range of a spell to depend on psyche instead of spell cost depending on psyche
@@ -530,8 +549,8 @@ from rules.tex
                                     N O P E
                                     -------
 
-Kronologisk ordning på DONE items:
-copy-cut , ctrl-end , paste,   (new line if necessary)
+Kronologisk ordning på SKIP/NOPE items:
+
 
 SKIP: super success, stuns people due to impressive move....  njae
 SKIP: rest regain stamina automagically -- nah, för mycket händer utanför
@@ -551,6 +570,8 @@ NOPE: heal3 macro, remove pain
 NOPE: tackle utan resist borde inte aktivera ?  jo, det behöver aktivera
 NOPE: unfazed skall höja initiativ för turn med lvl istället för interrupt
       remove unfazed, reduces tactical depth
+190705:
+SKIP: använd stun knapp 99 istället för paralyze knapp: paralyse knapp
 
 
 
@@ -798,5 +819,33 @@ DONE: HADE TYDLIGEN TVÅ STAMINA BLOCK ??  i primary attack macro
       kizras slog en gång, men tydligen drogs två stamina
 DONE: build stun macro - checked: stun macro 
       checked: util.updateNewRound(), util.declareMovement(), util.declareMP(), util.declareAP()
-
-
+190705:
+DONE: fixat stun macro, update, declareAP/MP för stun, stun effect state.Paralyzed
+DONE: CHECK: fixa så att util.declareMovement() använder calls till util.declareMP()
+      istället för att skriva om variablerna själv internt.
+      NOPE: gå igenom och ta bort refs till util.declareMovement() ?  behåll util.declareMP()  ?
+      verkar som om declareMP() är en nyare och renare version av declareMovement()
+      BECAUSE: declareMP() och declareMovement() har olika användning
+      declareMovement() är för "m", "walk", etc parametrar medan declareMP() tar mp,mod,initiativmod params
+DONE: max declareable ap is : base ap + dexterity
+      how many ap is maximum possible to declare?
+      Since it's possible to declare extra ap and gain initiative and mod-X it's possible to declare ludicrous ap just to be able to jump the initiative queue.
+      So: write that it's not possible to overdeclare more then the character's dex?
+DONE: flagging "done" state now sets InRoundInitiative to 0
+      only if it was previously higher than 0, does not raise negative initiative to 0
+      calc in util.update()
+DONE: !! kolla om detta är fixat eller ej !! ??
+      flaggad "done" kan inte attackera eller göra andra offensiva actions även om 
+      circumstances change, bara defensiva.
+DONE: Stronk Tank
+      light strength / tank strength strength bonus for armour mods
+      höcker föreslog att överstarka nissar skall ha mindre mods för sina pansar
+DONE: rest macro button: sets icon rest, set ap=0, set mp=0
+      if moves or actions anyway, then penalties to next round as usual,
+      but still rested.
+190711:
+DONE: skademacro skall skriva skada
+      !! Kan inte lägga reveal/gm (r/g) calls inne i if code block
+      så kan inte testa om isPC eller isNPC och välja, så lägger hitmsg öppet (r)
+      och lägger dammsg gm only (g)
+DONE: declare move m/w/r/d skall använda util.stamina() istället för att dra direkt

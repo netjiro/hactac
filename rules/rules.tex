@@ -244,8 +244,10 @@ Actions cost action points (ap). In the beginning of each round all characters d
 The modification is calculated as: \\
 mod = declared ap - base ap \\
 Most regular actions require three action points. Characters start out with around 3 as base ap, meaning they can do about one unmodified normal action per round. When they try to do more each round they get mods. Some skills affect base ap and the action mod for certain actions.
+The maximum ap a character can declare is his base ap + dexterity.
 
 The ap modification stacks together with mods from movement, etc.
+
 
 
 \subsection*{Movement gives action penalties}
@@ -471,7 +473,7 @@ money ( g s c)
 
 \item[con] Constitution is the general physical sturdiness and resilience of the character. It determines his chances of staying awake and alive when his hitpoints are at or below zero, as well as his resistance against poisons, chances of continuing to run or attack when out of stamina, and the base distance he can travel in a day.
 
-\item[int] Intelligence is the reasoning capacity and cleverness of the character. It determines his chances of figuring things out, putting clues together to reach a conclusion, etc. It also limits how easily he can learn spells.
+\item[int] Intelligence is the reasoning capacity, cleverness, schooling and general knowledge of the character. It determines his chances of figuring things out, putting clues together to reach a conclusion, etc. It also limits how easily he can learn spells.
 
 \item[psy] Psyche is the mental strength and resilience of the character. It determines his chances to avoid panicking when faced with scary stuff, of maintaining control over his faculties when opposing wizards try to manipulate him, etc.
 
@@ -560,12 +562,14 @@ To get away from this problem we add:
 \begin{description}
 \item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any AP. The character moves down the initiative list.
 \item[wait] will retain the initiative but costs one AP. This flags the character with a clearly visible "wait" marker in the initiative list and makes it clear he's ready to jump into action at any time. The player must clearly and quickly speak up when he wants to take action again.
-\item[done] simply flags that the character is more or less done for the round, unless something happens to him. This clearly marks the character with a big "done" marker in the initiative list and on the map, notifying that the character won't take more actions and movement unless his situation changes significantly.
+\item[done] flags that the character is more or less done for the round, unless something happens to him. The character's in round initiative is set to 0. In maptool this clearly marks the character with a big "done" marker in the initiative list and on the map and sorts him to the bottom of the initiative list, notifying that the character won't take more actions and movement unless his situation changes significantly, see note below.
 \end{description}
 
 With this it's possible to enforce a rule where the top initiative always have to take some action, or choose a wait state. The Hero can wait on a target for free, but sacrifices initiative. Wait flexibly but costing 1ap, or flagging as done but can only take reactive actions if the situation around him changes significantly.
 
 For battles with 30+ characters involved this will speed up the process significantly.
+
+The GM must decide what constitutes a \emph{significant change of situation} for a done character. A good rule of thumb is that the character can take reactive defensive actions and movement only, and no offensive actions, counter attacks, moving closer to targets, initiative interrupts, etc.
 
 
 \subsection*{Actions that do not require rolls}
@@ -820,7 +824,9 @@ Normal size characters such as humans, orcs, dwarves, elves, etc cannot.
 %------------------------
 Extra movement, beyond declared, causes the character to fall down. This can be avoided by having the maneuver skill \emph{off balance}, which most races have from the start.
 
-When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the yield action. This will cause him to go off balance, incurring the mod-3 which will persist for the next round.
+When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the final move of the yield action. This will cause him to go off balance, incurring the mod-3 which will also persist for the next round.
+
+Note that the off balance penalty kicks in after the parry + yield roll in the example above. Otherwise most characters would not gain any actual benefit from going off balance when defending and yielding since the off balance penalty would cancel the yield bonus.
 
 It's possible to have multiple off balance if the character purchases the skills.
 When the character tries, or is forced, to move beyond his off balance level he will fall down, just as if he didn't have off balance.
@@ -917,7 +923,7 @@ Every round you run costs two stamina point. \\
 Every round you dash costs three stamina points. \\
 Some skills and maneuvers also require drawing stamina.
 
-The characters generally regain one stamina at the start of each round. If stamina reaches 0, you must start rolling for con for every action that require a stamina point. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
+The characters generally regain one stamina at the start of each round. If stamina reaches 0, you must start rolling for con for every action that requires drawing stamina. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
 
 When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
 E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.

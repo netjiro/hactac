@@ -1146,7 +1146,7 @@ Maneuvers are special actions or optional "modifiers" that can be made as part o
 \skill{Maneuver (cost 5) "opportunity":}
 Triggers the right to react when an opponent is trying to move out of melee weapons range after he's already engaged in melee. For weapons with reach it also triggers the right to react if the target is moving \emph{away} into a range with a worse reach mod but still within max reach of the weapon. But it only triggers once per intended movement.
 
-Opportunity does not trigger for the attacking character when the target character moves away as part of a defensive action from the right to react. E.g: parry + yield, or avoid and move away.
+Opportunity does not trigger for the attacking character when the target character moves away as part of a defensive action from the right to react, even if the target doesn't take an action but just moves away. E.g: parry + yield, or avoid and move away, or just take a step back without defending.
 
 E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's right to react. PP parries and yields and moves away another step. AA can't claim opportunity from PP leaving base contact, but DD can since it's not DD's attack that triggered PP's rigth to react action.
 
@@ -1158,7 +1158,7 @@ Triggers the right to react when someone not engaged in melee is moving into mel
 
 Note: Intercept does not cover the same situation as opportunity does, since opportunity only applies to targets already engaged in melee with the Hero, while intercept only covers targets passing by without being engaged in melee.
 
-If an attacking opponent without \emph{intercept} moves into melee range to attack, the Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
+If an attacking opponent without \emph{intercept} moves into melee range to attack, the intercepting Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
 
 
 \skill{Maneuver (cost 5) "yield":}
@@ -1181,10 +1181,22 @@ Gives a bonus to to a defend action if the Hero moves one step with the action. 
 Upgrade the dodge bonus:\\
 cost  10xp: dodge +1 \\
 cost  20xp: dodge +2 \\
-cost  50xp: dodge +3 \\
-cost  75xp: dodge +4 \\
-cost 100xp: dodge +5 \\
+cost  40xp: dodge +3 \\
+cost  70xp: dodge +4 \\
+cost 110xp: dodge +5 \\
 cost 150xp: dodge +6
+
+
+\skill{Maneuver (cost 15) "dodgy attack":}
+Makes an attack more difficult to defend against when the attacker moves one step with the action ending up at the same or closer range to the target. This does not count against, and is not limited by, the finesse of the weapon. Taking one step is enough even for multiple levels of dodgy attack. E.g: dodgy attacks 3 still gives todefend-3 even if the attacker only takes one step with the attack.
+
+Upgrade the dodgy attack todefend penalty:\\
+cost  15xp: dodgy attack todefend-1 \\
+cost  30xp: dodgy attack todefend-2 \\
+cost  50xp: dodgy attack todefend-3 \\
+cost  80xp: dodgy attack todefend-4 \\
+cost 120xp: dodgy attack todefend-5 \\
+cost 170xp: dodgy attack todefend-6
 
 
 \skill{Maneuver (cost 5) "off balance":}
@@ -1200,10 +1212,7 @@ cost +10xp max two off balance steps per round, total mod-6 \\
 cost +30xp max three off balance steps per round, total mod-9
 
 
-\skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
-
-
-\skill{Maneuver (cost 20) "side step":} allows for the character to take one extra movement point per round if dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
+\skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
 
 
 \skill{Maneuver (cost 15) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. And together with "diagonal squeeze" the Hero can move through a diagonal between a blocking corner and an enemy.
@@ -1217,14 +1226,14 @@ anchor +1 cost +10 ignore +1 knockback.\\
 Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
-\skill{Maneuver (cost special) "extra gear X"} is a new movement speed, beyond M/W/R/D, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the dash maximum mp.
+\skill{Maneuver (cost special) "extra gear X"} is a new movement speed, beyond M/W/R, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the dash maximum mp.
 
-E.g: Discerning Doris has M1 W4 R6 D9 and want to learn a movement speed that gives her 3mp. She starts from M1 and adds 2mp and mod-2 to create "extra gear 3". Her declarable movement speed options are then M1,eg3,W4,R6,D9 at mod=0,mod-2,mod-3,mod-6,mod-9 respectively. An eg5 based on W4 would give mod-4.
+E.g: Discerning Doris has M1 W4 R6 D9 and want to learn a movement speed that gives her 3mp. She starts from M1 and adds 2mp and mod-2 to create "extra gear 3". Her declarable movement speed options are then M1,EG3,W4,R6,D9 at mod=0,mod-2,mod-3,mod-6,mod-9 respectively. An EG5 based on W4 would give mod-4.
 
-Any modifications or changes to the egX base movement (m/w/r/d) also applies to the egX movement. \\
-E.g: Full plate armour gives run-2sq, meaning an egX based on run also suffers -2sq: R7 with eg9 will be R5(7) with eg7(9) with full plate. \\
-E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any egX based on R/D.\\
-E.g: DD trains fast 4, changing M1 to M2, and thus eg3 to eg4.
+Any modifications or changes to the EGX base movement (m/w/r) also applies to the EGX movement. \\
+E.g: Full plate armour gives run-2sq, meaning an EGX based on run also suffers -2sq: R7 with EG9 will be R5(7) with EG7(9) with full plate. \\
+E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any EGX based on R/D.\\
+E.g: DD trains fast 4, changing M1 to M2, and thus EG3 to EG4.
 
 The cost of an extra gear starting from Maneuver speed is 15xp per extra movement point, from Walk speed is 10xp per extra movement point, and from Run speed is 5xp per extra movement point.
 
@@ -1337,11 +1346,11 @@ It is recommended to stack missile parry and deflect for the larger and heavier 
 
 
 \skill{Maneuver (cost 10) "phalanx":} can be used as improved defence of several allies, protecting each others' sides. The phalanx must form a straight line (diagonal is ok).
-Parries and deflection defence actions get a mod+1 for each of the (two possible) sides that the bearer has covered by friends that also has phalanx. Phalanx does not provide a bonus for "avoid" defence, or if the Cowardly Hero yields in a defensive action.
+Parries and deflection defence actions get a mod+1 for each of the (two possible) sides that the Hero has covered by friendlies who also use phalanx. Phalanx does not provide a bonus for avoid defence actions, or if the Cowardly Villain yields in a defensive action.
+
+Phalanx also grants the same bonus if a side is blocked by a wall or similar large object. A single phalanx character fighting in a narrow tunnel with walls on both sides get mod+2. With a wall or large statue on one side he gets mod+1 even if his other side is open to attack.
 
 E.g: a three abreast shield line where all users know and use the phalanx maneuver will give a parry mod+1 bonus to the edge fighters, and a parry mod+2 bonus to the centre fighter. If the edge fighters have walls on their "open sides", then they also get the full mod+2 defence bonus from phalanx.
-
-Phalanx also grants the same bonus if a side is "blocked" by a wall or similar large object. A single phalanx character fighting in a narrow tunnel with walls on both sides get mod+2. With a wall or large statue on one side he gets mod+1 even if his other side is open to attack.
 
 Phalanx does not require shields, but the phalanx bonus is only available to parries and deflect defence actions, not to avoids.
 It is not possible to yield while maintaining a phalanx bonus. A phalanx must move together or loose its bonus. Therefore the phalanx usually moves in the lowest initiative of all participants, and cannot yield. A commander or tactician can use the leader or tactics skills to give the phalanx orders to move or act in their initiative.
@@ -1351,7 +1360,7 @@ For weapons with reach 1 or more and poking attacks, such as spears, it allows f
 For ranged attacks it allows the use of double rank firing lines, where the front line shoots from a kneeling position, and the back line fires above them. It is also possible to shoot over a shield line, but with mod-3.
 
 
-\skill{Maneuver (cost 10) "combat unit":} allows for all people with the same combat unit maneuver to count as one character for the sake of activation, ordering, strategy bonus (when fighting the same strategy covered target), etc. Bonused as one only applies when they are fighting tightly together, and is at GM discretion.
+\skill{Maneuver (cost 10) "combat unit":} allows for all people with the same combat unit maneuver to count as one character for the sake of activation, ordering, strategy bonus (when fighting the same strategy covered target), etc. Bonused as one only applies when they are fighting tightly together and is at GM discretion.
 
 Each combat unit is a unique and named "combat unit" skill. E.g: combat unit dank daredevils, combat unit evil snails, combat unit red peacock, etc.
 
@@ -1514,18 +1523,20 @@ The followup attack costs two extra stamina, one for the extra step and one for 
 Weapons with reach has an extra mod+1 when used for a followup attack.
 
 
-\skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\%. Requires two weapons, one in each hand, e.g. sword and shield. Can be used with slow weapons, the entire action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
+\skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\%. Requires two weapons, one in each hand, e.g. sword and shield. The entire counter attack action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
+
+
+\skill{Maneuver (cost 30) "riposte":} The Hero can make something similar to a counter attack but using only one weapon, at a cost of one extra stamina above the usual cost of the attack, taking mod-3 to both the parry and attack rolls, and the attack is dam 75\%.
 
 
 \skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage. For each +3 excessive strength he gets damage +1.
 
 
-%TODO: rewrite after stamina change
-\skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one extra attack per round that does not cost stamina.
+\skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one attack per round that that cost one less stamina than normal.
 
 
 \skill{Maneuver (cost 10) "mighty grip":} The character can trade a +6 excessive strength damage bonus (regularly dam+2) to hold a 2h weapon in one hand instead. The weapon gets a slow-1 mod when held in one hand, as well as a mod-1. \\
-The character can also trade a +9 excessive strength to hold it in one hand without the slow-1 penalty, but still with the mod-1 penalty.
+The character can also trade a +9 excessive strength to hold it in one hand without the slow-1 and mod-1 penalties.
 
 
 \skill{Maneuver (cost 10) "fast strength":} A character with enough strength and dexterity can choose to trade excessive strength damage bonus to a fast+1 modifier for the actions with the weapon instead. Also comes with a mod-1 difficulty though. \\
@@ -1560,8 +1571,12 @@ This gives a lot of flexibility for the strong. Note that it is possible to buy 
 \noindent \textit{Stop for a bit and flex 'em pecs! Shake it till you make it!}
 
 
-\skill{Maneuver (cost 10) "double arrow":} Like all true action hero archers the character can load two arrows at the same time and shoot at two adjacent targets. The action is slow-2. Both arrows are mod-6 to hit and damage is 75\%, but counts as one attack for the sake of stamina. It is another mod-3 to hit both targets for each empty square between them, starting from the base mod-6 when they are in base contact. The targets cannot be "in line" as seen from the
+\skill{Maneuver (cost 10) "double arrow":} Like all true action hero archers the character can load two arrows at the same time and shoot at two adjacent targets. The action is slow-2. Both arrows are mod-6 to hit and damage is 75\%. Roll each hit and damage separately. The double arrow attack action counts as one attack for the sake of stamina. 
 Oddly enough this maneuver works just as well with crossbows, throwing daggers, rocks, and other projectiles, as it does with regular bows and arrows.
+
+It is another mod-3 to hit both targets for each empty square between them, starting from the base mod-6 when they are in base contact. The targets cannot be in line as seen from the shooter, unless combined with gap finder or similar.
+
+Upgrade to triple arrow at cost +10xp and damage 66\%, and to quadruple arrow at cost +10xp and damage 50\%.
 
 
 \skill{Maneuver (cost 10) "arrow stab":} Instead of shooting you opponent the Hero can use the projectile to stab the target instead. Damage is 50\% and penetrating 0. The attack is mod-3 to hit, and a regular 3ap action. It counts as one regular attack for sake of stamina. For the attack skill roll the character can use the highest of either: bow,knife,rapier,sword,spear skills.
@@ -1574,7 +1589,7 @@ It works just as well with rocks, chairs, bottles, and other projectiles as it d
 
 \skill{Maneuver (scf 0.5) "breaker":} Adds extra damage when calculating if a parrying weapon or shield breaks or takes damage when used to parry an attack. A breaker attack is slow-1 and costs 1 stamina extra. Add damage equal to the level of \emph{breaker} when comparing damage vs absorption after a successful parry. The additional breaker damage can only damage the parrying weapon and never the target.
 
-E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a "breaker" attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
+E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a breaker attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
 
 
 \skill{Maneuver (cost 10) "knock down" / "trip up":} Two separate attack maneuvers. Both means hit someone so they fall down. "Knockdown" is str based while "trip up" is dex based.
