@@ -18,6 +18,39 @@ NEW: ---------------------------------------------------------------------------
 omvänd kronologisk ordning av TODO items
 
 
+
+190925:
+TODO: luck, rabbit, etc : multiple rerolls should escalage as quadratic: 1,4,9,16xp
+
+
+190918:
+TODO: höcker tryckte rest, men blev manöver och 1mp ?
+
+
+190904:
+TODO: build magic som gör massa skada men som går att blocka/parera eller hoppa undan
+TODO: ninja quaff, stjäl quaff från motståndare i baskontakt
+TODO: regeneration, fast för mana
+TODO: kanske skall meditate påverka så man kan få tillbaka mana... ?
+
+
+1908xx,190904: snack med blom, telefon, patriks altan, pass 190904
+TODO: klarifikation i basregler ang att i princip alla slag påverkas av mod stack
+      tex grundegenskap - mods, eller enkelt: gre+9-mods
+      således kan man inte överdeklarera ap eller movement om man vill kunna göra något
+      Inte ens skrika, vilket skulle gå på tex charisma+9-mods, e.g: 5+9-(6-6)
+      om man deklarerat run och +6ap över base, vilket skulle ge chans på 2
+      att nissen kan göra sig hörd och förstådd över flåsandet och flamsandet
+SAME: skriv att man inte kan deklarera 140ap för att boosta initiativ ...
+      överdeklarerade ap för initiativ ger mods ...  och således fungerar inga normala
+      rolls, även "easy" shit är tex grundegenskap+9-mods ...
+      (från 180824 pass)
+
+190814:
+TODO: BUG: clöwsus force bolt fick fail due to stamina when 3stam kvar...
+TODO: ölhjälm, med 2x quaff och sugrör
+
+
 190807:
 TODO: knock back skill? heroic? vs slag som 
 TODO: skill persuade/charm el likn
@@ -62,7 +95,7 @@ TODO: discerning defender: choose what to parry with more info
 
 
 190626:
-TODO: fixa skademacro så att skadan ses inte göms för sl only
+TODO: fixa skademacro så att skadan ses och inte göms för sl only
 TODO: fixa så att inte formler drar mana om stamina fails
 TODO: fixa litfeldts stamina bössor med frislag etc
 TODO: bygg rest status på gubben
@@ -339,9 +372,6 @@ TODO: clarify bland, i vilka situationer och när man huger folk, etc.
 TODO: clarify shields don't protect against magic, bolts are too clever,
       and aim on sight/ sort of, but not precise enough to hit specific
       places
-TODO: clarify move on stun, hur mycket minus ams börjar hindra förflyttning?
-      -1 move per -3 ams ?
-      skall man kunna ta actions som inte kräver rolls ? borde inte ...
 TODO: mer skada när folk inte kan tacklas iväg ?
       kanske dubbel skada för de tackle stegen som inte kan knuffas bort?
 TODO: ? problem att man alltid kan tackla ner folk så länge man är snabbare och
@@ -799,15 +829,16 @@ DONE: clearLights() called in util.damage() death section
 DONE: uppdatera    stamina prysslarna
 DONE: goblins får gå genom friendly diagonals för de är mindre
 DONE: can't take tackle/block nor active/resist action without tackle/block skill
-DONE: rewrite: all characters regain con/3 stamina per round
-      con=2: 1stam/2r
-      con=1: 1stam/3r
-      con=0: 1stam/4r
+DONE: rewrite: all characters regain 1stam/r
       stamina costs: m=0, w-1, r-2, d-3
                      all attacks cost 1stam
                      some very heavy weapons cost double stamina
                      some very light weapons cost half, skip stamina for every other attack
       affects jackhammer, energizer bunny
+      when resting all chars regain con/3 stamina per round
+      con=2: 1stam/2r
+      con=1: 1stam/3r
+      con=0: 1stam/4r
 DONE: possum:
       feign death - charisma roll, mod for damage, etc
 DONE: stora rustning skall ha jump och climb penalties
@@ -849,3 +880,13 @@ DONE: skademacro skall skriva skada
       så kan inte testa om isPC eller isNPC och välja, så lägger hitmsg öppet (r)
       och lägger dammsg gm only (g)
 DONE: declare move m/w/r/d skall använda util.stamina() istället för att dra direkt
+190912:
+DONE: stun removes ap, mp, pushes mod == to stun points
+      clarify move on stun, hur mycket minus ams börjar hindra förflyttning?
+      -1 move per -3 ams ?
+      skall man kunna ta actions som inte kräver rolls ? borde inte ...
+190918:
+DONE: skriv om : sätt att suga-magi växlar tex 2-till-1, istället för 1:1
+      skall kosta 1m att kasta också...
+190930:
+DONE: multiple rerolls should escalage as quadratic: 1,4,9,16xp

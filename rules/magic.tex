@@ -217,7 +217,7 @@ Bolts don't take target \emph{to hit} modifications on the spell casting roll. T
 Generally these magic energies don't travel in a straight line from caster to target but might curve, form a branched lightning tree, split and reform, or snake forward erratically.
 
 \item[spear, lance, dart, arrow, quarrel, missile:]
-These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mod the spell casting roll directly. These are the same mods as a firing arrows from a bow would take. 
+These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mod the spell casting roll directly. These are the same to-hit target mods as a firing arrows from a bow would take. 
 %TODO: think there are edge cases where this will not work right
 Often the spell formation shoots in a rapid line to hit the target, or whatever gets in the way. A failed casting, which would have succeeded if not for the \emph{to hit} mods from cover, movement, target size, etc can be interpreted as a successfully cast spell which strikes cover or near the target instead.
 %TODO: should this then still draw full mana, or reduced mana for minor fail? Can draw reduced mana and still make a nice flashy effect.
@@ -255,7 +255,7 @@ ur bolt        cast 2r 1m, dam 6
 Onsager Spear  cast 3r 1m, dam 10 +3/m,
                range 10 +5/m
                int 6, psy 7
-               
+
 black bolt     cast 2r 1m, dam 9 +3/m, penetrating,
                range 10 +5/m, 
                int 6, psy 9
@@ -406,11 +406,17 @@ slow           cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
                Movement costs double movement points.
                All actions are slow-2 (takes +2 extra ap)
                Full/multi-round actions take +1r
-               Continue slow on psy vs psy +2/m each round (mana paid once
+               Continue slow on psy+2/m vs psy each round (mana paid once
                on cast) up to the max duration. First round auto success.
                Once slow is lost on a target that target is free from
                the spell.
                int 4, psy 3
+
+hasten         cast 2r 2m, +1target/3m, range touch, duration 3r +1/m
+               Adds 3ap +1/m to target each round for the duration.
+               Adds movement: M+1mp, W+2mp, R+3mp, D+4mp
+               Initiative is raised by 3+3/m.
+               int 8, psy 8
 
 hold           cast 1r 2m, +1target/2m, range 10 +5/m, duration 3r +1/m
                Target cannot do movement at all, but stationary actions can
@@ -431,13 +437,6 @@ paralyse       cast 2r 2m, psy vs psy +1/m, range 5 +2/m,
                even if it is only with the hands.
                duration diff+1r +2r/m (pay on cast, diff from psy vs psy roll)
                int 7, psy 8
-
-hasten         cast 2r 2m, +1target/2m, range touch, duration 3r +1/m
-               Adds 3ap +1/m to target each round for the duration.
-               Initiative is raised by 3+3/m.
-               The character also gets 50\% extra movement points each round
-               (round up).
-               int 8, psy 8
 
 strengthen     cast 2r 2m, +1target/2m, range touch, duration 5 +2/m
                The target gets strength+3 +2/m for the duration of the spell.
@@ -597,9 +596,10 @@ mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
 mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
                int 8, psy 8, scf 0.66
 
-drain          cast 2r 1m, psy vs psy +3/m, range contact,
-               drains diff mana points.
-               Must be in contact for the last round of casting.
+drain          cast 3r 1m, psy vs psy +3/m, range contact,
+               drains diff mana points from target
+               gives caster diff/2 (round up) mana, i.e. half is lost
+               Must be in contact during whole casting.
                Cannot drain the target below 0 mana. If draining the target to
                0 mana the target must roll psy or falls unconscious.
                Roll psy once per round to wake up again.
@@ -641,7 +641,7 @@ pain           cast 1r 1m, duration 3r +2/m, range 10 +5/m, target 1 +1/2m
                Inflicts pain mods on the target during the duration.
                int 4, psy 6
 
-stun           cast 6ap 1m, range 10 +3/m, target 1 +1/m
+stun           cast 1r 1m, range 10 +3/m, target 1 +1/m
                Stun 9 +6/m
                int 5, psy 5
 
@@ -877,6 +877,7 @@ destructive feedback
     psy+3/m vs psy
     damage 6 penetrating and draws equal mana from target, 1mana/damage
     i.e. target's mana is damaging
+    Cannot draw/damage below target mana 0.
 
 invisibility
     cast 1r, 1m, personal +1 target/2m touch
@@ -887,8 +888,18 @@ elsewhere
     teleport 2D4-5 sq X/Y (+/-3sq)
     jump teleport anywhere else, away from incoming blow
     (alternatives: 2D6-7 +/-5sq , 2D3-4 +/-2sq)
+    If the target square is occupied the caster bounces back to original square
+    but an incoming blow has perhaps missed, treat as avoid success+9 roll
+    unmodified.
 \end{verbatim} \normalsize
 
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
+% removed spells
+%
+% hasten ?
 
 
 
@@ -1140,6 +1151,11 @@ TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
                of movement or fall.
                Get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
+Feedback Football  angry glowing metal ball contraption
+               glow r3, destructuve feedback triggered range 6
+               max 6dam 6mana
+               triggers on touch (pickup, but not kick)
+               triggers on any casting in range
 \end{verbatim} \normalsize
 
 There are of course also more "normal" boring magical items, weapons, and artefacts.

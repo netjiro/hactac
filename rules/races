@@ -1,10 +1,12 @@
+For Hero PCs, the races spread like this (rollchars.py):
+
        human                 dwarf                 elf                   halfling              orc                   goblin
        -------------------   -------------------   -------------------   -------------------   -------------------   -------------------
 str    #  2 - 10   6         #  4 - 12   8         #  2 -  8   5         #  1 -  7   4         #  3 - 13   8         #  0 -  6   3
 dex    #  2 - 10   6         #  2 -  8   5         #  3 - 11   7         #  4 - 12   7         #  2 - 10   6         #  2 - 12   7
 con    #  2 - 10   6         #  4 - 12   8         #  2 - 10   6         #  1 -  9   5         #  3 - 13   8         #  0 -  8   4
-int    #  2 - 10   6         #  2 - 10   6         #  5 - 11   8         #  2 - 10   6         #  0 -  8   3         #  0 -  8   4
-psy    #  2 - 10   6         #  5 - 11   8         #  4 - 10   7         #  2 - 10   6         #  0 -  8   3         #  0 -  8   4
+int    #  2 - 10   6         #  2 - 10   6         #  5 - 11   8         #  2 - 10   6         #  0 -  8   4         #  0 -  8   4
+psy    #  2 - 10   6         #  5 - 11   8         #  4 - 10   7         #  2 - 10   6         #  0 -  8   4         #  0 -  8   4
 per    #  2 - 10   6         #  2 - 10   6         #  3 - 11   7         #  4 - 12   8         #  2 - 10   6         #  2 - 10   6
 cha    #  2 - 10   6         #  1 -  9   5         #  4 - 12   8         #  3 - 11   7         # -1 -  7   3         #  0 -  8   3
 
@@ -23,7 +25,7 @@ xp     # 101-120 110         # 106-125 115         # 111-130 120         # 101-1
 
 
 
-For regular npcs, i.e. not important ones, use the following baseline:
+For regular unimportant npcs, use the following baseline:
 
        hum   dwf   elf   hfl   orc   gob
 

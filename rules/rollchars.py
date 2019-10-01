@@ -546,8 +546,8 @@ def rollOrc():
     char.str = r2d6() +1                  #  3 - 13   8
     char.dex = r2d5()                     #  2 - 10   6
     char.con = r2d6() +1                  #  3 - 13   8
-    char.int = r2d5() -2                  #  0 -  8   3
-    char.psy = r2d5() -2                  #  0 -  8   3
+    char.int = r2d5() -2                  #  0 -  8   4
+    char.psy = r2d5() -2                  #  0 -  8   4
     char.per = r2d5()                     #  2 - 10   6
     char.cha = r2d5() -3                  # -1 -  7   3
     # secondary                                       1,2,3,4,5,6,7,8,9

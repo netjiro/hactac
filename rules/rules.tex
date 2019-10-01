@@ -148,7 +148,7 @@ Moving the character costs movement points. Movement speed is declared in the be
 \item[Skill, spells, magic, trait, ability, power, mutation, psionic, etc:] gives the character the option of performing actions or maneuvers that he otherwise would not have access to, or improves the chances of succeeding with rolls he already has available. The terms are treated as the same thing. They generally add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
 
 \item[Maneuver:] Maneuvers are actions or variations of actions. They add alternatives and flexibility. Think of them as mini skills.
-\textbf{TODO:} This is also the name of the slowest combat movement mode, sorry about that. I'll think of something else for this and rewrite later on... \emph{Any good suggestions?}
+\\  \textbf{TODO:} This is also the name of the slowest combat movement mode, sorry about that. I'll think of something else for this and rewrite later on... \emph{Any good suggestions?}
 
 \item[Round:] (r) is a measure of time, one game round. It does not translate to a specific number of seconds. The term "turn" is also frequently used to mean more or less the same thing as a round, although it should more specifically be the time period of one round's actions and movements for one character.
 A round is split into the following phases: declaration, all turns, end.
@@ -1027,8 +1027,6 @@ A stunned target will get a stun mod that affects his actions and movements. Eac
 
 E.g: Stunned Steve was bitten by an Elequito and got a stun 5. He immediately looses 5mp, 5ap, and has mod-5 to all actions. He has con 4, so at the end of the round he removes 4 stun points, giving him a stun 1 for the next round. For the next round he starts with 1mp less than declared, 1ap less than declared, and mod-1 to all actions. Before the third round his con removes the remaining stun 1.
 
-%TODO: rewrite stun macro
-
 
 \item[Web, ensnare, etc]
 Web effects usually comes from a spider's spin attack, some magical hold field, or similar. Web effects reduce mobility and give action mods.
@@ -1073,6 +1071,16 @@ The target will be knocked down and go prone unless they pass a dex roll modifie
 When parrying a damage higher than the abs of the weapon, it might break.
 Each excessive damage point gives a 10\% chance of the weapon breaking.
 If the weapon does not break, it still gets a permanent -1 abs per every 3 excessive damage (round up).
+
+Excess damage above the weapon abs both continues into the target and damages the weapon.
+
+
+%\subsection*{Parrying strength limits}
+%%-------------------------------------
+%Parries are limited in how much incoming damage they can block from the attack. Excess damage continues into the target.
+%A character can block incoming damage equal to three times the parrying weapon's strength requirements plus excess strength points. E.g: A sword with strength requirement 4 wielded by a character with strength 6 can block at most 14 damage from an incoming attack.
+%
+%This does not affect the "breaking weapons" rule above. Any damage above the parrying weapon abs will damage both the target and the weapon. Even if the parrying strength limit is lower than the parrying weapon abs.
 
 
 \subsection*{Hacking through objects}
