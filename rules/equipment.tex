@@ -113,26 +113,26 @@ Knives and fast blades
 
 knife               dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
                     str 1 (no str bonus)
-                    fast+1 if str 2 and dex 4
-                    first two attacks don't require stamina
+                    fast+1 if str 3 and dex 4
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
 
 dagger              dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
                     str 2 (no str bonus)
-                    fast+1 if str 3 and dex 5
-                    first two attacks don't require stamina
+                    fast+1 if str 4 and dex 5
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
 
 rapier              dam 4, abs 4, toparry-2, toavoid-1, finesse-9
                     str 3 (no str bonus)
-                    fast+1 if str 4 and dex 6
-                    first two attacks don't require stamina
+                    fast+1 if str 5 and dex 6
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
 
 large rapier        dam 5, abs 5, toparry-2, toavoid-1, finesse-9
                     str 4 (no str bonus)
-                    fast+1 if str 5 and dex 7
-                    first two attacks don't require stamina
+                    fast+1 if str 6 and dex 7
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
 
 
@@ -142,14 +142,14 @@ Speciality Blades   costs 5xp to learn speciality, or suffer mod-1
 duelling sword      dam 6, abs 6, toparry-2, toavoid-1, finesse-9
                     str 5, (no str bonus)
                     fast+1 if str 6 and dex 8
-                    first two attacks don't require stamina
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
 
 large duell. sword  dam 7, abs 7, toparry-2, toavoid-1, finesse-9
                     str 6, (no str bonus)
                     fast+1 if str 7 and dex 9
-                    first two attacks don't require stamina
+                    first attack don't require stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
 
@@ -161,7 +161,7 @@ parrying dagger     dam 3, abs 8, attack-1, parry+1, finesse-6
 baselard            dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-6
                     str 2 (no str bonus)
                     fast+1 if str 3 and dex 5
-                    first two attacks don't require stamina
+                    first attack don't require stamina
                     poke: mod-1 dam=1 pen+2
 
 bastard sword       dam 7/9, abs 12, finesse-6
@@ -183,14 +183,14 @@ claymore            dam 14, abs 28, toavoid+1
 estoc               dam 7, abs 8, toparry-1, toavoid-1, finesse-9
 2h                  str 5 (no str damage bonus, max +1 penetrating bonus)
                     fast+1 if str 6 and dex 8
-                    first two attacks don't require stamina
+                    first attack don't require stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
 
 grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
 2h                  str 7 (no str damage bonus, max +1 penetrating bonus)
                     fast+1 if str 8 and dex 10
-                    first two attacks don't require stamina
+                    first attack don't require stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
 
@@ -266,15 +266,15 @@ the shoulder or shield of a friend in a two layer formation. This requires
 phalanx of both characters. A three layer formation is possible if the 
 first front line is kneeling or formed of shorter characters.
 
-light staff         dam 2/3, abs 6, parry+1/+2, reach 1 mod-3, finesse-3/-5
+light staff         dam 2/3, abs 5, parry+1/+2, reach 1 mod-4, finesse-3/-5
 1h/2h               str 3/2 (max +1/+2 str bonus)
                     2h: fast+1 if str 4 and dex 4
 
-staff               dam 4/5, abs 8, parry+1/+2, reach 1 mod-3, finesse-3/-5
+staff               dam 4/5, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5
 1h/2h               str 5/4 (max +1/+2 str bonus)
                     2h: fast+1 if str 6 and dex 6
 
-heavy staff         dam 6/7, abs 10, parry+1/+2, reach 1 mod-3, finesse-3/-5
+heavy staff         dam 6/7, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
 1h/2h               str 7/6 (max +1/+2 str bonus)
                     2h: fast+1 if str 8 and dex 8
 
@@ -704,20 +704,20 @@ heavy bow         dam 5, pen 2,
                   range 17
                   str 7 (no str bonus)
 
-longbow           dam 5, pen 1,
+long bow          dam 5, pen 1,
                   range 20
                   str 6 (no str bonus)
 
-heavy longbow     dam 6, pen 2,
+heavy long bow    dam 6, pen 2,
                   range 25
                   str 8 (no str bonus)
 
 Bows allow the use of different kinds of arrows:
 piercing arrows   mod-1 dam-1 pen+1
 broadhead arrows  mod-1 dam+1 pen-1
+fine arrows       mod+1
 barbed arrows     dam+1
 sharp arrows      pen+1
-fine arrows       mod+1
 fire arrows       mod-2 dam-1 range-25%
                   oil splash dam 3/r for 5r or until doused
                   light source as torch, burns 5r
@@ -728,6 +728,9 @@ torch arrows      mod-2 dam-2 range-25%
 candle arrows     mod-2 dam-2 range-25%
                   light source as candle, burns 20r
                   light 1a with fire source
+Most regular arrows can be recovered and reused of they strike a soft target.
+Specialty arrows often cannot be reused.
+Special bows sometimes require special arrows.
 
 
 \end{verbatim} \pagebreak[1] \begin{verbatim}

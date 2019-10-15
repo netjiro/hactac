@@ -17,6 +17,8 @@ NEW: ---------------------------------------------------------------------------
 
 omvänd kronologisk ordning av TODO items
 
+191009:
+TODO: BUG i dash mods ?
 
 
 190925:
@@ -890,3 +892,6 @@ DONE: skriv om : sätt att suga-magi växlar tex 2-till-1, istället för 1:1
       skall kosta 1m att kasta också...
 190930:
 DONE: multiple rerolls should escalage as quadratic: 1,4,9,16xp
+191009:
+DONE: shield bash attack maneuver - shield skill (mod: neg shield mod)
+      dam: (str+shieldmod)/3

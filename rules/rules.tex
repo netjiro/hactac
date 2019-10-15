@@ -223,7 +223,7 @@ Moving diagonally around a "round corner" is acceptable, while you cannot move d
 
 Some terrain types or obstacles are difficult to pass, and may cost more movement points. The rule is that it is always the square you move \emph{from} that decides the cost of the move. E.g: Moving into a double mp shrubbery from flat grass costs only one mp, while moving within a double mp shrubbery costs double mp and moving out of a double mp shrubbery to flat grass costs double mp.
 
-If a character tries, or is forced, to move past his declared movement points he will fall down into the square he's moving to. Skills like off balance, defensive step, etc modifies this rule.
+If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone. Skills like off balance, defensive step, etc modifies this rule.
 
 
 %\small \begin{verbatim}
@@ -358,7 +358,7 @@ Below is a list of some basic common actions.
 Parry is a form of "defend" action. Some weapons or attack maneuvers have todefend or toparry modifiers which can make the parry roll more difficult. Some shields or weapons have bonuses to their parry or defend actions.
 
 
-\action{Action: "avoid"} twist or move to avoid an attack instead of parrying it. This requires the "avoid" skill. Avoid is a form of "defend" action. Some attacks have todefend or toavoid modifiers which can make the parry roll more difficult.
+\action{Action: "avoid"} twist or move to avoid an attack instead of parrying it. This requires the "avoid" skill. Avoid is a form of "defend" action. Some attacks have todefend or toavoid modifiers which can make the avoid roll more difficult.
 
 
 \action{Action: "draw"} take something from equipment inventory which is easy to reach and not in a container, e.g. a sword from its sheath, a bow from the shoulder, a flask from the belt, etc. This takes a full round. Roll dex+9 or try again later. The quick draw skill is useful.
@@ -398,6 +398,8 @@ Climbing is modified by the difficulty of the wall. A regular cliff face or unev
 The climb skill will improve the chances of climbing.
 Climbing assumes the character has nothing in his hands. One hand occupied is mod-6. Heroes with extra hands get a mod+3 per extra hand.
 
+Carrying a heavy load makes climbing difficult. Each encumbrance gives mod-3 to climb.
+
 
 \action{Action: "rummage"} is used to take something out of a container, like a backpack, sack, etc. It takes 2+1dX rounds: \\
 One round to take off / open the container. \\
@@ -427,8 +429,6 @@ And finally one round to close and put back the container.
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
-%E X T R A   R U L E S
-%---------------------
 
 
 \phantomsection\addcontentsline{toc}{section}{character sheet}
@@ -725,13 +725,13 @@ Magical dark vision should have different multipliers, or set a personal self li
 %-------------------
 Moving a character is not an action, but it follows the rules of initiative. Movement can be done by itself or as part of an action.
 
-Optional: \emph{Stutter Step:} To avoid players making small incremental moves without actions the GM can decide that movement together with an action is free, but movement without an action costs 1ap. And if players start using free actions to give movement the GM can force a cost of 1ap there as well.
+Optional: \emph{Stutter Step:} To avoid players making small incremental moves without actions the GM can decide that movement together with an action is free, but movement without an action costs 1ap. And if players cleverly start using free 0ap actions to trigger movement the GM can force a cost of 1ap there as well.
 
 
 \subsection*{Facing}
 %-------------------
 On a square grid cardinal and diagonal facing is used: N,NW,W,SW,S,SE,E,NE.
-On a hex grid only the six main faces are used: 0,60,120,180,240,300,360.
+On a hex grid only the six main faces are used: 0,60,120,180,240,300.
 
 The facing of a character is generally the same as the direction of the last leg of the previous movement per default, but can be changed by turning. E.g: Moving Morgan is starting his movement path with 2 steps to the north, then places a waypoint, and then heads three more steps east. His facing at the end of the movement is then east.
 
@@ -774,9 +774,7 @@ When attacking from outside the target's vision cone the target is unaware of th
 
 If he passes the roll he is aware of the attack before it happens. If he has higher initiative he can choose to interrupt the attack with actions and movement. If he has lower initiative he can still react to the attack with the usual flanking mods.
 
-If he does not pass the roll he is unaware of the attack and cannot defend against it.
-
-Successful sneak and/or back stab by the attacker modifies the perception rolls of the target by the success diff.
+If he does not pass the roll he is unaware of the attack and cannot defend against it. Successful sneak and/or back stab by the attacker modifies the perception rolls of the target by the success diff.
 
 Even if the target is unaware of the attack and does not pass the perception roll, his right to react will trigger once the attack has been resolved.
 
@@ -826,7 +824,7 @@ Extra movement, beyond declared, causes the character to fall down. This can be 
 
 When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the final move of the yield action. This will cause him to go off balance, incurring the mod-3 which will also persist for the next round.
 
-Note that the off balance penalty kicks in after the parry + yield roll in the example above. Otherwise most characters would not gain any actual benefit from going off balance when defending and yielding since the off balance penalty would cancel the yield bonus.
+Note that the off balance penalty kicks in after the parry + yield roll in the example above. Otherwise most situations would not gain any actual benefit from going off balance when defending and yielding since the off balance penalty would cancel the yield bonus.
 
 It's possible to have multiple off balance if the character purchases the skills.
 When the character tries, or is forced, to move beyond his off balance level he will fall down, just as if he didn't have off balance.
@@ -928,11 +926,11 @@ The characters generally regain one stamina at the start of each round. If stami
 When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
 E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.
 
-A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round. Characters with low con regain stamina slower than normal:\\
+A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round. Characters with low con regain extra stamina when resting slower than normal:\\
 con=2 regains 1stam/2r\\
 con=1 regains 1stam/3r\\
 con=0 regains 1stam/4r\\
-con<0 does not regain stamina without long rest outside combat.
+con<0 does not regain extra stamina when resting.
 
 
 
@@ -954,11 +952,12 @@ con<0 does not regain stamina without long rest outside combat.
 %------------------------
 If a character carries too much stuff he gets encumbered and will have modifications to movement and actions.
 
-Encumbrance is calculated as: \\
+\noindent Encumbrance is calculated as: \\
 encumbrance = total weight carried / str.
 
-E.g: Trekking Tom has str 6, and carries a total load of 4.0 enc. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 enc he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. He will then have a mod-1 encumbrance penalty.
+E.g: Trekking Tom has str 6, and carries a total load of 4.0 weight. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 weight he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. He will then have a mod-1 encumbrance penalty.
 
+\noindent
 Each full encumbrance gives modifications: \\
 All actions are mod-1 per encumbrance \\
 Dash speed is mod -encumbrance \\
@@ -967,6 +966,7 @@ Walk speed is mod -encumbrance/3 \\
 Maneuver speed is mod -encumbrance/4 \\
 Long distance travel is also reduced by -encumbrance.
 
+\noindent
 Movement also require more stamina when heavily encumbered: \\
 Dash requires +1 stamina per encumbrance \\
 Run requires +1 stamina per encumbrance/2 \\
@@ -976,6 +976,8 @@ Maneuver requires +1 stamina per encumbrance/4
 Also, stuff has to be carried somewhere. "Item slots" are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
 
 Containers are useful in that they only take one slot, while providing several slots for items. Containers are also good in that they can reduce the enc of items. A good backpack halves the enc from all items in it.
+
+Some actions like climb, swim, etc take heavier mods from encumbrance.
 
 
 \subsection*{Carrying heavy objects}
@@ -1002,8 +1004,8 @@ E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires s
 
 
 
-%\phantomsection\addcontentsline{toc}{section}{Special effects}
-%\section*{Special effects}
+%\phantomsection\addcontentsline{toc}{section}{Special damage effects}
+%\section*{Special damage effects}
 
 
 \subsection*{Some special damage effects}
@@ -1015,9 +1017,9 @@ Some attacks have special effects that take place when the attacks succeeds. Som
 
 
 \item[Poison]
-Poisons do damage over time. A poison has a few characteristics: strength, duration, and damage per round. Each round roll poison strength \vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
+Poisons do damage or other effect over time. Most poisons has a few characteristics: strength, duration, and damage per round. Each round roll poison strength \vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
 
-Poisons do not have to do damage, they may just paralyse the victim, confuse it, or have other strange effect.
+Poisons do not have to do damage, they may just paralyse the victim, confuse it, or have other strange effect. Perhaps the target must pass con rolls or go into frenzy attacking the nearest person.
 
 Antidotes, first aid, and medicine can be used to counter or limit the effects of poisons.
 
@@ -1070,7 +1072,7 @@ The target will be knocked down and go prone unless they pass a dex roll modifie
 %-----------------------------
 When parrying a damage higher than the abs of the weapon, it might break.
 Each excessive damage point gives a 10\% chance of the weapon breaking.
-If the weapon does not break, it still gets a permanent -1 abs per every 3 excessive damage (round up).
+If the weapon does not break, it still takes a permanent -1 abs per every 3 excessive damage (round up).
 
 Excess damage above the weapon abs both continues into the target and damages the weapon.
 
@@ -1099,7 +1101,7 @@ E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires s
 And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder requires dex 7. Fabian thus takes mod-1 and +1ap, which means his fast rapier is now just 3ap normal speed. So unfortunate...
 
 
-§TODO: rewrite excessive strength bonus points allocation structure
+%TODO: rewrite excessive strength bonus points allocation structure
 \subsection*{Excessive str bonus}
 %--------------------------------
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
@@ -1314,7 +1316,7 @@ Most shields have a modifier against ranged attacks that is a form of cover, whe
 %Shield cover is the 90deg region centred on (+/-45deg) the facing of the character.
 %Shield side is the 90deg region centred on (+/-45deg) the diagonal forward of the shield arm. I.e: left shield arm covers 0-90deg counter clockwise from the heroes facing, while right shield arm covers 0-90deg clockwise from the heroes facing.
 
-Heroes hiding behind their shields have covers +/-45deg from their direct facing. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield.
+Heroes hiding behind their shields have covers +/-45deg from their direct facing. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield, GM discretion.
 
 
 \subsection*{Initiative of area effects}

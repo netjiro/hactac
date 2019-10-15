@@ -601,8 +601,8 @@ drain          cast 3r 1m, psy vs psy +3/m, range contact,
                gives caster diff/2 (round up) mana, i.e. half is lost
                Must be in contact during whole casting.
                Cannot drain the target below 0 mana. If draining the target to
-               0 mana the target must roll psy or falls unconscious.
-               Roll psy once per round to wake up again.
+               0 mana the target must roll psy or falls unconscious. Roll psy 
+               once per round to wake up again.
                int 5, psy 8
 
 darkvision     cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
@@ -618,7 +618,7 @@ poison gas     cast 3r 2m, , area radius 4 +1/m, duration 10r +5r/m
                roll once for susceptibility.
                int 4, psy 4
 
-revive         cast 10r 5m, psy vs psy +1/m, the dead wanna stay dead.
+revive         cast 5r 5m, psy vs psy +1/m, the dead wanna stay dead.
                the body must first be healed to at least 1 hp before or during
                the revival ritual.
                The character tends to come back altered from the ordeal in the
@@ -915,38 +915,6 @@ elsewhere
 Wizards and Warriors alike can gain great power by wielding the arcane artefacts imbued with various magical energies. Below are some suggestions of magical items and artefacts. Make up your own to suit your adventure.
 
 \small \begin{verbatim}
-sacrificial    dam 1, penetrating 1, ritual sacrifice 10r,
-dagger         drains-converts 1hp to 1m /r,
-               until the target dies from hp or mana loss.
-               Cannot drain from dead/undead targets.
-
-crystal ball   holds 20 mana, transfer 1m/r in/out
-               transfer is full round action,
-               can only maneuver and do no actions for the duration.
-
-energy rod     holds 10 mana, transfer 1-10m/r out, transfer 1m/3r in
-               Roll psy, if failed: diff mana is lost in the transfer.
-               Transfer is full round action,
-               Can only maneuver and do no actions for the duration.
-
-psycharmour    abs 2 +2/m must declare and roll for skill before damage is dealt
-               (i.e. after hit, but before to damage rolls) -- not all versions.
-               Some versions can declare and roll after damage is rolled.
-               Some versions must declare and roll before attack is rolled.
-               Defensive mana comes from armour store, not user.
-               Defensive mana spending is not an action, it's an interrupt.
-               Holds 15 mana, transfer 1m/2r in/out.
-               Transfer must be primary action each round.
-               psycharmour skill is scf 0.33
-
-powerstaff     dam 3/4 (1h/2h), abs 10, str 3 (max +1 str bonus)
-               Holds 20m. Can only release 1 point per spell casting, and the
-               released mana must be used to reduce the spell mana cost to the
-               caster by 1 point. Release is a 0a free action, included in the
-               spell casting.
-               Cannot transfer power from staff, but can transfer mana to staff.
-               Transfer to staff 1m/r, 1a primary action.
-
 Quaff! the     Metal tin with a golden glowing liquid. Generally costs ~1gold.
 soft drink     Restores 4 hitpoints and 4 stamina in one round.
 of heroes      Has a tendency to be addictive.
@@ -962,15 +930,6 @@ Blast Off      Beautiful crystal vial of clear liquid. Costs ~5gold.
                If the vial is broken before empty it detonates doing
                1d5 damage to a radius 1 area blast.
                Everyone caught in the blast get 2 stamina restored.
-
-Long Sword of  dam 8, abs 14, str 6
-Irdereng       on successful hit the attacker can choose to roll psy,
-               if successful the attack does diff (psy roll) extra damage,
-               penetrating, and draws one mana point from the user.
-
-Angus' Shield  abs 20, parry+3, str 4
-               when declaring parry, the user can choose to spend 1 mana
-               and get another parry+3 mod. Only one mana per parry action.
 
 The Seeking    dam 5, range 16, str 3 (no str bonus)
 Bow            range mods as regular bow, rate of fire as regular bow,
@@ -1012,7 +971,7 @@ Utility        at regular intervals. A sledge hammer is missing.
                It gives a +6 to find, +6 to mechanical, locks, traps rolls.
 
 The Shiny      The helmet really shines. Provides a 20 distance bright light.
-Helmet         It will draw one mana at the start of every 100 rounds.
+Helmet         It will draw one mana at the start of every 30 rounds.
                This classifies as a scary object against monsters that dwell
                in the darkness.
 
@@ -1152,23 +1111,68 @@ TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
                Get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
 Feedback Football  angry glowing metal ball contraption
-               glow r3, destructuve feedback triggered range 6
-               max 6dam 6mana
+               glow 2sq light, destructuve feedback triggered range 6sq
+               6 dam drain equal mana
                triggers on touch (pickup, but not kick)
-               triggers on any casting in range
+               triggers on any casting in range, 8 charges
+               -- TODO -- alt text --
+               activates when thrown, deactivates when packed away, 8 charges
+               attack on touch or detecting casting within 6sq: destructive feedback
+               draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
+
+Long Sword of  dam 8, abs 14, str 6 (max +2 str bonus)
+Irdereng       on successful hit the attacker can choose to roll psy,
+               if successful the attack does diff (psy roll) extra damage,
+               penetrating, and draws one mana point from the user.
+               finesse/poke/swing as usual
+
+Angus' Shield  abs 20, parry+3, str 4
+               when declaring parry, the user can choose to spend 1 mana
+               and get another parry+3 mod. Only one mana per parry action.
+
+The Very Evil  dam 2 pen 1 abs 5 (no str bonus), parry-3, todefend-3, finesse 9
+sacrificial    Starting a ritual sacrifice takes 10r of mumbling mumbo jumbo.
+dagger         Drains-converts 1hp to 1m per round (after 10r start).
+               Cannot drain from dead/undead targets.
+
+crystal ball   holds 20 mana, transfer 1m/r in/out
+               Transfer is full round action, roll psy.
+               Must stand still.
+
+energy rod     holds 10 mana, transfer 3m/r out, transfer 1m/3r in
+               Transfer is full round action:
+               Roll psy, if fail: diff mana is lost in the transfer.
+
+psycharmour    abs 2 +2/m must declare and roll for skill before damage is dealt
+               (i.e. after hit, but before to damage rolls) -- not all versions.
+               Some versions can declare and roll after damage is rolled.
+               Some versions must declare and roll before attack is rolled.
+               Defensive mana comes from armour store, not user.
+               Defensive mana spending is not an action, it's a 0ap interrupt.
+               Holds 15 mana, transfer 1m/2r in, full round action, roll psy.
+               psycharmour skill is scf 0.33
+
+powerstaff     dam 3/4 (1h/2h), abs 10, parry 0/+1, str 3 (max +1 str bonus)
+               Holds 10m. Can only release 1 point per spell casting, and the
+               released mana must be used to reduce the spell mana cost to the
+               caster by 1 point. Release is a 0ap free action, included in the
+               spell casting, no roll required.
+               Transfer to staff 1m/r, full round action, roll psy.
+               Cannot transfer power from staff to bearer.
 \end{verbatim} \normalsize
 
-There are of course also more "normal" boring magical items, weapons, and artefacts.
+There are of course also more normal boring magical items, weapons, and artefacts.
 
 \small \begin{verbatim}
 weapon +x     A weapon that is easier to use or does more damage. It can give
               the user a bonus to his weapon skill, or to his damage roll, or
-              to both.
-              Weapons like this does not have to be magical. +1 and even +2
-              weapons can manufactured by master or legendary craftsmen.
+              to both. Or have exceptional abs resiliance, or ...
+              Weapons like this does not have to be magical. Master or Legendary
+              craftsmen can make +1 or even +2 weapons.
 
 healing potion
 stamina potion
+mana potion
 [ability] potion
 [skill boost] potion
 [stat boost] potion

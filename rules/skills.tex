@@ -293,12 +293,12 @@ A tackle sequence is a dance for two, and it can go a few different ways:
     Target: str + tackle or block \\
     where speed is the distance of approach \\
     The target takes success/3 damage, but the tackler does not take damage from a fail. Both parties must roll dex for balance modified by the tackle resistance roll diff, or fall down. The dex roll is modified by ams, terrain, etc as usual.
-    \item If the target takes an avoid action, succeeds, and moves out of the way the tackler simply move to occupy the original target square and nothing else happens.
+    \item If the target takes a yield + avoid action, succeeds, and moves out of the way the tackler simply move to occupy the original target square and nothing else happens.
     \item If the target chooses not to, or can't, take action to resist the tackle, then proceed with the resistance roll and effects as above but with the target strength set to str/2 and without tackle or block skill as bonus.
 \end{itemize}
 After a tackle success the target is knocked back 1 + success/3 sq away in suitable direction, choosen by the tackler (GM discretion). The movement costs mp and can force the target to go off balance or fall from lack of mp.
 
-\emph{Note} that a character must have some level in tackle or block to be able to take tackle or block actions. E.g: resisting a tackle also requires tackle or block skill, otherwise the target resistance result is set to 0.
+\emph{Note} that a character must have some level in tackle or block to be able to take tackle or block actions. E.g: resisting a tackle also requires tackle or block skill, otherwise the target resistance result is set to str/2, as above, since he can't spend an action to resist.
 
 
 %TODO: should block also allow for some 1ap overwatch style fixed position sentry ?
@@ -345,6 +345,22 @@ It is also possible to use yield avoid within the movement to improve the chance
 It is of course possible to completely avoid the block situation if RR traces the movement as left$>$D$>$B$>$F$>$right from the beginning.
 
 If RR gets blocked at D$>$E he stops at D. When it's his initiative again he can move D$>$B, but cannot attempt to move D$>$E again this round.
+
+
+\textbf{TODO:} finish / fix rush / bull rush / bullrush
+\skill{Skill (cost \ndash) "rush":} is not quite a tackle. Just forces targets to move out of the way or get pushed/dragged along. The attacker simply moves through the targets. The rush is itself not an action and costs no ap. 
+
+This skill is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + rush, the rushing monster must have at least twice the heaviness of any target it rushes. Otherwise it must tackle that target instead.
+
+Normally this does dam speed/3 for every sq pushed/dragged along after all avoidance mp are spent. E.g: Rushing Monster has declared W8 giving speed/3 = 2 dam/sq. Pushed Patrik cannot move out of the way and is pushed along 4sq. Deft Dave is only pushed 3sq. PP can take max damage 8 and RM rolls damage 1d8=3 for PP. DD has max damage 6 and RM rolls 1d6=5 for DD. Both PP and DD are now off balance and prone.
+
+
+The target must spend mp and move out of the way, in order of being rushed, or take damage and go off balance and prone.
+
+ They can perhaps go off balance, or throw themselves out of the way to avoid damage.
+If the targets cannot spend mp enough to get out of the way the attacker chooses where to push/drag them.
+
+E.g: a collossal (6x6) Purple Steam Gobbler rushes a group of heroes who are in it's way. First in path is H1 who can move 2sq out of the way and has enough mp, so H1 just moves out of PSGs path. Second is H2 who must move 3sq out of the way, only has 1mp but goes off balance for another 1mp then throws himself prone for the 3rd mp, and avoids damage. Third is H3 who gets pushed along 5sq, has 1mp left, off balance (1mp), thrown prone (1mp), and
 
 
 \skill{Skill scf 0.5 "back stab":} is used to attack an unaware opponent with a melee weapon. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll.
@@ -871,7 +887,7 @@ Issuing a command takes 1a and the companion must be within earshot. Commanding 
 A character with companion command can control as many companions as his skill level/2 (round up).
 
 
-\skill{Skill scf 0.5 "meditate":} §TODO: update after stamina changes!!\\
+\skill{Skill scf 0.5 "meditate":} TODO: update after stamina changes!!\\
 A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
 Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
 
@@ -934,7 +950,7 @@ Unpaid negative focus points carried over to next round costs one stamina, gives
 
 A Hero can spend action points to pay for borrowed focus points. At the end of the round any unused ap will be used to cover borrowed focus points.
 
-Note that even if focus does stack with overextend, it might not be what you want to try. Overextend applies mods immediately before the action. Focus can bring down the immediate overextend mods but cannot reduce the mods to better than what the Hero had before pulling out more ap through overextend. Then, if focused down, both overexted and focus will probably apply harsh penalties to the next round. But then again, perhaps a final desperate act of heroic risk taking is enough to save the day?
+Note that even if focus does stack with overextend, it is not be what you want to try. Overextend applies mods immediately before the action. Focus can bring down the immediate overextend mods but cannot reduce the mods to better than what the Hero had before pulling out more ap through overextend. Then, if focused down, both overexted and focus will probably apply harsh penalties to the next round. But then again, perhaps a final desperate act of heroic risk taking is enough to save the day?
 
 
 \skill{Skill scf 2.0 "overextend":} to use more action points than was declared for the round. Overextended ap come at a high price and overextend can only be used once per round.
@@ -995,12 +1011,10 @@ E.g: mobile=2 means maneuver mod-0, walk mod-1, run mod-4, dash mod-7.
 
 \skill{Skill scf 1.0 "luck":} The character can re-roll results he is not happy with. The character has a number of re-rolls equal to his luck skill level each dungeon/session/day. However, each re-roll costs XP! The first attempt to re-roll an original roll costs 1xp. Each successive attempt to re-roll the same original roll is at quadratic xp cost (1, 4, 9, 16, ...).
 
-E.g: three re-rolls on the same original roll costs a total of 7xp. Three re-rolls on different original rolls cost just 3xp. This is kind of expensive stuff. Take care.
+E.g: three re-rolls on the same original roll costs a total of 14xp. Three re-rolls on different original rolls cost just 3xp. This is kind of expensive stuff.
 
 Luck is an instantaneous 0ap interrupt effect.
 
-
-, 
 
 \skill{Skill scf 1.0 "rabbit's foot":} The character can give re-rolls to his fellow compatriots. The amount and cost are the same as for the luck skill.
 Rabbit's foot is an instantaneous 0ap interrupt effect.
@@ -1209,14 +1223,16 @@ cost 170xp: dodgy attack todefend-6
 \skill{Maneuver (cost 5) "off balance":}
 Is used to take an extra step beyond declared movement without falling. The off balance move puts a mod-3 base modification to all actions for the rest of the turn, excluding the action taken together with the move, if any. The mod-3 base modification stays in effect for the next round as well.
 
-It is possible to upgrade off balance to allow for more off balance steps with cumulative mod-3 each. A character with 
-
 %TODO add extra off balance step upgrades, need to fix the scripts
 %     perhaps add a new variable: offbalancemod which is incremented
 %     and then reset next round, or use ExtraStep counter...
-upgrades: give extra off balance steps: \\
-cost +10xp max two off balance steps per round, total mod-6 \\
-cost +30xp max three off balance steps per round, total mod-9
+\noindent Upgrades: give extra off balance steps: \\
+cost +20xp max two off balance steps per round, total mod-6 \\
+cost +50xp max three off balance steps per round, total mod-9
+
+
+\skill{Manuver (cost 5) "faceplant":}
+The hero can take one extra step beyond declared movement by throwing himself on the ground. He goes prone and incurs a mod-3 off balance mod. The maneuver is available even if the character is already off balance. The faceplant mod-3 off balance mod is cumulative to any existing off balance mod, and persists to the next round just like off balance.
 
 
 \skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
@@ -1497,6 +1513,9 @@ Note: that the mods toparry, toavoid, todefend, etc require a weapon with enough
 \skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow-1 mod-1 dam+2 toavoid+2 effect, but some weapons have differ.
 
 
+\skill{Maneuver (cost 10) "shield bash":} attack the opponent with your shield. This attack maneuver takes the shield parry mod as a negative mod, costs 1 stamina more than the normal shield parry action, and does (strength + shield mod)/3 damage. E.g: bashing with a normal shield wielded by a strength 8 character with shield 9 is bash mod-3, 1 stamina, damage (8+3)/3 = 3, with a chance to hit at 6. While the same character with a large shield would have 4 damage and to hit at 5.
+
+
 \skill{Maneuver (cost 10) "fjutt":} is a very weak and flimsy but fast attack. It can be performed with any melee weapon unless specified. It costs one extra stamina. The standard stats are:\\
 fast+1 mod-3 with damage 50\% of normal.
 
@@ -1538,7 +1557,7 @@ Weapons with reach has an extra mod+1 when used for a followup attack.
 \skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\%. Requires two weapons, one in each hand, e.g. sword and shield. The entire counter attack action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
 
 
-\skill{Maneuver (cost 30) "riposte":} The Hero can make something similar to a counter attack but using only one weapon, at a cost of one extra stamina above the usual cost of the attack, taking mod-3 to both the parry and attack rolls, and the attack is dam 75\%.
+\skill{Maneuver (cost 30) "riposte":} The Hero can make something similar to a counter attack but using only one weapon, at a cost of one extra ap above the usual defence/attack ap, one extra stamina above the usual cost of the attack, taking mod-3 to both the parry and attack rolls, and the attack is dam 75\%.
 
 
 \skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage or penetration depending on the weapon stats. For each +3 excessive strength he gets damage +1.
@@ -1918,7 +1937,7 @@ cost +10xp: +5 extra resistance, can be purchased any mount of times.
 
 %%TODO: keep fast cast / fast magic ?   At what xp cost ?
 %\skill{Ability cost \emph{special} ccf 1.5 "Fast Cast":} Sling magic faster than normal old witches and warlocks can. \\
-%%\item[Skill cost special "fast magic":] \texstbf{§§TODO: increase cost or remove}\\
+%%\item[Skill cost special "fast magic":] \texstbf{TODO: increase cost or remove}\\
 %% Perhaps move fast magic to an ability instead of a magic skill?
 %% It's problematic how effective it is when a user can blow 2x bb for 18dam ppp at 125xp fast magic 5.
 %%Casting spells faster than normal. 

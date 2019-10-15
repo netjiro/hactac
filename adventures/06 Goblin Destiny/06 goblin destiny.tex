@@ -495,7 +495,7 @@ SturSkurk gang will have a competent scout on guard patrolling the camp. Hemskel
 
 This should be a tough fight. The Heroes might fail their first attack and have to come back later with a better plan or some help.
 A clever idea could be to go to one of the villages nearby and talk to a patrol soldier about "this nasty bandit gang in the forest camp over there" and have the soldiers fight SturSkurk. But SturSkurk is also somewhat smart, he has already bribed the patrol captain in charge of the region between Sleepy Cove and Kleinshof. For this to work the Heroes must go further North to Baron Conq's castle up in "Strong Hoomans" territory and talk directly to the
-§§TODO \textbf{finish this} talk with military leader, only if not already known, before Burmak attack, before any patrolmen have escaped fights,
+\textbf{TODO finish this} talk with military leader, only if not already known, before Burmak attack, before any patrolmen have escaped fights,
 
 
 
@@ -678,7 +678,7 @@ The prophecy comes true. Death by GrimGnash. No way around it. This ends the cam
 
 \subsection*{synopsis}
 
-Either they go hunt down GrimGnash where he sleeps in his lair, or GrimGnash attacks them somewhere else. Either way most die, some might flee to survive.
+Either they go hunt down GrimGnash where he sleeps in his lair, or GrimGnash attacks them somewhere else. Either way most die, some might flee to survive. If they try to attack then flee GrimGnash will attack them elsewhere very soon.
 
 
 \subsection*{adventure}
@@ -689,20 +689,29 @@ GammelTant, or whoever is the leader at the time, sees Certain Death each night 
 \emph{[GammelTant:]} Mussst go kill GrimGnash! Or it comes Kill Us All! Find it sleeping and Slay it Dead! Deader! Deadedd for sure!
 \end{readoutloud}
 
-\noindent bla bla bla
+\noindent GrimGnash sleeps in his lair in the high peak above the clouds. Best if the goblins find the lair and then attack when GrimGnash is asleep. GrimGnash can always attack them at any open sky map, flying over again and again torching them and whatever else can burn on their local battle map to crispy death and ash.
+
+When he sleeps they can enter his lair and make some sort of clever attack. He will of course wake up and start killing the intruders.
+
 
 \subsection*{map mechanics}
 
-bla bla bla
+The map is split by a chasm. The walls can be climbed at mod+3. The platforms are elevated but not high and can be climbed in 1r at mod+3 or jumped in 3ap with \emph{both} successful acrobatics mod-3 and dex+jump mod-3 rolls. 
 
+The large northen fire pyres look different. Something is odd. When close (within per), roll per to notice that they look like they are alive and writhing. 
 \small \begin{verbatim}
-bla bla description etc
+The fire burning in the large pyres looks unpleasantly strange, flames moving around like they have a life of their own.
 \end{verbatim} \normalsize
+Casting ranged spells within the cave will spawn a fire elemental from one of the large fires on the north section, up to one fire elemental per fire place per round.
 
 
 \subsection*{opposition}
 
-bla bla bla
+GrimGnash himself and a bunch of Fire Elementals that can spawn from the two large pyres in the north section of the map.
+
+GrimGnash is colossal (6x6) size monster with lots of hitpoints and thick scales, claws, teeth, tail, and fire. He's fast and can fly. At low hp he will regenerate slowly. 
+
+Fire Elementals 
 
 
 \subsection*{loot}
@@ -2622,30 +2631,46 @@ staff   9 dam5 parry+2
 
 \raggedbottom
 
-Burmak group should be difficult to beat but not impossible. They are one combat group and the Captain will Oy! them into action at high initiative. He puts phalanxed spearmen two deep moving them as one group. They use bastardised heavy spear-javelins and can rapidly draw and throw every round. Burmak himself will fight lead from the rear, boosting with leader, but also move forward to cover retreating soldiers if necessary.
+Burmak group should be difficult to beat but not impossible. They are one combat group and the Captain will Oy! them into action at high initiative. He puts phalanxed spearmen two deep moving them as one group. They use bastardised heavy spear-javelins and can rapidly draw and throw every round. Burmak himself will fight lead from the rear, boosting with leader, but also move forward to cover retreating soldiers if necessary. They also have push to force opponents back, and switch to move injured soldiers back so fresh ones can take the front line.
 
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Burmak Captain
 ================== human ===================
-str  4                    hp 11 abs 0
-dex  8                    m1 w4 r6 d8
-con  6                    stamina 6
-int  5                    vision 22 day 223
-psy  6                    mana 6
-per  4                    action points 3
-cha 10                    xp 108
+str  8                    hp 21 abs 2
+dex 11                    m1 w3 r7 d10(11)
+con  7                    stamina 11(8)
+int  6                    vision 20 day 220
+psy  7                    mana 8
+per  6                    action points 7(4)
+cha  8                    xp ?
 --------------------------------------------
 yield bonus 3
 --------------------------------------------
-Common 3
-avoid 4
-throw 3
+Common 9
+resilient 4, enduring 3, agile 3, rapid 5
+quick 3, mobile 2, veteran 3
+balance 3, charge 3
+quick draw 5, häfva 5
+consistent 1
+leader 8, Oy! 8, synchronized 7
+avoid 7
+throw 10, sword 11, poke, swing
 --------------------------------------------
-yield
-off balance
+yield, off balance
+phalanx, opportunity, intercept, guard, push, combat unit, switch
 --------------------------------------------
-money: 3 gold, 1 silver, 10 copper
+money: 3 gold, 12 silver, 15 copper
+
+quaff 4x
+
+long sword  11
+        dam 9, abs 18,
+        str 7 (max +3 str bonus), finesse-4
+        poke: mod-1 dam-1 pen+1
+        swing: slow-1 mod-1 dam+3 todefend+2
+        
+brigandine   abs 2
 
 ============================================
 \end{verbatim} \end{samepage} \normalsize
@@ -2655,34 +2680,38 @@ money: 3 gold, 1 silver, 10 copper
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Burmak Spearman
 ================== human ===================
-str  4                    hp 11 abs 0
-dex  8                    m1 w4 r6 d8
-con  6                    stamina 6
-int  5                    vision 22 day 223
-psy  6                    mana 6
-per  4                    action points 3
-cha 10                    xp 108
+str  7                    hp 15 abs 2
+dex  5(6)                 m1 w3 r6 d8(9)
+con  6                    stamina 8
+int  5                    vision 20 day 240
+psy  5                    mana 3
+per  4(5)                 action points 5(3)
+cha  6                    xp ?
 --------------------------------------------
 yield bonus 3
 --------------------------------------------
-Common 3
-avoid 4
-throw 3
+Common 8
+resilient 4, enduring 3, agile 3, rapid 5
+quick 2, mobile 2, veteran 3
+balance 3, charge 3
+quick draw 5, häfva 5
+consistent 1
+leader 8, Oy! 8, synchronize 7
+avoid 6
+throw 8, spear 8
 --------------------------------------------
-yield
-off balance
+yield, off balance
+phalanx, opportunity, intercept, guard, push, combat unit, switch
 --------------------------------------------
 money: 3 gold, 1 silver, 10 copper
 
-heavy javelin-spear  ranged  : dam 7 pen 1 range 10
-burmak special       melee 1h: dam 8 pen 2 abs 6 parry-1 reach 1 mod-4
+heavy javelin-spear  ranged  : dam 7 pen 1 range 10   (std 2h)
+burmak special       melee 2h: dam 8 pen 2 abs 10 reach 1 mod-4
 specialty 5xp        str 8 (max +2 dam str bonus, max +2 penetrating str bonus)
-
-large shield         abs 15, parry+4,
-fine burmak          str 6
-                     Ranged attacks mod-3 when in the way.
-                     Hiding behind it (3ap) ranged mod-6
-                     tackle mod+2
+6x ammo for the javelin-spears. Can draw+throw in 1r. draw 2ap throw 3ap
+or draw + attack/defend in 2+3ap.
+        
+brigandine   abs 2
 
 ============================================
 \end{verbatim} \end{samepage} \normalsize
@@ -2732,6 +2761,9 @@ Lundqvist is meant to force the goblins to flee. If they manage to drive off the
 Lundqvist himself will fight with a few heavies and set lights and archers to harass and funnel the goblins. They will hire in spellslingers to cancel out dangerous casters. 
 
 All Lundqvist soldiers are a combat group so the Captain can Oy! them into action at very high initiative. They can often synchronize and have good reach with their spears and phalanx. This allows them to sync many spear attacks on one target for certain and rapid kills. If you want to make them even nastier, allow them to all have switch maneuver so they can move damaged soldiers backwards and fresh ones to the front.
+Don't forget that Lundqvist has luck and black cat and lots of fancy.
+
+The Lundqvist group has scouts and horse managers so the entire group can travel 15 leagues per day.
 
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
@@ -2749,23 +2781,23 @@ yield bonus 4
 dodge bonus 4
 pain threshold 4, black knight 2
 --------------------------------------------
-Common 9
+Common 9, svartlingo 6
 mobile 4, rapid 9, tireless 4
 veteran 6, black knight 2
-charge 6
+luck 2, black cat 2
+balance 6, charge 6
 Oy! 8, synchronized 8
 accurate 1, consistent 2, precise 3
 quick draw 8, quaff 8
 throw 9
 avoid 11, quick avoid
-sword 15, poke, swing, 
+sword 15, poke, swing, fancy 6
 wayward strike, counter attack
 shield 13, quick parry
 tank (plate as leather)
 --------------------------------------------
-yield
-off balance
-phalanx, intercept, opportunity, combat group
+yield, off balance
+phalanx, intercept, opportunity, combat group, guard
 --------------------------------------------
 money: 3 gold, 20 silver, 30 copper
 
@@ -2820,20 +2852,19 @@ dodge bonus 3
 Common 8
 mobile 4, rapid 4
 veteran 6
-charge 6
+balance 6, charge 6
 synchronized 8
 consistent 1, precise 1
 quick draw 8, quaff 8
 throw 9
 avoid 8, quick avoid
-spear 13, slash
+spear 13, slash, fancy 4
 wayward strike, counter attack
 shield 11, quick parry
 tank (plate as leather)
 --------------------------------------------
-yield
-off balance
-phalanx, intercept, opportunity, combat group
+yield, off balance
+phalanx, intercept, opportunity, combat group, guard
 --------------------------------------------
 money: 1 gold, 15 silver, 20 copper
 
@@ -2876,20 +2907,19 @@ dodge bonus 3
 Common 8
 mobile 5, rapid 6
 veteran 4
-charge 6
+balance 6, charge 6
 synchronized 8
 consistent 1, precise 1
 quick draw 8, quaff 8
 throw 9
 avoid 9, quick avoid
-spear 12, slash
+spear 12, slash, fancy 4
 wayward strike, counter attack
 shield 12, quick parry
 tank (chain as leather)
 --------------------------------------------
-yield
-off balance
-phalanx, intercept, opportunity, combat group
+yield, off balance
+phalanx, intercept, opportunity, combat group, guard
 --------------------------------------------
 money: 1 gold, 15 silver, 20 copper
 
@@ -2939,19 +2969,18 @@ dodge bonus 3
 Common 8
 mobile 5, rapid 6
 veteran 4
-charge 3
+balance 6, charge 3
 synchronized 8
 consistent 2, precise 2
 quick draw 10, quaff 8
 throw 9
 avoid 9, quick avoid
 bow 12, quick shot 9, sniper 6, lead target 6
-sword 10, poke, swing, quick parry
+sword 10, poke, swing, quick parry, fancy 3
 tank (chain as leather)
 --------------------------------------------
-yield
-off balance
-phalanx, intercept, opportunity, combat group
+yield, off balance
+phalanx, intercept, opportunity, combat group, guard
 --------------------------------------------
 money: 1 gold, 15 silver, 20 copper
 
@@ -2992,20 +3021,17 @@ per  8                    action points 6
 cha  6                    xp ?
 --------------------------------------------
 yield bonus 3
-dodge bonus 3
 --------------------------------------------
-Common 10
-mobile 3, rapid 4
+Common 10, ancient 6
+mobile 3, rapid 4, balance 6
 veteran 3
-charge 3
 consistent 1
 quick draw 8, quaff 8
+staff 12, wayward strike, fancy 3
 throw 8
 avoid 8
-staff 12
 --------------------------------------------
-yield
-off balance
+yield, off balance
 phalanx, intercept, opportunity
 --------------------------------------------
 money: 1 gold, 15 silver, 20 copper
@@ -3019,9 +3045,9 @@ fine          2h: fast+1 if str 8 and dex 8
 
 leather abs 1
 
-feedback ball - small angry glowing ball (2sq light)
+feedback football - small angry glowing ball (2sq light)
     activates when thrown, deactivates when packed away, 8 charges
-    on touch or detect casting within 6sq: destructive feedback
+    attack on touch or detecting casting within 6sq: destructive feedback
     draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
 
 destructive dispell
@@ -3043,7 +3069,6 @@ elsewhere
     cast 3ap, 1m, personal
     teleport 2D4-5 sq X/Y (+/-3sq)
     jump teleport anywhere else, away from incoming blow
-    (alternatives: 2D6-7 +/-5sq , 2D3-4 +/-2sq)
 
 ============================================
 \end{verbatim} \end{samepage} \normalsize
@@ -3089,6 +3114,8 @@ elsewhere
 \raggedbottom
 
 The MutaMonsters are aggressive towards non-mutated folk and animals. They ignore mutated people as long as they are not attacked.
+
+Mutamonster meat is tasty but not good for you. Eating it will slowly weaken the character. After 2+1d3 days start reducing stamina, constitution, hitopoints by 1 each day to a max mod-3, also giving a mod-3 to all actions. The effect starts disappearing at a rate of 1 mod point each 2 days when the character is no longer eating mutameat.
 
 \begin{description}
 
@@ -3249,44 +3276,75 @@ The Tentacle Crab yields about 100enc of meat, and each tentacle another 3enc.
 
 
 
-
-
-
-
 \newpage
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
-\phantomsection\addcontentsline{toc}{section}{appendix: monsters}
-\section*{appendix: monsters}
-\markboth{monsters}{monsters}
+\phantomsection\addcontentsline{toc}{section}{appendix: GrimGnash}
+\section*{appendix: GrimGnash}
+\markboth{GrimGnash}{GrimGnash}
 
 \raggedbottom
 
-bla bla bla
+GrimGnash is pretty difficult.
 
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
-Some Dude
+GrimGnash               - size Colossal  6x6
 ================== human ===================
-str  4                    hp 11 abs 0
-dex  8                    m1 w4 r6 d8
-con  6                    stamina 6
-int  5                    vision 22 day 223
-psy  6                    mana 6
-per  4                    action points 3
-cha 10                    xp 108
+str 50                    hp 300 abs 4
+dex  6                    m4 w8 r16 d30(fly)
+con 50                    stamina -
+int 10                    vision 30 day 270
+psy 15                    mana -
+per  8                    action points 9
+cha  5                    xp -
 --------------------------------------------
-yield bonus 3
+Common 10, ancient 10, svartlingo 5, dwarfish 10, elfish 10, dragon 15
+pain threshold 10, regenerates 5 (below 200hp), regenerates 10 (below 100hp)
+mobile 2
+avoid: legs 2ap 8, tail 1ap 12, head/neck 3ap 16, body 4ap 4
 --------------------------------------------
-Common 3
-avoid 4
-throw 3
---------------------------------------------
-yield
-off balance
---------------------------------------------
-money: 3 gold, 1 silver, 10 copper
+requires reach 1 to hit body or reach 2 to hit neck/head
+unless interrupting a head bite attack.
+ranged attacks anywhere: large target tohit+6
+    legs =0, tail +3, body +6, head/neck =0
+melee attacks anywhere (assumes no reach): mod=0
+    legs =0, tail =0, body +3, head/neck =0
+
+scales abs 4, immune to fire, 
+crushing weapons do half damage up to 20(10) then full damage
+head/neck has abs 2 and no crush resistance
+50hp damage to head will knock him out
+
+claw swat 3ap, 14, 3ap dam 10 knockback 3
+
+claw grab 3ap, 12, dam 8 penetrating
+then held, str 15 against break free attempts
+resisting break free actions doesn't cost ap for GrimGnash
+
+bite (head attack) 6ap, 9, dam16 pen4 
+bite (when already held in claw) 6ap, 12, dam16 pen4
+continued chewing autosuccess, 3ap, dam and pen as bite
+swallow 6ap, certain death in magma stomach(?)
+
+tail swipe 6ap, range 6sq hits everything outside +/-45deg from facing
+dam 6 pen 3 knockback 5
+toavoid-3, unmodified jump(+)acrobatics success cancels toavoid mod
+also hits prone, does not hit flying
+
+throw 2ap, 10, range for anything up to ca 100kg is 15sq
+damage from being thrown/hit by character is dam10 pen3 knockback 3
+
+fire breath 6ap autosuccess up to 3x templates placed without gap
+range 20 template 2sq circular duration 1r
+roll individual damage 5+1d5
+can be reasonable to limit to 10-15 ammo for fire breath
+
+rush attack 0ap autosuccess, just movement pushing chars away
+targets are pushed away forward or to the sides
+they have to spend mp or take damage and go prone
+max damage is 1 per sq pushed, penetrating, roll individually
 
 ============================================
 \end{verbatim} \end{samepage} \normalsize
@@ -3294,26 +3352,17 @@ money: 3 gold, 1 silver, 10 copper
 \
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
-Other Dude
+fire elemental                    size small
 ================== human ===================
-str  4                    hp 11 abs 0
-dex  8                    m1 w4 r6 d8
-con  6                    stamina 6
-int  5                    vision 22 day 223
-psy  6                    mana 6
-per  4                    action points 3
-cha 10                    xp 108
+str  4                    hp 8 abs 0
+dex  8                    m4 w8 r- d-
+per  6                    action points 3
 --------------------------------------------
-yield bonus 3
---------------------------------------------
-Common 3
-avoid 4
-throw 3
---------------------------------------------
-yield
-off balance
---------------------------------------------
-money: 3 gold, 1 silver, 10 copper
+immune to fire, half damage from piercing and thin weapons
+
+fire lash 3ap, 8, dam 5, cannot be parried with thin weapons
+
+explodes on death: range 1sq template duration 1r dam 6
 
 ============================================
 \end{verbatim} \end{samepage} \normalsize
