@@ -34,7 +34,7 @@ Cooperation, movement, positioning, numbers of combatants, clever use of charact
 
 Please, when reading and playing with this, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{then tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
 
-The hactac rule set, game setting, and adventure campaigns are not created with any form of "realism" in mind. The idea is to make it fun and interesting to play, nothing else.
+The hactac rule set, game setting, and adventure campaigns are not created with any form of \emph{realism} in mind. The idea is to make it \emph{fun} and \emph{interesting} to play, nothing else.
 
 \
 
@@ -52,7 +52,8 @@ Basic ideas:
 Some things I want to make important in the combat rules:
 \begin{itemize}
     \item Tactical maneuvers and game play, not just dps dice rally.
-    \item Trade "realism" for interesting tactical depth.
+    \item Trade realism for interesting tactical depth.
+    \item Require player coordination for successfull battling.
     \item Offensive and defensive combat styles.
     \item Movement and maneuvers as tactical elements.
     \item Initiatives that favour the fast through more combat flexibility.
@@ -63,7 +64,7 @@ Some things I want to make important in the combat rules:
     \item Different skills and equipment should \emph{feel} distinct.
 \end{itemize}
 
-Just charging into the opponents and hacking away usually lead to disaster. Instead there are some tactical considerations that enhance survival chances and makes the battles more interesting. Ganging up on an opponent to overcome defences or distracting to allow the others to get in better hits is powerful. Moving and positioning to get the upper hand in a battle can make a world of difference, especially when fighting many on many, or in complex terrain surroundings. The rules set the scene for some flexible shuffling of offensive or defensive focus and tactical initiative. Coordination and ordering of actions will have a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
+Just charging into the opponents and hacking away usually lead to disaster. Instead there are some tactical considerations that enhance survival chances and make the battles more interesting. Ganging up on an opponent to overcome defences or distracting to allow the others to get in better hits is powerful. Moving and positioning to get the upper hand in a battle can make a world of difference, especially when fighting many on many, or in complex terrain surroundings. The rules set the scene for some flexible shuffling of offensive or defensive focus and tactical initiative. Coordination and ordering of actions will have a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
 
 \
 
@@ -83,13 +84,14 @@ This game style takes more rounds per battle than most other games, but each rou
 %demonstrated in the introductory screencast
 
 Simple random encounters for a few players and twice their number in regular opposition take perhaps 20-30 rounds and about 30-60 minutes. More complex fights take longer. In the advanced "Goblin Destiny" campaign the six players control two goblins each, and there are usually 20-40 figs on the board in most battles. Then the rounds can sometimes creep upwards of 10min.
+% I consider the time consumption a design failure on my part of that specific campaign. I should have done it differently. But the players loved the campaign reported it as one of the best so I have not done any significant changes to it.
 
 %Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit.
 
 
 \section*{simplified or complex}
 %-------------------------------
-The fundamental design idea is to allow the GM and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper and some tokens. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract. Then the group can pick and choose the rules, skills, etc which they feel are interesting, adding complexity and variation. At some point it's better to have automation assistance by simple scripting in digital/virtual table top software like maptool, vassal, or similar. I have a maptool implementation that covers the majority of the rule set for quick automation for our weeknight internet based slaughter.
+The fundamental design idea is to allow the GM and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper and some tokens. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract. Then the group can pick and choose the rules, skills, etc which they feel are interesting, adding complexity and variation. At some point it's better to have automation assistance by simple scripting in digital/virtual table top software like maptool, vassal, or similar. I have a maptool implementation that covers the majority of the rule set for quick automation for our weeknight internet based slaughter sessions.
 
 
 \section*{note: nerfing}
@@ -145,16 +147,16 @@ Don't think of action points as units of time. It is not designed to map to time
 \item[Movement and Movement Points:]
 Moving the character costs movement points. Movement speed is declared in the beginning of the round: maneuver, walk, run, or dash, giving a set amount of movement point. The faster you move the more mods you will have on your rolls in that round.
 
-\item[Skill, spells, magic, trait, ability, power, mutation, psionic, etc:] gives the character the option of performing actions or maneuvers that he otherwise would not have access to, or improves the chances of succeeding with rolls he already has available. The terms are treated as the same thing. They generally add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
+\item[Skill, spells, magic, trait, ability, power, mutation, psionic, etc:] gives the character the option of performing actions or maneuvers that he otherwise would not have access to, or improves the chances of succeeding with rolls he already has available. The terms are treated as the same thing. They often add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
 
-\item[Maneuver:] Maneuvers are actions or variations of actions. They add alternatives and flexibility. Think of them as mini skills.
+\item[Maneuver:] Maneuvers are actions or variations of actions. They add alternatives and flexibility. Think of them as mini skills. Examples are special attacks, movements, etc, or bonuses in certain situations.
 \\  \textbf{TODO:} This is also the name of the slowest combat movement mode, sorry about that. I'll think of something else for this and rewrite later on... \emph{Any good suggestions?}
 
-\item[Round:] (r) is a measure of time, one game round. It does not translate to a specific number of seconds. The term "turn" is also frequently used to mean more or less the same thing as a round, although it should more specifically be the time period of one round's actions and movements for one character.
+\item[Round:] (r) is a measure of time, one game round. It does not translate to a specific number of seconds. The term "turn" is also frequently used to mean more or less the same thing as a round, although it should more specifically be the time period of one round's actions and movements for one character. All characters take turns to perform actions and movements during a round.
 A round is split into the following phases: declaration, all turns, end.
 During declaration all characters declare movement and action points. Then all characters take their turns. Then the round ends and book keeping is done for the next round.
 
-\item[Square] (sq) is used as a measure of distance, i.e. the length of a square on the game map, or more correctly the distance a character travels when moving between two adjacent squares on the game map. The game is generally played on square tiles, but works just as well on hexes or gridless maps with some very minor adjustments.
+\item[Square:] (sq) is used as a measure of distance, i.e. the length of a square on the game map, or more correctly the distance a character travels when moving between two adjacent squares on the game map. The game is generally played on square tiles, but works just as well on hexes or gridless maps with some very minor adjustments.
 The sq distance on diagonals is usually measured 1-2-1-2-..., meaning the first diagonal counts as distance 1sq, while the second counts as distance 2sq.\\
 In a few cases the sq is also a surface area.
 
@@ -182,7 +184,7 @@ Unless explicitly written as "round up" (ru) or "round nearest" (rn) assume it's
 %---------------------
 We start with the bare bones basic rule set, and then expand. Even the very simple rule set is enough to build deep tactical game play.
 
-The more you try to do in each round the more difficult each action will be, and the faster you move the more difficult things get. Movement and actions can be taken in any order and split up over a round. Higher initiative characters can go first, last, or interrupt a character with lower initiative. And when being the target of an action you always get one action in response regardless of initiative, which cannot be interrupted.
+The more you try to do in each round the more difficult each action will be, and the faster you move the more difficult things get. Movement and actions can be taken in any order and split up over a round. Higher initiative characters can go first, last, or interrupt a character with lower initiative. And when being the target of an action you always get one action for immediate response, regardless of initiative, which cannot be interrupted.
 
 In the beginning of each round you decide how many action points and movement points you want to have available for that round. Unused points disappear at the end of the round.
 
@@ -191,7 +193,7 @@ With some skills you can try to use more points than you have declared, but you 
 
 \subsection*{Fuzzy time}
 %-----------------------
-This rule set is built around a flexible and fuzzy outlook on time and especially the concept of "at the same time". Before and After is usually preserved quite well, but can fray at the edges when it includes more than two people.
+This rule set is built around a flexible and fuzzy outlook on time and especially the concept of \emph{at the same time}. Before and After is usually preserved quite well, but can fray at the edges when it includes more than two people.
 
 This is not realistic, but it does make the fights more interesting. It adds tactical depth.
 
@@ -200,12 +202,12 @@ This is not realistic, but it does make the fights more interesting. It adds tac
 %---------------------------------------------
 All characters and monsters take turns during every full game round. Generally each combatant makes a short series of movements and actions. Usually one or two attacks and/or parries, and moves a few squares. In any order. Movement can be split up, and occur before, during, or after actions.
 
-In practice, characters will be performing actions "during" other character's turns. This will in effect often yield simultaneous turns during a round, just with different action timing flexibility depending on relative initiative. Characters with higher initiative can interrupt the movement and actions of characters with lower initiative.
+In practice, characters will be performing actions during other character's turns. This will in effect often yield simultaneous turns during a round, just with different action timing flexibility depending on relative initiative. Characters with higher initiative can interrupt the movement and actions of characters with lower initiative.
 
 
 \subsection*{All effects, skills, modifications and penalties stack together}
 %----------------------------------------------------------------------------
-The general goal is that all effects and skills stack together unless stated otherwise. This allows powerful combos and and multiple characters can work together to accomplish mighty results. Some of the combination results can be a bit strange, but should always add tactical depth.
+The general goal is that all effects and skills stack together unless stated otherwise. This allows powerful combos and and multiple characters can work together to accomplish mighty results. Some of the combination results can be a bit strange, but should hopefully add interesting depth and options.
 All penalties and mods also stack together and will in severe situations make success of even the simplest actions a remote possibility at best.
 
 Some combination effects might be bugs that have not yet been seen in game nor foreseen during writing and testing. \emph{Let me know if you find weird or broken stuff.}
@@ -217,7 +219,7 @@ Movement across square sides cost one movement point. Diagonal movement across a
 This assumes a square grid. Hex boards usually allow only side moves. On gridless boards use a direct measurement scale and round up to nearest whole movement point if necessary.
 
 Diagonal movement around corners and between objects are usually restricted.
-Corners that leave a lot of space to the corner of the square can be treated as "round corners" Friendly Heroes also have "round corners".
+Objects or terrain with corners that leave a lot of space to the corner of the square can be treated as "round corners" Friendly Heroes also have "round corners".
 Object corners that go mostly or completely to the corner of the square are "sharp corners". Enemy units also have "sharp corners".
 Moving diagonally around a "round corner" is acceptable, while you cannot move diagonally around a "sharp corner". In some cases it is possible to move diagonally between two objects when both have "round corners", but not when either or both have "sharp corners".
 
@@ -278,7 +280,7 @@ Movements can be split around actions. However, other combatants can often react
 
 \subsection*{High initiative selects order of actions}
 %-----------------------------------------------------
-The order of different characters' actions during each round is decided by their relative initiative. Characters with higher initiative can choose when they want to perform movement and actions relative to the timing of opponents with lower initiative. They can go before slower characters, or wait and then interrupt others actions when it suits them. The faster can thus also split their different actions to fall between the actions of slower characters.
+The order of different characters' actions during each round is decided by their relative initiative. Characters with higher initiative can choose when they want to perform movement and actions relative to the timing of opponents with lower initiative. They can go before slower characters, or wait and then interrupt others' actions when it suits them. The faster can thus also split their different actions to fall between the actions of slower characters.
 
 Initiative is a dex+1D4 roll, re-roll every now and then, e.g. each separate battle encounter, or might change in battle lulls.
 
@@ -291,16 +293,14 @@ Characters with lower initiative must also declare action points and movement sp
 All characters can react to actions being performed to them. This means that a slower character can choose to perform one action in response to actions being done to them by faster characters with higher initiative.
 The right to react gives the right to perform one action, including movement before and/or after that action. The reaction action does not have to target the attacking character, but can be a non target action or target any other character.
 
-The reaction action can be interrupted by characters with higher initiative, just like any other action, \emph{but not by the original attacker}.
-
+The reaction action can be interrupted by characters with higher initiative, just like any other action, \emph{but not by the original attacker}. 
 E.g: Attacking Albin moves in and attacks Defending David. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
 
 Right to react continues in a chain if the two keep attacking each other.
-
 E.g: Attacking Albin attacks Defending Dave but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if he wants, also under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.
 
-% is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here somewhere...
-Optional: If using the rule where spending action points decreases in round initiative it is possible that the participants drop in initiative order to the point where other characters can interrupt and intervene in a right to react action chain. However, the right to react by the target will not disappear even if a third party injects an action in the chain.
+% is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here...
+Optional: If using the rule where spending action points decreases in round initiative it is possible that the participants drop in initiative order to the point where other characters can interrupt and intervene in a right to react action chain. However, the right to react by the target will not disappear even if a third party injects an action in the chain. The target still has right to react to the first action even after a second attacker has interrupted the response action and the target has taken a reaction action to the interrupt action.
 
 Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn as part of the defence action but only after the attack-defend is resolved and completed. 
 
@@ -311,7 +311,7 @@ Note: defence actions are treated slightly differently from other reactive actio
 \subsection*{Resistance rolls}
 %-----------------------------
 % original [-5,4] version, which only have one roll
-Resistance rolls. "attach versus defence", "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
+Resistance rolls. "attack versus defence", "xxx vs yyy" or "xxx | yyy", "xxx \vs yyy".\\
 The attacker rolls \verb|attack - defence + 5 -1D10|. On success $\ge$0 the attacker has succeeded with the action, with the diff indicating the level of success as with a normal roll. Note that a roll of 10 does not mean an automatic failure in the context of resistance rolls.
 %-----------------------------
 % 2018 [-9,9] version, has issues
@@ -348,29 +348,26 @@ Below is a list of some basic common actions.
 \openactionslist
 
 
-\action{Action: "attack"} make an attack, roll for weapon skill.
+\action{Action: "attack"} make an attack, roll for weapon skill. If you succeed and the target doesn't defend you get to roll for damage and hurt'em.
 
 
-\action{Action: "defend"} try to not get hit from an incoming attack. Defend is usually done as one of several different forms of defence actions, such as "parry" or "avoid". Defence actions are sometimes done together with optional action maneuvers like "yield" or "dodge" to improve the odds of success.
+\action{Action: "defend"} try to not get hit by an incoming attack. Defend is done as one of several different forms of defence actions, such as "parry" or "avoid". Defence actions are sometimes done together with optional action maneuvers like "yield" or "dodge" to improve the odds of success.
 
 
-\action{Action: "parry"} make a parry, roll for weapon skill.
+\action{Action: "parry"} to block an incoming attack, roll for weapon skill.
 Parry is a form of "defend" action. Some weapons or attack maneuvers have todefend or toparry modifiers which can make the parry roll more difficult. Some shields or weapons have bonuses to their parry or defend actions.
 
 
 \action{Action: "avoid"} twist or move to avoid an attack instead of parrying it. This requires the "avoid" skill. Avoid is a form of "defend" action. Some attacks have todefend or toavoid modifiers which can make the avoid roll more difficult.
 
 
-\action{Action: "draw"} take something from equipment inventory which is easy to reach and not in a container, e.g. a sword from its sheath, a bow from the shoulder, a flask from the belt, etc. This takes a full round. Roll dex+9 or try again later. The quick draw skill is useful.
+\action{Actions: "give \& receive"} hand over an item between characters. It takes one action to give and one action to receive. Both actions requires a dex+9 roll. Normally this will not fail but when the action and movement mods are piling up the chances can drop.
 
 
-\action{Action: "holster/stow/put away"} put something back in the inventory. Sheath a sword, hang a bow, etc. Takes a full round, with a dex+9 roll. It only takes a 0ap free action to drop something, but then you might not have that item available if you need it later.
+\action{Action: "draw, sheath/holster/stow/put away"} take something from inventory or put it back again takes a full round as long as the item is easy to reach and not stuffed in a container. E.g: drawing or sheathing a sword, hanging a bow, etc. It's an easy dex+9 roll.
 
 
-\action{Actions: "give \& receive"} hand over an item between characters. It takes one action to give and one action to receive. Both actions requires a dex+9 roll. Normally this will not fail but when the action mods are piling up and people try running around the chances can drop.
-
-
-\action{Actions: "put down \& pick up"} are normal 3ap actions with dex+9 roll. Just dropping things takes no time and requires no rolls, but grabbing always does.
+\action{Actions: "put down \& pick up, drop"} are full round actions with dex+9 roll. Just dropping things takes no time and requires no rolls, but grabbing always does.
 
 
 \action{Action: "drink a potion"} is a full round action (1r) and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back. The skills quick draw and häfva can drastically reduce the time required to draw and drink a potion.
@@ -1043,6 +1040,14 @@ Friends can help break loose by adding their str, and can help clean by spending
 Items accumulate mod-1 when used to parry spin web attacks, until cleaned off. Cleaning off requires a regular 3ap mod+9 action.
 
 
+\item[Snag]
+The attacker's weapon and target or target's blocking weapon are entangled until the end of the round, unless some cool maneuver or action can untangle them quicker.
+
+It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified). If any side wins with +3 or more he has managed to rip the opponent's weapon loose. It's also possible to tug or push a snagged opponent off balance.
+
+Weapons with the \emph{snag} property can be used to intentionally entangle the parrying weapon or shield. Snagging with the snag maneuver is tricky and carries a mod-x. Snag can also happens on a fail-6 or worse with a roll of 10 if you do not try to snag, even with weapons that don't have the snag attack propery.
+
+
 \item[Knock back]
 The target is moved one space away for each point of knock back. 
 Large targets, with size more than one square, ignore one point of knock back for each occupied square after the first one. E.g: a 2x2sq troll ignores 3 knock back points.
@@ -1107,10 +1112,9 @@ And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder req
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
 
-
-TODO: meh, rewrite, change
+\TODO meh, rewrite, change
 Always use the highest base strength requirement of all equipment, manuvers, skills, etc when calculating the free excessive strength points.
-E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str3 in 2h grip) the excessive strength available 
+E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
 
 %TODO: rewrite example, after changes to stamina
 E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 \emph{or} for two attacks that do not require stamina, or for dam+1 and one attack without stamina cost.
@@ -1143,15 +1147,6 @@ If moving closer to attack an opponent wielding a weapon with longer reach than 
 E.g: Albin and David stand 3sq apart. Albin has initiative 10 and a sword and wants to attack David who has initiative 6 and a spear. Albin must first move in to base contact, then attack. However, that means David can choose to make an interrupt attack at reach 1 mod-3 before Albin has closed to base contact. David cannot choose to make a reach 0 mod-0 interrupt attack.
 
 Ranged weapons, e.g. bows and crossbows, don't have this benefit. There the order of initiative will decide if the attacker can close before the shooter can let the arrow fly.
-
-
-\subsection*{Snag}
-%-----------------
-Weapons with the \emph{snag} property can entangle the parrying weapon or shield. The snag maneuver is tricky and carries a mod-x. Snag also happens on a fail-6 or worse if you do not try to snag.
-
-The two weapons are entangled until the end of the round, unless some cool maneuver or action can untangle them quicker.
-
-It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified). If any side wins with +3 or more he has managed to rip the opponent's weapon loose.
 
 
 \subsection*{Pain makes life more difficult}
@@ -1326,6 +1321,13 @@ Persistent area effects, e.g. fire spells, poison clouds, etc either have an ini
 E.g: At initiative 9 Wizzy Wizard casts a Fire Ball with duration 3r. It does damage immediately when it's created, then again at initiative 9 in each of the following 2 rounds. Anyone stuck in the fire at the end of the first round better make sure to have initiative above 9 next round and enough mp to be able to escape, or take damage again at initiative 9 when the fire effect activates again.
 
 Also, anyone running into an effect area has that effect applied immediately upon entry, but only once per round even if leaving and entering multiple times in one round or if the effect activates after the target entered and was affected.
+
+
+\subsection*{Piling corpses}
+%---------------------------
+A normal size corpse gives a square a mod-3 poor terrain modifier. Each additional corpse is another -3, quickly leading to very tricky terrain when standing your ground fighting enemies. At some point it's time to just move and fight somewhere else. This also means that having a heap of fallen enemies covering the squares just in front of you is an excellent defencive strategy. Perhaps you can sacrifice your less useful allies for the same benefits.
+
+
 
 
 

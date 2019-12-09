@@ -2,7 +2,7 @@
 %       10        20        30        40        50        60        70        80
 
 
-this todo list has input from players as well as author,
+this todo list has input from players as well as author
 lots of comments in swedish, will not translate
 
 
@@ -16,6 +16,39 @@ lots of comments in swedish, will not translate
 NEW: ---------------------------------------------------------------------------
 
 omvänd kronologisk ordning av TODO items
+
+
+191208:
+TODO: giving up, fleeing, willpower, morale, etc
+      e.g. when getting hit a lot, roll to continue fighting
+      psy + veteran + etc   - damage & pain mods & last damage percentage of full hp
+      morale, leadership, number of allies nearby, relative numbers, etc... ?
+      racial baseline: dwarves+3, goblins-3
+
+
+191204:
+TODO: add new difficult to parry maneuvers that require dual wielding weapons
+TODO: add followup attack skill, requires dual wielding, 
+      second strike takes 1ap less than normal but requires dual wielding 
+      and is done by the other weapon
+      not quite as good as "double" but still really useful
+
+
+191030:
+TODO: fix initiative calculation to not add all ap declared,
+      just add "overdeclared" ap, e.g. base ap 3, quick 2, declare 6, 
+      then add +1 to initiative
+
+
+191016:
+TODO: note possible to   summon demons sune to battle dragon
+TODO: note dragon psy 15
+TODO: note dragon likes pretty things, like pretty vain goblins :)
+      put machete in box
+TODO: feedback, fumbly, etc triggar inte spawn     --- goblin destiny, grimgnash
+      bara bolts etc triggar spawn
+TODO: loot ca 1000g total i hidden chest
+
 
 191009:
 TODO: BUG i dash mods ?
@@ -895,3 +928,6 @@ DONE: multiple rerolls should escalage as quadratic: 1,4,9,16xp
 191009:
 DONE: shield bash attack maneuver - shield skill (mod: neg shield mod)
       dam: (str+shieldmod)/3
+191204:
+DONE: rolling gut: "sixth sense"   mechanic for spot checks
+      players can roll "hidden" rolls for themselves, if they fail they still know that something is off and can act on it...
