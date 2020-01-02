@@ -105,25 +105,9 @@ To make things simple I suggest using the \verb|rollchars.py| script. Just chang
 The cost of buying skills is the "skill cost factor" (scf) times the square of the skill level, round down. \verb|cost = scf * sl^2|. However, a skill will always cost at least 1xp. \\
 E.g: skill cost factor 1.3 to level 4 costs 1.3*16=20.8 round down ~20. \\
 E.g: raise same skill from 4 to 6: 1.3*(36-16)=26. \\
-Note that it can be a little bit cheaper to raise skills a little bit at a time instead of a lot in one go. However, if you want to do this you have to go adventuring between every skill purchase. \\
- \\
-%Some skills are free: \\
-%The skill "avoid" is free to lvl = dex/2 (round down). \\
-%The skill "brawling" is free to lvl = dex/3 (round down). \\
-%The skill "throw" is free to lvl = dex/3 (round down). \\
-%The skill "find" is free to lvl = per/2 (round down). \\
-%The skill "gossip" is free to lvl = cha/2 (round down). \\
-%Some languages are generally free to a certain level: \\
-%Common is free for humans and halflings to int+3 \\
-%Common is free for other races to int-3 \\
-%Other races have their respective mother tongue is free to int+3 \\
-% \\
-%Some maneuvers are free: \\
-%maneuver yield: everyone has this ability from the start. \\
-%maneuver off balance: everyone has one step off balance. \\
-%\\
-%These skill levels are free from the start for the newbie character, but does not change if he increases or decreases his base stats during creation or later on in the game.
+Note that it can be a little bit cheaper to raise skills a little bit at a time instead of a lot in one go. However, if you want to do this you have to go adventuring between every skill purchase.
 
+Sometimes characters start with some free 
 
 
 %\subsubsection*{some skills to consider}
@@ -233,14 +217,14 @@ For my campaigns I've started using the second option and simply use \verb|rollc
 
 \
 
-\LARGE
+
 % =============================================================================
-\textbf{TODO:} The race Hero roll listings below are not updated yet! Refer to, and use \verb|rollchars.py| as up to date. And see \verb|races| listing for summary.
+\TODO The race Hero roll listings below are not updated yet! Refer to, and use \verb|rollchars.py| as up to date. And see \verb|races| listing for summary.
 % -----------------------------------------------------------------------------
-\normalsize
 
 \
 
+\goodbreak
 \small \begin{samepage} \begin{verbatim}
 ===================================
 human                       (token)
@@ -259,7 +243,7 @@ money 1d4 gold 1d8 silver 1d20 copper
 
 \
 
-\pagebreak[1] \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 dwarf                       (token)
 -----------------------------------
@@ -283,7 +267,7 @@ dwarves with 50+ gold in coin and gems gains psy+1 mod while wealthy.
 
 \
 
-\pagebreak[1] \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 elf                         (token)
 -----------------------------------
@@ -306,7 +290,7 @@ when returning to nature.
 
 \
 
-\pagebreak[1] \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 halfling                    (token)
 -----------------------------------
@@ -326,7 +310,7 @@ money 1d4 gold 1d8 silver 1d20 copper
 
 \
 
-\pagebreak[1] \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 orc                         (token)
 -----------------------------------
@@ -349,7 +333,7 @@ money 1d6 silver 1d10 copper 1d4 large teeth/claws
 
 \
 
-\pagebreak[1] \begin{samepage} \begin{verbatim}
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 goblin                      (token)
 -----------------------------------
@@ -383,15 +367,13 @@ round up on all half values.
 
 
 
-\subsection*{List of starter equipment kits}
-%-------------------------------------------
-
+\subsection*{Equipment starter kits}
+%-----------------------------------
 Starting out in the Hero Adventuring business segment can be difficult, and it's so useful to have a small knapsack of stuff with you when you leave the old homestead. Character creation is probably also the only time in the game when your Hero can buy equipment for xp instead of silver.
 
 This equipment is of decent quality and not the kind of hand me down rusty old fail-at-the-worst-possible-moment standard starter fare that the less prepared newbie adventurers tote around.
 
-%\tiny\begin{verbatim}
-\small\begin{verbatim}
+\small \begin{verbatim}
 Woodsman's backpack (cost 5xp):
     backpack 5enc, knife, spear or bow + 10 arrows,
     water bottle, food for 3+1d3 days, fishing gear, snares,

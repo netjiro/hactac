@@ -13,7 +13,7 @@ This tiny dungeon adventure is meant to be the first introduction to the game th
 
 The monsters in the Dungeon of Testing will not kill a character, which is nice for a first experience. These are test monsters, not like \emph{real} monsters. The peculiar magic of self reflection and re-evaluation that accompanies the Dungeon of Testing is also very good for characters that want to change how they have spent their XP growing up, once they have found some glaring holes in their survival capacity.
 
-A Dungeon of Testing is something most serious towns have, on franchise from Ottokar's Test Dungeons. It will scare some young fools into staying in the village to become farmers or blacksmiths instead of travelling the world as dragon slayers or explore the limited career options as compost.
+A Dungeon of Testing is something most serious towns have, on franchise from Ottokar's Test Dungeons. It will scare some young fools into staying in the village to become farmers or blacksmiths instead of travelling the world as dragon slayers or explore the limited career options of compost. \emph{Compost, i.e. post-adventuring occupation.}
 
 The idea of the Dungeon of Testing is to be slightly too difficult for most new characters so that the player can re-evaluate how the XP are spent before the character goes into real combat in adventures and campaigns.
 
@@ -91,9 +91,8 @@ Each goblin fighter has 1d10 copper, and the orc has 1 silver an 2d10 copper.
 
 \small \begin{verbatim}
 XP values for the dungeon:
-    make it out alive: 5xp
+    make it out alive: 5xp (only if explored the dungeon or lost over 50% hp)
     explore all rooms: 1xp each
-    perfect kill rate: 5xp bonus
 XP values for the critters:
     goblin fighter    1
     goblin warrior    2
@@ -106,24 +105,26 @@ XP values for the critters:
 
 \subsection*{The test sessions}
 
-The Dungeon of Testing has been played by every new player so far. Two characters have made it through with both loot and xp, most flee with barely an hp left to their name, then change a bit in their character skill lists.
+The Dungeon of Testing has been played by every new player so far as an introduction to the game. Two characters have made it through with both loot and xp, most flee with barely an hp left to their name, then change a bit in their character skill lists. I don't run the Dungeon of Testing with experienced players who make new characters. They already know the game.
 
-It usually takes about an hour to run through the dungeon and explain the rules to a new player, and have them get used to MapTool.
-
-
+It usually takes about an hour to run through the dungeon and explain the rules to a new player, and have them get used to MapTool. 
 
 
 
+
+
+
+\raggedbottom
+\vfill
 %-------------------------------------------------------------------------------
 % appendix monsters
 
+\subsection*{The Monsters}
 
-\small \begin{verbatim}
+Here are the monsters that populate the Dungeon of Testing, for convenience. They are more or less the same as their name sake in the monster list in the core book.
 
 
-
-
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin runt knifer   (goblinrunt02)   set small token size
 -----------------------------------
@@ -134,16 +135,15 @@ psy 1     ap 5
 per 5     initiative 7
 ----------
 knife     4 dam 3 abs 4
-claw      6 dam 1, 2x -3, fast+1
-bite      4 dam 2
+claw      7 dam 1, fast+1, double attack mod-3 3ap
+bite      5 dam 2
 avoid     6 yield+3
 sneak     8
 ===================================
+\end{verbatim} \normalsize \end{samepage}
 
 
-
-
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin fighter           (goblin02,05)   set small token size
 -----------------------------------
@@ -155,18 +155,17 @@ per  5    initiative 8
 ----------
 sneak           5
 charge          4
-small club      6 dam 4, abs 8
 avoid           5 yield+4
-===================================
-(alternative weapons)
-
+-- carries either club or bow, not both --
+small club      6 dam 4, abs 8
 short bow       6 dam 4, range 12, short 6 mod+3, long 18 mod-3,
                 rate of fire: quick 1r mod-3, normal 2r mod-0, aimed 3r mod+3
+===================================
+\end{verbatim} \normalsize \end{samepage}
 
 
 
-
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 goblin warrior           (goblin07)   set small token size
 -----------------------------------
@@ -185,31 +184,31 @@ light axe       7 dam 5, abs 6, parry-3
 small shield    8(6) abs 10, parry+2, ranged-1/-2
 leather armour abs 1
 ===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
 
 
-
-
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-orc fighter                 (orc01,06)
+novice orc fighter       (orc01,06)
 -----------------------------------
-str 10    hp 16 abs 1
+str  9    hp 16 abs 1
 dex  6    m2 w4 r6 d8
 int  4    vision 12 dusk
 psy  4    ap 4
-per  5    initiative 8
+per  5    initiative 7
 ----------
-heavy 2h club  	5 dam 11(10), abs 18, str 7, finesse-3
-bite           	4 dam 3
-punch          	6 dam 3
+v large 2h club 5 dam 10, abs 18, parry-1, toavoid+1
+bite           	5 dam 4
+punch          	7 dam 3
 avoid          	4 yield+3
 charge         	5
 tackle         	4
-wrestle        	4
 veteran        	3 (incl race bonus)
 leather armour abs 1
 ===================================
-\end{verbatim} \normalsize
+\end{verbatim} \normalsize \end{samepage}
 
 
 
@@ -219,5 +218,6 @@ leather armour abs 1
 
 
 %-------------------------------------------------------------------------------
+\flushbottom
 \end{document}
 

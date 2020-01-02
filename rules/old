@@ -1,7 +1,6 @@
+reverse chronological order
 
-
-
-
+cleaning out old text and blocks
 
 
 
@@ -10,15 +9,46 @@
 
 
 ================================================================================
-180104 : teleportation partial re-re-write
-Upgrade: Fast Teleportation \\
-cost +10xp: lvl 1 teleport in a normal 3ap action \\
-cost +10xp: lvl 2 teleport in a vfast 1ap action
+191229 : removed old angle of attack and angle of defense from source
 
-Upgrade: Running Teleportation\\
-cost +5xp: lvl 1 allows to walk when teleporting\\
-cost +5xp: lvl 2 allows to run when teleporting\\
-cost +5xp: lvl 3 allows to dash when teleporting
+%DONE: 181115: removed "angle of attack", reduces positioning
+%TODO: ? remove this since it makes positioning less relevant ?
+%\skill{Skill cost special "angle of attack":} Characters with angle of attack can make attacks, but not defence, at greater angle from their facing than normal. \\
+%lvl 1, cost 10xp: Attacks to the side are at mod-0, attacks diagonally behind is mod-3, while attacks directly behind is mod-6. \\
+%lvl 2, cost 20xp: Attacks to the side and diagonally behind is mod-0, attacks directly behind is mod-3. \\
+%lvl 3, cost 30xp: Attacks in any direction is mod-0.
+
+%DONE: 181115: NOPE! no "angle of defence" either.
+%TODO: ? should we have a angled defence ?  makes surrounding and most positioning irrelevant, which is kind of shit.
+
+
+
+from campaign.tex
+
+%Some skills are free: \\
+%The skill "avoid" is free to lvl = dex/2 (round down). \\
+%The skill "brawling" is free to lvl = dex/3 (round down). \\
+%The skill "throw" is free to lvl = dex/3 (round down). \\
+%The skill "find" is free to lvl = per/2 (round down). \\
+%The skill "gossip" is free to lvl = cha/2 (round down). \\
+%Some languages are generally free to a certain level: \\
+%Common is free for humans and halflings to int+3 \\
+%Common is free for other races to int-3 \\
+%Other races have their respective mother tongue is free to int+3 \\
+% \\
+%Some maneuvers are free: \\
+%maneuver yield: everyone has this ability from the start. \\
+%maneuver off balance: everyone has one step off balance. \\
+%\\
+%These skill levels are free from the start for the newbie character, but does not change if he increases or decreases his base stats during creation or later on in the game.
+
+
+
+from skill.tex       - remove old "desengage" variations
+
+%NOPE: just a simple modifier, no action, no cost, no roll. -- Disengaging is a full action, 3ap, per opponent that the character wants to safely disengage from, but requires no rolls.
+% rewrite example
+%E.g: Disengaging Dave wants to get away from melee against Mauling Morgan and Striking Stanislav, both of which have \emph{opportunity}. DD has disengage=4 and spends one action (3ap) to move away, out of range from both opponents. However, DD only spent one disengage action, and can thus only mod down one of the opponents. He chooses to mod MM. MM and SS now has the right to react to the movement. MM has a mod-4 when attacking DD due to the DD's disengage action, but SS still has mod-0 for his attack. If DD had paid two actions (6ap) he could have given both MM and SS mod-4 on their "right to react" attacks against him.
 
 
 
@@ -61,6 +91,31 @@ cost +5xp: lvl 3 allows to dash when teleporting
 
 
 
+
+
+================================================================================
+180104 : teleportation partial re-re-write
+Upgrade: Fast Teleportation \\
+cost +10xp: lvl 1 teleport in a normal 3ap action \\
+cost +10xp: lvl 2 teleport in a vfast 1ap action
+
+Upgrade: Running Teleportation\\
+cost +5xp: lvl 1 allows to walk when teleporting\\
+cost +5xp: lvl 2 allows to run when teleporting\\
+cost +5xp: lvl 3 allows to dash when teleporting
+
+
+
+
+
+
+
+
+
+
+
+
+
 ================================================================================
 180103 : old teleportation stuff
 
@@ -90,6 +145,7 @@ cost +20xp: cheap teleport costs only 1 stamina.
 lvl 1 cost +10xp allows for walking when teleporting via P.T. or S.T. \\
 lvl 2 cost +10xp allows for running when teleporting via P.T. or S.T. \\
 lvl 3 cost +10xp allows for dashing when teleporting via P.T. or S.T.
+
 
 
 

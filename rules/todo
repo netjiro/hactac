@@ -18,6 +18,22 @@ NEW: ---------------------------------------------------------------------------
 omvänd kronologisk ordning av TODO items
 
 
+191229:
+TODO: fix backstab - sidestab - killstab
+      backstab seems ok.
+      sidestab is much more useful than backstab since it can be used multiple
+      times each round while backstab gives one attack against unaware opponent.
+      killstab is _very_ potent, how much damage should it do?
+      sidestab cost ?  1.0 ?  ap cost +1ap? +2ap? +3ap?, 
+      waiting to sync with initiative is already costing ap ?
+      killstab cost? killstab damage?  should be at least 50/50 to kill normal 
+      human with dagger and a normal backstab success and normal damage roll
+TODO: fix extra strength bonus problems:
+      allocation based on free points, count down from top?
+      free points based on highest requirement of stuff used?
+          knife and full plate will only allow extra str based on plate requirement
+
+
 191208:
 TODO: giving up, fleeing, willpower, morale, etc
       e.g. when getting hit a lot, roll to continue fighting
@@ -32,12 +48,6 @@ TODO: add followup attack skill, requires dual wielding,
       second strike takes 1ap less than normal but requires dual wielding 
       and is done by the other weapon
       not quite as good as "double" but still really useful
-
-
-191030:
-TODO: fix initiative calculation to not add all ap declared,
-      just add "overdeclared" ap, e.g. base ap 3, quick 2, declare 6, 
-      then add +1 to initiative
 
 
 191016:
@@ -55,7 +65,7 @@ TODO: BUG i dash mods ?
 
 
 190925:
-TODO: luck, rabbit, etc : multiple rerolls should escalage as quadratic: 1,4,9,16xp
+TODO: luck, rabbit, etc : multiple rerolls should escalate as quadratic: 1,4,9,16xp
 
 
 190918:
@@ -143,11 +153,11 @@ TODO: skill "a cunning plan" för att kunna ditt och datt ?
 
 
 1906++:
-TODO: side stab: - som back stab, backstab, 
+TODO: sidestab: - som backstab, backstab, 
       men gäller i strid när någon annan distraherar målet. tex 
-      target distracted, attacker roll first per vs per-3/engaged other excl side stabber to find a gap to stab (similar to back stab have to sneak up behind, or target not aware).
-      then roll side stab, 1ap? (similar to back stab 1ap or double 1stam ?
-      similar damage multipliers as back stab ?
+      target distracted, attacker roll first per vs per-3/engaged other excl sidestabber to find a gap to stab (similar to backstab have to sneak up behind, or target not aware).
+      then roll sidestab, 1ap? (similar to backstab 1ap or double 1stam ?
+      similar damage multipliers as backstab ?
 TODO: rapid strike : heroic ? 
       allows for more than one strike not triggering right to react if target is not aware of attacker before first attack.
       1) must remain above target in initiative list
@@ -276,6 +286,7 @@ TODO:  movement state "ride" som sätter movement undeclared at 0mp
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 OLD: ---------------------------------------------------------------------------
+(pre 2018)
 
 
 TODO: bygg liten lätt area effekt skada formel
@@ -324,7 +335,6 @@ TODO: 5 lik på hög, någon gång borde det bli svårare än mod-3 ruta
       mod-3 per lik ?
 TODO: clarify, phalanx works only in straight formations, over shoulders, etc.
 TODO: attacker över phalanx går i lägsta initiativ av de två involverade !
-TODO: corner fighter ...   njae
 TODO: rescue letter cost (1s escrow) rules
 TODO: donkey tecknade :
       http://www.canpages.ca/blog/wp-content/uploads/2009/03/donkey-irishman.jpg
@@ -483,7 +493,7 @@ TODO: 170606 add ability: reorder: force all combatants to re-roll initiatives,
 TODO: sneak vara action for resting purposes ?
 TODO: sneak: sneak should be an action. I.e: activating sneak should require
       spending one action. Then sneak is active for that round.
-      Requires changes to back stab: back stab can be used as long as the character is undetected. I.e: sneak up behind in one round, then stab in the next.
+      Requires changes to backstab: backstab can be used as long as the character is undetected. I.e: sneak up behind in one round, then stab in the next.
 TODO: quick casting: the character gets more action points that he can only
       spend on casting magic. He will first use his normal action points, then his quick casting action points once he has no normal action points left that round.
 
@@ -500,7 +510,7 @@ TODO: quick casting: the character gets more action points that he can only
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 --------------------------------------------------------------------------------
-from rules.tex
+from rules.tex  (old, pre 2017 restart - goblin destiny prep)
 --------------
 
 % change stamina cost for whirlwind and double
@@ -931,3 +941,30 @@ DONE: shield bash attack maneuver - shield skill (mod: neg shield mod)
 191204:
 DONE: rolling gut: "sixth sense"   mechanic for spot checks
       players can roll "hidden" rolls for themselves, if they fail they still know that something is off and can act on it...
+191209:
+DONE: initiative will increase only by "overdeclared" AP   -  saved cmpgn 191209a
+      fix initiative calculation to not add all ap declared,
+      just add "overdeclared" ap, e.g. base ap 3, quick 2, declare 6, 
+      then add +1 to initiative
+DONE: resting, declaring resting ap=0 mp=0 will allow hero to regain 
+      1 extra stamina for the round if he passes a con roll (mod by neg stam)
+PREV: see util.totmod()   CurrentNegativeStaminaMod  &  Tireless
+      all rolls carries negative stamina as mods, 
+      according to stamina section in rules.tex 191209
+DONE: re-added black cat. 
+      ? WTF why had it disappeared ?
+      ? did anything else disappear ?
+DONE: fixed swim
+DONE: corner strike maneuver 20xp
+      corner fighter ...   njae
+DONE: encumbrance stacks directly on ams, affecting all actions
+      changed maptool campaign, added property CurrentEncumbrance
+      not weight !! _encumbrance_   i.e. weight/str round down
+      skill "pack mule" helps with carrying lots of stuff without raising str
+191229:
+DONE: fixed "accurate": +9 gives 5 dice instead of 4, average ca 84% instead of 80%
+DONE: changed backstab and sidestab to not be multiple of damage, 
+      but instead be a fixed number increasing with success
+      makes it very useful for small weapons but less interesting for larger weapons
+      circumventing the ballista backstab problem
+DONE: killstab

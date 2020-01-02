@@ -324,11 +324,9 @@ def rollHuman():
     # skills
     char.skills['Common'] = int(char.int / 2) + d3()
     char.skills['avoid'] = int(char.dex / 4) + d2()
-    char.skills['throw'] = int(char.dex / 4) + d2()
     # maneuvers
     char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))
     char.maneuvers.append('off balance')
-    char.maneuvers.append('strength bonus')
     # done
     return char
 
@@ -393,7 +391,7 @@ def rollDwarf():
             else:
                 char.mana = d5()
     # skills
-    char.skills['Dwarvish'] = int(char.int/2) + 2 + d3()
+    char.skills['Dwarvish'] = int(char.int / 2) + 2 + d3()
     char.skills['Common'] = int(char.int / 3) + d2()
     char.skills['avoid'] = int(char.dex / 4) + d2()
     char.skills['find'] = int(char.per / 4) + d2()
@@ -401,7 +399,6 @@ def rollDwarf():
     # maneuvers
     char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))
     char.maneuvers.append('off balance')
-    char.maneuvers.append('strength bonus')
     if roll(50): char.maneuvers.append('synchronised')
     # done
     return char

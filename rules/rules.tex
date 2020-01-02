@@ -74,7 +74,7 @@ round 1-4: Initial positional movement for tactical advantage. \\
 round 3-6: Contact: a few attacks, most miss. \\
 round 5-10: restructuring movements, attacks, parries and counter attacks. \\
 round 7-13: heavy violence and tactical movements. \\
-round 10-15: closing in and mopping up the stragglers.
+round 10-15: closing in and mopping up the stragglers, some flee
 
 Larger or more complex fights of course take longer to complete. In hot areas several small skirmishes will meld into long fights with tactical movement, positioning, rallies, defensive short rest periods, and so on, as the Heroes try to accomplish their goals.
 
@@ -507,6 +507,11 @@ money ( g s c)
 
 For simplified tabletop gaming the vision arc should probably be ignored or simplified to the following possible values: 90, 180, 270, 360deg. Since that is quick to trace visually on a square board. On a hex board it's easier with 120, 180, 240, 360deg. With virtual tabletop tools like maptool the actual 1deg resolution is sometimes supported.
 
+%\
+%
+%With the basic rule set it is possible to run fast and simple combat with good tactical depth.
+
+
 
 
 
@@ -528,7 +533,7 @@ More, optional, rules. Ignore or use as you wish. Some extra rules require other
 
 \subsection*{Action Points raises initiative, and spending decreases}
 %--------------------------------------------------------------------
-Each ap you declare will give initiative+1. And each ap you spend will decrease initiative by 1.
+Each ap you declare above the character's max ap will give initiative+1. And each ap you spend will decrease initiative by 1. E.g: Fast Fabian has max ap 5 and declares 7ap for the round, raising initiative by 2.
 
 
 \subsection*{Movement raises initiative}
@@ -557,16 +562,16 @@ When there are lots of Heroes and NPCs on the map things tend to get chaotic, es
 
 To get away from this problem we add:
 \begin{description}
-\item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any AP. The character moves down the initiative list.
+\item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any AP. The waiting character moves down the initiative list.
 \item[wait] will retain the initiative but costs one AP. This flags the character with a clearly visible "wait" marker in the initiative list and makes it clear he's ready to jump into action at any time. The player must clearly and quickly speak up when he wants to take action again.
-\item[done] flags that the character is more or less done for the round, unless something happens to him. The character's in round initiative is set to 0. In maptool this clearly marks the character with a big "done" marker in the initiative list and on the map and sorts him to the bottom of the initiative list, notifying that the character won't take more actions and movement unless his situation changes significantly, see note below.
+\item[done] flags that the character is more or less done for the round, unless something happens to him. The character's initiative is set to 0 and he moves down the initiative list. Mark the character with a clear "DONE" marker.
 \end{description}
 
-With this it's possible to enforce a rule where the top initiative always have to take some action, or choose a wait state. The Hero can wait on a target for free, but sacrifices initiative. Wait flexibly but costing 1ap, or flagging as done but can only take reactive actions if the situation around him changes significantly.
+With this it's possible to enforce a rule where the top initiative always have to take some action or choose a wait state. The Hero can wait on a target for free, but sacrifices initiative. Wait flexibly costing 1ap, or flagging as done but can only take reactive actions if the situation around him changes significantly.
 
 For battles with 30+ characters involved this will speed up the process significantly.
 
-The GM must decide what constitutes a \emph{significant change of situation} for a done character. A good rule of thumb is that the character can take reactive defensive actions and movement only, and no offensive actions, counter attacks, moving closer to targets, initiative interrupts, etc.
+The GM must decide what constitutes a \emph{significant change of situation} for a done character. A good rule of thumb is that the character can take reactive defensive actions and movement only, and no offensive actions, counter attacks, pursue targets, initiative interrupts, etc.
 
 
 \subsection*{Actions that do not require rolls}
@@ -771,7 +776,7 @@ When attacking from outside the target's vision cone the target is unaware of th
 
 If he passes the roll he is aware of the attack before it happens. If he has higher initiative he can choose to interrupt the attack with actions and movement. If he has lower initiative he can still react to the attack with the usual flanking mods.
 
-If he does not pass the roll he is unaware of the attack and cannot defend against it. Successful sneak and/or back stab by the attacker modifies the perception rolls of the target by the success diff.
+If he does not pass the roll he is unaware of the attack and cannot defend against it. Successful sneak and/or backstab by the attacker modifies the perception rolls of the target by the success diff.
 
 Even if the target is unaware of the attack and does not pass the perception roll, his right to react will trigger once the attack has been resolved.
 
@@ -796,10 +801,12 @@ Some squares contain difficult terrain, such as rubble, debris, etc. These squar
 
 Moving through difficult terrain or partially blocked squares require a dex+9 roll, modified by ams as usual and the terrain modification of the square.
 
+Attacking around a blocked corner gives mod-3 to the attack. Enemies are not considered to have blocked "sharp" corners for this situation.
+
 
 \subsection*{Crawl spaces and tight tunnels}
 %------------------------------------------
-Severely blocked squares may not allow for normal actions and movement, but will only allow for crawling through. Crawl speed is dex/3 sq/r.
+Severely blocked squares may not allow for normal actions and movement, but will only allow for crawling through. Crawl speed is dex/3 sq/r, round down but minimum 1sq/r.
 
 Small character such as goblins and halflings will be able to run or dash in areas where larger characters can only maneuver or walk. 
 Common narrow tunnels will allow movement as follows: \\
@@ -815,9 +822,9 @@ Goblins and Halflings are considered small characters and can pass through a "fr
 Normal size characters such as humans, orcs, dwarves, elves, etc cannot.
 
 
-\subsection*{Off Balance}
-%------------------------
-Extra movement, beyond declared, causes the character to fall down. This can be avoided by having the maneuver skill \emph{off balance}, which most races have from the start.
+\subsection*{Forced movement, falling, off balance}
+%--------------------------------------------------
+Forced extra movement, beyond declared, causes the character to fall down and go prone. Rising from a prone position takes a normal 3ap action. Falling down can be avoided by having the maneuver skill \emph{off balance}, which most races have from the start.
 
 When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the final move of the yield action. This will cause him to go off balance, incurring the mod-3 which will also persist for the next round.
 
@@ -868,7 +875,7 @@ Under special circumstances some actions are 0ap instant actions and take no tim
 
 
 \subsection*{Actions that take a full round}
-\label{multiroundactions}
+\label{fullroundactions}
 %-------------------------------------------
 Throwing a javelin takes a full round, that means the character can take no other actions that round. He will fire in order of initiative. A high initiative character can choose to fire before or after a low initiative character.
 
@@ -876,11 +883,13 @@ A full round action is considered to take all the ap the character can declare w
 
 In some cases it's relevant to calculate divisions of rounds, in which case a round is generally considered to be three actions (3a), and nine ap (9ap). 
 %Hence a super fast character ($>$9ap) can in some cases be considered to be able to take more than a full round action per round.
+
 %TODO: change example
 %E.g: fast magic 3 allows to cast spells in half the time. A one round spell would then take 5ap.
 
 
 \subsection*{Actions that take more than one round}
+\label{multiroundactions}
 %--------------------------------------------------
 Some actions take one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they have taken through all the rounds during the performance. The roll is done at the end though, just before the action comes into effect.
 
@@ -923,11 +932,17 @@ The characters generally regain one stamina at the start of each round. If stami
 When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
 E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.
 
-A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. A resting character regains con/3 stamina each round. Characters with low con regain extra stamina when resting slower than normal:\\
-con=2 regains 1stam/2r\\
-con=1 regains 1stam/3r\\
-con=0 regains 1stam/4r\\
-con<0 does not regain extra stamina when resting.
+A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. Resting characters regains 1 extra stamina each round if they pass a con roll, modified by negative stamina but no other mods. Declaring rest means declaring 0ap and 0mp for the round.
+
+%TODO: remove the "con/3 extra stamina" regain when resting. Rests too fast.
+%A resting character regains con/3 stamina each round. 
+
+%DONE: the low con regain is currently in the maptools code 191209
+%Characters with low con regain extra stamina when resting slower than normal:\\
+%con=2 regains 1stam/2r\\
+%con=1 regains 1stam/3r\\
+%con=0 regains 1stam/4r\\
+%con<0 does not regain extra stamina when resting.
 
 
 
@@ -949,28 +964,22 @@ con<0 does not regain extra stamina when resting.
 %------------------------
 If a character carries too much stuff he gets encumbered and will have modifications to movement and actions.
 
-\noindent Encumbrance is calculated as: \\
+\noindent 
+Encumbrance is calculated as: \\
 encumbrance = total weight carried / str.
 
-E.g: Trekking Tom has str 6, and carries a total load of 4.0 weight. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 weight he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. He will then have a mod-1 encumbrance penalty.
+E.g: Trekking Tom has str 6, and carries a total load of 4.0 weight. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 weight he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. With another 4.0 weight he has encumbrance 13.0/6 rd to 2. He will then have a mod-2 encumbrance penalty which will affect actions and movement.
 
 \noindent
 Each full encumbrance gives modifications: \\
 All actions are mod-1 per encumbrance \\
-Dash speed is mod -encumbrance \\
-Run speed is mod -encumbrance/2 \\
-Walk speed is mod -encumbrance/3 \\
-Maneuver speed is mod -encumbrance/4 \\
-Long distance travel is also reduced by -encumbrance.
+Dash speed is -1 sq/r and requires +1 stamina per encumbrance \\
+Run speed is -1 sq/r and requires +1 stamina per encumbrance/2 \\
+Walk speed is -1 sq/r and requires +1 stamina per encumbrance/3 \\
+Maneuver speed is -1 sq/r and requires +1 stamina per encumbrance/4 \\
+Long distance travel is also reduced by 1 per encumbrance. \\
 
-\noindent
-Movement also require more stamina when heavily encumbered: \\
-Dash requires +1 stamina per encumbrance \\
-Run requires +1 stamina per encumbrance/2 \\
-Walk requires +1 stamina per encumbrance/3 \\
-Maneuver requires +1 stamina per encumbrance/4
-
-Also, stuff has to be carried somewhere. "Item slots" are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
+Also, stuff has to be carried somewhere. Item slots are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
 
 Containers are useful in that they only take one slot, while providing several slots for items. Containers are also good in that they can reduce the enc of items. A good backpack halves the enc from all items in it.
 
@@ -1106,13 +1115,12 @@ E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires s
 And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder requires dex 7. Fabian thus takes mod-1 and +1ap, which means his fast rapier is now just 3ap normal speed. So unfortunate...
 
 
-%TODO: rewrite excessive strength bonus points allocation structure
 \subsection*{Excessive str bonus}
 %--------------------------------
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
+\TODO meh, rewrite, change excessive strength bonus points allocation structure
 
-\TODO meh, rewrite, change
 Always use the highest base strength requirement of all equipment, manuvers, skills, etc when calculating the free excessive strength points.
 E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
 

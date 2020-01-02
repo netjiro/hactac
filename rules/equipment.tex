@@ -17,33 +17,66 @@
 \phantomsection\addcontentsline{toc}{section}{weapons and armour}
 \section*{Weapons and armour}
 
-Weapon damage stats are supposed to be read as 1dX. E.g: the sword does 1d6 damage not always 6. Weapon penetration is however always the max value and is not rolled. E.g: dam 5 pen 2 always does 1D5 damage but ignores up to 2 armour absorption.
+Weapon damage stats are supposed to be read as 1dX. E.g: the sword does 1d6 damage not always 6. Weapon penetration is however always the max value and is not rolled. E.g: dam 5 pen 2 does 1D5 damage but ignores up to 2 armour absorption. So, against plate armour damage absorption 3: Roll 1d5 get 4, pen 2 ignore 2 armour, does 3 damage through the plate. And agaist leather abs 1: Roll 1d5 get 2, pen 2 ignore the 1 abs, it does 2 damage through the leather.
 
 The weapons listed below are the common weapon types and sizes. Custom made weapons are treated further down.
 
-%TODO: explain the weapon stats:
-%dam
-%abs
-%reach
-%finesse
-%mod,attack,defend,parry,todefend,toparry,toavoid
-%str, str bonus cap
-%maneuvers, poke, swing, etc
-%stamina free attacks
+\begin{description}
 
-% finesse is the limit of how extra difficult the attacks can be made for the target to defend agaist, using the fancy attacks skill or tricky attack maneuvers. E.g: Fancy Fred has fancy attacks 5 but swinging an axe which has finesse-3 and toparry-1 toavoid+1. FF cannot make the attacks more difficult than toparry-4 and toavoid-2, since the weapon finesse is the limiting factor. With a proper sword the FF could use his whole fancy attacks 5 giving his attacks a todefend-5 difficulty.
+\item[dam] is the maximum damage of the weapon from a normal attack. The attacker rolls for damage in the range [1,max], where various skills affect how that is done.
+
+\item[abs] is how much incoming damage the weapon can absorb without taking any damage when e.g. it's being used to parry an incoming blow. If the abs is exceeded by the incoming damage the excess damage is applied to the wielder and there is a risk that the weapon either takes damage or breaks.
+
+\item[reach] is the range of a melee weapon. Normally a melee weapon can only be used to strike targets adjacent to the wielder, but with reach it is possible to attack targets further away. Using the reach distance usually carries a modifier.
+
+\item[mod] is a blanket modifier that makes the weapon more difficult, or easier, to use regardless if it's for an attack, parry, deflect, or whatnot.
+
+\item[attack] modifier applied when using the weapon to attack.
+
+\item[defend] modifier applied when defending with the weapon, like parry or deflect.
+
+\item[parry] modifier applied only when parrying or deflecting with the weapon.
+
+\item[todefend] modifier applied to the target for any defencive action against the incoming attack, including avoid, parry, deflect, etc.
+
+\item[toparry] modifier applied to the target for a defencive parry or deflect action against the incoming attack. 
+
+\item[toavoid] modifier applied to the target for a defencive avoid action against the incoming attack.
+
+\item[finesse] is an inherent limitation of the weapon on how extra difficult the attacks can be made for the target to defend agaist when the attacker is using the fancy attacks skill or tricky attack maneuvers. 
+E.g: Fancy Fred has fancy attacks 5 but swinging an axe which has finesse-3 and toparry-1 toavoid+1. FF cannot make the attacks more difficult than toparry-4 and toavoid-2, since the weapon finesse is the limiting factor. With a proper sword with finesse 6 FF could use his whole fancy attacks 5 giving his attacks a todefend-5 difficulty.
+The same limitation applies with tricky maneuvers like wayward strike. The maneuver gives a maximum todefend-6 but if the attacker is wielding a broad sword with finesse 4 the attack is only todefend-4.
+
+\item[str] is the strength requirement of the weapon. Any lacking strength from the wielder gives mod-1 dam-1 when using the weapon.
+
+\item[str bonus cap] are limits on how much strength bonus can be used with the weapon. E.g. a max str dam 1 pen 2 limits the strength bonus to damage to 1 with another 2 giving penetration, to a combined maximum of 3.
+
+\item[manuevers] like poke or swing. Some weapons have special maneuvers like poke, swing, etc that modifies the weapon stats for those attacks. They usually cost 5xp to train.
+
+\item[stamina free attacks] some weapons allow for free attacks that does not cost stamina. First attack in a round always cost stamina, but it can be that e.g. every second or third attack cost no stamina.
+
+\item[range] of bows, bottles, boulders, etc. The normal range is given and usually the weapon then also has short range at normal/2, long range at normal*1.5, very long range at normal*2, extreme range at normal*3. Where short is mod+1, long is mod-3 dam-1, vlong mod-6 dam-2, extreme mod-9 dam-3. Different weapons have different behaviour to varied ranges.
+
+\item[rate of fire] is how fast the ranged weapon can be fired. Firing faster or slower carries modifiers in various ways depending on the weapon.
+
+\end{description}
+
+
 
 % typical: relative base, 1h/2h  dam , extras
-% sword    +2   +2/+4                             finesse 6
-% axe      +3   +3/+6                             parry-3 toparry-1 toavoid+1
-% spear    +1   +1/+2 pen 0/1 parry -1/+1         reach
-% staff    -1   -1/+1 parry +1/+2                 fast, reach
-% braw     -3                                     (at str 6)
+% knife    +1   +1/--                             fast, finesse               [1-4]
+% sword    +2   +2/+4                             finesse 6                   [2-8]
+% axe      +3   +3/+6                             parry-3 toparry-1 toavoid+1 [2-12]
+% spear    +1   +1/+2 pen 0/1 parry -1/+1         reach                       [2-8]
+% staff    -1   -1/+1 parry +1/+2                 fast, reach                 [1-6]
+% brawl    -3                                     (at str 6)
 %   fist   -4                                     fast, deflect
 %   kick   -2                                     deflect
 %
-% bow      =0   --/=0                             range, pen, 1/r
-% crossbow +3   --/++ pen 1-3                     range, pen, 1/2r
+% bow      =0   --/=0                             range, pen, 1/2r
+% crossbow +3   --/++ pen 1-3                     range, pen, 1/3r
+
+
 
 
 \subsection*{Melee weapons}
@@ -52,8 +85,6 @@ The weapons listed below are the common weapon types and sizes. Custom made weap
 \small
 \begin{verbatim}
 Regular Swords
-attack maneuver poke costs 5xp
-attack maneuver swing costs 5xp
 
 small sword         dam 4, abs 6,
                     str 2 (max +1 str bonus), finesse-6
@@ -89,7 +120,7 @@ large 2h sword      dam 12, abs 18,
                     swing: slow-1 mod-1 dam+3 todefend+2
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Infantry Swords
 
 short sword         dam 5, abs 10,
@@ -108,60 +139,61 @@ long sword          dam 9, abs 18,
                     swing: slow-1 mod-1 dam+3 todefend+2
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Knives and fast blades
 
 knife               dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
                     str 1 (no str bonus)
                     fast+1 if str 3 and dex 4
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
 
 dagger              dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
                     str 2 (no str bonus)
                     fast+1 if str 4 and dex 5
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
 
 rapier              dam 4, abs 4, toparry-2, toavoid-1, finesse-9
                     str 3 (no str bonus)
                     fast+1 if str 5 and dex 6
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
 
 large rapier        dam 5, abs 5, toparry-2, toavoid-1, finesse-9
                     str 4 (no str bonus)
                     fast+1 if str 6 and dex 7
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Speciality Blades   costs 5xp to learn speciality, or suffer mod-1
 
 duelling sword      dam 6, abs 6, toparry-2, toavoid-1, finesse-9
                     str 5, (no str bonus)
                     fast+1 if str 6 and dex 8
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
 
 large duell. sword  dam 7, abs 7, toparry-2, toavoid-1, finesse-9
                     str 6, (no str bonus)
                     fast+1 if str 7 and dex 9
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
 
-parrying dagger     dam 3, abs 8, attack-1, parry+1, finesse-6
+parrying dagger     dam 3, abs 8, attack-1, parry+1, finesse-5
                     str 2 (no str bonus)
+                    every second attack in a round costs no stamina
                     fast+1 if str 3 and dex 5
                     poke: mod-1 dam-1 pen+1
 
 baselard            dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-6
                     str 2 (no str bonus)
                     fast+1 if str 3 and dex 5
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam=1 pen+2
 
 bastard sword       dam 7/9, abs 12, finesse-6
@@ -174,8 +206,8 @@ great sword         dam 10, abs 20, toavoid+1, finesse-4
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+3 todefend+2
 
-claymore            dam 14, abs 28, toavoid+1
-2h                  str 8 slow-1, str 11 normal speed, finesse-4
+claymore            dam 14, abs 28, toavoid+1, finesse-4
+2h                  str 8 slow-1, str 11 normal speed
                     reach 1 mod-6
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+3 todefend+2
@@ -183,21 +215,21 @@ claymore            dam 14, abs 28, toavoid+1
 estoc               dam 7, abs 8, toparry-1, toavoid-1, finesse-9
 2h                  str 5 (no str damage bonus, max +1 penetrating bonus)
                     fast+1 if str 6 and dex 8
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
 
 grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
 2h                  str 7 (no str damage bonus, max +1 penetrating bonus)
                     fast+1 if str 8 and dex 10
-                    first attack don't require stamina
+                    every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
 
 
 
 
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Regular Axes
 
 small 1h axe        dam 5, abs 6, parry-3, toparry-1, toavoid+1, finesse-3
@@ -225,7 +257,7 @@ large 2h axe        dam 14, abs 13, parry-3, toparry-1, toavoid+1, finesse-3
                     swing: slow-1 mod-1 dam+4 toavoid+2
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Speciality Axes     costs 5xp to learn speciality, or suffer mod-1
 
 battle axe          dam 8, abs 10, parry-2, toparry-2, finesse-4
@@ -255,8 +287,7 @@ heavy pick axe      dam 6, pen 4, parry-3, toavoid+2, finesse-2
 
 
 
-% staves plural of staff ?
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Staffs and Spears
 spear slash maneuver costs 5xp and does slashing instead of piercing damage, 
 but with dam-1 modifier.
@@ -322,7 +353,7 @@ infantry spear      dam 6/7, pen 0/1, abs 10, parry-1/+1, reach 1 mod-3
                     finesse-3/-5
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Speciality Pole Arms  costs 5xp to learn speciality, or suffer mod-1
 
 pike                dam 6, pen 1, abs 8, parry-6, slow-1
@@ -354,7 +385,7 @@ glave               dam 9, pen 2, abs 8, parry-3, slow-1, toavoid+1
 
 
 
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Clubs, Hammers, Flails
 attack maneuver swing costs 5xp
 
@@ -392,7 +423,7 @@ heavy clubs         dam+2, abs+50%, parry-3, toavoid+2, finesse-1, slow-1
                     knockback roll +3
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 1h hammer           dam 6, abs 6, parry-3, toavoid+1, finesse-2, slow-1
                     str 4 (max +4 str bonus)
                     str+3 vs str for knockback 1
@@ -414,7 +445,7 @@ large 2h hammer     dam 10, abs 20, parry-3, toavoid+1, finesse-2, slow-1
                     swing: slow-1 mod-1 dam+3 toavoid+2 knockback+1
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 1h flail            dam 4, abs 8, parry-6, toparry-3, finesse-6
                     str 4 (max +2 str bonus), slow-1
                     reach 1 mod-3, snag-3
@@ -436,7 +467,7 @@ large 2h flail      dam 10, abs 20, parry-6, toparry-3, finesse-6
                     swing: slow-1 mod-1 dam+3 toavoid+2
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Speciality Bludgeoning Weapons   costs 5xp to learn speciality, or suffer mod-1
 
 heavy hammer        dam 10, abs 20, parry-6, toavoid+2
@@ -531,7 +562,7 @@ infantry shield     abs 13, parry+3,
 
 
 
-\end{verbatim} \pagebreak[3] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 leather armour abs 1
 thick cloth    acrobatics mod-1
                takes 2 rounds to put on or take off
@@ -578,7 +609,7 @@ full plate     abs 4 full plate armour with full helmet
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=3ap)
-               takes 7 rounds to put on or take off
+               takes 6 rounds to put on or take off
 
 heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                str 9 (str penalties affect all actions)
@@ -668,7 +699,7 @@ dart              dam 0, penetrating 2
                   range 4 + str
                   str 1 (max +1 pen str bonus)
 
-\end{verbatim} \pagebreak[3] \normalsize
+\end{verbatim} \goodbreak \normalsize
 
 
 Bows, crossbows, and ballistas all use arrows or bolts as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar.
@@ -701,7 +732,7 @@ bow               dam 4, pen 1,
                   str 5 (no str bonus)
 
 heavy bow         dam 5, pen 2,
-                  range 17
+                  range 20
                   str 7 (no str bonus)
 
 long bow          dam 5, pen 1,
@@ -719,8 +750,8 @@ fine arrows       mod+1
 barbed arrows     dam+1
 sharp arrows      pen+1
 fire arrows       mod-2 dam-1 range-25%
-                  oil splash dam 3/r for 5r or until doused
-                  light source as torch, burns 5r
+                  oil splash dam 3/r for 5r
+                  light source as fire, burns 5r
                   light 1a with fire source
 torch arrows      mod-2 dam-2 range-25%
                   light source as torch, burns 10r
@@ -733,7 +764,7 @@ Specialty arrows often cannot be reused.
 Special bows sometimes require special arrows.
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Rate of fire for crossbow, heavy crossbows and arbalests:
 Split between reload and fire actions.
 The first shot with a loaded crossbow is reasonably fast.
@@ -777,7 +808,7 @@ piercing bolts    mod-1 dam-1 pen+1
 broadhead bolts   mod-1 dam+1 pen-1
 
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 rate of fire for ballistas:
 Ballistas take very long to reload and require at least two people.
 snap  reload+1r mod-6
@@ -791,12 +822,12 @@ light ballista    dam 12, penetrating 4, knockback 1
                   reload 5r, tot str 10, max 3ppl (only 1 person +1r)
 
 ballista          dam 15, penetrating 5, knockback 2
-                  range 30
+                  range 32
                   carried: str 30 (no str bonus), mounted: str 5 (no bonus)
                   reload 10r, tot str 15, max 4ppl (only 1 person +3r)
 
 heavy ballista    dam 20, penetrating 6, knockback 3
-                  range 40
+                  range 46
                   carried: str 40 (no str bonus), mounted: str 7 (no bonus)
                   reload 15r, tot str 20, max 5ppl (only 1 person +5r)
 
@@ -865,7 +896,7 @@ orc war shield      abs 14, parry+3,
                     Hiding behind it (3ap) ranged mod-5
                     tackle mod+3
 \end{verbatim} \normalsize
-\pagebreak[1]
+\goodbreak
 
 Elves produce slender weapons of very high quality. They will last longer and when rolling for weapon breakage they have half the chance of breaking (round down) and their permanent abs damage should be rounded down instead of rounded up. Elven made weapons are very rare and difficult to find outside of elven cities. Their encumbrance is -30\% of the human version, and the price is at least 10x higher than a human made. Start at 5+1d5g + 10x base price.
 
@@ -949,7 +980,7 @@ lock picks     mod+X to "pick lock" skill.
 tool box       mod+X to "traps" and "McGyverism" skills.
                X depends on the quantity and quality of the tools.
 
-\end{verbatim} \pagebreak[3]
+\end{verbatim} \goodbreak
 
 
 %-------------------------------------------------------------------------------
@@ -1062,7 +1093,7 @@ in 2r. It can be retrieved using similar tools in 1d5r. They have a chance of
 5+(best of int or per) to hold when loaded. Rock wedges cost 5c and weigh
 0.25enc.
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 spike arm:
         Pre-made: cost 5s in materials, enc 5+1/dam.
         Half foraged: cost 3s in materials, enc 3 + 1/2dam + foraging.

@@ -3,14 +3,31 @@
 
 hactac: rpg-ish tabletop game for dead tree and digital tables alike
 
-Start with the simple basic rules, play through "Dungeon of Testing" with each player individually to get yourself and your players familiar with the system as they create their characters. Then play "Return of Uchly Namen" together.
+
+
+Build the books
+---------------
+
+Simply run pdflatex on the book.tex for the main book.
+> pdflatex book.tex
+or similar if you prefer alternative output. All latex environments I've tried has worked so far.
+
+The adventures are built individually. Each adventure has one main .tex file named after the adventure, so simply run pdflatex on that file. E.g:
+> pdflatex "00 Dungeon of Testing.tex"
+
+
+
+General
+-------
+
+Start with the simple basic rules, play through "Dungeon of Testing" with each player individually to get yourself and your players familiar with the system as they create their characters. Then play "Return of Uchly Namen" with the full party.
 
 As you get used to the system, add and delete from the more complex rules, skills, etc until you find a good trade off between speed and complexity, suitable to your specific gaming group.
 
 
 
-Current state:
---------------
+Current state
+-------------
 
 It is well tested, hundreds of hours since 2008. There are several campaigns ready with multiple adventures each. Works well for both regular table top play and for virtual table top software. The GM and players can choose the level of complexity they are comfortable with.
 
@@ -77,8 +94,8 @@ Most of the file space is binary: images and campaign files, and I don't general
 
 
 
-The history:
-------------
+The history
+-----------
 
 The hactac rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
 

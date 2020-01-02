@@ -24,8 +24,6 @@ Below follows a few empty stat sheets for different styles of monsters. The firs
 
 \
 
-\raggedbottom
-
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
 name                        (token)
@@ -85,7 +83,7 @@ skills
 
 \
 
-\flushbottom
+
 
 
 
@@ -105,7 +103,6 @@ Most standard size humanoids like humans, elves, dwarves, orcs should be set to 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 \goodbreak
-\raggedbottom
 \phantomsection\addcontentsline{toc}{section}{city watch and soldiers}
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
@@ -172,54 +169,24 @@ first snap  mod-6 2ap
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
-================== human ==================
+=============== farmer, human ==============
 str  5                    hp 10 abs 0
 dex  5                    m1 w3 r6 d9
 con  5                    stamina 5
-int  5                    vision 20 day 180
+int  5                    vision 20 day 180, human average
 psy  5                    mana 5
 per  5                    action points 3
 cha  5                    xp 112
 --------------------------------------------
-Common   7
-throw    5 (3)	0.8  12
-ride     5	0.5  12
-avoid    5 (3)	0.8  12
-brawl    3	0.6  5
-knife    5	0.7  17
-animal command  3	0.5  4
-axe/spear/bow   7	ca 1.0 50
+Common 6, counting 2, haggle 4
+brawl 3, throw 3
+knife/axe/spear/bow 6
+avoid 5, yield +3, off balance
+ride 3, animal command 3
 --------------------------------------------
-yield +3
-off balance
---------------------------------------------
-money: 3 gold, 1 silver, 10 copper
-Farmers knows knife and one weapon skill like:
+money: 0 gold, 1d3 silver, 1d10 copper
 
-knife               5
-	dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
-	str 1 (no str bonus)
-	fast+1 if str 2 and dex 4
-	first two attacks don't require stamina
-	poke: mod-1 dam-1 pen+1
-
-1h axe             8
-	dam 7, abs 8, parry-3, toparry-1, toavoid+1, finesse-3
-	str 4 (max +4 str bonus)
-	swing: slow-1 mod-1 dam+2 toavoid+2
-
-spear              6 2h: parry 8
-1h/2h	dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
-	str 4 (max +2 str damage bonus, max+2 penetrating bonus)
-	narrow tip spears can have all str bonus as penetrating
-	broad tip spears are dam+1 mod-1
-	finesse-4/-6
-
-bow	7 1r-3, 2r=0, 3r+1
-	dam 4, penetrating 1
-	range 14, short 7 mod+3, long 24 mod-3,
-	vlong 30 mod-6 dam-1, extreme 35 mod-9 dam-2,
-	str 5 (no str bonus)
+carries a knife and an axe/spear/bow
 --------------------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
@@ -484,6 +451,370 @@ asfasdf
 
 
 
+%-------------------------------------------------------------------------------
+% H I R E L I N G S
+%------------------
+
+%\goodbreak
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{hirelings}
+
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+================================================================================
+H I R E L I N G S
+-----------------
+
+Hirelings are found on all sides of the battle. They fight for the Good Guys, 
+they fight for the Bad Guys, but most of all they fight for themselves and the
+paycheck at the end of the adventure.
+If the upcoming escapade is a bit dangerous just hire some extra muscle. Perhaps
+a trio of archers in the back can help out whittle down the opposition, or a 
+shield line of swordsmen can keep the horde of goblins at bay.
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hireling swordsman, human   (165xp)
+-----------------------------------
+str	7         hp 18(16) abs 2
+dex	5(6)      m1 w3 r6 d8(9)
+con	7         stamina 10(8)
+int 5         vision 20 arc 240, human average
+psy	6         mana 4
+per	5(6)      ap 5(3)
+cha	4         xp 2 (165), worth 5xp
+----------
+Common 6, counting 2, haggle 3
+sword 8, poke, swing
+shield 8, phalanx
+throw 3
+avoid 4, yield +3, off balance
+quick draw 3, häfva 4
+veteran 2
+quick 2, mobile 1
+resilient 2, enduring 2
+lucky 2
+----------
+broad sword	8 (1 quick draw slot)
+    dam 7, abs 14, str 5 (max +2 str bonus), finesse-4
+    poke: mod-1 dam-1 pen+1
+    swing: slow-1 dam+2 todefend+2
+
+infantry shield	10(7) (1 quick draw slow)
+    abs 13, parry+3, str 5
+    Ranged attacks mod-2 when in the way.
+    Hiding behind it (3ap) ranged mod-4
+    tackle mod+1
+
+chain mail abs 2
+    str 3 (str penalties affect all actions)
+    dex-1, dash-1, per-1
+    acrobatics mod-3, martial arts mod-1
+    spellcasting mod-1, sneak mod-3
+    takes 3 rounds to put on or take off
+
+Quaff	x1, belt: 1 quick draw slot
+
+money	1g 15s 25c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hireling swordsman, human     (300)
+-----------------------------------
+str	7       hp 21(18) abs 2
+dex	7       m1 w3 r6 d9
+con	7       stamina 12(9)
+int 5       vision 20 arc 240
+psy	7       mana 5
+per	5       ap 6(4)
+cha	5       xp 4 (ca 300), worth 8xp
+----------
+Commmon 8, counting 2, haggle 4
+sword   9
+shield  9
+phalanx, counter attack, intercept, poke, swing
+avoid 6, yield +3, off balance
+quick draw 4, häfva 5
+veteran 3, balance 3
+quick 2, mobile 2
+resilient 3, enduring 3, rapid 2
+tank 1
+lucky 2, black cat 1
+accurate 1
+----------
+long sword  9             1 quick draw slot
+    dam 9, abs 18, 
+    str 7 (max +3 str bonus), finesse-4
+    poke: mod-1 dam-1 pen+1
+    swing: slow-1 mod-1 dam+3 todefend+2
+
+large shield  13(9)        1 quick draw slot
+    abs 12, parry+4,
+    str 6, or slow-1 str 3
+    Ranged attacks mod-3 when in the way.
+    Hiding behind it (3ap) ranged mod-6
+    tackle mod+2
+
+chain mail  abs 2,   tank 1: mod as leather
+    str 4 (str penalties affect all actions)
+    dex-1, dash-1, per-1
+    acrobatics mod-3, martial arts mod-1
+    spellcasting mod-1, sneak mod-3
+    takes 3 rounds to put on or take off
+
+Quaff	x2, belt, 2 quick draw slot
+
+money	11g 23s 46c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hireling archer, human        (165)
+-----------------------------------
+str	5         hp 16(14) abs 1
+dex	5         m1 w3 r6 d10(9)
+con	5         stamina 8(7)
+int 5         vision 25 arc 240, human good
+psy	5         mana 3
+per	5         ap 3
+cha	5         xp 2 (165), worth 4xp
+----------
+Common 7, counting 2, haggle 3
+bow	8, quick shot 3
+avoid 6
+yield +3, off balance
+knife 4
+sneak 6
+quick draw 2, häfva 4
+veteran 2
+mobile 2
+resilient 2, enduring 1, fast 1
+lucky 1
+----------
+leather abs 1
+
+longbow	8 (1 quick draw slot)   :    1r-0 2r-0 3r+1
+	dam 5, penetrating 1,
+	range 14, short 7 mod+3, long 21 mod-3,
+	vlong 28 mod-6 dam-1, extreme 42 mod-9 dam-2,
+	str 5 (no str bonus)
+quiver	30 arrows  (1 quickdraw slot)
+
+dagger 4
+    dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
+    str 2 (no str bonus)
+    fast+1 if str 4 and dex 5
+    every second attack in a round costs no stamina
+    poke: mod-1 dam-1 pen+1
+
+Quaff	x1, belt, 1 quick draw slot
+
+money	1g 5s 30c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hireling archer, human        (280)
+-----------------------------------
+str	6         hp 18(15) abs 1
+dex	7         m1 w3 r6 d11(10)
+con	6         stamina 8(6)
+int 5         vision 25 arc 240
+psy	5         mana 4
+per	7         ap 5(3)
+cha	5         xp 5 (280), worth 5xp
+----------
+Common 7, counting 2, haggle 4
+bow 9, quick shot 3, sniper	2, lead target 2
+knife 6
+phalanx
+avoid 8, yield +3, off balance
+quick draw 4, häfva	5
+sneak 6
+quick 2, mobile 2, fast 1
+resilient 3, enduring 2
+veteran 2, balance 2
+consistent	1
+lucky 2, black cat 1
+----------
+leather abs 1
+
+longbow	9 (1 quick draw slot): 1r-0 2r-0 3r+1
+	dam 5, penetrating 1,
+	range 20, short 10 mod+3, long 30 mod-3,
+	vlong 40 mod-6 dam-1, extreme 60 mod-9 dam-2,
+	str 6 (no str bonus)
+quiver	30 arrows
+
+dagger 4
+    dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
+    str 2 (no str bonus)
+    fast+1 if str 4 and dex 5
+    every second attack in a round costs no stamina
+    poke: mod-1 dam-1 pen+1
+
+Quaff	x2, belt, 2 quick draw slot
+
+money	2g 1d10s 1d20c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hireling archer, human        (500)
+-----------------------------------
+str	8(6)      hp 18(15) abs 2
+dex	7         m1 w4 r7 d10
+con	6         stamina 9(7)
+int 5         vision 25 arc 240
+psy	6         mana 6
+per	7         ap 6(3)
+cha	5         xp 11 (500), worth 6xp
+----------
+Common 8, counting 3, haggle 5
+bow 10, quick shot 6, sniper 3, lead target 3
+knife 8
+phalanx
+avoid 8, yield +3, off balance
+quick draw 8, häfva 6
+sneak 8
+veteran 3, balance 3
+quick 3, mobile 2
+strong 2, resilient 3, enduring 2	1.0 4
+consistent 2, precise 1
+tank 1
+lucky 2, black cat 2
+----------
+heavy longbow  10 (1 quick draw slot) : 3ap-3(roll qd) 1r-0 2r-0 3r+1
+    dam 6, penetrating 2,
+    range 22, short 9 mod+3, long 33 mod-3,
+    vlong 44 mod-6 dam-1, extreme 66 mod-9 dam-2,
+    str 8 (no str bonus)
+quiver	30 arrows
+
+dagger 4
+    dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
+    str 2 (no str bonus)
+    fast+1 if str 4 and dex 5
+    every second attack in a round costs no stamina
+    poke: mod-1 dam-1 pen+1
+
+brigandine	abs 2 (tank 1: as leather)
+    str 4 (str penalties affect all actions)
+    dex-1, dash-1, per-1
+    acrobatics mod-3, martial arts mod-1
+    spellcasting mod-1, sneak mod-3
+    takes 3 rounds to put on or take off
+
+Quaff	x2, belt, 2 quick draw slot
+
+money	1g 1d20s 1d20c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+Hired knight, human           (400)
+-----------------------------------
+str	8        hp 22(17) abs 4
+dex	5(7)     m1 w3 r5(6) d7(9)
+con	8        stamina 11(8)
+int 5        vision 16(20) arc 200(240), human average
+psy	7        mana 5
+per	5(6)     ap 6(4)
+cha	5        xp 5 (400), worth 15 xp
+----------
+Common 8, literate 4, counting 4, haggle 4
+sword 11
+shield 9
+fancy attacks 3, counter attack, poke, swing
+phalanx, intercept
+avoid 6, yield +2(+3), off balance
+quick draw 4, häfva 6
+veteran 4, balance 2
+quick 2, mobile 2
+resilient 5, enduring 4, tireless 3
+slugger 1, tank 4
+lucky 1
+----------
+long sword  11 (1 quick draw slot)
+    dam 10(9), abs 18,
+    str 7 (max +3 str bonus), finesse-4
+    poke: mod-1 dam-1 pen+1
+    swing: slow-1 mod-1 dam+3 todefend+2
+
+tower shield   14(9) (1 quick draw slot)
+    abs 14, parry+5,
+    str 8 or slow-1 str 5
+    Ranged attacks mod-4 when in the way.
+    Hiding behind it (3ap) ranged mod-8
+    tackle mod+3
+
+full plate    abs 4 full plate armour with full helmet 	
+    --- tank 4: penalties as plate mail ---
+    str 5 (str penalties affect all actions)
+    dex-2, yield bonus -1, run-1, dash-2,
+    per-2, vision-20%, cone vision -20% max 270 deg
+    acrobatics mod-6, climb-1, jump-1
+    martial arts mod-3, spellcasting mod-2
+    sneak mod-4, avoid mod-1
+    max stamina mod-1
+    Turning as separate actions cost more ap:
+    45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
+    (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
+    takes 4 rounds to put on or take off
+
+Quaff x2, belt, 2 quick draw slot
+
+money 1+1d2g, 5+1d10s, 10+1d20c
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+
+
+
+
+TODO: ---------------------------------
+\clearpage
+
+\todo swordsman 500
+
+\todo swordsman 800
+
+\todo archer 800
+
+\todo knight 600
+
+\todo knight 900
+
+
+
+
+
+
 
 % change back to normal font size
 %\normalsize
@@ -491,5 +822,5 @@ asfasdf
 % \raggedbottom command at the top tells to :
 % don't add glue spacing between segments, allow ragged bottoms instead
 %
-% now turn on \flushbottom in the end.
+% now turn on \flushbottom in the end to reset std behaviour
 \flushbottom
