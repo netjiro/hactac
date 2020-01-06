@@ -8,6 +8,24 @@
 
 
 
+% manually specify hyphenation for names, 
+% remember, space separated word list
+% hyphens can only occur on specified "-" characters
+\hyphenation{ 
+Gammel-Tant 
+Gam-ling 
+Stur-Skurk 
+Hjal-mar Hjäl-te 
+Bur-mak 
+Lund-qvist 
+Grim-Gnash 
+Thing-a-ma-jig 
+}
+
+
+
+
+
 %-------------------------------------------------------------------------------
 % cover page for work in progress, remove when completed
 %-------------------------------------------------------
@@ -171,6 +189,7 @@ Try to have smart enemies flee when things turn sour. Less loot, money, and food
 Remember that goblins don't speak Common by default. Don't remind them. If none of the Heroes bothered to learn Common they won't be able to communicate with most humans. And if they have low Common skill let them roll for the communication and be merciless with injecting misunderstandings and misinterpretations. Hilarious. 
 % see mail 180115
 
+\label{misunderstandings}
 Some goblins even have very low Svartlingo skills. They can't understand or communicate complex sentences or unusual topics easily. Have the players use only simple words, pigin grammar, short sentences, and so on.
 
 \begin{quote}
@@ -320,6 +339,13 @@ Regardless, get them to attempt an attack on SturSkurk before 150xp. Send Burmak
 The appendices holds a couple of warrior band suggestions. Also look to the previous campaigns in the region for inspiration. If the goblins become too strong perhaps some old player PCs can be used to form an NPC hunting squad against the goblins? Or perhaps Bling Swordslash or Sam Slick?
 
 
+\subsection*{Recommendations on XP}
+
+I recommend a baseline of 5xp per session to all active Hero characters for this campaign. I would deduct this from the specified "adventure xp". E.g: an adventure specifying a baseline 15xp each with 8xp bonus for successfully finding Thingamajig would pay out 5xp to each character for each of the two sessions it took, plus 5xp to each character upon completion for the rest of the "adventure xp" and 8xp each since they managed to find Thingamajig. Then another 34xp to share between the characters for the opposition they scared off, killed, befriended, or snuck around. If the same adventure took four sessions I would still pay out 4 * 5xp for the sessions, no xp for adventure completion, full 8xp for Thingamajig and split the shared XP for the opposition.
+
+For the playthrough the Heroes went from ca 100xp to ca 500xp over 45 sessions. Since I used a baseline of 5xp per session this means that more than half the total XP came from session XP rather from achievement or opposition XP. Not great perhaps, but it wasn't obviously visible to the players and it created a slow steady progression with a few spurt boosts here and there when they did something major, or fun/cool.
+
+
 
 
 
@@ -397,8 +423,8 @@ Story-wise the best outcome is if Hjalmar Hjälte manages to flee together with 
 The wagons have mostly food, simple materials, etc. Assume each wagon has total loot for around 10s, but nothing fancy. Just look through the price/equipment lists and pick a few items. E.g: 50x days food, 2x 10l kegs of beer, 6x blankets.\\
 Each farmer has 1d3 silver and 1d10 copper.\\
 Swordsmen and archers have 1d5 silver and 1d20 copper.\\
-Hjalmar Hjälte have 3+1d5 silver and 10+1d30 copper.\\
-Also nice if one of the wagons have a hidden bag of 10-20 silver (find mod+3 if they say they search the wagon and spend a few rounds, perception is not enough).
+Hjalmar Hjälte have 3+1d5 silver and 10+1d20 copper.\\
+Also nice if one of the wagons have a hidden bag of 10+1d10 silver (find mod+3 if they say they search the wagon and spend a few rounds, perception is not enough).
 
 The donkeys are difficult to subdue since they don't like goblins. Requires a series of str vs str successes, or a smaller series of ride successes, or an animal command success per donkey. 
 
@@ -408,6 +434,7 @@ The loot cannot be sold in Kleinshof since that's where it comes from. The wagon
 
 Note that Gamling and GammelTant will take any money and loot not hidden away and put it to the Coffer. The players should figure out their stories beforehand if they want to sneak something past the loot collector when they return, or they all have to pass int rolls to not let something slip and squeal. This will be the same for the return of every adventure as long as Gamling or GammelTant are alive.
 
+\TODO award xp
 
 
 
@@ -452,7 +479,7 @@ GamGang should be forced to flee soon after Gamling is slain. Perhaps they pick 
 
 Same as before, see the map mechanics section under the previous adventure. But this time Hjalmar Hjälte is not with them even if he survived the last encounter. Instead the wagon train has the heavy Wagoneer at the end. His armoured-illers can clear road blocks to some extent and push carts or bandits out of the way to allow for escape.
 
-As soon as the fight with the wagons has started properly the SturSkurk Gang will arrive. Gamling charges SturSkurk and his two orcs. Make sure Gamling dies in a couple of rounds. Gamling won't defend, just attack all out with his axe. SturSkurk will play it safe and
+As soon as the fight with the wagons has started properly the SturSkurk Gang will arrive. Gamling charges SturSkurk and his two orcs. Make sure Gamling dies in a couple of rounds. Gamling won't defend, just attack all out with his axe. SturSkurk will play it safe and use his black cat and luck to make sure the dice against Gamling fall the right way.
 
 
 \subsection*{opposition}
@@ -471,40 +498,42 @@ The farmers will try to escape, including turn around if it seems to help. Arche
 
 \subsection*{opposition: SturSkurk}
 
+This is not the full SturSkurk gang, the rest are back at the camp. Adjust as needed. SturSkurk Boss, 2x front line melee orcs, the witch, 3x archers goblins.
+
 The SturSkurk gang enters the map in staggered group. Main melee line phalanx, the witch in between, then archers group behind.
 They will start to attack the goblins, but will also attack farmers and the Wagoneer if they can snag some loot.
 
 SturSkurk will fight and kill Gamling first, since Gamling will charge him immediately on arrival. The melee phalanx line will protect their archers, and only push into the fight if their archers are not strong enough to win a shooting duel.
 
-Main melee front line is SturSkurk Boss with the two orcs on either side. They move together and fight defensively, primarily mainly making sure that the opposition get pinned in place so their archers can whittle down the outliers. When Gamling charges Boss will block with shield and let the orcs stick him to death. If Gamling leave an opening SturSkurk will 
+Main melee front line is SturSkurk Boss with the two orcs on either side. They move together and fight defensively, primarily mainly making sure that the opposition get pinned in place so their archers can whittle down the outliers. When Gamling charges Boss will block and let the orcs stick him to death. If Gamling leave an opening Boss and Orcs will be merciless.
 
-The Witch will shock bolt and cast slow on Heroes when possible to aid her melee line. She will also run up and use ward shield on the boss and orcs if necessary. Defensively she'll use fire storm.
+The Witch will shock bolt and cast slow on Heroes when possible to aid her melee line. She will do this on Gamling immediately when he charges. She will also run up and use ward shield on the boss and orcs if necessary. For self defense she'll use fire storm.
 
 The SturSkurk archer group will run around to stay out of reach and pepper arrows when possible to suppress Heroes' archers and casters.
 
-If it's obvious that they will loose then Boss will order a retreat.
+If it's obvious that they will loose then Boss will order a retreat. He does not want to loose his fighters here.
 
 
 \subsection*{loot}
 
-The regular farmer carts have similar loot as in "00 just another day in the office", ca 10s worth of food and simple items.\\
-The heavy wagon has 100+1d100 days' food, ca 20s of random trade stuff, and a couple of high end items e.g. Quaff!. The wagon is a small camping house and also has a small stove, some cooking gear, a few days of food, minor trinkets, clothes, etc. In a \emph{hidden compartment} in the wagon is 20+1d10 silver and 50+1d50 copper (find roll required mod-0, can't find with perception roll).\\
+The regular farmer carts have similar loot as in Just Another Day at the Office, ca 10s worth of food and simple items.\\
+The heavy wagon is a small camping house and has 100+1d100 days' food, ca 20s of random trade stuff, and a couple of high end items e.g. Quaff!. It also has a small stove, some cooking gear, a few days of good food, minor trinkets, clothes, etc. In a \emph{hidden compartment} in the wagon is 20+1d10 silver and 50+1d50 copper (find roll required mod-0, can't find with perception roll).\\
 SturSkurk people have just 1d3s + 1d10c each. Their gear is in ok condition.
 
-Award ca 15xp each for the adventure, and shared xp for the defeated opposition. Don't deduct if the Heroes flee. They are supposed to run away here. Add another 5xp each if they force SturSkurk to flee.
+Award ca 10xp each for the adventure, and shared xp for the defeated opposition. Don't deduct if the Heroes flee. They are supposed to run away here. Add another 5xp each if they force SturSkurk to flee, and another 5xp if they manage to stop and loot the heavy wagoneer, and 3-5xp if they manage to get away with at least some loot.
 
 
 
 
 
-
+%formatting: flush to bottom of page, or top of next empty page.
 \vfill
 %-------------------------------------------------------------------------------
 \section*{Gamling is Dead, all hail GammelTant!}
 
 After Gamling has died GammelTant will be furious for a bit, call for revenge, and send Hemskelina to scout for the SturSkurk gang. Soon she remembers the Old Prophecy of \emph{Death by GrimGnash}, and locks herself away with her crystal ball.
 
-When Hemskelina comes back reporting of the SturSkurk bandit camp location GammelTant immediately sends out the Heroes to kill them all and steal all their shit. And of course to bring back the corpse of the Blue Boss so she can cook a Victory Revenge Stew!
+When Hemskelina comes back reporting of the SturSkurk bandit camp location GammelTant sends the Heroes to kill them all and steal all their shit. And of course to bring back the corpse of the Blue Boss so she can cook a Victory Revenge Stew!
 
 
 
@@ -523,17 +552,17 @@ When Hemskelina comes back reporting of the SturSkurk bandit camp location Gamme
 \section*{02 kill the bandits}
 \markboth{kill the bandits}{kill the bandits}
 
-The camp of the SturSkurk bandits has been found and scouted by Hemskelina. It's time to kill them all! And eat the good ones.
+The camp of the SturSkurk bandits has been found by Hemskelina. It's time to kill them all! And eat the good ones.
 
 
 \subsection*{synopsis}
 
-Kill the SturSkurk bandit gang by assaulting their camp. Best to assault at night. Scout the camp perhaps. If fail -- try again later on.
+Scout the SturSkurk camp. Assault in darkness. Kill the SturSkurk bandit gang. Grab SturSkurk Boss' corpse for GammelTant, at least the head. If fail, try again later on.
 
 
 \subsection*{adventure}
 
-The Heroes are in control of the planning. Hemskelina is coming along but will not fight as a lead figure. Her task is to kill Blue Boss if he tries to escape.
+The Heroes are responsible for planning and execution. Hemskelina is coming along but will not fight as a lead figure. Her task is to kill SturSkurk Blue Boss if he tries to escape.
 The Heroes can bring a couple of fighters, warriors, runts, and a wolf if they want.
 
 \begin{readoutloud}
@@ -541,44 +570,60 @@ The Heroes can bring a couple of fighters, warriors, runts, and a wolf if they w
 Go Get Em Killt! Blue Boss bring back! Kook-em corpse in Victory Revenge Stew I will! Take-a em few warrjas and fajtas with-ya!
 \end{readoutloud}
 
-\noindent The Heroes can position and prepare for the camp assault but they cannot dig trap pits or do similar heavy work/noise activities in the area without getting spotted.
-
 Hemskelina will have scouted the outskirts of the camp but not the interior. Provide limited view into the camp from a few vantage points. The Heroes can see the outline of the camp but not all of the the interior.
 
-SturSkurk gang will have a competent scout on guard patrolling the camp. Hemskelina will track him but need help to kill him quickly.
+SturSkurk gang has have a competent scout on guard patrolling the camp. Hemskelina can track him but need help to kill him quickly.
+The Heroes can position and prepare for the camp assault but they cannot dig trap pits or do similar heavy work/noise activities in the area without getting spotted. 
 
 \
 
-This should be a tough fight. The Heroes might fail their first attack and have to come back later with a better plan or some help.
-A clever idea could be to go to one of the villages nearby and talk to a patrol soldier about "this nasty bandit gang in the forest camp over there" and have the soldiers fight SturSkurk. But SturSkurk is also somewhat smart, he has already bribed the patrol captain in charge of the region between Sleepy Cove and Kleinshof. For this to work the Heroes must go further North to Baron Conq's castle up in "Strong Hoomans" territory and talk directly to the
-\textbf{TODO finish this} talk with military leader, only if not already known, before Burmak attack, before any patrolmen have escaped fights,
-
+This should be a tough fight. The Heroes might fail their first attack and have to come back later with a better plan, or find some help. Make sure to force the Heroes to attack SturSkurk early in the campaign, before the've become too powerful.
 
 
 \subsection*{map mechanics}
 
-Apart from a couple of guards the bandits are sleeping hidden in their tents and their icons should be hidden completely until they step out of the tent or someone peeks into the tents.
+Apart from a couple of goblin fighters and a camp babe by the fire, the bandits are sleeping hidden in their tents, not visible from the outside. Two dogs are sleeping by the fire and two more elsewhere in the camp. They wake easily (per 12).
 
-\small \begin{verbatim}
-bla bla bla
-\end{verbatim} \normalsize
+The scout on patrol outside the camp pallisade slowly and carefully sneaks around, and he's a competent scout. Either kill him or time the setup and assault so the scout can't see it. Hemskelina will keep approximate track of his expected whereabouts, but that's not 100\%. If the scout sees anything he will sound the alarm immediately, then try to gather info on the size of the enemy force and signal the gang if possible.
+
+As soon as intruders are detected the whole camp will immediately wake up and start emerging from their tents to fight. It takes each bandit 2+1d3 rounds to wake up, grab weapons, and emerge from their tents.
 
 
 \subsection*{opposition}
 
-bla bla bla
+For the \verb|01 robbery gone wrong| fight there is probably just the boss, 2 orcs, witch, 3 archers. For the \verb|kill the bandits| assault the rest of the SturSkurk Gang is available, minus those that were killed in the previous episode. The full gang is the boss, the witch, 3x orcs, 4x archers, 4x spear men, 2x scouts, 4x goblin fighters, 4x camp babes. Adapt to suit your players.
+
+The SturSkurk gang is not suicidal. They will fight hard and take some losses, but if they can't see victory they will grab as much of their treasure as they can and flee to regroup later.
+
+
+\subsection*{assistance ?}
+
+A clever idea could be to go to one of the villages nearby and talk to a patrol soldier about \emph{"this nasty bandit gang in the forest camp over there"} and have the soldiers fight SturSkurk. But SturSkurk is also somewhat smart, he has already bribed Robert the Reeve, the lawman in charge of the region between Sleepy Cove and Kleinshof.
+
+For this to work the Heroes can go further North to Baron Conq's castle up in \emph{Strong Hoomans} territory and talk directly to the military leaders like Burmak or Lundqvist, strong merchants, or some such. And they must be pretty convincing to be able to get someone to look into it.
+The heavier military groups like Burmak and Lundqvist don't take orders from Robert the Reeve. But normally the military will respond that it's the Reeve's responsibility and not theirs.
+
+SturSkurk have already bought selective blindness from Robert the Reeve so the Heroes can't hint/convince/bribe him to order patrols to attack SturSkurk. No patrol leader will bring his group to fight SturSkurk camp knowingly without direct orders from the Reeve. But give the Heroes some xp anyway if they try to pursuade the law man.
+
+\
+
+One trick that could succeed though is if they manage to entice a patrol group into pursuing them directly into conflict with the SturSkurk gang in their camp. The patrol officers don't know that SturSkurk have bought safe harbour from Robert the Reeve. The Heroes can also pick up a posse gang or similar to pursue them to the bandit camp and bring them into confrontation with SturSkurk camp. \hyperref[playthroughkillthebandits]{This is how it was done in the playthrough}, page \pageref{playthroughkillthebandits}.
 
 
 \subsection*{loot}
 
-bla bla bla
+SturSkurk camp has quite a bit of practical loot, and a bit of treasure if the Heroes can find it before someone in the SturSkurk gang flees with it. The corpses are good for eating and their weapons and equipment is of decent quality. 
+
+The camp site itself is also easy to defend and has three ways out if assaulted by a superior force. It's not a bad place to settle GamGang if Hoom Hool is lost.
+
+\
+
+Reward 15xp each for taking out the SturSkurk Gang. Another 5xp each for killing or capturing SturSkurk Blue Boss. Any clever way to have a third party help in the fight should give 10xp each. Then split the opposition xp as usual.
 
 
-\subsection*{playthrough}
+\subsection*{followup}
 
-bla bla bla
-
-
+If SturSkurk flees he may want revenge. If they flee with enough treasure and people left they will form up, scout, and sneak up on Hoom Hool later, or lay an assault along a travel route, or attack when the Heroes are coming up for air after some hard fight, already wounded.
 
 
 
@@ -588,10 +633,11 @@ bla bla bla
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
-\phantomsection\addcontentsline{toc}{section}{03 defend hoom-hool}
-\section*{03 defend hoom-hool}
-\markboth{defend hoom-hool}{defend hoom-hool}
+\phantomsection\addcontentsline{toc}{section}{03 defend hoom hool}
+\section*{03 defend hoom hool}
+\markboth{defend hoom hool}{defend hoom hool}
 
+Sooner or later some gang of hoomans is going to track the goblin bandits back to Hoom Hool. The approximate location is already known to the law, as it was previously home to another gang of goblin bandits. See the campaign \verb|00 Return of Uchly Namen|, adventure \verb|01 The Red Stone|, where the Heroes of that time are tasked to clear out the previous occupants.
 
 
 \subsection*{synopsis}
@@ -781,12 +827,6 @@ All over the northern dias is a huge pile of treasure. Closer inspection will sh
 All weapons found in the lair are of good quality, but enormous. They have never been used and are polished weekly. Assume 4x normal abs, requiring 10 + 2x normal strength, and suitably high damage potential. The scorched skeletons are well maintained and carefully posed, and from enormous giants, 3-5m tall.
 
 
-\subsection*{playthrough}
-
-bla bla bla
-
-
-
 
 
 
@@ -822,11 +862,11 @@ Patrols are most likely along the roads, but will be out in the field as well. T
 Hello hello there! How's life this fine day? Where are you fellows travelling this day? Anything interesting in those wagons? My dear wife is looking for some fine cloth for a new dress. Can you give me good price?
 \end{readoutloud}
 
-\noindent The Heroes need to either talk their way through the patrols by pretending to be traders, or bribe them, or fight them. The important part is to not allow any patrolmen on horseback to escape, which will immediately bring more soldiers down on them, as soon as they can get there.
+\noindent The Heroes need to either talk their way through the patrols by pretending to be traders, or bribe them, or fight them. The important part is to not allow any patrolmen on horseback to escape, which will immediately bring more soldiers down on them, as soon as they can muster and get there, usually within a day or two. And the soldiers bring trackers... The physical description of the goblins can also becomes known in the nearby villages.
 
-If the goblins can pass for peaceful traders or farmers this is not an issue. If they start fighting and the soldiers are loosing they will try to flee, and one will take off on horseback to get help. Any soldiers that manage to flee will try to follow the goblins at a safe distance (a few leagues behind), but only have limited track (3 or so).
+If the goblins can pass for peaceful traders or farmers this is not an issue. If they start fighting and the soldiers are loosing they will try to flee, and one will take off on horseback to get help. Any soldiers on foot that manage to flee will try to follow the goblins at a safe distance (a few leagues behind), but only have limited track (3 or so).
 
-Response groups can be called from Castle Pawa or Castle Conq and can travel up to 15 leagues per day. They will be 5-8 cavalry soldiers and have a scout (track 7) with them. They will likely be very quick to track down the goblins unless they can get into hiding quickly, or are very good at track or sneak to sufficiently hide their tracks.
+Response groups can muster from Castle Pawa or Castle Conq and can travel up to 15 leagues per day. They will be 5-8 cavalry soldiers and have a scout (track 7) with them. They will likely be very quick to track down the goblins unless they can get into hiding quickly, or are very good at track or sneak to sufficiently hide their tracks.
 
 Civilian militia response groups can be called from any village, but will generally only be farmers, hunters, and a couple of hirelings. They travel at 8 leagues per day, and will have a good hunter (track 9) with them. A civilian militia group will not necessarily attack when they find the goblins. It may be enough that they track and stay nearby, to join with a later real military group.
 
@@ -841,23 +881,14 @@ Encounter will probably be during the day, unless the Heroes see a patrol camp, 
 
 \subsection*{opposition}
 
-Just a small patrol group. One or two on horseback and three to five on foot. The soldiers fight with crossbows at range, one or two salvos, then switch to spear and shield phalanx in close quarters.
+Just a small patrol group. One or two on horseback and three to five on foot. Standard patrol soldiers are found in the rulebook, NPC chapter. The soldiers fight with crossbows at range, one or two salvos, then switch to spear and shield phalanx in close quarters.
 
 They will try to flee if the fight is not going their way, and they will immediately try to send someone on a horse to get help and report once they see that they can't handle the goblins themselves.
 
 
 \subsection*{loot}
 
-The soldiers' gear is in good order, and they have some coin. A horse or two is also worth quite a bit of money, or food. A civilian militia group has less gear and coin.
-
-
-\subsection*{playthrough}
-
-This encounter doesn't take much time. We played through one when the GamGang tried to travel to Sleepy Cove to buy food and sell off some loot. The Heroes were horrible at speaking Common so the initial talking was difficult, but then a couple of hot headed goblins started swinging clubs, aaand it was off to the races.
-
-They managed to immediately kill the soldier on horseback first when he tried to make an attack run, and then quickly caught and dispatched the rest of the soldiers with magic (slow, fireball).
-
-20 rounds: r1-10 distance, close, talk, r11-r19 battle
+The soldiers' gear is in good order, and they have some minor coin. A horse or two is also worth quite a bit of money, or food. A civilian militia group has less gear and coin.
 
 
 
@@ -879,20 +910,24 @@ They managed to immediately kill the soldier on horseback first when he tried to
 
 \subsection*{synopsis}
 
-GamGang discovers a magical stream in the forest. It can turn them into strange mutants and turn weapons magical. They can fight mutated monsters for access. If utilised some chars can get special powers or magical stuff.
+GamGang discovers a magical stream in the forest. They fight strange monsters to reach an island with magical light. If they stay in the light too long they might turn into strange mutants or their equipment might become magical.
 
 
 \subsection*{adventure}
 
-Either they stumble across this are when travelling through the forest, or they get alerted when two very strange runts show up in their camp. If just happening on the area just put them on the map without any significant intro.
+Either they stumble across this are when travelling through the forest, or they get alerted when two very strange runts show up in their camp. If just stumbling onto it, dump them on the map without any intro and let them explore. If the runts come back mutated they will lead the Heroes back to the stream.
 
+Assuming runts:\\
 One day two runts come back from a hunt, seriously mutated. One has wings and the other has three arms. They are also somewhat changed mentally. Also, the stone knife carried by one seems to have become magical.
 
+\todo rewrite
+
+When approaching the stream:\\
 \begin{readoutloud}
 The forest is deep and dark, ancient and powerful. No sunlight make it down through the heavy canopy of enormous trees, the forest lies in deep darkness. In the distance you see soft blue-green lights slowly move among the trees. And there is a strange tingly feeling in the air.
 \end{readoutloud}
 
-%\noindent bla bla bla
+\todo rewrite
 
 
 \subsection*{map mechanics}
@@ -964,7 +999,7 @@ Your mind is reeling from the strangeness \emph{(take psy-1 permanent)}.
 
 \noindent The first mutation should be something small and cosmetic: big eyes, glowing snot, purple skin, extra big flapping ears, smoking nose, tail, long curly hair, extra fingers, snake tongue (speaking-2, per+1), etc. This first hit gives a psy-1 permanent mod. Successive mutations do not have \emph{this} automatic penalty.
 
-If the Hero stays longer, or touches the light again for a second time, he will get a serious ability. Roll from the list of serious mutations. Initially it will just manifest as a weird lump or similar but will, over time and with xp, grow into whatever is suitable for the ability. An extra arm, smelly pustules, brain nodules, etc.
+If the Hero stays longer, or touches the light again for a second time, he will get the seed of a serious ability. Example random roll lists are provided in the \hyperref[appendixmagicisland]{mutamonster appendix}, page \pageref{appendixmagicisland}. Initially it will just manifest as a weird lump or similar but will, over time and with xp, grow into whatever is suitable for the ability. An extra arm, smelly pustules, brain nodules, etc.
 
 Remaining in the light longer and repeatedly touching the light will get worse and worse with more detrimental mutations, draining stats, etc. Effects:\\
 1st: roll 1x Cosmetic weirdness and 1x Minor boost\\
@@ -979,152 +1014,12 @@ all further rolls give 1x minor drain and int-1 or psy-1 (50/50)
 The mutation seeds will develop over time. If the Heroes don't spend xp on them, let them start stealing some of the xp from each session and start developing on their own anyway.
 
 
-\raggedbottom
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Cosmetic weirdness, 1d18:
- 1-3   big eyes
- 4-5   glowing snot
- 6-8   colourful skin: purple/pink/orange/yellow/red
- 9-10  polka dots
-  11   moving moustache
-  12   clattering teeth
-13-14  useless tail
-15-16  smoking nose
-17-18  squeaking knees, sneak-1
-\end{verbatim} \end{samepage} \normalsize
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Minor boosts, 1d13:
- 1-3   str +1
- 3-6   con +1
- 7-8   psy +1
- 9-10  hp +1d2
-  11   stamina +1
-12-13  mana +1d3
-\end{verbatim} \end{samepage} \normalsize
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Major boosts, 1d24
- 1-3   str +1d3
-  4    dex +1
- 5-7   con +1d3
-  8    int +1
- 9-10  psy +1d3
- 11    per +1d3
- 12    cha +1
-13-16  mana +1d5
-17-18  hp +1d5
- 19    abs +1
-20-22  stamina +1
-       vision +1d5 range +1d
-23-24  increased size, goblin becomes normal size, str+2, con+2, hp+3
-       must eat full rations each day
-       re-roll for already full size Heroes
-\end{verbatim} \end{samepage} \normalsize
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Serious mutations, positive, 1d26:
- 1-5  Extra Extremity, roll for which below
- 6-8  Tasty
- 9-11 Foul
-12-13 Reactive Skin
-   14 Regeneration
-   15 Grapple
-   16 Incorporeal Double
-   17 Teleport
-   18 Reach
-   19 Blink
-20-22 Cockroach
-23-24 Black Knight
-25-26 Painless
-\end{verbatim} \end{samepage} \normalsize
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Which Extra Extremity, roll 1d10:
-1-5  arm: as normal by the ability
-6-7  leg: balance+3, r+1, d+2,
-          brawl kick: dam+1
-8-10 tentacle: climb+3, wrestle+3, block+3
-          moves independently up to 2sq from body
-          tentacle has 3hp, ranged tohit-6
-                            melee pierce tohit-3
-          brawl slap: dam 3
-          brawl grab: dam 1 pen 2,
-                hold: str-3 vs str
-                      break free attempts do not cost
-                      ap for the tentacled holder
-          grows back: on successful con check, 1x/day
-\end{verbatim} \end{samepage} \normalsize
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Dubious mutations, 1d23:
-1-3   reduced size (change token size), runts cannot shrink further
-      str-1, dex+1, con-1, hp-2, r-1, d-2
-4-5   increased size (size +2 steps), goblin becomes 2x2 size,
-      2x str,con, 3x hp, r+1, d+2
-6     increased size (size +3 steps), goblin becomes 3x3 size,
-      3x str, 2x con, 5x hp, w+1, r+2, d+3
-7-9   Bulbous Behind: Ever seen a Centaur? This is more of a Dachshund.
-      The Hero grows a large derriere, complete with extra legs.
-      The "behind" is an extra token that should always be
-      placed straight behind the Hero's main token along path
-      of movement, hero can still "face" +/- 45deg without
-      moving the rear. Moving the rear costs no extra mp.
-      r+1, d+2, hp+5, balance+3
-10-12 Stone Skin: abs+1, dex-2, cha-3, speaking-3
-13-15 Metabolism: stamina+2, must eat 4x full rations each day
-16-18 Evil Mini Twin, conjoint: A nasty little malformed mini with an
-      evil mind of it's own grows out from the stomach/back/side of
-      the Hero. It will sometimes cooperate
-      cha-3, hp+2d3, counts as 3enc, has 1d2 tiny arms (str 1d3)
-19-23 Glowing: light source range 2d3 -1/abs of armour,
-      will attract monsters like "tasty"
-\end{verbatim} \end{samepage} \normalsize
-
-\flushbottom
-
-
 \subsection*{loot: magifying gear}
 %---------------------------------
 Bringing items and leaving them on the island for a few days will make them magical, for better or worse. It's a 50/50 chance the items will just disappear, or get destroyed. If they remain, then they accrue some fun minor behavioural hiccup, boost, defect, or cosmetic change.
 
 Examples: colour change, glowing, smoking, hot, cold, burning, dripping water, attack+1, parry+1, reach+1, knockback+1, abs+/-50\% or even +100\%, or "indestructible", wielder stat changes like str+1 or int-1, or giving special ability like "Black Knight 2" or "Combat Advantage", or simply tagged "magical" meaning it can harm some incorporeal things and special monsters.
 Perhaps the weapon seems to be cool with a mod+1, but actually gives 50\% of failing all hits that are not success+3 or better? A sneaky curse.
-
-
-\subsection*{playthrough}
-%------------------------
-The players decide to go hunting for a new Hoom Hool after they hear from a patrol that Hjalmar Hjälte is searching for people to form a posse to go root out the Evil Goblin menace he thinks have settled in the old Goblin Cave in the west of SouthWoods. GammelTant is against the idea since they have defeated Hjalmar Hjälte before, but since she has enough food for a little while she doesn't care much.
-
-Opposition balance: The players initially brought 8 goblins around 130-140xp.\\ Approximated critters: initial : 12 bugs, 4 fish, 6 lumps, 2 larva, 1 crab, spread out and not attacking in coordinated fashion.\\
-Goblin reinforcements for following sessions: 3x more goblins\\
-Critter spawns: 8 bugs, 3 fish, 4 lumps, staggered spread.
-
-Fighting for 39 rounds. Almost killed 3 goblins, wounded 2 more, all got down to zero mana, most around 0 stamina.\\
-Played the critters in an uncoordinated fashion, with no tactical deviousness. The players could quickly see the behaviour patterns and start planning and coordinating their side of the fight.
-
-\
-
-Session 1: rounds 1-3 explore, 4-13 fight, 2h30m\\
-They travel towards BlackPeak Mountains, and have trained a few points of "track", so they actually notice when they pass close to the forest stream map marker.\\
-On map they start exploring, run into exploding bugs, quickly realise the problem and change tactics. Start bolting bugs. Get stuck hammering away at moss lumps, fish and more lumps are attracted with staggered arrival. Goblins manage to control positioning and have the control of the fight until one of the larva joins in and wrecks their strategy.\\
-One goblin gets seriously wounded and has to flee the fight.
-
-\
-
-Session 2: rounds 14-23 fight, 2h45m\\
-They bring in one very quick melee rapier goblin to the fight. The larva is tricky until they can re-position their fighters for better efficiency against the heavy armoured grub and bring spear wielders to the right positions. Once they have figured out the details they immediately handle the arrival of the second larva in a quicker more efficient way, but still have problem with positioning since the heavy larva can tackle and force them out of the way easily.\\
-In the end their spell casters have near zero mana, and most fighters have very low stamina.
-
-\
-
-Session 3: rounds 24-28 fight, 29-31 cleanup, 32-39 crab, 2h55m\\
-They bring in 2x new heavy 2h club melee goblins. They kill off the second larva and the staggered reinforcements very efficiently now that they know the monster behaviour and weaknesses. They mop up the last critters, almost clearing the map, and can rest for a couple of rounds as they advance on the crab. The crab fight is relatively quick since they can bring in the heavy melee club wielders in the forefront, though one of them almost dies and the other gets seriously wounded.
-
-\
-
-Session 4: rounds 29-55 just a quick cleanup and then the goblins swarm the island to fiddle with the magical light while keeping occasional monsters at bay. They are surprisingly cautious and don't stay long. A couple of ability seeds get mutated into a few of them but most just get the small boost and weird cosmetics.
 
 
 
@@ -1199,26 +1094,18 @@ The ghost must be avoided or defeated with magic. It won't pursue past 10sq from
 The bandits have a few silver and copper on their persons, and a bit more in the hidden loot stash. The stash must be searched for with "find", not perception. For Heroes with "find" it's mod+3. Heroes without "find" cannot find it.
 
 The sword "Ifring" is \emph{very} valuable. In the small villages it will sell for 10g with successful haggle. In trade town at least 20g. But: the sword is cursed. The owner must pass a psy roll each day or start travelling to the tower to take up the guard post...
-\goodbreak \begin{samepage} \small \begin{verbatim}
-Ifring              dam+1, parry+1
-broad sword         dam 8(7), abs 20,
-(cursed)            str 5 (max +3 str bonus), finesse-5
-                    poke: mod-1 dam-1 pen+1
-                    swing: slow-1 mod-1 dam+2 todefend+2
-\end{verbatim} \normalsize \end{samepage}
-
-
-
-\subsection*{playthrough}
-
-With track 5 they have seen the iffygriff nest site from the Black Peaks during their fight for New Hool (h1). So, they decide to go investigate, and pick some delicious stink-bird eggs. With only an hour or so left of the session they arrive on the ruin site.
-
-Session 1: round 1-13 \\
-At night they carefully advance on the old ruin, seeing the weak light from the glowing fire pit. Their advance group manage to sneak close before the enemy lookout sees them. They manage to split the enemies into two groups by lighting a large fire storm blocking the entrance arch to the ruin. This makes it easy to defeat the first wave of enemies, but leaves the main orc force behind the fire for the next wave.
 
 \
 
-Session 2: round 14-
+\goodbreak \begin{samepage} \small \begin{verbatim}
+Ifring          magical: dam+1, parry+1, (cursed), thin, light, excellent
+broad sword     dam 8(7), abs 20,
+(cursed)        str 5 (max +3 str bonus), finesse-5
+                poke: mod-1 dam-1 pen+1
+                swing: slow-1 mod-1 dam+2 todefend+2
+\end{verbatim} \normalsize \end{samepage}
+
+
 
 
 
@@ -1607,25 +1494,6 @@ bla bla bla
 bla bla bla
 
 
-\subsection*{playthrough}
-
-The players invade hool1, without scouting either h1 or h2. They quickly start using diplomacy though, and only kill about half the opposition before the rest have given up and switched sides.
-
-Their diplomatic ace is "We have Women! We have Loot! Join Us!". Promises which are \emph{very} attractive to a poor half starved all male bandit gang high in the mountains.
-
-Then they manage to persuade the orc boss to stand in as sexual substitute for the deceased Gamling, and thus getting GammelTant in a much better mood when they arrive back to Hoom Hool without any new loot.
-
-The new orc boytoy and the promise of magical monster meat nearby is enough to get GammelTant to agree to travel to the New Hool with half of GamGang, leaving the rest in the Hoom Hool until she has made up her mind about the new place.
-
-\
-
-Session 1: rounds 1-18 \\
-They approach when most of the bandit gang is asleep. They manage to persuade the watch guard at the mouth of the cave to join them with promises of women and loot. Then they attack into the cave. Players have 8 goblins around 150xp and easily take control of the west part of the cave, forming a strong defensive line.
-
-\
-
-Session 2: rounds 19-23 \\
-
 
 
 
@@ -1868,29 +1736,26 @@ bla bla bla
 
 Baron Conq is the de facto ruler of the region after the slaughter of Castle Pawa by the Demon Uchly Namen. Conq has military squads based out of Castle Conq and Castle Pawa, and patrol soldier groups roaming the land and staying most nights in Sleepy Cove and some nights in the various other towns when travelling.
 
+
+\subsection*{patrols}
+
+They function as lawmen in the region since the fall of Castle Pawa. They will take on a fight if they think they can win, but they are quick to flee and their main purpose is to report.
+
 Patrol Soldiers usually travel in groups of 4-8, usually with one in four being on horseback while the others walk. Crossbows for distance and shield and spear phalanx for close quarter combat.
 
 Patrols can be encountered anywhere in the region but mostly along the roads or plains between the villages or resting in a village inn or square when the Heroes stop by. They are general people, not suicidal or overly aggressive. Not too bright, but roll a d10 for brain power and awareness of the leading soldier, sometimes they can be smart.
 
-Get the stats from the core book.
 
-\
+\subsection*{watchmen}
 
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Patrol Soldier
-\end{verbatim} \end{samepage} \normalsize
+Their main function is to sound the alarm if they notice anything, not try to fight intruders alone. 
+The small villages, Kleinshof, Kegern, Merna, have a 50/50 chance of having a watchman active during night, and none during the day. Sleepy Cove always have 1d3 watchmen out and about at night. 
+The towns around Castle Conq and Castle Pawa have several watchmen active each night.
 
-\
 
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Caravan trader
-\end{verbatim} \end{samepage} \normalsize
+\subsection*{npc stats}
 
-\
-
-\goodbreak \small \begin{samepage} \begin{verbatim}
-Farmer
-\end{verbatim} \end{samepage} \normalsize
+The core rulebook, npc chapter, has base stats on regular people, watchmen, patrol soldiers, etc.
 
 \flushbottom
 
@@ -2005,7 +1870,7 @@ Try to have the opposition flee when possible instead of stock the larder and co
 
 \subsection*{the treasure chest}
 
-When the campaign starts the GamGang Coffer holds ca 15 silver and 105 copper. This is enough money to feed the gang peacefully for around 80 days. \emph{But} shopping food is a truly foreign idea to both Gamling and GammelTant unless they are really starving and the runt count is low. Instead they will keep sending the Heroes out to get food all the time. Neither Gamling nor GammelTant are any good at counting or literate, so figuring out that turning money into food is not expensive is far away.
+When the campaign starts the GamGang Coffer holds ca 15 silver and 100 copper. This is enough money to feed the gang peacefully for around 80 days. \emph{But} shopping food is a truly foreign idea to both Gamling and GammelTant unless they are really starving and the runt count is low. Instead they will keep sending the Heroes out to get food all the time. Neither Gamling nor GammelTant are any good at counting or literate, so figuring out that turning money into food is not expensive is far away.
 
 It is possible to get money out of the Gang Coffer. But it's not easy. Gamling doesn't respond well to reason, no matter how good an idea it might be. Nagging works: psy vs psy mod-1 per silver they try to get, as does fist fight style argumentation. Picking a physical fight with Gamling is somewhat likely to land the Hero in the cook pot next time they are out of food though. When GammelTant takes over she is easier to reason with. If it's a coherent and obviously good argument for investing money into equipment etc it will go ok if GammelTant passes an int roll. Allow one roll per day as she thinks it over. Otherwise nagging (psy vs psy -1/s) works ok, as does fist fights, just like with Gamling. But GammelTant is a much stronger brawler, and she is much quicker to throw people in the cook pot.
 
@@ -2289,21 +2154,180 @@ money: 2 gold, 5 silver, 17 copper
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
+\phantomsection\addcontentsline{toc}{section}{appendix: Wagoneer}
+\section*{appendix: Wagoneer}
+\markboth{Wagoneer}{Wagoneer}
+
+\label{wagoneer}
+
+\raggedbottom
+
+The Wagoneer is a surly, rough, traveling trader. His heavy wagon is pulled by two formidable armoured-illers and his pet crow scouts the road ahead and distracts enemies in fights.
+
+
+\TODO cleanup
+
+Fighting from his wagon seat:
+hidden behind large shield (mounted on wagon, quickdraw) (tohit-3 normally)
+three crossbows on wagon in quickdraw slots (quickdraw 6)
+1r reload each while hiding behind shield mount (tohit-6) (quick draw quiver)
+
+heavy spear (1h) (quickdraw) and large shield (not slow)
+
+when off the wagon fights with shield and spear
+
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+============= Wagoneer, human ==============
+str  7         hp 16 abs 1
+dex  5         m1 w3 r5 d7
+con  7         stamina 9
+int  8         vision 24 day 225 (set human good)
+psy  7         mana 6
+per 11(9)      action points 6(3)
+cha  5         xp 5 (ca 350), worth 7xp
+--------------------------------------------
+Common 7, gossip 7, haggle 9, histography 4
+crossbow 8, spear 8, throw 7
+shield 5
+avoid 6, yield+3, disengage 3, off balance
+consistent 1
+veteran 2
+quick draw 8, häfva 6
+quick 3, mobile 1, perceptive 2, rapid 4
+--------------------------------------------
+money: 1d3g 5+1d10s 10+1d20c
+quaff: 4x quick draw, vest
+
+Fighting from wagon seat:
+    crossbows 3x quickdraw crossbows, quickdraw quiver for reload
+    arbalest mounted quickdraw quiver
+    reloading hidden by large shield (ranged tohit-6)
+crossbow  8, dam 5, pen 1, range 12
+    shot 1r mod=0, aimed 2r mod+1, snap 3ap mod-3, reload 1r (reload quickdraw)
+large shield  9(5)  abs 22, parry+4, tackle+2, good quality
+    Ranged attacks mod-3 when in the way.
+    Hiding behind it (3ap) ranged tohit mod-6, (mounted 0ap when reloading)
+arbalest  9(8), dam 7, pen 3, range 18, mounted mod+1
+    shot 1r mod=0, aimed 2r mod+1, snap 4ap mod-3, reload 4r
+
+Fighting on foot:   spear 1h + shield, both quickdraw
+heavy spear  8, dam 7/8, pen 0/1, abs 8, parry-1/+1, reach 1 mod-3
+    str 6/5 (str bonus max +1 dam then max +3 pen)
+-------------------------------------------------
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+ARMOURED-ILLER
+
+size 2x2,  range tohit+3
+charge 9 > knock (secondary)
+can "curlup" and get effective armour 6  1r curl/uncurl
+stationary when curled tohit+3
+
+abs 4/6   hp 30
+
+str 40  can slowly push tree trunks, boulders, wagons, enemies aside
+dex  8
+pain threshold 5
+ap 3
+m2 w4 r8 d12
+
+bite 6, 3ap, dam 4, pen 1
+knock 8, 3ap, dam 6, knockback 2
+claw 7, 2ap, dam 3
+head plate block 12, ap 3, abs 8
+avoid 5, yield+2
+
+
+
+CROW
+
+tiny flying target: melee tohit-6, ranged tohit-9, usually out of range of melee
+
+Can spot the field and call warnings to Wagoneer.
+
+Harrass attack gives mod-6 to target for all actions, as long as crow is present.
+(to all actions except attack crow with melee weapon)
+
+avoid 7, yield+6   (no longer harrass distracting)
+avoid+dash 9 fly away 5sq
+
+3hp
+
+m6 w10 r15 d20
+
+3ap
+
+
+
+\flushbottom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
 \phantomsection\addcontentsline{toc}{section}{appendix: SturSkurk}
 \section*{appendix: SturSkurk}
 \markboth{SturSkurk}{SturSkurk}
 
 \raggedbottom
 
-The SturSkurk Boss is a dangerous opponent but the witch is also surprisingly tough in a melee fight. The Boss always fights with orc phalanx support. The Witch supports with ward shields, slow, and shock bolts. The archers are protected by the spear men. The scouts are quick mobile support.
+The SturSkurk Bandit Gang. Lead by the powerful but careful SturSkurk Boss, supported by the Witch, a few Orcs, and a bunch of goblins.
 
-For the Robbery Gone Wrong fight there is probably just the boss, 2 orcs, witch, 3 archers. For the Kill The Bandits assault the rest of the SturSkurk Gang is available, minus those that were killed in the previous episode. The full gang is the boss, the witch, 3x orcs, 4x archers, 2x spear men, 2x scouts, 4x goblin fighters, 4x camp babes. Adapt to suit your players.
+The SturSkurk Boss is a dangerous opponent but the witch is also surprisingly tough in a melee fight. The Boss always fights with orc phalanx support. The Witch supports from behind with ward shields, slow, and shock bolts. The archers are protected by the spear men. The scouts are quick mobile support.
 
-SturSkurk have already bought selective blindness from Robert the Reeve so the Heroes can't hint/convince/bribe him to order patrols to attack them. No patrol leader will bring his group to fight SturSkurk camp knowingly without direct orders from the Reeve. But give the Heroes some xp anyway if they try to pursuade the law man.
+They fight carefully and defensively until they find openings and clear advantage.
 
-One trick that could succeed though is if they manage to entice a patrol group into pursuing them from the region map directly into conflict with the SturSkurk gang in their camp. The patrol officers don't know that SturSkurk have bought safe harbour from Robert the Reeve. The Heroes can also pick up a posse gang or similar to pursue them to the bandit camp and bring them into confrontation with SturSkurk camp.
+SturSkurk gang doesn't have anyone with medical or magical healing skills. Their wounds will heal at normal speed, and they can't easily recruit more people quickly. So it's possible to kill off part of the gang in \verb|01 robbery gone wrong| and the rest in \verb|02 kill the bandits|. If GamGang is quick, SturSkurk gang will still be wounded from the previous fight when the Heroes assault the camp. 
 
-The heavier military groups like Burmak and Lundqvist don't take orders from Robert the Reeve, so the Heroes could perhaps persuade them to attack SturSkurk if they are clever about it. But normally the military will respond that it's Robert the Reeve's responsibility and not theirs.
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+SturSkurk camp loot:
+four donkeys, three large carts (200 enc), 
+Tents, bed rolls, furs, a few carpets, one small stove, afew tent braziers.
+
+Hidden away (find) in the Boss' tent is a small but heavy metal chest, 20enc, locked (mod-6), sturdy (50hp abs5), containing the Boss' treasure: 6g 27s 135c.
+
+1 barrel of wine 10enc, 3x barrels of beer 10enc, 150enc simple food.
+3x lamps, 500r lamp oil, 15x torches, 20x candles, 2x smoulder box, 
+flint & tinder.
+
+They have 
+
+\end{verbatim} \end{samepage} \normalsize
+\TODO finish up the SturSkurk camp loot, gang member coins
 
 \
 
@@ -2315,9 +2339,9 @@ con  9                    stamina 12(8)
 int  6(4)                 vision 16 day 221
 psy  7                    mana 6
 per  3(4)                 action points 6(4)
-cha  8                    xp 9 (420)
+cha  8                    xp 12 (420)
 --------------------------------------------
-Common 6, haggle 5
+Common 6, Svartlingo 2, haggle 5
 axe 13, battle axe, poke, swing, fancy 4, intercept
 shield 9, phalanx, counter attack
 throw 2
@@ -2328,7 +2352,7 @@ tank 3
 veteran 4
 quick 2, mobile 2
 rapid 2, smart 2, resilient 4, enduring 4
-black cat 2
+black cat 2, luck 2
 --------------------------------------------
 money: 3 gold, 3 silver, 19 copper
 
@@ -2596,6 +2620,39 @@ leather armour abs 1
     takes 2 rounds to put on or take off
 --------------------------------------------
 \end{verbatim} \end{samepage} \normalsize
+
+
+\TODO cleanup sturskurk dog
+
+
+small fight dog
+ap 6
+
+2x bite 5 dam3 3ap
+3x claw 5 dam1 2ap
+avoid 5
+charge 6
+balance 3
+mobile 2
+
+Big dangerous breed of dogs. \\
+hp 4, movement m2 w4 r8 d16 \\
+bite: 5 dam 4 \\
+claw: 5 dam 1 fast+1 \\
+charge 6 \\
+avoid   5 yield+4 always yields when possible \\
+\\
+Command: attack target pointed at: \\
+Will charge the target and bite and claw. Target must pass a psy roll or target the dog if not already in melee. \\
+Command: return to owner \\
+Command: guard spot or small area \\
+Will attack intruders that get within 5 range from the area. \\
+Command: guard person or group - default setting \\
+Will attack intruders that get within 5 range from the person or group. \\
+Command: follow \\
+Will follow owner and keep calm unless enemy comes within 1d4sq. \\
+Command: fetch arrow \\
+Will run to a corpse and fetch an arrow. Better trained dogs might fetch more than one.
 
 
 
@@ -3113,6 +3170,7 @@ elsewhere
 \phantomsection\addcontentsline{toc}{section}{appendix: mutamonsters}
 \section*{appendix: mutamonsters}
 \markboth{mutamonsters}{mutamonsters}
+\label{appendixmutamonsters}
 
 \raggedbottom
 
@@ -3248,6 +3306,129 @@ drag:   when grabbed the tentacles will cooperate to drag the victim to mouth
 The Tentacle Crab yields about 100enc of meat, and each tentacle another 3enc.
 
 \end{description}
+
+\
+
+
+\subsection*{the strange magical effects of the island}
+\label{appendixmagicisland}
+
+\raggedbottom
+
+Below is listed some examples of random magical mutations that can be acquired if spending time on the island, remaining in the light too long or touching it.
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Cosmetic weirdness, 1d18:
+ 1-3   big eyes
+ 4-5   glowing snot
+ 6-8   colourful skin: purple/pink/orange/yellow/red
+ 9-10  polka dots
+  11   moving moustache
+  12   clattering teeth
+13-14  useless tail
+15-16  smoking nose
+17-18  squeaking knees, sneak-1
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Minor boosts, 1d13:
+ 1-3   str +1
+ 3-6   con +1
+ 7-8   psy +1
+ 9-10  hp +1d2
+  11   stamina +1
+12-13  mana +1d3
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Major boosts, 1d24
+ 1-3   str +1d3
+  4    dex +1
+ 5-7   con +1d3
+  8    int +1
+ 9-10  psy +1d3
+ 11    per +1d3
+ 12    cha +1
+13-16  mana +1d5
+17-18  hp +1d5
+ 19    abs +1
+20-22  stamina +1
+       vision +1d5 range +1d
+23-24  increased size, goblin becomes normal size, str+2, con+2, hp+3
+       must eat full rations each day
+       re-roll for already full size Heroes
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Serious mutations, positive, 1d26:
+ 1-5  Extra Extremity, roll for which below
+ 6-8  Tasty
+ 9-11 Foul
+12-13 Reactive Skin
+   14 Regeneration
+   15 Grapple
+   16 Incorporeal Double
+   17 Teleport
+   18 Reach
+   19 Blink
+20-22 Cockroach
+23-24 Black Knight
+25-26 Painless
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Which Extra Extremity, roll 1d10:
+1-5  arm: as normal by the ability
+6-7  leg: balance+3, r+1, d+2,
+          brawl kick: dam+1
+8-10 tentacle: climb+3, wrestle+3, block+3
+          moves independently up to 2sq from body
+          tentacle has 3hp, ranged tohit-6
+                            melee pierce tohit-3
+          brawl slap: dam 3
+          brawl grab: dam 1 pen 2,
+                hold: str-3 vs str
+                      break free attempts do not cost
+                      ap for the tentacled holder
+          grows back: on successful con check, 1x/day
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Dubious mutations, 1d23:
+1-3   reduced size (change token size), runts cannot shrink further
+      str-1, dex+1, con-1, hp-2, r-1, d-2
+4-5   increased size (size +2 steps), goblin becomes 2x2 size,
+      2x str,con, 3x hp, r+1, d+2
+6     increased size (size +3 steps), goblin becomes 3x3 size,
+      3x str, 2x con, 5x hp, w+1, r+2, d+3
+7-9   Bulbous Behind: Ever seen a Centaur? This is more of a Dachshund.
+      The Hero grows a large derriere, complete with extra legs.
+      The "behind" is an extra token that should always be
+      placed straight behind the Hero's main token along path
+      of movement, hero can still "face" +/- 45deg without
+      moving the rear. Moving the rear costs no extra mp.
+      r+1, d+2, hp+5, balance+3
+10-12 Stone Skin: abs+1, dex-2, cha-3, speaking-3
+13-15 Metabolism: stamina+2, must eat 4x full rations each day
+16-18 Evil Mini Twin, conjoint: A nasty little malformed mini with an
+      evil mind of it's own grows out from the stomach/back/side of
+      the Hero. It will sometimes cooperate
+      cha-3, hp+2d3, counts as 3enc, has 1d2 tiny arms (str 1d3)
+19-23 Glowing: light source range 2d3 -1/abs of armour,
+      will attract monsters like "tasty"
+\end{verbatim} \end{samepage} \normalsize
 
 
 \flushbottom
@@ -3564,6 +3745,7 @@ money: 3 gold, 1 silver, 10 copper
 
 
 
+
 \clearpage
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
@@ -3674,32 +3856,250 @@ money: 3 gold, 1 silver, 10 copper
 The idea was shitty little goblins, lots of them, tryin' and dyin'. Didn't quite turn out like I thought. Again, in my defence, some of my players can super optimise with surgical precision and they managed to turn out "shitty little goblins" with the murder potential of a herd of Minotaurs led by Sauron himself.
 \end{readoutloud}
 
-\noindent The playthrough took ca 100 hours over 50-ish sessions. Weekday evenings with ca 2h of game time each. Late 2017 to late 2019 with a seven months' gap around mid 2018. Most aspects worked well, some not so much. My players still thought this was the most entertaining campaign so far.
+\noindent The playthrough took ca 100 hours over 45 sessions. Weekday evenings with ca 2h of game time each. Late 2017 to late 2019 with a seven months' gap around mid 2018. Most aspects worked well, some not so much. My players still said this was one of the most entertaining campaign so far. The setting was great.
 
 The Heroes got to about 500xp in the end, but very little good gear. A few +30-50\% abs weapons, one Hero in full plate and heavy 2h axe, one OP misbalanced (dam 7/8) legacy heavy staff. Even in the end several Heroes were fighting with damaged weapons, temporary shields, etc. \emph{That I see as success considering the tilt of this campaign.}
 
 \begin{description}
 
-    \item[fun:] Several aspects of the gobliny character essence lead to fun play, and my players embraced this a lot. They bicker and fight in ridiculous manner. Rarely plan ahead and even the best plans only survive a few rounds until someone has a \emph{better} plan and run off on their own on chasing some insane spur of the moment decision. They cheat and lie, steal money and equipment. Only one Hero had the count skill and consistently miscounted all money and loot to privately gather quite a pile which the others never found.
+    \item[fun:] Several aspects of the gobliny character essence lead to fun play, and my players embraced this a lot. They bicker and fight in ridiculous manner. Rarely plan ahead and even the best plans only survive a few rounds until someone has a \emph{better} plan and run off on their own on chasing whatever insane spur of the moment decision. They cheat and lie, steal money and equipment. Only one Hero had the counting skill and consistently miscounted all money and loot to privately gather quite a pile which the others never found, effectively keeping the group very poor.
 
-    \item[slow:] Having up to six players with two goblins each, some sidekicks, and lots of ap lead to very slow rounds. This was a serious fail on my part but is inherent to the flawed campaign design.
+    \item[slow:] Having up to six players with two goblins each, some sidekicks, and lots of ap lead to very slow rounds. This was a serious fail on my part, but is inherent to the flawed campaign design. Still, the large fights lead to interesting tactics and combat.
 
-    \item[starving:] Having the Heroes pressed for food and money was fun. But I failed to have my human opponents flee fast enough. This gave the goblins too much food (corpses) and too much money and loot too early. Remember to have the opposition flee in time.
+    \item[starving:] Having the Heroes pressed for food and money was fun. But I failed to have my human opponents flee fast enough. This gave the goblins too much food (corpses) and a little too much money and loot too early. Remember to have the opposition flee in time.
 
-    \item[survival:] I didn't kill enough of them. They should die more often. Be brutal and establish a high death rate. Most of the opposition should be quite smart and fight well coordinated. Perhaps more humans should "make certain" of kills, rendering possum less useful.
+    \item[survival:] I didn't kill enough of them. They should die more often. Be brutal and establish a high death rate. Most of the opposition should be quite smart and fight well coordinated. Perhaps more humans should \emph{make certain} of kills, rendering possum less useful.
 
     \item[powerful:] My players are quite good at optimising characters and I underestimated how potent they could make even a bunch of goblins when they have enough of them.
 
     \item[SturSkurk:] I failed to get the players to attack SturSkurk early. Recommend having GammelTant threaten them with the cooking pot and Hemskelina early on so that they don't take on too many battles before trying SturSkurk at least once. It's more fun if they fail to kill Sturskurk the first time they try.
+    
+    \item[XP:] Since they are so many their share of the XP from opposition and accomplishments are quite low. I rewarded all Heroes a 5xp baseline per session to establish a steady slow progression. I always enforce that all sidekicks, hirelings, and buffer bringalongs get full XP share, even the ones that died during the adventure. This limits the amount of extra bodies the Heroes will bring with them on their adventures. I also kept leveling up their sidekicks and bringalongs, as well as surviving opposition.
 
 \end{description}
 
+Throughout the campaign they only lost three PC Heroes and two sidekick pets. This is not nearly enough. I had expected to kill around 10 of them. They did loose almost the entire complement of GamGang bandits through the campaign, some 15+ goblins, wolves, runts. On top of that they recruited and lost another 10+ goblins and orcs. There was plenty of blood and death, just not much PC death. But they were at death's door with negative hp and precarious situations very often.
+
+Many battles would see the Heroes loose several of their allies, with most of the Heroes themselves in precarious situations, several at or below 0hp, negative stamina and no mana left. Then manage to flee, kill off or scare away the opposition, or otherwise slink away into the night to fight another day.
+
+\
+
+
+\subsection*{Hoom Hool, where it all begins}                            % 171126
+
+The campaign opens with four players, eight goblins and one sidekick trained giant rat, around 90xp freshlings. Highly varied builds. They get familiar with the Hoom Hool camp and cave, and with the local region map, the knowledge they got from the two goblins the GamGang met and ate along the way north when fleeing the southlands. The gang has settled in at Hoom Hool over a few weeks, done one raid at Bestest Lootspot already, and scoured the woods for good eating.
+
+Now Gamling kicks the Heroes into action and sends them off to get more food and loot. There is a small internal fight and the Heroes loose their first pet sidekick, a giant trained fighting rat. 
+
+They bring out another giant rat sidekick, and set off towards Bestest Lootspot. The expedition will take around seven days.
+
+
+\subsection*{00 just another day at the office}
+
+For opposition I brought Hjalmar Hjälte and three wagons, two carrying hireling swordsmen guards and one with an archer.
+The fight was balanced to be a simple introduction. They lost one gobling and their second trained rat, several of the opposition fled the fight.\\
+Total 31 rounds, r1-9 positioning and waiting, r9-31 fight, r26-31 opposition retreat and flee.
+
+\
+
+First session: \\                                                       % 171126
+They started with felling a tree to block the road before the wagons show up, then spread out and hid. Waited until the wagon train arrived and two farmers got axes to chop up the tree and clear the road. Then they attacked at multiple fronts.
+
+Hjalmar Hjälte was alone ahead of the wagons and got seriously hurt before the farmers and swordsmen could arrive to help out. He retreated, hid in a tree, and quaffed to be able to get back in the fight. The swordsmen and farmers started fighting, and the archer was harassed by a backstabbing sneak.
+
+Killed two farmers, disabled one goblin, hurt half the goblins to ca half hp.
+
+\
+
+Second session: \\                                                      % 171203
+They killed one of the swordsmen before he had the time to quaff. Hjalmar Hjälte killed one goblin and a support critter. Then HH fled with the surviving archer, swordsman, and farmer.
+
+All carts were captured along with one donkey, the other two escaped when the goblins couldn't capture or handle them.
+
+After re-packing the wagon and hitching the donkey they walk north out of the forest and travel back west on the grasslands but close enough to the forest to be able to flee if trouble comes for them. On the seventh day they arrive back at Hoom Hool, where GammelTant immediately starts cooking Victory Stew and Gamling grabs all the nice loot and cash they brought, except a few coins one of them managed to hide away in a stash in the forest close to camp.
+
+\
+
+Loot: \\
+Misc loot from the wagons and some weapons and armour from the dead humans. The corpses are mighty fine eating and they start with a few ears and fingers.
+They captured all three wagons but can only take one with them since they only managed to capture one donkey. None of the goblins have ride, but one has animal handling which is enough to lead the donkey dragging the wagon. They find the hidden silver pouch in a wagon.
+
+Awarded 10xp each for the adventure and ca 30xp to share for opposition.
+
+\
+
+Followup: \\
+Hjalmar Hjälte survived together with a swordsman, an archer, and a farmer. They travel on to Sleepy Cove and send word to Robert the Reeve saying that the new goblin bandit gang is very dangerous and must be hunted down and killed. Hjalmar Hjälte then starts gathering a posse to hunt down the goblin bandits.
+
+Robert moves one patrol gang to spend more time along the Southwoods road between Sleepy Cove and Kleinshof. Thus it's more likely in the future that patrol groups are encountered in Sleepy Cove and Kleinshof, or when travelling along the road or grasslands. The patrol group won't venture into the forest alone.
+
+
+\subsection*{Good Times}
+
+With enough food to last for a while GamGang fests, relaxes, and don't do much of anything for a few days. By day 15 the larder is almost empty again and GammelTant is shouting at Gamling for more food! The next day he rounds up the Heroes and they set off to get some eating and peace of mind.
+
+GamGang is ca 20 goblins, 10 runts, 2 wolves and minor others. They eat around 15-20 day's worth of food each day. So the wagon load of ca 100 enc simple food they looted, together with the corpses, and stretching the supply with foraging, the larder is running low in just 10 days.
+
+
+\subsection*{01 robbery gone wrong}
+
+Five players, ten goblins, the third giant rat sidekick, Gamling and one wolf. They also bring the donkey they raided last time, but no the wagon. At Bestest Lootspot they start by felling a tree and drag the trunk across the road.\\
+The fight goes well against the wagons but when SturSkurk kills Gamling the Heroes soon decide to flee.
+
+\
+
+Session 3:\\                                                            % 171217
+Put up a robbery site in the NW part of the map, blocking the tight corner with the tree trunk. The wagon train enters and fighting ensues. Misc damages but no death. They cut loose a donkey to get hold of at least one wagon. The heavy wagon with the armoured-illers reach the road block and starts pushing it out of the way slowly to escape a few rounds later.\\
+Rounds 1-16 are quick positioning and preparation. Rounds 17-21 start fighting against the wagon train. SturSkurk Gang enters in round 20 and is discovered at end of r21.
+
+\
+
+Session 4:\\                                                            % 180107
+Just noticed SturSkurk Gang. Gamling is closest to them, mid way between SturSkurk and rest of GamGang. Gamling charges and dies in two rounds. The others retreat and regroup. They force the farmers and archers to flee, and kill a swordsman. They loot the wagon where they cut loose the donkey, and steal the other two wagons with donkeys when they flee.\\
+Gamling is lost of course, and one more. A few are at very low health and most at very low stamina.\\
+Rounds 22-28 combat, r29-31 flee
+
+\
+
+They manage to drag one donkey and wagon out from the fighting, laden with some random loot and the corpse of a fallen Hero. Gamlings bloated carcass was left behind as SturSkurk Blue Boss was marching over it towards them, drenched in the blood of Gamling.
+
+Gamling is Dead. They've lost one goblin and several of the other Heroes are near death and severely exhausted.
+
+\
+
+Loot:\\
+They only escape with a donkey and a wagon of random loot, about 40enc simple food, a few barrels of beer, some hides, and minor coin from a dead swordsman.
+
+Awarded 15xp each for the adventure: 10xp base, and 5xp for getting away with some loot. Then ca 24xp shared for the opposition they bested before fleeing.
+
+\
+
+Followup:\\
+SturSkurk gang doesn't have any magical healing. Their wounds will heal at normal speed, so if the GamGang is quick to go on with \verb|02 kill the bandits| the opposition will still be wounded. But instead the Heroes dilly dally and delay attacking the SturSkurk camp despite GammelTant's orders.
+
+
+\subsection*{Bad Times \mdash Death by GrimGnash}
+
+Day 21, back at Hoom Hool. GammelTant is furious! Screaming for Revenge! The Heroes manage to get a few coins from the treasure chest for shopping some weapons in Sleepy Cove so they can attack and kill SturSkurk Blue Boss! Hemskelina has left to scout where SturSkurk can be found. She'll be back in 5-10 days if all goes well.
+
+Sad times in GamGang Camp. Eating Fail Stew made from the goblin lost in the fight. The second cousin of a lost Hero wanders into the camp and offers his services. He's eaten a few days later since there is not enough food.
+
+Next day, GammelTant gathers the whole band and tells them about the Dread Prophecy of Death by GrimGnash. When the Big Leader falls to the Blue Faced Intruder the prophecy has begun. The only way to survive is to go Kill GrimGnash before he kills them all! But no-one know who GrimGnash is, or where...
+
+
+\subsection*{XX patrols} 
+
+Four players, eight goblins. Encountering patrols on their way to Sleepy Cove to go shopping for food and weapons. Communication fails and they end up fighting the (actually quite nice) hoomans. Easy one sided fight.\\
+19 rounds total, barely stopping the last soldier from escaping.
+
+\
+
+Session 5:\\                                                            % 180114
+They pack into two wagons and head north towards the village, (day 21). Early next day, out on the grassland, they encounter a patrol. One solier on horse and three on foot. The Horseman rides up ahead of his squad and greets them. \hyperref[misunderstandings]{Severe miscommunication ensues and the goblins attack, (page \pageref{misunderstandings}).} Contact r1-10. Fight r11-19. The soldiers are overwhelmed and they manage to kill the rider before he escapes, as well as hunt down and kill the last fleeing foot soldier, snaring him in a \emph{slow} spell.
+
+\
+
+Loot:\\
+All the soldiers had, incl. the tasty human corpses. They manage to not kill the Horse, so now they have an good mount. The soldiers also have a small tent, a cook pot, a lamp and 100r oil, 2x flint and steel, 4x sleeping blankets, and 4 enc travel food.
+
+Awarded 5xp each for encounter, 5xp each for victory and great style and cool timing of events in the battle, another 16xp to share for the opposition.
+
+\
+
+The patrol leader thought they were just some traveling traders. He tried to warn them about the goblin bandits that had been seen in the surrounding area, but the Heroes didn't understand him, all failed simple+3 Common rolls). He would also have told them that Hjalmar Hjälte was gathering a posse in Sleepy Cove to go hunt down the goblin bandits. When they got some of it they had the brilliant idea to try to push the Patrol Soldiers towards SturSkurk, telling them about the competing bandit gang. But then the goblins killed them all so no word of SturSkurk will travel back to the other lawmen.
+
+They of course forget all about Sleepy Cove, weapons, revenge, and instead go directly back to Hoom Hool to feast on the delicious dead hoomans. GammelTant cooks Victory Stew, then sends them out again the next day, (day 23).
+
+
 
 
 
 \
 
+\TODO cont playthrough
+
 \
+
+
+
+\subsection*{XX mutamonsters}
+
+Session 6:\\                                                            % 180121
+
+Session 7:\\                                                            % 180118
+
+Session 8:\\                                                            % 180204
+
+
+The players decide to go hunting for a new Hoom Hool after they hear from a patrol that Hjalmar Hjälte is searching for people to form a posse to go root out the Evil Goblin menace he thinks have settled in the old Goblin Cave in the west of SouthWoods. GammelTant is against the idea since they have defeated Hjalmar Hjälte before, but since she has enough food for a little while she doesn't care much.
+
+Opposition balance: The players initially brought 8 goblins around 130-140xp.\\ Approximated critters: initial : 12 bugs, 4 fish, 6 lumps, 2 larva, 1 crab, spread out and not attacking in coordinated fashion.\\
+Goblin reinforcements for following sessions: 3x more goblins\\
+Critter spawns: 8 bugs, 3 fish, 4 lumps, staggered spread.
+
+Fighting for 39 rounds. Almost killed 3 goblins, wounded 2 more, all got down to zero mana, most around 0 stamina.\\
+Played the critters in an uncoordinated fashion, with no tactical deviousness. The players could quickly see the behaviour patterns and start planning and coordinating their side of the fight.
+
+\
+
+Session 1: rounds 1-3 explore, 4-13 fight, 2h30m\\
+They travel towards BlackPeak Mountains, and have trained a few points of "track", so they actually notice when they pass close to the forest stream map marker.\\
+On map they start exploring, run into exploding bugs, quickly realise the problem and change tactics. Start bolting bugs. Get stuck hammering away at moss lumps, fish and more lumps are attracted with staggered arrival. Goblins manage to control positioning and have the control of the fight until one of the larva joins in and wrecks their strategy.\\
+One goblin gets seriously wounded and has to flee the fight.
+
+\
+
+Session 2: rounds 14-23 fight, 2h45m\\
+They bring in one very quick melee rapier goblin to the fight. The larva is tricky until they can re-position their fighters for better efficiency against the heavy armoured grub and bring spear wielders to the right positions. Once they have figured out the details they immediately handle the arrival of the second larva in a quicker more efficient way, but still have problem with positioning since the heavy larva can tackle and force them out of the way easily.\\
+In the end their spell casters have near zero mana, and most fighters have very low stamina.
+
+\
+
+Session 3: rounds 24-28 fight, 29-31 cleanup, 32-39 crab, 2h55m\\
+They bring in 2x new heavy 2h club melee goblins. They kill off the second larva and the staggered reinforcements very efficiently now that they know the monster behaviour and weaknesses. They mop up the last critters, almost clearing the map, and can rest for a couple of rounds as they advance on the crab. The crab fight is relatively quick since they can bring in the heavy melee club wielders in the forefront, though one of them almost dies and the other gets seriously wounded.
+
+\
+
+Session 4: rounds 29-55 just a quick cleanup and then the goblins swarm the island to fiddle with the magical light while keeping occasional monsters at bay. They are surprisingly cautious and don't stay long. A couple of ability seeds get mutated into a few of them but most just get the small boost and weird cosmetics.
+
+
+
+
+
+
+
+
+
+\subsection*{???}
+
+Session 9:\\                                                            % 180211
+
+
+\subsection*{XX iffygriff eggs}
+
+Session 10:\\                                                           % 180225
+
+Session 11:\\                                                           % 180304
+
+
+With track 5 they have seen the iffygriff nest site from the Black Peaks during their fight for New Hool (h1). So, they decide to go investigate, and pick some delicious stink-bird eggs. With only an hour or so left of the session they arrive on the ruin site.
+
+Session 1: round 1-13 \\
+At night they carefully advance on the old ruin, seeing the weak light from the glowing fire pit. Their advance group manage to sneak close before the enemy lookout sees them. They manage to split the enemies into two groups by lighting a large fire storm blocking the entrance arch to the ruin. This makes it easy to defeat the first wave of enemies, but leaves the main orc force behind the fire for the next wave.
+
+\
+
+Session 2: round 14-
+
+
+
+
+
+
+
+
+
+
 
 
 % 171126,1203
@@ -3775,79 +4175,496 @@ surviving lundqvist hool2 attack
 % 190925
 s?? attacking GrimGnash
 
-\
+
+
+
+
+
+
+
+
+
+
+
+
+s12: hool 1, back iffygriff, hjalmar hjälte                             % 180311
+
+s13: hool 1, back iffygriff, burmak                                     % 180318
+s14: hool 1, back iffygriff, burmak                                     % 180325
+
+
+-- left liechtenstein --
+
+% 181029 - system test uppsala, no session
+
+s15: ??                                                                 % 181107
+hoom hool again, shopping
+d45 back in hoom hool, 14d food lest (corpses) + 26x food (simple) =  
+d50 kleinshof, shopping selling
+selling stuff they looted from patrol soldiers, merchant nephew gets suspicious, fetches patrol soldiers who happen to be in the tavern since last night.
+Soldiers get suspicious, recognize gear,
+gamgang flee before it turns into a real fight
+fight-flee r1-r18
+
+
+s16: ??   % 181114
+d50 kleinshof, fight patrol soldiers, flee kniggits + sune summoner
+        (kniggits posse follow their trails through the forest)
+d51 mot sturskurk. långsamt med vagn i skog
+d52 norr om sturskurk, gömmer sig
+d53 ready to lead kniggits to fight sturskurk:
+    lay tracks to sturskurk camp (success 0)
+    sturskurk watchmen har inte upptäckt
+    lunch: gömmer vagn off map (med vakt success+5)
+knektarna + sune summoner spårar dem, hittar fuskspåren till sutrskurk läger
+fight i sturskurk läger
+
+
+s17: sturskurk camp  % 181122
+d53 em fight sturskurk camp
+last time: ------------------------
+   flydde byn
+   listade ut att de var förföljda
+   lurade in riddarna mot sturskurks läger
+fight archers, sune summoner, 5x tiny demon
+
+
+s18: sturskurk camp  % 181128
+d53 em sturskurk camp fight, knights, hired archers, sune summoner
+fight continues outside sturskurk camp
+   fight utanför sturskurks läger
+   kniggit folket börjar fly
+   sturskurk kommer ut
+1x master archer, 3x experienced swordsmen, 1x kniggit, 6x demons, 2x dogs
+
+
+s19: sturskurk camp  % 181205
+d53 em fight sturskurk camp, start outside camp, continue into camp
+1x experienced swordsman, 1x kniggit, 2x orc, 3x demon, 1x hund
+
+
+s20: sturskurk camp   % 181212
+d53 em
+   fireball blocks camp gate since end of last session
+   fight utanför sturskurks läger
+   alla rätt hårt åtgångna, low hp,mana,stamina
+2x demon, 1x goblin spearman, 1x goblin club
+
+
+s21: sturskurk camp   % 181219
+d53 em   fight continues r27
+5x demon, 1x orc, 1x witch   -   sturskurk och häxan flyr
+
+
+s22: sturskurk camp   % 190109
+last time ----
+    Bara sturskurk och archers kvar i liv, så han flyr väl så fort som möjligt?
+    Springer in i tältet och hämtar pengar ett par rundor, sedan run/dash söderut för att komma off map. Hans archers gör kontrollerad reträtt tills de ligger klart illa till varpå de också packar ihop och flyr söderut.
+    SturSkurk är duktig på att gömma sig
+start : r33 d53
+finish r40, charmed camp babes, start looting out of combat
+    1x sturskurk        20
+    2x goblin archer     8
+    recruit
+    2x babe              2
+    flee:
+    2x goblin archer     6
+    2x babe              2
+    1x spearman          3
+    1x scout             3
+d53 em finishing up looting, d53 kväll
+   reser uner natten - åter hoom hool,
+   heroic knights - följer
+d54 travel west towards hoom hool
+d55 forest,  d56 landsväg, d57 forest, 58,59...63 framme hoom hool
+    50 enc mat med sig
+d64: victory stew i hoom hool
+    druckna och festande - kniggit har följt efter och anfaller
+    med bågskyttar. 
+    1x kniggit, 2x archer, har ihjäl camp babe och ngt annat
+d65: bakfulla och glada, lastar vagn och åker vidare  2x vagn 2x åsna
+
+
+s23:    % 190116
+ser ut att vara ganska tomt pass, notes mest kring s22 ??
+
+
+--- session gap ?? hur många sessions saknas från 190116 - 190220 ??
+190123 drv zrh
+190130 zrh still
+190206 zrh still
+
+190213 NÄTHACK  ? höcker ?   wanselin förmiddagen, ? hur länge ?
+    mail 190213 2258
+        Sådärrrrja. 14xp per nisse på kartan, 5xp per gang nisse off map el hoom hool
+        Väldigt produktiv omgång. Lyckades resa utan att slå ihjäl en patrull. Lyckades handla utan att mörda en by. Lyckades slakta en hel karta på en kväll. Riktigt stolt :)
+
+190220 NÄTHACK  åter uppsala
+    mail 190220 2319
+        Det blev 12xp per nisse på kartan och 5xp per nisse off map
+
+        
+s24: ???  % 190213
+shoppat, beställt vapen
+torture dungeon tower map ?   "Lyckades slakta en hel karta på en kväll."
+d72:   avfärd
+beställer duelling sword av smeden kegern, klar d80
+beställer legacy stav 2guld för återställa abs
+                      3guld för +2 abs  men sty+1
+betalar hälften av 8guld nu (haggel super)
+
+
+s25: ???  % 190220
+d72 kväll: ner i dungeon   (torture dungeon)
+2x skeletons, 1x skel guard, 15x bugs, 1x big bug
+
+
+s26:     % 190227
+    mail 190227 2312
+        Med brända vapen och spökslask i håret har kartspelande nissar samlat 12xp och övriga får 5xp.
+
+
+s27:     % 190306
+d72 kväll dungeon, r49+
+3x skeleton guard, 1x wraith, 
+
+
+-- inget näthack 190313  mailat småhuspyssel
+-- inget näthack 190320  mailat logistikissues 
+-- inget näthack 190327  hittar ingenting i maillistan ang 27e
+-- inget näthack 190403  hittar ingenting i maillistan ang 3e
+
+
+s28:     % 190410
+detta passet 190410 slutar med end of   --  r81  --    d72   Q2 dungeon
+    mail 190410 2314    
+        Det bidde 11xp per nisse på kartan
+d72 kväll dungeon, -r81
+3x skeleton guard, 2x wraith, 1x bug
+
+
+-- inget näthack 190417
+-- inget näthack 190424  skjuta med patrik
+-- inget näthack 190501  åkt ner till zrh, grenoble, post gothcon påsk, allergi
+-- inget näthack 190508  still gnb
+-- inget näthack 190515  still zrh
+-- inget näthack 190522  men åter svedala
+-- inget näthack 190529  sundh
+
+s-- only prep for next (190605)   % 190527
+
+
+s29 final torture dungeon, shopping kegern, spidey hool                 % 190605
+d72 kväll dungeon, 
+start r82  boss och två skelett guards kvar
+end r99 all exited dungeon map
+d72 evening, ihoppackade efter dungeon, sover
+d73: travel towards kegern
+d74: otw kegern
+d75: gryning, hämtar ut vapen
+    legacy stav med bättre abs
+    duelling swords std
+    betalar andra hälften, dvs 4g (hälft av 8g)
+prev (d72, någon gång kring 2019-jan/feb)
+    d72:   avfärd
+    beställer duelling sword av smeden kegern, klar d80
+    beställer legacy stav 2guld för återställa abs
+                          3guld för +2 abs  men sty+1
+    betalar hälften av 8guld nu (haggel super)
+han hann tydligen jättekvickt, dvs litfeldts duelling swords var klara redan d75 istället för d80 :)
+d75 em: framme vid berg, gömmer vagn     -  till spidey hool   hool2
+häxan lagar bättre mat än GammelTant
+men hon är ensamfeminist, gillar inte andra damer
+d75 natt: handlar spindeltyg, men tältläger vid vagn
+d76: söder, sedan vändom
+d77: passerar förbi kleinshof
+d77: natt vid camp site  -  mot hoom hool, rykte om lundqvist
+xp:   två guards, en boss, handlat med kegern, handlat med häxa
+
+
+s30 wagon camp, patrol fight r0-r8 finished, also kill heavy wagoneer   % 190612
+d??    ?d77+?
+1x swordsman, 1x farmer, 2x patrol soldier, 1x wagoneer, crow
+
+
+-- inget näthack 190619  höcker sjuk
+
+
+s31 patrol fight r8-r24 patrol fight incl eye critter                 % 190626
+    fight hoomans d79 kväll, överfallna
+d78: sovit dåligt, stor vagn 4spann 2sq/dag väg, 1sq/dag terräng, ingen skog
+natt: prassel i skogen, ser mer eye critter spår
+d79: inget överfall i bestest lootspot
+sen kväll: överfall hoomans på grässlätten på väg hem, strax innan nattläger
+vagn 1sq/r  i maxfart    full fart 2sq/r  men ride roll -3 /r
+d79 sen kväll, strax innan läger - överfall på grässlätten
+hoomans har samlat ihop sig och hunnit ifatt
+3x farmer, 2x soldier, 2x armadillo, 2x båge, 1x soldier, eye critter
+lootar wagoneer, släpar wagon med åsnor fyrspann, glimpse contact eye critter
+
+
+s32 cont fight överfall d79 kväll-natt                                % 190703
+d79 evening, late, dark
+grassland patrol map
+before engaging
+have seeded some fire arrows
+start: r7, closing in, enemies not spotted
+r0: on map, hears hooves and metal jingle ahead
+r5-6: enemy and grawa seed some fire arrows
+---
+r7: begin evening 190703
+r11: crossbow  contact, allt missar eller pingar
+r21: flydde
+--- 
+end of fight
+
+
+s33  flyr hooman fight överfall, defend hoom hool d80                % 190710
+    plundrar vagnar på lite små viktiga saker
+    rider ni 8 leagues till hoom hool på häst och åsnor
+d80 dawn - flyr
+           190703-10 : mail - waiting on replies for plans ...
+d80 later - lämnar vagnarna, flyr på häst och åsnor genom skogen till hoom hool
+            riddarna skickar efter förstärkning, men följer efter
+d80 late - hoom hool, flyttar upp för försvar,
+           går igenom vad de lyckats loota från vagnarna när de flydde
+d80 late - hoom hool, anfall kommer, de överlevande riddarna med anhang har följt
+           efter dem och anfaller utan förstärkning
+           senare : ... när knektarna inte överlever så kommer Lundqvist ...
+fight:
+22r outside, then enter cave
+r6 inside, fighting continues
+--- eoe ---
+
+
+s34   defend hoom hool kniggits,  coup gammeltant                    % 190724
+-- cont defend hoom hool kniggits
+r7 inside, fighting continues
+r10 last enemy dies
+-- done -- 22r outside 10r inside    defend hoom hool done
+-- coup gammeltant
+r1 revolution - old maz skall ta makten
+r4 revolution done
+
+
+s35  lundqvist anfall hoom hool, flyr                               % 190731
+d80 late night - power struggle, Old Maz kills GammelTant and takes power. 
+                 d81 early - hemskelina comes back and reports more knights approaching (lundqvist)
+d81 late night - ambush the Lundqvist force
+fight:
+    01r ambush prepped and ready, lundqvist enters field
+    20r lundqvist marcherar in
+    26r folk flyr, loosar vovvar, dunkab röbank
+d82 dawn, flytt under d81, sovit natten till d82 temp läger
+    hemskelina kommer och säger att lundqvist är en dag efter, 
+    scouter nära och följer spår efter främst hästarna
+    de måste nu resa 8sq under d82 för att kunna ta strid i hool2 när 
+    lundqvist hinner ikapp
+--- eoe ---
+mail 190801:
+    De tappra goblinerna flydde heroiskt ut i nattmörkret med små förluster. 7xp för alla on map, 5xp off map.
+    Flyr genom skogen under dag 81. Till kvällen kommer Hemskelina ikapp Old-Maz-Gang och meddelar att Lundqvist Trupp marscherat till Hoom Hool och bränt ut alla spår av er och fyllt igen grottöppningen. Hon hann dock före Da Horrible Hoomans och fick med sig lite ditt och datt från grottan. Hon såg till att Grinskil flydde iväg med Goblanda och förhoppningsvis klarade sig undan, men lämnade tillräckligt med folk kvar så att Lundqvist skulle kunna tro att han utrotat resten av GamGang. Lundqvist har skickat ut ett par scouter för att försiktigt leta efter de som flydde från överfallet. De är max en dag efter. Hästarna är lättspårade i skog och gräs, åsnorna är bättre.
+    Under natten snarkar Old-Maz i sömnen om Death By GrimGnash, hemska klor och om en bergstopp uppe bland molnen.
+
+
+s36: flykt, travel spideyhool,                                         % 190807
+    per mail, travel 8sq till hool2
+d83 dawn: lundqvist anfaller mot hool2
+r6: starting
+    r6: old-maz  kasta heal
+    r6: machete häfva 3ap
+    r6: kizraz har quaff redo i näven för att häfva/dricka
+- eoe - 
+
+
+s37:  lundqvist hool2 spideyhool                                       % 190814
+r6-r10
+
+
+-- inget näthack 190821   kaftan visiting
+
+
+s38:  lundqvist hool2 spideyhool                                       % 190828
+r10: starting   - eoe -
+r10 cont : starting escape, clearing entry
+r11 clearing entry
+r12 almost cleared entry, old maz sees last lundqvist group incoming
+r13 last lundqvist enters last in round
+r14: last lundqvist enters fight   
+- eoe -   
+
+
+s39:  lundqvist hool2 spideyhool                                      % 190904
+r14: last lundqvist enters fight in r14, moving across map border in r14 initiative
+     (targetable already in r13 but not crossing map border)
+     kill 1x light
+r15: nya light tar stryk
+     kill 1x light
+r16: lundqvist main har vänt om uppåt
+     kill 1x archer, 1x light, 
+r17: 
+     kill 2x light,    flee: 1x archer
+r18: begin   -eoe-                           ej deklarerat och flyttat lundqvist
+- eoe -
+
+
+s40:  lundqvist hool2 spideyhool                                      % 190918
+mailat ut:
+    höfta 25xp för 1x spellslinger, 2x light, 2x heavy, 1x lundqvist
+    de flyr direkt kommande rundor, spela för nerjakt, eller skippa?
+r18: start -eoe-    TODO: declare lundqvist, move up  ? skall de gå runt och omringa?
+    bryter barrikad, storspindel börjar flytta
+r19: maneuvering about
+r20: maneuvering
+     machete kutar fram och får ihjäl spellslinger
+     kizraz tar stryk
+r21: hård batalj i flaskhalsen
+r22: rövbank supersmask, fizzleflare släcker fackla
+     orc skriker, lundqvist+2 flyr !!
+r23: kill light
+r24: kill light
+r25: lundqvist vrålar reträtt !!!
+     halvtrasig archer på utsidan  ---  och goblanda med strup-kill
+- eoe -
+
+
+s41: grimgnash                                                          % 190925
+mail:  de skippar jaga ner lundqvist, 
+       de kommer istället försöka hitta grimgnash, skickar hemskelina
+spindelhäxans formler etc
+lootar en kul kudde, som man sover extra gott på, startar dagen med max stam +1
+d83 evening, post lundqvist fight
+looting
+campar i foothills SE
+d84: helar alla under morgonen
+travel mot höga berget
+hemskelina signallerar röksignaler
+säger att hon hittat välskött grotta, svavel, eld, scaary
+campar i foothills, hemskelina gömt hål
+d85: climb mountain
+hälften av folket flyr när de försöker komma in i grottan
+maz får gå ut och hämta dem igen
+de vandrar runt omkring i grottan 
+massa flyr
+r67 fight start, dragon awake
+r68 -- eoe --
+-- eoe --
+
+
+s42:  grimgnash                                                        % 191002
+d85 r68: grimgnash fight
+r69: tail swipe
+r70: flight  gap,  dragon wounded   (får ej dashat)
+r71: 
+r72: Old Maz är balettdansös och avoidar draksvansar och eldpiskor...
+r73:   använt 6 eld tot
+r76: möscha
+r77:                kommer elda eller möla över folket med W, dam3 pen99 push
+                    alla framför skall rulla psy i början av rundan
+                    nu har de märkt att han reggar
+--mail--
+    Fighten går bra, draken är skadad, alla psy-slag är med mod+3 så länge gubbarna har >50% hp. Detta klara ni väl av :)
+    10xp för att ni överlevt så väl hittills
+
+
+s43: grimgnash                                                          % 191009
+d85 r77:  grimgnash kommer elda eller rusa över folket med W, dam3 pen99 push
+          ev låta folket röra sig först, och sedan rusa dem så de inte har mp?
+          alla framför skall rulla psy i början av rundan, mod+3 (för att det går bra)
+          nu har de märkt att han reggar
+          Han är för skadad för Dash (? och flyg ?)
+          -- eoe -- i början av r77
+draken rushar, 
+r78: tail swipe
+r79: fire breath    2x templates
+r80: bites head off hemskelina
+     grapplebottom nästan eldar sönder kizraz och eldar upp toyboy
+r82: - eoe - beginning r82
+     draken backar och vrålar
+wounds list r67-76: 
+wounds : 8 , 7 , 8 , 3 , 8 , 2 , 4 , 3 , 0 , 0 , 4 , 1 , 1 , 3 , 3 , 24 , 14 , 3 , 3 , 5 , 2 , 2 , 4 , 1 , 14 , 3 , 3 , 1 , 5 , 5 , -2 , 0 , 0 , -2 , 8 , 2 , 6 , 4 , 0 , 2 , 5 , 5 , 3 , 2 , -10 , 4 , 3 , 7 , 3 , 0 , 0 , 7 , 4 , -10 ,
+
+
+s44: final goblin destiny, death to grimgnash                           % 191016
+d85 r82: - eoe - beginning r82
+     draken backar och vrålar,        sista 2 eld kvar (till ammo 10)
+r82-85: backar och vrålar
+r87: puts machete in box
+r88: flames,    fumbly r88-92 mod-5
+r92: grimgnash fails climb due to damage and fumbly, and crashes into the chasm
+wounds r77-81 : 5 , 2 , 4 , 3 , 4 , 1 , 4 , -10 , 6 , 1 , -10 , 5 , -10 , 5 , 1 , -10 , 5 , 4 , -10 ,
+hp adjust 73 down to 60
+=== END OF CAMPAIGN ===
+
+
+
+
+
+
+
+
+
+
+\subsection*{XX shopping - sales fail}
+
+\subsection*{XX patrols}
+
+
+
+
+
+\subsection*{XX mountain hools}
+
+The players invade hool1, without scouting either h1 or h2. They quickly start using diplomacy though, and only kill about half the opposition before the rest have given up and switched sides.
+
+Their diplomatic ace is "We have Women! We have Loot! Join Us!". Promises which are \emph{very} attractive to a poor half starved all male bandit gang high in the mountains.
+
+Then they manage to persuade the orc boss to stand in as sexual substitute for the deceased Gamling, and thus getting GammelTant in a much better mood when they arrive back to Hoom Hool without any new loot.
+
+The new orc boytoy and the promise of magical monster meat nearby is enough to get GammelTant to agree to travel to the New Hool with half of GamGang, leaving the rest in the Hoom Hool until she has made up her mind about the new place.
 
 \
 
-
-
-
-
-
-\subsection*{00 just another day at the office}
-
-Four players, 2x goblins each, around 90xp freshlings. Highly varied builds.
-Brought Hjalmar Hjälte and three wagons, two with swordsmen and one with an archer.
+Session 1: rounds 1-18 \\
+They approach when most of the bandit gang is asleep. They manage to persuade the watch guard at the mouth of the cave to join them with promises of women and loot. Then they attack into the cave. Players have 8 goblins around 150xp and easily take control of the west part of the cave, forming a strong defensive line.
 
 \
 
-First session: \\
-They started with felling a tree to block the road before the wagons show up, then spread out and hid. Waited until the wagon train arrived and two farmers got axes to chop up the tree and clear the road. Then they attacked at multiple fronts.
-
-Hjalmar Hjälte was ahead and got seriously hurt before the farmers and swordsmen could arrive to help out. He retreated, hid in a tree, and quaffed to be able to get back in the fight. The swordsmen and farmers started fighting, and the archer was harassed by a backstabbing sneak.
-
-Killed two farmers, disabled one goblin, hurt half the goblins to ca half hp.
-
-\
-
-Second session: \\
-They killed one of the swordsmen before he had the time to quaff. Hjalmar Hjälte killed one goblin and a support critter. Then HH fled with the surviving archer, swordsman, and farmer.
-
-All carts were captured along with one donkey, the other two escaped.
-
-\
-
-Loot: \\
-Awarded 10xp each for adventure and ca 30xp to share for opposition:\\
-\emph{HH:10xp, Swordsman:5xp*2, Archer 5xp, farmer 2xp*3}\\
-Misc loot from the wagons and some weapons and armour from the dead humans.
-
-\
-
-Followup: \\
-Hjalmar Hjälte survived together with a swordsman, an archer, and a farmer. Those characters travel back to Sleepy Cove and send word to the Lord of the region saying that the new goblin band is very dangerous.
+Session 2: rounds 19-23 \\
 
 
 
 
-\subsection*{01 robbery gone wrong}
 
-Starting with felling a tree and drag the trunk across the road.
+
+\subsection*{XX torture dungeon}
+
+
+
+
+
+
+
+\subsection*{02 kill the bandits}
+\label{playthroughkillthebandits}
+
+, so if the GamGang is quick to go on with "02 kill the bandits" the opposition will still be wounded. But instead the Heroes dilly dally and delay attacking the SturSkurk camp despite GammelTant's orders.
+
+
+They scout 
 
 \
 
-Session 1: \\
-Put up a robbery site in the NW part of the map, blocking the tight corner with a tree trunk they dragged there. Misc damages but no death. Cut loose a donkey to get hold of at least one wagon.\\
-SturSkurk Gang enters in r20 and is discovered at end of r21.\\
-r1-16 quick, r17-21 combat
-
-\
-
-Session 2:\\
-Just noticed SturSkurk Gang. Gamling is closest to them, mid way between SturSkurk and rest of GamGang. Gamling charges and dies in two rounds. The others retreat and regroup. They force the farmers and archers to flee, and kill a swordsman. They loot the wagon where they cut loose the donkey, and steal the other two wagons with donkeys when they flee.\\
-Gamling is lost of course, and one more. A few are at very low health.\\
-r22-28 combat, r29-31 flee
+Session XX:\\
 
 \
 
 Loot:\\
-Award ca 15xp for the adventure: Ca 10xp base, 5xp for getting away with some loot, 5xp if they manage to stop and loot the Wagoneer, 5-10xp if they force SturSkurk to flee.\\
-Award kill xp for everyone they kill or they force to flee. E.g: three wagons with farmers and escorts is worth around 24xp. Don't deduct if the Heroes flee, they are supposed to.
 
 \
 
 Followup:\\
-SturSkurk gang doesn't have any magical healing. Their wounds will heal at normal speed, so if the GamGang is quick to go on with "02 kill the bandits" the opposition will still be wounded. But instead the Heroes dilly dally and delay attacking the SturSkurk camp despite GammelTant's orders.
+
 
 
 
@@ -3885,6 +4702,14 @@ A long fall into the darkness of underworld is of course not enough to kill even
 
 
 
+
+
+
+
+
+
+
+
 \clearpage
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
@@ -3895,7 +4720,7 @@ A long fall into the darkness of underworld is of course not enough to kill even
 
 \raggedbottom
 
-The idea for this campaign had been slowly crawling in the back of my skull for quite a while when we were playing \emph{Edwin the Chromophobe} and \emph{Destroy the Altar} and I was preparing \emph{Turn off the Power}. I wanted to build a campaign for really crappy characters. Overdrive ridiculous. A goblin bandit gang was the obvious way to go.
+The idea for this campaign had been slowly crawling in the back of my skull for quite a while when we were playing \emph{Edwin the Chromophobe} and \emph{Destroy the Altar}. I wanted to build a campaign for really crappy characters. Overdrive ridiculous. A goblin bandit gang was the obvious way to go.
 
 Then I had a few years away from the game while moving around for work and love, and when I finally had the time and situation to pick up hosting the game again I had the opportunity to start with a fresh set of Heroes.
 

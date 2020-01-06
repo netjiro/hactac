@@ -32,12 +32,25 @@
 }
 
 
+% remove forced implicit vertical whitespace before and after verbatim environment
+\makeatletter
+\preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
+\makeatother
+
+
 \newcommand{\degrees}{$^\circ$~}
 \newcommand{\degree}{$^\circ$}
 \newcommand{\ca}{$\approx$}
 
 \newcommand{\vs}{$\backslash\ $}  % "versus" slash
 \newcommand{\bs}{$\backslash\ $}  % just backslash
+
+
+% want clear dash insert commands
+\newcommand{\dash}{-}     % just a normal hyphen dash  "-"
+\newcommand{\ndash}{--}   % n-dash "--"
+\newcommand{\mdash}{---}  % m-dash "---"
+
 
 %link new command names to the original font sizes,
 %for easier to remember smaller font size

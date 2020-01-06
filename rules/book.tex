@@ -190,6 +190,13 @@
 
 % local defines
 
+
+% remove forced implicit vertical whitespace before and after verbatim environment
+\makeatletter
+\preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
+\makeatother
+
+
 % need a nice easily visible TODO marker
 \newcommand{\todo}{\textbf{TODO:}~}
 \newcommand{\TODO}{\LARGE\textbf{TODO:}\normalsize~}
@@ -208,6 +215,13 @@
 \newcommand{\bs}{$\backslash\ $}  % just backslash
 \newcommand{\ca}{$\approx$}
 % without the last backslash space it would take two spaces to get a space in the text, but with it you will always get a space weather you want or not. This is weird.
+
+
+% want clear dash insert commands
+\newcommand{\dash}{-}     % just a normal hyphen dash  "-"
+\newcommand{\ndash}{--}   % n-dash "--"
+\newcommand{\mdash}{---}  % m-dash "---"
+
 
 %link new command names to the original font sizes,
 %for easier to remember smaller font size

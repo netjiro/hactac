@@ -369,26 +369,35 @@ A very good +6 backstab attack gives dam+9 pen+3 \\
 A perfect +9 backstab attack gives dam+12 pen+4 \\
 And so on...
 
-The final damage done by the backstab + weapon attack is based on the success of the weapon attack roll. Add the rolled backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total of damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen[2].
+The final damage done by the backstab and weapon attack is based on the success of the weapon attack roll. Add the rolled backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total of damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen[2].
+
+Backstab attacks gain a bonus on angling/flanking positioning. \\
+Attacking at 90\degrees from target facing is mod+1, \\
+at 135\degrees it's mod+2, \\
+at 360\degrees it's mod+3. \\
+For hex grids it's 120\degrees mod+2 and 180\degrees mod+3, but no mod for 60\degree. \\
+Note: The bonus only applies to the backstab roll, not the following weapon attack roll.
 
 When combined with accurate, consistent, or precise, backstab is brutally lethal even with small weapons.
+
+Backstab is more difficult to perform with larger and slower weapons.\\
+A fast+1 or fast+2 weapon is mod=0 for the backstab roll.\\
+A normal 3ap weapon is mod-1.\\
+A slow-1 4ap weapon is mod-2.\\
+A very slow-2 5ap weapon or slower are mod-3.
 
 %NOTE 191229: changed backstab from 2x, 3x, ... damage to fixed extra damage. That way the difference is most notable with smaller weapons, and it's not insane with heavier weapons. Backstab with the heavy 2h axe could produce 50dam or so...
 %todo remove note later on when stabilised
 
 
-\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike agaist the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar.
+\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike agaist the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar. The sidestabber can choose to roll and resolve the sidestab attack at the same time as the ally's attack, giving the target the choice of which attack to parry first, or after the ally's attack and target's reaction, risking that the target moves away during his reaction to the ally's attack before the sidestab attack can be made.
+
+Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the +1ap. The extra damage from sidestab is the same as from backstab but without the penetration bonus. Resolve final damage just like with backstab. Sidestab gets the same angling/flanking positional bonuses as backstab, and sidestab takes the same mods as backstab for larger and slower weapons.
 
 Note: a sidestab is not automatically a synchronised attack. A target can still parry a sidestab just like a normal attack. It stacks with synchronise just like a normal attack.
 
-Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the +1ap.\\
-A successful +0 sidestab attack gives dam+3 \\
-A good +3 sidestab attack gives dam+6 \\
-A very good +6 sidestab attack gives dam+9 \\
-A perfect +9 sidestab attack gives dam+12 \\
-And so on...
-
-Resolve final damage just like with backstab.
+%NOTE 200102: the sidestab can be performed multiple times against an aware target, not just once like backstab. Thus sidestab is set at cost scf 1.0 instead of 0.5 like backstab. Sidestab is situational on coordination whereas backstab relies on sneaking and positioning.
+%todo remove the note when stable
 
 
 \skill{Skill cost special "tank":} Can reduce some penalties of heavy armour, while keeping the good stuff. Penalties and requirements of the armour is reduced a bit depending of the level of tank, e.g: mods to dexterity, encumbrance, movement, vision, strength requirements, time to strap on/take off, etc.\\
@@ -740,7 +749,8 @@ Stealing item in pocket/belt mod=0 \\
 Stealing item hanging free on clothing/belt mod+3
 
 
-\skill{Skill scf 0.5 "locks \& traps":} allows the character to pick locks, disarm traps, or set them, and handle other interesting gadgets, mechanisms, mechanical thingamajings and mechanics which the character might have knowledge of.
+%todo change skill name to "mechanismus" or something similar sounding?
+\skill{Skill scf 0.5 "locks \& traps":} allows the character to pick locks, disarm traps, or set them, and handle other interesting gadgets, mechanisms, mechanical thingamajings and mechanicularities which the character might have knowledge of.
 
 Picking a lock usually takes 1d4 rounds or so, depending on the lock. Subtract one round for a good success, and so on. Some locks take longer or have mods on them depending on difficulty. It is also possible to lock a lock.
 Most serious locks require the use of lock picks and special tools. Simple locks might work with improvised or other equipment.
@@ -751,16 +761,16 @@ A regular fail means you didn't manage to disarm the trap, but didn't trigger it
 Setting traps takes time. Each kind of trap has its own time requirement. A good success+3 reduces the time by 25\%, A very good success+6 reduces the time by 50\%, and an excellent success+9 reduces the time by 75\%.
 
 
-\skill{Skill scf 1.0 "McGyverism":} is the ability to turn miscellaneous everyday objects and debris into improvised useful gadgets and contraptions. The use of this skill is very much dependent on GM discretion.
+\skill{Skill scf 1.0 "McGyverism":} is the ability to turn miscellaneous everyday objects and debris into improvised useful gadgets and contraptions. The use of this skill is very much dependent on GM discretion and player inventiveness.
 
 All contraptions are built from "stuff", using "tools". A suggested contraption is given "stuff" and "tools" requirements by the GM, along with time and difficulty. This is the minimum requirements to be able to complete the task on regular time and with the expected result. Any lacking points "stuff" is mod-1 and any lacking points of "tools" is mod-3.
-All the required "stuff" is consumed during construction but none of the tools.
+All the required "stuff" is consumed during construction but tools are not.
 
-Gathering material from the surroundings is common. Use the find skill to see how much "stuff" can be scrounged from the surrounding 3x3sq area. This is heavily influenced by the type of surroundings. Gathering time is 1r per enc stuff or one action per enc stuff if the character can quickloot.
+Gathering material from the surroundings is common. Use the find skill to see how much "stuff" can be scrounged from the surrounding 3x3sq area. This is heavily influenced by the type of surroundings. Gathering time is 1r per enc stuff or one action per enc stuff if the character can quickloot. GM discretion.
 
-It is a good idea to pack "stuff" to be able to use for the contraptions. Each superfluous enc of "stuff" gives a mod+1 to the roll. Stuff is a special type of equipment that is not really useful for much else. Some regular items can qualify as stuff, but only at half enc. E.g: rope, twine, hide/skin, staffs/spears/knives, cooking utensils, spices, etc.
+It is a good idea to pack "stuff" to be able to use for the contraptions. Stuff is a special type of equipment that is not really useful for much else. Some regular items can qualify as stuff, but only at half enc. E.g: rope, twine, hide/skin, staffs/spears/knives, cooking utensils, spices, etc. Paying a bit extra it's possible to buy really good stuff, for a mod+1 to the roll, if you've bought enough.
 
-Tools help. Each superfluous enc of "tools" give mod+1 to the McGyverism roll. Some regular items qualify as "tools" but at half enc. E.g: knives, etc. However, no items can qualify as both stuff and tools at the same time.
+Tools help. Some regular items qualify as "tools" but at half enc. E.g: knives, etc. However, no items can qualify as both stuff and tools for the same roll. High quality tools can impart a mod+1 to the roll, if you have enough.
 
 After completion and possible use it is possible to recover some of the "stuff" used in construction. Roll again for McGyverism: \\
 Success+0: recover 25\% of the materials in enc rounds. \\
@@ -771,9 +781,10 @@ The character can choose which items of "stuff" to recover first if any specific
 
 Example stuff and tools requirements: \\
 small trap: 1d4 enc stuff, 1 enc tools \\
-temporary weapon: 5/success enc stuff \\
-small bridge: sq$^2$ * 10 enc stuff, 2 + sq enc tools.\\
-trap disarm gadget: 1d3 enc stuff, 1d3 enc tools
+temporary weapon: 5/success enc stuff, 1 enc tools \\
+small bridge: sq * 10 enc stuff, 2 + sqrt(sq) enc tools \\
+trap disarm gadget: 1d3 enc stuff, 1d3 enc tools \\
+simple trap: 1d6 enc stuff, 1d4 enc tools
 
 
 \skill{Skill scf 0.5 "track":} is finding stuff in the wilderness. It is used for following a trail for example, and to forage for food when the provisions run out.
@@ -1315,6 +1326,7 @@ cost 30xp switching is a very fast (1ap) action
 This doubles the ap cost of normal (3ap*2=6ap) or slower actions, and adds 3ap to fast (2ap+3ap=5ap) or very fast (1ap+3ap=4ap) actions.
 Full round actions are also doubled, e.g. shooting a bow normally takes 2r, and with careful it costs 4r.
 
+\TODO clarify that careful cannot be used to switch a regular 3ap action into a full round careful action without any penalties for the extra required ap.
 
 
 

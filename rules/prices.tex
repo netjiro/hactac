@@ -22,8 +22,8 @@ Some folk use beads, feathers, shells, teeth, etc. But since those critters ofte
 
 
 %-------------------------------------------------------------------------------
-%E Q U I P M E N T   P R I C E   L I S T
-%---------------------------------------
+% E Q U I P M E N T   P R I C E   L I S T
+%----------------------------------------
 
 \section*{Listed and actual prices}
 %----------------------------------
@@ -72,7 +72,7 @@ Not all equipment or properties can be boosted like this. An abs 2 leather armou
 
 % try keeping the price list looking good.
 % just insert the line blow to allow page break at a good place
-%\end{verbatim} \end{samepage} \pagebreak[1] \begin{samepage} \begin{verbatim}
+%\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 
 
 \small
@@ -155,6 +155,9 @@ large 1h hammer      0 3 0       1.2   tools, cheaper in bulk
 2h hammer            0 4 0       1.4   tools, cheaper in bulk
 large 2h hammer      1 5 0       2.2   tools, cheaper in bulk
 
+pick axe             0 4 0       1.5   tools, cheaper in bulk
+heavy pick axe       0 7 0       2.5   tools, cheaper in bulk
+
 1h flail             3 0 0       0.8
 large 1h flail       5 0 0       1.2
 2h flail             6 0 0       1.6
@@ -170,6 +173,8 @@ long chain flail     5 0 0       1.2
 %\end{verbatim} \end{samepage} \normalsize
 \pagebreak[1]
 
+
+\TODO remove old price list, go through to carry things over to new list above
 
 
 %\small \begin{samepage} \begin{verbatim}
@@ -272,9 +277,10 @@ knife                0 0 5       0.25
 first aid kit        0 5 0       1.5    has 10 uses, refill for 3s
 medical kit          2 0 0       2.0    has 10 uses, refill for 10s
 
-simple food 1week    0 0 1       5.0
-food & room 1day     0 0 1       ---
-provisions 1day      0 0 1       0.5
+simple food 5 days   0 0 1       5.0    simple food weigh 1enc per day's ration
+food & room 1 day    0 0 1       ---    common room sleeping, simple food
+provisions 1 day     0 0 1       0.5
+travel rations 1d    0 0 5       0.3    high quality travel food, last a while
 1l beer                  1       0.5
 10l barrel             1 0       5.0
 bottle of wine           2       0.5
@@ -297,7 +303,7 @@ belt 2 items 3.0 enc 0 0 8       0.3 (only when packed)
 belt 3 items 3.5 enc 0 1 3       0.4 (only when packed)
 belt 4 items 4.0 enc 0 2 0       0.5 (only when packed)
 
-water skin (1day)        3       1.0
+water skin (1 day)       3       1.0
 
 sack 5 enc               1       1.0 + 0.75 * load (0.25 packed)
 sack 10 enc              2       1.5 + 0.75 * load (0.5 packed)
@@ -311,21 +317,21 @@ saddle bag 5 enc       2 0       2.0 + 0.50 * load
 saddle bag 10 enc      4 0       3.0 + 0.50 * load
 pack bag 25 enc        6 0       5.0 + 0.50 * load      tot fully loaded = 17.5
 saddle etc             5 0       7.0
-donkey               0 7 0       max 10 steps/day     carries 50enc
-pony                 1 0 0       max 10 steps/day     carries 50enc
-horse                3 0 0       max 10-15 steps/day  carries 75enc
-heavy horse          5 0 0       max 10-15 steps/day  carries 100enc
-fast horse          10 0 0       max 20-25 steps/day  carries 60enc
-war horse           25 0 0       max ~15 steps/day    carries 90enc
-More expensive horses can go further per day, and might give bonuses to ride.
+donkey               0 7 0       10 leagues/day     carries 50enc, ride-3
+pony                 1 0 0       10 leagues/day     carries 50enc
+horse                3 0 0       10-15 leagues/day  carries 75enc
+heavy horse          5 0 0       10-15 leagues/day  carries 100enc
+fast horse          10 0 0       20-25 leagues/day  carries 60enc
+war horse           25 0 0       ~15 leagues/day    carries 90enc
+More expensive horses can travel further per day, and might give bonus to ride.
 Cheaper horses get tired faster and might give negative mods to ride.
 
-hand cart            1 0 0       can pull 10*(str-2) enc (max 50, str7)
-small cart           2 0 0       1 pony/donkey, 1 ppl / 100 enc
-cart                 5 0 0       1 horse, 2 ppl / 200 enc
-wagon               10 0 0       1-2 horses, 2-6 ppl / 300 enc
-large wagon         15 0 0       2-4 horses, 4-10 ppl / 500 enc
-carriage            30 0 0       2-4 horses, 1-2 drivers 4-6 ppl / 300 enc
+hand cart            1 0 0       load 10*(str-2) enc (max 50, str7) size 1x1
+small cart           2 0 0       1 pony/donkey, load 100 enc, size 1x1 or 2x2
+cart                 5 0 0       1 horse, load 200 enc, size 2x2
+wagon               10 0 0       1-2 horses, 2-6 ppl, load 300 enc, size 2x2 / 2x3
+large wagon         15 0 0       2-4 horses, 4-10 ppl, load 500 enc
+carriage            30 0 0       2-4 horses, 1-2 drivers 4-6 ppl, load 300 enc
 
 rope 10m             0 0 2       1.0 climb+3
 twine 50m            0 0 2       0.25
@@ -359,7 +365,7 @@ Hiring people to help slay monsters or guard the escape route is somewhat expens
 
 It is also possible to hire people on speculation, where they get full share of the loot but no up front payment, or on fixed pay where they get no part of the loot, but much higher up front salary.
 
-Hirelings also get a full share of the XP for the adventure. This is really expensive, and sure to keep the players from hiring hordes of archers or double lines of soldiers to toss at the critters they meet.
+Hirelings also get a full share of the XP for the adventure. This is sure to keep the players from hiring hordes of archers or double lines of soldiers to toss at the critters they meet.
 
 
 
@@ -450,12 +456,12 @@ thermos              1 0 0       0.5   for that hot cup of coffee
 compartmentalised    backpack price +50% per compartment
 back pack                              for faster rummaging
 
-lock picks             5 0       0.5
-lock picks           2 0 0       0.5   mod+3 to "pick lock"
+lock picks             5 0       0.2
+fine lock pick       2 0 0       0.2   mod+3 to pick lock
 
 grappling hook       1 0 0       0.3   foldable, takes 1r to fold/unfold.
 
-tool box             2 0 0       2.0   mod+3 to "trap"
+tool box             2 0 0       2.0   mod+3 to handling trap
 
 cave cart            2 0 0
 
@@ -484,9 +490,9 @@ glow fly             0 2 0  training command mod-3 +1/s, glow strength +1/s
 
 Master crafted weapons can be purchased as "special" equipment, and usually cost 5x-10x the list value of the weapon plus a few gold as baseline cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
 
-A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of base value plus an extra gold or two. A custom weapon should not cost less than 2g.
+A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of base value plus an extra gold or two. A custom weapon should not cost less than 3g.
 
-Then it's possible to make a custom master crafted weapon, combining custom requirements with master crafted bonuses, but at even higher prices.
+Then it's possible to make a custom master crafted weapon, combining custom requirements with master crafted bonuses, but at even higher prices, 10g minimum.
 
 It probably takes a week for a master craftsman to make high quality or custom weapon, provided he has enough of the high quality materials available. Otherwise there are always heroes around who can take it upon themselves to go out and find that rare lump of sky iron, or barrel of basilisk blood.
 
@@ -502,7 +508,7 @@ The cost of a custom made magical single use or multi use magical item can be es
 E.g: a wand of 4 charges of 3 mana shock bolts would cost approximately: \\
 2 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 13.5 gold
 
-Permanently magical items are classified as "exotic" and much more expensive.
+Permanently magical items are classified as "exotic" and are much more expensive.
 
 
 
@@ -546,7 +552,8 @@ blast off            2 0 0       0.25  restores 5+1d5hp and all stamina in 5r
 
 exploway             4 0 0       0.25  maginade: stun 15-3/sq from target.
 
-time fly             5 0 0       0.1   rewinds one action, ignores initiative.
+time fly             5 0 0       0.1   instant rewinds time one action, 
+                                       ignores initiative.
 
 sentinel base        5 0 0       5.0   15 charge ghost warrior
                                        skill 8, dam 4
@@ -570,14 +577,15 @@ medicinal serpent       50g  training command mod-3 +1/g
 %\end{samepage}
 \normalsize
 
-The very rare legendary sword smiths and weapon wrights can make weapons of exceptional quality and properties, at exuberant prices. While a master craftsman can imbue a significant abs bonus and +1 modifiers, the legendary makers can make weapons with double abs and mod+2 and or dam+2. Some can even remove a slow-1 rating or add a fast+1, or modify parry and toparry stats, increase reach, etc.
+The very rare legendary sword smiths and weapon wrights can make weapons of exceptional quality and properties, at exuberant prices. While a master craftsman can imbue a significant abs bonus and perhaps +1 modifiers, the legendary makers can make weapons with double abs and mod+2 and or dam+2. Some can even remove a slow-1 rating or add a fast+1, or modify parry and toparry stats, increase reach, etc.
 
 All such weapons are custom made with damage and strength requirements suited for the person who orders the work. It takes some time to prepare weapons like these, probably months, and the work cannot be rushed.
 
 Be sure that the manufacturing of artefacts like this will require many odd and rare materials and ingredients, which can be difficult to come by, and might require some adventuring...
 
-The total cost including work, materials, and ingredients will come to at least 30x the base value of the weapon plus a minimum of 10 gold base line cost. This can be reduced to 15-20x by adventuring to procure some of the stuff instead of forcing the craftsman to buy it, if it can even be found in the market or region.
+The total cost including work, materials, and ingredients will come to at least 30x the list value of the weapon plus a minimum of 10 gold base line cost. This can be reduced to 15-20x by adventuring to procure some of the stuff instead of forcing the craftsman to buy it, if it can even be found in the market or region.
 
+\
 
 Permanently magical items are always custom made, and very exotic equipment.
 First of all the item to be enchanted needs to have enough magical capacity to withstand the forces of the magic to be embedded within it. This means that normal steel will almost never suffice, and more exotic and expensive materials will have to be used in the making of the item itself.
@@ -593,7 +601,7 @@ Here follows the magical capacity of some materials:
 material          capacity      abs  enc  dam   price
 
 wood              1.0    1      1.0  1.0  1.0    1.0   (for common use)
-nalwood           5.0    5      1.0  1.0  1.0   10.0   (instead of wood)
+gnarlwood         5.0    5      1.0  1.0  1.0   10.0   (instead of wood)
 steel             1.0    1      1.0  1.0  1.0    1.0   (for common use)
 mage steel        5.0    5      1.0  1.0  1.0   10.0   (instead of steel)
 

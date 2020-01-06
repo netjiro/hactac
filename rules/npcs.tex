@@ -18,7 +18,13 @@
 \chapter*{NPCs}
 \chaptermark{NPCs}
 
-NPCs (Non Player Characters) are the ususal common folk, the watchmen and soldiers, the farmers and merchants, as well as the unique individuals that the Heroes encounter on their travels.
+NPCs (Non Player Characters) are the ususal people the heroes come across, the watchmen and soldiers, the farmers and merchants, as well as the unique individuals that the Heroes encounter on their travels.
+
+\
+
+Unless otherwise specified, all equipment should be considered to be of regular quality and stats, as specified in the equipment chapter. The equipment stats are often shortened to just include the necessary, for clarity. Same with spells.
+
+\
 
 Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
 
@@ -35,13 +41,12 @@ int       vision
 psy       mana
 per       ap
 cha       xp
-----------
+-----------------------------------
 skills
-----------
+-----------------------------------
+money and equipment
+-----------------------------------
 spells
-----------
-equipment
-money
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
@@ -56,12 +61,12 @@ dex       m w r d
 int       mana
 psy       initiative
 per       ap
-----------
+-----------------------------------
 skills
-----------
+-----------------------------------
+money and equipment
+-----------------------------------
 spells
-----------
-equipment
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
@@ -75,21 +80,15 @@ str       hp abs
 dex       m w r d
 psy       initiative
 per       ap
-----------
+-----------------------------------
 attacks
 skills
+spells
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
-
-
-
-
-
-%--------|---------|---------|---------|---------|---------|---------|---------|
-%       10        20        30        40        50        60        70        80
 \subsubsection*{Note on maptool: token size}
 Most standard size humanoids like humans, elves, dwarves, orcs should be set to  normal size tokens. Halflings and goblins should be set to small size, and runts should be set to tiny size.
 
@@ -99,71 +98,182 @@ Most standard size humanoids like humans, elves, dwarves, orcs should be set to 
 
 
 
+%===============================================================================
+% N P C   S T A N D A R D   A V E R A G E   S T A T S
+%----------------------------------------------------
+
+\phantomsection \addcontentsline{toc}{section}{average NPC stats}
+\goodbreak \small \begin{samepage} \begin{verbatim}
+================================================================================
+N P C   S T A N D A R D   A V E R A G E   S T A T S
+---------------------------------------------------
+
+These are the averages for non-important NPCs.
+Do apply some variation when using them.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Human                       (token)
+-----------------------------------
+str  5    hp10 abs0
+dex  5    m1 w3 r6 d9
+con  5    stamina 5
+int  5    vision 20 arc 225
+psy  5    mana 5
+per  5    ap 3
+cha  5    xp 110
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Dwarf                       (token)
+-----------------------------------
+str  7    hp12 abs0
+dex  4    m1 w2 r4 d6
+con  7    stamina 8
+int  6    vision 18 arc 165 dusk & infra
+psy  6    mana 5
+per  5    ap 3
+cha  4    xp 115
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Elf                         (token)
+-----------------------------------
+str  4    hp8 abs0
+dex  6    m2 w4 r8 d12
+con  5    stamina 7
+int  7    vision 25 arc 265 night
+psy  6    mana 8
+per  6    ap 4
+cha  6    xp 120
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Halfling                    (token)
+-----------------------------------
+str  3    hp7 abs0
+dex  6    m2 w3 r5 d8
+con  4    stamina 5
+int  5    vision 20 arc 315
+psy  5    mana 5
+per  6    ap 4
+cha  6    xp 110
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Orc                         (token)
+-----------------------------------
+str  7    hp13 abs0
+dex  5    m2 w4 r6 d8
+con  7    stamina 7
+int  4    vision 15 arc 150
+psy  4    mana 3
+per  5    ap 3
+cha  3    xp 100
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+===================================
+Goblin                      (token)
+-----------------------------------
+str  3    hp5 abs0
+dex  7    m1 w3 r5 d7
+con  3    stamina 3
+int  3    vision 20 arc 225
+psy  3    mana 1
+per  6    ap 5
+cha  2    xp 90
+----------
+skills
+----------
+spells
+----------
+equipment
+money
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+
+
+
+
+
+
+
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 \goodbreak
-\phantomsection\addcontentsline{toc}{section}{city watch and soldiers}
+\phantomsection\addcontentsline{toc}{section}{common folk}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
-W A T C H   &   S O L D I E R S
--------------------------------
+C O M M O N   F O L K 
+---------------------
 
-The brave who protect all the common folk.
-
-
-Patrol Soldier
-================== human ===================
-str  6                    hp 12(15) abs 2
-dex  5                    m1 w4 r7 d10
-con  7                    stamina 7
-int  4                    vision 24 day 256  human good
-psy  4                    mana 15
-per  6                    action points 3
-cha  4                    xp 3 (110)
---------------------------------------------
-Common     7
-avoid      3
-throw      2
-veteran    1    1.0  1
-crossbow   5    0.8  20
-spear      7    0.8  39
-shield     6    0.7  25
-travel     4    0.5  8
-track      3    0.5  4
-phalanx    x    spc  10
-ride       5    0.5  12  << group leader only
---------------------------------------------
-yield +4
-off balance
---------------------------------------------
-money: 0 gold, 2 silver, 12 copper
-
-spear      7
-1h/2h  dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
-       str 4 (max +2 str damage bonus, max+2 penetrating bonus)
-       finesse-4/-6
-
-shield     8(5)
-       abs 10, parry+3,
-       str 4
-       Ranged attacks mod-2 when in the way.
-       Hiding behind it (3ap) ranged mod-4
-       tackle mod+1
-
-crossbow   5
-       dam 5, penetrating 1,
-       range 12, short +1, long -3, extreme -6,
-       str 3 (no str bonus)
-reload 6ap if reloading with 0ap successful quick draw roll for quiver
-reload 1r if reloading from quick draw quiver
-reload 2r if reloading from accessible quiver
-first shot  mod=0 1r
-first aimed mod+1 2r
-first quick mod-3 3ap
-first snap  mod-6 2ap
---------------------------------------------
+The farmers, merchants, beggers, barmaids, and other regular people just going
+about their lives, happening to cross paths with the Heroes in their travels.
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -174,9 +284,9 @@ str  5                    hp 10 abs 0
 dex  5                    m1 w3 r6 d9
 con  5                    stamina 5
 int  5                    vision 20 day 180, human average
-psy  5                    mana 5
+psy  5                    mana 0
 per  5                    action points 3
-cha  5                    xp 112
+cha  5                    xp ca 100, worth 2xp
 --------------------------------------------
 Common 6, counting 2, haggle 4
 brawl 3, throw 3
@@ -185,7 +295,6 @@ avoid 5, yield +3, off balance
 ride 3, animal command 3
 --------------------------------------------
 money: 0 gold, 1d3 silver, 1d10 copper
-
 carries a knife and an axe/spear/bow
 --------------------------------------------
 \end{verbatim} \normalsize \end{samepage}
@@ -198,218 +307,109 @@ carries a knife and an axe/spear/bow
 
 
 
+
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
 \goodbreak
-\phantomsection\addcontentsline{toc}{section}{TODO: other ppl}
+\phantomsection\addcontentsline{toc}{section}{city watch and soldiers}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
------------------------------------
+W A T C H   &   S O L D I E R S
+-------------------------------
+
+The (not so) brave who protect all the common folk.
+
+The town watch is usually found in small groups. They are careful not to get 
+into any heavy trouble and will run away and sound the alarm as soon as they 
+feel any significant danger. Then come back in greater numbers.
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
+============== Watchman, human =============
+str  6                    hp 12 abs 1
+dex  5                    m1 w3 r6 d9
+con  4                    stamina 5
+int  4                    vision 24 day 256  human good
+psy  3                    mana 0
+per  5                    action points 3
+cha  6                    xp 3 (ca 110), worth 3xp
+--------------------------------------------
+Common 7, gossip 7, haggle 4
+spear 6, shield 5, phalanx
+brawl 7, throw 5
+avoid 5, yield+3, off balance
+veteran 2, quick draw 2
+--------------------------------------------
+money: 0 gold, 1d3 silver, 5+1d10 copper
+All equipment is standard of normal quality, see rules:equipment for full stats.
+quick draw: spear, shield
+
+spear 6, mainly 1h + shield, 1h/2h
+    dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
+small shield 7(5), abs 8, parry+2, tackle+1
+    ranged attacks mod-2 when in the way,
+    hiding behind it (3ap) ranged mod-4,
+leather armour   abs 1
+--------------------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
+A patrol group is usually 2-10 men strong, with at least one horse. They fight 
+together as a group and are quick to flee if they can't see a victory without 
+significant losses. Their main mission is to handle small things and report any 
+larger force so the rest of the law or military can handle it.
+
+A Patrol Group has tents, cook pot, lamp, 1d200r oil, horse, saddle, 
+saddle bags, rope, 2d3 prisoner hand/foot locks and chains, travel rations 
+for 1d3 days, 1d3 snares. Perhaps some extra spears, shields, ammunition.
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
+========== Patrol Soldier, human ===========
+str  5                    hp 14 abs 2
+dex  4(5)                 m1 w4 r7 d9(10)
+con  7                    stamina 7
+int  4                    vision 24 day 256  human good
+psy  4                    mana 0
+per  5(6)                 action points 3
+cha  4                    xp 3 (ca 110), worth 4xp
+--------------------------------------------
+Common 7, gossip 5, haggle 3
+crossbow 5, spear 7
+shield 5, phalanx
+brawl 5, throw 4
+avoid 3, yield+3, off balance
+travel 4, track 3, ride 5
+veteran 1, quick draw 4
+--------------------------------------------
+money: 0 gold, 1d3 silver, 5+1d10 copper
+All equipment is standard of normal quality, see rules:equipment for full stats.
+quick draw: quiver, crossbow, spear, shield
+
+spear 7, mainly 1h + shield, 1h/2h
+    dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
+shield 8(5), abs 10, parry+3, tackle+1
+    ranged attacks mod-2 when in the way,
+    hiding behind it (3ap) ranged mod-4,
+crossbow 5, dam 5, pen 1, range 12, 30 bolts quiver
+    shot 1r mod=0, aimed mod+1 2r, quick mod-3 3ap
+    reload 1r from quick draw quiver
+chain mail abs 2, dex-1, dash-1, per-1
+
+Travels with bedroll, flint and steel, knife, water skin.
+--------------------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-
-
-
-
-
-
-%--------|---------|---------|---------|---------|---------|---------|---------|
-%       10        20        30        40        50        60        70        80
-%\pagebreak[1]
-\goodbreak
-%\phantomsection \addcontentsline{toc}{subsection}{lizard men}
-\phantomsection \addcontentsline{toc}{section}{other ppl}
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-================================================================================
-O T H E R   P P L
------------------
-bla bla bla
-
-
-===================================
-asfasdf
------------------------------------
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-===================================
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-
-
-
-
-
-%--------|---------|---------|---------|---------|---------|---------|---------|
-%       10        20        30        40        50        60        70        80
-%\pagebreak[2]
-\goodbreak
-\phantomsection\addcontentsline{toc}{section}{other ppl}
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
-================================================================================
-O T H E R   P P L
------------------
-bla bla bla
-
-
-===================================
-asfasdf
------------------------------------
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
------------------------------------
-\end{verbatim} \normalsize \end{samepage}
-
-\
 
 
 
@@ -420,36 +420,6 @@ asfasdf
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-
-\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%-------------------------------------------------------------------------------
-% N P C s
-%--------
-
-
-
-
-
-
-
 
 %-------------------------------------------------------------------------------
 % H I R E L I N G S
@@ -797,8 +767,11 @@ money 1+1d2g, 5+1d10s, 10+1d20c
 
 
 
-TODO: ---------------------------------
+
+
+
 \clearpage
+\TODO ---------------------------------
 
 \todo swordsman 500
 

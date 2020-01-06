@@ -65,6 +65,8 @@ You can find some example Heroes at various experience levels in the "characters
 
 Here is the basic character sheet layout. It has already been explained above, in the "rules:character" statistics sheet section.
 
+\
+
 \goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 name                        (token)
@@ -91,13 +93,9 @@ money ( g s c )
 %------------------------------------
 Further down in this file there are lists of different races and their specific stat rolls. Note that you may use the "hero" version of the rolls if you want, and that you may roll movement instead of choosing the race standard if so desired.
 
-The GM should decide how many times a player is allowed to re-roll when creating characters. However, I suggest allowing the players to roll more humans than dwarves, elves, and orcs. For example, allow the player to roll one elf, or two dwarves or orcs, or four humans, then select the one he wants to play. The humans are less powerful than some of the other races, although more balanced among the stats. By allowing the player to roll more alternatives this power deficiency is balanced a bit.
+The GM should decide how many character sets a player is allowed to re-roll when creating characters. However, I suggest allowing the players to roll more humans than dwarves, elves, and orcs. For example, allow the player to roll three humans or goblins, but only two dwarves, elves, orcs, halflings. Then select the one he wants to play. The humans and goblins are less powerful than some of the other races. By allowing the player to roll more alternatives this power deficiency is balanced a bit.
 
 To make things simple I suggest using the \verb|rollchars.py| script. Just change the number of total characters to choose from and run the script. It will roll a selection of characters from all races.
-
-%You may roll as many characters as you want, when rolling manually, one character at a time. You may interrupt and abort the foetus at any point, we are very pro-choice here you see.
-
-%You man also use the \verb|rollchars.py| script which rolls 10 characters of each race, but only use that once, and choose the one you want among the 60 generated.
 
 
 \subsection*{Buying skills}
@@ -163,12 +161,12 @@ Improving the starer kit can be done by spending money. Look through the equipme
 Some interesting equipment to purchase can be: \\
 light source: torch, lamp, candles, etc. \\
 fire tools: flint and steel, coal box, etc. \\
-food and water \\
+food and wine, and a waterskin or two. \\
 sacks or bags for loot. \\
 backpack for easy carrying of equipment. \\
 rope to help people climb up out of trap pits. \\
 grappling hook if no-one is left outside the pit. \\
-pick axe
+pick axe for getting out of the collapsed tunnel...
 
 Some character backgrounds would allow them to start out rich, and with some expensive equipment, but then it should come with a serious down side. Perhaps the princelings manservant is an evil backstabber, plotting with the local highway robbers to steal everything and kill the little snot in the process?
 
@@ -215,8 +213,6 @@ For my campaigns I've started using the second option and simply use \verb|rollc
 
 \
 
-\
-
 
 % =============================================================================
 \TODO The race Hero roll listings below are not updated yet! Refer to, and use \verb|rollchars.py| as up to date. And see \verb|races| listing for summary.
@@ -224,8 +220,10 @@ For my campaigns I've started using the second option and simply use \verb|rollc
 
 \
 
-\goodbreak
-\small \begin{samepage} \begin{verbatim}
+
+\small
+
+\goodbreak \begin{samepage} \begin{verbatim}
 ===================================
 human                       (token)
 -----------------------------------
@@ -436,7 +434,7 @@ A couple of more experienced characters can also be found after the player and n
 %----------------------------------------
 This is of course the main purpose of the exercise, to be able to play interesting adventures and string them together into longer running campaigns. Several adventures were available for download from the rptools / maptool gallery when that service was still up. I'll see if I can put them together again and push them somewhere. In the meantime all adventures (in whatever state of completion or decrepitude) are available from the author.
 
-This project is designed mainly for short evening sessions, two to four hour sessions of gaming on weekday evenings. The guidelines below reflect our experience from this kind of game scheduling.
+This project is designed mainly for short evening sessions, two to three hours of gaming on weekday evenings. The guidelines below reflect our experience from this kind of game scheduling.
 
 Balancing character progression has been shown to be difficult for many game designers and is often poorly done in many well known adventure and table top games. By now we have over 150 game sessions under the belt, playing around 25 different characters varying between 100-1000xp. The general quadratic cost of skill progression has been shown to work well for giving balanced mid and late game play. We have not yet played much with characters over 1000xp, so there is not enough data for very experienced heroes.
 
@@ -449,7 +447,7 @@ Consider giving full or partial kill xp also for monsters that were avoided, sca
 
 It could also be a good idea to set a minimum base line of ca 5xp or so per session regardless of accomplishments. That way there is always a slow progression ticking away, but nothing game breaking.
 
-XP is of course not the only reward. Money and equipment is also common. It is usually a good idea to keep the heroes poor most of the time with short bursts where they can roll in gold. A Quaff or mana potion should always be expensive investments, and not just stuff you buy to pad the equipment list to the encumbrance limit.
+XP is of course not the only reward. Money and equipment is also common. It is usually a good idea to keep the heroes poor most of the time with short bursts where they can roll in gold. A Quaff or mana potion should always be an expensive investment, and not just stuff you buy to pad the equipment list to the encumbrance limit.
 
 Silver coins close to XP reward is a decent balance for everyday adventuring, with more lavish pay-outs from some adventures. A lot of "civilised" monsters carry some coin, and their equipment is usually worth a little bit even if it is in really poor shape or of orcish origin. This should be taken into account when calculating rewards if the players are known to scavenge.
 
@@ -462,166 +460,4 @@ I once did the \emph{huge} mistake of placing a 2ap 2h sword in a campaign. I'll
 Heroes will die occasionally, it's an occupational hazard. When that happens let the player roll a new one and have it inherit some of the XP from it's predecessor. E.g: First Fred dies after gaining 50xp from the first few adventures. Second Sam can then be built with +30xp inherited? Discuss it with the players to balance the loss against keeping pace with the rest of the party. Whatever works with the campaign difficulty scaling and keeps the game fun.
 
 
-
-
-
-
-
-
-
-
-%===============================================================================
-% N P C   S T A N D A R D   A V E R A G E   S T A T S
-%----------------------------------------------------
-
-\phantomsection \addcontentsline{toc}{section}{average NPC stats}
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-================================================================================
-N P C   S T A N D A R D   A V E R A G E   S T A T S
----------------------------------------------------
-
-These are the averages for non-important NPCs.
-Do apply some variation when using them.
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Human                       (token)
------------------------------------
-str  5    hp10 abs0
-dex  5    m1 w3 r6 d9
-con  5    stamina 5
-int  5    vision 20 arc 225
-psy  5    mana 5
-per  5    ap 3
-cha  5    xp 110
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Dwarf                       (token)
------------------------------------
-str  7    hp12 abs0
-dex  4    m1 w2 r4 d6
-con  7    stamina 8
-int  6    vision 18 arc 165 dusk & infra
-psy  6    mana 5
-per  5    ap 3
-cha  4    xp 115
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Elf                         (token)
------------------------------------
-str  4    hp8 abs0
-dex  6    m2 w4 r8 d12
-con  5    stamina 7
-int  7    vision 25 arc 265 night
-psy  6    mana 8
-per  6    ap 4
-cha  6    xp 120
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Halfling                    (token)
------------------------------------
-str  3    hp7 abs0
-dex  6    m2 w3 r5 d8
-con  4    stamina 5
-int  5    vision 20 arc 315
-psy  5    mana 5
-per  6    ap 4
-cha  6    xp 110
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Orc                         (token)
------------------------------------
-str  7    hp13 abs0
-dex  5    m2 w4 r6 d8
-con  7    stamina 7
-int  4    vision 15 arc 150
-psy  4    mana 3
-per  5    ap 3
-cha  3    xp 100
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\goodbreak \tiny \begin{samepage} \begin{verbatim}
-===================================
-Goblin                      (token)
------------------------------------
-str  3    hp5 abs0
-dex  7    m1 w3 r5 d7
-con  3    stamina 3
-int  3    vision 20 arc 225
-psy  3    mana 1
-per  6    ap 5
-cha  2    xp 90
-----------
-skills
-----------
-spells
-----------
-equipment
-money
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-\
 

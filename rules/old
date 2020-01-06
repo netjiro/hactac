@@ -7,6 +7,16 @@ cleaning out old text and blocks
 
 
 
+================================================================================
+200106 : removed old stuff from campaign.tex  - rolling character stats
+
+%You may roll as many characters as you want, when rolling manually, one character at a time. You may interrupt and abort the foetus at any point, we are very pro-choice here you see.
+
+%You man also use the \verb|rollchars.py| script which rolls 10 characters of each race, but only use that once, and choose the one you want among the 60 generated.
+
+
+
+
 
 ================================================================================
 191229 : removed old angle of attack and angle of defense from source
