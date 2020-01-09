@@ -18,6 +18,12 @@ NEW: ---------------------------------------------------------------------------
 omvänd kronologisk ordning av TODO items
 
 
+
+200107:
+TODO: fix all \verb|bla bla| to \texttt{bla bla} in all latex files
+      \texttt{} will allow linebreaks and hyphenation, which \verb|| does not.
+
+
 191229:
 TODO: fix backstab - sidestab - killstab
       backstab seems ok.

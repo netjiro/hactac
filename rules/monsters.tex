@@ -185,14 +185,35 @@ wolf                       (wolf02)
 -----------------------------------
 str  7    hp 10 abs 0
 dex 10    m2 w6 r12 d20
-psy  5    vision 15
-per  8    initiative 12
+psy  5    vision 15, dusk
+per  8    initiative 12, ap 6
 ----------
 balance 6
 bite    7 dam 6
 claw    5 dam 3
-charge  6
+charge  6, mobile 1
 avoid   3 yield+3
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\begin{samepage} \small \begin{verbatim}
+===================================
+large wolf                 (wolf??)
+-----------------------------------
+str  9    hp 14 abs 0
+dex 12    m2 w7 r14 d21
+psy  7    vision 15, dusk
+per  9    initiative 14, ap 6
+----------
+balance 6
+bite    9 dam 7, pen 1
+claw    7 dam 3
+charge  9, mobile 2
+avoid   6 yield+3
+consistent 1
+veteran 2
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
@@ -208,10 +229,32 @@ psy  8    vision 15
 per  8    initiative 10
 ----------
 balance 6
-bite    8 dam 10
-claw    7 dam 5
+bite    8 dam 10, pen 1
+claw    7 dam 5, knockback 1
 charge  3
 avoid   2 yield+2
+pain threshold 4, veteran 1
+===================================
+\end{verbatim} \normalsize \end{samepage}
+
+\
+
+\goodbreak \begin{samepage} \small \begin{verbatim}
+===================================
+large bear                  (token)
+-----------------------------------
+str 19    hp 35 abs 1 skin
+dex  9    m2 w5 r12 d18
+psy  9    vision 15
+per  8    initiative 12
+----------
+balance 6
+bite   10 dam 12, pen 2
+claw    7 dam 5, knockback 1
+charge  6, mobile 1
+avoid   2 yield+2
+consistent 1
+pain threshold 5, veteran 2
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
@@ -736,9 +779,9 @@ sneak     8
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
 \goodbreak
 \phantomsection\addcontentsline{toc}{section}{goblins}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -746,7 +789,7 @@ G O B L I N S
 -------------
 
 It is rare, I admit, but not as rare as some seem to think, that boss goblins,
-shamans and old crones have the power to put curses on people with their last
+shamans, and old crones have the power to put curses on people with their last
 dying words. The goblin tribes have an unfortunate knack for keeping the old
 black witchcraft alive and flourishing.
 

@@ -526,15 +526,15 @@ Instead of boosting all nearby allies he can choose to boost only one target and
 A target can only get rallying bonuses from one "rallyer" at a time.
 
 
-\skill{Skill scf 1.0 "leader":} The character is a natural leader. He gives a mod+1 to all actions of his fellows within range (level of "leader"), but only to fellows with psy less than or equal to the level of "leader". The leader effect requires no rolls or actions per default.
+\skill{Skill scf 1.0 "leader":} The character is a natural leader. He gives a mod+1 to all actions of his fellows within range (level of leader), but only to fellows with psy less than or equal to the level of leader. The leader effect requires no rolls or actions per default.
 
 The leader can spend a normal (3ap) action and get a temporary cha/3 bonus to his leader skill level for that round.
 
 A target can only get leadership bonuses from one leader at a time.
 
-E.g: Putte Paladin has leader 5. Jolly James stands within 5 range from PP, and has psy 4, he then gets a mod+1. Faraway Fred stands 7 squares away and does not get a mod+1. Strongminded Sam stands next to PP but has psy 8, and does not get a mod+1.
+E.g: Putte Paladin has leader 5. Jolly James stands within 5sq range from PP, and has psy 4, he then gets a mod+1. Faraway Fred stands 7 squares away and does not get a mod+1. Strongminded Sam stands next to PP but has psy 8, and does not get a mod+1.
 
-A leader can also give orders to leader/3 extra characters under his leadership for each action giving orders, activating by Oy!, and similar. Great for handling henchmen.
+A leader can also give orders to leader/3 extra characters (or combat groups) under his leadership for each action giving orders, activating by Oy!, and similar. Great for handling henchmen.
 
 
 \skill{Skill scf 1.0 "tactician":} The tactician can shout advice to a few fellow compatriots giving mod+1 to all combat actions against one or more select targets. The advice range is limited to the perception of the affected allies. Tactician requires no rolls per default but giving advice to a target hero costs the tactician a 1ap action. A combat group counts as one covered hero when calculating ap cost. The advice mod+1 bonus persists until end of the round for all combat actions against the covered opponent. Tactician's advice does not activate the covered hero. 
@@ -840,7 +840,7 @@ Special items and npcs might negotiate for other aspects than price, at which po
 Success means a good estimate within 25\% of actual value. Success+3 or better means a spot on estimate. Failure gives a wrong estimate, above or below. fail=1: factor 2 off. fail=2: factor 5 off. Fail 3 or worse, no idea of the value.
 
 
-\skill{Skill scf 0.5 "size up":} is the skill of estimating the approximate xp level and characteristics of an opponent or other character close by. It takes an action to make an assessment. Taking full round gives mod+1 and three full rounds give mod+3. \\
+\skill{Skill scf 0.5 "size up":} is the skill of estimating the approximate xp level and characteristics of an opponent or other character close by. It takes an action to make an assessment. Taking full round gives mod+1 and watching the target act for at least three rounds give mod+3. \\
 fail -3: within factor two error estimate. \\
 success +0: within $\pm$25\% estimate. \\
 success +3: within $\pm$10\% estimate. \\
@@ -1604,11 +1604,11 @@ Roll attack success and damage separately for the two weapons.
 \skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-1, toavoid+1, 150\% dam. Takes one extra stamina.
 
 
-\skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} allows the Hero to take an extra "free" movement step and a followup attack, ignoring initiative. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can move further away.
+\skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} triggers right to react and allows the Hero to take an extra free movement step and make a followup attack against the target. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can continue to move further away. The target can still yield and continue to move as a reaction to the followup attack.
 
 The followup attack costs two extra stamina, one for the extra step and one for the next attack, but costs no movement points, even if it's a second diagonal and would normally cost 2mp.
 
-Weapons with reach has an extra mod+1 when used for a followup attack.
+Weapons with reach has an extra mod+1 when used for a followup attack, regardless of whether reach is used for the attack.
 
 
 \skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\%. Requires two weapons, one in each hand, e.g. sword and shield. The entire counter attack action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
