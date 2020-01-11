@@ -1,9 +1,9 @@
 hacknslash
 ----
 embers: circle 2
-candle: circle 3
+candle: circle 4
 lamp: circle 7
-torch: circle 12
+torch: circle 10
 fire: circle 15
 bright: circle 20
 spotlamp: cone arc=90 15
