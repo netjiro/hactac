@@ -484,7 +484,7 @@ def rollHalfling():
     char.w = 2 + int(d10() / 4)           #  2 -  4     3,4,3
     char.r = 4 + int(d10() / 3)           #  4 -  7         2,3,3,2
     char.d = 6 + int(d10() / 3)           #  6 -  9             2,3,3,2
-    char.stam = 2 + d5()                  #  4 -  7   5
+    char.stam = 3 + d7()                  #  4 - 10   7
     char.visRange = 15 + d10()            # 16 - 25  20
     char.visArc = 270 + d90()             # 271-360 315
     char.visMode = "day"

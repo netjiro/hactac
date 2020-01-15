@@ -658,16 +658,16 @@ insane  2ap mod-9
 
 Throwing already held weapon:
 normal  3ap mod=0
-aimed   6ap mod+1
+aimed   6ap mod+1 or 1r
 quick   2ap mod-3
 snap    1ap mod-6
 insane  0ap mod-9
 
-range for thrown weapons:
-short    mod+1
-long     mod-3
-vlong    mod-6 dam-1
-extreme  mod-9 dam-2
+Thrown weapons have normal range tohit and damage mods:
+short       mod+1
+long        mod-3 dam-1
+very long   mod-6 dam-2
+extreme     mod-9 dam-3
 
 throwing knife    dam 2
                   range 6 + str/2
@@ -702,7 +702,7 @@ dart              dam 0, penetrating 2
 \end{verbatim} \goodbreak \normalsize
 
 
-Bows, crossbows, and ballistas all use arrows or bolts as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar.
+Bows, crossbows, arbalests, and ballistas use arrows, bolts, darts, javelins, spears, or stones as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar.
 
 If you choose the optional rule that characters need to keep track of their ammunution instead of just assuming "enough arrows" it might be worth investing some xp in arrow recovery.
 
@@ -716,12 +716,19 @@ quick  mod-3 1r / 9ap
 aimed  mod+1 3r
 
 rapid fire for bows:
-Quick fire is 1r/9ap at mod-3. For every ap reduced below quick fire the
+Quick shot is 1r/9ap at mod-3. For every ap reduced below quick shot the
 archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8. 
 Since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
 An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
 Rapid fire from bows include reload from accessible quiver, arrows stuck 
 in the ground, or similar.
+
+Bows have normal range tohit and damage mods:
+short       mod+1
+long        mod-3 dam-1
+very long   mod-6 dam-2
+extreme     mod-9 dam-3
+
 
 short bow         dam 3,
                   range 10
@@ -767,16 +774,22 @@ Special bows sometimes require special arrows.
 \end{verbatim} \goodbreak \begin{verbatim}
 Rate of fire for crossbow, heavy crossbows and arbalests:
 Split between reload and fire actions.
-The first shot with a loaded crossbow is reasonably fast.
-Successive shots require reload actions between each shot.
+Shooting a loaded crossbow is reasonably fast. Reloading takes a while though.
 The reload times assume readily available bolts in a 
 quiver, stuck in ground, or similar.
 
-first shot  mod=0 1r
-first aimed mod+1 2r
-first quick mod-3 3ap
-first snap  mod-6 2ap
-first wtf   mod-9 1ap
+normal  mod=0 1r
+aimed   mod+1 2r
+quick   mod-3 3ap
+snap    mod-6 2ap
+insane  mod-9 1ap
+
+Crossbows have normal range tohit and damage mods:
+short       mod+1
+long        mod-3 dam-1
+very long   mod-6 dam-2
+extreme     mod-9 dam-3
+
 
 crossbow          dam 5, penetrating 1,
                   range 12
@@ -811,15 +824,26 @@ broadhead bolts   mod-1 dam+1 pen-1
 \end{verbatim} \goodbreak \begin{verbatim}
 rate of fire for ballistas:
 Ballistas take very long to reload and require at least two people.
-snap  reload+1r mod-6
-quick reload+2r mod-3
-shot  reload+3r mod=0
-aimed reload+4r mod+1
+Aiming and firing the ballista is still a cumbersome thing to do.
+
+Firing loaded weapon:
+normal  3r  mod=0
+aimed   4r mod+1
+quick   2r mod-3
+snap    1r mod-6
+insane 3ap mod-9
+
+Ballistas have different range tohit and damage mods:
+short       mod+1 dam+10%
+long        mod-3 dam-10%
+very long   mod-6 dam-15%
+extreme     mod-9 dam-20%
+
 
 light ballista    dam 12, penetrating 4, knockback 1
                   range 24
                   carried: str 20 (no str bonus), mounted: str 3 (no bonus)
-                  reload 5r, tot str 10, max 3ppl (only 1 person +1r)
+                  reload 5r, tot str 10, max 3ppl (only 1 person +3r)
 
 ballista          dam 15, penetrating 5, knockback 2
                   range 32
@@ -829,7 +853,7 @@ ballista          dam 15, penetrating 5, knockback 2
 heavy ballista    dam 20, penetrating 6, knockback 3
                   range 46
                   carried: str 40 (no str bonus), mounted: str 7 (no bonus)
-                  reload 15r, tot str 20, max 5ppl (only 1 person +5r)
+                  reload 15r, tot str 20, max 5ppl (only 1 person +3r)
 
 \end{verbatim}
 \normalsize

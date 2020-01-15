@@ -19,6 +19,7 @@ omvänd kronologisk ordning av TODO items
 
 
 
+
 200107:
 TODO: fix all \verb|bla bla| to \texttt{bla bla} in all latex files
       \texttt{} will allow linebreaks and hyphenation, which \verb|| does not.
@@ -282,6 +283,8 @@ TODO:  movement state "ride" som sätter movement undeclared at 0mp
 
 
 
+
+!! kolla om alla TODOs från session notes 1-15 finns i löpande listan nedan:
 
 
 
@@ -690,7 +693,7 @@ SKIP: använd stun knapp 99 istället för paralyze knapp: paralyse knapp
 Kronologisk ordning på DONE items:
 copy-cut , ctrl-end , paste
 
-171113:
+pre 181029:                                      (todo: check what's pre 171113)
 DONE: ändra near death till dead vid state
 DONE: stutter step walk:
       moving without taking an action still costs one action point (push ams-1)
@@ -974,3 +977,10 @@ DONE: changed backstab and sidestab to not be multiple of damage,
       makes it very useful for small weapons but less interesting for larger weapons
       circumventing the ballista backstab problem
 DONE: killstab
+200114:
+DONE: added rules on fleeing off map to safety, chasing down prey, etc
+DONE: reduce initiative by 3 for every initiated movement.
+      see rules.tex : Spending movement points lowers initiative, just like 
+      actions.  discussion in comments
+DONE: update subsection*{Moving} Stutter Step to reflect that each initiated
+      movement lowers initiative just like a normal action

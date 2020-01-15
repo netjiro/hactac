@@ -559,10 +559,10 @@ charge    4
 balance   3
 beak peck 8 dam 6
 stench aura radius: (6-dist) vs con or target will loose 1 action to gag reflex.
-                    target gets mod+1 per previous success
+                    target gets mod+1 per previous success, roll first in round.
 ----------
 Will protect it's young to the death.
-If no young around, then flee at hp=6
+If no young around, then flee at hp$\le$6
 or after gaining any hit > 8hp.
 Pain threshold dam/4
 ===================================
@@ -599,7 +599,7 @@ They can be used to scare off ghosts, spirits etc due to the horrible stench,
 which even permeates the etheric. Lasts only for ~1week,
 then looses it's potency. Worth about 1 gold each in Trade Town.
 \end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
-info about iffygriffs: roll int
+info about iffygriffs: roll monsterology
 +0 : bird monster, evil, foul, dangerous
 +1 : fast and can fly
 +2 : they are very foul fowl, requires strong stomach to stand close.
@@ -613,10 +613,10 @@ realising it's an iffygriff around:
 
 entering the area:
 per+3 : notices strange call and foul stench
-int-3 : it's an iffygriff
+monsterology : it's an iffygriff
 
 seeing the monster:
-int : it's an iffygriff
+monsterology+3 : it's an iffygriff
 \end{verbatim} \normalsize \end{samepage}
 
 \

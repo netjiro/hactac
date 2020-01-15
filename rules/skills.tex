@@ -96,8 +96,8 @@ spear          scf 0.9
 flail          scf 1.0
 shield         scf 0.7
 throw          scf 0.7 (anything throwable: knives, bottles, chairs, ...)
-bow            scf 1.2
-crossbow       scf 0.8
+bow            scf 1.0
+crossbow       scf 0.7
 \end{verbatim}
 %sling          scf 1.0
 \end{samepage}
@@ -106,15 +106,15 @@ Sword skill covers all blade weapons including knives, rapiers, etc. \\
 Knife is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3. Thus sword skill can be trained from knife-3.
 
 Some weapons are similar:\\
-The sword skill allows the use of all blades at no modification.\\
-Knife skill allows use of all swords and rapiers at mod-3.\\
+The sword skill allows the use of all standard blades at no modification.\\
+Knife skill allows use of swords and rapiers at mod-3.\\
 Axe skill allows the use of: hammers mod-1, clubs mod-1.\\
 Hammer skill allows use of: clubs mod-1, axes mod-2.\\
 Club skill allows use of: hammers mod-2, axes mod-3.\\
 The staff and spear skills are mutually mod-1.\\
-All other melee weapon skills are mutually mod-3.\\
+All other melee weapon skills are mutually mod-4.\\
 All ranged weapons are mutually mod-3.\\
-\emph{But:} similarity modifies never allows for the "other" weapons or weapon groups at levels greater than 9. So, even if someone has axe 14 he will be limited to hammer 9 due to this cap.
+\emph{But:} similarity modifies never allows for the \emph{similar} weapons or weapon groups at levels greater than 9. E.g: even if someone has axe 14 he will be limited to hammer 9 due to this cap.
 
 % OLD - NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 
@@ -134,14 +134,14 @@ Kicks do 2+str/3 damage
 
 Unarmed parry with hands/arms/legs are parry-6 against weapons, or parry-3 if opponent is unarmed. Unarmed parry is always deflect but without the additional deflect mod-3. All parried weapon hits will still do 50\% of the rolled damage, and all parried unarmed hits will still do 33\% of the rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
 
-Brawling also includes grab, hold, break loose actions. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both participants if the target is resisting. 
+Brawling also includes grab, hold, break loose actions. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both participants if the target is resisting.     %previous wrestle
 Each arm/tentacle/other used in the grab/hold/break actions allows the character to use 50\% of their str or dex unless the appendage has specific str/dex values specified.
 If the target cannot pay the 3ap cost of the resistance roll action the grabbing/breaking character wins success=0 by default.
 
 Holding a target doesn't cost actions until he tries to break free. But it means the holding Hero can't move, and a few arms are occupied holding. A held character cannot move either, and must break free first. All physical actions other than break free suffers mod-3 when held.
 When held, a target can only make one break free attempt per round even if he has more ap available. If he is re-grabbed in the same round he can make another break free attempt in the same round as long as he has enough ap.
 
-Brawl allows for use of knife and club at mod-3 up to a maximum of 9 after the mod.
+Brawl allows for use of knife and club at mod-3, capped to 9.
 
 
 \skill{Skill scf 1.3 "martial arts":} allows for more effective unarmed combat. A character generally has two fists and two kicks to use. This can be combined with the skills "quadruple", "triple", "double". \\
@@ -176,20 +176,20 @@ To avoid fast missiles such as arrows, the special maneuver missile parry is req
 E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 7, he will probably not succeed.
 
 
-\skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for each weapon, one after the other. A weapon skill roll must still be taken for each weapon, and the stamina for extra attacks must be paid as usual.
+\skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for each weapon, one after the other. A weapon skill roll must still be taken for each weapon, and the stamina for the attacks must be paid as usual.
 
-The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a longsword and a tower shield costs 4ap since the tower shield is slow-1.
+The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a broad sword and a heavy shield costs 4ap since the heavy shield is normally slow-1 (4ap).
 
 Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
 If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
 
 It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
 It is possible to completely avoid a double attack with two avoid actions, both at mod-6.\\
-For the really slick avoider it is possible to avoid a double attack with one avoid action but at mod-9.
+For the really slick avoider it is possible to avoid a double attack with one single avoid action but at mod-9.
 
 Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the double skill roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
 
-Double parries can attempt two parries for one incoming attack, once parry by each weapon, for extra safety. Alternatively use the two weapons as one combined parry, and combine the abs of both weapons to block the attacking damage if both parries are successful.
+Double parries can attempt two parries for one incoming attack, once parry by each weapon, for extra safety. Combine the abs of both weapons to block the attacking damage if both parries are successful.
 
 Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
 
@@ -197,6 +197,8 @@ Double can also be combined with e.g. whirlwind and different attack maneuvers.
 
 
 \skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions. All of the "higher" double variant combinations still only cost one extra stamina.
+
+To train triple, quadruple, etc, the character must be able to actually and effectively wield that many weapons. E.g: have three arms or a magic hovering mind blade.
 
 
 \skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
@@ -217,7 +219,7 @@ Whirlwind becomes even more dangerous when combined with for example double... T
 If an opponent with higher initiative interrupt attacks a whirlwind fighter during a whirlwind sequence the whirlwind defender can make a parry within the whirlwind sequence with the same fast ap cost as normal whirlwind attacks.
 
 
-\skill{Skill scf 1.5 "quick shot":} reduces snap and quick shot penalties by one for each skill level.
+\skill{Skill scf 1.5 "quick shot":} reduces rapid fire snap and quick shot penalties by one for each skill level.
 
 
 \skill{Skill scf 1.0 "sniper":} reduces range penalties by one for each skill level. It also reduces mods from small and covered targets by one for each level. Covered targets includes coverage from shields.
@@ -233,7 +235,7 @@ lvl 1, cost 10xp: A good (+3) success: roll two damage rolls and choose which to
 lvl 2, cost 20xp: A very good (+6) success: roll three damage rolls and choose which to use. (will average \ca 75\%) \\
 lvl 3, cost 30xp: A perfect (+9) success: roll five damage rolls and choose which to use. (will average \ca 84\%)
 
-!
+
 \skill{Skill cost special "consistent":} allows for the user to generally improve damage when making good, very good, or perfect successes with attacks. \\
 lvl 1, cost 15xp: A good (+3) success always makes at least 33\% (round up) of the maximum damage. (will average \ca 66\%) \\
 lvl 2, cost 30xp: A very good (+6) success always makes at least 66\% (round up) of the maximum damage. (will average \ca 83\%) \\
@@ -253,29 +255,14 @@ lvl 3, cost 30xp: An exceptional (+9) success gives mod-3 to defend against the 
 
 The staggering todefend mod is capped by the weapon finesse. E.g: attacking with a broad sword, finesse-4, adding fancy attacks mod-3 to the attack and rolling a success+7, having staggering lvl 2, will still only give the target a todefend-4 since that is the limit of the weapon finesse.
 
-
-\skill{Skill cost special "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
-lvl  1  costs  10 \\
-lvl  2  costs  20 \\
-lvl  3  costs  30 \\
-lvl  4  costs  50 \\
-lvl  5  costs  75 \\
-lvl  6  costs 100 \\
-lvl +1  costs +30
-%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
-
 E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With his slugger=2 he gets one point of damage bonus for each of his two extra strength points. Thus he has dam+2 from his combination of extra strength and slugger.
 
 
-\skill{Skill scf 0.5 "charge":} reduces movement penalties by one for each skill level when the user moves to attack an opponent. The initiative for the attack is also increased equal to the level of "charge". However, the maximum initiative bonus and movement penalty reduction is limited by the distance of approach moved to reach the opponent. Also, the attack's maximum damage is increased by one for each tree speed of approach. A charge costs one stamina, above the normal cost of the attack.
+\skill{Skill scf 0.5 "charge":} reduces movement penalties by one for each skill level when the user moves to attack an opponent. The initiative for the attack is also increased equal to the level of "charge". However, the maximum initiative bonus and movement penalty reduction is limited by the distance of approach moved to reach the opponent. Also, the attack's maximum damage is increased by one for each tree speed of approach. A charge costs one stamina above the normal cost of the attack.
 
 The charge effects are only applied to the first attack the character makes on the charged target. The charge bonus effects is removed if the Hero takes any other actions on the way to the target.
 
 Both the charge movement and attack is done at elevated initiative. This is meant to decrease the chances of the target, or bystander, interrupting the charge attack in progress.
-
-
-%TODO: remove wrestle skill when moving grab,hold,break loose to the brawl skill.
-%\skill{Skill scf 0.5 "wrestle":} Better grabbing, holding, and breaking free. Characters with wrestling can add their level of wrestling to their str and dex values when grabbing, holding, and breaking loose.
 
 
 \skill{Skill scf 0.5 "tackle":} someone to push them out of the way. Tackling is a 3ap attack action and costs 1 stamina. The attacker declares tackle and tries to move into the square currently occupied by the target. If the tackle sequence is successful the tackling Hero will push the target out of the way.
@@ -665,6 +652,8 @@ Possum is \emph{positively} modified by damage, but ignores all other mods:\\
 zero hp: mod+3
 
 The tactical coward can't just fall dead in front of an enemy without good reason. That will make the opponent suspicious. And a possum can't move or take actions, since they are supposedly dead. Right?
+
+Starting a round in possum and staying possum, forces the wiley weasel to declare max 1mp and max 3ap. Starting in possum without staying possum has no declaration limitations. Lying dead still in possum does not count as resting.
 
 
 \skill{Skill scf 0.5 "arrow recovery":} allows the happy hunter to recover arrows from downed targets. Any targets, even if they have not been fired upon (GM discretion so it doesn't get completely out of hand). All arrows recovered are regular base damage mod+0 type arrows suitable for the weapon at hand.\\
@@ -1129,19 +1118,32 @@ The cost for buying strong 3 is \verb|2.0 * 3^2 = 18| points, regardless of the 
 \skill{Skill scf 2.0 "perceptive"} increases per by one for each skill level. \\
 \skill{Skill scf 2.0 "charming"} increases cha by one for each skill level. \\
  \\
-\skill{Skill scf 1.0 "hawk eyed"} increases vision by one for each skill level. \\
+\skill{Skill scf 1.0 "hawk eyed"} increases vision range by one for each skill level. \\
 \skill{Skill scf 1.0 "fish eyed"} increases vision arc by 10 for each skill level. \\
 \skill{Skill scf 1.0 "resilient"} increases max hitpoints by one for each skill level. \\
 \skill{Skill scf 1.0 "enduring"} increases max stamina by one for each skill level. \\
 \skill{Skill scf 1.0 "powerful"} increases max mana by one for each skill level. \\
 \skill{Skill scf 2.0 "fast"} increases movement. \\
 dash bonus is +fast. \\
-run bonus is +fast/2 round up. \\
-walk bonus is +fast/3 round down. \\
-maneuver bonus is +fast/4 round down.
-
+run bonus is +fast/2. \\
+walk bonus is +fast/3. \\
+maneuver bonus is +fast/4.
 
 \closeskillslist
+
+%cost of fast  bonus, lvl, xp   with R/2 round up vs W/2rd :
+% M -, W -, R+1, D+1    1    2          M -, W -, R -, D+1    1    2
+% M -, W -, R+1, D+2    2    8          M -, W -, R+1, D+2    2    8
+% M -, W+1, R+2, D+3    3   18          M -, W+1, R+1, D+3    3   18
+% M+1, W+1, R+2, D+4    4   32          M+1, W+1, R+2, D+4    4   32
+% M+1, W+1, R+3, D+5    5   50          M+1, W+1, R+2, D+5    5   50
+% M+1, W+2, R+3, D+6    6   72          M+1, W+2, R+3, D+6    6   72
+% M+1, W+2, R+4, D+7    7   98          M+1, W+2, R+3, D+7    7   98
+% M+2, W+2, R+4, D+8    8  128          M+2, W+2, R+4, D+8    8  128
+% M+2, W+3, R+5, D+9    9  162          M+2, W+3, R+4, D+9    9  162
+% M+2, W+3, R+5, D+10  10  200          M+2, W+3, R+5, D+10  10  200
+
+%todo perhaps check fast progression for R at 2/3 lvl ?
 
 
 
@@ -1197,7 +1199,7 @@ Maneuvers are special actions or optional "modifiers" that can be made as part o
 \skill{Maneuver (cost 10) "opportunity":}
 Triggers the right to react when an opponent is trying to move out of melee weapons range after he's already engaged in melee. For weapons with reach it also triggers the right to react if the target is moving \emph{away} into a range with a worse reach mod but still within max reach of the weapon. But it only triggers once per intended movement of the target.
 
-Opportunity does not trigger for the attacking character when the target character moves away as part of a defencive action from the right to react, even if the target doesn't take an action but just moves away. E.g: parry + yield, or avoid and move away, or just take a step back without defending.
+Opportunity does not trigger for the attacking character when the target character moves away as part of a defensive action from the right to react, even if the target doesn't take an action but just moves away. E.g: parry + yield, or avoid and move away, or just take a step back without defending.
 
 E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's right to react. PP parries and yields and moves away another step. AA can't claim opportunity from PP leaving base contact, but DD can since it's not DD's attack that triggered PP's rigth to react action.
 
@@ -1213,7 +1215,7 @@ Note: Intercept does not cover the same situation as opportunity does, since opp
 
 
 \skill{Maneuver (cost 5) "yield":}
-Can be used together with any defencive action like avoid, parry, deflect, where the user moves to end up at least one square further away from the attacker, and (usually) gains a +3 to the avoid or parry action. Some characters have different bonuses to their yield maneuver. The character must end up at least one square distance further away from the attacker than he was before, or he cannot perform the yield maneuver and get the bonus. Just moving to another square at the same distance from the attacker is not a yield.
+Can be used together with any defensive action like avoid, parry, deflect, where the user moves to end up at least one square further away from the attacker, and (usually) gains a +3 to the avoid or parry action. Some characters have different bonuses to their yield maneuver. The character must end up at least one square distance further away from the attacker than he was before, or he cannot perform the yield maneuver and get the bonus. Just moving to another square at the same distance from the attacker is not a yield.
 
 Upgrade the yield bonus: \\
 cost   5xp: yield +1 \\
@@ -1269,14 +1271,17 @@ This also allows to add +1sq to a jump, if landing off balance.
 The hero can take one extra step beyond declared movement by throwing himself on the ground and going prone. The maneuver is available even if the character is already off balance. This also allows to tuck +1sq to jump distance, if landing prone.
 
 
-\skill{Maneuver (cost 20) "defencive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
+\skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
 
 
-\skill{Maneuver (cost 20) "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal (for 3ap and slower normal defence actions), comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
+\skill{Maneuver (cost 30) "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal (for 3ap and slower normal defence actions), comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
 
-For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost 50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina.
+For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost +50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina.
 
 Fast Defence and Lightning Defence can be stacked together to create a defence that cost 2ap less than normal (to a minimum of 1ap) at mod-9 and costing 2 stamina.
+
+
+\skill{Maneuver (cost 15) "runaway reserve":} allows the hero to declare run or dash speeds even if he has below 33\% hp. He must declare 0ap and run away from the oppostition, GM discretion. He does not need to roll for stamina even if he has negative stamina to begin with, as long as he does not have negative stamina below -con. The stamina cost for the movement has to be paid as normal though.
 
 
 \skill{Maneuver (cost 15) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. And together with "diagonal squeeze" the Hero can move through a diagonal between a blocking corner and an enemy. Note that only one corner can be blocked, the opposing corner in the diagonal must be open, unless the Hero also knows the diagonal squeeze.
@@ -1285,11 +1290,11 @@ Fast Defence and Lightning Defence can be stacked together to create a defence t
 \skill{Maneuver (cost 15) "diagonal squeeze":} allows to move between two enemies across a diagonal which would otherwise be blocked by them. And together with "cornering" the Hero can move through a diagonal between a blocking corner and an enemy.
 
 
-\skill{Maneuver (cost 20) "corner strike":} removes the mod-3 from attacking around a blocked sharp corner.
+\skill{Maneuver (cost 20) "corner strike":} removes the mod-3 from attacking around a blocking sharp corner.
 
 
 \skill{Maneuver (cost 10) "anchor":} allows the Hero to firmly plant his feet and ignore 1 sq incoming knockback effect.\\
-anchor +1 cost +10 ignore +1 knockback.\\
+anchor +1 cost +10xp ignore +1 knockback.\\
 Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
@@ -1297,12 +1302,18 @@ Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 E.g: Discerning Doris has M1 W4 R6 D9 and want to learn a movement speed that gives her 3mp. She starts from M1 and adds 2mp and mod-2 to create "extra gear 3". Her declarable movement speed options are then M1,EG3,W4,R6,D9 at mod=0,mod-2,mod-3,mod-6,mod-9 respectively. An EG5 based on W4 would give mod-4.
 
-Any modifications or changes to the EGX base movement (m/w/r) also applies to the EGX movement. \\
+The EGX mode has the same stamina cost and initiative bonus as the base movement speed. Any modifications or changes to the EGX base movement (m/w/r) also applies to the EGX movement. \\
 E.g: Full plate armour gives run-2sq, meaning an EGX based on run also suffers -2sq: R7 with EG9 will be R5(7) with EG7(9) with full plate. \\
 E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any EGX based on R/D.\\
 E.g: DD trains fast 4, changing M1 to M2, and thus EG3 to EG4.
 
 The cost of an extra gear starting from Maneuver speed is 15xp per extra movement point, from Walk speed is 10xp per extra movement point, and from Run speed is 5xp per extra movement point.
+
+% cost compare with fast:         EG:
+% M+1 32, M+2 128                 M+1 15, M+2 30
+% W+1 18, W+2  72                 W+1 10, W+2 20
+% R+1  8, R+2  32                 R+1  5, R+2 10
+% D+1  2, D+2   8, D+3 18
 
 
 \skill{Maneuver (cost 5) "going the distance":}
@@ -1326,13 +1337,12 @@ cost 30xp switching is a very fast (1ap) action
 This doubles the ap cost of normal (3ap*2=6ap) or slower actions, and adds 3ap to fast (2ap+3ap=5ap) or very fast (1ap+3ap=4ap) actions.
 Full round actions are also doubled, e.g. shooting a bow normally takes 2r, and with careful it costs 4r.
 
-\TODO clarify that careful cannot be used to switch a regular 3ap action into a full round careful action without any penalties for the extra required ap.
-
+\todo clarify that careful cannot be used to switch a regular 3ap action into a full round careful action without any penalties for the extra required ap.
 
 
 \skill{Maneuver (cost 10) "push":} attack can be used to force opponent back during melee combat. The attack has mod-3 to succeed, and costs 1 stamina extra.
 
-If the attack succeeds, and is not successfully avoided or deflected (not parried), the attacker rolls a str vs str mod with attack diff. If this succeeds the attacker can push the target one square away from him (diagonal ok). Note that this may cause the target to go off balance (or fall down) if he does not have enough movement points left to cover the move. The attack does normal damage if it hits, even if the push does not succeed.
+If the attack succeeds, and is not successfully avoided or deflected (not parried), the attacker rolls a str vs str mod with attack diff. If this succeeds the attacker can push the target one square away from him (diagonal ok). Note that this may cause the target to go off balance (or fall down) if he does not have enough movement points left to cover the move. The attack does normal damage if it hits, regardless of whether the push succeed.
 
 It is also possible to use "push" with a shield parry (parry bonuses applies). Same mod-3 and one stamina cost there as well. The original attacker can choose to take another action to parry or avoid the push parry.
 % Apply the shield tackle bonuses to the shield push?
@@ -1412,7 +1422,7 @@ It is recommended to stack missile parry and deflect for the larger and heavier 
 
 
 \skill{Maneuver (cost 10) "phalanx":} can be used as improved defence of several allies, protecting each others' sides. The phalanx must form a straight line (diagonal is ok).
-Parries and deflection defence actions get a mod+1 for each of the (two possible) sides that the Hero has covered by friendlies who also use phalanx. Phalanx does not provide a bonus for avoid defence actions, or if the Cowardly Villain yields in a defencive action.
+Parries and deflection defence actions get a mod+1 for each of the (two possible) sides that the Hero has covered by friendlies who also use phalanx. Phalanx does not provide a bonus for avoid defence actions, or if the Cowardly Villain yields in a defensive action.
 
 Phalanx also grants the same bonus if a side is blocked by a wall or similar large object. A single phalanx character fighting in a narrow tunnel with walls on both sides get mod+2. With a wall or large statue on one side he gets mod+1 even if his other side is open to attack.
 
@@ -1433,7 +1443,7 @@ Each combat unit is a unique and named "combat unit" skill. E.g: combat unit dan
 
 \skill{Maneuver (cost 5) "held fire":} the archer can ready an arrow and draw the bow, but wait to release until next round. Each postponed round gives the shot mod-1 cumulative. The release action is a normal 3ap action mod-0, 2ap action mod-3, 1ap action mod-6, 0ap action mod-9.
 The ready - draw action to prepare for held action is a regular full bow fire action taking whatever time and mods the character want to use.
-E.g: a 1r quick fire bow prep is mod-3, then a 2r held fire is mod-2, for a total mod-5 release.
+E.g: a 1r quick shot bow prep is mod-3, then a 2r held fire is mod-2, for a total mod-5 release.
 
 
 \skill{Maneuver (cost 10) "up close":} cancels the contact mod-3 for ranged attacks when in base contact with target. The short mod+1 is not in effect though.
@@ -1620,6 +1630,17 @@ Weapons with reach has an extra mod+1 when used for a followup attack, regardles
 \skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage or penetration depending on the weapon stats. For each +3 excessive strength he gets damage +1, or penetrating +1, depending on the weapon.
 
 
+\skill{Maneuver (cost special) "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
+lvl  1  costs  10 \\
+lvl  2  costs  20 \\
+lvl  3  costs  30 \\
+lvl  4  costs  50 \\
+lvl  5  costs  75 \\
+lvl  6  costs 100 \\
+lvl +1  costs +30
+%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
+
+
 \skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one attack per round that that cost one less stamina than normal.
 
 
@@ -1634,26 +1655,24 @@ A normal (3ap) weapon requires str+9 and dex$\geq$9 to be fast+1 (2ap).\\
 A fast+1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast+2 (1ap).
 
 
-\TODO fix critical aim once the aim stuff has been fixed
-\skill{Maneuver (cost 10) "critical aim":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
-
-
 \skill{Maneuver (cost 20) "critical damage":} The Hero has a small chance of doing much higher damage on some attack hits if the dice favour him.
 
-Any attack hit on a roll of "1" can do extra damage if the hero then passes a second skill test. The second skill test is modified just like the first one but doesn't cost any ap, stamina, etc. It's just a roll to determine if the critical damage happens. A rolled 10 is a fail just like normal.
+Any attack hit on a roll of "1" can do extra damage if the hero then passes a second skill test. The second skill test is modified just like the first one but doesn't cost any ap, stamina, etc. It's just a roll to determine if the critical damage happens.
 
 The Hero must declare a critical damage attempt, costing 1 stamina, after he has rolled the first "1" to attempt the second roll for the critical damage check.
 
 Depending of the success level of the second roll the damage is increased:\\
 fail : it's just normal damage, no critical damage \\
-success+0 : the damage roll is 2x normal \\
-good success+3 : the damage roll is 3x normal \\
-very good success+6 : the damage roll is 4x normal \\
-perfect success+9 : the damage roll is 5x normal
+success+0 : the damage roll is 100\% + normal damage roll \\
+good success+3 : the damage roll is 200\% + normal damage roll \\
+very good success+6 : the damage roll is 400\% + normal damage roll \\
+perfect success+9 : the damage roll is 700\% + normal damage roll
 
-The second damage roll stacks with accurate, consistent, etc as normal.
+The critial damage roll stacks with accurate, consistent, etc as normal. And it stacks with critical aim.
 
-\TODO perhaps critical damage should be 2,3,4x Max + roll damage, or 50%+roll, 100%+roll, 150%+roll, 200%+roll ?
+
+\TODO fix maneuver critical aim once the aim stuff has been fixed
+%\skill{Maneuver (cost 10) "critical aim":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
 
 
 \skill{Maneuver (cost 20) "stronk tank":} 

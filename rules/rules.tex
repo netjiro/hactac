@@ -240,7 +240,7 @@ If a character tries, or is forced, to move more than he has movement points to 
 %--------------------------
 Actions include attacking an enemy, parrying an incoming blow, lying down, drawing a flask from a belt, casting a spell, or most other interesting things the Heroes might want to do. Moving is generally not an action in itself, but can be done before, during, or after an action, as part of that action, or separately.
 
-Actions cost action points (ap). In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
+Actions cost action points (ap), normally 3ap. In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
 
 The modification is calculated as: \\
 mod = declared ap - base ap \\
@@ -281,7 +281,7 @@ Movements can be split around actions. However, other combatants can often react
 %-----------------------------------------------------
 The order of different characters' actions during each round is decided by their relative initiative. Characters with higher initiative can choose when they want to perform movement and actions relative to the timing of opponents with lower initiative. They can go before slower characters, or wait and then interrupt others' actions when it suits them. The faster can thus also split their different actions to fall between the actions of slower characters.
 
-Initiative is a dex+1D4 roll, re-roll every now and then, e.g. each separate battle encounter, or might change in battle lulls.
+Initiative is a dex+1D4 roll, re-roll every now and then, e.g. each separate battle encounter, or might change in battle lulls, or if automated it's tactically interesting to have initiative re-rolled every round of combat.
 
 Characters with lower initiative must also declare action points and movement speed before characters with higher initiative.
 
@@ -510,15 +510,54 @@ For simplified tabletop gaming the vision arc should probably be ignored or simp
 %
 %With the basic rule set it is possible to run fast and simple combat with good tactical depth.
 
+\section*{Basic is enough}
+%-------------------------
+With just this basic rule set it's enough to run very fast but tactically deep tabletop fights, as well as fun lightweight role playing of course. We've used the basic simplified rules when playing with kids as young as five years old with little or no previous tabletop experience. Smart kids, but still. They just need to be able to count to somewhere around 10 to 12, and add and subtract a bit.
+
+For most basic tabletop scenarios it's relevant to skip vision range and arc, and perhaps stamina. Or skip even more, depending on what is relevant for the scenario, adventure, or campaign you intend to play.
+
+Then choose a set of skills to be available to the players, again, only those that are relevant for the game experience.
+
+\
+
+\noindent Let's pretend you want to present your players with a small campaign:
+
+\begin{enumerate}
+
+\item They start in the village, at the inn. They get hired to go rescue the daughter of the village merchant, she was kidnapped when playing out on the field behind the store. The Heroes can find strange prints in the sand where she played, and follow them through the forest to a dark cave. 
+
+\item In the cave the Heroes will fight a bunch of goblins, and rescue the girl. But they also find a letter from Lord Ominous telling the goblins that they must go to the Ruined Temple in the Old Forest to find the Crown of Power. He will reward them with lots of gold and small babies to eat.
+
+\item Traveling through the forest they encounter some random animal to fight, evade, or befriend. At the Ruined Temple they must solve a riddle and get past some traps to avoid waking the Undead Priest.
+But taking the Crown of Power they also find an old legend which tells that the crown is very powerful, granting the king's warriors superior strength. But the crown only works if worn by someone of noble birth, seated on a throne at a very special location. Reading the legend and knowing the history of the region tells them that the special place is in the middle of the village square. Which means Lord Ominous must be planning to invade the town if he wants to use the crown.
+
+\item Now they must either go fight Lord Ominous in his castle, or waylay him and his warriors when they travel to the village, or get the villagers to prepare to war and defend their home, or find someone else of noble birth to take the crown and help defend the village.
+
+\item Depending on what they choose they now must prepare for the final epic battle. This could mean scouting Lord Ominous' castle, sneaking about and finding a way when he could be vulnerable to attack. Or recconoitering the roads and figuring out where to ambush the Lord and his warriors. Or build pallisades and train the villagers to fight. Or digging through the village archives to figure out that the long lost great, great, great, granddaughter of the last lord of the land is still alive and must be the blacksmith's adopted daughter. 
+
+\item Finish with an epic fight, win or loose depending on preparations and tactics.
+
+\end{enumerate}
+
+For this it's perhaps relevant to choose a set of skills that give the players different options depending on what skills they choose. 
+
+For the simplest playthrough it's perhaps enough with just a few weapon skills: sword, shield, axe, spear, bow, avoid, and some simple magic and spells: black bolt, fire wall, heal. This would be enough to give the players plenty of options for a group of Heroes to hack their way through the campaign. Just assume they can read, everything is written and spoken in Common, and so forth.
+
+For more options and depth out of combat, add: track, sneak, climb, literate, histography, dungeoneering, gossip, animal control and perhaps the spell speak to animals. This can allow or limit them to find alternative solutions and extra information. Perhaps the animals of the forest can warn them about the undead priest in the Temple ruin, or which route Lord Ominous' warriors take when they travel. Dungeoneering can help them with traps. Histography and literate explains the legend and the location. Gossip and literate the long lost noblewoman. Sneak and climb gives access to Lord Ominous' castle. 
+
+\
+
+\noindent This very small set of rules and skills is enough for a great tabletop roleplaying experience with young kids or adults new to tabletop rpgs.
+
+\
+
+\TODO add example summations of the two variations of simplifications.
 
 
 
 
 
-
-
-
-
+\clearpage
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
@@ -527,7 +566,7 @@ For simplified tabletop gaming the vision arc should probably be ignored or simp
 \phantomsection\addcontentsline{toc}{section}{more rules}
 \section*{More rules}
 
-More, optional, rules. Ignore or use as you wish. Some extra rules require other extra rules to work, while others can be picked up in isolation.
+More, optional, rules. Ignore or use as you wish. Some extra rules require other extra rules to make sense, while others can be picked up in isolation. Pick and choose to find what suits your group and game style.
 
 
 \subsection*{Action Points raises initiative, and spending decreases}
@@ -550,9 +589,10 @@ dash     +9
 E.g: Flightful Fred sees Mauling Morgan approaching. FF has initiative 7, MM has initiative 9. FF must declare his movement before MM since he has lower initiative. FF chooses to declare run and gets a +6 to his initiative resulting in 7+6=13. If MM wants to be able to move into strike position first, he must declare a run as well, since a walk (9+3=12) is not enough to move in before FF runs away.
 
 
-%\subsection*{Spending movement points lowers initiative, just like actions}
-%-------------------------------------------------------------------
-% TODO, first check how things are implemented currently, then see if it would work, and how to deal with the varying speed? A character might well have >3sq movement extra between walk and run, or run and dash, so reducing initiative just by the amount of steps is probably not good. Perhaps just reduce by 3 for every started move? or by 1 for every started move, or ... ?
+\subsection*{Moving lowers initiative, just like actions}
+%--------------------------------------------------------
+\label{sec:movinglowersinitiative}
+Each initiated movement, not each movement point, reduces initiative by 3. E.g: Running Runar has declared speed R, and gotten a initiative+6 bonus for it. He takes a small 2mp movement and his initiative drops -3. He takes another 3mp and his initiative drops another -3. Taking his last 1mp his initiative drops another -3. If he had taken only one movement, of 1-6mp, his initiative would only have dropped by -3.
 
 
 \subsection*{Streamlining initiative list: waiting}
@@ -727,6 +767,8 @@ Magical dark vision should have different multipliers, or set a personal self li
 Moving a character is not an action, but it follows the rules of initiative. Movement can be done by itself or as part of an action.
 
 Optional: \emph{Stutter Step:} To avoid players making small incremental moves without actions the GM can decide that movement together with an action is free, but movement without an action costs 1ap. And if players cleverly start using free 0ap actions to trigger movement the GM can force a cost of 1ap there as well.
+
+Optional: Moving lowers initiative, \hyperref[sec:movinglowersinitiative]{see section Moving lowers initiative}, page \pageref{sec:movinglowersinitiative}. Each initiated movement path lowers initiative by 3.
 
 
 \subsection*{Facing}
@@ -1147,11 +1189,11 @@ Weapons with the reach property can hit targets one extra square away per level.
 E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. However, attacking with reach is usually more difficult and most reach weapons have a mod-x when using reach.
 
 
-\subsection*{Initiative when attacking against ranged and long weapons}
-%----------------------------------------------------------------------
+\subsection*{Initiative when attacking against weapons with superior reach}
+%--------------------------------------------------------------------------
 If moving closer to attack an opponent wielding a weapon with longer reach than yourself the opponent can, if the attack is noticed, interrupt your attack with an attack against you instead, even if you have higher initiative. But then the interrupt attack must be taken at longer reach then you were going to attack at. This does not apply if you are not moving closer to attack.
 
-E.g: Albin and David stand 3sq apart. Albin has initiative 10 and a sword and wants to attack David who has initiative 6 and a spear. Albin must first move in to base contact, then attack. However, that means David can choose to make an interrupt attack at reach 1 mod-3 before Albin has closed to base contact. David cannot choose to make a reach 0 mod-0 interrupt attack.
+E.g: Attacking Albin and Defending David stand 3sq apart. AA has initiative 10 and a sword and wants to attack DD who has initiative 6 and a spear. AA must first move in to base contact before he can attack with his sword. However, that means DD can choose to make an interrupt attack at reach 1 mod-3 before AA has closed to base contact. DD cannot choose to make a reach 0 mod-0 interrupt attack.
 
 Ranged weapons, e.g. bows and crossbows, don't have this benefit. There the order of initiative will decide if the attacker can close before the shooter can let the arrow fly.
 
@@ -1159,7 +1201,7 @@ Ranged weapons, e.g. bows and crossbows, don't have this benefit. There the orde
 \subsection*{Pain makes life more difficult}
 %-------------------------------------------
 Major wounds give pain modifiers to the action modification stack until healed enough to be minor wounds.
-A wound gives dam/3 pain penalty mod points that go to the action mod stack and stays there until the wound is treated, pain killers are taken, or some such action is taken to reduce the pain. This is why it is important to track each wound hp on the stat sheet instead of just the total remaining hp.
+For most people a wound gives dam/3 (round down) pain penalty mod that go to the action mod stack and stays there until the wound is treated, pain killers are administered, or some such action is taken to reduce the pain. This is why it is important to track each wound hp on the stat sheet instead of just the total remaining hp.
 Veteran is a great skill to have.
 
 Optional: Some creatures have different pain threshold and the wounds then give pain equal to damage/threshold instead of dam/3.
@@ -1180,6 +1222,8 @@ Characters die when they reach -con hp. When a character reaches 0 hp or below h
 
 E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
+Optional: Some large creatures with very high hp will have a multiplier when referencing con for this effect, e.g: dies at -con*3 or some such. This multiplier also affects the chance of faiting from negative hp, etc.
+
 
 \subsection*{Regaining hit points}
 %---------------------------------
@@ -1188,6 +1232,21 @@ A character generally regains con/3 hp per day. If the character has con = 2 he 
 A daily successful medical treatment roll also heals success diff hp even if all wounds have been treated, see \emph{medicine}.
 
 Optional: if tracking wounds list for pain purposes, wounds heal one point at a time in order of acquisition. E.g: if the wounds list is: 5,2,4, then after healing 5hp it would be: 3,0,3. Still giving two pain.
+
+
+\subsection*{Escaping combat, fleeing, giving chase}
+%---------------------------------------------------
+A character has successfully escaped from combat when he has moved off the edge of the battle map. It's a simple and fun rule, creating chase scenes and affecting positioning and tactics for increased tactical depth. It's not meant to be realistic.
+
+Allow the track, travel cruise speed, and exhaustion to determine if the pursuers catch up, and how fast. Then make a new improvised battle map to describe where they catch up.\\
+If the fleeing party is run down it's the chasing party that has most influence on the positioning on the new battle map.\\
+It the fleeing party stops to face their pursuers they will decide most of the positioning.
+
+Note that it's easy to get into a position where the fleeing party is always faster in short bursts on the battle maps, but the pursuing party is always faster and more resilient travelling the regional map to pursue them. In that case the travel speed takes precedent and decides that the fleeing party cannot get away indefinitely. They may flee a couple of battle maps, but sooner or later they will be run into the ground. E.g: subtract 1d6 max stamina from the fleeing party members for every map they flee after the first one, until they can rest for a day.
+
+A league on the regional map is a huge amount of battle maps, so the fleeing party so the fleeing party probably doesn't get far, or even a single league, before ending up on a new battle map, blood thirsty pursuers breathing down their neck.
+
+After having escaped from combat a character cannot immediately re-enter the map if he changes his mind. E.g: force a minimum amount of rounds away dependent on the character's speed and some random roll. Away 1d10 rounds +0 for maneuver, +3 for walk, +6 for run, +9 for dash.
 
 
 \subsection*{Travelling the region and area maps}
@@ -1332,7 +1391,7 @@ Also, anyone running into an effect area has that effect applied immediately upo
 
 \subsection*{Piling corpses}
 %---------------------------
-A normal size corpse gives a square a mod-3 poor terrain modifier. Each additional corpse is another -3, quickly leading to very tricky terrain when standing your ground fighting enemies. At some point it's time to just move and fight somewhere else. This also means that having a heap of fallen enemies covering the squares just in front of you is an excellent defencive strategy. Perhaps you can sacrifice your less useful allies for the same benefits.
+A normal size corpse gives a square a mod-3 poor terrain modifier. Each additional corpse is another -3, quickly leading to very tricky terrain when standing your ground fighting enemies. At some point it's time to just move and fight somewhere else. This also means that having a heap of fallen enemies covering the squares just in front of you is an excellent defensive strategy. Perhaps you can sacrifice your less useful allies for the same benefits.
 
 
 
