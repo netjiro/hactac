@@ -1,6 +1,15 @@
+# skip all latex temporary output files in all directories
+**/*.aux
+**/*.log
+**/*.out
+**/*.toc
+
+# skip build pdf files in all directories
+**/*.pdf
+
+# nela näthack maptool directory structure
 /snapshots
 /maillist
-/rules/book.pdf
 /rules/charlist
 /maptool
 /fern
@@ -12,9 +21,6 @@
 /old
 /tmp
 /tokpic
-/adventures/00 Dungeon of Testing
-/adventures/00 Return of Uchly Namen
-/adventures/06 Goblin Destiny
 /icons & avatars
 /objects
 /states
@@ -22,6 +28,5 @@
 /tokens
 /markers
 /hactac
-/book.pdf
 /buildbook
 /check-clean

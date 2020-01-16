@@ -1,0 +1,62 @@
+
+
+rewriting ranged weapons and skills, check parity against magic bolts
+comparison against swordsman
+
+swordsman:
+Assuming opponents with skill 9 effective defense
+swordsman will hit+damage ca 66% of attacks at fancy-6
+                          ca 33%               fancy-3
+
+comparative archer will hit+damage at 90% (fail on roll 10) since there is no effective defense against archer.
+
+
+Shield effects: worse for swordsman since shield is so cheap to keep >12 which cancels fancy-3, but a large shield only blocks mod-3 if archer is shooting from +/- 45deg and nothing outside.
+
+
+
+swordsman with fancy-3   153 xp
+sword       12    144
+fancy        3      9
+
+swordsman with fancy-6   261 xp   
+sword       15    225
+fancy        6     36
+
+
+
+
+archer:   1/r   118 xp  (tot 1r)  mod-0
+bow          9   97
+quick shot   3   13
+sniper       3    9
+lead target  3    9
+
+archer:   2/r   169 xp  (tot 6ap) mod-3  
+bow          9   97
+quick shot   6   54
+sniper       3    9
+lead target  3    9
+
+archer:   2/r   236 xp  (tot 6ap) mod-0  
+bow          9   97
+quick shot   9  121
+sniper       3    9
+lead target  3    9
+
+
+
+
+bolter:   1/r    35xp    (tot 1r) +2dam shock bolt                7dam   7dam
+magic        3    9
+boltX        9   26
+
+bolter:   2/r   160xp    (tot 6ap) +2dam shock bolt   r20 d7pP   14dam  14dam
+magic        3    9
+boltX        9   26
+fast magic   5  125
+
+bolter:   6/r   160xp    (tot 6ap) +2dam force bolt   r10 d5p1   30dam  30dam
+magic        3    9
+boltX        9   26
+fast magic   5  125
