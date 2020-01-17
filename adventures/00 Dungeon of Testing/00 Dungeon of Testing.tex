@@ -79,6 +79,8 @@ When the orc has engaged the Hero the goblins left standing will be sure of vict
 The stat sheets for the orcs and goblins are last in this document.
 
 
+
+
 \subsection*{The Loot}
 
 The original Dungeon of Testing is worth 10xp in monsters. A character who makes it out alive gets 5xp as a dungeon bonus if he either: \\
@@ -89,7 +91,9 @@ If he flees before loosing enough hp he is too much of a chicken shit and gets n
 The goblins' hoard has 5+1d5 silver and 1d10 copper coins.
 Each goblin fighter has 1d10 copper, and the orc has 1 silver an 2d10 copper.
 
-\small \begin{verbatim}
+\
+
+\begin{samepage} \small \begin{verbatim}
 XP values for the dungeon:
     make it out alive: 5xp (only if explored the dungeon or lost over 50% hp)
     explore all rooms: 1xp each
@@ -98,31 +102,35 @@ XP values for the critters:
     goblin warrior    2
     goblin runt       1 (should be 0.5 but hey, there is only one)
     orc fighter       3
-\end{verbatim} \normalsize
-
+\end{verbatim} \normalsize \end{samepage}
 
 
 
 \subsection*{The test sessions}
 
-The Dungeon of Testing has been played by every new player so far as an introduction to the game. Two characters have made it through with both loot and xp, most flee with barely an hp left to their name, then change a bit in their character skill lists. I don't run the Dungeon of Testing with experienced players who make new characters. They already know the game.
+The Dungeon of Testing has been played by every new player so far as an introduction to the game. Two characters have made it through with both loot and xp, most flee with barely an hp left to their name, then change a bit in their skill lists.
 
-It usually takes about an hour to run through the dungeon and explain the rules to a new player, and have them get used to MapTool. 
+It usually takes about an hour to run through the dungeon, while explaining the rules and having the player get used to MapTool. 
 
-
-
-
+\
 
 
-\raggedbottom
+
+
+
 \vfill
 %-------------------------------------------------------------------------------
 % appendix monsters
+% -----------------
+
+\raggedbottom
+
 
 \subsection*{The Monsters}
 
 Here are the monsters that populate the Dungeon of Testing, for convenience. They are more or less the same as their name sake in the monster list in the core book.
 
+\
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
@@ -142,6 +150,7 @@ sneak     8
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
+\
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
@@ -157,13 +166,13 @@ sneak           5
 charge          4
 avoid           5 yield+4
 -- carries either club or bow, not both --
-small club      6 dam 4, abs 8
+small club      7 dam 4, abs 8
 short bow       6 dam 4, range 12, short 6 mod+3, long 18 mod-3,
                 rate of fire: quick 1r mod-3, normal 2r mod-0, aimed 3r mod+3
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
-
+\
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
@@ -180,14 +189,13 @@ sneak           4
 charge          6
 veteran         1
 mobile          1
-light axe       7 dam 5, abs 6, parry-3
-small shield    8(6) abs 10, parry+2, ranged-1/-2
+light axe       7 dam 5, abs 6, parry-3, toparry-1, toavoid+1
+small shield    8(6) abs 8, parry+2, ranged-1/-2
 leather armour abs 1
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
-
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
@@ -199,13 +207,14 @@ int  4    vision 12 dusk
 psy  4    ap 4
 per  5    initiative 7
 ----------
-v large 2h club 5 dam 10, abs 18, parry-1, toavoid+1
+large 2h club   5 dam 9, abs 18, parry-1, toavoid+1
 bite           	5 dam 4
-punch          	7 dam 3
+punch          	7 dam 3 fast+1 (2ap)
+kick            6 dam 5 
 avoid          	4 yield+3
 charge         	5
 tackle         	4
-veteran        	3 (incl race bonus)
+veteran        	3
 leather armour abs 1
 ===================================
 \end{verbatim} \normalsize \end{samepage}
@@ -218,6 +227,5 @@ leather armour abs 1
 
 
 %-------------------------------------------------------------------------------
-\flushbottom
 \end{document}
 
