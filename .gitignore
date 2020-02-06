@@ -4,7 +4,7 @@
 **/*.out
 **/*.toc
 
-# skip build pdf files in all directories
+# skip built pdf files in all directories
 **/*.pdf
 
 # nela näthack maptool directory structure
@@ -30,3 +30,10 @@
 /hactac
 /buildbook
 /check-clean
+
+# for tmp win10 laptop
+/miktex-portable.cmd
+/texmfs/
+/rules/tmp-backup.181229
+/rules/test.py
+

@@ -572,19 +572,28 @@ Miscellaneous skills that are not necessarily combat related.
 \skill{Skill scf 0.5 "jump":} mod+1 to jump actions the for each skill level of jump. It also reduces jump skill/3 movement point cost from the jumped distance.
 
 
-\skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb.
+\skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb. Allows to try speed climbing. Each extra sq/r speed above the base 1sq/r is mod-3 to the roll.
 
 
 \skill{Skill scf 0.5 "swim":}
-Swimming speed is 1 + success/3. Each encumbrance factor gives mod-3 to the roll. Roll each round and every fail gives diff/3(ru) mod to con. Recover con+1 each round of successful swimming or out of water. Just staying afloat is mod+3 and does not fail on roll of 10, but gives no movement. When con goes below 0 the Hero must start rolling against psy modified by con each round or go into panic and must be helped by someone else. Paniced characters are drowning, taking 5hp/r.
+Slow calm swimming at speed 1 is considered as careful and does not fail on a roll of 10. Each encumbrance factor gives mod-3 to the roll. Roll each round and every fail gives diff/3(ru) mod to con. Recover +1 con each round of successful swimming or out of water. Just staying afloat is mod+3 and also does not fail on roll of 10, but gives no movement. When con goes below 0 the Hero must start rolling against psy modified by con each round or go into panic and must be helped by someone else. Paniced characters are drowning, taking 5hp/r.
+
+Typical modifications:\\
+Stay afloat, no movement: mod+3\\
+Fast swim, 2sq/r: mod-3\\
+Very fast swim, 3sq/r: mod-6\\
+Incredibly fast swim, 4sq/r: mod-9\\
+Flat still water: mod+3\\
+Rough water, currents: mod-3\\
+Storm waves, fast stream: mod-6\\
+White water river with rocks: mod-9
 
 
-\skill{Skill scf 1.0 "balance":} A well balanced character is less likely to fall down or loose his footing. A limited skill, but a great way to keep on your feet when tackling, moving about in rough terrain, etc.
-The character can ignore movement and environment modifiers equal to his level of balance when rolling dex for balance related events such as running over obstacles, falling down, etc.
+\skill{Skill scf 1.0 "balance":} A well balanced character is less likely to fall down or loose his footing. A great way to keep on your feet when tackling, moving about in rough terrain, etc. Gives mod+1 per balance level for any balance, trip, fall, knockdown, etc related rolls. GM discretion.
 
-Balance also removes modifiers for crappy terrain, half blocked squares, undergrowth, debris, rocks, tunnel walls, etc, equal to the level of balance.
+Balance also removes modifiers for crappy terrain, half blocked squares, undergrowth, debris, rocks, tunnel walls, etc, to all actions, equal to the level of balance.
 
-At the start of each round the balanced character can also attempt a balance roll to remove success diff modification points from off balance penalties from the previous round. This costs 1 stamina to attempt and is an instant 0ap action but follows regular initiative order.
+At the start of each round the balanced character can also attempt a balance roll to remove 3 + success diff modification points from off balance penalties left over from the previous round. This costs 1 stamina to attempt and is an instant 0ap action but follows regular order of initiative.
 
 
 \skill{Skill scf 0.5 "ride":} is useful when sitting on a horse. Getting the horse to go where you want, take actions from horseback, or special horse maneuvers require rolling for ride. Moving around from horseback doesn't require spending any extra action points, but taking special horse maneuvers do. The rider declares maneuver movement speed for himself in most cases, and instead declares the real movement speed for the the horse. The rider then takes movement mods based on the mount's movement speed, reduced by his level of ride. Mobile does not affect movement mods when riding. E.g: ride 5 on a running horse is movement mod-1.

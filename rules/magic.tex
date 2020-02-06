@@ -31,6 +31,16 @@ Teachers can be the village witch, a professor at the City Magic College, an all
 
 The magic skill is also used when activating certain magical devices that require external mana power, when trying to understand magical texts and foreign spells and devices, etc.
 
+Note: Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power.
+
+
+\item[Skill cost special "spell caster":] is requried to be able to learn and cast spells. It is not required to be able to use magical items or to train the magic skill.
+
+The xp cost to train spell caster varies depending on the total xp of the character, increasing as the character advances:\\
+If trained at character creation it costs 20xp.\\
+After that it costs 20 + (total xp / 10).\\
+E.g: For a 123xp Hero it costs 33xp, and for a 358xp Hero it costs 56xp to train spell caster.
+
 
 \item[Skill scf 1.0: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more mana than his skill in power casting. This cannot be used to raise the end total chance of success above 9.
 
@@ -165,8 +175,17 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % 
 % treat penetrating as dam+3 on average
 %
+%
+%
+%
+%
 % treat bolt as one class higher than spear or strike :  more useful, no target mods
+% treat ball as two classes higher than spear and strike  :  are effect, no mods
 % 
+%
+% Trade cast time and range against damage and psy int requirements
+% DONT allow to trade more than one time class !!!  NOT 3r > 2r > 1r for int+6 psy+6
+%
 % cast 3r > 2r        dam-3 /  psy+3 & int+3
 % cast 2r > 1r        dam-3 /  psy+3 & int+3
 % cast 1r > 3ap       dam-3 /  psy+3 & int+3
@@ -276,7 +295,12 @@ Often the spell formation shoots in a rapid line to hit the target, or whatever 
 %TODO: should this then still draw full mana, or reduced mana for minor fail? Can draw reduced mana and still make a nice flashy effect.
 
 
-\item[strike, chock, flash:] % mental lock spells ignore cover etc, but mods by psy etc
+\item[strike, chock, flash:] 
+These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods, stacking, based on target:\\
+mod -(target psy / 3)\\
+mod -3 if target takes a 3ap action to resist the spell\\
+mod -(target magic lvl / 3)\\
+% mental lock spells ignore cover etc, but mods by psy etc
 %              ignores target move mods, shooting into melee mods
 %              BUT: they take cast mods for target psy, if target resists,
 %                   and if the target knows magic skill.
@@ -284,10 +308,11 @@ Often the spell formation shoots in a rapid line to hit the target, or whatever 
 %                   mod -3 if target takes a 3ap action to resist 
 %                   mod -(target magic lvl) 
 %              Hence, almost useless against wizards
-These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods based on target:\\
-mod -(target psy / 3)\\
-mod -3 if target takes a 3ap action to resist the spell\\
-mod -(target magic lvl / 3)\\
+
+
+\item[blast, ball, cloud, storm:]
+These are area effect spells. They can be targeted on characters, objects, or locations, and take no target mods.
+
 
 \end{description}
 

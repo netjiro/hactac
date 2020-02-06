@@ -309,18 +309,6 @@ def rollHuman():
     char.d = max(char.r + 1, char.d)
     # tertiary
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
-    # chance of having magic penalty
-    if gimpmagic and roll(50):
-        char.bonuses.append("magic bonus " +str(-(2+d3())))   # [-3,-5]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(33):
-            char.mana = -d5()
-        else:
-            if roll(50):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Common'] = int(char.int / 2) + d3()
     char.skills['avoid'] = int(char.dex / 4) + d2()
@@ -378,18 +366,6 @@ def rollDwarf():
     char.extras.append("Dwarves without any gems, and/or with less than 5 gold total \n" \
                        +"coin suffer psy-1 mod until wealthy again.")
     char.extras.append("Dwarves with 50+ gold in coins and gems gain psy+1 mod while wealthy.")
-    # chance of having magic penalty
-    if gimpmagic and roll(33):
-        char.bonuses.append("magic bonus " +str(-(1+d3())))   # [-2,-4]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(0):
-            char.mana = -d5()
-        else:
-            if roll(33):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Dwarvish'] = int(char.int / 2) + 2 + d3()
     char.skills['Common'] = int(char.int / 3) + d2()
@@ -442,18 +418,6 @@ def rollElf():
     char.extras.append("Elves who are staying in a city or cave without access to nature \n"+
                        "suffer psy-1 mod per week to max -3.")
     char.extras.append("This is immediately restored to mod-0 when returning to nature.")
-    # chance of having magic penalty
-    if gimpmagic and roll(25):
-        char.bonuses.append("magic bonus " +str(-(0+d3())))   # [-1,-3]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(0):
-            char.mana = -d5()
-        else:
-            if roll(33):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Elvish'] = int(char.int/2) + 3 + d3()
     char.skills['Common'] = int(char.int/3) + d3()
@@ -499,8 +463,8 @@ def rollHalfling():
     sneakbonus = d3()
     char.bonuses.append("sneak bonus +" + str(sneakbonus))
     findbonus = d3()
-    char.extras.append("tackle and block penalty -3")
     char.bonuses.append("find bonus +" + str(findbonus))
+    char.extras.append("tackle and block penalty -3")
     gossipbonus = 0
     if roll(50):
         gossipbonus = d3()
@@ -508,18 +472,6 @@ def rollHalfling():
     char.yieldBonus = 2 + int(d10() / 3)
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
     char.extras.append("Halflings have psy mod-1 unless they eat good food (2x price)")
-    # chance of having magic penalty
-    if gimpmagic and roll(50):
-        char.bonuses.append("magic bonus " +str(-(2+d3())))   # [-3,-5]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(33):
-            char.mana = -d5()
-        else:
-            if roll(50):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Common'] = int(char.int / 2) + d3()
     char.skills['avoid'] = int(char.dex / 3) + d3()
@@ -570,18 +522,6 @@ def rollOrc():
     brawlbonus = d3()
     char.bonuses.append("brawl bonus +" + str(brawlbonus))
     char.money = str(d6())+" silver, "+str(d10())+" copper" + ", and " + str(d4()) + " large teeth/claws"
-    # chance of having magic penalty
-    if gimpmagic and roll(50):
-        char.bonuses.append("magic bonus " +str(-(2+d3())))   # [-3,-5]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(50):
-            char.mana = -d5()
-        else:
-            if roll(50):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d5()
     char.skills['Common'] = int(char.int / 3) + d3()
@@ -664,21 +604,9 @@ def rollGoblin():
     if char.mana < 0 and roll(50):
         char.mana = -9
         char.bonuses.append("Nullskull")
-    # chance of having magic penalty
-    if gimpmagic and roll(66):
-        char.bonuses.append("magic bonus " +str(-(2+d3())))   # [-3,-5]
-        # chance of also having mana penalty if having magic penalty
-        # or having zero or a few mana for magic gear etc
-        if roll(66):
-            char.mana = -d5()
-        else:
-            if roll(50):
-                char.mana = 0
-            else:
-                char.mana = d5()
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d3()
-    char.skills['Common'] = int(char.int / 3) + d3()
+    char.skills['Common'] = int(char.int / 3) + d2()
     brawlskill = int(max(char.dex,char.str) / 4) + d3()
     char.skills['brawl'] = brawlskill
     char.skills['avoid'] = int(char.dex / 4) + d3()

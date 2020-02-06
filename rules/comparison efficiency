@@ -60,3 +60,30 @@ bolter:   6/r   160xp    (tot 6ap) +2dam force bolt   r10 d5p1   30dam  30dam
 magic        3    9
 boltX        9   26
 fast magic   5  125
+
+
+
+
+
+for noobs:  hit+damage ca 50% ?
+
+sword            55    1r: dam7 pen0    broad sword str 5      inf ammo
+sword        7   49                                            1.0 enc
+fancy        2    4
+
+archer           49    1r: dam4 pen1    bow str 5              30 ammo
+bow          6   36                                            1.5 enc (bow+ammo)
+quick shot   3   13
+
+crossbow         25    3r: dam6 pen2    heavy crossbow str 5   20 ammo
+crossbow     6   25                                            2.0 enc (xb+ammo)
+
+bolter           39    3r: dam9 pen99   black bolt 3r 1+1m     10 ammo mana20
+spell cast   x   20                     int 6 psy 6            no enc
+magic        2    8
+bolt         6   11
+
+spear            44    2r: dam9 pen99   blue spear 2r 1+1m     10 ammo mana20
+spell cast   x   20                     int 6 psy 6            no enc
+magic        2    8
+bolt         7   16
