@@ -899,8 +899,8 @@ Issuing a command takes 1a and the companion must be within earshot. Commanding 
 A character with companion command can control as many companions as his skill level/2 (round up).
 
 
-\skill{Skill scf 0.5 "meditate":} TODO: update after stamina changes!!\\
-A character who successfully meditates regains two stamina per round instead of 1. It takes one round to sit down and attempt to start meditating, this round is treated as normal rest round. Once the character has successfully started meditating he will regain two stamina per round still meditating instead of one.
+\skill{Skill scf 0.5 "meditate":} means sitting down and taking no other actions while resting. Successfully meditating regains extra stamina beyond just resting, with every success level regaining one extra stamina, roll once per round meditating, and the roll is affected by all normal mods. E.g: meditate success+4 regains +2 stamina above the normal resting stamina recovery.
+
 Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
 
 
@@ -1268,7 +1268,7 @@ This also allows to add +1sq to a jump, if landing off balance.
 
 
 \skill{Manuver (cost 5) "face plant / dive":}
-The hero can take one extra step beyond declared movement by throwing himself on the ground and going prone. The maneuver is available even if the character is already off balance. This also allows to tuck +1sq to jump distance, if landing prone.
+The hero can take one extra step beyond declared movement by throwing himself on the ground and going prone. The maneuver is available even if the character is already off balance. This also allows to tuck +1sq to jump distance, if landing prone. This does not cause the character to go off balance, just prone.
 
 
 \skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
@@ -2105,10 +2105,10 @@ cost +10xp: +5 extra resistance, can be purchased any mount of times.
 \skill{Ability cost 100xp ccf 1.0 "Über":} The True Hero is sooo cool that a roll of 10 is no longer an automatic fail. A natural 10 roll is just like any other roll of the die; if his chance to succeed is 10 or greater, he will succeed.
 
 
-\skill{Ability cost 100xp ccf 1.0 "Ünder":} The True Hero is so lucky that a roll of 1 is an automatic success=0 in stead of a fail if he had 0 or lower chance of success.
+\skill{Ability cost 100xp ccf 1.0 "Ünder":} The True Hero is so lucky that a roll of 1 is an automatic success=0 instead of a fail if he had 0 or lower chance of success.
 
 
-\skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Buy twice for two extra arms. People will probably look at you really strangely from now on...
+\skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Buy twice for two extra arms. And once more for a tentacle? Perhaps you'd prefer a third leg, or some other extra appendage? People will probably look at you really strangely from now on...
 
 
 \skill{Ability cost 20xp + scf 0.5 ccf 1.0 "Switcheroo":} The character can change target of an attack after the attack and damage rolls have been made, but before the target spends his reaction action. Both the declared target and the target  switched to have the right to react to the attack.
@@ -2210,7 +2210,7 @@ bonus to triple etc is 66% of double, triple, etc successively
 other skills: max(heroes)
 \end{verbatim}\normalsize
 
-TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting received xp the TronVol constituent heroes count separately, but the TronVol monster also gets the same xp as the heroes without counting as a separate share. E.g: Three heroes split 12xp to 4xp each, and their tronvol also gets 4xp even if it did not dilute the xp split. But TronVol only gets it's extra xp if all it's heroes get xp.
+TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting received xp the TronVol constituent heroes count separately as usual but the TronVol monster does not count as a separate share. However, it gets an xp share by itself, bonus xp. E.g: Three heroes split 12xp to 4xp each, and their TronVol also gets 4xp even if it did not dilute the xp split. But TronVol only gets it's extra xp if all it's heroes get xp, and even if it has not been formed and active during the situation for which the xp is rewarded. GM discretion.
 
 For the general shape, either find something fun and suitable, or roll up some random body: humanoid, lizard, bear, demon, cryptomythologial mixture, etc. Roll for extra/fewer arms, tails, horns, claws, tentacles, fur, scales, etc.
 
@@ -2220,7 +2220,7 @@ Use larger tokens for merged TronVols. E.g: Maptool: with 2-5 merged heroes set 
 
 
 \skill{Ability cost 30xp ccf 1.5 "Ghoul":} Mmm, Braiiiiin... Sooo Tasty!
-The Hero(?) can regenerate hp by eating the corpses of his enemies. For each 3r spent eating the Ghoul will heal 1hp every 10r after completing the meal. A meal cannot be larger (in hp healing points) than the minimum of the Ghoul's con and one quarter the original hp of the victim. A new meal cannot be started before the previous has been depleted by healing the prepared hp.
+The Hero(?) can regenerate hp by eating the corpses of his enemies, (and friends, we're not picky). For each 3r spent eating the Ghoul will heal 1hp every 10r after completing the meal. A meal cannot be larger (in hp healing points) than the minimum of the Ghoul's con and one quarter the original hp of the victim. A new meal cannot be started before the previous has been depleted by healing the prepared hp.
 
 The corpses must be fresh. The meal value of the corpse is decreased by one for every round it's been dead before the Ghoul starts eating.
 

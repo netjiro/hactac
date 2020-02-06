@@ -6,24 +6,33 @@ lamp: circle 7
 torch: circle 10
 fire: circle 15
 bright: circle 20
-spotlamp: cone arc=90 15
+spotlamp90: cone arc=90 9
+spotlamp60: cone arc=60 12
 fightlight: cone arc=120 40
 fightlightsmall: cone arc=120 20
-NPCleader3: aura GM circle 3.5#0000bb
-NPCleader5: aura GM circle 5.5#0000bb
-NPCleader8: aura GM circle 8.5#0000bb
-RPleader3: aura circle 3.5#0000bb
-RPleader4: aura circle 4.5#0000bb
-RPleader5: aura circle 5.5#0000bb
-RPleader6: aura circle 6.5#0000bb
 glow1: circle 1#007700
 glow2: circle 2#008811
 glow3: circle 3#009922
 glow4: circle 4#00aa44
 glow5: circle 5#00bb66
-scary4: aura circle 4.5#aa0000
-scary5: aura circle 5.5#aa0000
-scary6: aura circle 6.5#aa0000
-scary7: aura circle 7.5#aa0000
-scary8: aura circle 8.5#aa0000
+--- auras below use extra .5 to fully fill target square to edges ---
+NPCleader3: aura GM circle 3,5#0000bb
+NPCleader5: aura GM circle 5,5#0000bb
+NPCleader8: aura GM circle 8,5#0000bb
+RPleader3: aura circle 3,5#0000bb
+RPleader4: aura circle 4,5#0000bb
+RPleader5: aura circle 5,5#0000bb
+RPleader6: aura circle 6,5#0000bb
+scary2: aura circle 2,5#aa0000
+scary3: aura circle 3,5#aa0000
+scary4: aura circle 4,5#aa0000
+scary5: aura circle 5,5#aa0000
+scary6: aura circle 6,5#aa0000
+scary7: aura circle 7,5#aa0000
+scary8: aura circle 8,5#aa0000
+
+
+
+
+
 

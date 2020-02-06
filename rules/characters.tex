@@ -8,155 +8,361 @@
 \chapter*{Characters}
 \chaptermark{characters}
 
-Here are some example characters. First a few rolled up by the author. After that come Heroes rolled up by the players for the "Return of Uchly Namen" campaign, and some more experienced examples. The later chars are not updated to the newer rule set and can look strange in some details.
+\raggedbottom
 
-\
-
-
-\phantomsection \addcontentsline{toc}{section}{average newbie stats}
-\tiny \begin{samepage} \begin{verbatim}
-================================================================================
-A V E R A G E   N E W B I E   C H A R A C T E R   S T A T S
------------------------------------------------------------
-
-These are the approximate averages for newbie Heroes
-for the common races.
-
-TODO: add updated averages from rollchar.py
-\end{verbatim} \end{samepage} \normalsize
-
-\
-
-\pagebreak[1]
-\phantomsection\addcontentsline{toc}{section}{current}
-\tiny \begin{samepage} \begin{verbatim}
-================================================================================
-                        P L A Y E R   C H A R A C T E R S
-                        ---------------------------------
-
-NOTE: this section is not up to date!
-TODO: update the example characters!
-\end{verbatim} \end{samepage} \normalsize
+Here are some example Hero characters. First a few newbie wannabecome heroes rolled up by the author, then some examples of player built Heroes rolled up for the \texttt{Return of Uchly Namen} campaign.
 
 
 \
 
+\goodbreak
+\phantomsection \addcontentsline{toc}{section}{example newbies}
+\section*{Example newbie characters}
+%-----------------------------------
 
-\pagebreak[3]
-\tiny \begin{samepage} \begin{verbatim}
-===================================
-Name                        (token)
------------------------------------
-str             hp   abs
-dex             m w r d
-con             stamina
-int             vision
-psy             mana
-per             ap
-cha             xp
-----------
-skills
-----------
-weapons
-----------
-equipment
-money g s c
------------------------------------
-accomplishments
-===================================
-\end{verbatim} \end{samepage} \normalsize
+Below are a few example newbie Hero wannabecomes, ready to take on the world, and hopefully not dying a horrible death immediately.
 
+%\vspace{40mm}
+%
+%% some sort of diverse party character sketch goes here ?
+%
+%\begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=0.50\textwidth]{figs/swordshield.png}
+%  \caption*{all in a good party}                   %  * remove "figure X" prefix
+%\end{figure}
+%% swordshield.png file is from pixabay.com, free license
+%% original filename: armoured-1296516_960_720.png
+
+
+
+
+\clearpage
+\begin{samepage}
+
+\noindent Morten Flaff is a decent basic noob fighter but lacks all the useful support skills like gossip, haggle, counting, literate, etc. And he has a basic but limited travel pack.
 
 \
 
-
-\pagebreak[3]
-\tiny \begin{samepage} \begin{verbatim}
-Human Fighter
+\small \begin{verbatim}
+Morten Flaff      (human fighter wannabe)
 ================= human =================
-str  6                    hp 18 abs 0
-dex  5                    m1 w4 r7 d8
-con  4                    stamina 10
-int  4                    vision 16 day 192
-psy  7                    mana 14
-per  6                    ap 6 (4)
-cha  7                    xp 17 (117)
---------------------------------------------
-yield bonus 3
---------------------------------------------
-Common 4          0.5 (4)
-avoid  2          0.8 (2)
-throw  2          0.8 (2)
-spear  8          0.8 (0) 51
-shield 6          0.7 (0) 25
-quick  2          4.0 (0) 16
-mobile 2          2.0 (0)  8
---------------------------------------------
-yield
-off balance
---------------------------------------------
-spear               dam  5/6, abs 6, parry+0/+1, reach 1 mod-3,
-(1h/2h)             str 3 (max +2 str bonus, extra str bonus are penetrating)
-                    str+6 can instead give fast+1 when 2h grip
-                    finesse-4
-shield              abs 12, parry +3, str 4
-                    Ranged attacks mod-2 when in the way.
-                    Hiding behind it (primary action) ranged mod-3
-                    tackle mod+1
-money: 4 gold, 6 silver, 3 copper
+str  6                     hp 18 abs 0
+dex  5                     m1 w4 r7 d8
+con  4                     stamina 10
+int  4                     vision 16 day 192
+psy  7                     mana 14
+per  6                     ap 6 (4)
+cha  7                     xp 3 (117)
+-----------------------------------------
+Common 5                                                              0.5 (4)  4
+brawl  3                                                              0.5 (3)  0
+throw  2                                                              0.7 (2)  0
+avoid  2                                                              0.8 (2)  0
+yield +3                                                              spc (3)  0
+off balance                                                             5 (x)  0
+spear  8                                                              0.9 (0) 57
+shield 6                                                              0.7 (0) 25
+quick  2                                                              4.0 (0) 16
+mobile 2                                                              3.0 (0) 12
+-----------------------------------------
+spear     8, dam 5/5, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3      3s, 1.50enc
+1h/2h     str 4/3 (str bonus max +1 dam then max +2 pen)
+          slash: mod-2, dam-1
+          finesse-4/-6
+shield    9(6), abs 10, parry+3,                                     5s, 2.00enc
+          str 4, fast+1 if str 8 and dex 12
+          Ranged attacks mod-2 when in the way.
+          Hiding behind it (3ap) ranged mod-4
+          tackle mod+1
+money: 2 gold, 3 silver, 3 copper
+simple threadbare clothing                                           --, 0 worn
+knife                                                                5c, 0.25enc
+travel sack 10enc: 1.5enc + 0.75 * load                              2c, 9.00enc
+    bed roll, tarp,                            1+3s, 3+4enc
+    water skin,                                3c, 1enc
+    flint & steel,                             3c, 0.2enc
+    travel rations 2x                          2x5c, 2x0.3 = 0.6enc
+-----------------------------------------
+spent 15s on equipment, dumped his crappy starter gear
+overencumbered 13/6 when traveling : encumbrance 2: mod-2 dash-2 run-1, etc
+dumping sack    4/6 when fighting  : enc 0
+=========================================
 \end{verbatim} \end{samepage} \normalsize
 
 
+
+
+
+\clearpage
+\begin{samepage}
+
+\noindent MistaMuhda is a specialised slayer noob goblin. He starts with no significant money and simply walk around with his massive but horribly shitty 2h axe, scavenging from the land or killing things when possible. At least he can speak Common a little bit.
+
 \
 
-
-\pagebreak[3]
-\tiny \begin{samepage} \begin{verbatim}
-Goblin Slayer
-================= goblin =================
-MistaMuhda                 (goblin-bigaxe)
-------------------------------------------
-str  6(5)                 hp 15(13) abs 0
-dex  6                    m2 w4 r5 d6
-con  5                    stamina 6(4)
-int  8                    vision 24 dusk 265
-psy  3                    mana 4
-per  6                    ap 6
-cha  3                    xp 0 (73)
---------------------------------------------
-yield bonus 3
-sneak bonus +3
---------------------------------------------
-Common       5        0.5 (5)
-Svartlingo   5        0.5 (5)
-avoid        7        0.8 (5) 19
-bite         2        0.66(2)
-disengage    2        1.0 (2)
-scratch      3        0.66(3)
-sneak        3        0.5 (0)
-throw        2        0.8 (2)
-enduring     2        1.0 (0)  4
-resilient    2        1.0 (0)  4
-strong       1        2.0 (0)  2
-axe          7        0.9 (0) 44
---------------------------------------------
-yield
-off balance
---------------------------------------------
-bite          dam 3 3ap (2ap if both hands free)
-scratch       dam 1 2ap (1ap if both hands free)
-2h axe        dam 12, abs 12, parry -3, toparry -2, toavoid +1,
-              str 6, finesse-2
+\small \begin{verbatim}
+MistaMuhda               (goblin slayer)
+================ goblin ================
+str  6(5)                hp 13(11) abs 0
+dex  6                   m2 w4 r5 d6
+con  5                   stamina 6(4)
+int  6                   vision 18 dusk 265
+psy  3                   mana 2
+per  6                   ap 5(4)
+cha  3                   xp 3 (98)
+----------------------------------------
+Svartlingo 5(4), Common 3                                                   4, 4
+brawl 5(3), throw 3(2)                                                      8, 3
+axe 6                                                                         32
+avoid 6                                                                       28
+yield +3, disengage 2, off balance                                             -
+sneak 5 (2+3)                                                                  2
+quick 1, enduring 2, resilient 2, strong 1                            4, 4, 4, 2
+----------------------------------------
+bite     5, dam 2, 3ap (2ap if both hands free)
+scratch  5, dam 1, 2ap (1ap if both hands free), stamina(-1,0,0)
+fist     5, dam 2, 2ap, stamina(-1,0)
+kick     5, dam 4, 3ap
+2h axe   5(6), dam 10(12), abs 7(12), parry -3, toparry -2, toavoid +1,
+         str 6, finesse-2
+         rotten quality: mod-1, dam-2, abs-5, 10% risk to break when drawn,
+         when broken takes a few hours to repair
 money: 1 silver, 4 copper, 1 teeth, 2 stones, 1 feathers, 2 glass beads
 \end{verbatim} \end{samepage} \normalsize
 
+\
+
+
+
+%\clearpage
+\goodbreak
+\begin{samepage}
+
+\noindent GrabbaKill is a heavy brawler, making some money here and there from village show fighting? Quick attacks and counter, but defence is weak with brawl deflects taking mods and still giving partial damage.
+
+\
+
+\small \begin{verbatim}
+GrabbaKill             (goblin pugilist)
+================ goblin ================
+str  8(6)                hp 12 abs 1
+dex  8                   m1 w3 r5 d7
+con  4                   stamina 5
+int  3                   vision 22 dusk 265
+psy  6                   mana 1
+per  8                   ap 6(5)
+cha  2                   xp 0 (95)
+----------------------------------------
+Svartlingo 4, Common 2, gossip 3, haggle 3                            -, 2, 4, 4
+brawl 9(2), throw 3(1), slugger 2, counter attack                  38, 5, 20, 10
+yield +4, off balance                                                       -, -
+quick 1, strong 2                                                           4, 8
+----------------------------------------
+bite     9, dam 3, 3ap (2ap if both hands free)
+scratch  9, dam 1, 2ap (1ap if both hands free), stamina(-1,0,0)
+fist     9, dam 4, 2ap, stamina(-1,0)
+kick     9, dam 6, 3ap
+leather armour  abs 1, shitty quality: creaks and smells sneak-6
+money: 2 silver, 7 copper, 2 teeth, 3 stones, 1 feathers, 1 glass beads
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+\clearpage
+\begin{samepage}
+
+\noindent Parry Hotter is a reasonably well rounded upcoming spell slinger. He looks really snazzy with his stuffed owl on his shoulder. Though he had to trade his wand for a proper staff.
+
+\
+
+\small \begin{verbatim}
+===================================
+Parry Hotter the Fizzler    (boy03)
+-----------------------------------
+str  4      hp 12 abs 0
+dex  7      m1 w3 r6 d9
+con  7      stamina 4
+int  7      vision 23 arc 210
+psy  6      mana 16
+per  7      ap 3
+cha  5      xp 7 (110)
+----------
+Common 8, literate 3, counting 2
+staff 5, brawl 2, throw 2
+avoid 5, yield +3, off balance
+veteran 2
+find 3
+luck 1
+----------
+magic 2, power casting 2
+force bolt  7  cast 1r 1m, dam 3, range 10, int 7, psy 4
+heal        4  cast 2r 1m, heal 3 +2/m, time 2hp/r, range contact, int 5, psy 4
+stafflight  3  cast 2r 1m, duration 50 +25r/m, int 3, psy 2, scf 0.2
+slow        5  cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
+               Movement costs double movement points.
+               All actions are slow-2 (takes +2 extra ap)
+               Full/multi-round actions take +1r
+               Continue slow on psy+2/m vs psy each round (mana paid once
+               on cast) up to the max duration. First round auto success.
+               Once slow is lost on a target that target is free from
+               the spell.
+               int 4, psy 3
+----------
+staff  5, dam 3/4, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5   (trusty 5xp)
+1h/2h  str 4/3 (max +1/+2 str bonus)
+       2h: fast+1 if str 6 and dex 6
+knife  1, dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
+       str 1 (no str bonus)
+       fast+1 if str 3 and dex 4
+       every second attack in a round costs no stamina: stamina(-1,0)
+       poke: mod-1 dam-1 pen+1
+money 2g 8s 1c
+wizard's robe, stuffed owl, sewn to the shoulder, pointy hat
+small sack 5enc:
+    rope 10m, snares 2x, blanket, flint & steel
+    water skin, provisions 4x
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\noindent Note that he has knife 1 from the melee weapons similarity modifier -4 and staff 5.
+
+
+
+
+
+
+\clearpage
+\begin{samepage}
+
+\noindent KrijgRauch the wünder dwarf, with both good defensive melee and ranged fighting capability.
+
+\
+
+\small \begin{verbatim}
+===================================
+KrijgRauch EckStein (dwarf-young01)
+-----------------------------------
+str  8      hp 18 abs 2
+dex  4(5)   m1 w3 r5 d6(7)
+con 10      stamina 12
+int  4      vision 17 infra arc 160
+psy 10      mana 17
+per  7(8)   ap 3
+cha  4      xp 1 (105)
+----------
+Dwarvish 7, Common 3, literate 2, counting 2, haggle 5(2+3)
+axe 6, crossbow 5, shield 7
+brawl 1, throw 1
+avoid 2, yield +2, off balance
+find 4
+----------                                                                  =104
+1h axe     6, dam 7, abs 6(8), parry-4(-3), toparry-1, toavoid+1, finesse-3 0.8e
+           str 4 (max +4 str bonus)
+           swing: slow-1 mod-1 dam+2 toavoid+2
+shield     10(7), abs 9(10), parry+3,                                       2.0e
+           str 4, or slow-1 str 1
+           Ranged attacks mod-2 when in the way.
+           Hiding behind it (3ap) ranged mod-4
+crossbow   5, dam 5, penetrating 1,        normal  mod=0 1r                 1.0e
+           range 12                        aimed   mod+1 2r
+           str 3 (no str bonus)            quick   mod-3 3ap
+           reload 2r (str 9 1r)
+           quiver with 15 bolts                                             0.8e
+chain mail abs 2 ring, scale, brigantine, etc                               2.0e
+           str 3 (str penalties affect all actions)
+           dex-1, dash-1, per-1
+           acrobatics mod-3, martial arts mod-1, spellcasting mod-1, sneak mod-3
+           takes 3 rounds to put on or take off
+
+rusty chainmail abs 2, polished shining spotless old axe, battered shield
+the chain mail has 10% risk of breaking when putting it on
+when broken requires 1d3 days to repair
+
+money 4g 8s 12c, 1 ruby worth 6gold
+old worn warm clothes
+large flask of beer (2 days) rolled in blanket                              4.0e
+----------
+dumps the blanket roll when fighting, encumbered 1 when traveling
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
+
+\clearpage
+\TODO below is not updated yet, above should be ok-ish
 
 \
 
 
-%\pagebreak[3]
-%\clearpage
-\newpage
+%\phantomsection \addcontentsline{toc}{section}{average newbie stats}
+%\tiny \begin{samepage} \begin{verbatim}
+%================================================================================
+%A V E R A G E   N E W B I E   C H A R A C T E R   S T A T S
+%-----------------------------------------------------------
+%
+%These are the approximate averages for newbie Heroes
+%for the common races.
+%
+%TODO: add updated averages from rollchar.py
+%\end{verbatim} \end{samepage} \normalsize
+%
+%\
+
+
+
+%\goodbreak
+%\phantomsection\addcontentsline{toc}{section}{current}
+%\tiny \begin{samepage} \begin{verbatim}
+%================================================================================
+%                        P L A Y E R   C H A R A C T E R S
+%                        ---------------------------------
+%
+%NOTE: this section is not up to date!
+%TODO: update the example characters!
+%\end{verbatim} \end{samepage} \normalsize
+%
+%\
+%
+%\goodbreak
+%\tiny \begin{samepage} \begin{verbatim}
+%===================================
+%Name                        (token)
+%-----------------------------------
+%str             hp   abs
+%dex             m w r d
+%con             stamina
+%int             vision
+%psy             mana
+%per             ap
+%cha             xp
+%----------
+%skills
+%----------
+%weapons
+%----------
+%equipment
+%money g s c
+%-----------------------------------
+%accomplishments
+%===================================
+%\end{verbatim} \end{samepage} \normalsize
+
+
+
+\
+
+
+\
+
+
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{old}
 % ==============================================================================
 The characters below here are not updated to the current rule set and can look a bit weird.
@@ -165,7 +371,7 @@ The characters below here are not updated to the current rule set and can look a
 \
 
 
-\pagebreak[3]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Human Warrior
 ===================================
@@ -231,7 +437,7 @@ initiative 5+d4   : --
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Dwarven Warrior
 ===================================
@@ -311,7 +517,7 @@ initiative 8+d4   : --
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Elven Warrior
 ===================================
@@ -371,7 +577,7 @@ money ( 0g 1s 5c )
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Human Paladin
 ===================================
@@ -437,7 +643,7 @@ money ( 0g 4s 11c )
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Elven Archer
 ================== elf =====================
@@ -528,7 +734,7 @@ pain    : --
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 Maras Blackhammer  -  dwarf hammermage
 ================= dwarf ====================
@@ -612,7 +818,7 @@ poor: psy-1 <5 gold in coins, psy-1 <1 gemstone  =psy mod-2
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ================================================================================
                          P R E G E N   N E W B I E S
@@ -650,117 +856,9 @@ sack for 5 items: red apple, cheese sandwich, lock of girlfriend's hair, rope
 
 \
 
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
-===================================
-Parry Hotter the Fizzler    (boy03)
------------------------------------
-sty  5    hp 12 abs 0
-smi  7    m1 w3 r6 d9
-fys  7    stamina 4
-int  7    vision 23
-psy  5    mana 16
-itf  7    cap 11
-kar  4    xp 4 (initial 110, spent 106)
-----------
-brawl          2             free2 0.8*                      0
-throw          2             free2 0.8*                      0
-staff          5                   0.8*5^2                  20
-avoid          5 yield+3     free3 0.8*(5^2-3^2)            12
-literate       3                   1.0*3^2                   9
-magic          4                   1.0*4^2                  16
-veteran        3                   1.0*3^2                   9
-power casting  3                   0.5*3^2                   4
-luck           2                   1.0*2^2                   4
-find           3             free3 0.66*                     0
-----------                                                  --  =74
-force bolt     7                   0.33*7^2                 16
-heal           5                   0.33*5^2                  8
-stafflight     3                   0.33*3^2                  3
-slow           4                   0.33*4^2                  5
-----------                                                  --  =32
-force bolt     cast 1a 1m, dam 5, range 10, long -2dam, penetrating 1
-               int 7, psy 5
-heal           cast 2r 1m, heal 3 +2/m, time 1r/hp, range contact
-               int 7, psy 5
-stafflight     cast 1r 1m, duration 100 +100r/m
-               int 3, psy 2
-slow           cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
-               target cannot move faster than maneuver,
-               and any movement gives a mod-3 penalty.
-               continue slow on psy\\psy +2/m each round (mana paid once on cast)
-               up to the max duration.
-               int 4, psy 3
-----------
-money 2g 8s 1c
-staff          5 dam 3/4, abs 8, parry+1/+2, reach 1 mod-3, fast+0/+1
-(1h/2h)          str 3 (max +2 str bonus), finesse-6
-knife          0 dam  3, abs  8, parry -2, toparry -1, fast+1
-                 str 2 (no str bonus), finesse-4
-                 first three attacks do not require stamina
-----------
-wizards robe
-stuffed owl, sewn to the shoulder
-pointy hat
-\end{verbatim} \end{samepage} \normalsize
 
 
-\
-
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
-===================================
-KrijgRauch EckStein (dwarf-young01)
------------------------------------
-str  8    hp 15 abs 2
-dex  5    m1 w3 r5 d7
-con 10    stamina 12
-int  4    vision 17 infra
-psy 10    mana 17
-per  8	  cap 9
-cha  4    xp 5 (105)
-----------
-avoid     2 yield+2          free2 0.8*                      0
-brawl     1                  free1 0.8*                      0
-throw     1                  free1 0.8*                      0
-find      4                  free4 0.66*                     0
-axe       6                        0.9*6^2                  32
-shield    8                        0.7*8^2                  44
-crossbow  5                        0.8*5^2                  20
-count     2                        0.5*2^2                   2
-literate  2                        0.5*2^2                   2
-----------                                                  --  =100
-money 4g 8s 12c, 1 ruby worth 6gold
-axe       6 dam 7, abs 8, parry -2,
-            str 4 (max +3 str bonus), finesse-4
-shield    8 abs 12, parry +3, str 4
-          Ranged attacks mod-2 when in the way.
-          Hiding behind it (primary action) ranged mod-3
-          tackle mod+1
-crossbow  5 dam 6, penetrating 1,                   quiver with 15 bolts
-            range 12, long -3, extreme -6 dam-1,
-            str 3 (no str bonus)
-rate of fire for successive shots with crossbow:
-reload 1r if reloading as separate action, incl reload from accessible quiver
-snap  mod-6 1r incl reload from accessible quiver
-quick mod-3 2r incl reload from accessible quiver
-shot  mod-0 3r incl reload from accessible quiver
-aimed mod+3 4r incl reload from accessible quiver
-The first shot with a loaded crossbow is very quick. Successive shots require reload, and then it takes a lot of time.
-first snap  mod-3 1a
-first shot  mod-0 1r
-first aimed mod+3 2r
-
-rusty chainmail abs 2, polished shining spotless old axe, battered shield
-brand new crossbow, 15 bolts
-flask of beer
-----------
-\end{verbatim} \end{samepage} \normalsize
-
-
-\
-
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Ein von Dääken, the fop  (human xx)   -- update skill costs and free skills
@@ -802,7 +900,7 @@ Mingold Meek: servant, watching the horse
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Manny the Mage trainee      (boy02)      -- todo: re-count manny's xp and skills
@@ -853,7 +951,7 @@ money 3g 5s 18c
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Pyttelina                 (rogue02)
@@ -921,7 +1019,7 @@ leather armour 1.0
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Lars LongShot               (token)
@@ -1002,7 +1100,7 @@ money ( 1g 6s 10c ) left: 4s 3c
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ================================================================================
                          E X P E R I E N C E D   ~ 2 0 0
@@ -1039,7 +1137,7 @@ kick   9 dam 9 fast+1 parry-deflect (minimum 33\% (rd))
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Simon Strong   @218xp   (fighter05)
@@ -1078,7 +1176,7 @@ backpack 5 items: knife, bowstring, food, water
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===================================
 Max Magus   @216xp         (mage04)
@@ -1130,7 +1228,7 @@ backpack   5 items:
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ================================================================================
                         old misc characters, not updated
@@ -1173,44 +1271,13 @@ money ( g s c)
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ================================================================================
                                  F I G H T E R S
                                  ---------------
 
 
-===================================
-name                        (token)
------------------------------------
-str  9    hp 24 abs 0
-dex  6    m1 w3 r5 d8
-con  8    stamina 8
-int  3    vision 14
-psy  4    mana 4
-per  5    xp
-cha  5    money 2g 14s 25c
-----------
-timing         2
-2h axe         8
-attacks        2
-roar           5
-veteran        5
-avoid          5 yield+3
-find           3
-grapple        6
-block          8
-----------
-3 healing potion heal 10, takes 5r (2/r)
-5 torch (100r), light 7r
-===================================
-\end{verbatim} \end{samepage} \normalsize
-
-
-\
-
-\pagebreak[1]
-\tiny \begin{samepage} \begin{verbatim}
 =======================================
 krigare Yngolf Storpec name (fighter02)
 ---------------------------------------
@@ -1236,7 +1303,7 @@ grab-hold      6 dam 1, grab smi\\smi, hold sty\\sty
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 =================================
 dvärg Grimlaug Hörnsten (dwarf02)
@@ -1268,7 +1335,7 @@ lantern (1000r) plenty of oil, refill 20r
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===============================
 krigare Hajib Jihad (fighter10)
@@ -1297,7 +1364,7 @@ sneak         7
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ===========================================
 elf Rimdelabenidrimelmiungindiel (fighter07)
@@ -1327,7 +1394,7 @@ note: heal on top of first aid only gives a total of three points.
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ======================================
 paladin Imentriel Mardokhat (knight07)
@@ -1357,7 +1424,7 @@ pray           7 time 30r, gain diff mana
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ================================================================================
                                   W I Z A R D S
@@ -1403,7 +1470,7 @@ sacrificial dagger   ritual sacrifice 10r, drains-converts 1hp to 1m/r, max 10m
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 =============================
 sorcerer Dangalf Sot (mage05)
@@ -1440,7 +1507,7 @@ crystal ball mana accumulator   holds 20 mana, transfer 1m/r in/out
 
 \
 
-\pagebreak[1]
+\goodbreak
 \tiny \begin{samepage} \begin{verbatim}
 ==================================
 battlemage Magus Knecht (knight10)

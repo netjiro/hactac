@@ -63,18 +63,18 @@ The same limitation applies with tricky maneuvers like wayward strike. The maneu
 
 
 
-% typical: relative base, 1h/2h  dam , extras
-% knife    +1   +1/--                             fast, finesse               [1-4]
-% sword    +2   +2/+4                             finesse 6                   [2-8]
-% axe      +3   +3/+6                             parry-3 toparry-1 toavoid+1 [2-12]
-% spear    +1   +1/+2 pen 0/1 parry -1/+1         reach                       [2-8]
-% staff    -1   -1/+1 parry +1/+2                 fast, reach                 [1-6]
-% brawl    -3                                     (at str 6)
-%   fist   -4                                     fast, deflect
-%   kick   -2                                     deflect
+% typical: relative base, 1h/2h  dam , extras                          str range
+% knife    +1   +1/--                         fast, finesse               [1-4]
+% sword    +2   +2/+4                         finesse 6                   [2-8]
+% axe      +3   +3/+6                         parry-3 toparry-1 toavoid+1 [2-12]
+% staff    -1   -1/+1 parry +1/+2             fast, reach                 [2-6]
+% spear    +1   +1/+2 pen 0/1 parry -1/+1     reach                       [2-6]
+% brawl    -3                                 (at str 6)
+%   fist   -4                                 fast, deflect
+%   kick   -2                                 deflect
 %
-% bow      =0   --/=0                             range, pen, 1/2r
-% crossbow +3   --/++ pen 1-3                     range, pen, 1/3r
+% bow      =0   --/=0                         range, pen, 1/2r
+% crossbow +3   --/++ pen 1-3                 range, pen, 1/3r
 
 
 
@@ -172,14 +172,14 @@ Speciality Blades   costs 5xp to learn speciality, or suffer mod-1
 
 duelling sword      dam 6, abs 6, toparry-2, toavoid-1, finesse-9
                     str 5, (no str bonus)
-                    fast+1 if str 6 and dex 8
+                    fast+1 if str 7 and dex 9
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
 
 large duell. sword  dam 7, abs 7, toparry-2, toavoid-1, finesse-9
                     str 6, (no str bonus)
-                    fast+1 if str 7 and dex 9
+                    fast+1 if str 8 and dex 10
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+1 todefend+2
@@ -214,14 +214,14 @@ claymore            dam 14, abs 28, toavoid+1, finesse-4
 
 estoc               dam 7, abs 8, toparry-1, toavoid-1, finesse-9
 2h                  str 5 (no str damage bonus, max +1 penetrating bonus)
-                    fast+1 if str 6 and dex 8
+                    fast+1 if str 7 and dex 9
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
 
 grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
 2h                  str 7 (no str damage bonus, max +1 penetrating bonus)
-                    fast+1 if str 8 and dex 10
+                    fast+1 if str 9 and dex 11
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow-1 mod-1 dam+2 todefend+2
@@ -297,27 +297,35 @@ the shoulder or shield of a friend in a two layer formation. This requires
 phalanx of both characters. A three layer formation is possible if the 
 first front line is kneeling or formed of shorter characters.
 
-light staff         dam 2/3, abs 5, parry+1/+2, reach 1 mod-4, finesse-3/-5
-1h/2h               str 3/2 (max +1/+2 str bonus)
+heavy versions of staffs and spears have +2dam +4abs -1finesse for +2str
+but also raising the fast+1 for staffs to double strength and dex requirements
+and rasing max str bonus by +1 for staves 
+and and max str and pen bonus by +1 for spears.
+and adding slow-1 to spears unless additional +2 str are met (+4 total)
+
+
+small staff         dam 1/2, abs 5, parry+1/+2, reach 1 mod-4, finesse-3/-5
+1h/2h               str 2/1 (max +1/+2 str bonus)
                     2h: fast+1 if str 4 and dex 4
 
-staff               dam 4/5, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5
-1h/2h               str 5/4 (max +1/+2 str bonus)
+staff               dam 3/4, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5
+1h/2h               str 4/3 (max +1/+2 str bonus)
                     2h: fast+1 if str 6 and dex 6
 
-heavy staff         dam 6/7, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
-1h/2h               str 7/6 (max +1/+2 str bonus)
+large staff         dam 5/6, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
+1h/2h               str 6/5 (max +1/+2 str bonus)
                     2h: fast+1 if str 8 and dex 8
 
-light spear         dam 3/4, pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
+small spear         dam 3/3, pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
 1h/2h               str 2/1 (str bonus max +1 dam then max +1 pen)
+                    2h: fast+1 if str 6 and dex 6
                     narrow tip spears are dam-1 pen+1 mod-1
                     narrow tip spears can have all str bonus as penetrating
                     broad tip spears are dam+1 mod-1
                     slash: mod-2, dam-1
                     finesse-4/-6
 
-spear               dam 5/6, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
+spear               dam 5/5, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
 1h/2h               str 4/3 (str bonus max +1 dam then max +2 pen)
                     narrow tip spears are dam-1 pen+1 mod-1
                     narrow tip spears can have all str bonus as penetrating
@@ -325,7 +333,7 @@ spear               dam 5/6, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
                     slash: mod-2, dam-1
                     finesse-4/-6
 
-heavy spear         dam 7/8, pen 0/1, abs 8, parry-1/+1, reach 1 mod-3
+large spear         dam 7/7, pen 0/1, abs 8, parry-1/+1, reach 1 mod-3
 1h/2h               str 6/5 (str bonus max +1 dam then max +3 pen)
                     narrow tip spears are dam-1 pen+1 mod-1
                     narrow tip spears can have all str bonus as penetrating
@@ -340,7 +348,7 @@ long spear          dam 5, pen 1, abs 7, parry-3, reach 1 mod-0
                     broad tip spears are dam+1 pen-1 mod-1
                     finesse-3
 
-heavy long spear    dam 7, pen 1, abs 9, parry-3, reach 1 mod-0
+large long spear    dam 7, pen 1, abs 9, parry-3, reach 1 mod-0
 2h                  str 6 (str bonus max +1 dam then max +3 pen)
                     narrow tip spears are dam-1 pen+1 mod-1
                     narrow tip spears can have all str bonus as penetrating
@@ -370,7 +378,7 @@ heavy pike          dam 8, pen 1, abs 10, parry-6, slow-1
                     broad tip spears are dam+1 mod-1
                     finesse-2
 
-halberd             dam 10, pen 3, abs 8, parry-6, slow-2, toavoid+2
+halberd             dam 10, pen 3, abs 8, parry-6, slow-2 (5ap), toavoid+2
 2h                  reach 0 mod-2, reach 1 mod-0, reach 2 mod-5,
                     str 5
                     finesse-2
@@ -524,18 +532,18 @@ slow-2 or require str+3 to be slow-1 or str+6 to be normal speed
 
 buckler             abs 6, parry+1
                     str 0
-                    fast+1 if str 4 and dex 5
+                    fast+1 if str 4 and dex 6
                     Ranged attacks mod-0 when in the way.
                     Hiding behind it (3ap) ranged mod-1
 
 small shield        abs 8, parry+2,
                     str 2
-                    fast+1 if str 6 and dex 8
+                    fast+1 if str 6 and dex 9
                     Ranged attacks mod-1 when in the way.
                     Hiding behind it (3ap) ranged mod-2
 
 shield              abs 10, parry+3,
-                    str 4
+                    str 4, or slow-1 str 1
                     fast+1 if str 8 and dex 12
                     Ranged attacks mod-2 when in the way.
                     Hiding behind it (3ap) ranged mod-4

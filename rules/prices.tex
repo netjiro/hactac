@@ -127,14 +127,14 @@ heavy pick axe         6 0       2.2   tools, cheaper in bulk
                      g s c    encumbrance
                      -----    -----------
 
-light staff            0 8       0.8
+small staff            0 8       0.8
 staff                  1 0       1.0
-heavy staff            1 5       1.5
-light spear            2 0       1.5
+large staff            1 5       1.5
+small spear            2 0       1.5
 spear                  3 0       2.0
-heavy spear            6 0       2.7
+large spear            6 0       2.7
 long spear             5 0       3.0
-heavy long spear       8 0       4.0
+large long spear       8 0       4.0
 
 infantry spear         5 0       2.5   military, much cheaper in bulk
 
@@ -221,7 +221,7 @@ ballista            30 0 0      20.0
 
 bowstring            0 0 2       0.1
 10 arrows            0 0 1       0.33
-10 bolts             0 0 1       0.20
+10 bolts             0 0 1       0.25
 quiver 10            0 0 5       0.5  +0.5*load (arrows/bolts)
 quiver 20            0 0 8       0.8  +0.5*load (arrows/bolts)
 quiver 30            0 1 0       1.0  +0.5*load (arrows/bolts)
@@ -243,7 +243,7 @@ full plate          25 0 0       4.0 worn 10.0 packed
 heavy full plate    50 0 0       5.0 worn 15.0 packed
 \end{verbatim} \normalsize
 %\end{verbatim} \end{samepage} \normalsize
-\pagebreak[1]
+\goodbreak
 
 
 
@@ -254,7 +254,7 @@ heavy full plate    50 0 0       5.0 worn 15.0 packed
 %---------------
 
 %\begin{samepage}
-\pagebreak[1]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{basic equipment}
 \section*{Basic equipment price list}
 
@@ -272,15 +272,15 @@ Most basic equipment can be found in any village or town. Prices can vary quite 
                      g s c    encumbrance
                      -----    -----------
 
-knife                0 0 5       0.25
+knife                    5       0.25
 
-first aid kit        0 5 0       1.5    has 10 uses, refill for 3s
+first aid kit          5 0       1.5    has 10 uses, refill for 3s
 medical kit          2 0 0       2.0    has 10 uses, refill for 10s
 
-simple food 5 days   0 0 1       5.0    simple food weigh 1enc per day's ration
-food & room 1 day    0 0 1       ---    common room sleeping, simple food
-provisions 1 day     0 0 1       0.5
-travel rations 1d    0 0 5       0.3    high quality travel food, last a while
+simple food 5 days       1       5.0    simple food weigh 1enc per day's ration
+food & room 1 day        1       ---    common room sleeping, simple food
+provisions 1 day         1       0.5
+travel rations 1d        5       0.3    high quality travel food, last a while
 1l beer                  1       0.5
 10l barrel             1 0       5.0
 bottle of wine           2       0.5
@@ -289,19 +289,21 @@ spirits                  1       0.1  enough for a one swig dose.
 health elixir          3 0       0.1  heal 3hp (1/3r) draws 3mana+3stamina
 health wafer           2 5       0.1  heal 3hp (1/10r) max stam-1 until slept
 
-simple clothing      0 2 0       1.0 (only when packed)
-good clothing        0 5 0       1.5 (only when packed)
+rag clothing             5       1.0 (only when packed)
+simple clothing        2 0       1.0 (only when packed)
+good clothing          5 0       1.5 (only when packed)
 fine clothing        1 0 0       2.0 (only when packed)
 extravagant clothing 3 0 0       3.0 (only when packed)
-warm clothing        0 5 0       2.0 (only when packed)
+warm clothing          5 0       2.0 (only when packed)
 
-blanket              0 0 5       2.0
-tarp, waterproof     0 3 0       4.0 enough for a nice lean-to
+blanket                  5       2.0
+bed roll               1 0       3.0
+tarp, waterproof       3 0       4.0 enough for a nice lean-to
 
-belt 1 item  2.0 enc 0 0 5       0.2 (only when packed)
-belt 2 items 3.0 enc 0 0 8       0.3 (only when packed)
-belt 3 items 3.5 enc 0 1 3       0.4 (only when packed)
-belt 4 items 4.0 enc 0 2 0       0.5 (only when packed)
+belt 1 item  2.0 enc     5       0.2 (only when packed)
+belt 2 items 3.0 enc     8       0.3 (only when packed)
+belt 3 items 3.5 enc   1 3       0.4 (only when packed)
+belt 4 items 4.0 enc   2 0       0.5 (only when packed)
 
 water skin (1 day)       3       1.0
 
@@ -334,28 +336,31 @@ large wagon         15 0 0       2-4 horses, 4-10 ppl, load 500 enc
 carriage            30 0 0       2-4 horses, 1-2 drivers 4-6 ppl, load 300 enc
 
 rope 10m             0 0 2       1.0 climb+3
-twine 50m            0 0 2       0.25
 grappling hook       0 2 0       1.0 fixed
 rope ladder 10m      0 5 0       5.0 climb+6
 
 tool box             0 5 0       2.0
+twine 50m            0 0 2       0.25
 
-torch 20r            0 0 1       0.5 bright light (12sq torch, 20r duration)
-candle 50r           0 0 1       0.25 weak light (3sq candle, 50r duration)
-lantern 100r         0 5 0       1.0 weak light (8sq lamp, 100r)
+torch 20r            0 0 1       0.5 bright light (10sq torch, 20r duration)
+candle 50r           0 0 1       0.25 weak light (4sq candle, 50r duration)
+lantern 100r         0 5 0       1.0 weak light (7sq lamp, 100r)
 spot lamp 100r       0 8 0       1.0 weak light (10sq spotlamp. 90deg, 100r)
 lamp oil 500r        0 0 1       0.5 5x doses of 100r for lantern
-flint & steel        0 0 3       0.2 fire in 1d5 rounds
+flint & steel        0 0 3       0.2 fire in 1d10 rounds
 tinder box           0 1 0       0.5 fire in 1d3 rounds
 smoulder box         0 5 0       2.0 fire in 1 round
 
-small snare          0 0 5       0.5 1sq 50%
-large snare          0 1 0       1.0 1sq 100%
-rock wedge           0 0 5       0.25
-dirt wedge           0 1 0       0.5
+small snare          0 0 5       0.5 or 0.1 when packed. trap: 1sq 33%
+large snare          0 1 0       1.0 or 0.2 when packed. trap: 1sq 66%
+trigger snare        0 5 0       2.0 or 0.5 when packed. trap: 1sq 90%
 
 \end{verbatim} %\end{samepage} \pagebreak[1]
 \normalsize
+
+% 200206: hmm what's this:  was listed under snares
+%rock wedge           0 0 5       0.25
+%dirt wedge           0 1 0       0.5
 
 
 

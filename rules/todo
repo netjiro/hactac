@@ -19,6 +19,16 @@ omvänd kronologisk ordning av TODO items
 
 
 
+200204: PIN!
+TODO: move to milestone xp payouts + session xp
+      where session xp are deducted from milestone xp
+      and add cool xp or fun xp or XXX xp for cool/fun/smart/etc stuff ppl do
+      but cool/fun/etc don't deduct from milestone xp
+-     milestones: 10-30, session 5, cool/fun/etc 1-10 per item
+
+
+
+
 
 200107:
 TODO: fix all \verb|bla bla| to \texttt{bla bla} in all latex files
@@ -984,3 +994,5 @@ DONE: reduce initiative by 3 for every initiated movement.
       actions.  discussion in comments
 DONE: update subsection*{Moving} Stutter Step to reflect that each initiated
       movement lowers initiative just like a normal action
+200206:
+DONE: update "meditate" after stamina changes

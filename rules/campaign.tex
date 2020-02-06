@@ -50,24 +50,25 @@ money          gold silver copper (g s c)
 \phantomsection\addcontentsline{toc}{section}{create a character}
 \section*{Creating characters}
 
-For most campaigns I'll keep using the method of pre-rolling a set of potential Heroes for the player to choose from. The simple \verb|rollchars.py| script rolls up sets of basic characters. It's easy to tweak the selection set of races for a specific campaign or adventure setting.
-For one-off or later added Heroes the player can instead roll a small set and choose a character from there.
+Select/roll your brand new character. Buy skills that makes sense for the profession and role you want your character to have. Select some suitable shitty noob equipment together with the GM. Spend some of your starter coin to upgrade some critical equipment perhaps?
+% edit below (200205): hmm, fun, but gives the wrong impression actually, mortality has been shown to be lower than originally expected. Most characters survive well past 0.3k maturity. Approximated mortality is <20% up to 0.5k
+%Don't spend too much time creating your first character, it will probably die soon anyway, and you'll have to make another, and another, and yet another one again. 
+%It might even be a good idea to create a bunch of them in the first place so that you have the queue already waiting by the mouth of the dungeon, ready to charge into the darkness in search of a quick and painful death.
 
-Select/roll the character your want to play. Buy skills that makes sense for the profession you want your character to have. Don't spend too much time creating your first character, it will probably die soon anyway, and you'll have to make another, and another, and yet another one again. It might even be a good idea to create a bunch of them in the first place so that you have the queue already waiting by the mouth of the dungeon, ready to charge into the darkness in search of a quick and painful death.
+There are a few things you should consider. Focus the character on one role when creating a 100xp newbie. He will not have enough points to get good enough for more than one task in the very beginning. Skills you expect to use regularly should have level 5 or better, and the main combat skill at lvl 7 or more is a good start. If possible, try to spread out some basic support or campaign skills over the party Heroes.
 
-There are a few things you should consider. Focus the character on one role when creating a 100xp newbie. He will not have enough points to get good enough for more than one task. Skills you expect to use regularly should have level 5 or better, and the main combat skill at lvl 7 is a good start. If possible try to spread out some basic support or campaign skills over the party Heroes.
-
-Early on it's good to have a strong defensive option. Shields and two handed staffs are good defensive options since their bonuses makes them more reliable in the early adventures. E.g: The cost to get an effective 8 in parrying defence action varies greatly. For sword it's 64xp, for 2h staff it's 28xp, and for a normal shield it's 17xp. The strongest defensive action is generally "avoid", but that costs 51xp for lvl 8.
+Early on it's good to have a strong defence. Shields and two handed staffs are good defensive options since their bonuses makes them more reliable in the early adventures. E.g: The cost to get an effective 8 in parrying defence action varies greatly. For sword it's 64xp, for 2h staff it's 28xp, and for a normal shield it's 17xp. The strongest defensive action is generally \emph{avoid}, but that costs 51xp for lvl 8.
 
 A standard fighter should probably have a main weapon and a shield. An alternative if he has good mobility is a two handed high damage weapon and good avoid capacity. A ranged fighter can be fast to stay out of trouble by positioning, or also carry a defensive melee weapon such as a staff or shield. The same goes for spell casters. Close combat tends to come for everyone quite often. Archers should probably also be quick at changing between the bow and the melee weapon.
 
 You can find some example Heroes at various experience levels in the "characters" section later.
 
-Here is the basic character sheet layout. It has already been explained above, in the "rules:character" statistics sheet section.
+Here is the basic character sheet layout. It has already been explained above, in the \hyperref[sec:charsheet]{character sheet section}, page \pageref{sec:charsheet}.
 
 \
 
-\goodbreak \begin{samepage} \begin{verbatim}
+\goodbreak
+\begin{samepage} \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -91,11 +92,17 @@ money ( g s c )
 
 \subsection*{Rolling character stats}
 %------------------------------------
-Further down in this file there are lists of different races and their specific stat rolls. Note that you may use the "hero" version of the rolls if you want, and that you may roll movement instead of choosing the race standard if so desired.
+Further below are lists of different races and their specific stat rolls. The gm together with the player group should decide how to roll characters. Straight up one roll? Rerolls? How many? Best of 3? Roll then distribute? Points scheme? How many points?
 
-The GM should decide how many character sets a player is allowed to re-roll when creating characters. However, I suggest allowing the players to roll more humans than dwarves, elves, and orcs. For example, allow the player to roll three humans or goblins, but only two dwarves, elves, orcs, halflings. Then select the one he wants to play. The humans and goblins are less powerful than some of the other races. By allowing the player to roll more alternatives this power deficiency is balanced a bit.
+We've been using a 
 
-To make things simple I suggest using the \verb|rollchars.py| script. Just change the number of total characters to choose from and run the script. It will roll a selection of characters from all races.
+
+
+%Note that you may use the "hero" version of the rolls if you want, and that you may roll movement instead of choosing the race standard if so desired.
+
+%The GM should decide how many character sets a player is allowed to re-roll when creating characters. However, I suggest allowing the players to roll more humans than dwarves, elves, and orcs. For example, allow the player to roll three humans or goblins, but only two dwarves, elves, orcs, halflings. Then select the one he wants to play. The humans and goblins are less powerful than some of the other races. By allowing the player to roll more alternatives this power deficiency is balanced a bit.
+
+%To make things simple I suggest using the \verb|rollchars.py| script. Just change the number of total characters to choose from and run the script. It will roll a selection of characters from all races.
 
 
 \subsection*{Buying skills}
@@ -156,7 +163,7 @@ See the "pregen newbies" in the character file for some examples. Some of them h
 
 %The inbred rule can be applied here to give a more expensive, (but generally non combat) gear to chars with lousy stats.
 
-Improving the starer kit can be done by spending money. Look through the equipment list and see what is available. Newbies probably don't have access to exotic equipment, and perhaps only 50\% chance to special equipment.
+Improving the starer kit can be done by spending money, or by purchasing a newbie starter kit (see below) Look through the equipment list and see what is available. Newbies probably don't have access to exotic equipment, and perhaps only 50\% chance to special equipment.
 
 Some interesting equipment to purchase can be: \\
 light source: torch, lamp, candles, etc. \\
@@ -171,6 +178,43 @@ pick axe for getting out of the collapsed tunnel...
 Some character backgrounds would allow them to start out rich, and with some expensive equipment, but then it should come with a serious down side. Perhaps the princelings manservant is an evil backstabber, plotting with the local highway robbers to steal everything and kill the little snot in the process?
 
 
+\subsection*{Equipment newbie starter kits}
+%------------------------------------------
+Starting out in the Hero Adventuring business can be difficult, and it's so useful to have a small knapsack of stuff with you when you leave the old homestead. Character creation is probably also the only time when your Hero can buy equipment for xp instead of silver.
+
+This equipment is of decent quality and not the kind of hand me down rusty old fail-at-the-worst-possible-moment standard starter fare that the less prepared newbie adventurers tote around.
+
+\
+
+\goodbreak \small \begin{samepage} \begin{verbatim}
+Woodsman's backpack (cost 5xp):
+    backpack 5enc, knife, spear or bow with 10 arrows,
+    water bottle, food for 3+1d3 days, fishing gear, snares,
+    flint & steel, tinder, 1d3 torches,
+    water proof hooded cape, 5+D10 copper.
+\end{verbatim}\goodbreak\begin{verbatim}
+Uncle Smith's well wishes (cost 8xp):
+    sword, shield, warm cape, water bottle, 20+D10 copper.
+\end{verbatim}\goodbreak\begin{verbatim}
+Farmer Johns goodbye (cost 4xp):
+    knife, staff / axe, shoulder sack, water bottle, food for 5+D10 days,
+    flint \& steel, warm blanket, 10+D10 copper.
+\end{verbatim}\goodbreak\begin{verbatim}
+Auntie's present (cost 5xp):
+    3x healing salve, first aid kit, warm sweater, 5+D10 copper.
+\end{verbatim} \end{samepage} \normalsize
+
+\
+
+\noindent Make up more suitable starting kits to suit your adventures and campaign setting.
+
+
+\subsection*{rolling a character, or selecting one}
+%--------------------------------------------------
+For most campaigns I'll keep using the method of pre-rolling a set of potential Heroes for the player to choose from. The simple \verb|rollchars.py| script rolls up sets of basic characters. It's easy to tweak the selection set of races for a specific campaign or adventure setting.
+For one-off or later added Heroes the player can instead roll a small set and choose a character from there.
+
+
 \subsection*{Alternative movement rolls}
 %---------------------------------------
 Instead of taking the base line race movements you can roll the character's movement stats. You can either roll one d10 and apply the result to calculate all the movements, or you can roll for each movement stat.
@@ -178,8 +222,23 @@ Instead of taking the base line race movements you can roll the character's move
 
 \subsection*{Race traits}
 %------------------------
-All races have their own characteristics. Some make better fighters, others better mages, yet others make great cannon fodder and compost. Some are just for fun.
-There is no strict balance between how "good" or "powerful" the various character races are when making a new Hero. Instead I've chosen to apply some balance based on the number of characters that are rolled for selection. I recommend the following spread:
+Consider, what's the main focus of the game for yourself and your group? Is it tactical tabletop battles, more role playing and character identity, or just silly fun? Tailor the character creation process to support the goal of the game.
+
+\
+
+If ignoring combat power balance for the moment, different races have typical personality characteristics associated with them. Not that all dwarves are the same, just that there are clear cultural and racial tendencies. Change to suit your flavour of game world of course.
+
+\begin{description}
+\item[Humans] are the normal folk of most of the land. Found just about anywhere and in all occupations. Individually and culturally highly varied.
+\item[Dwarves] are rough, stern, determined, disciplined, with a lovely sense of humour that few outsiders understand. They have strong collective responsibility.
+\item[Elves] few and far between, artistic, aloof, or austere, all in all quite a bit strange. 
+\item[Halflings] are usually happy with a great apetite for life, merriment, good food and drink.
+\item[Orcs] have grit, nothing is too heavy or too dangerous. But don't get them angry.
+\item[Goblins] have difficulties: lazy, impulsive, short sighted, wildly swingin between agressive and meek, cowardly and blood thirsty, usually hungry, and with a nasty inkling towards schadenfreude and dangerous ill thought through pranks. Loads of fun to play!
+\end{description}
+
+\noindent All races have their own general strengths and weaknesses. Some make better fighters, others better mages, yet others make great cannon fodder and compost. Some are just for fun.
+There is no strict balance between how \emph{good} or \emph{powerful} the various character races are when making a new Hero. Instead I've chosen to apply some balance based on the number of characters that are rolled for selection. I recommend the following spread:
 
 \
 
@@ -187,15 +246,22 @@ When choosing race before rolling, roll a small set of one race only:\\
 3 human, 2 dwarf, 2 elf, 3 halfling, 2 orc, 4 goblin.\\
 The characters created this way will be less powerful than the ones rolled as a larger set of any race.
 
+\
+
 When choosing one character regardless of race, roll:\\
 2 human, 1 dwarf, 1 elf, 2 halfling, 1 orc, 3 goblin.\\
 Odds are high that this will yield some overpowered newbie characters, but it will give a fun mix of races.
 
-For my campaigns I've started using the second option and simply use \verb|rollchars.py| to roll a mixed race set for each player to choose a character from.
+\
+
+For my campaigns I've started using the second option and simply use \verb|rollchars.py| to roll small set of characters, of all races, for each player to choose a character from.
 
 \
 
 \emph{Please note:} that the values below are for rolling Heroes and important NPCs. Every Tom, Dick and Harry don't have cool rolled stats. For most NPCs and general uninteresting cannon fodder and back drop characters use the standard race values, and perhaps +/- a few points here and there for variation. The npc standard race averages are listed further below, and in the \verb|races| summary compilation.
+
+
+
 
 %                 d10/10 1-9                 10     0,1  9,1
 %                 d10/9  1-8               9-10     0,1  8,2
@@ -350,47 +416,23 @@ disengage bonus +3
 attack: bite 1d4 dam 1d3 3ap (2ap if both hands free) scf 0.75
 attack: claw 1d4 dam 1 2ap (1ap if both hands free) scf 0.66
 money 1 silver 1d6 copper 1d4 teeth 1d3 stones 1d2 feathers 1d3 glass beads
+\end{verbatim} \end{samepage}
 
+\
+
+\goodbreak \begin{samepage} \begin{verbatim}
 Goblin runts should be crated from regular goblin rolls:
 str/2, dex+1, con/2,
 hp/2, ap+1, xp-10,
 yield+1, avoid+2, sneak+2,
 common-2, svartlingo-1
-round up on all half values.
+round up for all half values.
+
+As the runt grows up to be a grown goblin he will snap into the full 
+rolled values and loose his runt bonuses.
 \end{verbatim} \end{samepage}
 
 \normalsize
-
-\
-
-
-
-\subsection*{Equipment starter kits}
-%-----------------------------------
-Starting out in the Hero Adventuring business segment can be difficult, and it's so useful to have a small knapsack of stuff with you when you leave the old homestead. Character creation is probably also the only time in the game when your Hero can buy equipment for xp instead of silver.
-
-This equipment is of decent quality and not the kind of hand me down rusty old fail-at-the-worst-possible-moment standard starter fare that the less prepared newbie adventurers tote around.
-
-\small \begin{verbatim}
-Woodsman's backpack (cost 5xp):
-    backpack 5enc, knife, spear or bow + 10 arrows,
-    water bottle, food for 3+1d3 days, fishing gear, snares,
-    flint & steel, tinder, 1d3 torches,
-    water proof hooded cape, 5+D10 copper.
-
-Uncle Smith's well wishes (cost 8xp):
-    sword, shield, warm cape, water bottle, 20+D10 copper.
-
-Farmer Johns goodbye (cost 4xp):
-    knife, staff / axe, shoulder sack, water bottle, food for 5+D10 days,
-    flint \& steel, warm blanket, 10+D10 copper.
-
-Auntie's present (cost 5xp):
-    3x healing salve, first aid kit, warm sweater, 5+D10 copper.
-\end{verbatim} \normalsize
-
-Make up more suitable starting kits to suit your adventures and campaign setting.
-
 
 
 
@@ -412,9 +454,8 @@ Manny the Mage Trainee, another spellcaster in the making. \\
 Ein von Dääken, a noble fop who would probably do better writing sonnets. \\
 Pyttelina, a halfling thief ready to take (on) the world. \\
 Lars LongShot, a young hunter who is nowadays hunting for gold instead of geese. \\
-
-
-A couple of more experienced characters can also be found after the player and newbie characters.
+ \\
+A few examples of more experienced characters can also be found after the newbie characters.
 
 
 
@@ -441,23 +482,42 @@ Balancing character progression has been shown to be difficult for many game des
 A good general idea is to try to design adventures and encounters to give a reward of around 5-10xp per character per session with another 10-30xp bonus for mission completion or for specific side tasks. This has been shown to give a suitable progression curve as well as the occasional nice payday feeling for the players after special accomplishments.
 Most adventures are designed to take three to six sessions, i.e. 10-20h to play. The longer adventures should give partial completion rewards in between.
 
-Differentiate between "kill xp" and "mission xp". Give kill xp after each session, but only mission xp when specific tasks have been completed.
-Kill xp should be divided between the characters and henchmen. If they are many, then they get less per person. Mission xp on the other hand should be handed out at the full amount to each participant.
-Consider giving full or partial kill xp also for monsters that were avoided, scared away, tricked, negotiated with, or otherwise managed even if they were not killed.
+Differentiate between "opposition xp" and "mission xp". Give opposition xp after each session, but only mission xp when specific tasks have been completed or milestones reached.
+Opposition xp should be divided between the characters and henchmen. If they are many, then they get less per person. Mission xp on the other hand should be handed out at the full amount to each participant.
+Consider giving full or partial opposition xp also for monsters that were avoided, scared away, tricked, negotiated with, or otherwise managed even if they were not killed.
 
-It could also be a good idea to set a minimum base line of ca 5xp or so per session regardless of accomplishments. That way there is always a slow progression ticking away, but nothing game breaking.
+It could also be a good idea to set a minimum base line of ca 5xp or so per session regardless of accomplishments. That way there is always a slow progression ticking away, but nothing game breaking. I generally reduce the mission xp by the already handed out session xp.
 
-XP is of course not the only reward. Money and equipment is also common. It is usually a good idea to keep the heroes poor most of the time with short bursts where they can roll in gold. A Quaff or mana potion should always be an expensive investment, and not just stuff you buy to pad the equipment list to the encumbrance limit.
+XP is of course not the only reward. Money and equipment is also common. It is usually a good idea to keep the heroes poor most of the time with short bursts where they can roll in gold. A Quaff or mana potion should always be an expensive investment, and not just stuff you buy to pad the equipment list to the next encumbrance limit.
 
 Silver coins close to XP reward is a decent balance for everyday adventuring, with more lavish pay-outs from some adventures. A lot of "civilised" monsters carry some coin, and their equipment is usually worth a little bit even if it is in really poor shape or of orcish origin. This should be taken into account when calculating rewards if the players are known to scavenge.
 
-Be very careful when handing out magical or master crafted items. Those are worth a lot of money, and they are very powerful in game. Even a well crafted sword with mod+1 is a significant boost for a normal character, and that bonus is worth a lot of xp in the hands of an experienced character. A high abs sword or shield is also close to unbreakable in practicality and will never need replacing. Saves a lot of money.
-I once did the \emph{huge} mistake of placing a 2ap 2h sword in a campaign. I'll never do that again :)
+Be very careful when handing out magical or master crafted items. Those are worth a lot of money, and they are very powerful in game. Even a well crafted sword with mod+1 is a significant boost for a normal character, and that bonus is worth a lot of xp in the hands of an experienced character. A high abs sword or shield is in practice close to unbreakable and will never need replacing. Saves a lot of money.
+I once did the \emph{huge} mistake of placing a (fast+1) 2ap 2h sword in a campaign. I'll never do that again :(
 
 
 \subsection*{Death, Replacement, Inheritance}
 %--------------------------------------------
 Heroes will die occasionally, it's an occupational hazard. When that happens let the player roll a new one and have it inherit some of the XP from it's predecessor. E.g: First Fred dies after gaining 50xp from the first few adventures. Second Sam can then be built with +30xp inherited? Discuss it with the players to balance the loss against keeping pace with the rest of the party. Whatever works with the campaign difficulty scaling and keeps the game fun.
 
+Generally, keep the party somewhat in power parity. Weak newbie characters cannot do much if surrounded by 1k ultra murder machines, and it quickly gets boring for the players.
+
+
+\subsection*{Available campaings and adventures}
+%-----------------------------------------------
+%200204:
+There are a bunch of adventures and campaigns already available, in various states of polish. Just grab and play. Contact the author if you want the notes from the yet not released adventures.
+
+\begin{description}
+    \item[00 Dungeon of Testing] is the first little mini adventure every new player should go through with their first character, solo.
+    \item[00 Return of Uchly Namen] is the first campaign in the game and world setting. Intended for newbie characters and containing a bunch of diverse interconnected adventures through a cohesive campaign arc with a few off-shoots.
+    \item[01 Dark Clan, Deep Cave, Rescue Nurensachs] are three linked adventures forming a mini campaign of it's own, intended for more experienced characters.
+    \item[02a Overlord Orvar] is a stand alone adventure, somewhat classical in nature. Easy to insert as a significant side quest in an existing campaign.
+    \item[02b Edwin the Chromophobe] is a stand alone adventure, a large dungeon hack with impact on the regional world map. 
+    \item[03 Ottokar's Test Dungeon lvl 1] is for experienced Heroes who want to get a proper license for taking Hero Adventure jobs.
+    \item[04 Destroy the Altar] is a Hero Adventurers' job for experienced characters and players. It small but has some challenging oddities.
+    \item[05 Turn off the Light] is another Hero Adventurers' job for very experienced and tough Heroes and skilled players. The starting challenge is tactically very different from the previous experiences.
+    \item[06 Goblin Destiny] is a long stand alone campaign for a large bunch of newbie goblins Heroes. More fun than serious, with unique tactical and role playing challenges. A large set of smaller adventures and events, spread over time, around the life of a goblin bandit clan.
+\end{description}
 
 

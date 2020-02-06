@@ -13,15 +13,18 @@
 
 % set the general page layout
 \documentclass[11pt, twoside, titlepage, a4paper]{report}
-% adjust the margins
+
+% adjust the margins: 15mm inner binding, 25mm frame all around
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 
 % set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+% set UK british hyphenation [english] sets US
+\usepackage[british]{babel}       
 
-
+% set iso date format with ndash separator
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{--}
 
@@ -379,6 +382,18 @@
 
 
 \begin{document}
+
+
+
+
+% Manually specify hyphenation for names. 
+% Remember: space separated word list: lead with space
+% hyphens can only occur on specified "-" characters
+% words without "-" will never be hyphenated, overrides rules
+\hyphenation{ 
+ Thing-a-ma-jig 
+ milli-fort-night 
+}
 
 
 
