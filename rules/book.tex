@@ -373,6 +373,14 @@
 
 
 
+% readoutloud italic quote sections
+\newenvironment{readoutloud}%
+{\begin{quote}\begin{itshape}}%
+{\end{itshape}\end{quote}}%
+
+
+
+
 
 
 
@@ -546,9 +554,11 @@ In Swedish we have the newfangled "hen" which essentially indicates someone wher
 %\pagestyle{plain}
 %\fancypagestyle{plain}
 \cleardoublepage %force next printed page a right hand page.
-\tableofcontents % Always compile twice if you have changed much
-\newpage
 
+\phantomsection\addcontentsline{toc}{chapter}{contents}
+\tableofcontents % Always compile twice if you have changed much
+%\newpage
+\clearpage
 
 % disables chapter, section and subsection numbering
 \setcounter{secnumdepth}{-1}
@@ -563,6 +573,7 @@ In Swedish we have the newfangled "hen" which essentially indicates someone wher
 %\fancypagestyle{fancy}
 %\pagestyle{fancy}
 %\setcounter{page}{1}
+% set flushbottom fill layout for the main chapters
 \flushbottom
 
 
@@ -576,9 +587,12 @@ In Swedish we have the newfangled "hen" which essentially indicates someone wher
 \input{magic}
 \input{campaign}
 
-
-% Here the basic chapters are finished, the rest are appendices
+% Here the basic chapters are finished, 
+% the rest are appendices, switch fill layout to raggedbottom
 \appendix
+\raggedbottom
+
+% Add all appendices
 \input{equipment}
 \input{prices}
 \input{npcs}

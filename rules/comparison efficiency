@@ -26,23 +26,32 @@ fancy        6     36
 
 
 
-archer:   1/r   118 xp  (tot 1r)  mod-0
-bow          9   97
+archer:   1/r   102 xp  (tot 1r)  mod-0
+bow          9   81
 quick shot   3   13
 sniper       3    9
 lead target  3    9
 
-archer:   2/r   169 xp  (tot 6ap) mod-3  
-bow          9   97
+archer:   2/r   220 xp  (tot 6ap) mod-0                       !! ISSUE !!
+bow          9   81
+quick shot   9  121                                           high QS more expensive
+sniper       3    9
+lead target  3    9
+
+archer:   2/r   216 xp  (tot 6ap) mod-3+3 (skill 12)          !! ISSUE !!
+bow         12  144
+quick shot   6   54                                           than high bow at bow 1.0
+sniper       3    9
+lead target  3    9
+
+
+
+archer:   2/r   153 xp  (tot 6ap) mod-3  
+bow          9   81
 quick shot   6   54
 sniper       3    9
 lead target  3    9
 
-archer:   2/r   236 xp  (tot 6ap) mod-0  
-bow          9   97
-quick shot   9  121
-sniper       3    9
-lead target  3    9
 
 
 

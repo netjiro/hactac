@@ -2,17 +2,7 @@
 %       10        20        30        40        50        60        70        80
 
 
-% don't add glue spacing between segments, allow ragged bottoms instead
-% turn on \flushbottom in the end.
-\raggedbottom
-
-
-
-
-%-------------------------------------------------------------------------------
-% M O N S T E R S
-%----------------
-
+\cleardoublepage
 
 \phantomsection\addcontentsline{toc}{chapter}{monsters}
 \chapter*{Monsters}
@@ -47,8 +37,6 @@ Below follows a few empty stat sheets for different styles of monsters. The firs
 %\small -- nope, go for \tiny
 
 \
-
-\raggedbottom
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
@@ -133,10 +121,6 @@ attacks
 -----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
-\
-
-\flushbottom
-
 
 
 
@@ -169,7 +153,6 @@ Jumping spider spawns are set to tiny, while black bug spawns are set to small s
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 \goodbreak
-\raggedbottom
 \phantomsection\addcontentsline{toc}{section}{animals}
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
@@ -1775,4 +1758,4 @@ ammo lr : 15
 % don't add glue spacing between segments, allow ragged bottoms instead
 %
 % now turn on \flushbottom in the end.
-\flushbottom
+%\flushbottom  -  moved all this to the main book.tex file

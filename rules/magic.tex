@@ -19,22 +19,24 @@
 \phantomsection\addcontentsline{toc}{section}{skills}
 \section*{Magic skills}
 
-All magic skills and spells must be learned from a teacher, book, or similar. They cannot be trained from nothing without guidance like normal skills. This includes the base skill \emph{magic}, as well as the improvement skills like \emph{power casting}, and all spells.
+All magic skills and spells must be learned from a teacher, book, or similar. They cannot be trained from nothing without guidance like normal skills. This includes the base skills \emph{magic} and \emph{spell caster}, as well as the support skills like \emph{power casting}, and all spells.
 
 Teachers can be the village witch, a professor at the City Magic College, an ally in the party who happen to know that spell, or the enemy wizard you captured a few weeks ago and been torturing ever since (\emph{but would you trust him?}). When creating a new character with magic skills and spells it's assumed that he had access to some magic training when growing up, perhaps 1d3 spells.
+
+Some magic items can be used without any magic skills, others require that the user has some knowledge of the \emph{magic} skill. To learn and cast spells it is necessary to have trained \emph{spell caster}, and that is least expensive directly when the character is created.
 
 
 \begin{description}
 
 
-\item[Skill scf 2.0: "magic":] The caster can not spend more mana on each spell casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round.
+\item[Skill scf 2.0: "magic":] The caster can not spend more mana on each spell casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round, or how much mana he can use to activate or power a magical item.
 
-The magic skill is also used when activating certain magical devices that require external mana power, when trying to understand magical texts and foreign spells and devices, etc.
+The magic skill is also used when trying to understand magical texts and foreign spells and devices, etc. Or when activating certain magical items. It also provides some protection against certain types of spells.
 
-Note: Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power.
+Note: Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power, and some items are powered by themselves or other sources.
 
 
-\item[Skill cost special "spell caster":] is requried to be able to learn and cast spells. It is not required to be able to use magical items or to train the magic skill.
+\item[Skill cost special "spell caster":] is requried to be able to learn and cast spells. It is not required for the use of magical items nor to train the magic skill.
 
 The xp cost to train spell caster varies depending on the total xp of the character, increasing as the character advances:\\
 If trained at character creation it costs 20xp.\\
@@ -48,6 +50,9 @@ Mana spent for power casting is not counted to the maximum total limit set by th
 
 
 \item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
+
+
+\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, gm discretion.
 
 
 \end{description}
@@ -166,10 +171,12 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % base range 10
 % base cast 2r for spear and strike, 3r for bolt
 % 
-% dam 1-3    1a
-% dam 4-6    1r
-% dam 7-9    2r
-% dam 10-12  3r
+% dam class time  base int   dam/psy
+% dam 1-3    1a    int6       dam = psy    4ap : dam=psy+1 or extra effect ?
+% dam 4-6    1r    int5       dam = psy+1  or psy=dam +pen1
+% dam 7-9    2r    int4       dam = psy+2  or psy=dam +pen2
+% dam 10-12  3r    int3       dam = psy+3  or psy=dam +pen99
+%
 % ? but can't generally scale base damage higher than (psy dam) / mana
 % ? even at long times
 % 
@@ -193,7 +200,7 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % range 10 > 15       dam-2 / cast+1r
 % range 10 > 20       dam-3 / cast+1r
 % allow long @dam-2   dam-1
-% area effect         dam-2 per radius+1
+% area effect         dam-2 per radius+1  /alt  cast+1r per radius
 % 
 % 
 % int 4 as base for normal complexity
@@ -228,7 +235,13 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % force bolt   cast 1r      (2r>>3ap : dam-3, psy+3 & int+3)  psy+2,-3=psy-1
 %              range 10                     --
 %              
-
+%
+%
+%
+%
+% stun effects ?   
+%
+% add stun:   int+1,  stun3 = dam-1
 
 
 
@@ -299,7 +312,7 @@ Often the spell formation shoots in a rapid line to hit the target, or whatever 
 These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods, stacking, based on target:\\
 mod -(target psy / 3)\\
 mod -3 if target takes a 3ap action to resist the spell\\
-mod -(target magic lvl / 3)\\
+mod -(target magic lvl / 3) (rd) E.g: magic 4 : mod-2
 % mental lock spells ignore cover etc, but mods by psy etc
 %              ignores target move mods, shooting into melee mods
 %              BUT: they take cast mods for target psy, if target resists,
@@ -343,16 +356,16 @@ black bolt     cast 3r 1m, dam 9 +3/m, penetrating,
                range 10, 
                int 5, psy 9
 
-black bolt     cast 2r 1m, dam 6 +3/m, penetrating,
+black bolt     cast 2r 1m, dam 6 +2/m, penetrating,
                range 10,
                int 5, psy 9
 
 shock bolt     cast 3r 1m, dam 5 +2/m, penetrating,
-               range 20 +10/m, long -3dam,
+               range 20 +10/m, long dam-3,
                int 8, psy 8
 
 shock bolt     cast 2r 1m, dam 4, penetrating,
-               range 15 +7/m, long -2dam,
+               range 15 +7/m, long dam-2,
                int 6, psy 6
 
 force bolt     cast 1r 1m, dam 3
@@ -362,6 +375,21 @@ force bolt     cast 1r 1m, dam 3
 force bolt     cast 1r 1m, dam 5 +1/m
                range 10 +5/m, long -2dam,
                int 10, psy 6
+
+---------------
+
+bright arrow   cast 2r, 1m, dam 6
+               range 10 +5/m
+               int 5, psy 4
+
+bright arrow   cast 1r, 1m, dam 5
+               range 10 +5/m
+               int 8, psy 7
+
+snuppel dart   cast 2r, 1m, dam 4, stun 5 +3/m
+               range 15 +7/m
+               int 7, psy 5
+
 
 ---===### current above ###===---
 \end{verbatim} \normalsize

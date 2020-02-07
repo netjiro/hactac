@@ -114,7 +114,8 @@ Club skill allows use of: hammers mod-2, axes mod-3.\\
 The staff and spear skills are mutually mod-1.\\
 All other melee weapon skills are mutually mod-4.\\
 All ranged weapons are mutually mod-3.\\
-\emph{But:} similarity modifies never allows for the \emph{similar} weapons or weapon groups at levels greater than 9. E.g: even if someone has axe 14 he will be limited to hammer 9 due to this cap.
+\emph{But:} similarity modifies never allows for the \emph{similar} weapons or weapon groups at levels greater than 9. E.g: even if someone has axe 14 he will be limited to hammer 9 due to this cap.\\
+Note: brawl and martial arts do not have similarity modifiers with any melee weapon skills or each other.
 
 % OLD - NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 
@@ -149,13 +150,13 @@ Fists do (str+dex)/3 damage, toparry-3, toavoid-3, fast+1. \\
 Kicks do 2+(str+dex)/3 damage.\\
 Fist attacks cost stamina for the first attack followed by two free.\\
 Kick attacks have every second attack at no stamina cost. \\
-Martial arts parrying is parry-3 against weapons, or parry-0 if opponent is unarmed. Martial arts parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
+Martial arts parrying is parry-3 against weapons, or parry-0 against unarmed attacks. The parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
 
-\skill{Skill scf 0.5 "lightning strike" (martial arts upgrade):} allows for very fast fist and kick attacks but at the cost of a dam-1 penalty. Fist attacks are fast+2 (1ap) instead of fast+1 (2ap), and kick attacks are fast+1 (2ap) instead of normal (3ap).
+\skill{Skill scf 0.5 "lightning strike" (martial arts upgrade):} allows for very fast fist and kick attacks but at the cost of a -25\% dam penalty. Fist attacks are fast+2 (1ap) instead of fast+1 (2ap), and kick attacks are fast+1 (2ap) instead of normal (3ap).
 
 A character cannot have a higher skill level in lightning strike than he has in martial arts.
 
-\skill{Skill scf 0.5 "thunder strike" (martial arts upgrade):} allows for very powerful fist and kick attacks.  Thunderous powerful strikes gain a dam+2 bonus but are slower. Fist attacks are normal speed (3ap) instead of fast+1 (2ap), and kicks are slow-1 (4ap) instead of normal speed (3ap).
+\skill{Skill scf 0.5 "thunder strike" (martial arts upgrade):} allows for very powerful fist and kick attacks.  Thunderous powerful strikes gain a +33\% dam bonus (ru) but are slower. Fist attacks are normal speed (3ap) instead of fast+1 (2ap), and kicks are slow-1 (4ap) instead of normal speed (3ap).
 
 A character cannot have a higher skill level in thunder strike than he has in martial arts.
 
@@ -180,7 +181,7 @@ E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attac
 
 The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a broad sword and a heavy shield costs 4ap since the heavy shield is normally slow-1 (4ap).
 
-Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
+Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword, spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
 If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
 
 It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
@@ -905,7 +906,7 @@ A character with animal command can control at most his lvl/2 (round up) animals
 
 Issuing a command takes 1a and the companion must be within earshot. Commanding companions beyond line of sight is mod-3. Spending a full round gives mod+3 when issuing order.
 
-A character with companion command can control as many companions as his skill level/2 (round up).
+A character with companion command can control as many companions as his skill level/2 (round up). Companions can be trained as combat units, so each unit counts as one companion when you calculating command control numbers.
 
 
 \skill{Skill scf 0.5 "meditate":} means sitting down and taking no other actions while resting. Successfully meditating regains extra stamina beyond just resting, with every success level regaining one extra stamina, roll once per round meditating, and the roll is affected by all normal mods. E.g: meditate success+4 regains +2 stamina above the normal resting stamina recovery.
@@ -1228,8 +1229,8 @@ Can be used together with any defensive action like avoid, parry, deflect, where
 
 Upgrade the yield bonus: \\
 cost   5xp: yield +1 \\
-cost  10xp: yield +2 \\
-cost  25xp: yield +3 \\
+cost  15xp: yield +2 \\
+cost  30xp: yield +3 \\
 cost  50xp: yield +4 \\
 cost  75xp: yield +5 \\
 cost 100xp: yield +6
@@ -1283,7 +1284,7 @@ The hero can take one extra step beyond declared movement by throwing himself on
 \skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
 
 
-\skill{Maneuver (cost 30) "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal (for 3ap and slower normal defence actions), comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
+\skill{Maneuver (cost 30) "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal for 3ap and slower normal defence actions, comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
 
 For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost +50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina.
 
@@ -1580,9 +1581,9 @@ Attack maneuvers can be combined with fancy as long as the weapon has enough fin
 \skill{Maneuver (cost 10) "fjutt":} is a very weak and flimsy but fast attack. It can be performed with any melee weapon unless specified. It costs one extra stamina. The standard stats are:\\
 fast+1 (minimum 1ap) mod-3 with damage 50\% of normal.
 
+\
 
-\TODO: fix feint, make it more interesting
-
+\todo: fix feint, make it more interesting
 \skill{Maneuver (cost 10) "feint":} is like a regular attack but is fast+1 (minumum 1ap), costs 1 stamina less than a normal attack (minumum 0 stamina), and does 0 damage. Very good to weaken out the opponent with lots of annoying attacks.
 
 If the target chooses to ignore a feint it can be upgraded to either a weak or full attack, keeping the rolled attack result:\\
@@ -1608,8 +1609,16 @@ E.g: with a normal 3ap weapon the maneuver costs 4ap total for the two strikes, 
 Two hits can be parried in two actions or one double action. Roll both to hit at the same time, then the target selects his parrying strategy.
 
 
-\skill{Maneuver (cost 10) "dual strike":} requires two weapons and gives a fast combination attack. The ap cost is 2ap less than the normal sum of attack ap for the two weapons, to a minimum of 3ap total. Difficulty is mod-1 for both attacks, damage is 75\%. It costs 1 stamina extra above the cost of the two attacks.
+\skill{Maneuver (cost 10) "dual strike":} requires two weapons and gives a fast combination attack. The ap cost is 2ap less than the normal sum of attack ap for the two weapons, to a minimum of 3ap total. Difficulty is mod-3 for both attacks, with regular damage. It costs 1 stamina extra above the cost of the two attacks.
 Roll attack success and damage separately for the two weapons.
+
+\noindent Upgrade +10xp to "fast dual strike" allowing minimum 2ap total cost.
+
+
+\skill{Maneuver (cost 10) "dual tap":} requires two weapons and gives a fast combination attack. The ap cost is 2ap less than the normal sum of attack ap for the two weapons, to a minimum of 3ap total. Difficulty is mod-1 for both attacks, damage is 75\%. It costs 1 stamina extra above the cost of the two attacks.
+Roll attack success and damage separately for the two weapons.
+
+\noindent Upgrade +10xp to "fast dual tap" allowing minimum 2ap total cost.
 
 
 \skill{Maneuver (cost 10) "dual wayward":} requires two weapons. Like wayward strike: normal ap, mod-1, todefend-3, but costs only a total of 1 extra stramina for two attacks, one with each weapon. E.g: dual wayward with two normal swords costs a total of 3 stamina.
@@ -1618,6 +1627,11 @@ Roll attack success and damage separately for the two weapons.
 
 \skill{Maneuver (cost 10) "dual trick":} requires two weapons and gives a difficult combination of the two attack. Costs +1ap above the sum of the two normal attacks, mod-3, todefend-6, 75\% dam. Costs 1 stamina extra above the normal cost for the two attacks.
 Roll attack success and damage separately for the two weapons.
+
+
+\skill{Maneuver (cost 10) "dual parry":} requires two weapons and gives a mod+2 to the parry at the cost of 1 stamina extra and 1ap extra. As baseline, choose the ap cost and parry chance of one of the two weapons. Then add half of the other weapon abs when calculating weapon breakage against incoming damage.
+
+Dual parry cannot be used with shields.
 
 
 \skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-1, toavoid+1, 150\% dam. Takes one extra stamina.
@@ -1639,16 +1653,20 @@ Weapons with reach has an extra mod+1 when used for a followup attack, regardles
 \skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage or penetration depending on the weapon stats. For each +3 excessive strength he gets damage +1, or penetrating +1, depending on the weapon.
 
 
-\skill{Maneuver (cost special) "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger. \\
+\skill{Maneuver (cost special) "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger, without requiring extra str points. \\
 lvl  1  costs  10 \\
 lvl  2  costs  20 \\
 lvl  3  costs  30 \\
 lvl  4  costs  50 \\
 lvl  5  costs  75 \\
 lvl  6  costs 100 \\
-lvl +1  costs +30
-%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
+lvl +1  costs +30 for 7-9, +50 for 10-12, +100 for 13-15, then doubling per 3.
 
+E.g: HammerHand Helga has str 8 and does dam 2 with her fist attack. With slugger 3 she would do dam 5. With strong 1 and slugger 3 she would do dam 6 with str 9(8). But with a 2h axe (dam 12 requiring str 6) that would be dam 15! 
+
+%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
+Tiny characters are limited to slugger 3, small to slugger 6, normal to 9, large to 12, and so on...
+% for a high power halfling: str9 dex12 martial arts and max slugger would give damage 13 fist and 15 kick.
 
 \skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one attack per round that that cost one less stamina than normal.
 
@@ -2168,7 +2186,7 @@ Which way: Standing in front of a tunnel crossing, which is the right way to go?
 Spotting sneaky villains: The Hero has failed the per check when Sneaky Smith is getting ready to gut him from behind. But passing a Sixth Sense roll will let him know something's up in time to act.
 
 
-\skill{Ability cost 20 ccf 1.0 "Rolling Gut":} The Hero has a weird supernatural sixth sense gut feeling of the rolling destiny unfolding around him. He will himself roll all hidden dice rolls openly and clearly instead of being rolled hiddenly or by the GM. Thus the Hero will be aware that rolls are called for, if they succeed or fail, and by how much.
+\skill{Ability cost 20 ccf 1.0 "Rolling Gut":} The Hero has a weird supernatural sixth sense gut feeling of the rolling destiny unfolding around him. He will himself roll all hidden dice rolls openly and clearly instead of being rolled hidden or by the GM. Thus the Hero will be aware that rolls are called for, if they succeed or fail, and by how much.
 
 
 \skill{Ability cost 20xp ccf 1.2 "Stacking":} Heroes can stack together and occupy the same space. This means they can both stand in, and attack from, the same square. All stacking heroes must have the "stacking" ability to be able to co-exist in the same space.
@@ -2242,11 +2260,11 @@ Old Food (cost 10xp): can get full meal value from corpses which are up to a day
 Fast Metabolism (scf 5): each level reduces the healing interval by one, to a minimum of 3r/hp.
 
 
-\skill{Ability cost 10xp + scf 4.0, ccf 1.2 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.
+\skill{Ability cost 5xp + scf 4.0, ccf 1.2 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.
 
 The character can store any kind of die rolls. E.g: d10, d7, d13, but can only use them instead of a called for roll of the same kind or better. E.g: a saved d7 gut feeling can replace a d10 damage roll, but not a d10 skill check. A saved d12 gut feeling cannot replace a d10 damage roll, but can replace a d10 skill check.
 
-Buying gut feeling to lvl 0 costs the 10xp ability cost and imposes ccf 1.2. Then each level is scf 4.0. E.g: gut feeling to lvl 3 costs 10 + 4.0 * (3*3) = 46xp. Gut feeling to lvl 1 costs 10 + 4.0 + (1*1) = 14xp.
+Buying gut feeling to lvl 0 costs the 5xp ability cost and imposes ccf 1.2. Then each level is scf 4.0. E.g: gut feeling to lvl 3 costs 5 + 4.0 * (3*3) = 41xp. Gut feeling to lvl 1 costs 5 + 4.0 + (1*1) = 9xp.
 
 %DONE: moved gut feeling from normal skills to abilities, since it gives absolute certainty of success if you use it, whereas luck, rabbits foot, etc only allow rerolls and are not certain.
 

@@ -8,6 +8,12 @@
 \chapter*{Equipment}
 \chaptermark{equipment}
 
+\begin{readoutloud}
+It's very brave to journey up the mountain, in the dark of winter, to slay the three headed beast who dwells in the cave, wearing nothing but your nightgown. But why would you? A nice warm padded brigandine armour? Perhaps a sword and a spear? You'd be glad you brought extra when the first one breaks. Don't forget a shiny shield. Why not have your family crest on it? You don't have a crest? I'll have a herald sort that out for you while you wait. A warm cup of coffee afterwards? And a smoulder box to quickly start the fire up there in the icy, dark, stormy winds. Don't forget the lantern, and some extra oil. A few torches to place at strategic corners. Some rope and a hook? A few sacks if the monster has loot stashed away? Almost forgot the water skin. Can't go into battle thirsty. And some rations if the climb takes longer than expected. At this point you'll need a large backpack, but that's heavy. I have this great friendly donkey and two pack bags. He's a great climber up steep terrain. And some oats for the donkey of course, and a few larger water skins as well. And with the donkey to carry things you can easily bring this nice tent, and a comfy bed roll, and this brazier to warm you. A cook pot and some fresh spices perhaps? Goes great with the rations, right? A bottle of wine? But don't drink before taking on the monster.
+
+And while we're at it, I also have this wonderful ...
+\end{readoutloud}
+
 
 
 %-------------------------------------------------------------------------------
@@ -731,13 +737,6 @@ An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
 Rapid fire from bows include reload from accessible quiver, arrows stuck 
 in the ground, or similar.
 
-Bows have normal range tohit and damage mods:
-short       mod+1
-long        mod-3 dam-1
-very long   mod-6 dam-2
-extreme     mod-9 dam-3
-
-
 short bow         dam 3,
                   range 10
                   str 3 (no str bonus)
@@ -750,11 +749,11 @@ heavy bow         dam 5, pen 2,
                   range 20
                   str 7 (no str bonus)
 
-long bow          dam 5, pen 1,
+longbow           dam 5, pen 1,
                   range 20
                   str 6 (no str bonus)
 
-heavy long bow    dam 6, pen 2,
+heavy longbow     dam 6, pen 2,
                   range 25
                   str 8 (no str bonus)
 
@@ -792,34 +791,34 @@ quick   mod-3 3ap
 snap    mod-6 2ap
 insane  mod-9 1ap
 
-Crossbows have normal range tohit and damage mods:
-short       mod+1
-long        mod-3 dam-1
-very long   mod-6 dam-2
-extreme     mod-9 dam-3
-
-
 crossbow          dam 5, penetrating 1,
                   range 12
                   str 3 (no str bonus)
-                  reload 2r (str 9 1r)
+                  reload 2r (str 9 dex 6 : 1r)
 
 heavy crossbow    dam 6, penetrating 2,
                   range 15
                   str 5 (no str bonus)
-                  reload 3r (str 12 2r)
+                  reload 3r (str 12 dex 8 : 2r)
 
 arbalest          dam 7, penetrating 3,
                   range 18
                   str 7 (no str bonus)
-                  slow-1 (only affects snap first shots)
-                  reload 4r (str 15 3r)
+                  reload 4r (str 14 dex 10 : 3r)
 
 exotic            as the regular crossbows except that they have two first
 double type       shots, which can be used at the same time or separately.
 crossbows         They also require str+2, and take 1r longer to reload.
                   If both shots are fired at the same time (same action)
                   you should still roll each bolt separately.
+
+exotic            as the regular crossbows except that they take one round
+repeater type     less to reload, but at str+1, and have a bolt magasine
+crossbows         which when empty must be reloaded manually taking
+                  2r + 1r / bolt in the magasine.
+                  These machines are exceptionally rare and expensive, 
+                  manufactured only by legendary mechanismiths and 
+                  enginartificers.
 
 Some crossbows allow the use of speciality bolts:
 fine bolts        mod+1
@@ -913,6 +912,9 @@ club (1h/2h):
 Some races, as NPCs, will sometimes use special versions of weapons which are different than those human craftsmen produce.
 
 Orcs produce simple and heavy weapons. They have higher abs, lower finesse, higher str requirements. The market price is -50\% of human made weapons and their encumbrance is +33\%. When taking damage to abs they loose double abs.
+
+\
+
 \small \begin{verbatim}
 orc war axe         dam 9, abs 12, parry-3, toparry-1, toavoid+1, finesse-2
 1h                  str 7 (max +6 str bonus)
@@ -927,14 +929,26 @@ orc war shield      abs 14, parry+3,
                     Ranged attacks mod-2 when in the way.
                     Hiding behind it (3ap) ranged mod-5
                     tackle mod+3
+
+orc cleaver         dam 11, abs 12, parry-4/-3, toparry-2, toavoid+2, 
+1h/2h               reach 1 mod-3, finesse-2
+(specialty 10xp)    str 9/7, or slow-1 str 7/5
+                    swing: slow-1 mod-1 dam+3 toparry-1 toavoid+2
+                    can be used with either axe, sword, or spear skill
+                    bastardised orc version of a short glave-ish thingy
 \end{verbatim} \normalsize
 \goodbreak
+
+\
 
 Elves produce slender weapons of very high quality. They will last longer and when rolling for weapon breakage they have half the chance of breaking (round down) and their permanent abs damage should be rounded down instead of rounded up. Elven made weapons are very rare and difficult to find outside of elven cities. Their encumbrance is -30\% of the human version, and the price is at least 10x higher than a human made. Start at 5+1d5g + 10x base price.
 
 The elven illspets is used as a fast light defensive weapon which can also be used to attack heavily armoured targets.
+
+\
+
 \small \begin{verbatim}
-elven slender sword dam 8, abs 16,
+elven slenderblade  dam 8, abs 16,
 1h                  str 6 (max +3 str bonus), finesse-9
                     poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+2 todefend+2
@@ -965,9 +979,12 @@ elven longbow       dam 5, penetrating 2,
 % E Q U I P M E N T
 %------------------
 
-\phantomsection\addcontentsline{toc}{section}{other equipment}
-\section*{Other equipment}
+\phantomsection\addcontentsline{toc}{section}{basic equipment}
+\section*{Basic equipment}
 
+There is a plethora of useful stuff an adventuring Hero can make good use of in his travels. Perhaps some coffee before the cold dungeon? Or a health wafer or two with the evening meal after leaving the dungeon with loot and wounds?
+
+\
 
 \small
 \begin{verbatim}
@@ -1011,15 +1028,25 @@ lock picks     mod+X to "pick lock" skill.
 
 tool box       mod+X to "traps" and "McGyverism" skills.
                X depends on the quantity and quality of the tools.
-
 \end{verbatim} \goodbreak
+
+
+
+
+
 
 
 %-------------------------------------------------------------------------------
 % S P E C I A L   E Q U I P M E N T
 %----------------------------------
 
-%Special items are not so easy to come by and their prices vary a bit.
+
+\phantomsection\addcontentsline{toc}{section}{special equipment}
+\section*{Special equipment}
+
+Special items are not so easy to come by and their prices vary a bit.
+
+\
 
 \begin{verbatim}
 cave cart      A small (1sqr) cart that can be dragged (str 5 walk) into the
@@ -1068,9 +1095,10 @@ small          90deg cone, 20sq radius
 
 magnifying     Gives mod+3 to find, but takes one round extra for each find
 lens
-
 \end{verbatim}
 \normalsize
+
+
 
 
 
@@ -1081,6 +1109,21 @@ lens
 %--------------------------------
 
 %Exotic items are difficult to find and their prices vary greatly.
+
+
+\phantomsection\addcontentsline{toc}{section}{exotic equipment}
+\section*{Exotic equipment}
+
+These items are usually custom made, unique or in small series, at great expense and by the best master craftsmen. A few examples of the rare and expensive stuff people sometimes buy:
+
+\
+
+\small \begin{verbatim}
+todo: examples
+\end{verbatim} \normalsize
+
+
+
 
 
 
@@ -1098,34 +1141,37 @@ Traps are usually the kind of things that you fall into, put spikes into your be
 
 All traps have a few different properties such as price and encumbrance when you buy and transport them. Then size, trigger type, damage, time to set up and arm, difficulty to hide, etc. Some traps require that you dig a hole, or hack out some empty space in a wall.
 
-\small \begin{verbatim}
+\
 
-small snare: cost 5c, enc 0.5, size 1sq 50\% chance of triggering.
+\small \begin{verbatim}
+small snare: size 1sq 33% chance of triggering.
     Caught target can break free in one action on str vs 5 roll
     or disentangle in two rounds after successful int vs 2 roll
     or loop cut in one round if carrying small blade or similar.
     Takes 3r to set and must be anchored to something within 5sq.
     They are easy to hide at mod+3.
 
-large snare: cost 1s, enc 1.0, size 1sq 100\% chance of triggering.
+large snare: size 1sq 66% chance of triggering.
     Caught target can break free in one action on str vs 8 roll
     or disentangle in two rounds after successful int vs 2 roll
     or loop cut in one round if carrying small blade or similar.
     Takes 5r to set and must be anchored to something within 8sq.
     They are easy to hide at mod+3.
 
+trigger snare: size 1sq 90% chance of triggering.
+    It's a large snare with an extra trigger tension spring.
+
 The common way to anchor snares is around tree trunks or other protruding solid
 objects. Other ways is to use dirt wedges to anchor it in the ground. A dirt
 wedge can be hammered down using heavy blunt object in 2r and can be retrieved
-in 1d5 rounds using similar objects. They have a chance of 3+str to hold when
-loaded. Dirt wedges cost 1s and weigh 0.5enc.
+in 1d5 rounds using similar objects. 
 Snares can also be anchored in some stone walls using rock wedges. A rock wedge
 can be inserted in a crevice using a hammer, butt of an axe, stone, or similar,
-in 2r. It can be retrieved using similar tools in 1d5r. They have a chance of
-5+(best of int or per) to hold when loaded. Rock wedges cost 5c and weigh
-0.25enc.
+in 2r. It can be retrieved using similar tools in 1d5r. 
+Dirt and rock wedges hold a certain strength, usually 5-20, depending on object 
+and environment.
 
-\end{verbatim} \goodbreak \begin{verbatim}
+
 spike arm:
         Pre-made: cost 5s in materials, enc 5+1/dam.
         Half foraged: cost 3s in materials, enc 3 + 1/2dam + foraging.
@@ -1155,9 +1201,13 @@ pit trap: cost nothing, requires perhaps a canvas, and some shovels to dig with.
         one point of penetrating per depth of the pit, including the first.
         Deep pits take longer to dig of course.
         Hiding a pit trap is mod+3.
-
-
 \end{verbatim} \normalsize
+
+
+
+
+
+
 
 
 
@@ -1391,10 +1441,6 @@ Spiders can be housed in a "spider box", or "hive box". A box normally holds max
 
 
 
-
-
-
-
 %-------------------------------------------------------------------------------
 % C O M P A N I O N S
 %--------------------
@@ -1431,4 +1477,40 @@ When playing henchmen, be stringent with actually letting them behave in a reaso
 Situations often apply where the controlling player might want the henchman to take other actions than he has been ordered to because it is "clearly better". First, would it be better for the henchman? Is it evident for the henchman? Is he smart enough to figure it out (roll int)? Secondly, does the henchman often have enough free reign to ignore orders? Is he often strongly ordered to do dangerous stuff? Does he have the presence of mind to think clearly (roll psy)? And so on.
 
 Most henchmen will try to save their own skin when they start to get hurt. They might disobey orders, hesitate when ordered to attack, be more defensive, etc.
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% L E G E D A R Y
+%----------------
+
+\phantomsection\addcontentsline{toc}{section}{legendary items}
+\section*{Legendary items}
+
+
+These items are almost always unique and custom made, at great expense and by legendary craftsmen. A few examples of the outrageously expensive items people have managed to acquire:
+
+\
+
+\small \begin{verbatim}
+Master BronzeBolt's Twin Whistler
+heavy crossbow    dam 6, penetrating 2,
+double bow        range 15
+repeater          str 7 (no str bonus)
+(specialty 10xp)  reload 2r (str 10 dex 10 : 1r)
+                  magasine 12 (8r manual reload, 4r if dex 10)
+                  requires special bolts: mod+1, pen+1, range+10
+A truly remarkable piece of legendary artisinal mechanickery. 
+It can fire twin whistling arrows in a single action, or separately, and sings
+when the reload mechanism is pulled.
+It is rumoured that BronzeBolt paid over 300 gold for the machine and 
+has to pay 1 gold per bolt. Only one craftsman can make the ammunition and it 
+takes him several days to make a bundle of bolts.
+\end{verbatim} \normalsize
+
 

@@ -203,11 +203,11 @@ class Character:
     xp = -1
     # tertiary character traits
     bonuses = []
-    money = "unset"
     extras = []
     # starting skills & attacks, maneuvers
     skills = {}
     maneuvers = []
+    money = "unset"
 
     def __init__(self):
         self.bonuses = []
@@ -236,7 +236,14 @@ class Character:
         per_ap = per_ap + "action points " + str(self.ap)
         cha_xp = cha_xp + "xp " + str(self.xp)
         # start printing
-        print("================== "+self.race+" "+nr+" ==================")
+        #print("================== "+self.race+" "+nr+" ==================")
+        linelength = 44
+        title = " " + self.race + " " + nr + " "
+        pre = "=" * int((linelength - len(title)) / 2)
+        post = "=" * (linelength - len(pre) - len(title))
+        header = pre + title + post
+        print(header)
+        # stat lines
         print(str_hp)
         print(dex_move)
         print(con_stam)
@@ -244,6 +251,7 @@ class Character:
         print(psy_mana)
         print(per_ap)
         print(cha_xp)
+        # extras, bonuses, skills, etc
         print("--------------------------------------------")
         for bonus in self.bonuses :
             print(bonus)
@@ -258,9 +266,10 @@ class Character:
         for maneuver in self.maneuvers :
             print(maneuver)
         print("--------------------------------------------")
-        print("money: " + str(self.money))
         for extra in self.extras:
                 print(extra)
+        print("--------------------------------------------")
+        print("money: " + str(self.money))
 
 
 #--------|---------|---------|---------|---------|---------|---------|---------|
@@ -313,7 +322,7 @@ def rollHuman():
     char.skills['Common'] = int(char.int / 2) + d3()
     char.skills['avoid'] = int(char.dex / 4) + d2()
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))
+    char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))     # 2-4 (3,4,3)
     char.maneuvers.append('off balance')
     # done
     return char
@@ -373,7 +382,7 @@ def rollDwarf():
     char.skills['find'] = int(char.per / 4) + d2()
     char.skills['dungeoneering (incl bonus)'] = max(dungeoneeringbonus, d4())
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))
+    char.maneuvers.append('yield +' + str(1 + int(d10() / 4)))     # 1-3 (3,4,3)
     char.maneuvers.append('off balance')
     if roll(50): char.maneuvers.append('synchronised')
     # done
@@ -423,7 +432,7 @@ def rollElf():
     char.skills['Common'] = int(char.int/3) + d3()
     char.skills['avoid'] = int(char.dex/3) + d2()
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))
+    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
     char.maneuvers.append('off balance')
     # done
     return char
@@ -460,6 +469,7 @@ def rollHalfling():
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
+    char.bonuses.append("tackle and block penalty -" + str(d2()))
     sneakbonus = d3()
     char.bonuses.append("sneak bonus +" + str(sneakbonus))
     findbonus = d3()
@@ -469,7 +479,6 @@ def rollHalfling():
     if roll(50):
         gossipbonus = d3()
         char.bonuses.append("gossip bonus +" + str(gossipbonus))
-    char.yieldBonus = 2 + int(d10() / 3)
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
     char.extras.append("Halflings have psy mod-1 unless they eat good food (2x price)")
     # skills
@@ -480,7 +489,7 @@ def rollHalfling():
     if gossipbonus > 0:
         char.skills['gossip (incl bonus)'] = max(gossipbonus, d4())
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))
+    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
     char.maneuvers.append('off balance')
     # done
     return char
@@ -517,10 +526,12 @@ def rollOrc():
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
-    veteranbonus = d3()
-    char.bonuses.append("veteran bonus +" + str(veteranbonus))
-    brawlbonus = d3()
-    char.bonuses.append("brawl bonus +" + str(brawlbonus))
+    veteranbonus = d3()-1
+    if veteranbonus > 0:
+        char.bonuses.append("veteran bonus +" + str(veteranbonus))
+    brawlbonus = d4()-1
+    if brawlbonus > 0:
+        char.bonuses.append("brawl bonus +" + str(brawlbonus))
     char.money = str(d6())+" silver, "+str(d10())+" copper" + ", and " + str(d4()) + " large teeth/claws"
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d5()
@@ -530,10 +541,9 @@ def rollOrc():
     char.skills['brawl (incl bonus)'] = brawlskill
     # maneuvers
     char.maneuvers.append('strength bonus')
-    # yield or perhaps intercept ?
+    # yield or perhaps intercept or opportunity ?
     if roll(50):
-        char.yieldBonus = 2 + int(d10() / 4)
-        char.maneuvers.append('yield +' + str(char.yieldBonus))
+        char.maneuvers.append('yield +' + str(1 + int(d10() / 4))) # 1-3 (3,4,3)
     else:
         char.maneuvers.append('! this orc does not start with yield')
         if roll(50):
@@ -592,18 +602,19 @@ def rollGoblin():
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
+    char.bonuses.append("tackle and block penalty -" + str(1+d2()))
     sneakbonus = d3()
     char.bonuses.append("sneak bonus +" + str(sneakbonus))
-    char.extras.append("tackle and block penalty -3")
-    if roll(66):
+    # ? disengage
+    if roll(50):
         disengagebonus = d3()
         char.bonuses.append("disengage bonus +" + str(d3()))
     else:
         disengagebonus = 0
-    char.yieldBonus = 2 + int(d10() / 3)
+    # ? Nullskull
     if char.mana < 0 and roll(50):
         char.mana = -9
-        char.bonuses.append("Nullskull")
+        char.maneuvers.append("Nullskull")
     # skills
     char.skills['Svartlingo'] = int(char.int / 2) + d3()
     char.skills['Common'] = int(char.int / 3) + d2()
@@ -615,21 +626,18 @@ def rollGoblin():
         char.skills['disengage (incl bonus)'] = max(disengagebonus, int(char.dex / 4) + d2())
     else:
         char.skills['disengage'] = int(char.dex / 4) + d2()
-    char.skills['throw'] = int(char.dex / 4) +d2()
+    if roll(33):
+        char.skills['throw'] = int(char.dex / 4) + d2()
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))
-    char.maneuvers.append('off balance')
+    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
+    if roll(75):
+        char.maneuvers.append('off balance')
     # extras
     char.extras.append("goblins can live on half rations and can eat spoiled food")
-    bitedam = 1+int(d10()/3)                           # 1-4 (2,3,3,2)
-    scratchdam = int(1+d10()/10)                       # 1-2 (9,1)
+    bitedam = 1+int(d10()/3)                                     # 1-4 (2,3,3,2)
+    scratchdam = int(1+d10()/10)                                 # 1-2 (9,1)
     char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam)+" 3ap (2ap if both hands free)")
-    char.extras.append("brawl scratch: "+str(brawlskill)+" dam "+str(scratchdam)+" 2ap (1ap if both hands free) every third attack costs 1 stamina")
-    if roll(33):
-        clawdam = 1
-        if roll(33):
-            clawdam = 2
-        char.extras.append("brawl claw: "+str(brawlskill)+" dam "+str(clawdam)+" fast+1 first two attacks don't require stamina")
+    char.extras.append("brawl scratch: "+str(brawlskill)+" dam "+str(scratchdam)+" 2ap (1ap if both hands free) every second attack costs 0 stamina")
     char.money = str(int(d10()/4))+" silver, "+str(d12())+" copper" +", "+ str(d4())+" teeth, " \
                  + str(d3())+ " stones, "+ str(d2())+ " feathers, "+ str(d3())+" glass beads"
     # done

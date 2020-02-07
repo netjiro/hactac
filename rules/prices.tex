@@ -2,14 +2,11 @@
 %       10        20        30        40        50        60        70        80
 
 
-
-
 \cleardoublepage
 
 \phantomsection\addcontentsline{toc}{chapter}{prices}
 \chapter*{Prices}
 \chaptermark{prices}
-
 
 
 
@@ -63,7 +60,7 @@ Not all equipment or properties can be boosted like this. An abs 2 leather armou
 % weapons and armour
 %-------------------
 
-\pagebreak[1]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{weapons and armour}
 \section*{Weapons and armour}
 
@@ -114,22 +111,21 @@ large 1h axe           7 0       1.3   tools, cheaper in bulk
 small 2h axe           8 0       1.5   tools, cheaper in bulk
 2h axe               1 0 0       2.0   tools, cheaper in bulk
 large 2h axe         1 5 0       3.0   tools, cheaper in bulk
+
 battle axe           1 2 0       1.5   military, much cheaper in bulk
 great axe            2 0 0       2.0
 lochaber             6 0 0       4.0
 pick axe               4 0       1.8   tools, cheaper in bulk
 heavy pick axe         6 0       2.2   tools, cheaper in bulk
-\end{verbatim} \normalsize
-%\end{verbatim} \end{samepage} \normalsize
-\pagebreak[1]
-%\small \begin{samepage} \begin{verbatim}
-\small \begin{verbatim}
+
+
                      g s c    encumbrance
                      -----    -----------
 
 small staff            0 8       0.8
 staff                  1 0       1.0
 large staff            1 5       1.5
+
 small spear            2 0       1.5
 spear                  3 0       2.0
 large spear            6 0       2.7
@@ -143,36 +139,93 @@ heavy pike           1 2 0       5.0
 halberd              1 5 0       5.0   military, much cheaper in bulk
 glave                1 5 0       4.0
 
-small club           0 0 3       0.5
-club                 0 0 5       0.75
-large club           0 1 0       1.0
-very large club      0 1 2       1.2
-monstrous club       0 1 5       1.5
+small club               3       0.5
+club                     5       0.75
+large club             1 0       1.0
+very large club        1 2       1.2
+monstrous club         1 5       1.5
 heavy clubs          +30%        +30%
 
-1h hammer            0 1 0       0.8   tools, cheaper in bulk
-large 1h hammer      0 3 0       1.2   tools, cheaper in bulk
-2h hammer            0 4 0       1.4   tools, cheaper in bulk
+1h hammer              1 0       0.8   tools, cheaper in bulk
+large 1h hammer        3 0       1.2   tools, cheaper in bulk
+2h hammer              4 0       1.4   tools, cheaper in bulk
 large 2h hammer      1 5 0       2.2   tools, cheaper in bulk
-
-pick axe             0 4 0       1.5   tools, cheaper in bulk
-heavy pick axe       0 7 0       2.5   tools, cheaper in bulk
 
 1h flail             3 0 0       0.8
 large 1h flail       5 0 0       1.2
 2h flail             6 0 0       1.6
 large 2h flail       9 0 0       2.2
 
-heavy 2h hammer      4 0 0       3.5
+heavy hammer         4 0 0       3.5
 maul                 8 0 0       4.5
 morning star         3 0 0       1.4
 2h morning star      5 0 0       2.0
 long chain flail     5 0 0       1.2
 2h long chain flail  9 0 0       2.2
-\end{verbatim} \normalsize
-%\end{verbatim} \end{samepage} \normalsize
-\pagebreak[1]
 
+
+                     g s c    encumbrance
+                     -----    -----------
+
+buckler                2 0       0.5
+small shield           3 0       1.0
+shield                 5 0       2.0
+large shield           8 0       3.0
+tower shield         1 5 0       5.0
+heavy version        +100%      +40%
+plated version       +300%      +80%
+
+infantry shield        6 0       2.3   military, much cheaper in bulk
+
+leather armour         5 0       1.0 worn 2.0 packed
+chain mail           4 0 0       2.0 worn 4.0 packed   military, cheaper in bulk
+plate mail          10 0 0       3.0 worn 6.0 packed
+full plate          25 0 0       4.0 worn 10.0 packed
+heavy plate         50 0 0       5.0 worn 15.0 packed
+
+
+                     g s c    encumbrance
+                     -----    -----------
+
+throwing knife         1 0       0.2
+throwing axe           2 0       0.33
+javelin                1 5       0.5
+heavy javelin          2 5       0.66
+dart                     5       0.1
+
+short bow              3 0       0.75
+bow                    6 0       1.0
+heavy bow            1 0 0       1.5
+longbow              1 2 0       2.0   military, much cheaper in bulk
+heavy longbow        1 8 0       2.5
+
+piercing arrows
+broadhead arrows
+fine arrows
+barbed arrows
+sharp arrows
+fire arrows
+torch arrows
+candle arrows
+
+crossbow             1 0 0       1.0   military, much cheaper in bulk
+heavy crossbow       2 0 0       1.5
+arbalest             6 0 0       2.0
+
+fine bolts
+barbed bolts
+sharp bolts
+piercing bolts
+broadhead bolts
+
+light ballista      20 0 0      50.0 mounted weapon
+ballista            30 0 0     100.0 mounted weapon
+heavy ballista      50 0 0     200.0 mounted weapon
+
+
+\end{verbatim} \normalsize
+
+\
 
 \TODO remove old price list, go through to carry things over to new list above
 
@@ -182,36 +235,6 @@ long chain flail     5 0 0       1.2
                      g s c    encumbrance
                      -----    -----------
 
-dagger               0 2 0       0.5
-rapier               0 8 0       0.75
-short sword          0 6 0       0.75
-sword                1 0 0       1.0
-broad sword          1 5 0       1.2
-long sword           3 0 0       1.3
-bastard sword        5 0 0       1.5
-2h sword             8 0 0       2.0
-claymore            12 0 0       3.0
-
-light axe            0 5 0       0.6
-axe                  0 8 0       0.8
-heavy axe            1 2 0       1.2
-2h axe               3 0 0       2.0
-lochaber             6 0 0       3.0
-
-pick axe             0 4 0       1.0
-heavy pick axe       0 7 0       1.5
-
-\end{verbatim} \pagebreak[1] \begin{verbatim}
-throwing knife       0 1 0       0.2
-throwing axe         0 2 0       0.33
-javelin              0 1 5       0.5
-heavy javelin        0 2 5       0.66
-
-short bow            0 3 0       0.75
-bow                  0 6 0       1.0
-heavy bow            1 0 0       1.5
-long bow             1 2 0       2.0   military, much cheaper in bulk
-heavy long bow       1 8 0       2.5
 
 crossbow             1 0 0       1.0   military, much cheaper in bulk
 heavy crossbow       2 0 0       1.5
@@ -227,20 +250,6 @@ quiver 20            0 0 8       0.8  +0.5*load (arrows/bolts)
 quiver 30            0 1 0       1.0  +0.5*load (arrows/bolts)
 quiver 50            0 3 0       1.5  +0.5*load (arrows/bolts)
 
-buckler              0 2 0       0.5
-small shield         0 3 0       1.0
-shield               0 5 0       2.0
-large shield         0 8 0       3.0
-tower shield         1 5 0       5.0
-heavy version       +100% price +40% enc
-plated version      +300% price +80% enc
-infantry shield      0 6 0       2.3   military, much cheaper in bulk
-
-leather armour       0 5 0       1.0 worn 2.0 packed
-chain mail           4 0 0       2.0 worn 4.0 packed   military, cheaper in bulk
-plate mail          10 0 0       3.0 worn 6.0 packed
-full plate          25 0 0       4.0 worn 10.0 packed
-heavy full plate    50 0 0       5.0 worn 15.0 packed
 \end{verbatim} \normalsize
 %\end{verbatim} \end{samepage} \normalsize
 \goodbreak
@@ -263,12 +272,12 @@ Most basic equipment can be found in any village or town. Prices can vary quite 
 
 % try keeping the price list looking good.
 % just insert the line blow to page break at a good place
-%\end{verbatim} \end{samepage} \pagebreak[1] \begin{samepage} \begin{verbatim}
+%\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 
 
 \small
 %samepage started before the section heading
-\pagebreak[1] \begin{verbatim}
+\goodbreak \begin{verbatim}
                      g s c    encumbrance
                      -----    -----------
 
@@ -354,26 +363,10 @@ smoulder box         0 5 0       2.0 fire in 1 round
 small snare          0 0 5       0.5 or 0.1 when packed. trap: 1sq 33%
 large snare          0 1 0       1.0 or 0.2 when packed. trap: 1sq 66%
 trigger snare        0 5 0       2.0 or 0.5 when packed. trap: 1sq 90%
-
-\end{verbatim} %\end{samepage} \pagebreak[1]
+rock wedge           0 0 5       0.25  anchoring str 20
+dirt wedge           0 1 0       0.5   anchoring str 10
+\end{verbatim} %\end{samepage} \goodbreak
 \normalsize
-
-% 200206: hmm what's this:  was listed under snares
-%rock wedge           0 0 5       0.25
-%dirt wedge           0 1 0       0.5
-
-
-
-\subsection*{Hirelings and Henchmen}
-%-----------------------------------
-Hiring people to help slay monsters or guard the escape route is somewhat expensive, both in gold and experience share. Hired swords usually request somewhere around 1gold per 100xp up front for a regular cave hack adventure, and then half share of the loot. Longer or more dangerous adventures will cost more to hire people for, and simple safe duties will be cheaper. Some regions have higher salary standard than others as well. A poor village might have people at a quarter to half rate, while a rich town might cost double or more.
-
-It is also possible to hire people on speculation, where they get full share of the loot but no up front payment, or on fixed pay where they get no part of the loot, but much higher up front salary.
-
-Hirelings also get a full share of the XP for the adventure. This is sure to keep the players from hiring hordes of archers or double lines of soldiers to toss at the critters they meet.
-
-
-
 
 
 
@@ -385,7 +378,7 @@ Hirelings also get a full share of the XP for the adventure. This is sure to kee
 %-----------------
 
 %\begin{samepage}
-\pagebreak[1]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{special equipment}
 \section*{Special equipment price list}
 
@@ -424,7 +417,7 @@ with some negative mods: mod-1 / dam-1 / pen-1
 10 piercing bolts      1 0       0.25  mod-1 dam-1 pen+1
 10 broadhead bolts     1 0       0.25  mod-1 dam+1 pen-1
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 antidote             1s/str      0.25  many different versions exist with
                                        different strengths, colours, etc.
 
@@ -451,7 +444,7 @@ pain killer            1 0       0.25  eliminates 1 pain after 3r
 pain killer            3 0       0.25  eliminates 2 pain after 3r
 pain killer            5 0       0.25  eliminates 3 pain after 3r damages 1hp
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 staff light paste    1 0 0       0.25  stafflight 1 for 100r, spread on item
                                        takes 2r to apply.
                                        light as lamp
@@ -473,7 +466,7 @@ cave cart            2 0 0
 tunnel plug          5 0 0
 tunnel plug large    8 0 0
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 fightlight           5 0 0       2.0 2r setup, then light, 90deg 40sq
 fightlight small     3 0 0       1.0 2r setup, then light, 90deg 20sq
 fastfire addon      +3gold       0.5 takes only 1a to light
@@ -518,12 +511,14 @@ Permanently magical items are classified as "exotic" and are much more expensive
 
 
 
+
+
 %-------------------------------------------------------------------------------
 %exotic equipment
 %----------------
 
 %\begin{samepage}
-\pagebreak[1]
+\goodbreak
 \phantomsection\addcontentsline{toc}{section}{exotic equipment}
 \section*{Exotic equipment price list}
 
@@ -563,7 +558,7 @@ time fly             5 0 0       0.1   instant rewinds time one action,
 sentinel base        5 0 0       5.0   15 charge ghost warrior
                                        skill 8, dam 4
 
-\end{verbatim} \pagebreak[1] \begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Banor's Gate        30 0 0       str   size 2x2, str 15
 Banor's Gate        60 0 0       str   size 1x1, str 8
 
@@ -582,7 +577,22 @@ medicinal serpent       50g  training command mod-3 +1/g
 %\end{samepage}
 \normalsize
 
-The very rare legendary sword smiths and weapon wrights can make weapons of exceptional quality and properties, at exuberant prices. While a master craftsman can imbue a significant abs bonus and perhaps +1 modifiers, the legendary makers can make weapons with double abs and mod+2 and or dam+2. Some can even remove a slow-1 rating or add a fast+1, or modify parry and toparry stats, increase reach, etc.
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%exceptional and legendary
+%-------------------------
+
+
+\goodbreak
+\phantomsection\addcontentsline{toc}{section}{exceptional and legendary}
+\section*{Exceptional and Legendary}
+%-----------------------------------
+The very rare legendary sword smiths and weapon wrights can make weapons of exceptional quality and properties, at exuberant prices, hundreds of gold. While a master craftsman can imbue a significant abs bonus and perhaps +1 modifiers, the legendary makers can build weapons with double abs and mod+2 and or dam+2. Some can even remove a slow-1 rating or add a fast+1, or modify parry and toparry stats, increase reach, etc.
 
 All such weapons are custom made with damage and strength requirements suited for the person who orders the work. It takes some time to prepare weapons like these, probably months, and the work cannot be rushed.
 
@@ -635,3 +645,27 @@ mana nexus: cap = 100 + 100 per mana
 embedding: cap = 1 per mana (total mana)
 
 Permanence doesn't require cap of the target object, but from the ritual equipment of the wizard.
+
+
+
+
+\goodbreak
+\phantomsection\addcontentsline{toc}{section}{hirelings and henchmen}
+\section*{Hirelings and Henchmen}
+%--------------------------------
+Hiring people to help slay monsters or guard the escape route is somewhat expensive, both in gold and experience share. Hired swords usually request somewhere around 1gold per 100xp up front for a regular cave hack adventure, and then half share of the loot. Longer or more dangerous adventures will cost more to hire people for, and simple safe duties will be cheaper. Some regions have higher salary standard than others as well. A poor village might have people at a quarter to half rate, while a rich town might cost double or more.
+
+It is also possible to hire people on speculation, where they get full share of the loot but no up front payment, or on fixed pay where they get no part of the loot, but much higher up front salary.
+
+Hirelings also get a full share of the XP for the adventure. This is sure to keep the players from hiring hordes of archers or double lines of soldiers to toss at the critters they meet.
+
+\
+
+\small \begin{verbatim}
+Hired swordsman / archer, 150xp        15s for a few days' work, half loot share
+
+Veteran swordsman / archer, 300xp      30s, half share
+
+Hired knight with horse, 450xp         50s, half share
+\end{verbatim} \normalsize
+
