@@ -336,6 +336,7 @@ These are area effect spells. They can be targeted on characters, objects, or lo
 %arrow style:          spear, lance, dart, arrow, quarrel, missile, 
 %psy modded:           strike, spark, 
 
+\
 
 \small \begin{verbatim}
 Ur Bolt        cast 3r, 1m, dam 6,
@@ -393,11 +394,15 @@ snuppel dart   cast 2r, 1m, dam 4, stun 5 +3/m
 
 ---===### current above ###===---
 \end{verbatim} \normalsize
+
+\
+
 \noindent Spells listed below are not re-balanced yet.
 See balance guidelines in comment segment above.
+
+\
+
 \small \begin{verbatim}
-
-
 fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round
                int 8, psy 8
@@ -969,9 +974,11 @@ hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
 
 
 
-
+\
 
 More spells on the way, not balanced 
+
+\
 
 \small \begin{verbatim}
 destructive dispell
@@ -1022,6 +1029,8 @@ elsewhere
 \section*{Magical equipment}
 
 Wizards and Warriors alike can gain great power by wielding the arcane artefacts imbued with various magical energies. Below are some suggestions of magical items and artefacts. Make up your own to suit your adventure.
+
+\
 
 \small \begin{verbatim}
 Quaff! the     Metal tin with a golden glowing liquid. Generally costs ~1gold.
@@ -1270,7 +1279,11 @@ powerstaff     dam 3/4 (1h/2h), abs 10, parry 0/+1, str 3 (max +1 str bonus)
                Cannot transfer power from staff to bearer.
 \end{verbatim} \normalsize
 
+\
+
 There are of course also more normal boring magical items, weapons, and artefacts.
+
+\
 
 \small \begin{verbatim}
 weapon +x     A weapon that is easier to use or does more damage. It can give
@@ -1287,9 +1300,16 @@ mana potion
 [stat boost] potion
 \end{verbatim} \normalsize
 
+\
 
-\textbf{TODO:} custom magical stuff is not finished yet...
+\clearpage
+\TODO custom magical stuff is not finished yet... 
 
+\
+
+\textbf{Just throw out and rewrite!}
+
+\
 
 \emph{Custom magical items: the following are just idea sketches and should not be taken seriously. I need to work on this quite a lot before it is useful.}
 
@@ -1396,6 +1416,63 @@ silver:     20, alloy 15
 gold:       30, alloy 20
 crystal:    50
 gems:       1/gold value
+
+
+
+\
+
+\TODO: snipped moved from prices.tex :
+
+Permanently magical items are always custom made, and very exotic equipment.
+First of all the item to be enchanted needs to have enough magical capacity to withstand the forces of the magic to be embedded within it. This means that normal steel will almost never suffice, and more exotic and expensive materials will have to be used in the making of the item itself.
+
+The magical capacity of an item can be calculated to approximately: \\
+capacity = cf * abs \\
+where cf is capacity factor of material and the skill of the maker, the abs is the absorption or hitpoints of the item.
+E.g: a steel sword of regular making has a magical capacity of 10 = (1 * 10).
+
+Here follows the magical capacity of some materials:
+
+\
+
+\small \begin{verbatim}
+material          capacity      abs  enc  dam   price
+
+wood              1.0    1      1.0  1.0  1.0    1.0   (for common use)
+gnarlwood         5.0    5      1.0  1.0  1.0   10.0   (instead of wood)
+steel             1.0    1      1.0  1.0  1.0    1.0   (for common use)
+mage steel        5.0    5      1.0  1.0  1.0   10.0   (instead of steel)
+
+copper alloy      9.0   15      0.5  1.2  0.8   30.0
+silver alloy            25      0.4  1.5  0.7   50.0
+gold alloy              40      0.3  2.0  0.6  100.0
+strong crystal          50      0.5  1.0  1.2
+mithril                         2.0  0.7  1.2
+star iron
+
+copper                     ~3/enc
+silver                     ~5/enc
+gold                      ~10/enc
+jewels            1*cost ~100/enc
+
+\end{verbatim} \normalsize
+
+The capacity requirements of a permanently magical item are:
+payload spell: cap = mana * psy (E.g: black bolt 3m = 21 capacity)
+trigger spell: cap = 5 per payload spell for normal complexity triggers
+no mana supply: cap = 0 (empower by user "magic" spell)
+mana transfer: cap = 1 per mana (payload requirement)
+mana storage: cap = 30 + 10 per mana
+mana generation: cap = 50 + 30 per mana
+mana nexus: cap = 100 + 100 per mana
+embedding: cap = 1 per mana (total mana)
+
+Permanence doesn't require cap of the target object, but from the ritual equipment of the wizard.
+
+
+
+
+
 
 %-------------------------------------------------------------------------------
 %F A M I L I A R S ,   M A G I C A L   C O M P A N I O N S

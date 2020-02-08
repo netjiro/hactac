@@ -36,6 +36,8 @@ Below are a few example newbie Hero wannabecomes, ready to take on the world, an
 
 
 
+
+
 \clearpage
 \begin{samepage}
 
@@ -447,6 +449,54 @@ encumbrance: 5 / 10 = ~0.5
 
 
 
+\clearpage
+\begin{samepage}
+
+\noindent Newton spent his whole childhood fighting imaginary monsters with his overly large and heavy wooden sword, whittled by his uncle Marrowood. On his 18th birthday he packed a light knapsack and broke his piggybank. Then said goodbye to his father and mother, kissed his girlfriend goodbye, and went out into the world looking for monsters to slay. First stop was the smithy, where he spent almost all his considerable savings on a brand new heroic 2h sword.
+
+Without armour and only the sword for defence he's quite vulnerable, but perhaps 20hp makes up for it?
+
+\
+
+\small \begin{verbatim}
+===================================
+Newton the Happy Farmboy    (boy01)
+-----------------------------------
+str  7    hp 20 abs 0
+dex  8    m1 w3 r7 d10
+con  4    stamina 8
+int  5    vision 16 arc 225
+psy  9    mana 6
+per  5    ap 5(4)
+cha  6    xp 3 (initial 116)
+----------
+Common 5, gossip 2, counting 1
+sword 8, brawl 2, throw 2, accurate 1
+avoid 3, yield 3 
+quick 1, mobile 1
+jump 2, climb 2, swim 3
+veteran 1, balance 1, find 2
+luck 2, black cat 1
+----------
+money: 0g 6s 7c
+2h sword  8, dam 10, abs 15,                                                   2
+          str 6 (max +3 str bonus), finesse-6
+          reach 1 mod-6
+          poke: mod-1 dam-1 pen+1
+          swing: slow-1 mod-1 dam+2 todefend+2
+sack 5enc (1.0 + 0.75*load):                                                ca 4
+    red apple, cheese sandwich, lock of girlfriend's hair, water skin    1.0
+    knife, rope 10m, flint and steel, torch                          1.0+1.0
+blanket                                                                        2
+----------
+encumbrance 9/7 : dumps the sack and blanket when fighting
+\end{verbatim} \end{samepage} \normalsize
+
+
+
+
+
+
 
 
 
@@ -523,74 +573,6 @@ encumbrance: 5 / 10 = ~0.5
 \phantomsection\addcontentsline{toc}{section}{old}
 % ==============================================================================
 The characters below here are not updated to the current rule set and can look a bit weird.
-
-
-\
-
-
-\goodbreak
-\tiny \begin{samepage} \begin{verbatim}
-Human Warrior
-===================================
-Piggelina               (piggelina)
------------------------------------
-str  9      hp 16 abs 2(0)
-dex  5(6)   m2 w3 r7 d8(9)
-con  8      stamina 8(6)
-int  7      vision 24
-psy  7      mana 10
-per  3      cap 12
-cha  9      xp 12 (113)
-----------
-avoid     4 yield+3                  0.8    = (16-9)*0.8 = 5.6
-brawl     2                          0.8
-throw     2                          0.8
-find      1                          0.66
-gossip    3                          0.66
-common    8                          0.5
-
-focus     3                          1.0    =  9.0
-axe       7                          0.9    = 49*0.9 = 44.1
-shield    7                          0.7    = 49*0.7 = 34.3
-literate  2                          0.5    =  2.0
-counting  2                          0.5    =  2.0
-luck      1                          1.0    =  1.0
-
-enduring  2                          1.0    =  4.0
-----------
-punch         2 dam 3 parry-6 (parry-3 against unarmed) parry is always deflect
-kick          2 dam 4 parry-6 (parry-3 against unarmed) parry is always deflect
-
-heavy axe     7 dam 9, abs 10, parry-3, toparry-1,
-                str 7, finesse-4
-
-large shield  7 abs 15, parry +4, str 6
-                Ranged attacks mod-3 when in the way.
-                Hiding behind it (primary action) ranged mod-4
-                tackle mod+2
-
-chain mail      abs 2, old rusty chain mail, smells bad
-                dex-1,
-                dash-1,
-                str 4 (str penalties affect all actions)
-                acrobatics mod-2
-                spellcasting mod-1
-                sneak mod-3
-
-money 0g 1s 16c
-
-===================================
-Accomplishments:
-nothing much yet...
-
-===============================================
-current status
--------------
-hp 16 abs 2        : 16
-sta 8                  : 8
-initiative 5+d4   : --
-\end{verbatim} \end{samepage} \normalsize
-
 
 \
 
@@ -973,7 +955,14 @@ poor: psy-1 <5 gold in coins, psy-1 <1 gemstone  =psy mod-2
 \end{verbatim} \end{samepage} \normalsize
 
 
-\
+
+
+
+
+
+
+
+\clearpage
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -981,46 +970,71 @@ poor: psy-1 <5 gold in coins, psy-1 <1 gemstone  =psy mod-2
                          P R E G E N   N E W B I E S
                          ---------------------------
 
+                         
+Human Warrior
+===================================
+Piggelina               (piggelina)
+-----------------------------------
+str  9      hp 16 abs 2(0)
+dex  5(6)   m2 w3 r7 d8(9)
+con  8      stamina 8(6)
+int  7      vision 24
+psy  7      mana 10
+per  3      cap 12
+cha  9      xp 12 (113)
+----------
+avoid     4 yield+3                  0.8    = (16-9)*0.8 = 5.6
+brawl     2                          0.8
+throw     2                          0.8
+find      1                          0.66
+gossip    3                          0.66
+common    8                          0.5
+
+focus     3                          1.0    =  9.0
+axe       7                          0.9    = 49*0.9 = 44.1
+shield    7                          0.7    = 49*0.7 = 34.3
+literate  2                          0.5    =  2.0
+counting  2                          0.5    =  2.0
+luck      1                          1.0    =  1.0
+
+enduring  2                          1.0    =  4.0
+----------
+punch         2 dam 3 parry-6 (parry-3 against unarmed) parry is always deflect
+kick          2 dam 4 parry-6 (parry-3 against unarmed) parry is always deflect
+
+heavy axe     7 dam 9, abs 10, parry-3, toparry-1,
+                str 7, finesse-4
+
+large shield  7 abs 15, parry +4, str 6
+                Ranged attacks mod-3 when in the way.
+                Hiding behind it (primary action) ranged mod-4
+                tackle mod+2
+
+chain mail      abs 2, old rusty chain mail, smells bad
+                dex-1,
+                dash-1,
+                str 4 (str penalties affect all actions)
+                acrobatics mod-2
+                spellcasting mod-1
+                sneak mod-3
+
+money 0g 1s 16c
 
 ===================================
-Newton the Happy Farmboy    (boy01)
------------------------------------
-str  7    hp 20 abs 1
-dex  8    m1 w3 r7 d10
-con  4    stamina 8
-int  5    vision 16
-psy  9    mana 6
-per  5    cap 10
-cha  6    xp 2 (initial 112, spent 110)
-----------
-brawl     3                  free3 0.8*
-spear     7                        0.8*7^2=                 39
-shield    5                        0.7*8^2=                 44
-avoid     4 yield+4          free4 0.8*                      0
-sneak     4                        0.75*4^2=                12
-throw     4                  free2 0.8*(4^2-2^2)=            9
-count     3                        0.66*(3^2)=               6
-find      2                  free2 0.66*                     0
-----------                                                  --  =110
-money     1s 3c
-spear     7 dam 5/6 (4/5), abs 5, parry+0/+1, reach 1 mod-3, fast+0/+1
-(1h/2h)   str 3 (max +2 str bonus, extra str bonus are penetrating)
-          finesse-4
-leather armour abs 1, pot (actual) helmet, old hunting spear
-sack for 5 items: red apple, cheese sandwich, lock of girlfriend's hair, rope
+Accomplishments:
+nothing much yet...
+
+===============================================
+current status
+-------------
+hp 16 abs 2        : 16
+sta 8                  : 8
+initiative 5+d4   : --
 \end{verbatim} \end{samepage} \normalsize
 
 
 \
 
-
-
-\goodbreak
-\tiny \begin{samepage} \begin{verbatim}
-\end{verbatim} \end{samepage} \normalsize
-
-
-\
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -1072,6 +1086,7 @@ money 3g 5s 18c
 
 
 \
+
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -1139,8 +1154,16 @@ leather armour 1.0
 \end{verbatim} \end{samepage} \normalsize
 
 
-\
 
+
+
+
+
+
+
+
+
+\clearpage
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -1178,6 +1201,7 @@ kick   9 dam 9 fast+1 parry-deflect (minimum 33\% (rd))
 
 
 \
+
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -1217,6 +1241,7 @@ backpack 5 items: knife, bowstring, food, water
 
 
 \
+
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}
@@ -1268,7 +1293,14 @@ backpack   5 items:
 \end{verbatim} \end{samepage} \normalsize
 
 
-\
+
+
+
+
+
+
+
+\clearpage
 
 \goodbreak
 \tiny \begin{samepage} \begin{verbatim}

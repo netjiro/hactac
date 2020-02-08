@@ -12,12 +12,13 @@ import sys
 
 
 # ------------- for regular quick roll selection, just change here -------------
-#distribution = "devtest"         # 
-#distribution = "standard_set"    # standard selection of chars, 18 dudes
-distribution = "small_set"       # small but representative set of chars, 10 dudes
-#distribution = "min_set"         # minimal set, 7 dudes
-#distribution = "goblin_destiny"  # special set for goblin destiny campaign
-#distribution = "goblinsonly"     # test selection for ap changes, test 2
+#distribution = "devtest"           # 
+#distribution = "standard_set"      # standard selection of chars, 18 dudes
+distribution = "small_set"         # small but representative set of chars, 10 dudes
+#distribution = "min_set"           # minimal set, 6 dudes
+#distribution = "goblin_destiny"    # special set for goblin destiny campaign
+#distribution = "goblin_destiny_5"  # special set for goblin destiny campaign
+#distribution = "goblin_destiny_3"  # special set for goblin destiny campaign
 #-------------------------------------------------------------------------------
 
 
@@ -51,17 +52,17 @@ if distribution == "standard_set" :
     orcs =         2
     goblins =      5
 
-# 9 total, reasonable representation if choosing from all races
+# 10 total, reasonable representation if choosing from all races
 # still give too high chance of OP characters in each set.
 if distribution == "small_set" :
     humans =       2
     dwarves =      1
     elves =        1
-    halflings =    1
+    halflings =    2
     orcs =         1
     goblins =      3
 
-# 7 total, minimal set if choosing from all races
+# 6 total, minimal set if choosing from all races
 # but distribution will make less interesting race spread
 if distribution == "min_set" :
     humans =       1
@@ -69,7 +70,7 @@ if distribution == "min_set" :
     elves =        1
     halflings =    1
     orcs =         1
-    goblins =      2
+    goblins =      1
 
 
 # 8 total, 7 goblins
@@ -80,17 +81,30 @@ if distribution == "goblin_destiny" :
     halflings =    1
     orcs =         1
     goblins =      5
-# 8 gobbos, choose two to play:
-if distribution == "goblinsonly" :
+# 5 gobbos
+if distribution == "goblin_destiny_5" :
     humans =       0
     dwarves =      0
     elves =        0
     halflings =    0
     orcs =         0
-    goblins =      8
-# should try 6 gobbos? 10 Gobbos seems to give too good results. Try 8 ?
+    goblins =      5
+# 3 gobbos
+if distribution == "goblin_destiny_3" :
+    humans =       0
+    dwarves =      0
+    elves =        0
+    halflings =    0
+    orcs =         0
+    goblins =      3
+
+    
 
 
+
+
+#--------|---------|---------|---------|---------|---------|---------|---------|
+#       10        20        30        40        50        60        70        80
 
 
 # make some dice functions
@@ -238,6 +252,7 @@ class Character:
         # start printing
         #print("================== "+self.race+" "+nr+" ==================")
         linelength = 44
+        sepline = "-" * linelength
         title = " " + self.race + " " + nr + " "
         pre = "=" * int((linelength - len(title)) / 2)
         post = "=" * (linelength - len(pre) - len(title))
@@ -252,23 +267,27 @@ class Character:
         print(per_ap)
         print(cha_xp)
         # extras, bonuses, skills, etc
-        print("--------------------------------------------")
-        for bonus in self.bonuses :
-            print(bonus)
-        print("--------------------------------------------")
+        if len(self.bonuses) > 0:
+            print(sepline)
+            for bonus in self.bonuses :
+                print(bonus)
+        print(sepline)
         skillset = []
         for skill, lvl in self.skills.items() :
-            skillset.append(skill +" "+ str(lvl))
+            if lvl != 0:
+                skillset.append(skill +" "+ str(lvl))
         skillset.sort()
         for skill in skillset :
             print(skill)
-        print("--------------------------------------------")
-        for maneuver in self.maneuvers :
-            print(maneuver)
-        print("--------------------------------------------")
-        for extra in self.extras:
+        if len(self.maneuvers) > 0:
+            print(sepline)
+            for maneuver in self.maneuvers :
+                print(maneuver)
+        if len(self.extras) > 0:
+            print(sepline)
+            for extra in self.extras:
                 print(extra)
-        print("--------------------------------------------")
+        print(sepline)
         print("money: " + str(self.money))
 
 
@@ -285,6 +304,7 @@ class Character:
 #                 d10/4  1-3      4-7      8-10     0-2  3-4-3
 #                 d10/3  1-2   3-5   6-8   9-10     0-3  2-3-3-2
 #                 d10/2  1  2-3 4-5 6-7 8-9  10     0-5  1-2-2-2-2-1
+
 
 #--------|---------|---------|---------|---------|---------|---------|---------|
 #       10        20        30        40        50        60        70        80
@@ -319,11 +339,12 @@ def rollHuman():
     # tertiary
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
     # skills
-    char.skills['Common'] = int(char.int / 2) + d3()
-    char.skills['avoid'] = int(char.dex / 4) + d2()
+    char.skills["Common"] = 3 + int(char.int / 3) + d3()-1                     # 3-8
+    #char.skills["brawl"] = 0 + int(max(self.str,self.dex)/3) + d3()-1          # 0-5
+    #char.skills["avoid"] = 0 + int(char.dex / 3) + d3()-1                      # 0-5
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 4)))     # 2-4 (3,4,3)
-    char.maneuvers.append('off balance')
+    char.maneuvers.append("yield +" + str(2 + int(d10() / 4)))     # 2-4 (3,4,3)
+    char.maneuvers.append("off balance")
     # done
     return char
 
@@ -376,15 +397,15 @@ def rollDwarf():
                        +"coin suffer psy-1 mod until wealthy again.")
     char.extras.append("Dwarves with 50+ gold in coins and gems gain psy+1 mod while wealthy.")
     # skills
-    char.skills['Dwarvish'] = int(char.int / 2) + 2 + d3()
-    char.skills['Common'] = int(char.int / 3) + d2()
-    char.skills['avoid'] = int(char.dex / 4) + d2()
-    char.skills['find'] = int(char.per / 4) + d2()
-    char.skills['dungeoneering (incl bonus)'] = max(dungeoneeringbonus, d4())
+    char.skills["Dwarvish"] = int(char.int / 2) + 2 + d3()         # 3-10
+    char.skills["Common"] = int(char.int / 3) + d2()               # 1-5
+    #char.skills["avoid"] = int(char.dex / 4) + d2()                # 1-4
+    #char.skills["find"] = int(char.per / 4) + d2()                 # 1-4
+    if dungeoneeringbonus > 0:
+        char.skills["dungeoneering (incl bonus)"] = max(dungeoneeringbonus, d4()) # 1-4
     # maneuvers
-    char.maneuvers.append('yield +' + str(1 + int(d10() / 4)))     # 1-3 (3,4,3)
-    char.maneuvers.append('off balance')
-    if roll(50): char.maneuvers.append('synchronised')
+    char.maneuvers.append("yield +" + str(1 + int(d10() / 4)))     # 1-3 (3,4,3)
+    char.maneuvers.append("off balance")
     # done
     return char
 
@@ -428,12 +449,12 @@ def rollElf():
                        "suffer psy-1 mod per week to max -3.")
     char.extras.append("This is immediately restored to mod-0 when returning to nature.")
     # skills
-    char.skills['Elvish'] = int(char.int/2) + 3 + d3()
-    char.skills['Common'] = int(char.int/3) + d3()
-    char.skills['avoid'] = int(char.dex/3) + d2()
+    char.skills["Elvish"] = int(char.int/2) + 3 + d3()           # 6-11
+    char.skills["Common"] = int(char.int/3) + d3()               # 4-7
+    char.skills["avoid"] = int(char.dex/3) + d2()                # 2-5
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
-    char.maneuvers.append('off balance')
+    char.maneuvers.append("yield +" + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
+    char.maneuvers.append("off balance")
     # done
     return char
 
@@ -470,27 +491,32 @@ def rollHalfling():
     char.d = max(char.r + 1, char.d)
     # tertiary
     char.bonuses.append("tackle and block penalty -" + str(d2()))
-    sneakbonus = d3()
-    char.bonuses.append("sneak bonus +" + str(sneakbonus))
-    findbonus = d3()
-    char.bonuses.append("find bonus +" + str(findbonus))
-    char.extras.append("tackle and block penalty -3")
-    gossipbonus = 0
+    sneakbonus = 0
     if roll(50):
+        sneakbonus = d3()
+        char.bonuses.append("sneak bonus +" + str(sneakbonus))
+    findbonus = 0
+    if roll(50):
+        findbonus = d3()
+        char.bonuses.append("find bonus +" + str(findbonus))
+    gossipbonus = 0
+    if roll(100):
         gossipbonus = d3()
         char.bonuses.append("gossip bonus +" + str(gossipbonus))
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
-    char.extras.append("Halflings have psy mod-1 unless they eat good food (2x price)")
+    char.extras.append("Halflings gain psy+1 for 24h when eating good food (2x price)")
     # skills
-    char.skills['Common'] = int(char.int / 2) + d3()
-    char.skills['avoid'] = int(char.dex / 3) + d3()
-    char.skills['sneak (incl bonus)'] = max(sneakbonus, int(char.dex / 4) + d2())
-    char.skills['find (incl bonus)'] = max(findbonus, int(char.per / 4) + d2())
+    char.skills["Common"] = int(char.int / 2) + d3()
+    char.skills["avoid"] = int(char.dex / 3) + d3()
+    if sneakbonus > 0:
+        char.skills["sneak (incl bonus)"] = max(sneakbonus, int(char.dex / 4) + d2())
+    if findbonus > 0:
+        char.skills["find (incl bonus)"] = max(findbonus, int(char.per / 4) + d2())
     if gossipbonus > 0:
-        char.skills['gossip (incl bonus)'] = max(gossipbonus, d4())
+        char.skills["gossip (incl bonus)"] = max(gossipbonus, d4())
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
-    char.maneuvers.append('off balance')
+    char.maneuvers.append("yield +" + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
+    char.maneuvers.append("off balance")
     # done
     return char
 
@@ -534,23 +560,23 @@ def rollOrc():
         char.bonuses.append("brawl bonus +" + str(brawlbonus))
     char.money = str(d6())+" silver, "+str(d10())+" copper" + ", and " + str(d4()) + " large teeth/claws"
     # skills
-    char.skills['Svartlingo'] = int(char.int / 2) + d5()
-    char.skills['Common'] = int(char.int / 3) + d3()
-    char.skills['veteran (incl bonus)'] = max(veteranbonus, d3())
+    char.skills["Svartlingo"] = int(char.int / 2) + d5()
+    char.skills["Common"] = int(char.int / 3) + d3()
+    char.skills["veteran (incl bonus)"] = max(veteranbonus, d3())
     brawlskill = max(brawlbonus, int(char.str / 4) + d3())
-    char.skills['brawl (incl bonus)'] = brawlskill
+    char.skills["brawl (incl bonus)"] = brawlskill
     # maneuvers
-    char.maneuvers.append('strength bonus')
+    char.maneuvers.append("strength bonus")
     # yield or perhaps intercept or opportunity ?
     if roll(50):
-        char.maneuvers.append('yield +' + str(1 + int(d10() / 4))) # 1-3 (3,4,3)
+        char.maneuvers.append("yield +" + str(1 + int(d10() / 4))) # 1-3 (3,4,3)
     else:
-        char.maneuvers.append('! this orc does not start with yield')
+        char.maneuvers.append("! this orc does not start with yield")
         if roll(50):
-            char.maneuvers.append('intercept')
+            char.maneuvers.append("intercept")
         elif roll(50):
-            char.maneuvers.append('opportunity')
-    char.maneuvers.append('off balance')
+            char.maneuvers.append("opportunity")
+    char.maneuvers.append("off balance")
     # extras
     char.extras.append("double con against poisons")
     char.extras.append("Orcs without any war trophies suffer psy-1 mod, until honour reclaimed.")
@@ -616,22 +642,22 @@ def rollGoblin():
         char.mana = -9
         char.maneuvers.append("Nullskull")
     # skills
-    char.skills['Svartlingo'] = int(char.int / 2) + d3()
-    char.skills['Common'] = int(char.int / 3) + d2()
+    char.skills["Svartlingo"] = int(char.int / 2) + d3()
+    char.skills["Common"] = int(char.int / 4) + d3() -1
     brawlskill = int(max(char.dex,char.str) / 4) + d3()
-    char.skills['brawl'] = brawlskill
-    char.skills['avoid'] = int(char.dex / 4) + d3()
-    char.skills['sneak (incl bonus)'] = max(sneakbonus, int(char.per / 4) + d2())
+    char.skills["brawl"] = brawlskill
+    char.skills["avoid"] = int(char.dex / 4) + d3()
+    char.skills["sneak (incl bonus)"] = max(sneakbonus, int(char.per / 4) + d2())
     if disengagebonus > 0:
-        char.skills['disengage (incl bonus)'] = max(disengagebonus, int(char.dex / 4) + d2())
+        char.skills["disengage (incl bonus)"] = max(disengagebonus, int(char.dex / 4) + d2())
     else:
-        char.skills['disengage'] = int(char.dex / 4) + d2()
+        char.skills["disengage"] = int(char.dex / 4) + d2()
     if roll(33):
-        char.skills['throw'] = int(char.dex / 4) + d2()
+        char.skills["throw"] = int(char.dex / 4) + d2()
     # maneuvers
-    char.maneuvers.append('yield +' + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
+    char.maneuvers.append("yield +" + str(2 + int(d10() / 3)))   # 2-5 (2,3,3,2)
     if roll(75):
-        char.maneuvers.append('off balance')
+        char.maneuvers.append("off balance")
     # extras
     char.extras.append("goblins can live on half rations and can eat spoiled food")
     bitedam = 1+int(d10()/3)                                     # 1-4 (2,3,3,2)
@@ -645,6 +671,9 @@ def rollGoblin():
 
 
 
+
+#--------|---------|---------|---------|---------|---------|---------|---------|
+#       10        20        30        40        50        60        70        80
 
 #roll humans
 for i in range(0, humans):

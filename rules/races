@@ -29,8 +29,8 @@ For regular unimportant npcs, use the following baseline:
 
        hum   dwf   elf   hfl   orc   gob
 
-str      5     7     4     3     7     3
-dex      5     4     6     6     5     7
+str      5     7     4     3     7     2
+dex      5     4     6     6     5     6
 con      5     7     5     4     7     3
 int      5     6     7     5     4     3
 psy      5     6     6     5     4     3

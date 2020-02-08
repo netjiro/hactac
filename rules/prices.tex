@@ -328,8 +328,8 @@ saddle bag 5 enc       2 0       2.0 + 0.50 * load
 saddle bag 10 enc      4 0       3.0 + 0.50 * load
 pack bag 25 enc        6 0       5.0 + 0.50 * load      tot fully loaded = 17.5
 saddle etc             5 0       7.0
-donkey               0 7 0       10 leagues/day     carries 50enc, ride-3
-pony                 1 0 0       10 leagues/day     carries 50enc
+donkey               1 0 0       10 leagues/day     carries 50enc, ride-3
+pony                 2 0 0       10 leagues/day     carries 50enc
 horse                3 0 0       10-15 leagues/day  carries 75enc
 heavy horse          5 0 0       10-15 leagues/day  carries 100enc
 fast horse          10 0 0       20-25 leagues/day  carries 60enc
@@ -338,7 +338,7 @@ More expensive horses can travel further per day, and might give bonus to ride.
 Cheaper horses get tired faster and might give negative mods to ride.
 
 hand cart            1 0 0       load 10*(str-2) enc (max 50, str7) size 1x1
-small cart           2 0 0       1 pony/donkey, load 100 enc, size 1x1 or 2x2
+small cart           3 0 0       1 pony/donkey, load 100 enc, size 1x1 or 2x2
 cart                 5 0 0       1 horse, load 200 enc, size 2x2
 wagon               10 0 0       1-2 horses, 2-6 ppl, load 300 enc, size 2x2 / 2x3
 large wagon         15 0 0       2-4 horses, 4-10 ppl, load 500 enc
@@ -494,19 +494,23 @@ Then it's possible to make a custom master crafted weapon, combining custom requ
 
 It probably takes a week for a master craftsman to make high quality or custom weapon, provided he has enough of the high quality materials available. Otherwise there are always heroes around who can take it upon themselves to go out and find that rare lump of sky iron, or barrel of basilisk blood.
 
-Magical potions and single use or multi use items are usually custom made and fall under the "special equipment" section.
+\
+
+Magical potions and single use or multi use items are mostly custom made special or exotic equipment. A few magical potions and items are made in quantity and thus much cheaper, like Quaff! But mostly it's just a few custom items, expensive, time consuming
 
 The cost of a custom made magical potion can be estimated to:\\
-1 + (0.25 * (mana+1) * scf * psy) gold. \\
+\verb|1 + (0.25 * (mana+1) * scf * psy) gold| \\
 E.g: a potion of firestorm with 3 mana would cost approximately:\\
-1 + (0.25 * (3+1) * 0.33 * 8 ) = 3.6 gold
+\verb|1 + (0.25 * (3+1) * 0.33 * 8 ) = 3.6 gold|
 
 The cost of a custom made magical single use or multi use magical item can be estimated to: \\
-2 + (0.25 * (mana+2) * scf * psy) gold. \\
-E.g: a wand of 4 charges of 3 mana shock bolts would cost approximately: \\
-2 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 13.5 gold
+\verb|single use:  3 + (0.25 * (mana+2) * scf * psy) gold| \\
+\verb|multi use : 5 + uses * (0.25 * (mana+2) * scf * psy) gold| \\
+E.g: a single use wand and one with 4 charges of 3 mana shock bolts would cost approximately: \\
+\verb|3 + ( 0.25 * (3+2) * 0.33 * 7 ) = 5.9 gold| \\            % 3 + 2.8875
+\verb|5 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 16.55 gold| \\      % 5 + 4 * 2.8875
 
-Permanently magical items are classified as "exotic" and are much more expensive.
+\noindent Permanent magical items are much more expensive.
 
 
 
@@ -600,53 +604,14 @@ Be sure that the manufacturing of artefacts like this will require many odd and 
 
 The total cost including work, materials, and ingredients will come to at least 30x the list value of the weapon plus a minimum of 10 gold base line cost. This can be reduced to 15-20x by adventuring to procure some of the stuff instead of forcing the craftsman to buy it, if it can even be found in the market or region.
 
-\
 
+\phantomsection\addcontentsline{toc}{section}{magical}
+\section*{Magical}
+%-----------------
 Permanently magical items are always custom made, and very exotic equipment.
-First of all the item to be enchanted needs to have enough magical capacity to withstand the forces of the magic to be embedded within it. This means that normal steel will almost never suffice, and more exotic and expensive materials will have to be used in the making of the item itself.
+First of all the item to be enchanted needs to have enough magical capacity to withstand the forces of the magic to be embedded within it. This means exceptional workmanship and the highest quailty materials, often exotic minerals, woods, and stones go into the making of the item itself.
 
-The magical capacity of an item can be calculated to approximately: \\
-capacity = cf * abs \\
-where cf is capacity factor of material and the skill of the maker, the abs is the absorption or hitpoints of the item.
-E.g: a steel sword of regular making has a magical capacity of 10 = (1 * 10).
-
-Here follows the magical capacity of some materials:
-
-\small \begin{verbatim}
-material          capacity      abs  enc  dam   price
-
-wood              1.0    1      1.0  1.0  1.0    1.0   (for common use)
-gnarlwood         5.0    5      1.0  1.0  1.0   10.0   (instead of wood)
-steel             1.0    1      1.0  1.0  1.0    1.0   (for common use)
-mage steel        5.0    5      1.0  1.0  1.0   10.0   (instead of steel)
-
-copper alloy      9.0   15      0.5  1.2  0.8   30.0
-silver alloy            25      0.4  1.5  0.7   50.0
-gold alloy              40      0.3  2.0  0.6  100.0
-strong crystal          50      0.5  1.0  1.2
-mithril                         2.0  0.7  1.2
-star iron
-
-copper                     ~3/enc
-silver                     ~5/enc
-gold                      ~10/enc
-jewels            1*cost ~100/enc
-
-\end{verbatim} \normalsize
-
-The capacity requirements of a permanently magical item are:
-payload spell: cap = mana * psy (E.g: black bolt 3m = 21 capacity)
-trigger spell: cap = 5 per payload spell for normal complexity triggers
-no mana supply: cap = 0 (empower by user "magic" spell)
-mana transfer: cap = 1 per mana (payload requirement)
-mana storage: cap = 30 + 10 per mana
-mana generation: cap = 50 + 30 per mana
-mana nexus: cap = 100 + 100 per mana
-embedding: cap = 1 per mana (total mana)
-
-Permanence doesn't require cap of the target object, but from the ritual equipment of the wizard.
-
-
+This could mean small side adventures, hundreds or thousands of gold, special conditions, etc.
 
 
 \goodbreak
