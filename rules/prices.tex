@@ -193,34 +193,39 @@ javelin                1 5       0.5
 heavy javelin          2 5       0.66
 dart                     5       0.1
 
+
 short bow              3 0       0.75
 bow                    6 0       1.0
 heavy bow            1 0 0       1.5
 longbow              1 2 0       2.0   military, much cheaper in bulk
 heavy longbow        1 8 0       2.5
 
-piercing arrows
-broadhead arrows
-fine arrows
-barbed arrows
-sharp arrows
-fire arrows
-torch arrows
-candle arrows
+normal arrows          1 0       0.33  10 arrow bundle
+cheap arrows             1       0.33  10 arrow bundle
+for special arrows, see special equipment section
 
-crossbow             1 0 0       1.0   military, much cheaper in bulk
-heavy crossbow       2 0 0       1.5
-arbalest             6 0 0       2.0
 
-fine bolts
-barbed bolts
-sharp bolts
-piercing bolts
-broadhead bolts
+small crossbow       1 0 0       1.0   military, much cheaper in bulk
+crossbow             2 0 0       1.5   military, much cheaper in bulk
+heavy crossbow       3 0 0       2.0   military, much cheaper in bulk
+
+normal bolts           1 0       0.25  10 bolt bundle
+cheap bolts              1       0.25  10 bolt bundle
+for special bolts, see special equipment section
+
+
+arbalest             6 0 0       3.0   special military, cheaper in bulk
+broadhead              3 0       0.5   10 bolt bundle, special
+spikehead              5 0       0.5   10 bolt bundle, special
+blunthead              5 0       0.5   10 bolt bundle, special
+fine bolt versions   2 0 0       0.5   10 bolt bundle, special, mod+1
+
 
 light ballista      20 0 0      50.0 mounted weapon
 ballista            30 0 0     100.0 mounted weapon
 heavy ballista      50 0 0     200.0 mounted weapon
+
+ballista ammunition, ca 5-50 copper per shot
 
 
 \end{verbatim} \normalsize
@@ -395,27 +400,40 @@ They easily break or get damaged to the point where their extra properties
 are lost to damage. At which point they are useless or work as regular arrows
 with some negative mods: mod-1 / dam-1 / pen-1
 
+bow arrows:
+10 normal arrows       1 0       0.33  no mods
+10 cheap arrows          1       0.33  random: mod-1 or dam-1, cannot be reused
 10 fine arrows       1 0 0       0.33  mod+1
 10 barbed arrows       5 0       0.33  dam+1
 10 sharp arrows        5 0       0.33  pen+1
-10 piercing arrows     1 0       0.33  mod-1 dam-1 pen+1
-10 broadhead arrows    1 0       0.33  mod-1 dam+1 pen-1
-10 fire arrows           5       0.5   mod-2 dam-1 range-25%
+10 piercing arrows     2 0       0.33  mod-1 dam-1 pen+1
+10 broadhead arrows    2 0       0.33  mod-1 dam+1 pen-1
+10 fire arrows         3 0       0.5   mod-2 dam-1 range-25%
                                        oil splash dam 3/r for 5r or until doused
                                        light source as torch, burns 5r
                                        light 1a with fire source
-10 torch arrows          5       0.5   mod-2 dam-2 range-25%
+10 torch arrows        3 0       0.5   mod-2 dam-2 range-25%
                                        light source as torch, burns 10r
                                        light 1a with fire source
-10 candle arrows         5       0.5   mod-2 dam-2 range-25%
+10 candle arrows       3 0       0.5   mod-2 dam-2 range-25%
                                        light source as candle, burns 20r
                                        light 1a with fire source
 
+crossbow bolts:
+10 normal bolts        1 0       0.25  no mods
+10 cheap bolts         0 1       0.25  random: mod-1 or dam-1, cannot be reused
 10 fine bolts        1 0 0       0.25  mod+1
 10 barbed bolts        5 0       0.25  dam+1
 10 sharp bolts         5 0       0.25  pen+1
-10 piercing bolts      1 0       0.25  mod-1 dam-1 pen+1
-10 broadhead bolts     1 0       0.25  mod-1 dam+1 pen-1
+10 piercing bolts      2 0       0.25  mod-1 dam-1 pen+1
+10 broadhead bolts     2 0       0.25  mod-1 dam+1 pen-1
+
+arbalest bolts:
+10 broadhead bolts     3 0       0.5   see arbalest
+10 spikehead bolts     5 0       0.5   see arbalest
+10 blunthead bolts     5 0       0.5   see arbalest
+10 fine version      2 0 0       0.5   mod+1
+
 
 \end{verbatim} \goodbreak \begin{verbatim}
 antidote             1s/str      0.25  many different versions exist with

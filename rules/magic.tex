@@ -13,7 +13,22 @@
 \phantomsection\addcontentsline{toc}{chapter}{Magic}
 \chapter*{Magic}
 \chaptermark{magic}
+\label{cpt:magic}
 
+
+\small
+\begin{ttshape}
+\begin{description}
+
+\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
+
+\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
+
+\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
+
+\end{description}
+\end{ttshape}
+\normalsize
 
 
 \phantomsection\addcontentsline{toc}{section}{skills}
@@ -52,7 +67,7 @@ Mana spent for power casting is not counted to the maximum total limit set by th
 \item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
 
-\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, gm discretion.
+\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, GM discretion.
 
 
 \end{description}
@@ -1049,16 +1064,16 @@ Blast Off      Beautiful crystal vial of clear liquid. Costs ~5gold.
                1d5 damage to a radius 1 area blast.
                Everyone caught in the blast get 2 stamina restored.
 
-The Seeking    dam 5, range 16, str 3 (no str bonus)
+The Seeking    mod+3, dam 5, range 16, str 3 (no str bonus)
 Bow            range mods as regular bow, rate of fire as regular bow,
-               The arrows will always curve to hit the largest creature within
-               range 10 regardless where it is aimed (except user).
-               Outside range 10 it gives a mod+1 to hitting the selected target.
-               Largest is decided by base size, or str.
+               The arrows will always curve and re-target to the largest 
+               creature within range 10 regardless where it is aimed 
+               (except user). Outside range 10 it gives a mod+1 to hitting the
+               selected target. Largest is decided by base size, or str.
                Fuck-off Fred swears it seems to like friendly fire.
 
-Sledge hammer  dam 5, abs 14, str 5, finesse-0
-of solitude    After a hit the user can choose to spend 1 mana to:
+Slight hammer  dam 5, abs 14, str 5, finesse-2
+of solitude    After a regular hit the user can choose to spend 1 mana to:
                roll psy+str vs opponent str. Effect = diff/3
                For every effect point the opponent is dealt 1 damage
                penetrating and knocked back 1 square.
@@ -1075,9 +1090,8 @@ Morningstar    and forcibly draws 1 mana from the user,
 
 Terribly       A magical torch with a perpetual soft bioluminescence (range 8).
 Tasty          It grows magical glowing mushrooms from the top.
-Torch          They are very tasty. If you drop the torch, any monsters nearby
-               (distance 3) must succeed a psy roll or get the torch and eat
-               the top mushrooms.
+Torch          They are very tasty. Any monsters nearby (distance 3) must 
+               succeed a psy roll or get the torch and eat the top mushrooms.
                They grow back in a day, but the torch is dark without them.
                Eating the mushrooms will cause "frenzy" (see spell)
                for 5+1d10 rounds.
@@ -1085,13 +1099,13 @@ Torch          They are very tasty. If you drop the torch, any monsters nearby
 
 The DMT of     The last person who found out what DMT stood for died in the
 Dread and      process. It is a box of tools, and it gives off a soft "ping"
-Utility        at regular intervals. A sledge hammer is missing.
-               It gives a +6 to find, +6 to mechanical, locks, traps rolls.
+Utility        at regular intervals. A hammer is missing.
+               It gives a +6 to mechanical, locks, traps rolls, 
+               and +3 to McGyverism, find, dungeoneering rolls
 
 The Shiny      The helmet really shines. Provides a 20 distance bright light.
 Helmet         It will draw one mana at the start of every 30 rounds.
-               This classifies as a scary object against monsters that dwell
-               in the darkness.
+               It's a scary 5 object against monsters that dwell in darkness.
 
 The One Ring   There is only this one!
 
@@ -1131,13 +1145,13 @@ Wunjee         A red glowing tendril extends for about a meter, dissolving into
 Eileens Eye    A glass eye. It looks very realistic.
                The owner of the eye always sees what the eye sees, regardless
                of how far they are apart.
-               180deg vision, range20.
+               vision: range 20 arc 180deg.
 
 Wailing Doll   A small child's toy, a rag doll. It is very afraid of monsters.
                When it sees a monster it comes alive and starts screaming very
                loudly. It stops when it doesn't see any more monsters.
                1hp, movement 0.
-               180deg vision, range5.
+               vision 5 arc 180deg.
 
 Whaling Doll   A giant child's toy, a wooden construct giant. It requires str20
                to move the doll. Up to four people can help carry it.
@@ -1150,7 +1164,7 @@ Whaling Doll   A giant child's toy, a wooden construct giant. It requires str20
                If hit, the target is bound by the harpoon wire to the doll,
                which will reel it in and try to tear the target apart limb
                from limb (str vs str).
-               vision 180deg, range20
+               vision 20 arc 225deg.
 
 Time Fly       A small crystal with a strange looking bug encased.
                Crush the crystal and the bug will turn back time for the user
@@ -1158,9 +1172,9 @@ Time Fly       A small crystal with a strange looking bug encased.
                else than he tried last time. Perhaps run away?
                The user acts first for the redo action, ignoring initiative.
                Crushing the bug is a 0ap interrupt action ignoring initiative.
-               This assumes the bug is in a quick draw slot, otherwise it must
-               already be held, otherwise it is useless.
-               Time Flies are very exotic and expensive items
+               This assumes the bug is in a quickdraw slot, otherwise it must
+               already be held or it is useless.
+               Time Flies are very exotic and expensive items.
                Ad: A monster charges and attacks. You valiantly defend,
                but get slaughtered! No problem, just Bash the Bug!
                And you are right back at the monster just charging you.
@@ -1175,15 +1189,15 @@ Stunning       A beautiful white javelin with dark black runes along the shaft.
 Sticker        When striking a target and inflicting at least 1hp damage after
                armour the target must roll 10 vs (highest psy or con),
                or be stunned for diff/3 (round up) rounds.
-               Even if resisted it gives a mod-6 for first round from the shock.
-               weapon stats as normal javelin.
+               Even if resisted it gives a stun 6 effect from the shock.
+               weapon stats as normal javelin, mod+1 for ranged and melee.
 
 Sentinel Base  A large disc, usually made of stone and metal. When dropped and
                the top seal is broken it will summon a sentinel ghost warrior
                (see the spell). Charge, skill, weapons, and appearance can
                vary between different versions and manufacturers.
                Quite expensive, but very useful sometimes.
-               enc 3.0-8.0
+               Weighs around around 3.0 - 8.0 enc
 
 Ward Rune      A large tattoo, usually on the back. When the character is
 Tattoo         attacked the tattoo flares up and protects him.
@@ -1192,7 +1206,7 @@ Tattoo         attacked the tattoo flares up and protects him.
                can choose not to activate the tattoo if he wants to save mana.
 
 Glowrb         A crystal orb which when touched starts to glow with a bright
-               white light. It stays alight for 1000r or until touched again.
+               white light. It stays alight for 10-1000r or until touched again.
                Single use, charge, or permanent, depending on price and quality.
                enc 3.0 - 5.0
 
@@ -1204,7 +1218,7 @@ PortaPortal    Two large metal discs, comes as matched pairs. When both are
                Often used to bring in a party to areas which is otherwise
                difficult to get in to, such as a well guarded keep, a remote
                mountain cave, or the inner treasure chamber of the dragon's
-               lair. Just have your thief sneak in one of the discs of the
+               lair. Just have your stealthling sneak in one of the discs of the
                portaportal, then activate. Meanwhile the rest of the party are
                safe and sound back in the tavern with the other end already
                active. Can also be very good for escaping a tight spot. Just
@@ -1215,7 +1229,7 @@ PortaPortal    Two large metal discs, comes as matched pairs. When both are
 
 Amulet of      When the character is taking hp damage the amulet activates and
 random         absorbs 1d3 damage, draining one mana in the process.
-protection     Some versions protect more, or drain more or less mana.
+protection     Some versions protect more, or drain more, or less, mana.
                enc 0.1-0.5
 
 Proportional   The proportional plate mail absorbs 1/3rd of the incoming damage
@@ -1224,9 +1238,10 @@ Plate Mail     (round to nearest). Thus for heavy opponents it can
                useless.
 
 TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
-               movement: m+1 w+2 r+4 d+8. Must roll an unmodified dex roll at end
-               of movement or fall.
-               Get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
+               movement: m+1 w+2 r+4 d+8. Must roll dex at end of movement 
+               or fall. Take mod+3 to the roll if going off balance. Or just do 
+               a faceplant as a controlled fall.
+               Or get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
 Feedback Football  angry glowing metal ball contraption
                glow 2sq light, destructuve feedback triggered range 6sq

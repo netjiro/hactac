@@ -41,7 +41,7 @@ The hactac rule set, game setting, and adventure campaigns are not created with 
 \textbf{Game targets:}
 \begin{itemize}
     \item Keep the rounds short and quick.
-    \item Allow gm and players to select the level of complexity.
+    \item Allow GM and players to select the level of complexity.
     \item Flexibility and options, with consequences and tradeoffs.
     \item Tactical maneuvers and game play, not just dps dice rally.
     \item Require player coordination for combat success.
@@ -97,12 +97,12 @@ This game takes more rounds per battle than most other games, but each round is 
 Standard encunters for a few players and twice their number in regular opposition take perhaps 20-30 rounds and 30-60min. More complex fights take longer. In the advanced "Goblin Destiny" campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
 % I consider the time consumption a design failure on my part of that specific campaign. I should have done it differently. But the players loved the campaign and reported it as one of the best so I have not done any significant changes to it.
 
-Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the gm can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, ligthing, and vision.
+Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, ligthing, and vision.
 
 
 \section*{simplified or complex}
 %-------------------------------
-The fundamental design idea is to allow the gm and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper and some tokens. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract. Then the group can pick and choose the rules, skills, etc which they feel are interesting, adding complexity and variation. At some point it's better to have automation assistance by simple scripting in digital/virtual table top software like maptool, vassal, or similar. I have a maptool implementation that covers the majority of the rule set for quick automation for our weeknight internet based slaughter sessions.
+The fundamental design idea is to allow the GM and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper and some tokens. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract. Then the group can pick and choose the rules, skills, etc which they feel are interesting, adding complexity and variation. At some point it's better to have automation assistance by simple scripting in digital/virtual table top software like maptool, vassal, or similar. I have a maptool implementation that covers the majority of the rule set for quick automation for our weeknight internet based slaughter sessions.
 
 
 \section*{nerfing}
@@ -151,7 +151,8 @@ failure -9 is a critical failure or fumble
 \item[Modification, penalty, bonus (mod):] all the same, although penalties tend to be bad for you while bonuses are usually good. Modifications are additive to an action's chance of success. \\
 E.g: skill 5 mod+3 has a chance of 8 on a D10 to succeed, skill 6 mod-2 has 4.
 
-The total Accumulated Modification Stack, (ams/ms/mod stack) is the sum of all mods added together. E.g: walk (mod-3) and below 66\% hp (mod-1) and declaring 5ap (mod-2) gives ams:mod-6.
+The total Accumulated Modification Stack / Action Modification Stack, (modification stack / mod stack / mods / mod / ams / ms), is the sum of all mods added together.
+E.g: walk (mod-3) and below 66\% hp (mod-1) and declaring 5ap (mod-2) gives ams:mod-6.
 
 \item[Actions and Action Points (ap):]
 Actions are most of the stuff the character actively does, except for movement. Actions cost action points, and most actions cost three action points.
@@ -213,6 +214,13 @@ All penalties and mods also stack together and will in severe situations make su
 Some combination effects might be bugs that have not yet been seen in game nor foreseen during writing and testing. \emph{Let me know if you find weird or broken stuff.}
 
 
+\subsection*{All rolls are affected by the mod stack unless stated otherwise}
+%----------------------------------------------------------------------------
+All rolls: skill rolls, str and dex rolls, balance rolls, climb rolls, swinging a sword, shooting a bow, casting a spell, etc, are affected by the action modification stack / mod stack / ams.\\
+Unless it specifically says the roll ignores the action modification stack / mod stack / ams and take none or some other kinds of modifications. E.g: jump, possum, etc. But there are actually quite few exceptions.\\
+\todo I know there are exceptions I've forgotten to clarify. \emph{Please let me know when you find them!}
+
+
 \subsection*{Simultaneous turns during rounds}
 %---------------------------------------------
 All characters and monsters take turns during every full game round. Generally each combatant makes a short series of movements and actions. Usually one or two attacks and/or parries, and moves a few squares. In any order. Movement can be split up, and occur before, during, or after actions.
@@ -257,8 +265,8 @@ Actions include attacking an enemy, parrying an incoming blow, lying down, drawi
 
 Actions cost action points (ap), normally 3ap. In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
 
-The modification is calculated as: \\
-mod = declared ap - base ap \\
+The modification is the difference between declared ap and base ap. The mod is always negative or 0, you don't get a positive mod from declaring fewer ap than your base. E.g: having base ap of 4 and declaring 6ap gives mod-2, and decaring 3ap gives mod=0.
+
 Most regular actions require three action points. Characters start out with around 3 as base ap, meaning they can do about one unmodified normal action per round. When they try to do more each round they get mods. Some skills affect base ap and the action mod for certain actions.
 The maximum ap a character can declare is his base ap + dexterity.
 
@@ -377,18 +385,19 @@ Parry is a form of "defend" action. Some weapons or attack maneuvers have todefe
 
 
 \action{Actions: "give \& receive"} hand over an item between characters. It takes one action to give and one action to receive. Both actions requires a dex+9 roll. Normally this will not fail but when the action and movement mods are piling up the chances can drop.
+% give, receive, hand over, handover, relay
 
 
-\action{Action: "draw, sheath/holster/stow/put away"} take something from inventory or put it back again takes a full round as long as the item is easy to reach and not stuffed in a container. E.g: drawing or sheathing a sword, hanging a bow, etc. It's an easy dex+9 roll.
+\action{Action: "draw, sheath/holster/stow/put away"} take something from inventory or put it back again takes a full round as long as the item is easy to reach and not stuffed in a container. E.g: drawing or sheathing a sword, hanging a bow, etc. It's an easy dex+9 roll. 
 
 
-\action{Actions: "put down \& pick up, drop"} are full round actions with dex+9 roll. Just dropping things takes no time and requires no rolls, but grabbing always does.
+\action{Actions: "pick up, put down, drop"} are normal actions (3ap) with a dex+9 roll. Just dropping things takes no time and requires no rolls, but carefully putting something down and grabbing an item always does.
 
 
-\action{Action: "drink a potion"} is a full round action (1r) and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back. The skills quick draw and häfva can drastically reduce the time required to draw and drink a potion.
+\action{Action: "drink a potion"} is a full round action (1r) and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back. The skills quickdraw and häfva can drastically reduce the time required to draw and drink a potion.
 
 
-\action{Actions: "crouch, sit, lie, stand"} all takes a normal 3ap action that requires no roll. Rising after falling is a normal 3ap action with a dex+9 roll.
+\action{Actions: "crouch, sit, lie, stand"} all takes a normal 3ap action that requires no roll. Rising after falling or when off balance is a normal 3ap action with a dex+9 roll.
 
 
 \action{Action: "jump"} an obstacle or chasm requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll, and a 4sq creek is mod-9.
@@ -527,6 +536,7 @@ For simplified tabletop gaming the vision arc should probably be ignored or simp
 %With the basic rule set it is possible to run fast and simple combat with good tactical depth.
 
 
+\phantomsection\addcontentsline{toc}{section}{simple enough}
 \section*{Basic is enough}
 %-------------------------
 With just this basic rule set it's enough to run very fast but tactically deep tabletop fights, as well as fun lightweight role playing of course. We've used the basic simplified rules when playing with kids as young as five years old with little or no previous tabletop experience. Smart kids, but still. They just need to be able to count to somewhere around 10 to 12, and add and subtract a bit.
@@ -586,13 +596,20 @@ For more options and depth out of combat, add: track, sneak, climb, literate, hi
 More, optional, rules. Ignore or use as you wish. Most extra rules can be picked up in isolation, but some depend on others to make sense. Pick and choose to find what suits your group and game style.
 
 
-\subsection*{Action Points raises initiative, and spending decreases}
-%--------------------------------------------------------------------
-Each ap you declare above the character's max ap will give initiative+1. And each ap you spend will decrease initiative by 1. E.g: Fast Fabian has max ap 5 and declares 7ap for the round, raising initiative by 2.
+\subsection*{Declaring extra Action Points raises initiative}
+%------------------------------------------------------------
+Each ap you declare above the character's max ap will give initiative+1. 
+E.g: Fast Fabian has max ap 5 and declares 7ap for the round, raising his initiative by 2.
 
 
-\subsection*{Movement raises initiative}
-%---------------------------------------
+\subsection*{Taking action lowers initiative}
+%--------------------------------------------
+And when taking actions, each ap you spend will decrease initiative by 1. The initiative is decreased when the action is completed.
+E.g: Making a 3ap attack decreases initiative by 3 after the attack is completed.
+
+
+\subsection*{Fast Movement raises initiative}
+%--------------------------------------------
 The faster movement you declare the higher your initiative becomes. This is to make it easier to move and regroup which creates more flexibility in skirmishes.
 
 \
@@ -631,7 +648,7 @@ With this it's possible to enforce a rule where the top initiative always have t
 
 For battles with 30+ characters involved this will speed up the process significantly.
 
-The gm must decide what constitutes a \emph{significant change of situation} for a done character. A good rule of thumb is that the character can take reactive defensive actions and movement only, and no offensive actions, counter attacks, pursue targets, initiative interrupts, etc.
+The GM must decide what constitutes a \emph{significant change of situation} for a done character. A good rule of thumb is that the character can take reactive defensive actions and movement only, and no offensive actions, counter attacks, pursue targets, initiative interrupts, etc.
 
 
 \subsection*{Actions that do not require rolls}
@@ -688,7 +705,7 @@ Some targets are hidden very well. In such situations a normal perception roll i
 
 Calling for per rolls of course notifies the players of hidden stuff in the vicinity.
 %Roll only once for all hidden stuff, and see if the perception success is better than the hidden success of each respective hidden.
-The gm can of course roll the perception rolls hidden from the players, but that is a bit more boring. Alternatively the gm can call for per rolls every now and then when there is nothing to find as well...
+The GM can of course roll the perception rolls hidden from the players, but that is a bit more boring. Alternatively the GM can call for per rolls every now and then when there is nothing to find as well...
 
 
 \subsection*{Sneaking and Spotting}
@@ -732,7 +749,7 @@ Unaware characters, such as city guards, and goblins too focused on their stamp 
 
 \subsection*{Long range vision}
 %-------------------------------
-Past his vision radius the character cannot discern details and must ask the gm what is further away. It is not enough to designate targets properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
+Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate targets properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
 
 
 \subsection*{Simplified tabletop light and vision}
@@ -787,7 +804,7 @@ Magical dark vision should have different multipliers, or set a personal self li
 %-------------------
 Moving a character is not an action, but it follows the rules of initiative. Movement can be done by itself or as part of an action.
 
-Optional: \emph{Stutter Step:} To avoid players making small incremental moves without actions the gm can decide that movement together with an action is free, but movement without an action costs 1ap. And if players cleverly start using free 0ap actions to trigger movement the gm can force a cost of 1ap there as well.
+Optional: \emph{Stutter Step:} To avoid players making small incremental moves without actions the GM can decide that movement together with an action is free, but movement without an action costs 1ap. And if players cleverly start using free 0ap actions to trigger movement the GM can force a cost of 1ap there as well.
 
 Optional: Moving lowers initiative, \hyperref[sec:movinglowersinitiative]{see section Moving lowers initiative}, page \pageref{sec:movinglowersinitiative}. Each initiated movement path lowers initiative by 3.
 
@@ -888,7 +905,7 @@ Normal size characters such as humans, orcs, dwarves, elves, etc cannot.
 %--------------------------------------------------
 Forced extra movement, beyond declared, causes the character to fall down and go prone, and forces a mod-3 for the rest of the current round and the full next round. Rising from a prone position takes a normal 3ap action. Falling down can be avoided by purposefully going \emph{off balance}, a maneuver skill which most races have from the start. Controlled falling is done by \emph{face plant / dive} and avoids the persistent mod-3.
 
-When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero A has spent all his movement to get into attack position on Monster B. But then when monster B attacks he wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the final move of the yield action. This will cause him to go off balance, incurring the mod-3 which will also persist for the next round.
+When a character goes off balance he immediately suffers a mod-3 for the rest of the round. The off balance mod also persists for the next round. E.g: Hero Albin has spent all his movement to get into attack position on Monster Boo for next round. But then, \emph{supplies}, Monster Boo attacks and Hero Albin wants to "avoid + yield". To do that he must spend one extra movement point which he does not have for the final move of the yield action. This will cause him to go off balance, incurring the mod-3 which will also persist for the next round.
 
 Note that the off balance penalty kicks in after the parry + yield roll in the example above. Otherwise most situations would not gain any actual benefit from going off balance when defending and yielding since the off balance penalty would cancel the yield bonus.
 
@@ -949,6 +966,13 @@ In some cases it's relevant to calculate divisions of rounds, in which case a ro
 %TODO: change example
 %E.g: fast magic 3 allows to cast spells in half the time. A one round spell would then take 5ap.
 
+\
+
+Unless otherwise specified, any action taking 0-9ap can be expanded into a 1r action, regardless of what base ap the character can declare. E.g: Slow Sune has base ap of 4, and want to perform a strange ritualistic wavy-arms-move requiring 6ap. Instead of declaring 6ap and taking mod-2 for the action, and round, he simply expands 6ap action into a full round action, declaring his normal max 4ap, and taking no mods.
+
+For actions taking over 9ap it's possible to expand into multiple round actions:\\
+\verb|rounds = round up (ap / 9)|
+
 
 \subsection*{Actions that take more than one round}
 \label{multiroundactions}
@@ -980,7 +1004,6 @@ E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slow
 %--------------------
 Stamina is a measure of how long the character can keep up with high power activity, such as hard battling, running, etc. When the stamina runs out the character will have problems performing taxing actions and movements.
 
-\noindent
 Each attack generally costs one stamina point. \\
 Defence actions cost no stamina.\\ 
 Manuver movement speed costs no stamina.\\ 
@@ -991,12 +1014,14 @@ Some skills and maneuvers also require drawing stamina.
 
 The characters generally regain one stamina at the start of each round. If stamina reaches 0, you must start rolling for con for every action that requires drawing stamina. If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. If the con roll succeeds the character can perform the action, but will go into negative stamina.
 
-When you have negative stamina the con roll is penalty modified by the negative stamina. All actions are also modified by the negative stamina.
-E.g: Wheezy the Dwarf has been battling heavily, and is now at stamina -2. He makes an attack as usual (with mod-2 for stamina=-2), then wants to make a second attack the same round, and must now roll a con (6) mod-2 =4 to be able to attack or he is too tired. He rolls a 7, a fail-3, and just stands there panting for 3ap instead of smiting the giggling goblin.
+When you roll con for stamina draw check the con roll is penalty modified by the negative stamina, ignoring the mod stack.
 
-A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. Resting characters regains 1 extra stamina each round if they pass a con roll with all normal mods. Declaring rest means declaring 0ap and 0mp for the round.
+With negative stamina, all actions are also modified by the negative stamina, above the normal mod stack.
+E.g: Wheezy the Dwarf has been battling heavily and is now at stamina -2. He wants to makes an attack, costing 1 stamina. His has con 7, and must roll con 7 mod-2 =5. He succeeds and can draw 1 stamina. The action is performed at stamina=-2 though, it costs 1 stamina to perform, drawn after the action is completed. He must thus roll for his attack as usual but with an extra mod-2 for the low stamina. Luckily he succeeds. Now he has stamina -3. He decides to do a second attack the same round, and must now roll a con 7 mod-3 =4 to be able to attack or he is too tired. He rolls a 6, a fail-2, and just stands there panting for 3ap instead of smiting the giggling goblin.
 
-Some attacks and actions cost no stamina for every other use, or every third, or every second and third in sequence or round. This can be written as \verb|stamina(-1,0,0)| meaning that the first use in a sequence costs one stamina, while the second and third costs no stamina. E.g: if a \verb|stamina(-1,0)| action is done three times it costs -1, 0, -1 stamina.
+A character regains 1 stamina at the beginning of each round regardless of declared movement and activity. Resting characters regains 1 extra stamina each round if they pass a con roll with all normal mods. Since rest means 0ap 0mp the main mods will be pain, low hp, and such. 
+
+Some attacks and actions cost no stamina for every second use, or every third, or every second and third in sequence or round. This can be written as \verb|stamina(-1,0,0)| meaning that the first use in a sequence costs one stamina, while the second and third costs no stamina. E.g: if a \verb|stamina(-1,0)| action is done three times it costs -1, 0, -1 stamina.
 
 %TODO: remove the "con/3 extra stamina" regain when resting. Rests too fast.
 %A resting character regains con/3 stamina each round. 
@@ -1180,11 +1205,11 @@ E.g: Willow the Weak has str 4 and tries wielding a broad sword which requires s
 And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder requires dex 7. Fabian thus takes mod-1 and +1ap, which means his fast rapier is now just 3ap normal speed. So unfortunate...
 
 
+\vspace{10mm}
+\TODO meh, rewrite excessive strength bonus points allocation structure
 \subsection*{Excessive str bonus}
 %--------------------------------
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
-
-\TODO meh, rewrite, change excessive strength bonus points allocation structure
 
 Always use the highest base strength requirement of all equipment, manuvers, skills, etc when calculating the free excessive strength points.
 E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
@@ -1211,6 +1236,7 @@ Reallocating extra strength points takes one round per point, unless the Hero ha
 %------------------
 Weapons with the reach property can hit targets one extra square away per level.
 E.g: a spear with reach 1 can hit an opponent who is separated from the attacker by one empty square. However, attacking with reach is usually more difficult and most reach weapons have a mod-x when using reach.
+A few weapons are made for fighting with the opponent a bit away and can have modifications when using them in base contact, e.g: reach 0 mod-3 and reach 1 mod=0.
 
 
 \subsection*{Initiative when attacking against weapons with superior reach}
@@ -1242,11 +1268,11 @@ Black Knight can ignore some mods like this.
 
 \subsection*{Come on and die already}
 %------------------------------------
-Characters die when they reach -con hp. When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll con modified with the negative hp. If he fails he loses consciousness. Regain consciousness is also a con roll modified by negative hp. Passed out characters can roll at the beginning of each round. The veteran skill helps to reduce the modification of the con rolls.
+Characters die when they reach -con hp. When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll con modified with the negative hp, ignoring ams. If he fails he loses consciousness. Regain consciousness is also a con roll modified by negative hp, ignoring ams. Passed out characters can roll at the beginning of each round. The veteran skill helps to reduce the modification of the con rolls.
 
 E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
-Optional: Some large creatures with very high hp will have a multiplier when referencing con for this effect, e.g: dies at -con*3 or some such. This multiplier also affects the chance of faiting from negative hp, etc.
+Optional: Some large creatures with very high hp will have a multiplier when referencing con for this effect, e.g: dies at -con*3 or some such. This multiplier also affects the chance of faniting from negative hp, etc.
 
 
 \subsection*{Regaining hit points}
@@ -1256,21 +1282,6 @@ A character generally regains con/3 hp per day. If the character has con = 2 he 
 A daily successful medical treatment roll also heals success diff hp even if all wounds have been treated, see \emph{medicine}.
 
 Optional: if tracking wounds list for pain purposes, wounds heal one point at a time in order of acquisition. E.g: if the wounds list is: 5,2,4, then after healing 5hp it would be: 3,0,3. Still giving two pain.
-
-
-\subsection*{Escaping combat, fleeing, giving chase}
-%---------------------------------------------------
-A character has successfully escaped from combat when he has moved off the edge of the battle map. It's a simple and fun rule, creating chase scenes and affecting positioning and tactics for increased tactical depth. It's not meant to be realistic.
-
-Allow the track, travel cruise speed, and exhaustion to determine if the pursuers catch up, and how fast. Then make a new improvised battle map to describe where they catch up.\\
-If the fleeing party is run down it's the chasing party that has most influence on the positioning on the new battle map.\\
-It the fleeing party stops to face their pursuers they will decide most of the positioning.
-
-Note that it's easy to get into a position where the fleeing party is always faster in short bursts on the battle maps, but the pursuing party is always faster and more resilient travelling the regional map to pursue them. In that case the travel speed takes precedent and decides that the fleeing party cannot get away indefinitely. They may flee a couple of battle maps, but sooner or later they will be run into the ground. E.g: subtract 1d6 max stamina from the fleeing party members for every map they flee after the first one, until they can rest for a day.
-
-A league on the regional map is a huge amount of battle maps, so the fleeing party so the fleeing party probably doesn't get far, or even a single league, before ending up on a new battle map, blood thirsty pursuers breathing down their neck.
-
-After having escaped from combat a character cannot immediately re-enter the map if he changes his mind. E.g: force a minimum amount of rounds away dependent on the character's speed and some random roll. Away 1d10 rounds +0 for maneuver, +3 for walk, +6 for run, +9 for dash.
 
 
 \subsection*{Travelling the region and area maps}
@@ -1293,11 +1304,27 @@ Travelling by horse and cart is fast and convenient in many cases as long as the
 %In historical reality a league was often the flexible distance that someone walks in about an hour on easy terrain. A Hero with con X will travel X leagues per day without being overly tired afterwards. If you \emph{really must} have a real world reference, think of it as about 5km.
 
 
+\subsection*{Escaping combat, fleeing, giving chase}
+%---------------------------------------------------
+A character has successfully escaped from combat when he has moved off the edge of the battle map. It's a simple and fun rule, creating chase scenes and affecting positioning and tactics for increased tactical depth. It's not meant to be realistic.
+
+Allow the track, travel cruise speed, and exhaustion to determine if the pursuers catch up, and how fast. Then make a new improvised battle map to describe where they catch up, based on the terrain in that location on the regional map.\\
+If the fleeing party is run down it's the chasing party that has most influence on the positioning on the new battle map.\\
+It the fleeing party stops to face their pursuers they will decide most of the positioning.
+
+Note that it's easy to get into a position where the fleeing party is always faster in short bursts on the battle maps, but the pursuing party is always faster and more resilient travelling the regional map to pursue them. In that case the travel speed takes precedent and decides that the fleeing party cannot get away indefinitely. They may flee a couple of battle maps, but sooner or later they will be run into the ground. E.g: subtract 1d6 max stamina from the fleeing party members for every map they flee after the first one, until they can rest for a day.
+
+A league on the regional map is a huge amount of battle maps, so the fleeing party probably doesn't get far before ending up on a new battle map, blood thirsty pursuers breathing down their neck. It's probably more interesting if the first battle escape means they are run down 1sq away on the region map, that way they may sometimes be able to force a battle in a different terrain than they fled from. But probably a good idea to limit this to once: 1sq from first escape, then the pursuers decide.
+
+After having escaped from combat a character cannot immediately re-enter the map if he changes his mind. E.g: force a minimum amount of rounds away dependent on the character's speed and some random roll. Away 1d10 rounds +0 for maneuver, +3 for walk, +6 for run, +9 for dash.
+
+
 \subsection*{Hunger and thirst}
 %------------------------------
-The character must eat and drink. Each day he is without food his constitution and stamina drops by -1. Each day he is without water his con and sta drops with -3. When either con or stamina reaches 0, further mods go directly to ams for all rounds until recovered. The character dies at -con.
+The character must eat and drink. Each day he is without food his max stamina drops by -1. Each day he is without water his max stam drops with -3. Note: when max stam goes below zero it's difficult to draw stamina for actions, and all actions take the negative stamina as mods, above ams, meaning it's going to get very difficult to do anything.\\
+The character dies from thirst or starvation when max stam reaches -con.
 
-When food and water is available again the character recovers con and stamina at con/3 per day.
+When food and water is available again the character recovers max stam at con/3 per day.
 
 
 
@@ -1312,25 +1339,31 @@ When food and water is available again the character recovers con and stamina at
 
 \subsection*{Ranged weapons}
 %---------------------------
-Ranged weapons have the benefit of attacking distant targets and are generally impossible to parry. They do however have a lower rate of fire and do not do as much damage as melee weapons.
+Ranged weapons have the benefit of attacking distant targets and cannot be parried. But they have slow rate of fire and do not do as much damage as melee weapons.
 
 
-\subsection*{Short and Long Ranges}
-%----------------------------------
+\subsection*{Short and long range}
+%---------------------------------
 Each ranged weapon has a base range where the attack is mod=0 and do normal damage. Short range normally gives a small positive mod. Longer ranges have negative mods and damage reduction.
+
+\
+
 \small \begin{verbatim}
 Short is base range / 2                  mod+1
 Normal range is base range               mod-0
 Long range is base range * 1.5           mod-3, dam-1
 Very long range is base range * 2        mod-6, dam-2
 Extreme range is base range * 3          mod-9, dam-3
-Some weapons behave differently than these standard numbers.
 \end{verbatim} \normalsize
+
+\
+
+\noindent Some weapons behave differently than these standard numbers.
 
 
 \subsection*{Rate of fire}
 %-------------------------
-The faster the character fires the more difficult the attack will be. In some cases the fastest attacks require that the weapon or ammunition is readied as quick draw items, and that they can be drawn in one or zero action
+The faster the character fires the more difficult the attack will be. In some cases the fastest attacks require that the weapon or ammunition is readied as quickdraw items, and that they can be drawn in one or zero action
 
 
 \subsection*{Too short range, base contact}
@@ -1342,15 +1375,22 @@ Note that the attacker is not affected by base contact with other characters tha
 
 \subsection*{Firing into melee}
 %-----------------------------
-Firing into melee is tricky. If the intended target is first in missile flight path the attack is mod-3. If target is second in flight path it's mod-6, i.e. shooting through friendly to hit foe.
+Firing into melee is tricky, mod-3, and you risk hitting a friendly in base contact with the target.
 
-And to make it more interesting, if you fail-3 or worse you hit a friendly melee participant in base contact instead, in missile flight path if possible. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order. The miss will never hit a "better" target for the attacker.
+If you fail-3 or worse you hit a friendly melee participant in base contact with the target instead. The miss will never hit a "better" target for the attacker. A fail-1 or fail-2 is a normal miss without risk of hitting a friendly target.
+
+This penalty does not apply if the target is engaged in melee against the firing character. In this case the \emph{too short range} penalty above will usually be in effect. Therefore it is preferable to attack ranged opponents with melee weapons without reach.
+
+The maneuvers \emph{fire support} and \emph{target pointer} change this behaviour.
+
+\
+
+\noindent Optional:
+
+If you fail-3 to -5 you hit a friendly melee fighter in base contact with the target, in missile flight path if possible. The "alternate" target is probably the previous or next amongst the melee-ers in the missile flight path, in that order.
 
 If you fail-6 or worse you might also hit melee-ers in base contact with target but perpendicular to missile flight path (i.e. to the side of the target, viewed from the missile). Which target gets hit is random, but must be friendly or it's a miss as usual.
 
-This penalty does not apply if the target is engaged in melee against the firing character. In this case the \emph{too short range} penalty above will usually be in effect. Therefore it is a bad idea to attack a ranged fire opponent with reach attacks.
-
-The maneuvers \emph{fire support} and \emph{target pointer} change this behaviour.
 
 
 \subsection*{Arrow recovery}
@@ -1366,7 +1406,7 @@ The skill \emph{arrow recovery} is another fun option to keeping track of the su
 
 \subsection*{Fast moving targets}
 %---------------------------------
-It is more difficult to hit fast moving targets. Speed is the declared max speed of the target, not the distance in squares it has moved. This only applies to missile attacks. Melee attacks don't get the mods. The skill \emph{lead target} reduces these mods. \\
+It is more difficult to hit fast moving targets. Speed is the declared movement of the target, not the distance in squares it has moved in the round. This only applies to missile attacks. Melee attacks don't get the mods. The skill \emph{lead target} reduces these mods. \\
 To hit mod is speed / 3
 
 E.g: Fast Fabian dashes at 14 and is mod-4 to hit even if he has only moved 5 squares since the beginning of the turn.
@@ -1374,11 +1414,13 @@ E.g: Fast Fabian dashes at 14 and is mod-4 to hit even if he has only moved 5 sq
 
 \subsection*{Stationary targets}
 %-------------------------------
-Melee attacks against a target that is unaware of you, lying on the ground, sitting still, etc, and is not in combat mode and moving around will give mod+3. Stationary targets in combat mode will not give mods. I.e. targets that declare move 0 will still not be "still" enough since they are assumed to move around a bit in combat.
+\textbf{Melee} attacks against a target that is unaware of you, lying on the ground, sitting still, etc, and is not in combat mode and moving around will give mod+3. Stationary targets in combat mode will not give mods. I.e. targets that declare move 0 will still not be "still" enough since they are assumed to move around a bit in combat.
 
 Prone targets are also considered as mod+3 stationary for melee attacks even if they are awake and on the way to rise and run away later in the round. 
 
-Ranged attacks against a totally stationary target gets a mod+1 but this does not apply to prone targets.
+\
+
+\noindent \textbf{Ranged} attacks against a totally stationary target gets a mod+1 but this does not apply to prone targets.
 
 
 \subsection*{Targets behind cover}
@@ -1401,7 +1443,7 @@ Most shields have a modifier against ranged attacks that is a form of cover, whe
 %Shield cover is the 90deg region centred on (+/-45deg) the facing of the character.
 %Shield side is the 90deg region centred on (+/-45deg) the diagonal forward of the shield arm. I.e: left shield arm covers 0-90deg counter clockwise from the heroes facing, while right shield arm covers 0-90deg clockwise from the heroes facing.
 
-Heroes hiding behind their shields have covers +/-45deg from their direct facing. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield, gm discretion.
+Heroes hiding behind their shields have covers +/-45deg from their direct facing. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield, GM discretion.
 
 
 \subsection*{Initiative of area effects}
@@ -1415,7 +1457,9 @@ Also, anyone running into an effect area has that effect applied immediately upo
 
 \subsection*{Piling corpses}
 %---------------------------
-A normal size corpse gives a square a mod-3 poor terrain modifier. Each additional corpse is another -3, quickly leading to very tricky terrain when standing your ground fighting enemies. At some point it's time to just move and fight somewhere else. This also means that having a heap of fallen enemies covering the squares just in front of you is an excellent defensive strategy. Perhaps you can sacrifice your less useful allies for the same benefits.
+A normal size corpse gives a square a mod-3 poor terrain modifier. Each additional corpse is another -3, to a maximum of -9. Quickly leading to very tricky terrain when standing your ground fighting enemies. At some point it's time to just move and fight somewhere else. This also means that having a heap of fallen enemies covering the squares just in front of you is an excellent defensive strategy. Perhaps you can sacrifice your less useful allies for the same benefits?
+
+Shoving or dragging a corpse 1sq is usually a 1r action, with corpse kick it's faster.
 
 
 
@@ -1448,15 +1492,18 @@ The cast roll is subject to the highest action stack modification that the chara
 %TODO: rewrite all Xa spells to Xap instead.
 Some spells have casting time counted in actions, 1a, 2a, etc, and should be treated just like normal actions at 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells follow initiative unless stated otherwise.
 
-Spells that take one round or less to cast can be cast whenever in the round, according to initiative, just like performing regular actions. That means they can also be cast as reactionary defence actions, like a parry, or retaliations after incoming attacks.
-E.g: it's possible to summon a ward flash defence to reduce the damage of an incoming attack, just like parrying with a regular shield.
+Spells that take one round or less to cast can be cast whenever in the round, following order of initiative, just like performing regular actions. That means they can also be cast as reactionary defence actions, like a parry, or retaliations after incoming attacks.
+E.g: it's possible to summon a 1r ward flash defence to reduce the damage of an incoming attack, just like parrying with a regular shield.
 
-A spellcaster can always choose to cast a spell that takes $\le$9ap in one full round instead, declaring only his base ap for the round and potentially skipping some heavy action mods. This does not apply when spellcasting have been shortened by \emph{fast magic}.
+A spellcaster can always choose to cast a spell that takes $\le$9ap in one full round instead, declaring only his base ap for the round and potentially skipping some heavy action mods. 
+%This does not apply when spellcasting have been shortened by \emph{fast magic}.
+%\todo ? keep this ?
 
 
 \subsection*{No power draw unless successful}
 %--------------------------------------------
-Casting spells that fail and fizzle causes no mana loss, unless it is a serious failure. I.e: fail-1/-2. \\
+Casting spells that fail and fizzle causes no mana loss, unless it is a serious failure.\\
+Fail-1/-2 costs no mana. \\
 Fail-3 or worse is 1 mana lost. \\
 Fail-6 or worse will cause the loss of the full cost of the spell.
 
@@ -1473,11 +1520,13 @@ Just make sure you have enough levels in the magic skill to be able to spend tha
 
 \subsection*{Duration of spells}
 %-------------------------------
-A spell casting completes in the last round it is being cast, in order of initiative. The spell caster can now choose when the spell should begin to take effect: \\
+Spell casting completes in the last round it is being cast, in order of initiative. The spell caster can now choose when the spell should begin to take effect: \\
 The spell's effect can start immediately after casting and then that round counts as the first round of it's duration. Or: \\
-The spell's effect can start at the very beginning of the next turn, and have that turn count as the first round of the duration, ignoring initiative.
+The spell's effect can start at the very beginning of the next turn, ignoring initiative, and have that turn count as the first round of the duration.
 
-This can be important. E.g: The wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will most likely benefit his friends faster if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he probably cannot take any more actions in the round of the casting.
+This can be important. E.g: The wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will perhaps benefit his friends more if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he probably cannot take any more actions in the round of the casting.
+
+This option is available also for spells that take less than 1r to cast.
 
 
 \subsection*{Regaining mana}
@@ -1529,6 +1578,8 @@ E.g: a bound and gagged wizard has mod-6 to cast spells.
 
 Heavier armour types also make casting more difficult.
 
+Use "trusty old X", see below, to be able to cast while holding objects in hand.
+
 
 \subsection*{The wizards staff}
 %------------------------------
@@ -1538,12 +1589,12 @@ The "trusty old x" is a specific weapon or other large item, and takes time and 
 
 This way a wizard can cast most spells without penalties even if he is carrying weapons. Making an item a "trusty old x" with mod-0 costs 5xp. Making an item a "trusty old x" with mod+1 costs another +10xp.
 
-A wizard can have more than one at the same time (max 3), and can stack bonuses this way, adding up on security blanket equipment. They must be held or worn to give the bonuses. Just don't loose them, because then the xp are gone...
+A wizard can have more than one item at the same time, but the max bonus is +1. Just don't loose them, because then the xp are gone...
 
 
 \subsection*{The paladin's armour}
 %---------------------------------
-Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard can spend those extra 5xp to get his staff to mod+1.
+Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard's staff.
 
 Or the paladin can get the tank skill to reduce or cancel the armour penalties that way.
 
@@ -1571,12 +1622,12 @@ Don't forget to also pay "trusty old" xp to cancel the mods from sword and shiel
 
 \phantomsection\addcontentsline{toc}{section}{simplifications}
 \section*{Playing the monsters}
+%------------------------------
+It is necessary to simplify the workload for the GM who has to manage all the monsters. Monsters are not generally long lived. They usually die within a few rounds of appearing. Most monsters can be very simplified and their handling made quicker by ignoring a lot of effects.
 
-It is necessary to simplify the workload for the gm who has to manage all the monsters. Monsters are not generally long lived. They usually die within a few rounds of appearing. Most monsters can be very simplified and their handling made quicker by ignoring a lot of effects.
 
-
-\subsection*{Some simplifications:}
-
+\subsection*{Some simplifications}
+%----------------------------------
 Ignore stamina, but don't let monsters use a lot of stamina all the time. They can use some, but not several stamina continuously round after round. Some monsters, like orcs, tend to have massive stamina and can gladly spend a lot, but keep it reasonable.
 
 Ignore some pain, a lot of monsters don't react the same way to pain as heroes. A lot of monsters will instead influence their decision making by how much damage or pain they have taken. For single monsters or humanoid monsters it might be interesting to apply pain when appropriate.
@@ -1590,15 +1641,20 @@ Don't let monsters have too many advanced skills. It is better to keep the skill
 These simplifications are great for "cannon fodder" critters, and that saves time enough so that you can play the bosses and interesting antagonists with more depth.
 
 
-\subsection*{Things to think about:}
+\subsection*{Full complexity for boss monsters}
+%----------------------------------------------
+It's more interesting to have special NPCs and opposition use full complexity, with all the intricate details, specialties, and loop holes. Simply adding things like counter attack, combat group, Oy!, leader, synchronise, etc drastically changes the way the opposition feels. Use it to give spice and make some mobs extra interesting.
 
+
+\subsection*{Things to think about}
+%-----------------------------------
 Most monsters are not suicidal. They will run away when they meet overpowering enemies, if they can. Some monsters might run headlong into certain death but it is not the norm.
 
 Intelligent monsters will instead flee, re-group, sound the alarm, make ambushes and traps instead of direct open battle.
 
 
-\subsection*{Finding stuff:}
-
+\subsection*{Finding stuff}
+%---------------------------
 Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of asked vs real roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
 
 I prefer asking for rolls in most situations, then roll hidden every now and then anyway.

@@ -26,8 +26,9 @@ We'll be using \emph{skill} as the general term for all skills, traits, powers, 
 Most skills carry a \emph{skill cost factor} (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
 \\
 The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
-E.g: training bow to 4 is (1.2 * 4*4) = 19.2 \ca 19xp. \\
-E.g: increasing bow from 4 to 6 is (1.2 * (6*6 - 4*4)) = 24xp. \\
+E.g: training axe to 4 is (0.9 * 4*4) = 14.4 \ca 14xp. \\
+Later on after a couple of adventures the Hero wants to increase his axe skill:\\
+E.g: increasing axe from 4 to 6 is (0.9 * (6*6 - 4*4)) = 18xp. \\
 \\
 Skill costs vary, but the general idea goes something like this: \\
 Weapon and main battle skills cost $1.0 \cdot lvl^2$. \\
@@ -41,8 +42,10 @@ Massive abilities cost 50xp or more.
 
 Costs written as "cost 20xp" means that the total cost up to that level of the skill is 20xp. If it's written as "cost +20xp" then the cost to increase the skill from the previous level to to the target level is 20xp. See the tank skill for an example of both.
 
+\
+
 % file: magic.tex :
-The skills pertaining to magic can be found in the "magic" section.
+The skills pertaining to magic can be found in the \hyperref[cpt:magic]{magic section}, page~\pageref{cpt:magic}.
 E.g: magic, power casting, and spells
 
 \
@@ -52,7 +55,8 @@ Some skills are difficult to come by. They might only be trainable from a specif
 Optional: I've used a simple rule of thumb: \\
 Regular skills and manuevers can be bought and trained from scratch without training and prior knowledge. \\
 Special Abilities require something out of the ordinary and cannot be trained from scratch without some extra step like a strange brew requiring an exotic component, rare book, training from the Old Hermit somewhere, magic mushrooms, radioactive spiders, or whatnot.\\
-Magic spells cannot be bought and trained from scratch without a teacher, spellbook, captured and tortured enemy wizard, or similar.\\
+Magic spells cannot be bought and trained from scratch without a teacher, spellbook, captured and tortured enemy wizard, or similar.
+
 This has generated interesting side quest, fun episodes, and slows down the rapid munchkin optimizations possible from the most potent abilites. Also provides fun tactical objectives where the Heroes choose to try to capture an enemy spellcaster alive once they see them cast an interesting spell they don't already know.
 
 %\
@@ -115,7 +119,7 @@ The staff and spear skills are mutually mod-1.\\
 All other melee weapon skills are mutually mod-4.\\
 All ranged weapons are mutually mod-3.\\
 \emph{But:} similarity modifies never allows for the \emph{similar} weapons or weapon groups at levels greater than 9. E.g: even if someone has axe 14 he will be limited to hammer 9 due to this cap.\\
-Note: brawl and martial arts do not have similarity modifiers with any melee weapon skills or each other.
+Note: brawl and martial arts do not have similarity modifiers with any melee weapon skills or each other. Shield also lacks similarity mods.
 
 % OLD - NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 
@@ -621,19 +625,19 @@ Ride also increases the travel distance on the world map. The Hero can travel up
 \skill{Skill scf 0.5 "travel":} will allow the character to travel the distances on region maps faster. He will add his level of travel to his con when calculating distance per day. Also applies when riding, and can thus exceed the cruise distance rating of the horse without penalties. Just add the level of travel to the base distance.
 
 
-\skill{Skill scf 0.5 "quick draw":} allows the user to draw/ready equipment faster, in a normal 3ap action instead of a full round. Roll for quickdraw to see if it takes one 3ap action or one round to draw/ready. 
+\skill{Skill scf 0.5 "quickdraw":} allows the user to draw/ready equipment faster, in a normal 3ap action instead of a full round. Roll for quickdraw to see if it takes one 3ap action or one round to draw/ready. 
 
-Quick draw also works for holstering and stowing items, picking up or placing items, give \& receive handovers, and similar.
+Quickdraw also works for holstering and stowing items, picking up or placing items, give \& receive handovers, and similar. %relay handover
 Quickdraw also reduces the rummage time by one round for each skill step. Rummage will always take at least one round though.
 
-Each level of quick draw also allows the character to equip, readily accessibly, one item which he can always draw and ready in one 3ap action instead of a round without rolling.
-E.g: Rapid Rudolf has quick draw = 4, he has an axe, a shield and two throwing knives on his body, readily available at all times. Those items he can always draw and ready in one 3ap action.
+Each level of quickdraw also allows the character to equip, readily accessibly, one item which he can always draw and ready in one 3ap action instead of a round without rolling.
+E.g: Rapid Rudolf has quickdraw = 4, he has an axe, a shield and two throwing knives on his body, readily available at all times. Those items he can always draw and ready in one 3ap action.
 
-Give \& receive handovers count as though the item is in a quick draw slot.
+Give \& receive handovers count as though the item is in a quickdraw slot. %relay handover
 
-Optional: A successful quick draw roll on an item in a quick draw slot means the draw action is an instant 0ap action instead of a normal 3ap action. Very useful for quick changing weapons or drawing new arrows and throwing knives.
+Optional: A successful quickdraw roll on an item in a quickdraw slot means the draw action is an instant 0ap action instead of a normal 3ap action. Very useful for quick changing weapons or drawing new arrows and throwing knives.
 
-Optional: When drawing items not in quick draw slots the success level improves the speed:\\
+Optional: When drawing items not in quickdraw slots the success level improves the speed:\\
 success=0 means 3ap draw action instead of a full round\\
 success+3 means 2ap draw action\\
 success+6 means 1ap draw action\\
@@ -1343,11 +1347,22 @@ cost 20xp switching is a fast (2ap) action \\
 cost 30xp switching is a very fast (1ap) action
 
 
-\skill{Maneuver (cost 10) "careful":} allows the character to make an action with a mod+1 to succeed, and where the "10" roll is not an automatic failure.
-This doubles the ap cost of normal (3ap*2=6ap) or slower actions, and adds 3ap to fast (2ap+3ap=5ap) or very fast (1ap+3ap=4ap) actions.
-Full round actions are also doubled, e.g. shooting a bow normally takes 2r, and with careful it costs 4r.
+\skill{Maneuver (cst 10) "SlowMo":} is the visually sooo cool technique of taking actions in a well coreographed and impressively slooow motion. Declare 3ap less than base maximum ap to get a mod+1 to all actions for the round. All in impressive Slow Motion.
+
+One would think that any SlowMo attacks would be easier to defend against, but nooo. They are simply too cool. No effects other than the mod+1 to succeed.
+
+
+\skill{Maneuver (cost 20) "careful":} allows the character to make an action with a mod+1 to succeed, and where the "10" roll is not an automatic failure.\\
+For actions which are normally faster than a round, (1-9ap), careful adds +3ap.\\
+For actions which normally take 1 round or more, careful doubles the time.\\
+E.g: Shooting a bow normally takes 2r, and with careful it takes 4r. 
+
+It is possible to combine with other effects that speed up actions. E.g: A serious quick shot with a bow can for example take 4ap. That can be combined with a careful (+3ap,mod+1), for a total of 7ap, but where a rolled "10" is not an automatic fail.
 
 \todo clarify that careful cannot be used to switch a regular 3ap action into a full round careful action without any penalties for the extra required ap.
+
+However. It is not possible to expand a [0,9]ap action into a 1r action as usual if using careful. When careful it expands to twice as long: \\
+\verb|rounds = 2 * round up (ap / 9)|
 
 
 \skill{Maneuver (cost 10) "push":} attack can be used to force opponent back during melee combat. The attack has mod-3 to succeed, and costs 1 stamina extra.
@@ -1514,13 +1529,12 @@ lvl 3 cost +10xp: loot in 0ap instead of 1ap, long loot at 20\% of time
 \skill{Maneuver (cost 10) "ninja looting":} allows the character to loot a corpse or loot spot without his compatriots noticing. If someone is watching the corpse have them roll per if they notice the ninja looter helping himself to the bloodied goodies.
 
 
-\skill{Maneuver (cost 10) "corpse kick":} is useful for moving corpses. Spending a 3ap action the Hero can kick one corpse one sq in any direction.
+\skill{Maneuver (cost 10) "corpse kick":} is useful for moving corpses. Spending a 3ap action the Hero can kick 1 corpse 1 sq in any direction.
 
 
 \skill{Maneuver (cost 10) "bashdoor":} allows a character to move through a closed door, bashing it open without spending an extra action to open it. Roll for str with mod+1 for walk, mod+2 for run, mod+3 for dash. Sturdy doors will have a negative mod.
 
 If the attempt fails the character stops and the door remains closed. The Halted Hero must pass a dex roll to not fall down.
-
 
 
 
@@ -1554,8 +1568,8 @@ If the attempt fails the character stops and the door remains closed. The Halted
 
 
 %-------------------------------------------------------------------------------
-\phantomsection\addcontentsline{toc}{section}{attack}
-\subsection*{Attack maneuvers}
+\phantomsection\addcontentsline{toc}{section}{attack \& defence}
+\subsection*{Attack \& Defence maneuvers}
 
 Maneuver (cost varies) \emph{special attack}: are different attack maneuvers that some weapons or wielders have. Special attacks are generally difficult to perform and to defend against, or faster or slower with more or less damage. They mostly carry mod-X for the action, and toparry-X or toavoid-X. The "fancy attacks" skill can be considered the general form of many of these special attack maneuvers, but it has a poor 1:1 ratio of mods to the action and mods to the target. These special maneuvers can have better ratios or other useful effects. Most special maneuvers require one stamina extra, above what the attack would otherwise take.
 
@@ -1756,7 +1770,7 @@ It's a regular attack which costs 1 extra stamina and has mod-3. If successful a
 The attacker must know where to hit. Pass an int roll for normal targets (human, dwarf, elf, halfling, orc, goblin) and a monsterology or similarly relevant roll for other targets. Any knowledge of first aid or medicine can be added to mod the normal int roll.
 
 When used with backstab:\\
-A killstab attack is mod-3 and negatively modified by the target abs. E.g: a target in chain mail is mod-5 to the backstab roll.
+A killstab attack is mod-3 and negatively modified by the target abs. E.g: a target in chain mail is total mod-5 to the backstab roll.
 
 When used with sidestab:\\
 The killstab attack is mod-6 and negatively modified by the target abs. E.g: a target in plate mail is mod-9 to the sidestab roll.
@@ -1772,17 +1786,8 @@ and so on with every extra +3 giving +10 damage ...
 
 Resolve final damage just like with backstab.
 
-
 \noindent Failure:\\
 If the attack is a failure with the killstab mods it can still be a successful backstab/sidestab attempt. Calculate regular success/fail without the killstab modificatons, and resolve as a normal backstab/sidestab attack. It still takes a full round though.
-
-
-
-\todo add backstab: killing blow option ?  takes 1r,  mod-3 per abs of target,  must know where to stab (eg monsterology) and be able to physically reach the position.
-E.g: sneaking up behind the guard and cut his throat or knock him out cold.
-
-
-
 
 
 \closeskillslist
@@ -2103,7 +2108,12 @@ cost +10xp: +5 extra resistance, can be purchased any mount of times.
 %For the purpose of casting spells faster than the time resolution of 1r, a casting time of one round is considered to be 9ap. All times are round up. 
 %E.g: A 3r spell with fast magic 2 will take 2r to cast. A 1r spell will take 6ap to cast. A 2r spell will take 1r + 3ap to cast, or 0r + 12ap, if the Hero so prefers. With fast magic 3 a 1r/9ap spell takes 5ap to cast.
 %
+%\todo ? keep or skip possibility to expand to full round when using fast magic ?
 %The caster can always choose to cast a 9ap or faster spell in a full round instead, and take no action mod from having to declare too many ap. But then he can't do anything else in that round of course.
+%NOTE: this goes contrary to sentence in section "how and when spells can be cast":
+%%This does not apply when spellcasting have been shortened by \emph{fast magic}.
+%%\todo ? keep this ?
+
 %
 %\small \begin{verbatim}
 %lvl 1, cost  30: spells cast in 75% of the time (round up).
