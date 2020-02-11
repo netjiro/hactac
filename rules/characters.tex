@@ -402,9 +402,8 @@ leather armour 1.0
 \clearpage
 \begin{samepage}
 
-\noindent Lars LongShot used to hunt rabbits and deer, now he mostly hunts beer, fame, and gold.
-
-When he saves up some more money he can switch up to a heavy longbow since he has very high strength. 
+\noindent Lars LongShot used to hunt rabbits and deer, now he mostly hunts beer, fame, and gold. 
+When he saves up some more money he can switch up to a heavy longbow since he has very high strength, and consider a smaller staff for fast 2ap defence. Alternatively burn 18xp on agile to meet the dex requirements to get the large staff fast and 4xp on quick to get 4ap base, giving 2x fast defence actions without mods and 3x with mod-2. Very useful when things get hectic and the bugs are swarming in.
 
 \
 
@@ -413,7 +412,7 @@ When he saves up some more money he can switch up to a heavy longbow since he ha
 Lars LongShot, human        (token)
 -----------------------------------
 str 10       hp 21(19) abs 1(0)
-dex  5       m1 w3 r5 d9
+dex  5       m1 w3 r5 d8(9)
 con  7       stamina 6(4)
 int  6       vision 18 arc 255
 psy  8       mana 20
@@ -435,14 +434,15 @@ large staff  6, dam 5/6, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
 1h/2h     str 6/5 (max +1/+2 str bonus)
           2h: fast+1 if str 8 and dex 8       ! 3ap, not enough dex !
           readied quickdraw right shoulder
-leather armour abs 1, old and worn, smells bad, acrobatics mod-1
+leather armour abs 1, old and worn, smells bad, 
+          acrobatics mod-1, dash-1, sneak-3
 simple old clothing
 money ( 1g 6s 10c ) left: 4s 3c
 -----------------------------
 quickdraw 4:
     bow / staff : left shoulder
     quiver : right shoulder
-    Quickdraw bow/staff assumes one of them held, and switching.
+    quickdraw bow/staff assumes one of them held, and switching.
 encumbrance: 5 / 10 = ~0.5
 ===================================
 \end{verbatim} \end{samepage} \normalsize
@@ -504,77 +504,69 @@ encumbrance 9/7 : dumps the sack and blanket when fighting
 
 
 
-\clearpage
-\TODO below is not updated yet, above should be ok-ish
-
-\
-
-
-%\phantomsection \addcontentsline{toc}{section}{average newbie stats}
-%\tiny \begin{samepage} \begin{verbatim}
-%================================================================================
-%A V E R A G E   N E W B I E   C H A R A C T E R   S T A T S
-%-----------------------------------------------------------
-%
-%These are the approximate averages for newbie Heroes
-%for the common races.
-%
-%TODO: add updated averages from rollchar.py
-%\end{verbatim} \end{samepage} \normalsize
-%
-%\
 
 
 
-%\goodbreak
-%\phantomsection\addcontentsline{toc}{section}{current}
-%\tiny \begin{samepage} \begin{verbatim}
-%================================================================================
-%                        P L A Y E R   C H A R A C T E R S
-%                        ---------------------------------
-%
-%NOTE: this section is not up to date!
-%TODO: update the example characters!
-%\end{verbatim} \end{samepage} \normalsize
-%
-%\
-%
-%\goodbreak
-%\tiny \begin{samepage} \begin{verbatim}
-%===================================
-%Name                        (token)
-%-----------------------------------
-%str             hp   abs
-%dex             m w r d
-%con             stamina
-%int             vision
-%psy             mana
-%per             ap
-%cha             xp
-%----------
-%skills
-%----------
-%weapons
-%----------
-%equipment
-%money g s c
-%-----------------------------------
-%accomplishments
-%===================================
-%\end{verbatim} \end{samepage} \normalsize
+%-------------------------------------------------------------------------------
+%                          N E E D   U P D A T E
+%                          ---------------------
 
 
 
-\
 
 
-\
+
+
+
+
+
 
 
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{old}
-% ==============================================================================
+\section*{ze old stuff}
+
+\todo update player characters to current rule set
+
 The characters below here are not updated to the current rule set and can look a bit weird.
+
+
+
+\
+
+
+\goodbreak
+\tiny \begin{samepage} \begin{verbatim}
+================================================================================
+                        P L A Y E R   C H A R A C T E R S
+                        ---------------------------------
+
+
+
+===================================
+Name                        (token)
+-----------------------------------
+str             hp   abs
+dex             m w r d
+con             stamina
+int             vision
+psy             mana
+per             ap
+cha             xp
+----------
+skills
+----------
+weapons
+----------
+equipment
+money g s c
+-----------------------------------
+accounting: encumbrence, etc
+-----------------------------------
+accomplishments
+===================================
+\end{verbatim} \end{samepage} \normalsize
+
 
 \
 
@@ -813,7 +805,7 @@ common      3                    0.5
 
 bow         7                    1.2 * 49 = 58
 quick shot  3                    1.0 *  9 =  9
-quickdraw  2                    0.5 *  4 =  2
+quickdraw   2                    0.5 *  4 =  2
 
 Perhaps buy the "staff" skill to lvl 5 (20xp), then you also have a good
 close combat weapon at reasonable skill level.
@@ -1087,73 +1079,6 @@ money 3g 5s 18c
 \end{verbatim} \end{samepage} \normalsize
 
 
-\
-
-
-\goodbreak
-\tiny \begin{samepage} \begin{verbatim}
-===================================
-Pyttelina                 (rogue02)
------------------------------------
-str  4       hp 12 abs 1
-dex  9       m3 w4 r5 d8
-con  6       stamina 6(4)
-int  4       vision 17 arc 357
-psy  7       mana 10
-per  8       cap 11
-cha  5       xp 2 (102)
-----------
-avoid        7  yield+4           0.8  * (49-16) = 26.4
-brawl        3                    0.8  * free 3  =  0
-throw        5                    0.8  * 25-9    = 12.8
-find         6(3)  bonus+3        0.66 * 9       =  6
-gossip       4                    0.66 * (16-4)  =  8
-common       7                    0.5  * free 7  =  0
-
-knife        5                    0.7  * 25      = 17.5
-sneak        8(5)  bonus+3        0.75 * 25      = 18.75
-pick locks   3                    0.66 * 9       =  6
-traps        2                    0.75 * 4       =  3
-
-enduring     2                    1.0  * 4       =  4
-----------
-punch        3 dam 2 parry-6 (parry-3 against unarmed) parry is always deflect
-kick         3 dam 3 parry-6 (parry-3 against unarmed) parry is always deflect
-
-dagger       5 dam 4, abs 8, parry-2, toparry-1, fast+1,
-               first three attacks do not require stamina
-               str 2 (no str bonus), finesse-4
-
-throwing     5 dam 3, fast+1
-knives x4      range 8, short 4 mod+3, long 12 mod-3, vlong 16 mod-6 dam-1,
-arms/thighs    str 2 (no str bonus)
-               first three attacks do not require stamina
-snap  mod-6 0a including draw if quickdraw readied in 0a (pushes mod-0)
-quick mod-3 1a including draw if quickdraw readied in 0a (pushes mod-3)
-quick mod-3 2a including draw if quickdraw readied in 1a (pushes mod-6)
-shot  mod-0 1r incl draw from accessible place
-aimed mod+3 2r incl draw from accessible place
-
-leather        abs 1, dark leather
-armour         acrobatics-1
-
-quaff 2x       belt, restores 4hp 4sta in 1r
-belt           4items 4.0enc (dagger, 2x quaff)
-
-ruck sack      5 items 0.5 * enc
-
-money ( 2g 4s 6c)
-
------------------------------------
-encumbrance = 3.3 / 4 = mod-0
------------------------------
-dagger 0.5
-throwing knives 0.2*4 = 0.8
-ruck sack 0.5
-quaff 0.25*2 = 0.5
-leather armour 1.0
-===================================
-\end{verbatim} \end{samepage} \normalsize
 
 
 

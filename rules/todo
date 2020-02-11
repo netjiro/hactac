@@ -29,13 +29,17 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+200210:
+TODO: add more fun spells, like illusions, etc
+
 
 200206:
 TODO: ISSUE 2 shot /r bow    - see "comparison efficiency"
       with bow at cost 1.0 it's cheaper to go for bow 12 + quick shot 6
       than to go for bow 9 and quick shot 9 
       when building a 2/r shot bow char ca 220xp in bow skills
-
+      ? PERHAPS ?  set quickshot to 1.0, making it reasonable to go bow and qs
+      in tandem when improving.
 
 200107:
 TODO: fix all \verb|bla bla| to \texttt{bla bla} in all latex files

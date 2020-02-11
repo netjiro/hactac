@@ -42,10 +42,14 @@
 
 
 %-------------------------------------------------------------------------------
+% make a simple title page
+%-------------------------
+
+%-------------------------------------------------------------------------------
 % cover page for work in progress, remove when completed
 %-------------------------------------------------------
 
-\pagestyle{empty}
+\thispagestyle{empty}
 
 \null          % make an empty mark, so that following white space will be honoured
 \vspace{4cm}   % not honoured at beginning of page without something above
@@ -78,13 +82,31 @@ cleanup in progress\\
 
 
 %-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+\clearpage
+\thispagestyle{empty}
+\raggedbottom
+
+\noindent This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
 % begin main matter
 %------------------
 \cleardoublepage
 \pagestyle{fancy}
 \flushbottom
 
-\setcounter{page}{1}
+%\setcounter{page}{1}
 
 
 % will mark both left and right pages with an abbreviated section title

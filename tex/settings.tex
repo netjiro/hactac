@@ -1,8 +1,14 @@
 
 \documentclass[11pt, twoside, titlepage, a4paper]{report}
+
+% for xelatex:
+\usepackage{fontspec}      % searchable ligatures in pdf
+% for pdflatex:
+%\usepackage[T1]{fontenc}   % ligatures break search in pdf
+
 % set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 % These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
 % meaning a 300dpi image is around 1600 pixels wide

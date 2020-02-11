@@ -12,8 +12,10 @@ Simply run pdflatex on the book.tex for the main book.
 > pdflatex book.tex
 or similar if you prefer alternative output. All latex environments I've tried has worked so far.
 
-The adventures are built individually. Each adventure has one main .tex file named after the adventure, so simply run pdflatex on that file. E.g:
-> pdflatex "00 Dungeon of Testing.tex"
+The adventures are built individually. Each adventure has one main .tex file named after the adventure, so simply run xelatex on that file. E.g:
+> xelatex "00 Dungeon of Testing.tex"
+
+Switched to fontspec instead of fontenc since fontenc breaks searchable ligatures in pdf. That forces use of xelatex instead of pdflatex.
 
 If you're new to latex, please run the first local build of a project thrice. Either see it as the magic of the layout demons, or learn why: https://tex.stackexchange.com/questions/53235 (latex, bibtex, latex, latex)
 

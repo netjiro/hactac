@@ -17,12 +17,26 @@
 % adjust the margins: 15mm inner binding, 25mm frame all around
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 
+
+% Want searchable ligatures, e.g: diff, stuff, fine
+% pdflatex: fontenc  T1  <<  not searchable in sumatrapdf
+% xelatex: fontspec  TU  <<  supposedly work, needs xelatex instead of pdflatex
+%                    TU is default for fontspec xelatex
+
+% for pdflatex:
+%\usepackage[T1]{fontenc}
+
+% for xelatex:
+\usepackage{fontspec}   % searchable ligatures in pdf: https://tex.stackexchange.com/questions/67848/can-pdf-search-find-words-with-ligatures-in-xelatex-documents
+% setup for searchable ligatures in pdfs, need fontspec instead of fontenc
+% should be called before inputenc:  https://tex.stackexchange.com/questions/44694/fontenc-vs-inputenc/44699
+
+
 % set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 
 % set UK british hyphenation [english] sets US
-\usepackage[british]{babel}       
+\usepackage[british]{babel}
 
 % set iso date format with ndash separator
 \usepackage[yyyymmdd]{datetime}
@@ -123,10 +137,10 @@
 \fancyhead[RE]{\bfseries\leftmark}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
-\addtolength{\headheight}{0.5pt} % make space for the rule
-\fancypagestyle{plain}{%
-    \fancyhead{} % get rid of headers on plain pages
-    \renewcommand{\headrulewidth}{0pt} % and the line
+\addtolength{\headheight}{0.5pt}   % make space for the rule
+\fancypagestyle{plain}{%                  % for plain pages:
+    \fancyhead{}%                         % get rid of headers
+    \renewcommand{\headrulewidth}{0pt}%   % and the line
 }
 
 
@@ -410,6 +424,12 @@
 
 
 
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1}
+
+
+
+
 
 
 
@@ -419,6 +439,7 @@
 %-------------------------
 
 \begin{titlepage}
+\thispagestyle{empty}
 
 \begin{center}
 
@@ -476,6 +497,8 @@
 %-------------------------------------------------------------------------------
 % copyright etc on the back side of the title page
 %-------------------------------------------------
+\clearpage
+\thispagestyle{empty}
 \raggedbottom
 
 \noindent This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0).\\
@@ -491,7 +514,8 @@ If you want to use it in any other fashion please contact the author.
 %-------------------------------------------------------------------------------
 % introduction and contribution notes on one sheet
 %-------------------------------------------------
-\cleardoublepage %force next printed page a right hand page.
+\cleardoublepage                   % force next printed page a right hand page
+\thispagestyle{empty}
 \raggedbottom
 %\pagestyle{empty}
 
@@ -523,7 +547,9 @@ Fast gaming is crucial for us since we only have a couple of hours each session.
 
 
 
-\newpage
+%\newpage
+\clearpage
+\thispagestyle{empty}
 \section*{note: versions}
 %------------------------
 This is my personal notes package, not a draft for publication. There are still lots of stuff in progress of being updated, with inconsistencies, notes, TODOs etc.
@@ -558,15 +584,14 @@ In Swedish we have the newfangled "hen" which essentially indicates someone wher
 % Add a table of contents
 %\pagestyle{plain}
 %\fancypagestyle{plain}
-\cleardoublepage %force next printed page a right hand page.
+\cleardoublepage                % force next printed page a right hand page
+\thispagestyle{empty}
 
+%\setcounter{page}{0}
 \phantomsection\addcontentsline{toc}{chapter}{contents}
-\tableofcontents % Always compile twice if you have changed much
+\tableofcontents                % always compile twice if you have changed much
 %\newpage
-\clearpage
-
-% disables chapter, section and subsection numbering
-\setcounter{secnumdepth}{-1}
+%\clearpage
 
 
 
@@ -579,11 +604,12 @@ In Swedish we have the newfangled "hen" which essentially indicates someone wher
 %\pagestyle{fancy}
 %\setcounter{page}{1}
 % set flushbottom fill layout for the main chapters
+\cleardoublepage
 \flushbottom
 
 
 %\mainmatter  -- nope, not in article or report or book ? hmm ?
-\setcounter{page}{1}
+%\setcounter{page}{1}
 
 
 % Add all the chapters
