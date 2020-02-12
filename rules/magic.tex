@@ -51,6 +51,9 @@ Mana spent for power casting is not counted to the maximum total limit set by th
 
 \item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
+\
+
+\todo fix "pinpoint on map" issues, miss allowance distance = lvl squares.
 
 \item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, GM discretion.
 
@@ -264,51 +267,54 @@ Spells with more complexity or targets have higher int requirements, and spells 
 
 
 
-\
-
-\
-
-\todo testing spellslist formatting
 %-------------------------------------------------------------------------------
-%\TODO remove or switch to this:   check how it looks with spells as list ------
-\openspellslist
+% test spellslist formatting
 
-\spell{Ur Bolt} int 3, psy 3, scf 0.33, \\
-cast 2r 1m, 
-dam 6, 
-range 10 \\
-\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts of killing. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
-
-\spell{Onsager Spear} int 6, psy 7, scf 0.33, \\
-cast 3r 1m, 
-dam 10 +3/m, 
-range 10 +5/m \\
-\textit{The Onsager battle monks developed a simple martial spellcasting creed, and the Spear is their most classic, simple, and well known infantry battle spell. It's unknown how they managed to bring their massed infantry to the required mental capacity.}
-
-\
-
-\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts. They tend to have high requirements but have been shown to be highly effective in a wide range of situations.}
-
-\spell{Black Bolt} cast 2r 1m, 
-dam 9 +3/m penetrating,
-range 10 +5/m,
-int 6 psy 7 \\
-\textit{A faster cast, medium power version, of Black's bolt library.}
-
-\spell{Black Bolt} int 6, psy 9, scf 0.33, \\
-    cast 1r 1m, 
-    dam 6 +2/m penetrating,
-    range 10 +5/m,
-    int 6 psy 9\\
-    \textit{A weak but very fast cast version of the archetypical Black Bolt.}
-
-
-\closespellslist
-%-------------------------------------------------------------------------------
-
-\
-
-\
+%\
+%
+%\
+%
+%\todo testing spellslist formatting
+%%-------------------------------------------------------------------------------
+%%\TODO remove or switch to this:   check how it looks with spells as list ------
+%\openspellslist
+%
+%\spell{Ur Bolt} int 3, psy 3, scf 0.33, \\
+%cast 2r 1m, 
+%dam 6, 
+%range 10 \\
+%\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts of killing. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
+%
+%\spell{Onsager Spear} int 6, psy 7, scf 0.33, \\
+%cast 3r 1m, 
+%dam 10 +3/m, 
+%range 10 +5/m \\
+%\textit{The Onsager battle monks developed a simple martial spellcasting creed, and the Spear is their most classic, simple, and well known infantry battle spell. It's unknown how they managed to bring their massed infantry to the required mental capacity.}
+%
+%\
+%
+%\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts. They tend to have high requirements but have been shown to be highly effective in a wide range of situations.}
+%
+%\spell{Black Bolt} cast 2r 1m, 
+%dam 9 +3/m penetrating,
+%range 10 +5/m,
+%int 6 psy 7 \\
+%\textit{A faster cast, medium power version, of Black's bolt library.}
+%
+%\spell{Black Bolt} int 6, psy 9, scf 0.33, \\
+%    cast 1r 1m, 
+%    dam 6 +2/m penetrating,
+%    range 10 +5/m,
+%    int 6 psy 9\\
+%    \textit{A weak but very fast cast version of the archetypical Black Bolt.}
+%
+%
+%\closespellslist
+%%-------------------------------------------------------------------------------
+%
+%\
+%
+%\
 
 
 

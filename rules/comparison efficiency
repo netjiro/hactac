@@ -26,29 +26,29 @@ fancy        6     36
 
 
 
-archer:   1/r   102 xp  (tot 1r)  mod-0
+archer:   1/r    98 xp  (tot 1r)  mod-0
 bow          9   81
-quick shot   3   13
+quick shot   3    9
 sniper       3    9
 lead target  3    9
 
-archer:   2/r   220 xp  (tot 6ap) mod-0                       !! ISSUE !!
+archer:   2/r   180 xp  (tot 6ap) mod-0                       
 bow          9   81
-quick shot   9  121                                           high QS more expensive
+quick shot   9   81                                           
 sniper       3    9
 lead target  3    9
 
-archer:   2/r   216 xp  (tot 6ap) mod-3+3 (skill 12)          !! ISSUE !!
+archer:   2/r   198 xp  (tot 6ap) mod-3+3 (skill 12)          
 bow         12  144
-quick shot   6   54                                           than high bow at bow 1.0
+quick shot   6   36                                           
 sniper       3    9
 lead target  3    9
 
 
 
-archer:   2/r   153 xp  (tot 6ap) mod-3  
+archer:   2/r   135 xp  (tot 6ap) mod-3  
 bow          9   81
-quick shot   6   54
+quick shot   6   36
 sniper       3    9
 lead target  3    9
 
@@ -56,16 +56,21 @@ lead target  3    9
 
 
 
-bolter:   1/r    35xp    (tot 1r) +2dam shock bolt                7dam   7dam
+bolter:   1/r    55xp    (tot 1r) +2dam shock bolt                7dam   7dam
+spell caster x   20
 magic        3    9
 boltX        9   26
 
-bolter:   2/r   160xp    (tot 6ap) +2dam shock bolt   r20 d7pP   14dam  14dam
+with fast magic:
+
+bolter:   2/r   180xp    (tot 6ap) +2dam shock bolt   r20 d7pP   14dam  14dam
+spell caster x   20
 magic        3    9
 boltX        9   26
 fast magic   5  125
 
 bolter:   6/r   160xp    (tot 6ap) +2dam force bolt   r10 d5p1   30dam  30dam
+spell caster x   20
 magic        3    9
 boltX        9   26
 fast magic   5  125
