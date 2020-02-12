@@ -16,21 +16,6 @@
 \label{cpt:magic}
 
 
-\small
-\begin{ttshape}
-\begin{description}
-
-\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
-
-\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
-
-\item[Bla bla bla] kjasd fö a jsdf  asdflk jsd foi w w er sd f as   qerj nö qwöa hgo  aök4faöso dij åoi a usdo iu fkn  asdf hoi ja sd i asdfakj af isdfas ferfasdsd  fe rf a asdasdfr
-
-\end{description}
-\end{ttshape}
-\normalsize
-
-
 \phantomsection\addcontentsline{toc}{section}{skills}
 \section*{Magic skills}
 
@@ -126,18 +111,18 @@ Spells with more complexity or targets have higher int requirements, and spells 
 %   fist   -4                                     fast, deflect
 %   kick   -2                                     deflect
 %
-% bow      =0   --/=0                             range, pen, 1/r
-% crossbow +3   --/++ pen 1-3                     range, pen, 1/2r
+% bow      =0   --/=0                             20sq, pen, 1/r
+% crossbow +3   --/++ pen 1-3                     15sq, pen, 1/2r
 %
 %
 % typical psy int =6, mana 15
 %             assume armour2 for ppp
-% blkblt1  =0 +2p                                 r10, ppp, 1/r
-% blkblt2  +3 +5p                                 r10, ppp, 1/2r
-% shkblt1  =0 +2p                                 r15, ppp, 1/r
-% shkblt2  -1 +1p                                 r20, ppp, 1/2r
-% frcblt3  -1 =0p                                 r10, p1,  3ap
-% frcblt3  -3 -1p                                 r10, p2,  3ap
+% blkblt1  =0 +2p                                 10sq, ppp, 1/r
+% blkblt2  +3 +5p                                 10sq, ppp, 1/2r
+% shkblt1  =0 +2p                                 15sq, ppp, 1/r
+% shkblt2  -1 +1p                                 20sq, ppp, 1/2r
+% frcblt3  -1 =0p                                 10sq, p1,  3ap
+% frcblt3  -3 -1p                                 10sq, p2,  3ap
 
 
 % guide lines ?
@@ -164,7 +149,7 @@ Spells with more complexity or targets have higher int requirements, and spells 
 %
 %  int +1 for range extension flexibility
 %  int +1 for damage extenstion flexibility
-%  int +3 for range+5
+%  int +3 for range+5          or trade dam + cast time, see below
 %  int +3 for quicker casting  3r > 2r,   2r > 1r,   1r > 3ap
 %
 %  psy +1 for dam+1 / pen+1 / more power / effect
@@ -186,27 +171,44 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % base range 10
 % base cast 2r for spear and strike, 3r for bolt
 % 
-% dam class time  base int   dam/psy
-% dam 1-3    1a    int6       dam = psy    4ap : dam=psy+1 or extra effect ?
-% dam 4-6    1r    int5       dam = psy+1  or psy=dam +pen1
-% dam 7-9    2r    int4       dam = psy+2  or psy=dam +pen2
-% dam 10-12  3r    int3       dam = psy+3  or psy=dam +pen99
+% dam class time    base int   dam/psy
+% dam 1-3    1a/3ap  int6       dam = psy    4ap : dam=psy+1 or extra effect ?
+% dam 4-6    1r      int5       dam = psy+1  or psy=dam +pen1
+% dam 7-9    2r      int4       dam = psy+2  or psy=dam +pen2
+% dam 10-12  3r      int3       dam = psy+3  or psy=dam +pen99
 %
 % ? but can't generally scale base damage higher than (psy dam) / mana
 % ? even at long times
 % 
-% treat penetrating as dam+3 on average
+% treat penetrating as dam+3 on average,   trade dam <> pen equally
 %
 %
 %
 %
+% scale extra mana for dam / range / stun / radius / pen / etc
+%
+% damage:                    int base    dam base
+% 3ap  dam 1-3    +1/m         int6      dam psy
+% 1r   dam 4-6    +2/m         int5      dam psy+1
+% 2r   dam 7-9    +3/m         int4      dam psy+2
+% 3r   dam 10-12  +4/m         int3      dam psy+3
+%
+% range:                     int mod AND dam mod
+%      touch                   int-3     dam+3
+%      r4sq       +2/m         int-2     dam+2
+%      r7sq       +3/m         int-1     dam+1
+%      r10sq      +5/m         int       dam
+%      r15sq      +7/m         int+1     dam-2
+%      r20sq      +10/m        int+2     dam-3
+%      r25sq      +12/m        int+3     dam-4
+
 %
 % treat bolt as one class higher than spear or strike :  more useful, no target mods
 % treat ball as two classes higher than spear and strike  :  are effect, no mods
 % 
 %
 % Trade cast time and range against damage and psy int requirements
-% DONT allow to trade more than one time class !!!  NOT 3r > 2r > 1r for int+6 psy+6
+% DONT trade more than one time class !!!  NOT 3r > 2r > 1r for int+6 psy+6
 %
 % cast 3r > 2r        dam-3 /  psy+3 & int+3
 % cast 2r > 1r        dam-3 /  psy+3 & int+3
@@ -218,7 +220,7 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % area effect         dam-2 per radius+1  /alt  cast+1r per radius
 % 
 % 
-% int 4 as base for normal complexity
+% int 3 as base for normal complexity
 % int+2 for multi target
 % int+2 for area effect, int+1 per extra radius+1
 % int+1 for extra range / mana
@@ -234,7 +236,7 @@ Spells with more complexity or targets have higher int requirements, and spells 
 % Examples below are BOLTS and thus +1r casting
 % comparable spear/strike should be   3r >> 2r,   2r >> 1r,   1r >> 3ap
 %
-% black bolts  cast 3r  !! dam 9 
+% black bolts  cast 3r  !! dam 9            >> int=3, psy=7
 %              dam psy+0 dam+/m ppp         base psy+2, dam-2 ppp, int+1
 %              range 10 (med)               int,psy +0
 %              range +5/m                   int+1
@@ -262,38 +264,51 @@ Spells with more complexity or targets have higher int requirements, and spells 
 
 
 
+\
+
+\
+
+\todo testing spellslist formatting
+%-------------------------------------------------------------------------------
+%\TODO remove or switch to this:   check how it looks with spells as list ------
+\openspellslist
+
+\spell{Ur Bolt} int 3, psy 3, scf 0.33, \\
+cast 2r 1m, 
+dam 6, 
+range 10 \\
+\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts of killing. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
+
+\spell{Onsager Spear} int 6, psy 7, scf 0.33, \\
+cast 3r 1m, 
+dam 10 +3/m, 
+range 10 +5/m \\
+\textit{The Onsager battle monks developed a simple martial spellcasting creed, and the Spear is their most classic, simple, and well known infantry battle spell. It's unknown how they managed to bring their massed infantry to the required mental capacity.}
+
+\
+
+\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts. They tend to have high requirements but have been shown to be highly effective in a wide range of situations.}
+
+\spell{Black Bolt} cast 2r 1m, 
+dam 9 +3/m penetrating,
+range 10 +5/m,
+int 6 psy 7 \\
+\textit{A faster cast, medium power version, of Black's bolt library.}
+
+\spell{Black Bolt} int 6, psy 9, scf 0.33, \\
+    cast 1r 1m, 
+    dam 6 +2/m penetrating,
+    range 10 +5/m,
+    int 6 psy 9\\
+    \textit{A weak but very fast cast version of the archetypical Black Bolt.}
 
 
-%TODO remove or switch to this:   check how it looks with spells as list -------
-%\openspellslist
-%
-%\spell{Ur Bolt} cast 2r 1m, 
-%dam 6, 
-%range 10, 
-%int 4 psy 4\\
-%\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
-%
-%\spell{Onsager Spear} cast 3r 1m, 
-%dam 10 +3/m, 
-%range 10 +5/m, 
-%int 6 psy 7
-%
-%\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts.}
-%
-%\spell{Black Bolt} cast 2r 1m,
-%dam 9 +3/m penetrating,
-%range 10 +5/m,
-%int 6 psy 7
-%
-%\spell{Black Bolt}
-%               cast 1r 1m, 
-%               dam 6 +2/m penetrating,
-%               range 10 +5/m,
-%               int 6 psy 9
-%
-%\closespellslist
+\closespellslist
+%-------------------------------------------------------------------------------
 
+\
 
+\
 
 
 
@@ -343,13 +358,6 @@ These are area effect spells. They can be targeted on characters, objects, or lo
 
 
 \end{description}
-
-
-%TODO: the later two classes should have reduced cost or int/psy requirements relative to the original bolt class, since that doesn't take mods.
-
-%no mods (old style):  bolt, zap, flash, 
-%arrow style:          spear, lance, dart, arrow, quarrel, missile, 
-%psy modded:           strike, spark, 
 
 \
 
@@ -412,12 +420,16 @@ snuppel dart   cast 2r, 1m, dam 4, stun 5 +3/m
 
 \
 
-\noindent Spells listed below are not re-balanced yet.
+\noindent 
+The spells listed below are not re-balanced yet.\\
 See balance guidelines in comment segment above.
 
 \
 
 \small \begin{verbatim}
+---===### legacy  below ###===---
+
+
 fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round
                int 8, psy 8

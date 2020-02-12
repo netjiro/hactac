@@ -18,22 +18,23 @@
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 
 
-% Want searchable ligatures, e.g: diff, stuff, fine
-% pdflatex: fontenc  T1  <<  not searchable in sumatrapdf
+% Want searchable ligatures, e.g: diff, stuff, fine           << mmap OR xelatex
+% pdflatex: fontenc  T1  <<  not searchable in sumatrapdf, add mmap/cmap
 % xelatex: fontspec  TU  <<  supposedly work, needs xelatex instead of pdflatex
 %                    TU is default for fontspec xelatex
 
-% for pdflatex:
-%\usepackage[T1]{fontenc}
+%for pdflatex:              % old pdflatex, need more stuff for modern works
+\usepackage{mmap}           % add info to pdf, searchable ligatures, cmap is old
+\usepackage[T1]{fontenc}    % set font encoding T1 to allow "|" ">" "<" etc
+\usepackage[utf8]{inputenc} % set utf8 input file encoding 
 
-% for xelatex:
-\usepackage{fontspec}   % searchable ligatures in pdf: https://tex.stackexchange.com/questions/67848/can-pdf-search-find-words-with-ligatures-in-xelatex-documents
-% setup for searchable ligatures in pdfs, need fontspec instead of fontenc
-% should be called before inputenc:  https://tex.stackexchange.com/questions/44694/fontenc-vs-inputenc/44699
+%% for xelatex:              % default utf8, need less stuff to work
+%\usepackage{fontspec}       % searchable ligatures in pdf: https://tex.stackexchange.com/questions/67848/can-pdf-search-find-words-with-ligatures-in-xelatex-documents
+%% setup for searchable ligatures in pdfs, need fontspec instead of fontenc
+%% should be called before inputenc:  https://tex.stackexchange.com/questions/44694/fontenc-vs-inputenc/44699
+%% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
+%\usepackage[utf8]{inputenc}    << actually ignored in xelatex
 
-
-% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
-\usepackage[utf8]{inputenc}
 
 % set UK british hyphenation [english] sets US
 \usepackage[british]{babel}
@@ -418,6 +419,7 @@
 % hyphens can only occur on specified "-" characters
 % words without "-" will never be hyphenated, overrides rules
 \hyphenation{ 
+ cam-paign-ab-il-ity 
  Thing-a-ma-jig 
  milli-fort-night 
 }
@@ -532,7 +534,7 @@ We play this for a couple of hours in the evenings every now and then after peop
 
 \
 
-Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also played some Descent occasionally, but that required gathering for a full day, and I usually prefer campaigns over one shot adventures.
+Back in the days we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also played some Descent occasionally, but that required gathering for a full day, and I usually prefer campaigns over one shot adventures. Though best of them is the old Space Hulk. That's what I want to capture, but with campaignability.
 
 Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a comedy campaign when we couldn't get all the people gathered for my \emph{real} rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world. That was my base idea when I started working on this package.
 
