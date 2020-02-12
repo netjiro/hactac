@@ -226,6 +226,16 @@ Whirlwind becomes even more dangerous when combined with for example double... T
 If an opponent with higher initiative interrupt attacks a whirlwind fighter during a whirlwind sequence the whirlwind defender can make a parry within the whirlwind sequence with the same fast ap cost as normal whirlwind attacks.
 
 
+\skill{Skill scf 0.5 "synchronise":} Characters that pass their synchronise rolls can make simultaneous attacks. If they are hacking at the same target, that target cannot take different actions to defend against the attacks. The target can roll for double, triple, etc to defend against several simultaneous attacks in one action however.
+
+Roll for synchronise before making the attacks for each of the attackers to see if they are synchronised. The synchronised actions happen in the lowest initiative of the characters involved.
+
+It is possible to synchronise other actions as well. The characters must be in vision or communication range to be able to synchronise their actions.
+Synchronised "double, triple, etc" attacks must also be defended against in one action.
+
+A high initiative character can Oy!, or a regular communication action, to activate a lower initiative ally so they can coordinate a synchronised attack. This is often done by a third party "commander" to get a combat unit to synchronise their attacks.
+
+
 \skill{Skill scf 1.5 "quick shot":} reduces rapid fire snap and quick shot penalties by one for each skill level.
 
 
@@ -272,7 +282,7 @@ The charge effects are only applied to the first attack the character makes on t
 Both the charge movement and attack is done at elevated initiative. This is meant to decrease the chances of the target, or bystander, interrupting the charge attack in progress.
 
 
-\skill{Skill scf 0.5 "tackle":} someone to push them out of the way. Tackling is a 3ap attack action and costs 1 stamina. The attacker declares tackle and tries to move into the square currently occupied by the target. If the tackle sequence is successful the tackling Hero will push the target out of the way.
+\skill{Skill scf 0.5 "tackle":} someone to push them out of the way. Tackling is a 3ap attack action and costs 1 stamina. The attacker declares tackle and tries to move into or through the square currently occupied by the target. If the tackle sequence is successful the tackling Hero will push the target out of the way.
 The target can choose to defend against the tackle. Afterwards both parties roll dex for balance or fall down.
 
 A tackle sequence is a dance for two, and it can go a few different ways:
@@ -281,7 +291,7 @@ A tackle sequence is a dance for two, and it can go a few different ways:
     Tackler: str + tackle + speed/3 \\ 
     Target: str + tackle or block \\
     where speed is the distance of approach \\
-    The target takes success/3 damage, but the tackler does not take damage from a fail. Both parties must roll dex for balance modified by the tackle resistance roll diff, or fall down. The dex roll is modified by ams, terrain, etc as usual.
+    The target takes success/3 damage, but the tackler does not take damage from a fail. Both parties must roll dex for balance modified by the tackle resistance roll diff, or fall down. The dex roll is also modified by ams, terrain, etc as usual.
     \item If the target takes a yield + avoid action, succeeds, and moves out of the way the tackler simply move to occupy the original target square and nothing else happens.
     \item If the target chooses not to, or can't, take action to resist the tackle, then proceed with the resistance roll and effects as above but with the target strength set to str/2 and without tackle or block skill as bonus.
 \end{itemize}
@@ -306,7 +316,9 @@ If the blocking character declares movement 0, and does not move, he gets a mod+
 
 A blocking Hero with brawl can combine block action with a brawl grab action in one 3ap action.
 
-Blocking can only occur when the passing opponent is moving between two squares which are both in base contact with the blocking Hero. Blocking cannot occur when the passing opponent is moving into or out of base contact.
+Blocking can only occur when the passing opponent is attempting to move between two squares which are both in base contact with the blocking Hero. Blocking cannot occur when the passing opponent is moving into or out of base contact. If the path of the passing target has two or more such moves, the blocker can choose where to make the block attempt.
+
+Block can also be attempted using a weapon with reach, at which point the blocker adds the reach when considering which squares are in base contact. Reach block is mod-3, and the blocker can only use the minimum of his block and weapon skill for the block attempt: \verb|min(block,weapon)-3|
 
 \begin{samepage} \goodbreak
 %\small \begin{verbatim}
@@ -327,7 +339,7 @@ Blocking can only occur when the passing opponent is moving between two squares 
 \end{verbatim} \normalsize
 \end{samepage}
 
-\emph{Note:} that a block can only happen \emph{once per intended movement of the passing opponent} for each round. E.g: Running Rune is moving left to right through left$>$D$>$E$>$F$>$right and the blocking Hero is standing at H. Hero can choose to block \emph{either} when RR is moving D$>$E \emph{or} when RR is moving E$>$F, but not both. However, if the intended movement was split over two rounds, e.g. r1: D$>$E and r2: E$>$F then the blocking Hero has two attempts, one for each round.
+\emph{Note:} that a block can only happen \emph{once per intended movement of the passing opponent} for each round. E.g: Running Rune is moving left to right through left$>$D$>$E$>$F$>$right and the blocking Hero is standing at H. Hero can choose to block \emph{either} when RR is moving D$>$E \emph{or} E$>$F, but not both. However, if the intended movement was split over two rounds, e.g. r1: D$>$E and r2: E$>$F then the blocking Hero has two attempts, one for each round.
 
 It is also possible to use yield avoid within the movement to improve the chances to escape a block. E.g: if RR is trying to move D$>$E when BH blocks then RR can avoid yield D$>$B instead.
 
@@ -336,26 +348,31 @@ It is of course possible to completely avoid the block situation if RR traces th
 If RR gets blocked at D$>$E he stops at D. When it's his initiative again he can move D$>$B, but cannot attempt to move D$>$E again this round.
 
 
-% TODO: cost \ndash \mdash ?? ndash / mdash commands don't compile ... ???
-\textbf{TODO:} finish / fix rush / bull rush / bullrush
 \skill{Skill (cost ---) "rush":} is not quite a tackle. Just forces targets to move out of the way or get pushed/dragged along. The attacker simply moves through the targets. The rush is itself not an action and costs no ap. 
 
-This skill is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + rush, the rushing monster must have at least twice the heaviness of any target it rushes. Otherwise it must tackle that target instead.
+This skill is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + rush, the rushing monster must have at least 10 points higher heaviness than any target it rushes. Otherwise it's a tackle attack instead.
 
-Normally this does dam speed/3 for every sq pushed/dragged along after all avoidance mp are spent. E.g: Rushing Monster has declared W8 giving speed/3 = 2 dam/sq. Pushed Patrik cannot move out of the way and is pushed along 4sq. Deft Dave is only pushed 3sq. PP can take max damage 8 and RM rolls damage 1d8=3 for PP. DD has max damage 6 and RM rolls 1d6=5 for DD. Both PP and DD are now off balance and prone.
+Normally this does dam (movement speed)/3 for every sq pushed/dragged along after all avoidance mp are spent. E.g: Rushing Monster has declared W8 giving speed/3 = 2 dam/sq. Pushed Patrik cannot move out of the way and is pushed along 4sq. Deft Dave is only pushed 3sq. PP can take max damage 8 and RM rolls damage 1d8=3 for PP. DD has max damage 6 and RM rolls 1d6=5 for DD. Both PP and DD are now off balance and prone, and RM selects new placement for them on the board, in accordance with the distance pushed/dragged.
+
+If the target has higher initiative than the rushing monster, and enough movement, it can simply interrupt and move out of the way. If not, the rush movement triggers a sort of "right to react" where the target is allowed to spend 3ap and make some sort of avoidance action + movement to get out of the way if possible. The avoidance can be a regular dex roll, or avoid, or acrobatics, or jump, or climb, all depending on terrain. If the target has enough mp he can probably also add yield bonus to the attempt. Maneuvers like off balance, face plant / dive, defensive step can be used to gain extra mp.
+
+If the targets cannot spend mp enough to get out of the way the attacker does damage, chooses where to push/drag them, and the targets automatically go prone and off balance.
+
+E.g: a collossal (6x6) Purple Steam Gobbler rushes through a group of heroes who are in it's way, at movement speed R10 giving 10/3 = 3dam/sq. First in path is H1: he has 0mp left but has off balance and face plant, he finds a safe square 2sq away, goes off balance 1sq, and face plants 1sq, to safety. So H1 just moves out of PSGs path. Second is H2 who must move 3sq out of the way, only has 1mp but goes off balance for another 1mp then takes damage and is pushed prone for the last missing sq of movement, for 1d3 damage, rolled by PSG. Third is H3 who gets pushed along 5sq, has 1mp left, off balance (1mp), then takes damage for 3sq push: 3 * (10/3) = 9. PSG now places H2 and H3 after pushing them.
 
 
-The target must spend mp and move out of the way, in order of being rushed, or take damage and go off balance and prone.
+\skill{Skill (cost ---) "trample":} is a variation of rush. Instead of pushing the target along and out of the way, it's brought prone and stomped on when the trampler is passing.
 
- They can perhaps go off balance, or throw themselves out of the way to avoid damage.
-If the targets cannot spend mp enough to get out of the way the attacker chooses where to push/drag them.
+Like rush, trample is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + trample, the rushing monster must have at least 10 points higher heaviness than any target it tramples. Otherwise it's a tackle attack instead.
 
-E.g: a collossal (6x6) Purple Steam Gobbler rushes a group of heroes who are in it's way. First in path is H1 who can move 2sq out of the way and has enough mp, so H1 just moves out of PSGs path. Second is H2 who must move 3sq out of the way, only has 1mp but goes off balance for another 1mp then throws himself prone for the 3rd mp, and avoids damage. Third is H3 who gets pushed along 5sq, has 1mp left, off balance (1mp), thrown prone (1mp), and
+Trample has the same avoidance behaviour as rush, but the damage is determined by the monster's trample damage instead of the movement speed.
+
+Any target who cannot manage to get out of the way is automatically prone and off balance, stationary in the square where it got trampled.
 
 
 \skill{Skill scf 0.5 "backstab":} is used to do increased max damage with a melee weapon when attacking unaware opponents. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll. The attacker is probably "behind" the target (outside field of vision), unless he is exceptionally good at sneaking. A backstab attempt costs +1ap extra above the cost of the normal attack.
 
-First roll for the backstab. If the backstab fails, resolve the action reverts to a normal attack, still costing the extra +1ap but giving no bonus damage.\\
+First roll for the backstab. If the backstab fails, the action reverts to a normal attack, still costing the extra +1ap but giving no bonus damage.\\
 A failed backstab roll has no effect, just a normal attack.\\
 A successful +0 backstab attack gives dam+3 pen+1 \\
 A good +3 backstab attack gives dam+6 pen+2 \\
@@ -363,7 +380,7 @@ A very good +6 backstab attack gives dam+9 pen+3 \\
 A perfect +9 backstab attack gives dam+12 pen+4 \\
 And so on...
 
-The final damage done by the backstab and weapon attack is based on the success of the weapon attack roll. Add the rolled backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total of damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen[2].
+The final damage done by the backstab and weapon attack is based on the success of the weapon attack roll. Add the backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total max damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen[2].
 
 Backstab attacks gain a bonus on angling/flanking positioning. \\
 Attacking at 90\degrees from target facing is mod+1, \\
@@ -380,15 +397,26 @@ A normal 3ap weapon is mod-1.\\
 A slow-1 4ap weapon is mod-2.\\
 A very slow-2 5ap weapon or slower are mod-3.
 
+\
+
+An unaware target can still be considered unaware or surprised enough to allow a backstab attack even if it detects the backstabber just before the attack. See the \hyperref[sec:surprise]{surprise} and \hyperref[sec:unaware]{unaware} rules on page~\pageref{surprise}.
+An unaware target cannot take a defence action against a backstab. A surprised target still counts as unaware enough to allow a backstab, but can take a surprise modified defence reaction action and movement to for example parry or avoid a backstab attack.
+
+%\todo Perhaps change so that backstab can be done with a ranged weapon, at time cost +1r, mod-3.
+
 %NOTE 191229: changed backstab from 2x, 3x, ... damage to fixed extra damage. That way the difference is most notable with smaller weapons, and it's not insane with heavier weapons. Backstab with the heavy 2h axe could produce 50dam or so...
 %todo remove note later on when stabilised
 
 
-\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike agaist the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar. The sidestabber can choose to roll and resolve the sidestab attack at the same time as the ally's attack, giving the target the choice of which attack to parry first, or after the ally's attack and target's reaction, risking that the target moves away during his reaction to the ally's attack before the sidestab attack can be made.
+\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike agaist the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar. If the ally has higher initiative he can first activate the sidestabber with Oy!, or similar, then they coordinate the attack. The sidestabber can choose to roll and resolve the sidestab attack at the same time as the ally's attack, giving the target the choice of which attack to parry first, or after the ally's attack and target's reaction, risking that the target moves away during his reaction to the ally's attack before the sidestab attack can be made.
 
-Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the +1ap. The extra damage from sidestab is the same as from backstab but without the penetration bonus. Resolve final damage just like with backstab. Sidestab gets the same angling/flanking positional bonuses as backstab, and sidestab takes the same mods as backstab for larger and slower weapons.
+Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the +1ap. The extra damage from sidestab is the same as from backstab. Resolve final damage just like with backstab. Sidestab gets the same angling/flanking positional bonuses as backstab, and sidestab takes the same mods as backstab for larger and slower weapons.
 
 Note: a sidestab is not automatically a synchronised attack. A target can still parry a sidestab just like a normal attack. It stacks with synchronise just like a normal attack.
+
+%\todo Perhaps reduce potency of sidestab?
+% 200212: removed " but without the penetration bonus" in:
+% The extra damage from sidestab is the same as from backstab but without the penetration bonus.
 
 %NOTE 200102: the sidestab can be performed multiple times against an aware target, not just once like backstab. Thus sidestab is set at cost scf 1.0 instead of 0.5 like backstab. Sidestab is situational on coordination whereas backstab relies on sneaking and positioning.
 %todo remove the note when stable
@@ -425,14 +453,6 @@ lvl 14: Heavy plate as leather: 240xp\\   % diff +100
 % 14 +40 240 hvy   -4         +80 for hvy -3 to -4
 %
 % 15 +80 320 hvy   -5         +80 for hvy -4 to -5
-
-
-\skill{Skill scf 0.5 "synchronise":} Characters that pass their synchronise rolls can make simultaneous attacks. If they are hacking at the same target, that target cannot take different actions to defend against the attacks. The target can roll for double, triple, etc to defend against several simultaneous attacks in one action however.
-
-Roll for synchronise before making the attacks for each of the attackers to see if they are synchronised. The synchronised actions happen in the lowest initiative of the characters involved.
-
-It is possible to synchronise other actions as well. The characters must be in vision or communication range to be able to synchronise their actions.
-Synchronised "double, triple, etc" attacks must also be defended against in one action.
 
 
 \closeskillslist
@@ -700,23 +720,23 @@ Careful finding: Spending 3x time gives mod+1, 5x time gives mod+2, 10x time giv
 Perception rolls take care of all normal detection, find is useless there.
 
 
-\skill{Skill scf 0.5 "fast find":} is used to quickly search for hidden items/details/etc. The character can make find rolls on a number of squares equal to his fast find level each round. It does not affect the time modifiers for careful finding.
+\skill{Skill scf 0.5 "fast find":} is used to quickly search for hidden items/details/etc. The character can make find rolls on a number of squares equal to his fast find level each round. It does not affect the chance to succeed or time modifiers for the find rolls on any one square.
 
 
 \TODO: fix sneak, spotting, hiding, finding
 
 \skill{Skill scf 0.5 "sneak":} is used to move around unseen and hide from casual inspection. Sneak hides both the Hero and objects the Hero wants to keep unseen. Spending more time, rounds instead of actions, the Hero can seriously camouflage himself, someone else, or hide objects so they are more difficult to find.
 
-Regular combat sneaking: Sneaking costs 1ap for the whole round. Each round will require at least one roll. Sneaking through different terrains and lighting conditions can require several rolls per round. Quickly stuffing away an object out of sight takes one action (3ap).
+Regular combat sneaking: Sneaking costs 1ap for the whole round. Each round will require one roll. Sneaking through different terrains and lighting conditions can require several rolls per round. Quickly stuffing away an object out of sight takes one action (3ap).
 
-If the character has careful he can do a careful sneak gaining the mod+1 and not autofail on 10. A careful sneak costs 3ap instead of 1ap for a normal sneak. This overrides cost as specified by careful.
+If the character has careful he can do a careful sneak, gaining the mod+1 and not autofail on 10. A careful sneak costs 3ap instead of 1ap for a normal sneak. This overrides cost as specified by careful.
 
-The sneak success diff is then used as a mod against a spotting opponent's perception roll. See the "Sneaking and Spotting" rules for further info.
+The sneak success diff is then used as a mod against a spotting opponent's perception range and perception roll. See the "Sneaking and Spotting" rules for further info.
 Generally it's important to stay outside the field of vision of any opponents, and very important to stay outside the perception range if within the field of vision.
 
 Action and environment modifiers:\\
 Movement has modifiers as per usual mod stack: movement type and mobile\\
-Standing still and not moving is mod+3\\
+Standing completely still, not moving and taking no actions is mod+3\\
 A deep shadow, bush, or partially obscuring object is mod+3\\
 
 When moving through an area:\\
@@ -1283,8 +1303,10 @@ This also allows to add +1sq to a jump, if landing off balance.
 %     and then reset next round, or use ExtraStep counter...
 
 
-\skill{Manuver (cost 5) "face plant / dive":}
+\skill{Manuver (cost 5) "dive":}
 The hero can take one extra step beyond declared movement by throwing himself on the ground and going prone. The maneuver is available even if the character is already off balance. This also allows to tuck +1sq to jump distance, if landing prone. This does not cause the character to go off balance, just prone.
+
+A character can for example extend his movement with 2sq by first going off balance then dive with a face plant. 
 
 
 \skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
@@ -2316,6 +2338,7 @@ Basic stuff:
 Reduced stats, skills or abilities.
 Equipment failures, or losses.
 
+fumble / fumbly : a roll of 10 is a failure. Roll again for fumble check: If the second roll is higher than the chance to succeed of the roll it's a fumble!
 
 Fun stuff:
 Strange equipment failures.

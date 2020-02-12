@@ -1,13 +1,14 @@
 
 \documentclass[11pt, twoside, titlepage, a4paper]{report}
 
-% for xelatex:
-\usepackage{fontspec}      % searchable ligatures in pdf
-% for pdflatex:
-%\usepackage[T1]{fontenc}   % ligatures break search in pdf
+% for xelatex and fontspec for searchable ligatures in pdf:
+\usepackage{fontspec}        % searchable ligatures in pdf
+% utf8 inputenc is ignored for xelatex utf8 based default
 
-% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
-\usepackage[utf8]{inputenc}
+%% for pdflatex, faster older, ligatures break search in pdf:
+%\usepackage[T1]{fontenc}    % ligatures break search in pdf
+%% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
+%\usepackage[utf8]{inputenc}
 
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 % These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)

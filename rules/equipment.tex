@@ -789,8 +789,8 @@ quick  mod-3 1r / 9ap
 
 snap / rapid fire for bows:
 Quick shot is 1r/9ap at mod-3. For every ap reduced below quick shot the
-archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8. 
-Since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
+archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8, 
+since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
 An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
 Rapid fire from bows include reload from accessible quiver, arrows stuck 
 in the ground, or similar.
@@ -894,9 +894,9 @@ exotic            They also require str+2, and take 1r longer to reload.
                   you should still roll each bolt separately.
 
 repeater type     as the regular crossbows except that they take one round
-crossbows         less to reload, but at str+1, and have a bolt magasine
+crossbows         less to reload, but at str+1, and have a bolt magazine
 exotic            which when empty must be reloaded manually taking
-                  2r + 1r / bolt in the magasine.
+                  2r + 1r / bolt in the magazine.
                   These machines are exceptionally rare and expensive, 
                   manufactured only by legendary mechanismiths and 
                   enginartificers.
@@ -971,7 +971,7 @@ fast blade:
 1h axe:
     dam str+3, abs dam+1
 2h axe:
-    dam str+5, abs dam
+    dam str+6, abs dam
 
 staff (1h/2h):
     dam str-1/str+1, abs 2h dam+2
@@ -993,7 +993,9 @@ club (1h/2h):
 %----------------------------
 Some races, as NPCs, will sometimes use special versions of weapons which are different than those human craftsmen produce.
 
-Orcs produce simple and heavy weapons. They have higher abs, lower finesse, higher str requirements. The market price is -50\% of human made weapons and their encumbrance is +33\%. When taking damage to abs they loose double abs.
+\
+
+\noindent Orcs produce simple and heavy weapons. They have higher abs, lower finesse, higher str requirements. The market price is -50\% of human made weapons and their encumbrance is +33\%. When taking damage to abs they loose double abs.
 
 \
 
@@ -1019,11 +1021,11 @@ orc cleaver         dam 11, abs 12, parry-4/-3, toparry-2, toavoid+2,
                     can be used with either axe, sword, or spear skill
                     bastardised orc version of a short glave-ish thingy
 \end{verbatim} \normalsize
-\goodbreak
 
 \
 
-Elves produce slender weapons of very high quality. They will last longer and when rolling for weapon breakage they have half the chance of breaking (round down) and their permanent abs damage should be rounded down instead of rounded up. Elven made weapons are very rare and difficult to find outside of elven cities. Their encumbrance is -30\% of the human version, and the price is at least 10x higher than a human made. Start at 5+1d5g + 10x base price.
+\goodbreak
+\noindent Elves produce slender weapons of very high quality. They will last longer and when rolling for weapon breakage they have half the chance of breaking (round down) and their permanent abs damage should be rounded down instead of rounded up. Elven made weapons are very rare and difficult to find outside of elven cities. Their encumbrance is -30\% of the human version, and the price is at least 10x higher than a human made. Start at 5+1d5g + 10x base price. Elven weapons cost at least 10g.
 
 The elven illspets is used as a fast light defensive weapon which can also be used to attack heavily armoured targets.
 
@@ -1032,24 +1034,69 @@ The elven illspets is used as a fast light defensive weapon which can also be us
 \small \begin{verbatim}
 elven slenderblade  dam 8, abs 16,
 1h                  str 6 (max +3 str bonus), finesse-9
-                    poke: mod-1 dam-1 pen+1
+(speciality 10xp)   poke: mod-1 dam-1 pen+1
                     swing: slow-1 mod-1 dam+2 todefend+2
                     deflect is mod-1 instead of mod-3
-                    str 8 dex 10 is fast+1
+                    fast+1 if str 8 dex 10
 
 elven illspets      dam 4, pen 4, abs 16, parry+1
 1h                  str 6 (no str dam bonus, max +2 pen str bonus)
-                    poke: mod-1 dam-1 pen+2
+(speciality 10xp)   poke: mod-1 dam-1 pen+2
+                    slash: mod-1 dam+1 pen-2
                     deflect is mod-1 instead of mod-3
-                    str 6 dex 8 is fast+1
+                    fast+1 if str 6 dex 8
 
 elven longbow       dam 5, penetrating 2,
-                    range 24, short 12 mod+1, long 36 mod-3,
+(speciality 10xp)   range 24, short 12 mod+1, long 36 mod-3,
                     vlong 48 mod-6 dam-1, extreme 70 mod-9 dam-2,
                     str 6 (no str bonus)
+                    quick shot mods are +1 if dex 8
+                    with elven arrows the bow is normally mod+1
 \end{verbatim} \normalsize
 
+\
 
+\goodbreak
+\noindent Dwarves make their own personal battle axes and crossbows, customised for the owner and each one has their own personality and special stats, making them difficult to use. The dwarves takes great care of their weapons and they often stay with their owner through their entire life, possibly hundreds of years. The Dwarven clansmiths very rarely make a weapon for someone outside their clan.
+
+Encumbrance is similar as the human standard weapons, but the durability is much better. Price is also significantly higher, at least 5x human made. Start around 3+1d3g +5x base price. Remember that it's all custom made items. Dwarven weapons cost at least 5g.
+
+\
+
+\small \begin{verbatim}
+dwarven battle axe  dam=str+3, abs=dam*2, parry-2, toparry-2,
+1h                  custom made: str 6-10, finesse-5
+(speciality 5xp)    swing: slow-1 mod-1 dam+2 toavoid+1   (5xp)
+                    poke: mod-2 dam-3 pen+2               (5xp)
+                    Each axe requires its own speciality 5xp.
+                    Each axe has 1 points to improve either: 
+                    parry / toparry / toavoid / finesse
+
+dwarven breaker     abs 10+str*2, parry+4,
+shield              custom made: str 6-10
+(speciality 5xp)    Ranged attacks mod-4 when in the way.
+                    Hiding behind it (3ap) ranged mod-8
+                    tackle mod+3
+                    Each shield requires its own speciality 5xp.
+
+dwarven clan axe    dam=str+6, abs=dam*2, parry-2, toparry-2,
+2h                  custom made: str 6-10, finesse-5
+(speciality 10xp)   swing: slow-1 mod-1 dam+3 toavoid+1   (5xp)
+                    fast parry: 2ap mod-3 (dex=str+2)     (10xp)
+                    Each axe requires its own speciality 10xp.
+                    Each axe has 2 points to improve either: 
+                    parry / toparry / toavoid / finesse
+                    max one point on any one stat.
+
+dwarven crossbow    dam=str, pen 3
+(speciality 10xp)   range 15+dex, no str bonus
+                    custom made: str 6-10, dex 3-10
+                    reload 3r (2r str+3, dex+3 : str & dex 3 higher than custom)
+                    Each crossbow requires its own speciality 10xp.
+                    Each crossbow has 1 point to improve either:
+                    dam or pen.
+                    Requires special dwarven made bolts, stats as usual bolts.
+\end{verbatim} \normalsize
 
 
 
@@ -1118,6 +1165,8 @@ tool box       mod+X to "traps" and "McGyverism" skills.
 
 
 
+
+
 %-------------------------------------------------------------------------------
 % S P E C I A L   E Q U I P M E N T
 %----------------------------------
@@ -1179,6 +1228,7 @@ magnifying     Gives mod+3 to find, but takes one round extra for each find roll
 lens
 \end{verbatim}
 \normalsize
+
 
 
 
@@ -1581,18 +1631,18 @@ These items are almost always unique and custom made, at great expense and by le
 
 \small \begin{verbatim}
 Master BronzeBolt's Twin Whistler
-heavy crossbow    dam 6, penetrating 2,
-double bow        range 15
-repeater          str 7 (no str bonus)
-(specialty 10xp)  reload 2r (str 10 dex 10 : 1r)
-                  magasine 12 (8r manual reload, 4r if dex 10)
-                  requires special bolts: mod+1, pen+1, range+10
+heavy crossbow      dam 6, penetrating 2,
+double bow          range 15
+repeater            str 7 (no str bonus)
+(specialty 10xp)    reload 2r (str 10 dex 10 : 1r)
+                    magazine 12 (8r manual reload, 4r if dex 10)
+                    requires special bolts: mod+1, pen+1, range+10
 A truly remarkable piece of legendary artisinal mechanickery. 
 It can fire twin whistling arrows in a single action, or separately, and sings
-when the reload mechanism is pulled.
-It is rumoured that BronzeBolt paid over 300 gold for the machine and 
-has to pay 1 gold per bolt. Only one craftsman can make the ammunition and it 
-takes him several days to make a bundle of bolts.
+beautifully when the reload mechanism is pulled.
+It is rumoured that BronzeBolt paid over 300 gold for the machine and has to 
+pay 1 gold per bolt. Only one craftsman can make the ammunition and it takes 
+him several days to make a bundle of bolts.
 \end{verbatim} \normalsize
 
 

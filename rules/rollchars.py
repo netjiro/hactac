@@ -284,7 +284,7 @@ class Character:
         for skill in skillset :
             print(skill)
         if len(self.maneuvers) > 0:
-            print(sepline)
+            #print(sepline)
             for maneuver in self.maneuvers :
                 print(maneuver)
         if len(self.extras) > 0:

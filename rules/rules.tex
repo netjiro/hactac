@@ -113,7 +113,7 @@ At some point it's better to have automation assistance by simple scripting in d
 
 \section*{more freedom, more options, fewer musts, deeper tactics}
 %-----------------------------------------------------------------
-This is not a class based game and does not require a specific typical party makeup to function. Look for synergies in game style and tactics, but there are no "must have" classes or professions in a party composition. Consider: There are many more dimensions to the fighting here than in most regular tabletop and rpg games, allowing for more flexibility and larger option space. Positioning and map control is very important. Healing is slow and very expensive, not generally a mid battle possibility. Just these basic traits mean it plays very different from for example D\&D, and more like tactical tabletops like Space Hulk and Descent.
+This is not a class based game and does not require a specific typical party makeup to function. Look for synergies in game style and tactics, but there are no "must have" classes or professions in a party composition. Consider: There are many more dimensions to the fighting here than in most regular tabletop and rpg games, allowing for more flexibility and larger option space. Positioning and map control is very important. Healing is slow and very expensive, not generally a mid battle possibility. Just these basic traits mean it plays very different from for example D\&D, and more like tactical tabletops such as Space Hulk and Descent.
 
 
 
@@ -145,7 +145,7 @@ failure -3 is a bad failure \\
 failure -6 is a very bad failure \\
 failure -9 is a critical failure or fumble
 
-\textbf{Optional:} A roll of 10 is always a failure, regardless of skill level and modifications. This is to get more chance into the game, so that you cannot guarantee a certain behaviour even if you plan it well and have mighty skills.
+\textbf{Optional:} A roll of 10 is always a failure, regardless of skill level and modifications. Not a fumble! This is to get more chance into the game, so that you cannot guarantee a certain behaviour even if you plan it well and have mighty skills.
 
 \item[Modification, penalty, bonus (mod):] all the same, although penalties tend to be bad for you while bonuses are usually good. Modifications are additive to an action's chance of success. \\
 E.g: skill 5 mod+3 has a chance of 8 on a D10 to succeed, skill 6 mod-2 has 4.
@@ -231,22 +231,26 @@ In practice, characters will be performing actions during other character's turn
 %-----------------------
 This rule set is built around a flexible and fuzzy outlook on time. Before and After is usually preserved quite well, but can fray at the edges when it includes more than two people.
 
-This is not realistic, but it does make the fights more interesting. It adds tactical depth. Actions and movements are often carefully arranged within the rounds to maximise effects of cooperation or to take advantage of temporary opportunities.
+This is not realistic, but it does make the fights more interesting. It adds tactical depth. Actions and movements are often carefully arranged within the rounds to maximise effects of cooperation, to take advantage of temporary opportunities or limit exposed weaknesses.
 
 
 \subsection*{Movement}
 %---------------------
+All movement cost movement points, usually 1mp per map square. In the beginning of each round all characters declare how many movement points they want for the the round by declaring their movement speed: maneuver, walk, run, dash, further explained below. The faster they want to move the more difficult things will be.
+
 Movement across square sides cost one movement point. Diagonal movement across a square corner costs one or two movement points depending on how many diagonal moves you have made before in that round. Every second diagonal move costs two movement points. I.e: 1, 2, 1, 2. Clear the count for each new round.
 This assumes a square grid. Hex boards usually allow only side moves. On gridless boards use a direct measurement scale and round up to nearest whole movement point if necessary.
 
 Diagonal movement around corners and between objects are usually restricted.
 Objects or terrain with corners that leave a lot of space to the corner of the square can be treated as "round corners" Friendly Heroes also have "round corners".
 Object corners that go mostly or completely to the corner of the square are "sharp corners". Enemy units also have "sharp corners".
-Moving diagonally around a "round corner" is acceptable, while you cannot move diagonally around a "sharp corner". In some cases it is possible to move diagonally between two objects when both have "round corners", but not when either or both have "sharp corners".
+Moving diagonally around a "round corner" is acceptable, while you cannot move diagonally around a "sharp corner". In some rare cases it is possible to squeeze diagonally between two objects when both have "round corners", but not when either or both have "sharp corners".
 
-Some terrain types or obstacles are difficult to pass, and may cost more movement points. The rule is that it is always the square you move \emph{from} that decides the cost of the move. E.g: Moving into a double mp shrubbery from flat grass costs only one mp, while moving within a double mp shrubbery costs double mp and moving out of a double mp shrubbery to flat grass costs double mp.
+Some terrain types or obstacles are difficult to pass, and may cost more movement points. It is always the square you move \emph{from} that decides the cost of the move. E.g: Moving into a double mp shrubbery from flat grass costs only one mp, while moving within a double mp shrubbery costs double mp and moving out of a double mp shrubbery to flat grass costs double mp.
 
-If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone. Skills like off balance, defensive step, etc modifies this rule.
+\todo perhaps change this to : the square you move \emph{to} that decides cost. Simpler to see, even if it reduces planning requirements.
+
+If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone, and get a persistant mod-3 to the rest of the round and the entire next round. Skills like off balance, defensive step, etc modifies this.
 
 
 %\small \begin{verbatim}
@@ -260,22 +264,22 @@ If a character tries, or is forced, to move more than he has movement points to 
 
 \subsection*{Taking Action}
 %--------------------------
-Actions include attacking an enemy, parrying an incoming blow, lying down, drawing a flask from a belt, casting a spell, or most other interesting things the Heroes might want to do. Moving is generally not an action in itself, but can be done before, during, or after an action, as part of that action, or separately.
+Actions include attacking an enemy, parrying an incoming blow, kneeling down, drawing a flask from a belt, casting a spell, or most other interesting things the Heroes might want to do. Moving is generally not an action in itself, but can be done before, during, or after an action, as part of that action, or separately.
 
-Actions cost action points (ap), normally 3ap. In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
+Actions cost action points (ap). A normal action costs 3ap, but some are faster, and others are slower, affecting their ap cost. In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
 
-The modification is the difference between declared ap and base ap. The mod is always negative or 0, you don't get a positive mod from declaring fewer ap than your base. E.g: having base ap of 4 and declaring 6ap gives mod-2, and decaring 3ap gives mod=0.
+The difficulty modification is the difference between declared ap and the character's baseline action points. The mod is always negative or 0, you don't get a positive mod from declaring fewer ap than your base. E.g: having base ap of 4 and declaring 6ap gives mod-2, and decaring 3ap gives mod=0. The maximum ap a character can declare is his base ap + dexterity.
 
-Most regular actions require three action points. Characters start out with around 3 as base ap, meaning they can do about one unmodified normal action per round. When they try to do more each round they get mods. Some skills affect base ap and the action mod for certain actions.
-The maximum ap a character can declare is his base ap + dexterity.
+Most characters start out with base ap of 3, meaning they can do about one action per round without extra difficulty modifications. The characters can increase their base ap by training skills like \emph{quick}.
 
-The ap modification stacks together with mods from movement, etc.
-
+The ap declaration modification stacks together with mods from movement, etc.
 
 
 \subsection*{Movement gives action penalties}
 %--------------------------------------------
 Movement speed is declared at the start of each round. I.e: maneuver, walk, run, dash (m,w,r,d). The faster speed you select the longer distance you can cover, but actions will be more difficult to perform. Movement mod penalties stack with all other penalties and set a baseline difficulty on the mod stack for the round.
+
+\
 
 \small \begin{verbatim}
 Movement base modifications:
@@ -285,7 +289,11 @@ run      mod-6
 dash     mod-9
 \end{verbatim} \normalsize
 
-The faster move speed you declare the more movement points (mp) you can spend. It depends on the character traits how many mp the different movement speeds give. The speed is also modified by skills and equipment.
+\
+
+The faster move speed you declare the more movement points (mp) you get to spend. It depends on the character traits how many mp the different movement speeds give. The speed is also modified by skills and equipment.
+
+\
 
 \small \begin{verbatim}
 Typical base movement: maneuver walk run dash (m w r d):
@@ -293,6 +301,8 @@ human fighter     m1 w3 r6 d9
 dwarven warrior   m1 w2 r4 d6
 elven bladesman   m2 w4 r8 d12
 \end{verbatim} \normalsize
+
+\
 
 E.g: Heroic Herman wants to move 2mp . He then declares movement speed Walk and must take a mod-3 penalty to all actions that round, even if the action is taken before HH moves.
 
@@ -318,12 +328,13 @@ The reaction action can be interrupted by characters with higher initiative, jus
 E.g: Attacking Albin moves in and attacks Defending David. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
 
 Right to react continues in a chain if the two keep attacking each other.
-E.g: Attacking Albin attacks Defending Dave but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if he wants, also under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.
+E.g: Attacking Albin attacks Defending Dave but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if he wants, still under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.\\
+Note: If AA attacks DD, hits, and DD successfully defends, there is no continuation within right to react. AA took an action and DD reacted. Finished.
 
 % is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here...
 Optional: If using the rule where spending action points decreases in round initiative it is possible that the participants drop in initiative order to the point where other characters can interrupt and intervene in a right to react action chain. However, the right to react by the target will not disappear even if a third party injects an action in the chain. The target still has right to react to the first action even after a second attacker has interrupted the response action and the target has taken a reaction action to the interrupt action.
 
-Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning before the attack-defence sequence is resolved. The defender can still move or turn as part of the defence action but only after the attack-defend is resolved and completed. 
+Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning \emph{before} the attack-defence sequence is resolved. The defender can still move or turn as part of, during or after, the defence action but only after the attack-defend is resolved and completed at present location and facing.
 
 %E.g: Attacking Albin strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defence is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defence action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have choosen to move 3sq then skip the defence on grounds that by then AA would be out of reach. If DD had higher initiative than AA he could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
 
@@ -544,13 +555,13 @@ For simplified tabletop gaming the vision arc should probably be ignored or simp
 %-------------------------
 With just this basic rule set it's enough to run very fast but tactically deep tabletop fights, as well as fun lightweight role playing of course. We've used the basic simplified rules when playing with kids as young as five years old with little or no previous tabletop experience. Smart kids, but still. They just need to be able to count to 10, and add and subtract a bit.
 
-For most basic tabletop scenarios I suggest to skip vision range and arc, and perhaps stamina. Or skip even more, depending on what is relevant for the scenario, adventure, or campaign you intend to play.
+For most basic tabletop scenarios I suggest to skip vision range and arc, stamina, pain, etc. All depending on what is actually relevant for the players' experience of the scenario, adventure, or campaign you intend to play.
 
-Then choose a set of skills to be available to the players, again, only those that are relevant for the game experience of the intended scenario. But enough to allow for some choice that have meaningful influence on how the game plays and what the characters can do. See how little is actually needed for the example below.
+Then choose a set of skills to be available to the players, again, only those that are relevant for the game experience of the intended scenario. But enough to allow for some choice that have meaningful impact on what the characters can do to influence the story and how the adventure plays out. See how little is actually needed for the example below.
 
 \
 
-\noindent Let's pretend you want to present your players with a tiny campaign, \texttt{Ominous Crown:}
+\noindent Let's pretend you want to present your players with an adventure, \texttt{Ominous Crown:}
 
 \begin{enumerate}
 
@@ -569,9 +580,11 @@ Taking the Crown of Power they also find an old legend, saying the crown is very
 
 \end{enumerate}
 
-Choose a small set of skills that give the players different options depending on which skills they choose for their characters. For the simplest playthrough it's perhaps enough with just a few weapon skills: sword, shield, axe, spear, bow, avoid, and some simple magic spells: black bolt, fire wall, heal. This would be enough to give the players plenty of options for a group of Heroes to hack their way through the campaign. Just assume they can read, everything is written and spoken in Common, and so forth.
+Let's see what's needed. Keep hidden map sections and fog of war, simplified to exposing rooms and critters as the players enter the various map segments. Hence, skip vision and arc. First time players? Skip stamina and pain, but keep mods for 66\% / 33\% / 0 hp, and death at negative constitution. This is a good dramatic signal when things start to go wrong. Keep mana but skip arrow counter, to emphasise the power of magic, and it's fun to have a small heap of mana tokens on the character sheet for the player to fiddle with. Skip off balance but perhaps keep yield, another good dramatic signal. Skip encumbrance, skip food and drink other than for storytelling flair. Assume they have tent, bed rolls, and a cook pot for the evening camp, and torches when they enter the old ruins.
 
-For more options and depth out of combat, add: track, sneak, climb, literate, histography, dungeoneering, gossip, animal control and perhaps the spells speak to animals and illuminate history. This can allow or limit them to find alternative solutions and extra information. Perhaps the animals of the forest can warn them about the undead priest in the Temple ruin, or tell which route Lord Ominous' warriors take when they travel. Dungeoneering can help them with temple traps and basic info on Lord Ominous' castle. Histography and literate explains the legend and the throne location to the middle of the town square. Gossip and literate find the long lost noblewoman. Sneak and climb gives access to Lord Ominous' castle. 
+Choose a small set of skills that give the players different options depending on which skills they choose for their characters. For the simplest playthrough it's perhaps enough with just a few weapon skills: sword, shield, axe, spear, bow, avoid, and some simple magic spells: black bolt, fire wall, heal. This would be enough to give the players plenty of options for a group of Heroes to hack their way through the campaign. Just assume they can read, everything is written and spoken in Common, and so forth, the Castle has vines growing over the wall at some point if they look, etc. Choose a limited weapons set to showcase differences: 1h sword + shield, 2h axe, 2h spear, bow. So the players get a distinct difference between the relative strength of offence and defence, reach, and ranged fighting. And it will force them to fight better together and find tactical solutions to their respective weaknesses.
+
+If the players figure out or remember to get a piece of equipment or a skill that could potentially be useful for the adventure, let them get it, and see if you can fix a situation where it turns out to be useful. Makes the player feel good.
 
 \
 
@@ -579,7 +592,35 @@ For more options and depth out of combat, add: track, sneak, climb, literate, hi
 
 \
 
+\
+
+Perhaps you want a bit more depth and player options? \\
+Add: track, sneak, climb, literate, histography, dungeoneering, gossip, animal control and perhaps the spells speak to animals and illuminate history. This can allow or limit them to find alternative solutions and extra information, and force them to see that some solutions would be possible if they had choosen differently for their Heroes. That is important! Perhaps the animals of the forest can warn them about the undead priest in the Temple ruin, or tell which route Lord Ominous' warriors take when they travel. Dungeoneering can help them with temple traps and basic info on Lord Ominous' castle. Histography and literate explains the legend and the throne location to the middle of the town square. Gossip and literate find the long lost noblewoman. Sneak and climb gives access to Lord Ominous' castle.
+
+Here I would also suggest to keep stamina as part of the character management. It quickly adds a whole new dimension to the game and is not difficult to manage. It could also be a good idea to look into the difference between one handed and two handed weapons if that was skipped in the simpler version.
+
+\
+
+\
+
 \todo add example summations of the two variations of simplifications.
+
+\
+
+\
+
+With full complexity and a little tweaking this little adventure can become a tricky mini-campaign. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -589,17 +630,41 @@ For more options and depth out of combat, add: track, sneak, climb, literate, hi
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
-%M O R E   R U L E S
-%-------------------
+% M O R E   R U L E S
+%--------------------
 \phantomsection\addcontentsline{toc}{section}{more rules}
 \section*{More rules}
 
 More, optional, rules. Ignore or use as you wish. Most extra rules can be picked up in isolation, but some depend on others to make sense. Pick and choose to find what suits your group and game style.
 
 
-\subsection*{Declaring extra Action Points raises initiative}
+\subsection*{Fumble, fumbly, fumbles}
+%------------------------------------
+\emph{I actually don't use this rule in my games!}
+
+If a rolled 10 on the Almighty D10 is a failure then roll again for a fumble check: if the new roll is higher than the chance to succeed it's a fumble! Think up some way the fumble plays out: It must be interesting \textit{\textbf{and fun!}} Don't just say it's a fumble and it's always something bad and boring. That just sucks and doesn't bring much to the game.
+
+\textbf{Optional:} 
+Perhaps a 10 + fumble roll is a regular fumble and a 10 + 10 roll is a critical insane fumble. A 1 in 100 chance is rare enough that you can go for excessive effect.
+
+%jiro: I think it is fun. I've tried it. It can be hilarious. But it takes more time than I feel it gives back in fun.
+
+
+\subsection*{Perfect, excellent, exceptional}
+%--------------------------------------------
+\emph{I don't use this one either!}
+
+If a roll sequence of 10 + fail is a fumble, then perhaps a sequence of 1 + success is a perfect success? Prefer to find a \emph{fun} way of presenting it. Involve the player? Let him describe it. 
+
+\textbf{Optional:}
+A 1 + 1 is an exceptional rare success. Again, a 1 in 100 chance is rare enough to bring out all the stops and go excessive.
+
+%jiro: same as fumbly, poor fun/time trade.
+
+
+\subsection*{Declaring Extra Action Points raises initiative}
 %------------------------------------------------------------
-Each ap you declare above the character's max ap will give initiative+1. 
+Each ap you declare above the character's base ap will give initiative+1. 
 E.g: Fast Fabian has max ap 5 and declares 7ap for the round, raising his initiative by 2.
 
 
@@ -690,21 +755,37 @@ A character with high initiative can spend an action to activate a character wit
 
 \subsection*{Awareness, spotting, finding}
 %-----------------------------------------
-The field of view is the area which is within the view arc, in view range, and sufficiently lit. The perception range is the character's perception value.
+The field of view is the area which is within the view arc, in view range, and sufficiently lit. The perception range is the character's perception value. Perception range and rolls for spotting are modified by the usual action modification stack of the spotter, such as movement, extra ap, pain, low hp, etc. Spotting is best done when standing still, attentive, doing nothing else.
+
+A sneaking/hidden target modifies perception range and perception rolls of the spotter by the success diff of the sneak/hide roll. This is on top of the spotter's own ams mods.
+
+\
 
 A target character or object can either be obviously visible, sneaking/hidden, or in cover by some other object such as hiding in a bush etc. When obviously visible the target is out in the open and not trying to hide. When sneaking/hidden the target is possibly in the open or in some limited obscuring object but having passed a sneak roll. When hidden in cover the target is hiding in some object that obscures vision, e.g. a bush or some debris. A target can also be completely hidden behind a vision blocking object, e.g. behind a wall, but then the target is not possible to spot at all.
 
-An obviously visible target will be automatically spotted anywhere in the field of view. And can be noticed (heard/sniffed/etc) outside the field of vision if it's within perception range and the character passes a perception roll.
+\begin{itemize}
 
-A sneaking/hidden target will be spotted automatically when inside the field of view and inside the perception range. When inside the field of view but outside perception range it can be spotted with a successful perception roll. It cannot be noticed outside the field of view.
+\item An obviously visible target will be automatically spotted in the field of view. 
 
-A target in cover or hidden in cover can be detected when inside the field of view by passing a perception roll, usually modified by how dense the cover is. E.g: crouching in a bush, mod-3.
+\item A partially obscured but otherwise not sneaking/hidden target within field of view can be spotted with a perception roll, further modified by how obscured the target is. E.g: crouching in a bush, mod-3.
 
-A target completely hidden by a vision blocking object cannot be seen, unless detected by other means, e.g. sniffed out because his armour hasn't been cleaned for a long time.
+\item A fully obscured but otherwise not sneaking/hidden target can be detected (heard, sniffed, felt) when inside the perception range with a successful perception roll.
+
+\item A sneaking/hidden target can be spotted when inside the field of view but outside perception range if the spotter passes a perception roll.
+
+\item A sneaking/hidden target will be automatically spotted when inside the field of view and within perception range.
+
+\item A sneaking/hidden target can be detected when inside detection range but outside field of view if the spotter passes a perception roll with a further mod-3 difficulty.
+
+\item A sneaking/hidden target cannot be spotted when outside the field of view and outside modified perception range.
+
+\item For sneaking/hiding targets, obscuring items and terrain modifies the sneak roll instead of the perception roll.
+
+\end{itemize}
 
 Some targets are hidden very well. In such situations a normal perception roll is not enough, and they must be found by taking the time to search using the "find" skill. Example of this are characters and objects camouflaged or hidden by a multi-round sneak roll.
 
-Calling for per rolls of course notifies the players of hidden stuff in the vicinity.
+Calling for perception rolls of course notifies the players of hidden stuff in the vicinity.
 %Roll only once for all hidden stuff, and see if the perception success is better than the hidden success of each respective hidden.
 The GM can of course roll the perception rolls hidden from the players, but that is a bit more boring. Alternatively the GM can call for per rolls every now and then when there is nothing to find as well...
 
@@ -730,53 +811,35 @@ Spending rounds, not actions, to seriously camouflage a character or hide an obj
 
 For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
 
-Spotting by characters that are inattentive, sleepy, or busy doing something else like fighting in melee is generally mod-3 to the perception roll, but can be worse.
+Spotting by characters that are inattentive, sleepy, or fiddling with something else is generally a mod-3 to the perception roll even if the spotter has mod-0 ams. Spotting when actively engaged in moving or actions are modified by ams as normal.
 
 
 \subsection*{How often to roll for sneaking and spotting?}
 %---------------------------------------------------------
-Under normal action conditions roll for sneak once per round when the character is moving in an area where he might get noticed. And the same for perception for the spotting opponents.
+Under normal action conditions roll for sneak once per round when the character is moving in an area where he might get noticed, in view or detection range. And the same for perception for the spotting opponents.
+
+Outside of general action, just roll now and then when environment changes for a general success diff to apply to any guards that get close.
 
 
 \subsection*{Surprise}
 %---------------------
-Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. During the surprise round they have int-10 (never positive) as a primary mod to all actions and half initiative. They cannot move faster than maneuver that round.
+\label{sec:surprise}
+Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
+
+A successful roll means they are not surprised and cannot be considered unaware. They have full normal ap available and movement speed M.
+
+A failed roll means they take the fail diff as mods to all actions for the rest of the round, have only half ap (ru), and can move at most 1sq. They can still expand one action to a full round action if they don't have enough ap.
 
 
 \subsection*{Unaware opponents}
 %------------------------------
+\label{sec:unaware}
 Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
 
 
 \subsection*{Long range vision}
 %-------------------------------
 Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate targets properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
-
-
-\subsection*{Simplified tabletop light and vision}
-%-------------------------------------------------
-In daylight people have their normal vision ranges and usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
-
-In low light conditions it's easier to approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
-
-
-\subsection*{Maptool light and vision}
-%-----------------------------------------------
-Set vision range and arc for each character.
-Light source vision range multiplier should be set as:\\
-normal 1.0\\
-dusk (orc,goblin,dwarf) 1.5\\
-night (elf) 2.0
-
-%\small\begin{verbatim}
-%normal    all light sources have the specified range: humans, halflings
-%dusk      1.5x range of light sources: dwarfs, orcs, goblins
-%night     2.0x range of light sources: elves
-%dark      3.0x range of light sources:
-%black     self light up to infra range regardless of light sources
-%\end{verbatim}\normalsize
-
-Magical dark vision should have different multipliers, or set a personal self light to suitable radius.
 
 
 
@@ -1689,5 +1752,98 @@ During campaign play I strive to not forcibly nerf, and always allow the charact
 Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of asked vs real roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
 
 I prefer asking for rolls in most situations, then roll hidden every now and then anyway.
+
+
+\subsection*{Playing with young kids}
+%------------------------------------
+We've successfully played with kids as young as five years old, and without any previous tabletop or role playing experience. It's enough that they can count to 10, add and subtract a bit. So, clever kids, but still.
+
+\
+
+\noindent \emph{Keep it simple. Keep it fun.}
+
+\
+
+Use physical objects and markers instead of numbers on a paper. Improvise the battle map with everyday objects and use their toys as Hero minis. I had an insane adventure when I playtested with a trio of young girls. I had them build a small play farm on a coffee table, and choose one small toy each. Then told them that an evil bitter taste was spreading throughout the land, making all the candy taste like coffee. They must find the source of the horror and put a stop to it immediately.
+
+Thus Sparkly Pony and two old Rubber Trolls had to venture from their coffee table farmstead, across the living room and hallway, into the forbidden kitchen, climb the chair mountains to the oakwood plateau, to face Lord Grapefruit and all his purple and green grape minions. They encountered a friendly sock monster, a couple of evil car demons, and had to solve the riddle of the BrassHandle before they could enter the forbidden kitchen.
+
+Bonus that they got to eat all the grapes they defeated, though they were kind enough to leave the carcass of Lord Grapefruit for their mother.
+
+\
+
+We used strips of paper for movement speed and a ruler for bow range. Smartphone for dice since the household were not gamers and didn't have anything except some old tiny yahtzee d6 which were too small and boring.
+Simplified rule and equipment set similar to the \hyperref[sec:basicenough]{\texttt{Ominous Crown}} adventure example, page~\pageref{sec:basicenough}.
+
+I drew small paper cards of the weapons and equipment, with corresponding skill values written in the corner. We used coins as markers for hit points, small balls of green and red paper for action points and difficulty modification points.
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% T A B L E T O P
+%----------------
+
+\phantomsection\addcontentsline{toc}{section}{tabletop}
+\section*{TableTop}
+%------------------
+Not originally designed for actual physical tabletop gaming, we've run both simple and fairly complex versions of the game on physical tabletop, especially when playing with young children.
+A few sheets of paper, pencil, eraser, and a small objects are all that's needed. Though much more impressive with cool terrain, props, and minis.
+
+
+\subsection*{Simplified tabletop light and vision}
+%-------------------------------------------------
+In daylight people have their normal vision ranges and usually just see whatever is on the board. For large boards it might be relevant to measure approximate vision distances before placing minis, and using "blips" on the board to represent stuff in the distance that has not been clearly resolved. E.g: this blip is a group of a half dozen or so small humanoids, that one looks like a large monster, etc.
+
+In low light conditions it's easier to approximate light and vision range based on light sources and the Heroes' low light vision. E.g: a candle lights a small room, a torch lights a large room. Use blips for things lurking in the dark.
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% M A P T O O L 
+%--------------
+
+\phantomsection\addcontentsline{toc}{section}{maptool}
+\section*{Maptool}
+%-----------------
+Maptool is the only Virtual Table Top system I've used for this game, since the inception back in 2008. Not totally accurate. First few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
+
+Open source. Self hosted. You as GM or player have control and access to all the work you create, it's not locked away on a server somewhere, dependent on whether the hosting company survives / changes strategy / gets acquired in the coming years. The code is mainly java so it's fixable if the external community dies. I saw the likelihood of this game being long lived, so open source and self hosting were \textit{\textbf{must have}} when I scouted for tools.
+
+It had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your campfire. Great, and something most other tools were lacking. And still lacking today.
+
+Maptool scripting is passable, but horrible to work in. Despite this, I've implemented automation for most everything in the game over the years. Almost all actions as GM is one or two clicks by now, and very little to keep in the noggin between rounds.
+
+It's also reasonably quick to import maps and set vision blocking, as well as make improvised maps.
+
+
+\subsection*{Maptool light and vision}
+%-----------------------------------------------
+Set vision range and arc for each character. I've also built standard versions for the various typical npcs.
+
+Light condition multipliers should be set as follows:\\
+\small\begin{verbatim}
+normal    all light sources have the specified range: humans, halflings
+dusk      1.5x range of light sources: dwarfs, orcs, goblins
+night     2.0x range of light sources: elves
+dark      3.0x range of light sources:
+black     self light up to infra range regardless of light sources
+\end{verbatim}\normalsize
+This means an elf standing close to a camp fire has full daylight conditions, and a human with a torch is at most 1r dash away from a monster when he sees it. Hehehe.
+
+Magical dark vision should have different multipliers, or set a personal self light to suitable radius.
+
+Dwarven infra vision, goblin smellyvision, etc, can be set with a self light radius of a few squares.
+
+
+
+
+
 
 
