@@ -4,10 +4,10 @@
 **/*.out
 **/*.toc
 
-# skip built pdf files in all directories
+# skip compiled pdf files in all directories
 **/*.pdf
 
-# nela n‰thack maptool directory structure
+# nela n√§thack maptool directory structure
 /snapshots
 /maillist
 /rules/charlist

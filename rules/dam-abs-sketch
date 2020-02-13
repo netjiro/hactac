@@ -1,0 +1,243 @@
+damage & abs changes sketch
+
+
+sword     dam=str=0 , pen 0 , abs=dam+0 , finesse 6
+    2h        str+2 
+
+axe       dam=str+1 , pen 0 , abs=dam-2 , finesse 3 , parry-3 , toparry-1 , toavoid+1
+    2h        str+4                                             toparry-2 , toavoid+2
+
+spear     dam=str-1 , pen 0 , abs=dam-3 , finesse 3 , parry-1 , reach+1 mod-3
+    2h        str+1 ,     1                       4        +1
+
+staff     dam=str-2 , pen 0 , abs=dam+1 , finesse 3 , parry+1 , reach+1 mod-4
+    2h        str=0 ,     0                       5        +2
+
+club      dam=str-2 , pen 0 , abs=dam-2 , finesse 1 , parry-2 , toavoid+1 , knockback 1 str+3
+    2h        str=0                               2             toavoid+2 , knockback 1 str+6 
+
+bow       dam=str-2 : str-2/3/4 , pen 0/1/2 , range 12/16/18
+
+crossbow  dam=str=0 : str-0/1/2 , pen 1/2/3 , range 10/12/14
+
+
+
+
+
+weapon        damage              M
+              2    3    4    5    6    7    8    9   10
+
+sword 1h                4         6         8                      finesse 6
+axe 1h                  5         7         9                      parry-3, toparry-1, toavoid+1, finesse 3
+
+sword 2h                          8        10        12            finesse 6, reach 1 mod-6
+axe 2h                           10        12        14            sdf
+
+staff 1h                2         4         6                      reach 1 mod-5, finesse 4
+staff 2h           3         5         7                           reach 1 mod-4, finesse 5
+
+bow                    3p0       4p1       5p2                     r15sq             2r mod-0   1r mod-3   3ap mod-9
+crossbow               4p1       6p2       7p3                     r10sq   scf 0.7   3r  /  2r str+dex
+
+short/broad/long sword       5         7         9                 finesse 4, abs+40%, swing+1/2/3
+
+longbow                               4p1       5p2                r20sq     
+arbalest                    12                   x                 r20sq
+
+
+
+
+
+
+
+small sword    dam 4, abs 4,
+1h             str 4 (max dam+1), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+1 todefend+2
+
+plain sword    dam 6, abs 6,
+1h             str 6 (max dam+2), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+2 todefend+2
+
+large sword    dam 8, abs 8,
+1h             str 8 (max dam+3), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+3 todefend+2
+
+-
+
+small sword    dam 8, abs 8, reach 1 mod-6
+2h             str 6 (max dam+2), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+2 todefend+2
+
+plain sword    dam 10, abs 10, reach 1 mod-6
+2h             str 8 (max dam+3), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+3 todefend+2
+
+large sword    dam 12, abs 12, reach 1 mod-6
+2h             str 10 (max dam+4), finesse 6
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+4 todefend+2
+
+-
+
+The military swords are a bit heavier and with less finesse, 
+but are more durable.
+
+short sword    dam 5, abs 7,
+1h             str 5 (max dam+1), finesse 4
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+1 todefend+2
+
+broad sword    dam 7, abs 10,
+1h             str 7 (max dam+2), finesse 4
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+2 todefend+2
+
+long sword     dam 9, abs 13,
+1h             str 9 (max dam+3), finesse 4
+               poke: mod-1 dam-1 pen+1 todefend-1
+               swing: slow-1 mod-1 dam+3 todefend+2
+
+-
+
+small axe      dam 5, abs 3, parry-3, toparry-1, toavoid+1
+1h             str 4 (max dam+2), finesse 3
+               swing: slow-1 mod-1 dam+2 toavoid+2
+
+plain axe      dam 7, abs 5, parry-3, toparry-1, toavoid+1
+1h             str 6 (max dam+3), finesse 3
+               swing: slow-1 mod-1 dam+3 toavoid+2
+
+large axe      dam 9, abs 7, parry-3, toparry-1, toavoid+1
+1h             str 8 (max dam+4), finesse 3
+               swing: slow-1 mod-1 dam+4 toavoid+2
+
+-
+
+small axe      dam 10, abs 8, parry-3, toparry-1, toavoid+1
+2h             str 6 (max dam+3), finesse 3
+               swing: slow-1 mod-1 dam+4 toavoid+2
+
+plain axe      dam 12, abs 10, parry-3, toparry-1, toavoid+1
+2h             str 8 (max dam+4), finesse 3
+               swing: slow-1 mod-1 dam+5 toavoid+2
+
+large axe      dam 14, abs 12, parry-3, toparry-1, toavoid+1
+2h             str 10 (max dam+5), finesse 3
+               swing: slow-1 mod-1 dam+6 toavoid+2
+
+-
+
+Staffs are low damage but have great potential for speed and defence.
+
+Heavy staffs require str+2 and get dam+1, abs+3,+4,+5, finesse-1, 
+but also raises the requirement for the 2h fast 2ap mode with
+a total str+4 dex+4. E.g: a heavy small staff requires 2h fast: str 11 dex 11.
+
+small staff    dam 2/3, abs 3, parry+1/+2, reach 1 mod-5/-4
+1h/2h          str 4/3 (max dam+1), finesse 3/5
+               2h: fast 2ap if str 4 dex 4 dam-1
+
+plain staff    dam 4/5, abs 5, parry+1/+2, reach 1 mod-5/-4
+1h/2h          str 6/5 (max dam+1), finesse 3/5
+               2h: fast 2ap if str 6 dex 6 dam-1
+
+large staff    dam 6/7, abs 7, parry+1/+2, reach 1 mod-5/-4
+1h/2h          str 8/7 (max dam+1), finesse 3/5
+               2h: fast 2ap if str 8 dex 8 dam-1
+
+-
+
+Spear slashing maneuver gives slashing instead of piercing damage,
+and costs 5xp.
+Narrow tip spears are mod-1 pen+1, have all str bonus as pen+2,+3,+4
+Broad tip spears are mod-1 dam+1
+Specialities for narrow and broad tip spears remove the mod-1, 
+and cost 5xp each.
+
+Heavy spears require str+2 and get dam+1, pen+1, abs+1,+2,+3, finesse-1
+
+Long spears have parry-3, reach 1 mod=0, finesse 3
+
+small spear    dam 3/3 pen 0/1, abs 2, parry-1/+1, reach 1 mod-3
+1h/2h          str 4/3 (max dam+1 pen+1), finesse 4/6
+               slash: mod-2
+
+plain spear    dam 5/5 pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
+1h/2h          str 6/5 (max dam+1 pen+2), finesse 4/6
+               slash: mod-2
+
+large spear    dam 7/7 pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
+1h/2h          str 8/7 (max dam+1 pen+3), finesse 4/6
+               slash: mod-2
+
+-
+
+infantry spear dam 6/7 pen 0/1, abs 9, parry-1/+1, reach 1 mod-3
+1h/2h          str 7/7 (max dam+1 pen+3), finesse 3/5
+               slash: mod-2
+
+-
+
+Clubs are brute weapons with low finesse but they are cheap and have a chance
+to knockback if the wielder succeed str vs str rolls
+
+Heavy clubs require str+2 and get dam+1, abs+50%, knockback roll +3, swing dam+1
+
+small club     dam 1/2, abs 2, parry-2, toavoid+1
+1h/2h          str 2/1 (max dam+1), finesse 2
+               knockback 1 if str+0/+3 vs str
+               swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
+
+small club     dam 2/3, abs 4, parry-2, toavoid+1
+1h/2h          str 4/3 (max dam+1), finesse 2
+               knockback 1 if str+0/+3 vs str
+               swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
+
+plain club     dam 4/5, abs 6, parry-2, toavoid+1
+1h/2h          str 6/5 (max dam+2), finesse 2
+               knockback 1 if str+0/+3 vs str
+               swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
+
+large club     dam 6/7, abs 8, parry-2, toavoid+1
+1h/2h          str 8/7 (max dam+3), finesse 2
+               knockback 1 if str+0/+3 vs str
+               swing: slow 4ap mod-1, dam+2, toavoid+2, knockback roll +3
+
+huge club      dam  8/9, abs 10, parry-2, toavoid+1
+1h/2h          str 10/9 (max dam+4), finesse 2
+               knockback 1 if str+0/+3 vs str
+               swing: slow 4ap mod-1, dam+3, toavoid+2, knockback roll +3
+
+-
+
+
+
+
+
+aimed   3r   mod+1
+normal  2r   mod=0
+quick   1r   mod-3
+snap: [9ap , 3ap]  mod [-3 , -9]
+
+small bow      dam 3 pen 0
+               range 15
+               str 4
+
+plain bow      dam 4 pen 1
+               range 15
+               str 6
+
+large bow      dam 5 pen 2
+               range 15
+               str 8
+
+-
+
+longbow        dam 3 pen 2
+               range 20
+               str 7

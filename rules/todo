@@ -29,6 +29,23 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+200213:
+TODO: change weapon and shield abs so they actually break more often
+      makes it relevant to have deflect, and means good to carry spares and
+      setting up a base when exploring in a dungeon etc
+      e.g: sword dam=str abs=dam
+           axe   dam=str+1 abs=dam-2
+
+
+200213:
+TODO: when on nela and proper search and replace tools in batch / stream mode:
+      change all: "slow-1" to "slow+1", "vslow-2" to "vslow+2"
+                  "fast+1" to "fast-1", "vfast+2" to "vfast-2"
+      or: actually read through and change all base speed declarations to the
+      fixed Xap cost 1ap, 2ap, 3ap, 4ap, 5ap, 6ap, and change all relative speed
+      modifiers to fast-X, slow+X ap.
+
+
 200210:
 TODO: add more fun spells, like illusions, etc
 

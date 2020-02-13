@@ -12,14 +12,14 @@ import sys
 
 
 # ------------- for regular quick roll selection, just change here -------------
-#distribution = "devtest"           # 
-#distribution = "standard_set"      # standard selection of chars, 18 dudes
-distribution = "small_set"         # small but representative set of chars, 10 dudes
+#distribution = "standard_set"      # standard selection: 17 dudes, too heroic
+distribution = "small_set"         # small set, any race: 10 dudes, still heroic
 #distribution = "min_set"           # minimal set, 6 dudes
 #distribution = "goblin_destiny"    # special set for goblin destiny campaign
 #distribution = "goblin_destiny_5"  # special set for goblin destiny campaign
 #distribution = "goblin_destiny_3"  # special set for goblin destiny campaign
 #-------------------------------------------------------------------------------
+
 
 
 
@@ -32,15 +32,6 @@ distribution = "small_set"         # small but representative set of chars, 10 d
 # should we gimp magic on ca 50% of characters in the rolled set ?
 gimpmagic = True
 #gimpmagic = False
-
-# dev test:
-if distribution == "devtest" :
-    humans =       10
-    dwarves =      0
-    elves =        0
-    halflings =    0
-    orcs =         0
-    goblins =      0
 
 # First have to declare which race, then choose from those available
 # total 17 dudes are too many, will get too OP stats
@@ -73,7 +64,7 @@ if distribution == "min_set" :
     goblins =      1
 
 
-# 8 total, 7 goblins
+# Goblin Destiny campaign: 8 total, 5 goblins
 if distribution == "goblin_destiny" :
     humans =       1
     dwarves =      0
@@ -81,7 +72,7 @@ if distribution == "goblin_destiny" :
     halflings =    1
     orcs =         1
     goblins =      5
-# 5 gobbos
+# 5 gobbos for first selection of 2 heroes
 if distribution == "goblin_destiny_5" :
     humans =       0
     dwarves =      0
@@ -89,7 +80,7 @@ if distribution == "goblin_destiny_5" :
     halflings =    0
     orcs =         0
     goblins =      5
-# 3 gobbos
+# 3 gobbos for replacement selection of 1 hero
 if distribution == "goblin_destiny_3" :
     humans =       0
     dwarves =      0
@@ -298,16 +289,47 @@ class Character:
 #--------|---------|---------|---------|---------|---------|---------|---------|
 #       10        20        30        40        50        60        70        80
 
+
+
+
+
+# There are some strange dice combinations in here. If you feel uncertain about
+# the various distributions check out something like: https://anydice.com/
+# which can give you a better grasp on how the rolls spread.
+#
+# Here are some other common distributions, scores and percentages
+# 
+#  2d6:               2d5:               2d4:          2d3:
+#   2    2.78          2    4.00          2    6.25     2   11.11
+#   3    5.56          3    8.00          3   12.50     3   22.22
+#   4    8.33          4   12.00          4   18.75     4   33.33
+#   5   11.11          5   16.00          5   25.00     5   22.22
+#   6   13.89          6   20.00          6   18.75     6   11.11
+#   7   16.67          7   16.00          7   12.50    
+#   8   13.89          8   12.00          8    6.25    
+#   9   11.11          9    8.00    
+#  10    8.33         10    4.00    
+#  11    5.56    
+#  12    2.78    
+
+
+# I've generally included the range and division spreads as comments for quick
+# comparisons. Here is a summary.
+#
+# assymetric splits: 5,7-10
 #                 d10/10 1-9                 10     0,1  9,1
 #                 d10/9  1-8               9-10     0,1  8,2
 #                 d10/8  1-7               8-10     0,1  7,3
 #                 d10/7  1-6               7-10     0,1  6,4
 #                 d10/5  1-4      5-9        10     0-2  4,5,1
-# below are the symmetric splits:
+#
+# symmetric splits: 2-4,6
 #                 d10/6  1-5               6-10     0,1  5-5
 #                 d10/4  1-3      4-7      8-10     0-2  3-4-3
 #                 d10/3  1-2   3-5   6-8   9-10     0-3  2-3-3-2
 #                 d10/2  1  2-3 4-5 6-7 8-9  10     0-5  1-2-2-2-2-1
+
+
 
 
 #--------|---------|---------|---------|---------|---------|---------|---------|

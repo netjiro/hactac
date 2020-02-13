@@ -343,6 +343,8 @@ Often the spell formation shoots in a rapid line to hit the target, or whatever 
 
 %TODO: should this then still draw full mana, or reduced mana for minor fail? Can draw reduced mana and still make a nice flashy effect.
 
+Since the spell behaves like a projectile, taking mods like a bow or crossbow, skills like sniper, lead target, etc work to alleviate those mods, just like for bows.
+
 
 \item[strike, chock, flash:] 
 These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods, stacking, based on target:\\
@@ -1040,6 +1042,11 @@ elsewhere
     If the target square is occupied the caster bounces back to original square
     but an incoming blow has perhaps missed, treat as avoid success+9 roll
     unmodified.
+
+goaway - knockwave
+    cast 1r, 1m, r0, radius 1sq+1/m
+    knockback 1+1/m, affects all within radius
+    all affected are knocked back, away from the caster
 \end{verbatim} \normalsize
 
 

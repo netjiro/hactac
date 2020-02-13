@@ -8,12 +8,17 @@ Assuming opponents with skill 9 effective defense
 swordsman will hit+damage ca 66% of attacks at fancy-6
                           ca 33%               fancy-3
 
-comparative archer will hit+damage at 90% (fail on roll 10) since there is no effective defense against archer.
+comparative archer will hit+damage at 90% (fail on roll 10) since there is no effective defense against archer, esp with sniper 3 and lead target 3
 
 
-Shield effects: worse for swordsman since shield is so cheap to keep >12 which cancels fancy-3, but a large shield only blocks mod-3 if archer is shooting from +/- 45deg and nothing outside.
+Shield effects: worse for swordsman since shield is so cheap to keep >12 which cancels fancy-3, but a large shield only blocks mod-3 if archer is shooting from +/- 45deg and nothing outside. And our archers have sniper 3...
 
 
+assume target abs1, defence 9,
+str 5, dex 5:    large sword dam8,   66%  2.0x  dam 7    261xp   
+                 large bow dam5p2,   90%  2.0x  dam 5    180xp
+int 5, psy 5:    bolt dam5pp         90%  0.5x  dam 5     55xp
+                                                dam 9            3 mana
 
 swordsman with fancy-3   153 xp
 sword       12    144
@@ -44,6 +49,14 @@ quick shot   6   36
 sniper       3    9
 lead target  3    9
 
+archer:   2/r   243 xp  (tot 6ap) mod-3+3 (skill 12)   shooting into melee
+bow         12  144                                    shooting at running 9
+quick shot   9   81                                    shooting at behind shield
+sniper       3    9                                    all at effective "9"
+lead target  3    9                                    : 90% 2x 5p2
+
+
+
 
 
 archer:   2/r   135 xp  (tot 6ap) mod-3  
@@ -60,6 +73,9 @@ bolter:   1/r    55xp    (tot 1r) +2dam shock bolt                7dam   7dam
 spell caster x   20
 magic        3    9
 boltX        9   26
+
+
+
 
 with fast magic:
 
@@ -93,7 +109,7 @@ crossbow         25    3r: dam6 pen2    heavy crossbow str 5   20 ammo
 crossbow     6   25                                            2.0 enc (xb+ammo)
 
 bolter           39    3r: dam9 pen99   black bolt 3r 1+1m     10 ammo mana20
-spell cast   x   20                     int 6 psy 6            no enc
+spell cast   x   20                     int 6 psy 9            no enc
 magic        2    8
 bolt         6   11
 

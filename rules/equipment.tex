@@ -72,6 +72,20 @@ The same limitation applies with tricky maneuvers like wayward strike. The maneu
 
 \item[rate of fire] is how fast the ranged weapon can be fired. Firing faster or slower carries modifiers in various ways depending on the weapon.
 
+\item[maneuvers] are optional attack or defence actions some weapons have above their normal attack and parry actions. The maneuvers modify the weapon stats, e.g:
+\begin{verbatim}
+2h axe    dam 12, abs 11, parry-3, toparry-1, toavoid+1, finesse-3
+          str 6
+          swing: slow-1 mod-1 dam+3 toavoid+2
+\end{verbatim}
+Where the swing attack maneuver of that 2h axe would have total stats as follows:
+\begin{verbatim}
+swing 2h axe    slow-1, mod-1, dam 15, toparry-1, toavoid+3
+\end{verbatim}
+Note: that toparry-1 is unmodified and the toavoid+3 is the sum of the weapon's default +1 and the swing's +2.
+
+Optional weapon maneuvers like poke and swing usually cost 5xp to train.
+
 \end{description}
 
 \

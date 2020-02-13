@@ -1,0 +1,56 @@
+village childhood  15xp
+
+brawl   1d3         2      4
+avoid   1d3         3      7
+jump    1d3         2      4
+climb   1d3         2      4
+swim    1d3         2      4
+sneak   1d3         2      4
+----------------------------
+                   13     27
+yield
+off balance
+
+
+
+farmers childhood   
+
+axe     1d3         3      8
+ride    1d3         3      4
+animal cmd
+avoid   1d3         3      7
+jump    1d3         2      4
+climb   1d3         2      4
+----------------------------
+                   13     27
+yield
+off balance
+
+
+
+hunters childhood
+
+
+spear/bow  1d3         3     7/9
+jump       1d3         2      4
+climb      1d3         2      4
+swim       1d3         2      4
+sneak      1d3         2      4
+track      1d3         2      4
+----------------------------
+                   13     27
+yield
+off balance
+
+
+
+noble childhood
+
+ride
+sword
+companion cmd
+literate
+counting
+histography
+
+

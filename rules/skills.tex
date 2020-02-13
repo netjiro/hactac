@@ -133,6 +133,9 @@ Most weapons have one or more optional attack/defend action alternatives. Someti
 \skill{Skill cost special "speciality weapon X":} allows to use speciality weapons without the mod-1 that they otherwise impose. Each speciality weapon requires it's own speciality skill. They usually cost 5xp.
 
 
+\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat and ranged weapons as well as melee weapons.
+
+
 \skill{Skill scf 0.5 "brawl":} is brute unarmed combat. A character generally has two fists and one kick to use. This can be used with the skills double and triple. Some perhaps have claw and bite attacks.\\
 Fists do str/3 damage, fast+1, every second attack cost no stamina \\
 Kicks do 2+str/3 damage
@@ -167,112 +170,15 @@ A character cannot have a higher skill level in lightning strike than he has in 
 A character cannot have a higher skill level in thunder strike than he has in martial arts.
 
 
-\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat and ranged weapons as well as melee weapons.
-
-
 \skill{Skill scf 0.8 "avoid":} is used to try to avoid the incoming melee attack. The user must of course be aware of the incoming attack. Avoid can be used with the yield maneuver option, for (usually) a mod+3. To avoid is a defence action, just like parrying. \\
 To avoid falling objects and sprung traps, etc, is generally mod-3 to mod-6 and that usually includes a required yield step to get away from the trapped/target square. \\
 To avoid fast missiles such as arrows, the special maneuver missile parry is required, and is generally mod-9.
 
 
-\skill{Skill scf 1.0 "disengage":} allows for the character to make a safer movement out of opponent's weapon reach modifying the (possibly) incoming right to react attacks triggered by the movement if the opponent has \emph{opportunity} or \emph{intercept}. The level of disengage directly modifies the opponent's attack against the disengaging target.
+\skill{Skill scf 0.5 "disengage":} allows for the character to make a safer movement \emph{out} of opponent's weapon reach modifying the (possibly) incoming right to react attacks triggered by the movement if the opponent has \emph{opportunity}. The level of disengage directly modifies the opponent's attack against the disengaging target.
 
 
-\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of fancy attacks the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Limited by the finesse of the weapon.
-
-E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 7, he will probably not succeed.
-
-
-\skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for each weapon, one after the other. A weapon skill roll must still be taken for each weapon, and the stamina for the attacks must be paid as usual.
-
-The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a broad sword and a heavy shield costs 4ap since the heavy shield is normally slow-1 (4ap).
-
-Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword, spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
-If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
-
-It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
-It is possible to completely avoid a double attack with two avoid actions, both at mod-6.\\
-For the really slick avoider it is possible to avoid a double attack with one single avoid action but at mod-9.
-
-Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the double skill roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
-
-Double parries can attempt two parries for one incoming attack, once parry by each weapon, for extra safety. Combine the abs of both weapons to block the attacking damage if both parries are successful.
-
-Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
-
-Double can also be combined with e.g. whirlwind and different attack maneuvers.
-
-
-\skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions. All of the "higher" double variant combinations still only cost one extra stamina.
-
-To train triple, quadruple, etc, the character must be able to actually and effectively wield that many weapons. E.g: have three arms or a magic hovering mind blade.
-
-
-\skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
-
-Before each attack in a whirlwind sequence the character must pay one extra stamina and roll a successful whirlwind check. When the whirlwind roll fails no more attacks can be done in that whirlwind sequence. The first attack can always be performed even if the first whirlwind roll fails though.
-
-The damage of each successful attack is limited (capped) at the lowest damage rolled through the whirlwind sequence. Roll for damage as normal, but the damage dealt is limited (capped) by the lowest so far in the whirlwind sequence. Each attack can target different enemies, but the damage cap is the same within one whirlwind sequence.
-
-E.g: Wispy the Waif attacks Monsters m1 m2 m3. She has whirlwind=5, sword=7.
-She declares whirlwind sword attacks, 
-pays 1 stamina for whirlwind, rolls 3 for success, pays 1 stamina and 3ap for sword attack, rolls 5 for successful attack on monster m1, rolls 3 for damage. \\
-She continues whirlwind, pays 1 stamina for whirlwind, rolls 4 for whirlwind success, pays 1 stamina and 1ap (fast+2) for sword attack, rolls 6 for successful attack, then rolls damage 4. But the damage is now limited capped at 3 since that is the lowest damage that has been rolled in the whirlwind sequence. \\
-She then tries for a third attack, pays 1 stamina for whirlwind, rolls 7 and fails to continue the whirlwind. The damage cap of 3 is now cleared. \\
-She can either fall back to a normal 3ap attack in this initiative or wait on her next initiative to restart a new whirlwind attack sequence.
-
-Whirlwind becomes even more dangerous when combined with for example double... Then each weapon has its own the damage cap track. It can also be combined with different attack maneuvers.
-
-If an opponent with higher initiative interrupt attacks a whirlwind fighter during a whirlwind sequence the whirlwind defender can make a parry within the whirlwind sequence with the same fast ap cost as normal whirlwind attacks.
-
-
-\skill{Skill scf 0.5 "synchronise":} Characters that pass their synchronise rolls can make simultaneous attacks. If they are hacking at the same target, that target cannot take different actions to defend against the attacks. The target can roll for double, triple, etc to defend against several simultaneous attacks in one action however.
-
-Roll for synchronise before making the attacks for each of the attackers to see if they are synchronised. The synchronised actions happen in the lowest initiative of the characters involved.
-
-It is possible to synchronise other actions as well. The characters must be in vision or communication range to be able to synchronise their actions.
-Synchronised "double, triple, etc" attacks must also be defended against in one action.
-
-A high initiative character can Oy!, or a regular communication action, to activate a lower initiative ally so they can coordinate a synchronised attack. This is often done by a third party "commander" to get a combat unit to synchronise their attacks.
-
-
-\skill{Skill scf 1.0 "quick shot":} reduces rapid fire snap and quick shot penalties by one for each skill level.
-
-
-\skill{Skill scf 1.0 "sniper":} reduces range penalties by one for each skill level. It also reduces mods from small and covered targets by one for each level. Covered targets includes coverage from shields.
-
-E.g: Archer Arthur is trying to give Hiding Hedvig a bad day. HH is in long range (mod-3) and partially covered by a shield (mod-4). AA has sniper 5 which is enough to cancel the the range -3 mod and two points of the coverage mod, for a total of mod-2 to the shot.
-
-
-\skill{Skill scf 1.0 "lead target":} reduces penalties for shooting fast moving targets by one for each skill level.
-
-
-\skill{Skill cost special "accurate":} allows for the user to generally improve damage when making good, very good or perfect successes with attacks. \\
-lvl 1, cost 10xp: A good (+3) success: roll two damage rolls and choose which to use. (will average \ca 66\%) \\
-lvl 2, cost 20xp: A very good (+6) success: roll three damage rolls and choose which to use. (will average \ca 75\%) \\
-lvl 3, cost 30xp: A perfect (+9) success: roll five damage rolls and choose which to use. (will average \ca 84\%)
-
-
-\skill{Skill cost special "consistent":} allows for the user to generally improve damage when making good, very good, or perfect successes with attacks. \\
-lvl 1, cost 15xp: A good (+3) success always makes at least 33\% (round up) of the maximum damage. (will average \ca 66\%) \\
-lvl 2, cost 30xp: A very good (+6) success always makes at least 66\% (round up) of the maximum damage. (will average \ca 83\%) \\
-lvl 3, cost 45xp: A perfect (+9) success always makes 100\% of the maximum damage.
-
-
-\skill{Skill cost special "precise":} gives extra penetration points to damage for good strikes. \\
-lvl 1, cost 10xp: A good (+3) success gives penetrating+1 to the attack. \\
-lvl 2, cost 20xp: A very good (+6) success gives penetrating+2. \\
-lvl 3, cost 30xp: A perfect (+9) success gives penetrating+3.
-
-
-\skill{Skill cost special "staggering":} makes a good hit more difficult to parry: \\
-lvl 1, cost 10xp: A good (+3) success gives mod-1 to defend against the attack.  \\
-lvl 2, cost 20xp: A very good (+6) success gives mod-2 to defend against the attack.  \\
-lvl 3, cost 30xp: An exceptional (+9) success gives mod-3 to defend against the attack.  \\
-
-The staggering todefend mod is capped by the weapon finesse. E.g: attacking with a broad sword, finesse-4, adding fancy attacks mod-3 to the attack and rolling a success+7, having staggering lvl 2, will still only give the target a todefend-4 since that is the limit of the weapon finesse.
-
-E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With his slugger=2 he gets one point of damage bonus for each of his two extra strength points. Thus he has dam+2 from his combination of extra strength and slugger.
+\skill{Skill scf 0.5 "engage":} allows for the character to make a safer movement \emph{into} opponent's weapon reach modifying the (possibly) incoming right to react attacks triggered by the movement if the opponent has \emph{intercept}. The level of disengage directly modifies the opponent's attack against the engaging target.
 
 
 \skill{Skill scf 0.5 "charge":} reduces movement penalties by one for each skill level when the user moves to attack an opponent. The initiative for the attack is also increased equal to the level of "charge". However, the maximum initiative bonus and movement penalty reduction is limited by the distance of approach moved to reach the opponent. Also, the attack's maximum damage is increased by one for each tree speed of approach. A charge costs one stamina above the normal cost of the attack.
@@ -346,6 +252,106 @@ It is also possible to use yield avoid within the movement to improve the chance
 It is of course possible to completely avoid the block situation if RR traces the movement as left$>$D$>$B$>$F$>$right from the beginning.
 
 If RR gets blocked at D$>$E he stops at D. When it's his initiative again he can move D$>$B, but cannot attempt to move D$>$E again this round.
+
+
+\skill{Skill scf 0.5 "fancy attacks":} Melee attacks can be made more difficult to parry. For every level of fancy attacks the attacker can choose to take a mod-1 and at the same time make the attack mod-1 to defend. Limited by the finesse of the weapon.
+
+E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 7, he will probably not succeed.
+
+
+\skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for each weapon, one after the other. A weapon skill roll must still be taken for each weapon, and the stamina for the attacks must be paid as usual.
+
+The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a broad sword and a heavy shield costs 4ap since the heavy shield is normally slow-1 (4ap).
+
+Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword, spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
+If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
+
+It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
+It is possible to completely avoid a double attack with two avoid actions, both at mod-6.\\
+For the really slick avoider it is possible to avoid a double attack with one single avoid action but at mod-9.
+
+Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the double skill roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
+
+Double parries can attempt two parries for one incoming attack, once parry by each weapon, for extra safety. Combine the abs of both weapons to block the attacking damage if both parries are successful.
+
+Synchronised double attacks cannot be parried with two different actions, but must be parried with one double action, or by different people. Roll for "synchronised" before double to make a synchronised double attack.
+
+Double can also be combined with e.g. whirlwind and different attack maneuvers.
+
+
+\skill{Skill scf 1.5, 2.0, 2.5, ... "triple, quadruple, and so on":} some critters have more arms than others. Works like double, except that a fail collapses it to the next lower: e.g: triple to double, quadruple to triple. Each fail point collapses the skill one step. A fail-1 collapses a quadruple to a triple, and a fail-2 to a double. In the end it collapses to just normal actions. All of the "higher" double variant combinations still only cost one extra stamina.
+
+To train triple, quadruple, etc, the character must be able to actually and effectively wield that many weapons. E.g: have three arms or a magic hovering mind blade.
+
+
+\skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast+2 (min 1ap).
+
+Before each attack in a whirlwind sequence the character must pay one extra stamina and roll a successful whirlwind check. When the whirlwind roll fails no more attacks can be done in that whirlwind sequence. The first attack can always be performed even if the first whirlwind roll fails though.
+
+The damage of each successful attack is limited (capped) at the lowest damage rolled through the whirlwind sequence. Roll for damage as normal, but the damage dealt is limited (capped) by the lowest so far in the whirlwind sequence. Each attack can target different enemies, but the damage cap is the same within one whirlwind sequence.
+
+E.g: Wispy the Waif attacks Monsters m1 m2 m3. She has whirlwind=5, sword=7.
+She declares whirlwind sword attacks, 
+pays 1 stamina for whirlwind, rolls 3 for success, pays 1 stamina and 3ap for sword attack, rolls 5 for successful attack on monster m1, rolls 3 for damage. \\
+She continues whirlwind, pays 1 stamina for whirlwind, rolls 4 for whirlwind success, pays 1 stamina and 1ap (fast+2) for sword attack, rolls 6 for successful attack, then rolls damage 4. But the damage is now limited capped at 3 since that is the lowest damage that has been rolled in the whirlwind sequence. \\
+She then tries for a third attack, pays 1 stamina for whirlwind, rolls 7 and fails to continue the whirlwind. The damage cap of 3 is now cleared. \\
+She can either fall back to a normal 3ap attack in this initiative or wait on her next initiative to restart a new whirlwind attack sequence.
+
+Whirlwind becomes even more dangerous when combined with for example double... Then each weapon has its own the damage cap track. It can also be combined with different attack maneuvers.
+
+If an opponent with higher initiative interrupt attacks a whirlwind fighter during a whirlwind sequence the whirlwind defender can make a parry within the whirlwind sequence with the same fast ap cost as normal whirlwind attacks.
+
+
+\skill{Skill scf 0.5 "synchronise":} Characters that pass their synchronise rolls can make simultaneous attacks. If they are hacking at the same target, that target cannot take different actions to defend against the attacks. The target can roll for double, triple, etc to defend against several simultaneous attacks in one action however.
+
+Roll for synchronise before making the attacks for each of the attackers to see if they are synchronised. The synchronised actions happen in the lowest initiative of the characters involved.
+
+It is possible to synchronise other actions as well. The characters must be in vision or communication range to be able to synchronise their actions.
+Synchronised "double, triple, etc" attacks must also be defended against in one action.
+
+A high initiative character can Oy!, or a regular communication action, to activate a lower initiative ally so they can coordinate a synchronised attack. This is often done by a third party "commander" to get a combat unit to synchronise their attacks.
+
+
+\skill{Skill scf 1.0 "reloader":} is rapid reload of crossbows and arbalest weapons. Add the skill level to str and dex when checking for quick reload times.
+
+
+\skill{Skill scf 1.0 "quick shot":} reduces rapid fire snap and quick shot penalties by one for each skill level.
+
+
+\skill{Skill scf 1.0 "sniper":} reduces range penalties by one for each skill level. It also reduces mods from small and covered targets by one for each level. Covered targets includes coverage from shields.
+
+E.g: Archer Arthur is trying to give Hiding Hedvig a bad day. HH is in long range (mod-3) and partially covered by a shield (mod-4). AA has sniper 5 which is enough to cancel the the range -3 mod and two points of the coverage mod, for a total of mod-2 to the shot.
+
+
+\skill{Skill scf 1.0 "lead target":} reduces penalties for shooting fast moving targets by one for each skill level.
+
+
+\skill{Skill cost special "accurate":} allows for the user to generally improve damage when making good, very good or perfect successes with attacks. \\
+lvl 1, cost 10xp: A good (+3) success: roll two damage rolls and choose which to use. (will average \ca 66\%) \\
+lvl 2, cost 20xp: A very good (+6) success: roll three damage rolls and choose which to use. (will average \ca 75\%) \\
+lvl 3, cost 30xp: A perfect (+9) success: roll five damage rolls and choose which to use. (will average \ca 84\%)
+
+
+\skill{Skill cost special "consistent":} allows for the user to generally improve damage when making good, very good, or perfect successes with attacks. \\
+lvl 1, cost 15xp: A good (+3) success always makes at least 33\% (round up) of the maximum damage. (will average \ca 66\%) \\
+lvl 2, cost 30xp: A very good (+6) success always makes at least 66\% (round up) of the maximum damage. (will average \ca 83\%) \\
+lvl 3, cost 45xp: A perfect (+9) success always makes 100\% of the maximum damage.
+
+
+\skill{Skill cost special "precise":} gives extra penetration points to damage for good strikes. \\
+lvl 1, cost 10xp: A good (+3) success gives penetrating+1 to the attack. \\
+lvl 2, cost 20xp: A very good (+6) success gives penetrating+2. \\
+lvl 3, cost 30xp: A perfect (+9) success gives penetrating+3.
+
+
+\skill{Skill cost special "staggering":} makes a good hit more difficult to parry: \\
+lvl 1, cost 10xp: A good (+3) success gives mod-1 to defend against the attack.  \\
+lvl 2, cost 20xp: A very good (+6) success gives mod-2 to defend against the attack.  \\
+lvl 3, cost 30xp: An exceptional (+9) success gives mod-3 to defend against the attack.  \\
+
+The staggering todefend mod is capped by the weapon finesse. E.g: attacking with a broad sword, finesse-4, adding fancy attacks mod-3 to the attack and rolling a success+7, having staggering lvl 2, will still only give the target a todefend-4 since that is the limit of the weapon finesse.
+
+E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With his slugger=2 he gets one point of damage bonus for each of his two extra strength points. Thus he has dam+2 from his combination of extra strength and slugger.
 
 
 \skill{Skill (cost ---) "rush":} is not quite a tackle. Just forces targets to move out of the way or get pushed/dragged along. The attacker simply moves through the targets. The rush is itself not an action and costs no ap. 
@@ -722,8 +728,6 @@ Perception rolls take care of all normal detection, find is useless there.
 
 \skill{Skill scf 0.5 "fast find":} is used to quickly search for hidden items/details/etc. The character can make find rolls on a number of squares equal to his fast find level each round. It does not affect the chance to succeed or time modifiers for the find rolls on any one square.
 
-
-\TODO: fix sneak, spotting, hiding, finding
 
 \skill{Skill scf 0.5 "sneak":} is used to move around unseen and hide from casual inspection. Sneak hides both the Hero and objects the Hero wants to keep unseen. Spending more time, rounds instead of actions, the Hero can seriously camouflage himself, someone else, or hide objects so they are more difficult to find.
 
