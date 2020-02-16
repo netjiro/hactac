@@ -98,7 +98,11 @@ These spells should be seen as examples, different masters teach their students 
 
 Spells with more complexity or targets have higher int requirements, and spells with higher power or control influence has higher psy requirements.
 
+\subsection*{Custom spells, player created spells}
+%-------------------------------------------------
+More fun is to let the player write new spells for his character, and you as GM put requirements on them. That way the spell casters become more unique, and it's more personal for the player. This could also be a way around the limitation that the spells have to be tought by someone. Perhaps the Hero can just figure it out by himself?
 
+When the spells are new they are in flux. Prototypes. And they have to be tested under a wide range of conditions. The first few adventures and tens of usages of the spells in varied situations should give you as GM, the player, and the rest of the group a decent insight into the functions and aspects of the spell. During this period the details, stats, and requirements of the spell should be flud and change over time, until you've found the sweet spot. Remember to consider how the spell might work if it's used by a different caster, or in combination with a different group, tactics, opposition, equipment, combat styles, etc.
 
 
 
@@ -1044,9 +1048,45 @@ elsewhere
     unmodified.
 
 goaway - knockwave
-    cast 1r, 1m, r0, radius 1sq+1/m
+    cast 1r, 1m, self, radius 1sq+1/m
     knockback 1+1/m, affects all within radius
     all affected are knocked back, away from the caster
+
+fiery eye        int 5 psy 5
+    cast 3r 1m, touch, duration 20+1d10r +10/m       (duration based on object?)
+    creates fire, light source r10sq +5/m
+    the caster gets vision 360deg from the fire source.  (wish for tool to limit
+    default day vision, +1m dusk, +1m night, +1m dark     rate of turning of arc
+    range to target object is unlimited                   eg 90deg, 45deg/r rate
+                                                          of rotation)
+
+one hand
+    cast 3r 1m, range 10 +5/m, duration 5r +3/m
+    One of the target's limbs is paralysed and useless.
+    psy+3/m vs psy each round to maintain spell after first round.
+    
+other's hand
+    cast 3r 1m, range 10 +5/m, duration 5r +3/m
+    The caster takes control of one of the target's limbs.
+    Any actions taken with the limb are paid from the caster's ap, and are
+    slow+1 ap from usual cost. Any action requires a roll to succeed limited by
+    the minimum of any skill the action requires and the success diff of the 
+    psy vs psy control roll for the round:
+    Control: psy+3/m vs psy each round to maintain spell after first round.
+    Maintenance: int-1, psy-1
+
+mimic
+    cast 2r 1m, range 10r, duration 10r +5/m
+    range after casting: 30r +20/m
+    Make an object look and feel like something else.
+    A perception roll penalty modified by casting success will see that there is
+    something strange with the object. Mod by the complexity of the object.
+    A find roll will see through the illusion.
+    Maintenance: any movement or significant complexity requires int-1 psy-1
+    Just stationary object is regular psy-1.
+
+-
+
 \end{verbatim} \normalsize
 
 

@@ -34,7 +34,7 @@ sword 2h                          8        10        12            finesse 6, re
 axe 2h                           10        12        14            sdf
 
 staff 1h                2         4         6                      reach 1 mod-5, finesse 4
-staff 2h           3         5         7                           reach 1 mod-4, finesse 5
+      2h           3         5         7                           reach 1 mod-4, finesse 5
 
 bow                    3p0       4p1       5p2                     r15sq             2r mod-0   1r mod-3   3ap mod-9
 crossbow               4p1       6p2       7p3                     r10sq   scf 0.7   3r  /  2r str+dex
@@ -48,38 +48,42 @@ arbalest                    12                   x                 r20sq
 
 
 
+Regular swords for one handed or two handed combat are found all over the land,
+and the best friends an aspiring Hero can have. They are well balanced between
+damage and defence, with good attack options, and lots of room to grow.
 
+The blade poke and swing attack maneuvers each cost 5xp to train.
 
-small sword    dam 4, abs 4,
-1h             str 4 (max dam+1), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+small sword    dam 4, abs 4, finesse 6,
+1h             str 4, max dam+1
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+1 todefend+2
 
-plain sword    dam 6, abs 6,
-1h             str 6 (max dam+2), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+plain sword    dam 6, abs 6, finesse 6,
+1h             str 6, max dam+2
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+2 todefend+2
 
-large sword    dam 8, abs 8,
-1h             str 8 (max dam+3), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+large sword    dam 8, abs 8, finesse 6,
+1h             str 8, max dam+3
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+3 todefend+2
 
 -
 
-small sword    dam 8, abs 8, reach 1 mod-6
-2h             str 6 (max dam+2), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+small sword    dam 8, abs 8, reach 1 mod-6, finesse 6
+2h             str 6, max dam+2
+               poke: mod-1 dam-1 pen+1, max pen+2
                swing: slow-1 mod-1 dam+2 todefend+2
 
-plain sword    dam 10, abs 10, reach 1 mod-6
-2h             str 8 (max dam+3), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+plain sword    dam 10, abs 10, reach 1 mod-6, finesse 6
+2h             str 8, max dam+3
+               poke: mod-1 dam-1 pen+1, max pen+2
                swing: slow-1 mod-1 dam+3 todefend+2
 
-large sword    dam 12, abs 12, reach 1 mod-6
-2h             str 10 (max dam+4), finesse 6
-               poke: mod-1 dam-1 pen+1 todefend-1
+large sword    dam 12, abs 12, reach 1 mod-6, finesse 6
+2h             str 10, max dam+4
+               poke: mod-1 dam-1 pen+1, max pen+2
                swing: slow-1 mod-1 dam+4 todefend+2
 
 -
@@ -87,70 +91,233 @@ large sword    dam 12, abs 12, reach 1 mod-6
 The military swords are a bit heavier and with less finesse, 
 but are more durable.
 
-short sword    dam 5, abs 7,
-1h             str 5 (max dam+1), finesse 4
-               poke: mod-1 dam-1 pen+1 todefend-1
+short sword    dam 5, abs 7, finesse 4,
+1h             str 5, max dam+1
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+1 todefend+2
 
-broad sword    dam 7, abs 10,
-1h             str 7 (max dam+2), finesse 4
-               poke: mod-1 dam-1 pen+1 todefend-1
+broad sword    dam 7, abs 10, finesse 4,
+1h             str 7, max dam+2
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+2 todefend+2
 
-long sword     dam 9, abs 13,
-1h             str 9 (max dam+3), finesse 4
-               poke: mod-1 dam-1 pen+1 todefend-1
+long sword     dam 9, abs 13, finesse 4,
+1h             str 9, max dam+3
+               poke: mod-1 dam-1 pen+1, max pen+1
                swing: slow-1 mod-1 dam+3 todefend+2
 
 -
 
-small axe      dam 5, abs 3, parry-3, toparry-1, toavoid+1
-1h             str 4 (max dam+2), finesse 3
+Fast blades: knives, daggers, rapiers.
+
+Every second attack costs no stamina.
+
+Knives, daggers can be used with the knife or sword skills.
+Rapiers can be used with the rapier or sword skills.
+Rapiers and knives can be used with the other rapier or knife skill at mod-1.
+
+Knives and daggers have flash attack maneuver, costing 20xp to train.
+
+Rapiers have the deflect parry maneuvers at mod-1 instead of mod-3.
+
+knife          dam 1, abs 1, parry-2, finesse 4
+1h             str 1, max pen+1
+               dex 3: fast 2ap 
+               flash: str 3 dex 6: vfast 1ap, mod-3
+
+dagger         dam 2, abs 2, parry-2, finesse 4
+1h             str 2, max pen+1
+               dex 4: fast 2ap 
+               flash: str 4 dex 8: vfast 1ap, mod-3
+               poke: mod-1 dam-1 pen+1
+
+large dagger   dam 3, abs 3, parry-2, finesse 4
+1h             str 3, max pen+1
+               dex 5: fast 2ap 
+               flash: str 5 dex 10: vfast 1ap, mod-3
+               poke: mod-1 dam-1 pen+1
+
+small rapier   dam 2, abs 2, parry-1, todefend-2, finesse 9
+1h             str 2                                 
+               dex 2: fast 2ap
+               poke: mod-1 dam-1 pen+1
+               
+
+plain rapier   dam 3, abs 3, parry-1, todefend-2, finesse 9
+1h             str 4 
+               dex 4: fast 2ap
+               poke: mod-1 dam-1 pen+1
+               
+
+large rapier   dam 4, abs 4, parry-1, todefend-2, finesse 9
+1h             str 6
+               dex 6: fast 2ap
+               poke: mod-1 dam-1 pen+1
+
+-
+
+Each speciality blade requires its own 5xp speciality or suffer mod-1.
+
+Duelling swords are expensive and often custom made, lighter and thinner than 
+the regular swords, but durable due to better quality steel and craftsmanship.
+
+Duelling swords can be used with the knife skill at mod-3, above the speciality
+mod-1 if the wielder lacks that training. It's mod-3 even if the str of the
+duealling sword would allow a lower mod for the knife skill.
+
+Every second attack costs no stamina.
+
+The duelling sword swish attack costs 5xp to train.
+
+A heavy duelling sword requires str+2 and gets dam+1 abs+3 finesse-1 
+but also requires dex+2 for the fast 2ap actions.
+
+small duelling sword
+1h             dam 4, abs 4, todefend-1, finesse 8
+               str 4, max dam+1
+               dex 4: fast 2ap
+               poke: mod-1 dam-1 pen+1, max pen+1
+               swing: slow+1 mod-1 dam+1 todefend+1
+               swish: mod-1 dam-1 todefend-1
+
+plain duelling sword
+1h             dam 5, abs 5, todefend-1, finesse 8
+               str 6, max dam+1
+               dex 6: fast 2ap
+               poke: mod-1 dam-1 pen+1, max pen+1
+               swing: slow+1 mod-1 dam+1 todefend+1
+               swish: mod-1 dam-1 todefend-1
+
+large duelling sword
+1h             dam 6, abs 6, todefend-1, finesse 8
+               str 8, max dam+1
+               dex 8: fast 2ap
+               poke: mod-1 dam-1 pen+1, max pen+1
+               swing: slow+1 mod-1 dam+1 todefend+1
+               swish: mod-1 dam-1 todefend-1
+
+estoc          \todo
+2h
+
+grande estoc   \todo
+2h
+
+The parrying dagger and baselard can be used with the knife or sword skills.
+
+parry dagger   dam 3, abs 6, attack-1, parry+1, finesse-4        parrying dagger
+               str 3, max dam+1 pen+1
+               dex 4: fast 2ap
+               every second attack in a round costs no stamina
+               poke: mod-1 dam-1 pen+1
+
+baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-4
+               str 3, max pen+2
+               dex 4: fast 2ap
+               fast+1 if str 3 and dex 5
+               every second attack in a round costs no stamina
+               poke: mod-1 dam-1 pen+2
+
+bastard sword  dam 8/10, abs 10, reach 1 mod-6, finesse 5
+1h/2h          str 8/8, max dam+3
+               poke: mod-1 dam-1 pen+1, max pen+2
+               swing: slow-1 mod-1 dam+3 todefend+2
+ 
+great sword    \todo
+1h
+
+claymore       \todo
+2h
+
+-
+
+Axes gain damage by sacrificing defence. Their swing attack maneuver also builds
+more heft and delivere more extra damage than the sword swing does. The two
+handed axes are especially lethal.
+Axes are more difficult to parry but easier to avoid, and favours brutal damage
+over finesse.
+
+small axe      dam 5, abs 3, parry-3, toparry-1, toavoid+1, finesse 3
+1h             str 4, max dam+2
                swing: slow-1 mod-1 dam+2 toavoid+2
 
-plain axe      dam 7, abs 5, parry-3, toparry-1, toavoid+1
-1h             str 6 (max dam+3), finesse 3
+plain axe      dam 7, abs 5, parry-3, toparry-1, toavoid+1, finesse 3
+1h             str 6, max dam+3
                swing: slow-1 mod-1 dam+3 toavoid+2
 
-large axe      dam 9, abs 7, parry-3, toparry-1, toavoid+1
-1h             str 8 (max dam+4), finesse 3
+large axe      dam 9, abs 7, parry-3, toparry-1, toavoid+1, finesse 3
+1h             str 8, max dam+4
                swing: slow-1 mod-1 dam+4 toavoid+2
 
 -
 
-small axe      dam 10, abs 8, parry-3, toparry-1, toavoid+1
-2h             str 6 (max dam+3), finesse 3
+small axe      dam 10, abs 8, parry-3, toparry-1, toavoid+1, finesse 3
+2h             str 6, max dam+3
                swing: slow-1 mod-1 dam+4 toavoid+2
 
-plain axe      dam 12, abs 10, parry-3, toparry-1, toavoid+1
-2h             str 8 (max dam+4), finesse 3
+plain axe      dam 12, abs 10, parry-3, toparry-1, toavoid+1, finesse 3
+2h             str 8, max dam+4
                swing: slow-1 mod-1 dam+5 toavoid+2
 
-large axe      dam 14, abs 12, parry-3, toparry-1, toavoid+1
-2h             str 10 (max dam+5), finesse 3
+large axe      dam 14, abs 12, parry-3, toparry-1, toavoid+1, finesse 3
+2h             str 10, max dam+5
                swing: slow-1 mod-1 dam+6 toavoid+2
+
+-
+
+Speciality axes all require their own 5xp speciality training or suffer mod-1.
+
+battle axe     \todo
+1h
+
+battle axe     \todo
+2h
+
+great axe      \todo
+1h
+
+lochaber       \todo
+2h
+
+Pick axes and tunneling axes are tools that also work reasonably well for 
+destroying opponents as well as rocks.
+
+pick axe       dam 4, pen 4, parry-4, toavoid+2, finesse 2
+2h             str 4, slow 4ap, max dam+2 pen+4
+               double damage against shields, doors, objects, stone, etc
+
+tunnel axe     dam 7, pen 4, parry-5, toavoid+3, finesse 2
+2h             str 7, slow 4ap, max dam+3 pen+4
+               double damage against shields, doors, objects, stone, etc
+
+shield breaker dam 8, pen 2, parry-6, toavoid+1, finesse 3
+2h             str 6, slow 4ap, max dam+2 pen+4
+               double damage against shields, doors, objects, etc
 
 -
 
 Staffs are low damage but have great potential for speed and defence.
 
+Deflect defence maneuvers are mod-2 instead of mod-3.
+
 Heavy staffs require str+2 and get dam+1, abs+3,+4,+5, finesse-1, 
 but also raises the requirement for the 2h fast 2ap mode with
 a total str+4 dex+4. E.g: a heavy small staff requires 2h fast: str 11 dex 11.
 
-small staff    dam 2/3, abs 3, parry+1/+2, reach 1 mod-5/-4
-1h/2h          str 4/3 (max dam+1), finesse 3/5
-               2h: fast 2ap if str 4 dex 4 dam-1
+small staff    dam 2/3, abs 3, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
+1h/2h          str 4/3, max dam+1
+               2h dex 4: fast 2ap dam-1
 
-plain staff    dam 4/5, abs 5, parry+1/+2, reach 1 mod-5/-4
-1h/2h          str 6/5 (max dam+1), finesse 3/5
-               2h: fast 2ap if str 6 dex 6 dam-1
+plain staff    dam 4/5, abs 5, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
+1h/2h          str 6/5, max dam+1
+               2h dex 6: fast 2ap dam-1
 
-large staff    dam 6/7, abs 7, parry+1/+2, reach 1 mod-5/-4
-1h/2h          str 8/7 (max dam+1), finesse 3/5
-               2h: fast 2ap if str 8 dex 8 dam-1
+large staff    dam 6/7, abs 7, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
+1h/2h          str 8/7, max dam+1
+               2h dex 8: fast 2ap dam-1
 
 -
+
+Spears are versatile and inexpensive, a good allround weapon.
 
 Spear slashing maneuver gives slashing instead of piercing damage,
 and costs 5xp.
@@ -159,61 +326,156 @@ Broad tip spears are mod-1 dam+1
 Specialities for narrow and broad tip spears remove the mod-1, 
 and cost 5xp each.
 
+Deflect defence maneuvers are mod-2 instead of mod-3.
+
 Heavy spears require str+2 and get dam+1, pen+1, abs+1,+2,+3, finesse-1
 
 Long spears have parry-3, reach 1 mod=0, finesse 3
 
-small spear    dam 3/3 pen 0/1, abs 2, parry-1/+1, reach 1 mod-3
-1h/2h          str 4/3 (max dam+1 pen+1), finesse 4/6
+small spear    dam 3/3 pen 0/1, abs 2, parry-1/+1, finesse 4/6, reach 1 mod-3
+1h/2h          str 4/3 (max dam+1 pen+1)
                slash: mod-2
 
-plain spear    dam 5/5 pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
-1h/2h          str 6/5 (max dam+1 pen+2), finesse 4/6
+plain spear    dam 5/5 pen 0/1, abs 4, parry-1/+1, finesse 4/6, reach 1 mod-3
+1h/2h          str 6/5 (max dam+1 pen+2)
                slash: mod-2
 
-large spear    dam 7/7 pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
-1h/2h          str 8/7 (max dam+1 pen+3), finesse 4/6
+large spear    dam 7/7 pen 0/1, abs 6, parry-1/+1, finesse 4/6, reach 1 mod-3
+1h/2h          str 8/7 (max dam+1 pen+3)
                slash: mod-2
 
 -
 
-infantry spear dam 6/7 pen 0/1, abs 9, parry-1/+1, reach 1 mod-3
-1h/2h          str 7/7 (max dam+1 pen+3), finesse 3/5
+infantry spear dam 6/7 pen 0/1, abs 9, parry-1/+1, finesse 3/5, reach 1 mod-3
+1h/2h          str 7/7 (max dam+1 pen+3)
                slash: mod-2
+
+-
+
+The speciality pole arms are generally military issue.
+
+pike           \todo
+
+halberd        \todo
+
+glave          \todo
 
 -
 
 Clubs are brute weapons with low finesse but they are cheap and have a chance
 to knockback if the wielder succeed str vs str rolls
 
-Heavy clubs require str+2 and get dam+1, abs+50%, knockback roll +3, swing dam+1
+Heavy clubs require str+2 and get dam+1, abs+50%, parry-1, toavoid+1
+knockback roll +3, swing dam+1
 
 small club     dam 1/2, abs 2, parry-2, toavoid+1
-1h/2h          str 2/1 (max dam+1), finesse 2
+1h/2h          str 2/1, max dam+1, finesse 2
                knockback 1 if str+0/+3 vs str
                swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
 
 small club     dam 2/3, abs 4, parry-2, toavoid+1
-1h/2h          str 4/3 (max dam+1), finesse 2
+1h/2h          str 4/3, max dam+1, finesse 2
                knockback 1 if str+0/+3 vs str
                swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
 
 plain club     dam 4/5, abs 6, parry-2, toavoid+1
-1h/2h          str 6/5 (max dam+2), finesse 2
+1h/2h          str 6/5, max dam+2, finesse 2
                knockback 1 if str+0/+3 vs str
                swing: slow 4ap mod-1, dam+1, toavoid+2, knockback roll +3
 
 large club     dam 6/7, abs 8, parry-2, toavoid+1
-1h/2h          str 8/7 (max dam+3), finesse 2
+1h/2h          str 8/7, max dam+3, finesse 2
                knockback 1 if str+0/+3 vs str
                swing: slow 4ap mod-1, dam+2, toavoid+2, knockback roll +3
 
 huge club      dam  8/9, abs 10, parry-2, toavoid+1
-1h/2h          str 10/9 (max dam+4), finesse 2
+1h/2h          str 10/9, max dam+4, finesse 2
                knockback 1 if str+0/+3 vs str
                swing: slow 4ap mod-1, dam+3, toavoid+2, knockback roll +3
 
 -
+
+Hammers are simple and durable, but have significant tactical benefits.
+
+The hammer strike attack maneuver costs 5xp to train.
+Hammer wielders that strike with knockback can choose whether to apply 
+the knockback effect, and how much.
+
+plain hammer   dam 5, abs 7, parry-4, toavoid+1, finesse 2
+1h             str 6, max dam+4
+               strike: slow 4ap, mod-1, dam+1, toavoid+2, knockback 1
+               swing: slow 4ap, mod-1, dam+3, toavoid+2 
+
+large hammer   dam 7, abs 10, parry-4, toavoid+1, finesse 2
+1h             str 8, max dam+5
+               strike: slow 4ap, mod-1, dam+2, toavoid+2, knockback 1
+               swing: slow 4ap, mod-1, dam+4, toavoid+2 
+
+plain hammer   dam 8, abs 12, parry-4, toavoid+1, finesse 2
+2h             str 8, max dam+5, knockback 1
+               strike: slow 4ap, mod-1, dam+1, toavoid+2, knockback 2
+               swing: slow 4ap, mod-1, dam+3, toavoid+2 
+
+large hammer   dam 10, abs 15, parry-4, toavoid+1, finesse 2
+2h             str 10, max dam+6, knockback 1
+               strike: slow 4ap, mod-1, dam+2, toavoid+2, knockback 2
+               swing: slow 4ap, mod-1, dam+4, toavoid+2 
+
+plain flail    \todo
+1h
+
+large flail    \todo
+1h
+
+plain flail    \todo
+2h
+
+plain flail    \todo
+2h
+
+-
+
+Speciality bludgeoning weapons, all require their own 5xp speciality or suffer
+mod-1 to all actions.
+
+sledge hammer  \todo
+1h
+
+maul           \todo
+2h
+
+morning star   \todo
+1h
+
+morning star   \todo
+2h
+
+long chain flail
+1h             \todo
+
+long chain flail
+2h             \todo
+
+-
+
+
+
+buckler        \todo
+
+small shield   
+
+plain shield   abs 10, parry+3
+               str 6, 
+
+large shield
+
+tower shield
+
+infantry shield
+
+
+
+
 
 
 
@@ -241,3 +503,39 @@ large bow      dam 5 pen 2
 longbow        dam 3 pen 2
                range 20
                str 7
+
+-
+
+
+
+
+
+crossbows
+
+
+arbalest
+
+
+
+ballistas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

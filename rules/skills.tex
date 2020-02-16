@@ -92,6 +92,7 @@ The combat skills are generally weapon skills or skills that allow for doing mor
 \begin{verbatim}
 sword          scf 1.0
 knife          scf 0.7
+rapier         scf 0.7
 axe            scf 0.9
 hammer         scf 0.8
 club           scf 0.7
@@ -106,12 +107,14 @@ crossbow       scf 0.7
 %sling          scf 1.0
 \end{samepage}
 
-Sword skill covers all blade weapons including knives, rapiers, etc. \\
-Knife is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons dam $\leq$3 are the primary use, with no mods. Blade weapons with damage 4 have mod-1, while damage 5 and 6 have mod-2. All heavier have mod-3. Thus sword skill can be trained from knife-3.
+\textbf{Sword} skill covers all blade weapons including knives, rapiers, etc. \\
+\textbf{Knife} is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons with strength requirements $\leq$3 are the primary use, with no mods. Blade weapons with str 4 have mod-1, while str 5 and 6 have mod-2. All heavier have mod-3. Thus sword skill can be trained from knife-3.
+\textbf{Rapier} is specialised at fancy rapier play. It's mod-3 to knife and sword.
 
 Some weapons are similar:\\
 The sword skill allows the use of all standard blades at no modification.\\
-Knife skill allows use of swords and rapiers at mod-3.\\
+Knife skill allows use of swords and rapiers at mod-3, unless stated otherwise.\\
+Rapier skill allows for knives and swords at mod-3, unless stated otherwise.\\
 Axe skill allows the use of: hammers mod-1, clubs mod-1.\\
 Hammer skill allows use of: clubs mod-1, axes mod-2.\\
 Club skill allows use of: hammers mod-2, axes mod-3.\\
@@ -1313,30 +1316,27 @@ The hero can take one extra step beyond declared movement by throwing himself on
 A character can for example extend his movement with 2sq by first going off balance then dive with a face plant. 
 
 
-\skill{Maneuver (cost 20) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
-
-
-\skill{Maneuver (cost 30) "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal for 3ap and slower normal defence actions, comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
-
-For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost +50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina.
-
-Fast Defence and Lightning Defence can be stacked together to create a defence that cost 2ap less than normal (to a minimum of 1ap) at mod-9 and costing 2 stamina.
+\skill{Maneuver (cost 30) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
 
 
 \skill{Maneuver (cost 15) "runaway reserve":} allows the hero to declare run or dash speeds even if he has below 33\% hp. He must declare 0ap and run away from the oppostition, GM discretion. He does not need to roll for stamina even if he has negative stamina to begin with, as long as he does not have negative stamina below -con. The stamina cost for the movement has to be paid as normal though.
 
 
-\skill{Maneuver (cost 15) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. And together with "diagonal squeeze" the Hero can move through a diagonal between a blocking corner and an enemy. Note that only one corner can be blocked, the opposing corner in the diagonal must be open, unless the Hero also knows the diagonal squeeze.
+\skill{Maneuver (cost 15) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. 
+
+Together with diagonal squeeze the Hero can move through a diagonal between a blocking corner and an enemy, or even two sharp corners.
 
 
-\skill{Maneuver (cost 15) "diagonal squeeze":} allows to move between two enemies across a diagonal which would otherwise be blocked by them. And together with "cornering" the Hero can move through a diagonal between a blocking corner and an enemy.
+\skill{Maneuver (cost 15) "diagonal squeeze":} allows for normal size Heroes to squeeze through a diagonal between two friendlies or objects with "round corners", just as if he was a halfling or goblin.
+
+Together with cornering the Hero can squeeze through a diagonal with one or two "sharp corners", for example between enemies, objects, or walls with blocked corners. This works even if there is actually no real gap between the corners other than the point where they meet. If there is blocked overlap between the corners, across the diagonal, the Hero can't pass.
 
 
 \skill{Maneuver (cost 20) "corner strike":} removes the mod-3 from attacking around a blocking sharp corner.
 
 
-\skill{Maneuver (cost 10) "anchor":} allows the Hero to firmly plant his feet and ignore 1 sq incoming knockback effect.\\
-anchor +1 cost +10xp ignore +1 knockback.\\
+\skill{Maneuver (cost 10) "anchor":} allows the Hero to firmly plant his feet and ignore 1sq incoming knockback effect.\\
+Upgrading to ignore +1 knockback costs +10xp. This can be purchased multiple times.\\
 Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
@@ -1351,7 +1351,7 @@ E.g: DD trains fast 4, changing M1 to M2, and thus EG3 to EG4.
 
 The cost of an extra gear starting from Maneuver speed is 15xp per extra movement point, from Walk speed is 10xp per extra movement point, and from Run speed is 5xp per extra movement point.
 
-% cost compare with fast:         EG:
+% cost, compare with fast:        EG:
 % M+1 32, M+2 128                 M+1 15, M+2 30
 % W+1 18, W+2  72                 W+1 10, W+2 20
 % R+1  8, R+2  32                 R+1  5, R+2 10
@@ -1375,7 +1375,7 @@ cost 20xp switching is a fast (2ap) action \\
 cost 30xp switching is a very fast (1ap) action
 
 
-\skill{Maneuver (cst 10) "SlowMo":} is the visually sooo cool technique of taking actions in a well coreographed and impressively slooow motion. Declare 3ap less than base maximum ap to get a mod+1 to all actions for the round. All in impressive Slow Motion.
+\skill{Maneuver (cost 10) "SlowMo":} is the visually sooo cool technique of taking actions in a well coreographed and impressively slooow motion. Declare 3ap less than base maximum ap to get a mod+1 to all actions for the round. All in impressive Slow Motion.
 
 One would think that any SlowMo attacks would be easier to defend against, but nooo. They are simply too cool. No effects other than the mod+1 to succeed.
 
@@ -2237,7 +2237,7 @@ Attacking a stacked target is mod-3, and fail-1 to fail-3 means hitting one of t
 % Stacking works perfectly fine with "guard", giving mod=0 to all angles.
 
 
-\skill{Ability cost 30xp ccf 1.2 "TronVol":} Heroes can meld together to form one large super critter. All Heroes in the TronVol merge must have the TronVol ability, and each TronVol merge target is a separate TronVol ability (does not incur extra ccf beyond the first.
+\skill{Ability cost 20xp ccf 1.2 "TronVol":} Heroes can meld together to form one large super critter. All Heroes in the TronVol merge must have the TronVol ability, and each TronVol merge target is a separate TronVol ability (does not incur extra ccf beyond the first.
 E.g: TronVol:\emph{PurplePanickler} is formed by the Heroes Purple Pete and Pinky Panickler, and is a malformed large hodgepodge monster with three legs, two arms, two heads, a tail, and some tentacles.
 
 Forming and splitting a TronVol monster takes 3r. Forming costs one mana from each Hero, but splitting is free. The Heroes can upgrade the TronVol monster to form faster by collectively spend xp: +10xp form/split in 2r, +20xp form/split in 1r.
@@ -2307,9 +2307,17 @@ Buying gut feeling to lvl 0 costs the 5xp ability cost and imposes ccf 1.2. Then
 %DONE: moved gut feeling from normal skills to abilities, since it gives absolute certainty of success if you use it, whereas luck, rabbits foot, etc only allow rerolls and are not certain.
 
 
-\skill{Ability cost 20xp + scf 5, ccf 1.2 "unfazed":} The character can make as many 45\degrees free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action and multiple 45\degrees can be spent for each turn. E.g: unfazed 5 allows for one 180\degrees turn and one 45\degrees turn in one round, or 3 45\degrees turns and one 90\degrees turn.
+\skill{Ability cost 30xp + scf 5, ccf 1.5 "unfazed":} The character can make as many 45\degrees free facing changes per round as his level of unfazed, ignoring initiative. Changing facing is a free instant interrupt action and multiple 45\degrees can be spent for each turn. E.g: unfazed 5 allows for one 180\degrees turn and one 45\degrees turn in one round, or 3 45\degrees turns and one 90\degrees turn.
 
 %DONE: moved unfazed from normal skills/maneuvers to abilities section. It was detracting from normal battle tactics depth when it was easy and inexpensive to not care about facing.
+
+
+\skill{Ability cost 50xp ccf 1.5 "fast defence":} for faster avoid, parry, deflect, etc defence actions. The defence costs 1ap less than normal for 3ap and slower normal defence actions, comes with mod-3, and costs 1 stamina. Yield and dodge have the same bonuses with fast defence as with normal defence actions.
+
+For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost +50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina.
+
+Fast Defence and Lightning Defence can be stacked together to create a defence that cost 2ap less than normal (to a minimum of 1ap) at mod-9 and costing 2 stamina.
+
 
 
 

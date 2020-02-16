@@ -604,28 +604,33 @@ infantry shield     abs 13, parry+3,
 
 \end{verbatim} \goodbreak \begin{verbatim}
 leather armour abs 1
-thick cloth    acrobatics mod-1
+thick cloth    str 1 (str penalties affect all actions)
+               dash-1
+               acrobatics mod-1
+               martial arts mod-1
+               sneak mod-1
+               spellcasting mod-1
                takes 2 rounds to put on or take off
 
 chain mail     abs 2 ring, scale, brigantine, etc
 scale mail     str 3 (str penalties affect all actions)
-brigandine     dex-1,
-               dash-1,
+brigandine     dex-1
+               run-1, dash-2
                per-1
                acrobatics mod-3
-               martial arts mod-1
-               spellcasting mod-1
+               martial arts mod-2
+               spellcasting mod-2
                sneak mod-3
                takes 3 rounds to put on or take off
 
-plate or       abs 3 plate armour of various sorts, incl helmet
-heavy scale    str 5 (str penalties affect all actions)
+plate mail or  abs 3 plate armour of various sorts, incl helmet
+heavy scale,   str 5 (str penalties affect all actions)
 h brigandine   dex-2, yield bonus -1
-               run-1, dash-2,
+               run-1, dash-3,
                per-2, vision-20%, cone vision -20% max 270 deg
                acrobatics mod-6, climb-1, jump-1
                martial arts mod-3
-               spellcasting mod-2
+               spellcasting mod-3
                sneak mod-4
                avoid mod-1
                max stamina mod-1
@@ -642,7 +647,7 @@ full plate     abs 4 full plate armour with full helmet
                acrobatics mod-9, climb-3, jump-3
                martial arts mod-6
                tackle mod+1
-               spellcasting mod-3
+               spellcasting mod-4
                sneak mod-5
                avoid mod-2
                max stamina mod-2
@@ -659,7 +664,7 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                acrobatics mod-12, climb-6, jump-6
                martial arts mod-9
                tackle mod+2
-               spellcasting mod-4
+               spellcasting mod-6
                sneak mod-6
                avoid mod-3
                max stamina mod-3

@@ -649,7 +649,7 @@ def rollGoblin():
     char.visArc = 180 + d90()             # 181-270 225
     char.visMode = "dusk"
     char.mana = r2d8()-4                  # -2 - 12   5
-    char.ap = 3 + int(d10() / 3)          #  3 -  6   2,3,3,2
+    char.ap = 3 + int(d10() / 4)          #  3 -  5   3,4,3
     char.xp = 80 + d20()                  # 81 -100  90
     # fixup
     char.w = max(char.m + 1, char.w)
@@ -703,6 +703,10 @@ def rollGoblin():
 
 #--------|---------|---------|---------|---------|---------|---------|---------|
 #       10        20        30        40        50        60        70        80
+
+
+print("\n\n\n")
+
 
 #roll humans
 for i in range(0, humans):

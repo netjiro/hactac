@@ -26,11 +26,20 @@ The rule set is here to \emph{help} create a fun game experience, not to kill it
 
 
 \phantomsection\addcontentsline{toc}{section}{introduction}
-\section*{hactac rules introduction}
-%-----------------------------------
+\section*{fundamental introduction: what, why, how}
+%--------------------------------------------------
 
-The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, hero quest, etc, but striving towards more interesting battles, not just dps and dice rally.
-Cooperation, movement, positioning, numbers of combatants, clever use of character skills, and ruthless warping of the game rules is more important than commonly found in most monster hack games of today and yesteryear.
+The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, hero quest, etc, but striving towards more interesting battles, not just dps and dice rally, and tying it together with role playing game style campaigns.
+
+This game is not for everyone, but it's designed to be easy to scale and tweak the complexity over a wide range. In it's simplest form it works well as a quick framework for quick gaming with very young kids. But it's primarily designed for deep tactical table top gaming set in a light hearted rpg environment.
+
+\
+
+\todo  player \& design description
+
+\
+
+Cooperation and coordination, movement, positioning, clever use of character skills, and ruthless warping of the game rules is much more important than commonly found in most monster hack games of today and yesteryear.
 
 Please, when reading and playing with this, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{then tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
 
@@ -116,7 +125,22 @@ At some point it's better to have automation assistance by simple scripting in d
 This is not a class based game and does not require a specific typical party makeup to function. Look for synergies in game style and tactics, but there are no "must have" classes or professions in a party composition. Consider: There are many more dimensions to the fighting here than in most regular tabletop and rpg games, allowing for more flexibility and larger option space. Positioning and map control is very important. Healing is slow and very expensive, not generally a mid battle possibility. Just these basic traits mean it plays very different from for example D\&D, and more like tactical tabletops such as Space Hulk and Descent.
 
 
+\section*{balance}
+%-----------------
+The fundamental design allows for a wide variety of characters to be "balanced" in the sense that the a lot of different types characters can have similar impact on the adventure at similar xp levels. They will play drastically different though and will not be equally potent against all types of enemies and encounters.
 
+When balancing encounters to your party you are in effect balancing your own play style of the monsters against your players' playstyle of their characters. The tactical depth of the game means it's next to useless to say that X of moster A and Y of monster B will be a good balance against four heroes at around 300xp. It totally depends on how evil and clever tactically you want, \emph{and can}, play versus your players. Again, the old Space Hulk and Descent games were totally different games if your genestealer opponent had IQ 85 or 145, or if your Descent overlord were nasty, clever, and really knew the game versus just playing for coffee, cake, and the social time.
+
+Games with a fixed balance, threat rating, etc, essentially and fundamentally says: \emph{No matter what you do, this is an approxiate balance}. For me that's a red flag and a symptom of shallow game design.
+
+When you start playing with your player group, you'll learn how they play and what opposition they can manage with their current Heroes, and adapt. You'll need to think for yourself here.
+
+
+\section*{let the players help}
+%------------------------------
+Bring the players into the decisions on rules, skills, spells, equipment, mutations, gear, monsters, bosses, etc. My todo list is hundreds of items long, many of which are ideas from players, and many of the skills, spells, items, etc are at least to some part suggested, built, or thought up by players.
+
+Be careful with the combinatorial complexity. Adding things easily creates combinations that become game breaking OP. Usually it's possible to tweak and twist the details so it works, but sometimes it's just better to skip it. The game is simply not fun if there are \emph{obvious} selections and combinations. Always strive to present nothing that are simply and clearly better than already existing components without having downsides and tradeoffs.
 
 
 
@@ -502,9 +526,9 @@ money ( g s c)
 
 \item[dex] Dexterity is the character's balance, agility, coordination, precision, etc. It determines if he remains standing after a tackle, if he falls when running over the rubble, how fast weapons he can use, etc.
 
-\item[con] Constitution is the general physical sturdiness and resilience of the character. It determines his chances of staying awake and alive when his hitpoints are at or below zero, as well as his resistance against poisons, chances of continuing to run or attack when out of stamina, and the base distance he can travel in a day.
+\item[con] Constitution is the general physical sturdiness and resilience of the character. It determines his chances of keeping running and fighting when getting tired, his chances of staying awake and alive when he gets lethally wounded, as well as his resistance against poisons, and the base distance he can travel in a day.
 
-\item[int] Intelligence is the reasoning capacity, cleverness, schooling and general knowledge of the character. It determines his chances of figuring things out, putting clues together to reach a conclusion, etc. It also limits how easily he can learn spells.
+\item[int] Intelligence is the reasoning capacity, cleverness, schooling and general knowledge of the character. It determines his chances of figuring things out, putting clues together to reach a conclusion, recalling some piece of knowledge, etc. It also determines how easily he can learn spells.
 
 \item[psy] Psyche is the mental strength and resilience of the character. It determines his chances to avoid panicking when faced with scary stuff, of maintaining control over his faculties when opposing wizards try to manipulate him, etc.
 
@@ -1526,6 +1550,11 @@ A normal size corpse gives a square a mod-3 poor terrain modifier. Each addition
 Shoving or dragging a corpse 1sq is usually a 1r action, with corpse kick it's faster.
 
 
+\subsection*{assisting with actions}
+%-----------------------------------
+Some actions and skill checks for the character can potentially be assisted by other characters. The assistants roll and add their success diff/3 as positive mod to the primary Hero's roll. GM discretion regarding who many can assist, how long time they have, etc.
+% think D&D have something similar, calling it skill challenge or some such
+
 
 
 
@@ -1545,6 +1574,8 @@ Shoving or dragging a corpse 1sq is usually a 1r action, with corpse kick it's f
 
 
 Wave'em hands and mumble something mysterious. Sure to transmogrify your internal mana to sparkling effects of death and mayhem afflicting friends and foe alike.
+
+Sorcerers, wizards, mages, witches, and warlocks bend reality to their will by force of mind, concentration, intricate and arcane knowledge, calling upon ancient magical compacts and constructs that echo through the fundament of the world, and so on. Or perhaps they just stroke the ego of mad gods.
 
 
 \subsection*{When and how spells can be cast}
@@ -1593,10 +1624,28 @@ This can be important. E.g: The wizard casts a spell which takes one round to ca
 This option is available also for spells that take less than 1r to cast.
 
 
+\subsection*{Keeping spells active}
+%----------------------------------
+Most spells with duration must be kept active by force of will, concentration. Unless otherwise specified, each active spell requires one point of psy dedicated to keeping it from unraveling and dissipating. That point of psy is deducted from the caster's psy while the spell is active.
+
+Some spells with duration do not require any psy to keep active, while others can require several psy, or one or more int, or str, con, dex. Some burn stamina or mana, etc.
+
+Deviation from the norm is noted as the maintenance requirement of skill.
+
+
 \subsection*{Regaining mana}
 %---------------------------
 All mana is regained when the caster has rested fully from a good night's sleep. Some dungeons allow for casters to regain some mana when resting fully a number of turns, or when spending time at a certain location.
 Wise wizards and skilled sorcerers alike sometimes carry mana restoring potions, crystal ball batteries, power staffs, etc, when they go hunting for gold and glory.
+
+\
+
+\noindent OR --- \todo regain continuous ?
+
+\
+
+\noindent Mana is recovered over time based on location and psy. Normal locations have a flow of raw magic that feeds mana at 1/h. Some places 1m/10r, some drain mana?
+Perhaps some sort of meditation to regain mana faster ?
 
 
 \subsection*{Casting when dry}
@@ -1645,30 +1694,31 @@ Heavier armour types also make casting more difficult.
 Use "trusty old X", see below, to be able to cast while holding objects in hand.
 
 
-\subsection*{The wizards staff}
-%------------------------------
-The wizard can choose to have a "trusty old staff" in his hands without giving penalties, and can even in some cases act as a security blanket and give a mod+1. Some wizard has a sword instead of a staff. Fidgety Fredrick had a tower shield he loved so much he cast better with it than without.
+\subsection*{The wizard's staff}
+%-------------------------------
+The wizard can choose to have a "trusty old staff" in his hands without incurring penalties for not having his hands free. Some wizard has a sword instead of a staff. Fidgety Fredrick had a tower shield he loved so much he cast better with it than without.
 
-The "trusty old x" is a specific weapon or other large item, and takes time and xp to replace or change.
+The "trusty old x" is a specific weapon or other large item, which the wizard has invested time and xp in. Thus it takes time and xp to replace if lost, or change. This way a wizard can cast most spells without penalties even if he is carrying weapons. Making an item a "trusty old x" with mod=0 costs 5xp. 
+In some cases the wizard can invest more time and xp to have the item act as a security blanket, giving a mod+1 when casting. Making an item a "trusty old x, mod+1" costs another +10xp.
 
-This way a wizard can cast most spells without penalties even if he is carrying weapons. Making an item a "trusty old x" with mod-0 costs 5xp. Making an item a "trusty old x" with mod+1 costs another +10xp.
+A wizard can have more than one item at the same time, but the max bonus is +1. Just don't loose them, because then the xp are gone.
 
-A wizard can have more than one item at the same time, but the max bonus is +1. Just don't loose them, because then the xp are gone...
+\
+
+Optional: It can be fun to limit the creation or replacement speed of trusty old items. Let's say the wizard can't just caugh up 15xp directly, but has to spend 5xp first, then go on an adventure with the staff, then the other 10xp for the mod+1.
+
+Perhaps even force him to play one adventure without the "trusty old" status and have mod-1 before he can spend the first 5xp to mod=0.
+ 
+ 
 
 
 \subsection*{The paladin's armour}
 %---------------------------------
-Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard's staff.
-
+Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard's staff. 
 Or the paladin can get the tank skill to reduce or cancel the armour penalties that way.
-
 Don't forget to also pay "trusty old" xp to cancel the mods from sword and shield...
 
-
-
-
-
-
+E.g: A paladin in full plate with tank 4 has a spellcasting mod from his armour at -2. So he spends 2*5=10xp to get it to mod=0 and another 10xp for the mod+1. Then he also have mods for his sword and shield, so he spends another 5xp for the sword and 5xp for the shield. He has now spent a total of 30xp on his equipment to have a mod+1 when casting spells.
 
 
 
@@ -1754,8 +1804,40 @@ Either roll find/per rolls hidden when needed so that the players won't notice, 
 I prefer asking for rolls in most situations, then roll hidden every now and then anyway.
 
 
-\subsection*{Playing with young kids}
-%------------------------------------
+\subsection*{Role Playing vs Tactical Optimisation}
+%--------------------------------------------------
+Generally: role playing limits tactical optimal planning and behaviour. Make sure you've discussed this with your group so you all know what level of rp vs tactics you're all comfortable with. This also involves what level of metagaming and information leakage you have across the table, battle map, or voice chat.
+
+\
+
+\noindent \emph{Know your players. Discuss in advance. Find common ground.}
+
+\
+
+In the most severe option on one side you can use individual fog of war and vision for each Hero, and insist that all players share information of the battle map \emph{in character} and time what they say into actions and rounds for their Hero. Remember that it's possible to shout and murder at the same time. This is definitely doable with some tools and it can be a whole lot of fun, but in my experience not what most people prefer or have the most fun with.
+
+The other extreme is the shared battle map and open collaborative reasoning between all players without time limits for every round and individual action. This can be a lot of fun and very social, but some players will zone out and participate less. It tends to lead to where one or a small clique of players mastermind the whole party, essentially just giving suggestions or orders across the table or chat, and the rest of the players just executing.
+
+Most groups quickly find common ground naturally, but be aware of the issue and discuss.
+
+
+%\subsection*{Have the players narrate assisted actions}
+%%------------------------------------------------------
+%Fun if the players argue why and how they use their skills can roll for assist
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% Y O  U N G   K I D S
+%---------------------
+
+\phantomsection\addcontentsline{toc}{section}{young kids}
+\section*{Playing with young kids}
+%---------------------------------
 We've successfully played with kids as young as five years old, and without any previous tabletop or role playing experience. It's enough that they can count to 10, add and subtract a bit. So, clever kids, but still.
 
 \
@@ -1783,6 +1865,7 @@ I drew small paper cards of the weapons and equipment, with corresponding skill 
 
 
 
+
 %-------------------------------------------------------------------------------
 % T A B L E T O P
 %----------------
@@ -1792,6 +1875,20 @@ I drew small paper cards of the weapons and equipment, with corresponding skill 
 %------------------
 Not originally designed for actual physical tabletop gaming, we've run both simple and fairly complex versions of the game on physical tabletop, especially when playing with young children.
 A few sheets of paper, pencil, eraser, and a small objects are all that's needed. Though much more impressive with cool terrain, props, and minis.
+
+
+\subsection*{markers and minis}
+%------------------------------
+With markers it's quick and easy to keep track of the character's current stats. Suggest using small tokens like coins, plastic bits, paper balls, whatever of various colour, size, shape to represent: mods, mp, ap, hp, stamina, mana, pain, stun, base mods, duration counters, etc.
+
+Keep three separate areas:\\
+per round accounting: mods, mp, ap\\
+persistant status: hp, stamina, mana, pain, stun, etc\\
+the token pool, separate per character to have it close at hand.
+
+Each round the players take mp, ap, and mods, so that should be quick and clear without risk of touching and disrupting the heaps of hp, stamina, mana, etc. So \emph{keep them separate}.
+
+I suggest front loading hp, stamina, mana, so that the pools are filled with "nice tokens" when they are whole and rested, and getting smaller and smaller as time goes by. That way it's easy to see when someone is getting into risky situations: His heaps are getting uncomfortably small.
 
 
 \subsection*{Simplified tabletop light and vision}
@@ -1824,7 +1921,7 @@ It's also reasonably quick to import maps and set vision blocking, as well as ma
 
 
 \subsection*{Maptool light and vision}
-%-----------------------------------------------
+%-------------------------------------
 Set vision range and arc for each character. I've also built standard versions for the various typical npcs.
 
 Light condition multipliers should be set as follows:\\

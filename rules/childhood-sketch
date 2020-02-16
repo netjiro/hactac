@@ -1,13 +1,12 @@
-village childhood  15xp
+village childhood  XXxp
 
-brawl   1d3         2      4
-avoid   1d3         3      7
-jump    1d3         2      4
-climb   1d3         2      4
-swim    1d3         2      4
-sneak   1d3         2      4
-----------------------------
-                   13     27
+brawl       1d3         2      4
+avoid       1d3         3      7
+jump        1d3         2      4
+climb       1d3         2      4
+sneak       1d3         2      4
+--------------------------------
+                       11     23
 yield
 off balance
 
@@ -15,13 +14,13 @@ off balance
 
 farmers childhood   
 
-axe     1d3         3      8
-ride    1d3         3      4
-animal cmd
-avoid   1d3         3      7
-jump    1d3         2      4
-climb   1d3         2      4
-----------------------------
+axe         1d3         3      8
+ride        1d3         2      4
+animal cmd  1d3         2      4
+avoid       1d3         3      7
+jump        1d3         2      4
+climb       1d3         2      4
+--------------------------------
                    13     27
 yield
 off balance

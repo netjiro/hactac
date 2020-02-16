@@ -19,6 +19,21 @@ omvänd kronologisk ordning av TODO items
 
 
 
+
+
+200213: PIN!
+TODO: change weapon and shield abs so they actually break more often
+      makes it relevant to have deflect, and means good to carry spares and
+      setting up a base when exploring in a dungeon etc
+      e.g: sword dam=str abs=dam
+-          axe   dam=str+1 abs=dam-2
+
+
+200213: PIN!
+TODO: build starter childhoods, some basic skill sets:
+-     1d3 for 0.5 skills and 1d2 for 1.0 skills
+
+
 200204: PIN!
 TODO: move to milestone xp payouts + session xp
       where session xp are deducted from milestone xp
@@ -29,12 +44,13 @@ TODO: move to milestone xp payouts + session xp
 
 
 
-200213:
-TODO: change weapon and shield abs so they actually break more often
-      makes it relevant to have deflect, and means good to carry spares and
-      setting up a base when exploring in a dungeon etc
-      e.g: sword dam=str abs=dam
-           axe   dam=str+1 abs=dam-2
+
+
+
+
+200214:
+TODO: create token overlay icon state "undeclared" : gray hourglass ?
+      set when the token has not declared both movement and action points
 
 
 200213:
