@@ -1246,15 +1246,13 @@ Opportunity does not trigger for the attacking character when the target charact
 
 E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's right to react. PP parries and yields and moves away another step. AA can't claim opportunity from PP leaving base contact, but DD can since it's not DD's attack that triggered PP's rigth to react action.
 
-Note: Opportunity does not cover the same situation as intercept does, since intercept only applies to targets not engaged in melee with the Hero, while opportunity only applies to targets already engaged in melee with the Hero.
-
 
 \skill{Maneuver (cost 15) "intercept":}
 Triggers the right to react when someone not engaged in melee is moving into melee range (incl reach if relevant). The Hero can choose where in the movement to intercept if more than one movement squares are within melee range.
 
-If an attacking opponent without \emph{intercept} moves into melee range to attack, the intercepting Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
+If an attacking opponent without intercept moves into melee range to attack, the intercepting Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
 
-Note: Intercept does not cover the same situation as opportunity does, since opportunity only applies to targets already engaged in melee with the Hero, while intercept only covers targets passing by without being engaged in melee.
+Intercept cannot interrupt an incoming charge unless the intercepting hero has higher initiative than the charging attacker.
 
 
 \skill{Maneuver (cost 5) "yield":}
@@ -1565,6 +1563,11 @@ lvl 3 cost +10xp: loot in 0ap instead of 1ap, long loot at 20\% of time
 If the attempt fails the character stops and the door remains closed. The Halted Hero must pass a dex roll to not fall down.
 
 
+\
+
+\
+
+\todo fix aim crap: half aim, small aim, tiny aim, micro aim, critical aim
 
 % TODO: fix the aim crap
 %       it doesn't work well
@@ -1588,6 +1591,13 @@ If the attempt fails the character stops and the door remains closed. The Halted
 %The aimed attack is a long action and takes three extra full rounds just for the aiming, giving a mod+3, and it requires a success+12 or better to hit the aimed at area, otherwise it is a regular hit or miss.
 %
 %The micro aim maneuver requires the character to also have the tiny aim maneuver. Optional: if it is a success [+9,+11] then it can be treated as a successful tiny aim instead of just a regular hit, and so on to small or half aim.
+
+\
+
+\todo fix maneuver critical aim once the aim stuff has been fixed
+%\skill{Maneuver (cost 10) "critical aim":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
+
+
 
 
 \closeskillslist
@@ -1728,20 +1738,16 @@ A fast+1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast+2 (1ap).
 
 Any attack hit on a roll of "1" can do extra damage if the hero then passes a second skill test. The second skill test is modified just like the first one but doesn't cost any ap, stamina, etc. It's just a roll to determine if the critical damage happens.
 
-The Hero must declare a critical damage attempt, costing 1 stamina, after he has rolled the first "1" to attempt the second roll for the critical damage check.
+After rolling the first "1", the Hero must declare a critical attempt, and pay 1 stamina, to get the second roll for the critical damage check.
 
-Depending of the success level of the second roll the damage is increased:\\
+Depending on the success level of the second roll the damage is increased:\\
 fail : it's just normal damage, no critical damage \\
-success+0 : the damage roll is 100\% + normal damage roll \\
-good success+3 : the damage roll is 200\% + normal damage roll \\
-very good success+6 : the damage roll is 400\% + normal damage roll \\
-perfect success+9 : the damage roll is 700\% + normal damage roll
+success+0 : the damage roll is 100\% + normal damage roll, min 10+roll \\
+good success+3 : the damage roll is 200\% + normal damage roll, min 20+roll \\
+very good success+6 : the damage roll is 300\% + normal damage roll, min 30+roll \\
+perfect success+9 : the damage roll is 500\% + normal damage roll, 50+roll
 
 The critial damage roll stacks with accurate, consistent, etc as normal. And it stacks with critical aim.
-
-
-\TODO fix maneuver critical aim once the aim stuff has been fixed
-%\skill{Maneuver (cost 10) "critical aim":} The character can aim for and hit vital areas and gain higher damage. A 2x damage requires a successful "small aim" maneuver. A 3x damage requires a successful "tiny aim" maneuver. A 4x damage requires a successful "micro aim" maneuver.
 
 
 \skill{Maneuver (cost 20) "stronk tank":} 
@@ -1915,6 +1921,13 @@ cost +10xp will remove the mod-3 penalty.
 
 
 \skill{Ability cost 20xp ccf 1.0 "Angry":} The character gets angry when wounded. Each active pain point mod gives him dam+1 in melee attacks and str+1 to strength tests (not damage bonus). Pain that is countered by pain killers, painless, etc is not active pain. Pain that is countered by veteran is still active pain.
+
+
+\skill{Ability cost 20xp ccf 1.0 "Furious Grief":} The Hero really likes his friends and gets furious when they are killed.\\
+If a hireling or similar npc dies: He'll get a mod+1 to all actions and run+1 dash+3 for 10+1d10 rounds.\\
+When a pc dies: He'll get mod+3 to all actions, maneuver+1 walk+2 run+3 dash+4, and dam+3 for 20+1d10r.
+
+The ability will not go into effect if the Hero knows his friend will be able to come back from the dead.
 
 
 \skill{Ability cost 20xp ccf 1.0 "Divine Retribution":} The character has a vengeful god on his side. When he dies his dying corpus will channel the vengeance of his angry god in form of a divine blast that gives penetrating damage to everyone within range 3. Damage equals his total XP/50. The corpse is mod+3 to all kinds of revive after the divine blast, thanks to the remaining empowerment of the god's energy.
@@ -2209,13 +2222,26 @@ cost 50xp: quadruple, quintuple, etc for those who just can't stop growing more 
 E.g: After the successful rescue of Prince CreamCup, the two remaining Heroes rest at the Golden Flagon inn, wallowing in their riches. They lost two of their friends in the Dragon's cave; Wandering Wally was spiked to death by a javelin trap and Fat Fabian was eaten by the Dragon. They glance up from their drunken stupor just in time to see Fat Fabian limping up to the bar. He is wearing nothing but rags and his stupid feathered cap and is sporting some very impressive bite marks the size of a dragon's maw. \emph{How the Hell} could he have survived being eaten by the Dragon?
 
 
+\skill{Ability cost 100xp ccf 1.2 "Fate IoU":} The Hero can buy an IoU from the Gods of Fate. This can be burned as a \emph{one time} cash in to drastically change reality, e.g: The Hero dies, but comes back, like with Cockroach, crawling out of the sewers a few days later. Or it can mean the big bad boss just forgot to load his blunderbuzz of certain doom, or forgot his sword of decapitation at home. Or perhaps the Hero didn't choose the left door after all, perhaps he choose the right door 3r ago. GM discretion.
+
+Each Fate IoU the character buys applies the 1.2 ccf!
+% Fate Point, fatepoint
+
+
 \skill{Ability cost 30xp ccf 1.2 "Black Knight"} The Hero doesn't take mods or movement limitations from low hp. The \emph{Black Knight} ability can be bought three times, each costing 30xp (but does not increase ccf), to ignore the 66\%, 33\%, and 0 hp mods and run/dash limitations. \emph{"'tis but a scratch."}
 % potential other names ?
 %\skill{Ability cost 30xp ccf 1.2 "'tis but a scratch"}
 %\skill{Ability cost 30xp ccf 1.2 "just a flesh wound"}
 
 
-\skill{Ability cost 20 + scf 1.0 ccf 1.2 "Sixth Sense":} The Hero has the ability to sense things that cannot otherwise be detected, and intuit information that cannot otherwise be known. GM discretion. Some examples:
+\skill{Ability cost 50xp ccf 1.5 "Furious Determination":} The character gets more determined as he gets more severly wounded. The Hero doesn't take any mods from low hp, either to actions or movement, instead he gets positive bonuses from furious determination. Bottled Fury can be bought three times, each costing 50xp (but does not increase ccf), to gain bonuses when below 66\%, 33\%, 0hp, as follows:\\
+$leq$66\%: ap+1 mod+1 dash+1\\
+$leq$33\%: ap+2 mod+2 dash+2 run+1\\
+$leq$0hp: ap+3 mod+3 dash+3 run+2 walk+1
+% aka "bottled fury" "furious" , name play from "angry"
+
+
+\skill{Ability cost 20xp + scf 1.0 ccf 1.2 "Sixth Sense":} The Hero has the ability to sense things that cannot otherwise be detected, and intuit information that cannot otherwise be known. GM discretion. Some examples:
 
 Knowing where to look: The key is hidden somewhere in the room. Sixth Sense has a radius equal to the level. Standing close enough and passing a roll will indicate which squares to concentrate on for the search. GM should probably only allow one roll per "item" or situation. Alternatively, if not in range but still passed the roll, then indicate a larger region as possible location.
 
@@ -2237,16 +2263,16 @@ Attacking a stacked target is mod-3, and fail-1 to fail-3 means hitting one of t
 % Stacking works perfectly fine with "guard", giving mod=0 to all angles.
 
 
-\skill{Ability cost 20xp ccf 1.2 "TronVol":} Heroes can meld together to form one large super critter. All Heroes in the TronVol merge must have the TronVol ability, and each TronVol merge target is a separate TronVol ability (does not incur extra ccf beyond the first.
+\skill{Ability cost $\geq$20xp ccf 1.2 "TronVol":} Heroes can meld together to form one large super critter. All Heroes in the TronVol merge must have the TronVol ability, and each TronVol merge target is a separate TronVol ability (does not incur extra ccf beyond the first.
 E.g: TronVol:\emph{PurplePanickler} is formed by the Heroes Purple Pete and Pinky Panickler, and is a malformed large hodgepodge monster with three legs, two arms, two heads, a tail, and some tentacles.
 
 Forming and splitting a TronVol monster takes 3r. Forming costs one mana from each Hero, but splitting is free. The Heroes can upgrade the TronVol monster to form faster by collectively spend xp: +10xp form/split in 2r, +20xp form/split in 1r.
 Forming TronVol requires that all constituent heroes are present for the merge.
 
-When forming the TronVol monster, calculate current hp, stamina, and mana as the average percentage of the Heroes' current values. The monster forms with no pain mods. When splitting again, push half of the monster's taken damage onto the heroes, collectively, and let them argue on how to split it. None of the monster's pain mods are transferred to the Heroes. The Heroes of course keep all the damage and pain they had before forming the TronVol monster. If the monster's stamina and mana is lower when splitting than when it was formed, then push half the diff collectively onto the Heroes.
+When forming the TronVol monster, calculate current hp, stamina, and mana as the average percentage of the Heroes' current values. The monster forms with no pain mods. When splitting again, push half of the monster's taken damage onto the heroes, collectively, and let them argue on how to split it. None of the monster's pain mods are transferred to the Heroes. The Heroes keep all the damage and pain they had before forming the TronVol monster. If the monster's stamina and mana is lower when splitting than when it was formed, then push half the diff collectively onto the Heroes, same as hp.
 
-The TronVol monster has stats something like the following, and roll to add/deduct points here and there to give it some variation.
-\small\begin{verbatim}
+The TronVol monster has stats something like the following, adjust as fun and relevant, and roll to add/deduct points here and there to give it some variation.
+\begin{samepage} \small \begin{verbatim}
 str:      sum(heroes)
 dex:      avg(heroes) +1
 con:      max(heroes) +3
@@ -2254,7 +2280,7 @@ int:      avg(heroes) +1
 psy:      max(heroes) +1
 per:      max(heroes) +1
 cha:      min(heroes) -3
-
+\end{verbatim} \ \begin{verbatim}
 hp:       sum(heroes) *1.5
 abs:      sqrt(number of heroes) +1
 m:        min(heroes) +1
@@ -2262,20 +2288,22 @@ w:        min(heroes) +2
 r:        min(heroes) +3
 d:        min(heroes) +4
 sta:      max(heroes) * sqrt(number of heroes)
-vis,arc:  avg(heroes)
+vis,arc:  max(heroes) +5r +60arc
 mana:     sum(heroes)
-ap:       max(heroes) -1
-
+ap:       max(heroes) +1
+\end{verbatim} \ \begin{verbatim}
 pain threshold: 3 + (number of heroes)
-
+\end{verbatim} \ \begin{verbatim}
 starting skill values:
 avoid,dodge:  min(heroes) -3, and yield/dodge bonus 0
 double bonus: sqrt(number of heroes) *3
 bonus to triple etc is 66% of double, triple, etc successively
 other skills: max(heroes)
-\end{verbatim}\normalsize
+\end{verbatim} \end{samepage} \normalsize
 
-TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting received xp the TronVol constituent heroes count separately as usual but the TronVol monster does not count as a separate share. However, it gets an xp share by itself, bonus xp. E.g: Three heroes split 12xp to 4xp each, and their TronVol also gets 4xp even if it did not dilute the xp split. But TronVol only gets it's extra xp if all it's heroes get xp, and even if it has not been formed and active during the situation for which the xp is rewarded. GM discretion.
+TronVol monsters can learn abilities and skills that does not come from the constituent Heroes. The Heroes pay collectively. When splitting received xp the TronVol constituent heroes count separately as usual but the TronVol monster does not count as a separate share. However, it gets an xp share by itself. Free bonus xp. E.g: Three heroes split 12xp to 4xp each, and their TronVol also gets 4xp even if it did not dilute the xp split. But TronVol only gets it's extra xp if all it's heroes get xp, and even if it has not been formed and active during the situation for which the xp is rewarded. GM discretion.
+
+The TronVol base cost is $\geq$20xp: The total cost paid collectively by the forming Heroes is directly available to spend on skills for the TronVol monster. E.g: 3 Heroes paying 25xp each have 75xp to spend on for example martial arts for their huge clawed monster, giving it martial arts 9 since one of the constituent Heroes had martial arts 5 already.
 
 For the general shape, either find something fun and suitable, or roll up some random body: humanoid, lizard, bear, demon, cryptomythologial mixture, etc. Roll for extra/fewer arms, tails, horns, claws, tentacles, fur, scales, etc.
 
@@ -2284,18 +2312,17 @@ Adding heroes to an existing TronVol monster constellation is possible, and modi
 Use larger tokens for merged TronVols. E.g: Maptool: with 2-5 merged heroes set large size: 2x2, with 6-11 heroes set 3x3, and for 12+ set 4x4.
 
 
-\skill{Ability cost 30xp ccf 1.5 "Ghoul":} Mmm, Braiiiiin... Sooo Tasty!
+\skill{Ability cost 30xp ccf 1.5 "Ghoul":} \emph{Mmm, Braiiiiin... Sooo Tasty!}
 The Hero(?) can regenerate hp by eating the corpses of his enemies, (and friends, we're not picky). For each 3r spent eating the Ghoul will heal 1hp every 10r after completing the meal. A meal cannot be larger (in hp healing points) than the minimum of the Ghoul's con and one quarter the original hp of the victim. A new meal cannot be started before the previous has been depleted by healing the prepared hp.
 
 The corpses must be fresh. The meal value of the corpse is decreased by one for every round it's been dead before the Ghoul starts eating.
-
-And, as they say, \emph{You Are What You Eat}, so the stats of the Ghoul will change based on the source of food. For every meal each stat of the Ghoul is reduced or increased by one in the direction towards the original stats of the victim. The effects last one day per hp meal size. For multiple meals the effects stack to a maximum of +/-3.
 
 Upgrades:\\
 Fast Food (cost 10xp): eating each "hp prep" in 2r instead of 3r.\\
 Live Food (cost 20xp): eating live food also restores one stamina and one mana in addition to the hp regeneration, at the same speed.\\
 Old Food (cost 10xp): can get full meal value from corpses which are up to a day old. \\
-Fast Metabolism (scf 5): each level reduces the healing interval by one, to a minimum of 3r/hp.
+Fast Metabolism (scf 5): each level reduces the healing interval by one, to a minimum of 3r/hp.\\
+You Are What You Eat (cost 5xp): The stats of the Ghoul will change based on the source of food. For every meal each stat of the Ghoul is reduced or increased by one in the direction towards the original stats of the victim. The effects last one day per hp meal size. For multiple meals the effects stack to a maximum of +/-3.
 
 
 \skill{Ability cost 5xp + scf 4.0, ccf 1.2 "gut feeling":} Before every new session/day/dungeon the character can roll and store a number of rolls equal to his level of gut feeling. These can then be used instead of making a new roll when one is called for. Each stored roll can only be used once. \emph{Storing} a roll costs no xp, but \emph{using} a gut feeling stored roll costs 1xp. Gut feeling is an instantaneous 0ap interrupt effect.

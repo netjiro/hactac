@@ -15,7 +15,7 @@ lots of comments in swedish, will not translate
 %       10        20        30        40        50        60        70        80
 NEW: ---------------------------------------------------------------------------
 
-omvänd kronologisk ordning av TODO items
+reverse chronological order of TODO items
 
 
 
@@ -46,6 +46,23 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+
+200218:
+TODO: change mana recovery ?  Or have as alternate mana recovery
+      
+
+200216:
+TODO: ? remove free 45deg turns with actions ?
+      ! set ap cost:
+      1ap 45deg
+      2ap 90deg
+      3ap 135-180deg
+      for hex:  1ap 60, 2ap 120, 3ap 180
+      Will force more planning and consequences, will make facing more important.
+      will start using mp to turn?
+      1mp = free 360 turn
+      any turn free with any movement, but not free if move-action-turn
+      free if move-turn-action or turn-move-action, or action-mt / -tm
 
 
 200214:
@@ -1040,3 +1057,10 @@ DONE: update subsection*{Moving} Stutter Step to reflect that each initiated
       movement lowers initiative just like a normal action
 200206:
 DONE: update "meditate" after stamina changes
+200218:
+DONE: smooth casting spells
+      pay more when learning the spells to allow to cast without drawing stamina
+      when drawing mana ?
+      That way it's an optional
+      can re-learn spell and count in the .33 heavy casting learning xp onto the
+      new 0.50 smooth casting skill level for casting without drawing stamina.

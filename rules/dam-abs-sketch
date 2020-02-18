@@ -217,7 +217,7 @@ baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-4
                every second attack in a round costs no stamina
                poke: mod-1 dam-1 pen+2
 
-bastard sword  dam 8/10, abs 10, reach 1 mod-6, finesse 5
+bastard sword  dam 8/10, abs 9, reach 1 mod-6, finesse 5
 1h/2h          str 8/8, max dam+3
                poke: mod-1 dam-1 pen+1, max pen+2
                swing: slow-1 mod-1 dam+3 todefend+2
@@ -281,15 +281,15 @@ lochaber       \todo
 Pick axes and tunneling axes are tools that also work reasonably well for 
 destroying opponents as well as rocks.
 
-pick axe       dam 4, pen 4, parry-4, toavoid+2, finesse 2
+pick axe       dam 4, pen 4, abs 4, parry-4, toavoid+2, finesse 2
 2h             str 4, slow 4ap, max dam+2 pen+4
                double damage against shields, doors, objects, stone, etc
 
-tunnel axe     dam 7, pen 4, parry-5, toavoid+3, finesse 2
+tunnel axe     dam 7, pen 4, abs 5, parry-5, toavoid+3, finesse 2
 2h             str 7, slow 4ap, max dam+3 pen+4
                double damage against shields, doors, objects, stone, etc
 
-shield breaker dam 8, pen 2, parry-6, toavoid+1, finesse 3
+shield breaker dam 8, pen 2, abs 6, parry-6, toavoid+1, finesse 3
 2h             str 6, slow 4ap, max dam+2 pen+4
                double damage against shields, doors, objects, etc
 
@@ -307,11 +307,11 @@ small staff    dam 2/3, abs 3, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
 1h/2h          str 4/3, max dam+1
                2h dex 4: fast 2ap dam-1
 
-plain staff    dam 4/5, abs 5, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
+plain staff    dam 4/5, abs 4, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
 1h/2h          str 6/5, max dam+1
                2h dex 6: fast 2ap dam-1
 
-large staff    dam 6/7, abs 7, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
+large staff    dam 6/7, abs 6, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
 1h/2h          str 8/7, max dam+1
                2h dex 8: fast 2ap dam-1
 
@@ -346,7 +346,7 @@ large spear    dam 7/7 pen 0/1, abs 6, parry-1/+1, finesse 4/6, reach 1 mod-3
 
 -
 
-infantry spear dam 6/7 pen 0/1, abs 9, parry-1/+1, finesse 3/5, reach 1 mod-3
+infantry spear dam 6/7 pen 0/1, abs 7, parry-1/+1, finesse 3/5, reach 1 mod-3
 1h/2h          str 7/7 (max dam+1 pen+3)
                slash: mod-2
 
@@ -458,26 +458,59 @@ long chain flail
 
 -
 
+Shields are in the way from ranged attacks $\pm$45degrees from the wielder's
+facing and impose a mod-X tohit, applied to the ranged shooter's tohit roll.
+This costs nothing for the shield bearer.
+The shield bearer can hide behind his shield for 3ap, and is then better 
+protected from ranged attacks. The mod persists until the end of the round, 
+or until the character takes movement or actions that make it impossible to 
+hide behind the shield, GM discretion.
+
+Heavy shields require str+2 and get abs+50\%.
+
+Plated shields are slow+1 (4ap) and get abs+100\%.
 
 
-buckler        \todo
+buckler        abs 3, parry+1
+               str 0
+               Ranged attacks are mod=0 when in the way, 
+               and mod-1 when hiding behind it.
 
-small shield   
+small shield   abs 5, parry+2
+               str 2
+               Ranged attacks are mod-1 when in the way, 
+               and mod-2 when hiding behind it.
 
-plain shield   abs 10, parry+3
-               str 6, 
+plain shield   abs 7, parry+3
+               str 4
+               Ranged attacks are mod-2 when in the way, 
+               and mod-4 when hiding behind it.
+               tackle+1
 
-large shield
+large shield   abs 9, parry+4
+               str 6
+               Ranged attacks are mod-3 when in the way, 
+               and mod-6 when hiding behind it.
+               tackle+2
 
-tower shield
+tower shield   abs 11, parry+5
+               str 8
+               Ranged attacks are mod-4 when in the way, 
+               and mod-8 when hiding behind it.
+               tackle+3
 
 infantry shield
+               abs 10, parry+3
+               str 7
+               Ranged attacks are mod-3 when in the way, 
+               and mod-6 when hiding behind it.
+               tackle+2
 
-
-
-
-
-
+blocker        abs 14, parry+6
+2h             str 6
+               Ranged attacks are mod-6 when in the way, 
+               and mod-9 when hiding behind it.
+               dash-4, run-2, walk-1
 
 
 

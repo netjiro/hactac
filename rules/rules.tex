@@ -31,7 +31,7 @@ The rule set is here to \emph{help} create a fun game experience, not to kill it
 
 The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, hero quest, etc, but striving towards more interesting battles, not just dps and dice rally, and tying it together with role playing game style campaigns.
 
-This game is not for everyone, but it's designed to be easy to scale and tweak the complexity over a wide range. In it's simplest form it works well as a quick framework for quick gaming with very young kids. But it's primarily designed for deep tactical table top gaming set in a light hearted rpg environment.
+This game is not for everyone, but it's designed to be easy to scale and tweak the complexity across a wide range of preferences. In it's simplest form it works well as a small and simple framework for quick gaming with young kids. But it's primarily designed for deep tactical table top gaming set in a light hearted rpg environment.
 
 \
 
@@ -39,9 +39,9 @@ This game is not for everyone, but it's designed to be easy to scale and tweak t
 
 \
 
-Cooperation and coordination, movement, positioning, clever use of character skills, and ruthless warping of the game rules is much more important than commonly found in most monster hack games of today and yesteryear.
+Cooperation and coordination, movement, positioning, and clever use of character skills is much more important than commonly found in most monster hack games of today and yesteryear.
 
-Please, when reading and playing with this, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{then tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
+Please, when reading and playing, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{then tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
 
 The hactac rule set, game setting, and adventure campaigns are not created with any form of \emph{realism} in mind. The idea is to make it \emph{fun} and \emph{interesting} to play, nothing else.
 
@@ -52,24 +52,25 @@ The hactac rule set, game setting, and adventure campaigns are not created with 
     \item Keep the rounds short and quick.
     \item Allow GM and players to select the level of complexity.
     \item Flexibility and options, with consequences and tradeoffs.
-    \item Tactical maneuvers and game play, not just dps dice rally.
+    \item Tactical depth, movement and actions matter, no dice rally.
     \item Require player coordination for combat success.
     \item Offensive and defensive combat styles.
     \item Movement and maneuvers as tactical elements.
-    \item Initiatives that favour the fast through more combat flexibility.
+    \item Initiatives that favour the fast through higher flexibility.
     \item Many different viable combat styles and character types.
     \item Many against few opponent combat matters more than just dps.
     \item Coordinated actions should be synergistic, not just linear.
     \item Specialities of characters to have significant influence.
     \item Different skills and equipment should \emph{feel} distinct.
     \item Success and failure should not be binary all or nothing, but gradual.
+    \item Freedom in character building, no classes or similar limitations.
 \end{itemize}
 
 \
 
-\textbf{Ideas on how to get there:}
+\textbf{How to get there:}
 \begin{itemize}
-    \item Simple core rules and lots of additional optional addons for variety.
+    \item Simple core rules that create inherent depth, optional addons for variety.
     \item More fast rounds give more depth and alternatives than few long rounds.
     \item Trade realism for interesting tactical depth.
     \item Doing more things in a round makes it harder to succeed with actions.
@@ -754,13 +755,15 @@ Resistance rolls are sometimes done as a second step of an action roll. In these
 
 %TODO: rewrite domination/dominate to instead use skill check then psy check each round.
 %TODO: rewrite this example, don't use domination:
-E.g: Magus King rolls for "domination" against minion Weakie. Domination calls for a skill roll + mod psy vs psy. So, Magus King has domination 6, rolls a 4, which gives diff +2, i.e. he succeeds with +2. That +2 is now used as mod for the psy vs psy resistance roll. Magus King has psy 6, minion Weakie has psy 4. Thus the modified psy vs psy resistance roll is now 6+2 vs 4, i.e. 8 vs 4
-%, and Magus King has a 9 to succeed with the psy vs psy resistance roll for his domination. He rolls a 5 and succeeds with +4. The minion Weakie is now under his control.
-. So Magus King rolls \verb|8-d10| and minion Weakie rolls \verb|4-d10|: Result \verb|8-9 = -1| and \verb|4-7 = -3|. Diff \verb|-1 - -3| is success+2, and minion Weakie is now under his control.
+E.g: Magus King rolls for "domination" against minion Weakie. Domination calls for a skill roll + mod psy vs psy. So, Magus King has domination 6, rolls a 4, which gives diff +2, i.e. he succeeds with +2. That +2 is now used as mod for the psy vs psy resistance roll. Magus King has psy 6, minion Weakie has psy 4. Thus the modified psy vs psy resistance roll is now 6+2 vs 4, i.e. 8 vs 4.\\
+% vs version: attack - defence +5 -1d10
+Magus King rolls mod psy vs psy : \verb|8 vs 4 : | \verb|(8 - 4 +5 -1d10)|, rolls 3, wins the resistance with +6. Minion Weakie is now under his control.
+% vs version: (attack-1d10) - (defence-1d10)
+%. So Magus King rolls \verb|8-d10| and minion Weakie rolls \verb|4-d10|: Result \verb|8-9 = -1| and \verb|4-7 = -3|. Diff \verb|-1 - -3| is success+2, and minion Weakie is now under his control.
 
 %A mod resistance roll macro for maptools: \\
 %\verb|/roll 5+mod+attack-defence-d10| \\
-%A result $>=0$ is success, $<0$ is failure. \\
+%A result >=0 is success, <0 is failure. \\
 
 
 \subsection*{Declaring defence}
@@ -775,95 +778,6 @@ Defence action must be declared before damage is rolled, however.
 \subsection*{Activating a friend}
 %------------------------------------
 A character with high initiative can spend an action to activate a character with slower initiative, e.g. shouting at a slow friend to get moving, or shoving a friend aside, out of harm's way. This triggers "The Right to React" just as if the fast character was attacking the slower one.
-
-
-\subsection*{Awareness, spotting, finding}
-%-----------------------------------------
-The field of view is the area which is within the view arc, in view range, and sufficiently lit. The perception range is the character's perception value. Perception range and rolls for spotting are modified by the usual action modification stack of the spotter, such as movement, extra ap, pain, low hp, etc. Spotting is best done when standing still, attentive, doing nothing else.
-
-A sneaking/hidden target modifies perception range and perception rolls of the spotter by the success diff of the sneak/hide roll. This is on top of the spotter's own ams mods.
-
-\
-
-A target character or object can either be obviously visible, sneaking/hidden, or in cover by some other object such as hiding in a bush etc. When obviously visible the target is out in the open and not trying to hide. When sneaking/hidden the target is possibly in the open or in some limited obscuring object but having passed a sneak roll. When hidden in cover the target is hiding in some object that obscures vision, e.g. a bush or some debris. A target can also be completely hidden behind a vision blocking object, e.g. behind a wall, but then the target is not possible to spot at all.
-
-\begin{itemize}
-
-\item An obviously visible target will be automatically spotted in the field of view. 
-
-\item A partially obscured but otherwise not sneaking/hidden target within field of view can be spotted with a perception roll, further modified by how obscured the target is. E.g: crouching in a bush, mod-3.
-
-\item A fully obscured but otherwise not sneaking/hidden target can be detected (heard, sniffed, felt) when inside the perception range with a successful perception roll.
-
-\item A sneaking/hidden target can be spotted when inside the field of view but outside perception range if the spotter passes a perception roll.
-
-\item A sneaking/hidden target will be automatically spotted when inside the field of view and within perception range.
-
-\item A sneaking/hidden target can be detected when inside detection range but outside field of view if the spotter passes a perception roll with a further mod-3 difficulty.
-
-\item A sneaking/hidden target cannot be spotted when outside the field of view and outside modified perception range.
-
-\item For sneaking/hiding targets, obscuring items and terrain modifies the sneak roll instead of the perception roll.
-
-\end{itemize}
-
-Some targets are hidden very well. In such situations a normal perception roll is not enough, and they must be found by taking the time to search using the "find" skill. Example of this are characters and objects camouflaged or hidden by a multi-round sneak roll.
-
-Calling for perception rolls of course notifies the players of hidden stuff in the vicinity.
-%Roll only once for all hidden stuff, and see if the perception success is better than the hidden success of each respective hidden.
-The GM can of course roll the perception rolls hidden from the players, but that is a bit more boring. Alternatively the GM can call for per rolls every now and then when there is nothing to find as well...
-
-
-\subsection*{Sneaking and Spotting}
-%----------------------------------
-Roll for sneak: All environmental modifiers apply to the sneaking roll, then the sneak roll diff is applied as a mod to the perception and find spotting rolls.
-
-Sneaking and hiding, both self and other objects, are done with the sneak skill. Conceptually equivalent to some extent in that the target is not really hidden from view, just partially obstructed, in shadow, or placed/moving so that it is less likely to be noticed.
-
-Some basic sneak modifiers:\\
-area is clean/open -3\\
-area has some stuff around =0\\
-area is cluttered +3\\
-daylight or otherwise well lit -3\\
-lighting by torch and otherwise dark =0\\
-night or unlit dark area +3\\
-weather is calm, still and quiet -3\\
-weather is as usually, some wind and moving vegetation =0\\
-weather is loud and everything moves, e.g. stormy  +3
-
-Spending rounds, not actions, to seriously camouflage a character or hide an object will require a find roll to detect them. The environment modifiers are still applied to the sneak roll and then the diff is applied as modifier to the find roll.
-
-For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
-
-Spotting by characters that are inattentive, sleepy, or fiddling with something else is generally a mod-3 to the perception roll even if the spotter has mod-0 ams. Spotting when actively engaged in moving or actions are modified by ams as normal.
-
-
-\subsection*{How often to roll for sneaking and spotting?}
-%---------------------------------------------------------
-Under normal action conditions roll for sneak once per round when the character is moving in an area where he might get noticed, in view or detection range. And the same for perception for the spotting opponents.
-
-Outside of general action, just roll now and then when environment changes for a general success diff to apply to any guards that get close.
-
-
-\subsection*{Surprise}
-%---------------------
-\label{sec:surprise}
-Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
-
-A successful roll means they are not surprised and cannot be considered unaware. They have full normal ap available and movement speed M.
-
-A failed roll means they take the fail diff as mods to all actions for the rest of the round, have only half ap (ru), and can move at most 1sq. They can still expand one action to a full round action if they don't have enough ap.
-
-
-\subsection*{Unaware opponents}
-%------------------------------
-\label{sec:unaware}
-Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
-
-
-\subsection*{Long range vision}
-%-------------------------------
-Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate targets properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
 
 
 
@@ -900,13 +814,15 @@ Optional: Moving lowers initiative, \hyperref[sec:movinglowersinitiative]{see se
 \subsection*{Facing}
 %-------------------
 On a square grid cardinal and diagonal facing is used: N,NW,W,SW,S,SE,E,NE.
-On a hex grid only the six main faces are used: 0,60,120,180,240,300.
+On a hex grid only the six main faces are used: 0,60,120,180,240,300\degree.
 
-The facing of a character is generally the same as the direction of the last leg of the previous movement per default, but can be changed by turning. E.g: Moving Morgan is starting his movement path with 2 steps to the north, then places a waypoint, and then heads three more steps east. His facing at the end of the movement is then east.
+The facing of a character is generally the same as the direction of the last leg of the previous movement per default, but can be changed by turning. E.g: Moving Morgan is starting his movement path with 2 steps to the north, then places a waypoint, and then heads three more steps east. His facing at the end of the movement is then east by default.
 
-Maneuver movement is in any direction, and the character does not have to be facing in the direction he is moving.
+Maneuver movement is in any direction, and the character does not have to be facing in the direction he is moving. For walk, run, dash the character will be facing in the direction of movement.
 
-Note that turning to any facing is generally free when done together with movement. It's not free to move then take action then turn. In that case the turn is separate or together with the action and may cost ap or mp.
+Note that turning to any facing is generally free when done together with movement. E.g: Finishing the walk facing east, then just turn the character facing north without spending any extra movement or action points as part of the move, before doing anything else.
+
+It's not free to move then take action then turn for free. In that case the turn is separate or together with the action and may cost ap or mp.
 
 
 \subsection*{Turning}
@@ -916,7 +832,7 @@ Turning can be done by either taking actions, or by spending movement points. Tu
 Turning to a specific facing directly before, during, or after a movement is free and considered part of the movement. \\
 Spending one movement point separately also allows to turn to any facing, and can be done apart from any other movement or action. \\
 One can also turn by spending action points. The cost is dependent on the amount of facing change: \\
-Turning 45deg is free with (before or after) most actions \\
+Turning 45deg is free with most actions, before or after the action \\
 Turning 90deg costs 1ap \\
 Turning 135-180deg costs 2ap \\
 Certain armour and equipment will make it more costly to turn.\\
@@ -927,25 +843,27 @@ On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 
 \subsection*{Flanking attacks}
 %-----------------------------
-Attacks from the side or back are more difficult to parry. Attacks incoming at 90deg from the character's facing are mod-3 to parry. At 145deg it's mod-6 and at 180deg it's mod-9.\\
-For hex boards: 60deg is mod=0, 90deg (reach) is mod-3, 120deg is mod-6, and 180deg is mod-9.
+Attacks from the side or back are more difficult to defend against. Attacks incoming at 90deg from the character's facing are mod-3 to parry. At 145deg it's mod-6 and at 180deg it's mod-9.\\
+For hex boards: 60\degrees is mod=1, 90\degrees (reach) is mod-3, 120\degrees is mod-6, and 180\degrees is mod-9.
 
-The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45deg turn together with the action after the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
+The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45\degrees turn together with the action after the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
 
 The target is also not allowed to spend ap or mp before a defensive action unless he has a higher initiative, since the right to react only allows for one activation, where the defend (parry, avoid, etc) must come first.
 
 A target with higher initiative than the attacker can choose to interrupt the attack and turn to face the attacker any way he chooses to negate the mod, but that must be done before the attack is rolled as usual.
 
 
-\subsection*{Attacking from outside the vision cone}
-%---------------------------------------------------
-When attacking from outside the target's vision cone the target is unaware of the impending attack unless he passes a perception roll.
+\subsection*{Attacking from outside the arc of vision}
+%-----------------------------------------------------
+When attacking from outside the target's vision cone, but within the target's perception range, the target must roll for perception:
 
-If he passes the roll he is aware of the attack before it happens. If he has higher initiative he can choose to interrupt the attack with actions and movement. If he has lower initiative he can still react to the attack with the usual flanking mods.
+\noindent Success: The target is aware of the incoming attack. If he has higher initiative he can interrupt the attack with his own movement and actions.
 
-If he does not pass the roll he is unaware of the attack and cannot defend against it. Successful sneak and/or backstab by the attacker modifies the perception rolls of the target by the success diff.
+\noindent Fail: The target is not aware of the attack, he cannot interrupt, and he has mod-3 to any defence against it.
 
-Even if the target is unaware of the attack and does not pass the perception roll, his right to react will trigger once the attack has been resolved.
+\
+
+If the attacker is successfully sneaking, his sneak success modifies the perception range and perception roll of the target. If the target fails his perception roll against a sneak attack he is unaware of the attack and can not make a defence under right to react or interrupt with higher initiative. Even if unaware the target still has the right to react after the attack, and can move and take actions as usual.
 
 
 \subsection*{Attacking to the side}
@@ -957,7 +875,7 @@ Attacking an enemy directly behind (180deg) is mod-9. \\
 The enemy must be within the cone of vision for the attack to be possible at all. \\
 These are the same mods as for parrying incoming strikes from the sides or behind.
 
-On a hex grid it's: 60deg mod=0, 90deg mod-3 (reach attack), 120deg mod-6, 180deg mod-9.
+On a hex grid it's: 60deg mod=1, 90deg mod-3 (reach attack), 120deg mod-6, 180deg mod-9.
 
 
 \subsection*{Partial squares \& difficult terrain}
@@ -1175,6 +1093,102 @@ E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires s
 
 %NOPE:  Alternative: \\
 %Heavy objects count to encumbrance just like other gear. That stretcher, heavily loaded with loot, might have enc 100.0 or 200.0, making it very slow and stamina sucking to carry around.
+
+
+
+
+
+
+
+
+
+\subsection*{Awareness, spotting, finding}
+%-----------------------------------------
+The field of view is the area which is within the view arc, in view range, and sufficiently lit. The perception range is the character's perception value. Perception range and rolls for spotting are modified by the usual action modification stack of the spotter, such as movement, extra ap, pain, low hp, etc. Spotting is best done when standing still, attentive, doing nothing else.
+
+A sneaking/hidden target modifies perception range and perception rolls of the spotter by the success diff of the sneak/hide roll. This is on top of the spotter's own ams mods.
+
+\
+
+A target character or object can either be obviously visible, sneaking/hidden, or in cover by some other object such as hiding in a bush etc. When obviously visible the target is out in the open and not trying to hide. When sneaking/hidden the target is possibly in the open or in some limited obscuring object but having passed a sneak roll. When hidden in cover the target is hiding in some object that obscures vision, e.g. a bush or some debris. A target can also be completely hidden behind a vision blocking object, e.g. behind a wall, but then the target is not possible to spot at all.
+
+\begin{itemize}
+
+\item An obviously visible target will be automatically spotted in the field of view. 
+
+\item A partially obscured but otherwise not sneaking/hidden target within field of view can be spotted with a perception roll, further modified by how obscured the target is. E.g: crouching in a bush, mod-3.
+
+\item A fully obscured but otherwise not sneaking/hidden target can be detected (heard, sniffed, felt) when inside the perception range with a successful perception roll.
+
+\item A sneaking/hidden target can be spotted when inside the field of view but outside perception range if the spotter passes a perception roll.
+
+\item A sneaking/hidden target will be automatically spotted when inside the field of view and within perception range.
+
+\item A sneaking/hidden target can be detected when inside detection range but outside field of view if the spotter passes a perception roll with a further mod-3 difficulty.
+
+\item A sneaking/hidden target cannot be spotted when outside the field of view and outside modified perception range.
+
+\item For sneaking/hiding targets, obscuring items and terrain modifies the sneak roll instead of the perception roll.
+
+\end{itemize}
+
+Some targets are hidden very well. In such situations a normal perception roll is not enough, and they must be found by taking the time to search using the "find" skill. Example of this are characters and objects camouflaged or hidden by a multi-round sneak roll.
+
+Calling for perception rolls of course notifies the players of hidden stuff in the vicinity.
+%Roll only once for all hidden stuff, and see if the perception success is better than the hidden success of each respective hidden.
+The GM can of course roll the perception rolls hidden from the players, but that is a bit more boring. Alternatively the GM can call for per rolls every now and then when there is nothing to find as well...
+
+
+\subsection*{Sneaking and Spotting}
+%----------------------------------
+Roll for sneak: All environmental modifiers apply to the sneaking roll, then the sneak roll diff is applied as a mod to the perception and find spotting rolls.
+
+Sneaking and hiding, both self and other objects, are done with the sneak skill. Conceptually equivalent to some extent in that the target is not really hidden from view, just partially obstructed, in shadow, or placed/moving so that it is less likely to be noticed.
+
+Some basic sneak modifiers:\\
+area is clean/open -3\\
+area has some stuff around =0\\
+area is cluttered +3\\
+daylight or otherwise well lit -3\\
+lighting by torch and otherwise dark =0\\
+night or unlit dark area +3\\
+weather is calm, still and quiet -3\\
+weather is as usually, some wind and moving vegetation =0\\
+weather is loud and everything moves, e.g. stormy  +3
+
+Spending rounds, not actions, to seriously camouflage a character or hide an object will require a find roll to detect them. The environment modifiers are still applied to the sneak roll and then the diff is applied as modifier to the find roll.
+
+For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
+
+Spotting by characters that are inattentive, sleepy, or fiddling with something else is generally a mod-3 to the perception roll even if the spotter has mod-0 ams. Spotting when actively engaged in moving or actions are modified by ams as normal.
+
+
+\subsection*{How often to roll for sneaking and spotting?}
+%---------------------------------------------------------
+Under normal action conditions roll for sneak once per round when the character is moving in an area where he might get noticed, in view or detection range. And the same for perception for the spotting opponents.
+
+Outside of general action, just roll now and then when environment changes for a general success diff to apply to any guards that get close.
+
+
+\subsection*{Surprise}
+%---------------------
+\label{sec:surprise}
+Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
+
+A successful roll means they are not surprised and cannot be considered unaware. They have full normal ap available and movement speed M.
+
+A failed roll means they take the fail diff as mods to all actions for the rest of the round, have only half ap (ru), and can move at most 1sq. They can still expand one action to a full round action if they don't have enough ap.
+
+
+\subsection*{Unaware opponents}
+%------------------------------
+\label{sec:unaware}
+Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
+
+
+\subsection*{Long range vision}
+%-------------------------------
+Past his vision radius the character cannot discern details and must ask the GM what is further away. It is not enough to designate targets properly. Firing at a target beyond vision range is mod-3. Casting spells is mod-3.
 
 
 
@@ -1550,7 +1564,7 @@ A normal size corpse gives a square a mod-3 poor terrain modifier. Each addition
 Shoving or dragging a corpse 1sq is usually a 1r action, with corpse kick it's faster.
 
 
-\subsection*{assisting with actions}
+\subsection*{Assisting with actions}
 %-----------------------------------
 Some actions and skill checks for the character can potentially be assisted by other characters. The assistants roll and add their success diff/3 as positive mod to the primary Hero's roll. GM discretion regarding who many can assist, how long time they have, etc.
 % think D&D have something similar, calling it skill challenge or some such
@@ -1573,7 +1587,7 @@ Some actions and skill checks for the character can potentially be assisted by o
 \section*{Magic}
 
 
-Wave'em hands and mumble something mysterious. Sure to transmogrify your internal mana to sparkling effects of death and mayhem afflicting friends and foe alike.
+Wave'em hands and mumble something mysterious. Sure to transmogrify your internal mana to sparkling effects of wonder, death, and mayhem, to affect or afflict friends and foe alike.
 
 Sorcerers, wizards, mages, witches, and warlocks bend reality to their will by force of mind, concentration, intricate and arcane knowledge, calling upon ancient magical compacts and constructs that echo through the fundament of the world, and so on. Or perhaps they just stroke the ego of mad gods.
 
@@ -1598,7 +1612,7 @@ A spellcaster can always choose to cast a spell that takes $\le$9ap in one full 
 \subsection*{No power draw unless successful}
 %--------------------------------------------
 Casting spells that fail and fizzle causes no mana loss, unless it is a serious failure.\\
-Fail-1/-2 costs no mana. \\
+Fail-1,-2 costs no mana. \\
 Fail-3 or worse is 1 mana lost. \\
 Fail-6 or worse will cause the loss of the full cost of the spell.
 
@@ -1611,6 +1625,13 @@ Many spells have optional power effects, such as increasing damage, range, or du
 
 E.g: Warlock Warner casts Shock Bolt, with normal cost 1m, but adds two mana for extra damage and one mana for extra range. The total cost is now four mana.
 Just make sure you have enough levels in the magic skill to be able to spend that much mana in one go.
+
+
+\subsection*{Range of spells}
+%----------------------------
+The range of the spell applies only to the instant when it's cast on the target, unless stated otherwise. Once the spell has gone into effect the range no longer matters. 
+
+There are spells which require the caster to remain within range for the duration, or which has another range during the duration, after casting. This kind of deviation is then stated in the spell description.
 
 
 \subsection*{Duration of spells}
@@ -1632,20 +1653,13 @@ Some spells with duration do not require any psy to keep active, while others ca
 
 Deviation from the norm is noted as the maintenance requirement of skill.
 
+%spell maintenance, maintain spells
+
 
 \subsection*{Regaining mana}
 %---------------------------
 All mana is regained when the caster has rested fully from a good night's sleep. Some dungeons allow for casters to regain some mana when resting fully a number of turns, or when spending time at a certain location.
 Wise wizards and skilled sorcerers alike sometimes carry mana restoring potions, crystal ball batteries, power staffs, etc, when they go hunting for gold and glory.
-
-\
-
-\noindent OR --- \todo regain continuous ?
-
-\
-
-\noindent Mana is recovered over time based on location and psy. Normal locations have a flow of raw magic that feeds mana at 1/h. Some places 1m/10r, some drain mana?
-Perhaps some sort of meditation to regain mana faster ?
 
 
 \subsection*{Casting when dry}
@@ -1660,6 +1674,13 @@ E.g: Crimson Caster is at mana -1, tries to cast a cost 3 spell and must roll ps
 Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spell casting will fail.
 
 If the Hero tries to draw stamina when starting from 0 or negative stamina he must roll con modified by negative stamina once for the whole spell. The Hero can roll con before starting casting the spell instead of when he finishes casting it if he so wishes. The roll is valid as long as he doesn't loose stamina while casting.
+
+
+\subsection*{Smooth casting}
+%---------------------------
+The caster can spend more xp to train a spell so that it will not draw stamina together with mana. Learning to cast a spell smoothly takes 50\% more xp than the regular cost of learning the spell. Any xp spent learning the spell in the usual fasion can be counted towards learning to cast the spell smoothly.
+
+E.g: Tired Ture knows how to cast unground. He has spent 11xp to train unground 6. But he's noticed he's often out of breath when he need to cast, so he wants to learn how to cast it smoothly. Since unground is scf 0.33 the smooth cast unground is scf 0.50. He can take the 11xp he's already spent on unground, but that only gets him to lvl 4, for 8xp. So he spends another 1xp to afford smooth cast unground to lvl 5, for 12xp. Tadaa. No more burning stamina when ungrounding his enemies.
 
 
 \subsection*{Lacking psy}
@@ -1708,8 +1729,6 @@ A wizard can have more than one item at the same time, but the max bonus is +1. 
 Optional: It can be fun to limit the creation or replacement speed of trusty old items. Let's say the wizard can't just caugh up 15xp directly, but has to spend 5xp first, then go on an adventure with the staff, then the other 10xp for the mod+1.
 
 Perhaps even force him to play one adventure without the "trusty old" status and have mod-1 before he can spend the first 5xp to mod=0.
- 
- 
 
 
 \subsection*{The paladin's armour}

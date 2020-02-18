@@ -7,6 +7,258 @@ cleaning out old text and blocks
 
 
 
+
+================================================================================
+200216: removed old permanent magic stuff, nexus, permanence, etc
+        from magic.tex, ca line 970, after spell list
+-
+
+%\pagebreak[1]
+%\small \begin{verbatim}
+%TODO embedding stuff etc, NOT COMPLETE %------------------------------------------
+%
+%hide embedding cast 2r 1m, duration 100r +100r/m, capacity 5 +5/m
+%               int 8, psy 8, scf 0.25
+%
+%permanence     cast 50r 5m, power 0 +1/3m, range 5 +1/m
+%               The power must be equal to the total mana cost of all embedded
+%               spells to make permanent.
+%               Makes spells permanent. Used to embed magic in items.
+%               It does not make the power permanent, the embedded permanent
+%               spells still require mana supply to function more than once.
+%               int 10, psy 10, scf 1.0
+%
+%storage        cast 25r 3m, power 0 +1/1m, range 5 +1/m
+%               The spell creates a magical storage for mana energy. It can be
+%               charged and discharged by transfer spells, etc.
+%               Used to build and power magical devices.
+%               int 10, psy 10, scf 1.0
+%
+%generate       cast 100r 5m, power 0 + 1/3m, range 5 +1/2m
+%               The regen spell will function as a mana supply, generating
+%               mana point equal to its power each day, just like a character.
+%               Used to build and power magical devices
+%               int 12, psy 12, scf 1.5
+%
+%nexus          cast 1day 10m, power 0 +1/10m, range 5 +1/2m
+%               The power is the amount of mana that will be supplied per
+%               activation discharge. This is the ultimate mana power supply,
+%               since it can activate again and again in rapid succession when
+%               combined with permanence.
+%               It is susceptible to weak mana flow and void fields though,
+%               by supplying lower and perhaps insufficient amounts of mana.
+%               The mana coming from a nexus spell fleeting and strange. No one
+%               has yet managed to figure out a way to store the mana for later
+%               use. It has to be used immediately by channelling it into a
+%               spell.
+%               int 12, psy 15, scf 2.0
+%
+%
+%
+%
+%\end{verbatim} \normalsize
+
+
+
+
+
+
+
+
+
+
+================================================================================
+200216:  old custom magic stuff
+         again with permanence, nexus, capacity, materials, etc
+
+
+\clearpage
+\TODO custom magical stuff is not finished yet... 
+
+\
+
+\textbf{Just throw out and rewrite!}
+
+\
+
+\emph{Custom magical items: the following are just idea sketches and should not be taken seriously. I need to work on this quite a lot before it is useful.}
+
+Purchasing custom magical potions: A quick approximate cost for general low power magical potions: \\
+cost in gold ~ 1 + (0.025 * (mana+2) * scf * psy * int) \\
+The extra mana is to approximate the cost of trigger rune and embed magic spells.
+
+
+\subsection*{Manufacturing custom magical potions}
+%-------------------------------------------------
+The wizard must know both "embed magic" and "trigger rune" to bind the spell into the potion. Then it requires a suitable potion base liquid and vessel. Those are not so cheap. The vessel and liquid is lost if either the spell, the binding or the trigger rune fails when casting.
+
+The cost of a suitable liquid and vessel can be calculated as: \\
+cost in gold ~ 0.25 + (0.01 * mana * scf * psy * int) \\
+It is possible to use inferior liquids and vessels, but the potion will lose potency or stop working all together pretty quickly and unreliably.
+Don't forget to include the mana cost of the trigger rune and embed magic spells when calculating the vessel cost.
+
+Magical potion: \\
+Get the right vessel and liquid, or other containment item.
+Then cast the embedding spell and the actual spell. Since a potion is to be quaffed it requires no complex trigger rune, and the very simple triggers in the embed magic spell are enough.
+E.g: a potion of fire storm can be created like this:
+Fire storm spell is scf 0.33, int 6, psy 8, and the customer wants radius 2 and damage 6, so the spells requires 3 mana by itself. Then an "embed magic" spell is required to bind the fire storm into the potion. When binding into a "suitable material" the duration of the embedding is of no consequence, and thus only the capacity is of interest. The embed spell has a base capacity of 5 and that is enough for the fire storm spell.
+The cost of the liquid and vessel is thus approximately:\\
+base cost: 0.25 gold \\
+fire storm requirements + (0.01 * 3 * 0.33 * 6 * 8) gold \\
+embed magic requirements + (0.01 * 1 * 0.25 * 8 * 5 ) gold \\
+which in total = 0.25 + 0.48 + 0.1 = 0.83 gold. \\
+This is of course an approximation of the cost of the liquid and the flask. Actual prices will vary, and the suitable materials might be difficult to acquire.
+
+Purchasing ready made magical potions is more expensive, with cost approximately \\ 1 + (0.25 * (mana+2) * scf * psy) gold.
+
+
+\subsection*{Manufacturing custom magical equipment}
+%---------------------------------------------------
+Manufacturing magical items is more expensive than potions. There is a lot more magic involved and the materials to be enchanted need to be able to hold the magical energies and forces involved.
+
+Single use or limited use magical items can be manufactured similar to the potions, except they usually need a proper trigger spell to focus the spells at the right target.
+The approximate cost of materials can be estimated as: \\
+1.0 + (0.25 * mana * scf * psy) gold \\
+for simple single or multi use items such as wands, crystals, etc.
+
+The interesting stuff, the permanently magical items require
+
+
+
+Manufacturing custom magical equipment is similar, though often more expensive, but then the caster also needs to know the "permanence" spell to make the magic last, together with the "nexus", "transfer", or "drain" spells for powering the item. And if any of the spells fail the item will be warped, destroyed and useless.
+
+The required magic to create a single use magical item is just like the magical potion, except it also needs a trigger rune, embedded with the spell.
+
+To create a many use magical item is very similar as a one use, just cast the spell+trigger+embed multiple times, until the items magical capacity is full.
+
+To create a permanent magical item things become more tricky. The "permanence" spell must be cast to encompass the payload spell, the trigger, mana source, and embedding. And of course they also require some form of mana source.
+
+Mana sources come in different forms. The simplest is that the user of the item knows the "magic" skill to sufficient level to power the payload spell with his own mana. This is not so handy though, since most customers don't have the magic skill, and thus cannot empower magical spells.
+The next step up is to embed a "mana transfer" spell together with the payload spell. This way the item can draw mana from a willing user.
+The next step up is to embed a "storage" spell with the payload with sufficient mana to use the item once or a few times, before the storage needs to be recharged.
+The next step up is to combine the storage with a "generate" spell which slowly replenishes the storage spell over time. This way the item will recharge by itself, and can still be manually recharged by a mana transfer spell if needed.
+The coolest and ultimate mana supply is the "nexus" spell, which always can supply mana directly to the payload spell with high frequency ad infinitum.
+
+Here follows an example throwing knife of slow motion \\
+Payload: slow: mana 3 (+2m duration), scf 0.33, int 4, psy 3 \\
+Trigger: trigger rune: mana 1 (contact with target), scf 0.25, int 9, psy 5 \\
+Supply: storage: 12 mana (+9m capacity), scf 1.0, int 10, psy 10 \\
+Supply: generate: 14 mana (+3m recharge), scf 1.0, int 12, psy 12 \\
+Embed: embed magic: 7 mana (+6m capacity), scf 0.25, int 8, psy 5 \\
+Permanence: permanence: 116 mana (+111m capacity), scf 1.0, int 10, psy 10 \\
+Which creates a throwing knife of slow motion, which can be used three times on its own power, and recharges one use per day.
+
+Now, the approximate cost of suitable material for the throwing knife would be something like this: \\
+payload: 0.01 * 3 * 0.33 * 4 * 3 = 0.12 \\
+trigger: 0.01 * 1 * 0.25 * 9 * 5 = 0.11 \\
+supply: 0.01 * 12 * 1.00 * 10 * 10 = 12 \\
+supply: 0.01 * 14 * 1.50 * 12 * 12 = 30 \\
+embed: 0.01 * 7 * 0.25 * 8 * 5 = 0.70 \\
+The permanence requirements does not fall on the target object, but rather the equipment of the wizard creating the item. He must have such an object available to build up the permanence spell in before sealing the spells of the throwing knife. \\
+permanence: 0.01 * 116 * 1.0 * 10 * 10 = 116 \\
+Thus the materials requirements for the knife will probably cost somewhere around 40-45 gold, at break even for the manufacturer! Expect the wizard to require additional funds for the work and whatnot, and of course the weapon smith will require quite a bit to custom make the knife itself, before it is handed over to the wizard to be enchanted.
+
+The same knife, but drawing mana from the user is much cheaper to make: \\
+Payload: slow: mana 3 (+2m duration), scf 0.33, int 4, psy 3 \\
+Trigger: trigger rune: mana 1 (contact with target), scf 0.25, int 9, psy 5 \\
+Supply: mana transfer: 1 mana (get 3 mana), scf 0.33, int 3, psy 3 \\
+Embed: embed magic: 1 mana (5 capacity), scf 0.25, int 8, psy 5 \\
+And the permanence requirement \\
+Permanence: permanence: 35 mana (+30m capacity), scf 1.0, int 10, psy 10 \\
+Which gives a total estimate of the knife material cost at: \\
+payload: 0.01 * 3 * 0.33 * 4 * 3 = 0.12 \\
+trigger: 0.01 * 1 * 0.25 * 9 * 5 = 0.11 \\
+supply: 0.01 * 1 * 0.33 * 3 * 3 = 0.03 \\
+embed: 0.01 * 1 * 0.25 * 8 * 5 = 0.10 \\
+permanence: 0.01 * 35 * 1.0 * 10 * 10 = 35 \\
+
+
+
+Magical capacity of weapons and items:\\
+capacity factor of material * abs * encumbrance / 10.
+
+steel:       5
+star iron:  20
+mage steel: 10
+mithril:    50
+copper:     15, brass 10
+silver:     20, alloy 15
+gold:       30, alloy 20
+crystal:    50
+gems:       1/gold value
+
+
+
+\
+
+\TODO: snipped moved from prices.tex :
+
+Permanently magical items are always custom made, and very exotic equipment.
+First of all the item to be enchanted needs to have enough magical capacity to withstand the forces of the magic to be embedded within it. This means that normal steel will almost never suffice, and more exotic and expensive materials will have to be used in the making of the item itself.
+
+The magical capacity of an item can be calculated to approximately: \\
+capacity = cf * abs \\
+where cf is capacity factor of material and the skill of the maker, the abs is the absorption or hitpoints of the item.
+E.g: a steel sword of regular making has a magical capacity of 10 = (1 * 10).
+
+Here follows the magical capacity of some materials:
+
+\
+
+\small \begin{verbatim}
+material          capacity      abs  enc  dam   price
+
+wood              1.0    1      1.0  1.0  1.0    1.0   (for common use)
+gnarlwood         5.0    5      1.0  1.0  1.0   10.0   (instead of wood)
+steel             1.0    1      1.0  1.0  1.0    1.0   (for common use)
+mage steel        5.0    5      1.0  1.0  1.0   10.0   (instead of steel)
+
+copper alloy      9.0   15      0.5  1.2  0.8   30.0
+silver alloy            25      0.4  1.5  0.7   50.0
+gold alloy              40      0.3  2.0  0.6  100.0
+strong crystal          50      0.5  1.0  1.2
+mithril                         2.0  0.7  1.2
+star iron
+
+copper                     ~3/enc
+silver                     ~5/enc
+gold                      ~10/enc
+jewels            1*cost ~100/enc
+
+\end{verbatim} \normalsize
+
+The capacity requirements of a permanently magical item are:
+payload spell: cap = mana * psy (E.g: black bolt 3m = 21 capacity)
+trigger spell: cap = 5 per payload spell for normal complexity triggers
+no mana supply: cap = 0 (empower by user "magic" spell)
+mana transfer: cap = 1 per mana (payload requirement)
+mana storage: cap = 30 + 10 per mana
+mana generation: cap = 50 + 30 per mana
+mana nexus: cap = 100 + 100 per mana
+embedding: cap = 1 per mana (total mana)
+
+Permanence doesn't require cap of the target object, but from the ritual equipment of the wizard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ================================================================================
 200106 : removed old stuff from campaign.tex  - rolling character stats
 
