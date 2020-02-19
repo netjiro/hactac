@@ -1064,6 +1064,33 @@ cloud    poison/ligtning/rain
 \end{verbatim} \normalsize
 
 
+\subsection*{Meta Magic}
+%-----------------------
+Some spells affect the fundamental rule mechanics.
+
+I fully expect some people to really dislike this stuff. So, just ignore it. That's the whole point of this rule system: Just use what you like, and ignore, or change, the rest.
+
+\
+
+\small \begin{verbatim}
+skipround
+    the target of the spell skips his next turn, or X turns. 
+    Cannot take action or movement.
+
+untargetable
+    the target of the spell cannot be the target for any actions, spells, etc
+    for X turns. Can still be affected by area effects and similar.
+
+declaration lock
+    the target cannot change his action or movement points declarations for
+    X future rounds.
+
+southblock   (northblock, eastblock, westblock)
+    the target cannot, under any circumstances, move further south than his 
+    current coordinates on the map.
+\end{verbatim} \normalsize
+
+
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
@@ -1282,18 +1309,19 @@ TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
                a faceplant as a controlled fall.
                Or get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
-Feedback Football  angry glowing metal ball contraption
-               glow 2sq light, destructuve feedback triggered range 6sq
+Feedback       angry glowing metal ball contraption
+Football       glow 2sq light, destructuve feedback triggered range 6sq
                6 dam drain equal mana
                triggers on touch (pickup, but not kick)
                triggers on any casting in range, 8 charges
                -- TODO -- alt text --
                activates when thrown, deactivates when packed away, 8 charges
-               attack on touch or detecting casting within 6sq: destructive feedback
-               draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
+               attack on touch or detecting casting within 6sq: destructive 
+               feedback draws 1d6 mana for max 6 dam, penetrating : 
+               resistance 15 vs psy
 
-Long Sword of  dam 8, abs 14, str 6 (max +2 str bonus)
-Irdereng       on successful hit the attacker can choose to roll psy,
+Long Sword     dam 8, abs 14, str 8, max +2 str bonus, rest as long sword
+of Irdereng    on successful hit the attacker can choose to roll psy,
                if successful the attack does diff (psy roll) extra damage,
                penetrating, and draws one mana point from the user.
                finesse/poke/swing as usual

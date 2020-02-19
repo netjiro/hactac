@@ -19,19 +19,26 @@
 % manually fix the table of contents and no numbering or "chapter" heading
 \phantomsection\addcontentsline{toc}{chapter}{Rules}
 \chapter*{Rules}
-
+%---------------
 Never, \emph{ever}, let the rules get in the way of fun. If something is more entertaining but contrary to the rules, go for fun. That said, a functional and internally consistent implementation of rules is important as it allows players to develop a better gut feeling and understanding of the world, take greater calculated chances, find that cool edge, discover a fun loophole, powerful combo, etc.
 
-The rule set is here to \emph{help} create a fun game experience, not to kill it by a thousand cuts and struts. Find a balance that suits the group. 
+The rule set is here to \emph{help} create a fun game experience, not to kill it by a thousand cuts and struts. Strike a balance that suits your group. 
 
 
 \phantomsection\addcontentsline{toc}{section}{introduction}
 \section*{fundamental introduction: what, why, how}
 %--------------------------------------------------
+The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, etc, but striving for more interesting battles, and tying it together with role playing game style adventures and campaigns.
 
-The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, hero quest, etc, but striving towards more interesting battles, not just dps and dice rally, and tying it together with role playing game style campaigns.
+This game is not for everyone, but it is designed to be easy to scale and tweak over a wide range of preferences. In it's simplest form it works well as a small and fast framework for quick gaming with young kids. But it's primarily designed for fast, online, tactically deep, tabletop gaming set in a light hearted rpg environment.
 
-This game is not for everyone, but it's designed to be easy to scale and tweak the complexity across a wide range of preferences. In it's simplest form it works well as a small and simple framework for quick gaming with young kids. But it's primarily designed for deep tactical table top gaming set in a light hearted rpg environment.
+For examples of scaling: At the very simple end see 
+\hyperref[sec:youngkids]{\texttt{Bitter Candy}}, page~\pageref{sec:youngkids} and 
+\hyperref[sec:basicenough]{\texttt{Ominous Crown}}, page~\pageref{sec:basicenough}, 
+and at the really complex side see the adventure 
+\texttt{Turn off the Lights} and 
+the Lundqvist force in the \texttt{Goblin Destiny} 
+campaign.
 
 \
 
@@ -41,7 +48,7 @@ This game is not for everyone, but it's designed to be easy to scale and tweak t
 
 Cooperation and coordination, movement, positioning, and clever use of character skills is much more important than commonly found in most monster hack games of today and yesteryear.
 
-Please, when reading and playing, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{then tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
+Please, when reading and playing, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{please tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
 
 The hactac rule set, game setting, and adventure campaigns are not created with any form of \emph{realism} in mind. The idea is to make it \emph{fun} and \emph{interesting} to play, nothing else.
 
@@ -54,6 +61,7 @@ The hactac rule set, game setting, and adventure campaigns are not created with 
     \item Flexibility and options, with consequences and tradeoffs.
     \item Tactical depth, movement and actions matter, no dice rally.
     \item Require player coordination for combat success.
+    \item Terrain and layout matters, positioning, movement, timing matters.
     \item Offensive and defensive combat styles.
     \item Movement and maneuvers as tactical elements.
     \item Initiatives that favour the fast through higher flexibility.
@@ -71,68 +79,71 @@ The hactac rule set, game setting, and adventure campaigns are not created with 
 \textbf{How to get there:}
 \begin{itemize}
     \item Simple core rules that create inherent depth, optional addons for variety.
-    \item More fast rounds give more depth and alternatives than few long rounds.
-    \item Trade realism for interesting tactical depth.
+    \item Most effects and options stack together and can be combined.
+    \item The degree of success or failure have real effects for most actions.
+    \item Trade realism for interesting options and effects.
+    \item Many fast rounds give more alternatives than a few long rounds.
     \item Doing more things in a round makes it harder to succeed with actions.
     \item Faster movement makes it harder to succeed with actions.
     \item Characters with high initiative can decide when to act in a round.
     \item Relative positioning, facing, direction gives mods to actions.
-    \item The degree of success or failure have real effects for many actions.
-    \item Most effects and options stack together and can be combined.
     \item Attack, defence, movement, damage, etc are multidimensional, not one value.
 \end{itemize}
 
 \
 
-Just charging into the opponents and hacking away usually lead to disaster. Instead there are some tactical considerations that enhance survival chances and make the battles more interesting. Ganging up on an opponent to overcome defences or distracting to allow the others to get in better hits is very powerful. Moving and positioning to get the upper hand in a battle will make a world of difference, especially when fighting many on many, or in complex terrain surroundings. The rules set the scene for some flexible shuffling of offensive or defensive focus and tactical initiative. Coordination of timing and ordering of actions between characters will have a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
+Just charging into the opponents and hacking away usually lead to disaster. Instead there are tactical considerations that enhance survival and make the battles more interesting. Ganging up on an opponent to overcome defences, or distracting him to allow the others to get in better hits, is very powerful. Moving and positioning to get the upper hand in a battle will make a world of difference, especially when fighting many on many, or in complex terrain and map layout. The rules set the scene for some flexible shuffling of offensive or defensive focus and tactical initiative. Coordination of timing and ordering of actions between characters will have a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
 
 \
 
-Normal quick skirmishes with about 10 combatants take perhaps a millifortnight and play out similar to this: \\
+Normal quick skirmishes with around 10 combatants take perhaps a millifortnight and play out similar to this: \\
 heroes 2-5 attack monsters 2-10: \\
 round 1-4: Initial positional movement for tactical advantage. \\
 round 3-6: Contact: a few attacks, most miss. \\
-round 5-10: restructuring movements, attacks, parries and counter attacks. \\
-round 7-13: heavy violence and tactical movements. \\
+round 5-10: positioning, movement, attacks, parries and counter attacks. \\
+round 7-13: heavy violence and tactical movement to exploit weaknesses. \\
 round 10-15: closing in and mopping up the stragglers, some flee.
 
-Larger or more complex fights of course take longer to complete. In hot areas several small skirmishes will meld into long fights with tactical movement, positioning, rallies, defensive short rest periods, and so on, as the Heroes try to accomplish their goals.
-Really large fights with 50+ combatants can run upwards of 15min per round. This should be avoided. It's not fun for the players.
+Larger or more complex fights of course take longer to complete. In hot areas several small skirmishes will meld into long rolling fights with fights, positioning, rallies, defensive short rest periods, and so on, as the Heroes try to accomplish their goals.
+Really large fights with 50+ combatants can run upwards of 15min per round. This should be avoided. It's just a lot of dead time for most of the participants.
 
 \
 
 This game takes more rounds per battle than most other games, but each round is short and quick. Exploring and clearing a small dungeon can creep into 50+ rounds, but can be done in an hour or two even when explaining the rules to a first timer. This has been demonstrated many times in the dreaded \texttt{Dungeon of Testing} scenario that has been used to introduce new players to the game.
 %demonstrated in the introductory screencast
 
-Standard encunters for a few players and twice their number in regular opposition take perhaps 20-30 rounds and 30-60min. More complex fights take longer. In the advanced "Goblin Destiny" campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
+Standard encounters for a few players and twice their number in regular opposition take perhaps 20-30 rounds and 30-60min. More complex fights take longer. In the advanced \texttt{Goblin Destiny} campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
 % I consider the time consumption a design failure on my part of that specific campaign. I should have done it differently. But the players loved the campaign and reported it as one of the best so I have not done any significant changes to it.
 
-Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, ligthing, and vision.
+Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, lighting, and vision.
 
 
 \section*{simplified or complex}
 %-------------------------------
-The fundamental design idea is to allow the GM and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper and some tokens. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract.
+The fundamental design idea is to allow the GM and players to choose which level of complexity they want for their game. The simplest basic rule set is very fast and small enough to keep in the head or with a small paper. Easily assisted with some markers or counters, and simple tokens or minis. Good for quick physical tabletop gaming sessions, and quite friendly to small kids as long as they can count to 10, add and subtract.
 
-As shown in the \hyperref[sec:basicenough]{\texttt{Ominous Crown} adventure example} below, page~\pageref{sec:basicenough}, a very small set of rules and skills is enough to deliver a fun, fast, and varied game experience. A set of fewer than 10 skills and spells gives enough variability and agency. \emph{Really don't need much.}
+As shown in the 
+\hyperref[sec:basicenough]{\texttt{Ominous Crown} adventure example}, page~\pageref{sec:basicenough}, and the 
+\hyperref[sec:youngkids]{\texttt{Bitter Candy} recounting}, page~\pageref{sec:youngkids}, 
+a very small set of rules and skills, with very simple implementation, is enough to deliver a fun, fast, and varied game experience. A set of fewer than 10 skills and spells gives enough variability and agency for the players to feel they are in control, and their choices matter. \emph{Really don't need much.}
 
 Then the group can pick and choose the rules, skills, etc which they feel add interesting gameplay, increasing variation and complexity. In total this book has over a hundred optional skills, spells, maneuvers, and abilities, many of which drastically change how the game plays.
 
-At some point it's better to have automation assistance by simple scripting in digital/virtual table top software like maptool, vassal, or similar. I have a maptool implementation that covers the majority of the rule set for quick automation for our weeknight internet based slaughter sessions.
+At some point it's better to have automation assistance by simple scripting in digital/virtual tabletop software. I have a maptool implementation that covers the majority of the rule set for quick automation for our week night internet based slaughter sessions.
 
 
 \section*{more freedom, more options, fewer musts, deeper tactics}
 %-----------------------------------------------------------------
-This is not a class based game and does not require a specific typical party makeup to function. Look for synergies in game style and tactics, but there are no "must have" classes or professions in a party composition. Consider: There are many more dimensions to the fighting here than in most regular tabletop and rpg games, allowing for more flexibility and larger option space. Positioning and map control is very important. Healing is slow and very expensive, not generally a mid battle possibility. Just these basic traits mean it plays very different from for example D\&D, and more like tactical tabletops such as Space Hulk and Descent.
+This is not a class based game and does not require a specific typical party makeup to function. Look for synergies in game style and tactics, but there are no "must have" classes or professions in a party composition. Consider: There are many more dimensions to the fighting here than in most regular tabletop and rpg games, allowing for more flexibility and larger option space. Positioning and map control is very important. Player coordination is essential. Healing is slow and very expensive, not generally a mid battle possibility. Just these basic traits mean it plays very different from for example D\&D, and more like tactical tabletops such as Space Hulk and Descent.
 
 
 \section*{balance}
 %-----------------
 The fundamental design allows for a wide variety of characters to be "balanced" in the sense that the a lot of different types characters can have similar impact on the adventure at similar xp levels. They will play drastically different though and will not be equally potent against all types of enemies and encounters.
 
-When balancing encounters to your party you are in effect balancing your own play style of the monsters against your players' playstyle of their characters. The tactical depth of the game means it's next to useless to say that X of moster A and Y of monster B will be a good balance against four heroes at around 300xp. It totally depends on how evil and clever tactically you want, \emph{and can}, play versus your players. Again, the old Space Hulk and Descent games were totally different games if your genestealer opponent had IQ 85 or 145, or if your Descent overlord were nasty, clever, and really knew the game versus just playing for coffee, cake, and the social time.
+When balancing encounters to your party you are in effect balancing your own play style of the monsters against your players' play style of their characters. The tactical depth of the game means it's next to useless to say that X of monster A and Y of monster B will be a good balance against four heroes at around 300xp. It totally depends on how evil and clever tactically you want, \emph{and can}, play versus your players. Again, the old Space Hulk and Descent games were totally different games if your Genestealer opponent had IQ 85 or 145, or if your Descent overlord was nasty, clever, and really knew the game versus just playing for coffee, cake, and the social time.
 
-Games with a fixed balance, threat rating, etc, essentially and fundamentally says: \emph{No matter what you do, this is an approxiate balance}. For me that's a red flag and a symptom of shallow game design.
+Games with a fixed balance, threat rating, etc, essentially and fundamentally says: \emph{No matter what you do, this is an approximate balance}. For me that's a red flag and a symptom of shallow game design.
 
 When you start playing with your player group, you'll learn how they play and what opposition they can manage with their current Heroes, and adapt. You'll need to think for yourself here.
 
@@ -155,14 +166,17 @@ Be careful with the combinatorial complexity. Adding things easily creates combi
 \phantomsection\addcontentsline{toc}{section}{terminology}
 \section*{Terminology}
 
+
 \begin{description}
 
-\item[The Almighty 1D10.] All skill and trait checks are done by rolling a D10 (1D10) (outcome [1-10], not [0-9]).
-success level = skill - 1D10 \\
+
+\item[The Almighty 1D10.] 
+All skill and trait checks are done by rolling a D10 (1D10) (outcome [1-10], not [0-9]).\\
+\textbf{Success level = skill - 1D10} \\
 E.g: skill 6, roll 4 = success +2 \\
 E.g: skill 7, roll 7 = success +0 \\
 E.g: skill 4, roll 7 = failure -3 \\
-success =0 is just barely a success. \\
+success =0 is just barely a success \\
 success +3 is a good success \\
 success +6 is a very good success \\
 success +9 is an excellent success \\
@@ -172,37 +186,62 @@ failure -9 is a critical failure or fumble
 
 \textbf{Optional:} A roll of 10 is always a failure, regardless of skill level and modifications. Not a fumble! This is to get more chance into the game, so that you cannot guarantee a certain behaviour even if you plan it well and have mighty skills.
 
-\item[Modification, penalty, bonus (mod):] all the same, although penalties tend to be bad for you while bonuses are usually good. Modifications are additive to an action's chance of success. \\
+
+\item[Modification, penalty, bonus (mod):] 
+all the same, although penalties tend to be bad for you while bonuses are usually good. Modifications are additive to an action's chance of success. \\
 E.g: skill 5 mod+3 has a chance of 8 on a D10 to succeed, skill 6 mod-2 has 4.
 
 The total Accumulated Modification Stack / Action Modification Stack, (modification stack / mod stack / mods / mod / ams / ms), is the sum of all mods added together.
-E.g: walk (mod-3) and below 66\% hp (mod-1) and declaring 5ap (mod-2) gives ams:mod-6.
+
+E.g: walk (mod-3) and below 66\% hp (mod-1) and declaring 5ap (mod-2) gives ams:mod-6. So with mod-6 even a fighter with sword 8 has only a chance of 2 on a 1D10 to hit.
+
 
 \item[Actions and Action Points (ap):]
-Actions are most of the stuff the character actively does, except for movement. Actions cost action points, and most actions cost three action points.
-Action points are declared in the beginning of each round. The more actions points you want to use the more mods you will have on your rolls.\\
-Don't think of action points as units of time. It is not designed to map to time and thus is a poor analogue.
+Attack, jump, avoid, climb, take, sneak, give, drink. 
+Actions are most of the stuff the character actively does, except for regular movement. Actions cost action points, and most actions cost three action points (3ap).
+
+Action points are declared in the beginning of each round. The more actions points you want to use the more mods you will have on your rolls.
+
+Don't think of action points as units of time. It is not designed to map to time and is thus a poor analogue and \emph{will} lead to broken reasoning, contradictions, and paradoxes.
+
 
 \item[Movement and Movement Points (mp):]
 Each square the character moves costs movement points. Movement speed is declared in the beginning of the round: maneuver, walk, run, or dash, giving a set amount of movement points. The faster you move the more mods you will have on your rolls in that round.
 
-\item[Skill, spells, magic, trait, ability, power, mutation, psionic, etc:] gives the character the option of performing actions or maneuvers that he otherwise would not have access to, or improves the chances of succeeding with rolls he already has available. The terms are treated as the same thing. They often add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
+Typically you can \emph{maneuver} (M) 1 square without any difficulty to your actions, or \emph{walk} (W) 3 squares with mod-3 to all actions that round, or \emph{run} (R) 6 squares with mod-6 difficulty, or \emph{dash} (D) 9 squares with mod-9.\\
+So, trying to hit something with your sword, or calculate how to divide the gold you just stole, all while dashing away as fast as you can, is not going to work.
 
-\item[Maneuver:] Maneuvers are actions or variations of actions. They add alternatives and flexibility. Think of them as mini skills. Examples are special attacks, movements, etc, or bonuses in certain situations.
+
+\item[Skill, spell, ability, power, mutation, psionic, maneuver, trait, etc:] gives the character the option of performing actions that he otherwise would not have access to, or improves the chances of succeeding with rolls he already has available, or changes the rules or how the rules apply to the character under certain circumstances. The terms are treated as the same thing. They often add their own rules to the game, which start giving the characters a lot of interesting flexibility and combinations. Some skills change the rules and logic of the game significantly.
+
+Maneuvers are actions or variations of actions. They add alternatives and flexibility. Think of them as mini skills. Examples are special attacks, movements, etc, or bonuses in certain situations.
 \\   \todo This is also the name of the slowest combat movement mode, sorry about that. I'll think of something else for this and rewrite later on... \emph{Any good suggestions?}
 
-\item[Round (r):] is a measure of time, one game round. It does not translate to a specific number of seconds. The term "turn" is also frequently used to mean more or less the same thing as a round, although it should more specifically be the time period of one round's actions and movements for one character. All characters take turns to perform actions and movements during a round.
+
+\item[Round (r):] is a measure of time, one game round. It does not translate to a specific number of seconds. Each round all characters usually move a bit and take one or several actions. All characters have their own turn during the round, but they can often take actions and movement during other characters' turns as well.
+
 A round is split into the following phases: declaration, all turns, end.
-During declaration all characters declare movement and action points. Then all characters take their turns. Then the round ends and book keeping is done for the next round.
+During declaration all characters declare movement and action points. Then all characters take their turns. Then the round ends and book keeping is done to prepare for the next round.
+
+Declaration and end phases usually just takes a few seconds each if the players are awake. Most of the time is spent on the characters' taking their turns to move and act, i.e. actually doing something.
+
+Optional: Set a 10 second timer to limit dilly-dallying on declaration if you have players who can't make up their mind.
+
 
 \item[Square (sq):] is used as a measure of distance, i.e. the length of a square on the game map, or more correctly the distance a character travels when moving between two adjacent squares on the game map. The game is generally played on square tiles, but works just as well on hexes or gridless maps with some very minor adjustments.
+
 The sq distance on diagonals is usually measured 1-2-1-2-..., meaning the first diagonal counts as distance 1sq, while the second counts as distance 2sq.\\
-In a few cases the sq is also a surface area.
+In a few cases the sq is also used as a surface area.
 
-\item[Base contact:] is when two characters are standing in adjacent squares, connected by a side or corner.
+When playing on gridless maps just define a unit distance as 1sq. E.g: 10 mm is 1sq, or 1 inch, or the length of the eraser you happen to have 10x of lying around, or the loop around your finger when creating movement speed twine strings and crossbow range measurement tapes.
 
-\item[Round Down:] (rd) is the norm. When a value is written as x/y it's assumed to be rounded down unless otherwise stated. E.g: 10/3 = 3, 11/3 = 3, -10/3 = -4.
-Unless explicitly written as "round up" (ru) or "round nearest" (rn) assume it's inteded to round down. In some cases "round towards zero" (rz) is used, e.g: 11/3 = 3, -11/3 = -3.
+
+\item[Base contact:] is when two characters are standing in adjacent squares, connected by a side or corner. Or if playing on gridless map; when the characters are within their base radius, or contact radius, or simply if the figures or character representation minis or toys touch.
+
+
+\item[Round Down:] (rd) is the norm. When a value is written as x/y it's assumed to be rounded down to nearest integer unless otherwise stated. E.g: 10/3 = 3, 11/3 = 3, -10/3 = -4.
+Unless explicitly written as "round up" (ru) or "round nearest" (rn) assume it's intended to round down. In some cases "round towards zero" (rz) is used, e.g: 11/3 = 3, -11/3 = -3.
+
 
 \end{description}
 
@@ -227,7 +266,7 @@ The more you try to do in each round the more difficult each action will be, and
 
 In the beginning of each round you decide how many action points and movement points you want to have available for that round. Unused points disappear at the end of the round.
 
-With some skills you can try to use more points than you have declared, but you get penalties that continue until future rounds.
+With some skills you can try to use more points than you have declared, but you get penalties that continue through future rounds.
 
 
 \subsection*{All effects, skills, modifications and penalties stack together}
@@ -238,16 +277,20 @@ All penalties and mods also stack together and will in severe situations make su
 Some combination effects might be bugs that have not yet been seen in game nor foreseen during writing and testing. \emph{Let me know if you find weird or broken stuff.}
 
 
-\subsection*{All rolls are affected by the mod stack unless stated otherwise}
-%----------------------------------------------------------------------------
-All rolls: skill rolls, str and dex rolls, balance rolls, climb rolls, swinging a sword, shooting a bow, casting a spell, etc, are affected by the action modification stack / mod stack / ams.\\
-Unless it specifically says the roll ignores the action modification stack / mod stack / ams and take none or some other kinds of modifications. E.g: jump, possum, etc. But there are actually quite few exceptions.\\
+\subsection*{All rolls are affected by the mod stack}
+%----------------------------------------------------
+All rolls: skill rolls, str and dex rolls, balance rolls, climb rolls, swinging a sword, shooting a bow, casting a spell, etc, are affected by the action modification stack / mod stack / ams. Unless it specifically says the roll ignores the action modification stack / mod stack / ams.
+
+Some actions take no mods, or some other kind of modifications. E.g: jump, possum, etc. But there are actually quite few exceptions, and they are clearly marked and explained.
+
+\
+
 \todo I know there are exceptions I've forgotten to clarify. \emph{Please let me know when you find them!}
 
 
 \subsection*{Simultaneous turns during rounds}
 %---------------------------------------------
-All characters and monsters take turns during every full game round. Generally each combatant makes a short series of movements and actions. Usually one or two attacks and/or parries, and moves a few squares. In any order. Movement can be split up, and occur before, during, or after actions.
+All characters and monsters take turns during every game round. Generally each combatant makes a short series of movements and actions. Usually one or two attacks and/or parries, and moves a few squares. In any order. Movement can be split up, and occur before, during, or after actions.
 
 In practice, characters will be performing actions during other character's turns. This will in effect often yield simultaneous turns during a round, just with different action timing flexibility depending on relative initiative. Characters with higher initiative can interrupt the movement and actions of characters with lower initiative.
 
@@ -275,7 +318,7 @@ Some terrain types or obstacles are difficult to pass, and may cost more movemen
 
 \todo perhaps change this to : the square you move \emph{to} that decides cost. Simpler to see, even if it reduces planning requirements.
 
-If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone, and get a persistant mod-3 to the rest of the round and the entire next round. Skills like off balance, defensive step, etc modifies this.
+If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone, and get a persistent mod-3 to the rest of the round and the entire next round. Skills like off balance, defensive step, etc modifies this.
 
 
 %\small \begin{verbatim}
@@ -293,7 +336,7 @@ Actions include attacking an enemy, parrying an incoming blow, kneeling down, dr
 
 Actions cost action points (ap). A normal action costs 3ap, but some are faster, and others are slower, affecting their ap cost. In the beginning of each round all characters declare how many action points they want to have available for that round. The more action points they choose the more difficult all actions get.
 
-The difficulty modification is the difference between declared ap and the character's baseline action points. The mod is always negative or 0, you don't get a positive mod from declaring fewer ap than your base. E.g: having base ap of 4 and declaring 6ap gives mod-2, and decaring 3ap gives mod=0. The maximum ap a character can declare is his base ap + dexterity.
+The difficulty modification is the difference between declared ap and the character's baseline action points. The mod is always negative or 0, you don't get a positive mod from declaring fewer ap than your base. E.g: having base ap of 4 and declaring 6ap gives mod-2, and declaring 3ap gives mod=0. The maximum ap a character can declare is his base ap + dexterity.
 
 Most characters start out with base ap of 3, meaning they can do about one action per round without extra difficulty modifications. The characters can increase their base ap by training skills like \emph{quick}.
 
@@ -350,10 +393,10 @@ All characters can react to actions being performed to them. This means that a s
 The right to react gives the right to perform one action, including movement before and/or after that action. The reaction action does not have to target the attacking character, but can be a non target action or target any other character.
 
 The reaction action can be interrupted by characters with higher initiative, just like any other action, \emph{but not by the original attacker}. 
-E.g: Attacking Albin moves in and attacks Defending David. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
+E.g: Attacking Astrid moves in and attacks Defending Doris. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
 
 Right to react continues in a chain if the two keep attacking each other.
-E.g: Attacking Albin attacks Defending Dave but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if he wants, still under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.\\
+E.g: Attacking Astrid attacks Defending Doris but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if she wants, still under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.\\
 Note: If AA attacks DD, hits, and DD successfully defends, there is no continuation within right to react. AA took an action and DD reacted. Finished.
 
 % is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here...
@@ -361,7 +404,7 @@ Optional: If using the rule where spending action points decreases in round init
 
 Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning \emph{before} the attack-defence sequence is resolved. The defender can still move or turn as part of, during or after, the defence action but only after the attack-defend is resolved and completed at present location and facing.
 
-%E.g: Attacking Albin strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defence is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defence action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have choosen to move 3sq then skip the defence on grounds that by then AA would be out of reach. If DD had higher initiative than AA he could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
+%E.g: Attacking Astrid strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defence is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defence action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have chosen to move 3sq then skip the defence on grounds that by then AA would be out of reach. If DD had higher initiative than AA she could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
 
 
 %TODO: decide which resistance roll version to use
@@ -576,8 +619,8 @@ For simplified tabletop gaming the vision arc should probably be ignored or simp
 
 \phantomsection\addcontentsline{toc}{section}{simple enough}
 \section*{Basic is enough}
-\label{sec:basicenough}
 %-------------------------
+\label{sec:basicenough}  % Ominous Crown
 With just this basic rule set it's enough to run very fast but tactically deep tabletop fights, as well as fun lightweight role playing of course. We've used the basic simplified rules when playing with kids as young as five years old with little or no previous tabletop experience. Smart kids, but still. They just need to be able to count to 10, and add and subtract a bit.
 
 For most basic tabletop scenarios I suggest to skip vision range and arc, stamina, pain, etc. All depending on what is actually relevant for the players' experience of the scenario, adventure, or campaign you intend to play.
@@ -594,33 +637,34 @@ Then choose a set of skills to be available to the players, again, only those th
 
 \item In the cave the Heroes fight a bunch of goblins, and rescue the girl. But they also find a letter from Lord Ominous ordering the goblins to the Ruined Temple in the Old Forest to find the Crown of Power. He will reward them with lots of gold and small babies to eat.
 
-\item Traveling through the forest they encounter some random animal to fight, evade, or befriend. At the Ruined Temple they must solve a riddle and get past some traps and avoid waking the Undead Priest.
+\item Travelling through the forest they encounter some random animal to fight, evade, or befriend. At the Ruined Temple they must solve a riddle and get past some traps and avoid waking the Undead Priest.
 Taking the Crown of Power they also find an old legend, saying the crown is very powerful, granting the king's warriors superior strength. But the crown only works if worn by someone of noble birth, seated on a throne at a very special location. Reading the legend and knowing the history of the region they figure out that the special place is in the middle of the village square. Which means Lord Ominous must be planning to invade the town if he wants to use the crown.
 
 \item Now they must either go fight Lord Ominous in his castle, or waylay him and his warriors when they travel to the village, or get the villagers to prepare for war and defend their home, or find someone else of noble birth to take the crown and help defend the village.
 
-\item Depending on what they choose they now must prepare for the final epic battle. This could mean scouting Lord Ominous' castle, sneaking about and finding a way when he could be vulnerable to attack. Or recconoitering the roads and prepare to ambush the Lord and his warriors. Or build pallisades and train the villagers to fight. Or dig through the village archives to figure out that the long lost great, great, great, granddaughter of the last lord of the land is still alive and must be the blacksmith's adopted daughter.
+\item Depending on what they choose they now must prepare for the final epic battle. This could mean scouting Lord Ominous' castle, sneaking about and finding a way when he could be vulnerable to attack. Or reconnoitring the roads and prepare to ambush the Lord and his warriors. Or build palisades and train the villagers to fight. Or dig through the village archives to figure out that the long lost great, great, great, granddaughter of the last lord of the land is still alive and must be the blacksmith's adopted daughter.
 
 \item Finish with a serious fight, win or loose depending on preparations and tactics.
 
 \end{enumerate}
 
-Let's see what's needed. Keep hidden map sections and fog of war, simplified to exposing rooms and critters as the players enter the various map segments. Hence, skip vision and arc. First time players? Skip stamina and pain, but keep mods for 66\% / 33\% / 0 hp, and death at negative constitution. This is a good dramatic signal when things start to go wrong. Keep mana but skip arrow counter, to emphasise the power of magic, and it's fun to have a small heap of mana tokens on the character sheet for the player to fiddle with. Skip off balance but perhaps keep yield, another good dramatic signal. Skip encumbrance, skip food and drink other than for storytelling flair. Assume they have tent, bed rolls, and a cook pot for the evening camp, and torches when they enter the old ruins.
+Let's see what's needed. Assume first time players, young kids, playing on a dinner table. Keep hidden map sections and fog of war, simplified to exposing rooms and critters as the players enter the various map segments, or simply build the map on the table as they go. Hence, skip vision and arc. For young players with no experience: skip stamina, pain, and low hp mods. For older kids I suggest you keep mods for 66\% / 33\% / 0 hp, and death at negative constitution. This is a good dramatic signal when things start to go wrong and it requires minimal book keeping. Keep mana but skip arrow counter, to emphasise the power of magic, and it's fun to have a small heap of mana tokens on the character sheet for the player to fiddle with. Skip off balance but perhaps keep yield, another good dramatic signal. Skip encumbrance, skip food and drink other than for storytelling flair. Assume they have tent, bed rolls, and a cook pot for the evening camp, and torches when they enter the old ruins. Perhaps they have a donkey, old and friendly, named Goober? He'll kindly wait for them outside the temple when they go explore.
 
-Choose a small set of skills that give the players different options depending on which skills they choose for their characters. For the simplest playthrough it's perhaps enough with just a few weapon skills: sword, shield, axe, spear, bow, avoid, and some simple magic spells: black bolt, fire wall, heal. This would be enough to give the players plenty of options for a group of Heroes to hack their way through the campaign. Just assume they can read, everything is written and spoken in Common, and so forth, the Castle has vines growing over the wall at some point if they look, etc. Choose a limited weapons set to showcase differences: 1h sword + shield, 2h axe, 2h spear, bow. So the players get a distinct difference between the relative strength of offence and defence, reach, and ranged fighting. And it will force them to fight better together and find tactical solutions to their respective weaknesses.
+For a very first game, just create a set of archetype Heroes for the players to choose from. A few more than needed. Choose a small set of skills that give the players different options depending on which skills their Heroes have. For the simplest playthrough it's perhaps enough with just a few weapon skills: sword, shield, axe, spear, bow, avoid, and some simple magic spells: black bolt, fire wall, heal. This would be enough to give the players plenty of options for a group of Heroes to hack their way through the campaign. Just assume they can read, everything is written and spoken in Common, and so forth, the Castle has vines growing over the wall at some point if they look, etc. Choose a limited weapons set to showcase differences: 1h sword + shield, 2h axe, 2h spear, bow. So the players get a distinct difference between the relative strength of offence and defence, reach, and ranged fighting. And it will force them to fight better together and find tactical solutions to their respective weaknesses.
 
-If the players figure out or remember to get a piece of equipment or a skill that could potentially be useful for the adventure, let them get it, and see if you can fix a situation where it turns out to be useful. Makes the player feel good.
+If the players figure out or remember to get a piece of equipment or a skill that could potentially be useful for the adventure, let them get it, and see if you can whip up a situation where it turns out to be useful. Makes the player feel good.
 
 \
 
 \noindent This very small set of rules and skills is enough for a great tabletop roleplaying experience with young kids or adults new to tabletop rpgs.
 
-\
 
-\
+\subsection*{A little bit more?}
+%-------------------------------
+To give the players some more options and tradeoffs from the beginning, 
+add: track, sneak, climb, literate, histography, dungeoneering, gossip, animal control and perhaps the spells speak to animals and illuminate history. This can allow, or limit, them to find alternative solutions and extra information, and force them to see that some solutions would be possible if they had chosen differently for their Heroes. For most styles of play that is important! The Heroes are not all powerful, the players must find ways to reach goals while \emph{limited} by their Heroes' abilities. 
 
-Perhaps you want a bit more depth and player options? \\
-Add: track, sneak, climb, literate, histography, dungeoneering, gossip, animal control and perhaps the spells speak to animals and illuminate history. This can allow or limit them to find alternative solutions and extra information, and force them to see that some solutions would be possible if they had choosen differently for their Heroes. That is important! Perhaps the animals of the forest can warn them about the undead priest in the Temple ruin, or tell which route Lord Ominous' warriors take when they travel. Dungeoneering can help them with temple traps and basic info on Lord Ominous' castle. Histography and literate explains the legend and the throne location to the middle of the town square. Gossip and literate find the long lost noblewoman. Sneak and climb gives access to Lord Ominous' castle.
+Perhaps the animals of the forest can warn them about the undead priest in the Temple ruin, or tell which route Lord Ominous' warriors take when they travel. Dungeoneering can help them with temple traps and basic info on Lord Ominous' castle. Histography and literate explains the legend and the throne location to the middle of the town square. Gossip and literate find the long lost noblewoman. Sneak and climb give access to Lord Ominous' castle.
 
 Here I would also suggest to keep stamina as part of the character management. It quickly adds a whole new dimension to the game and is not difficult to manage. It could also be a good idea to look into the difference between one handed and two handed weapons if that was skipped in the simpler version.
 
@@ -634,7 +678,7 @@ Here I would also suggest to keep stamina as part of the character management. I
 
 \
 
-With full complexity and a little tweaking this little adventure can become a tricky mini-campaign. 
+With full complexity and some tweaking this little adventure can become a tricky mini-campaign. 
 
 
 
@@ -761,7 +805,7 @@ Magus King rolls mod psy vs psy : \verb|8 vs 4 : | \verb|(8 - 4 +5 -1d10)|, roll
 % vs version: (attack-1d10) - (defence-1d10)
 %. So Magus King rolls \verb|8-d10| and minion Weakie rolls \verb|4-d10|: Result \verb|8-9 = -1| and \verb|4-7 = -3|. Diff \verb|-1 - -3| is success+2, and minion Weakie is now under his control.
 
-%A mod resistance roll macro for maptools: \\
+%A mod resistance roll macro for maptool: \\
 %\verb|/roll 5+mod+attack-defence-d10| \\
 %A result >=0 is success, <0 is failure. \\
 
@@ -960,7 +1004,7 @@ Under special circumstances some actions are 0ap instant actions and take no tim
 
 
 \subsection*{Actions that take a full round}
-\label{fullroundactions}
+\label{sec:fullroundactions}
 %-------------------------------------------
 Throwing a javelin takes a full round, that means the character can take no other actions that round. He will fire in order of initiative. A high initiative character can choose to fire before or after a low initiative character.
 
@@ -981,13 +1025,13 @@ For actions taking over 9ap it's possible to expand into multiple round actions:
 
 
 \subsection*{Actions that take more than one round}
-\label{multiroundactions}
+\label{sec:multiroundactions}
 %--------------------------------------------------
 Some actions take one or more rounds. Spellcasting is a typical example. Those actions retain the maximum mod penalty that they have taken through all the rounds during the performance. The roll is done at the end though, just before the action comes into effect.
 
 E.g: Aiming the arrow. Assassin OilySnake is reloading and aiming his crossbow for three rounds before firing. During these rounds he better be sitting very still, since otherwise he will be taking movement penalties. He also should not take any other actions during this time since that will require him to declare more ap than he can do without modification, and thus incur an action mod. So, in the end of round three he fires, rolls a 5. He has crossbow 4 (shitty assassin), aim mod+1. He succeeds =0. If he had moved much or taken any other actions he would have missed.
 
-E.g: Wizard Willfull is casting StaffLight which takes him 5r. He maneuvers slowly the first three rounds, busy building the spell. But in round four he walks and gets a mod-3. In the last casting round, round five, he is again maneuvering slowly. So at the end of round five, he rolls his casting StaffLight casting skill roll, but with a mod-3 for the walking in round four. He has StaffLight 7, rolls a 6, fails -2, and as the spell fizzles out he curses the damned goblin that forced him to move too fast.
+E.g: Wizard Willful is casting StaffLight which takes him 5r. He maneuvers slowly the first three rounds, busy building the spell. But in round four he walks and gets a mod-3. In the last casting round, round five, he is again maneuvering slowly. So at the end of round five, he rolls his casting StaffLight casting skill roll, but with a mod-3 for the walking in round four. He has StaffLight 7, rolls a 6, fails -2, and as the spell fizzles out he curses the damned goblin that forced him to move too fast.
 
 
 
@@ -1012,7 +1056,7 @@ Stamina is a measure of how long the character can keep up with high power activ
 
 Each attack generally costs one stamina point. \\
 Defence actions cost no stamina.\\ 
-Manuver movement speed costs no stamina.\\ 
+Maneuver movement speed costs no stamina.\\ 
 Every round you walk costs one stamina point. \\
 Every round you run costs two stamina point. \\
 Every round you dash costs three stamina points. \\
@@ -1032,7 +1076,7 @@ Some attacks and actions cost no stamina for every second use, or every third, o
 %TODO: remove the "con/3 extra stamina" regain when resting. Rests too fast.
 %A resting character regains con/3 stamina each round. 
 
-%DONE: the low con regain is currently in the maptools code 191209
+%DONE: the low con regain is currently in the maptool code 191209
 %Characters with low con regain extra stamina when resting slower than normal:\\
 %con=2 regains 1stam/2r\\
 %con=1 regains 1stam/3r\\
@@ -1246,7 +1290,7 @@ The attacker's weapon and target or target's blocking weapon are entangled until
 
 It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified). If any side wins with +3 or more he has managed to rip the opponent's weapon loose. It's also possible to tug or push a snagged opponent off balance.
 
-Weapons with the \emph{snag} property can be used to intentionally entangle the parrying weapon or shield. Snagging with the snag maneuver is tricky and carries a mod-x. Snag can also happens on a fail-6 or worse with a roll of 10 if you do not try to snag, even with weapons that don't have the snag attack propery.
+Weapons with the \emph{snag} property can be used to intentionally entangle the parrying weapon or shield. Snagging with the snag maneuver is tricky and carries a mod-x. Snag can also happens on a fail-6 or worse with a roll of 10 if you do not try to snag, even with weapons that don't have the snag attack property.
 
 
 \item[Knock back]
@@ -1313,7 +1357,7 @@ And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder req
 %--------------------------------
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
-Always use the highest base strength requirement of all equipment, manuvers, skills, etc when calculating the free excessive strength points.
+Always use the highest base strength requirement of all equipment, maneuvers, skills, etc when calculating the free excessive strength points.
 E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
 
 %TODO: rewrite example, after changes to stamina
@@ -1374,7 +1418,7 @@ Characters die when they reach -con hp. When a character reaches 0 hp or below h
 
 E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
-Optional: Some large creatures with very high hp will have a multiplier when referencing con for this effect, e.g: dies at -con*3 or some such. This multiplier also affects the chance of faniting from negative hp, etc.
+Optional: Some large creatures with very high hp will have a multiplier when referencing con for this effect, e.g: dies at -con*3 or some such. This multiplier also affects the chance of fainting from negative hp, etc.
 
 
 \subsection*{Regaining hit points}
@@ -1396,7 +1440,7 @@ Riding is faster. A characters can ride a distance equal to his constitution plu
 
 When riding in a wagon or cart the distance is not based on the character's con and ride skill, but only determined by the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
 
-Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severly limited even in hilly terrain.
+Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severely limited even in hilly terrain.
 
 
 %Region maps generally have the scale of 1 sq = 1 league. And a league is about how far a character with con=1 can travel per day. A con=5 character can travel 5 leagues per day.
@@ -1540,7 +1584,7 @@ Some very skilled people can sometimes attempt to parry incoming projectiles but
 
 \subsection*{Cover from shields, hiding behind shields}
 %------------------------------------------------------
-Most shields have a modifier against ranged attacks that is a form of cover, when attacked from the shield side. This rule will be simplified until partial area arc visuals can be used in Maptools.
+Most shields have a modifier against ranged attacks that is a form of cover, when attacked from the shield side. This rule will be simplified until partial area arc visuals can be used in Maptool.
 
 %Shield cover is the 90deg region centred on (+/-45deg) the facing of the character.
 %Shield side is the 90deg region centred on (+/-45deg) the diagonal forward of the shield arm. I.e: left shield arm covers 0-90deg counter clockwise from the heroes facing, while right shield arm covers 0-90deg clockwise from the heroes facing.
@@ -1616,7 +1660,7 @@ Fail-1,-2 costs no mana. \\
 Fail-3 or worse is 1 mana lost. \\
 Fail-6 or worse will cause the loss of the full cost of the spell.
 
-This is to make spell casters more enduring in game. It also fits well with the image of the wizard building the spell, then empowering it.
+This is to make spellcasters more enduring in game. It also fits well with the image of the wizard building the spell, then empowering it.
 
 
 \subsection*{Extra mana for effects}
@@ -1636,9 +1680,9 @@ There are spells which require the caster to remain within range for the duratio
 
 \subsection*{Duration of spells}
 %-------------------------------
-Spell casting completes in the last round it is being cast, in order of initiative. The spell caster can now choose when the spell should begin to take effect: \\
+Spellcasting completes in the last round it is being cast, in order of initiative. The spellcaster can now choose when the spell should begin to take effect: \\
 The spell's effect can start immediately after casting and then that round counts as the first round of it's duration. Or: \\
-The spell's effect can start at the very beginning of the next turn, ignoring initiative, and have that turn count as the first round of the duration.
+The effect can start at the very beginning of the next turn, ignoring initiative, and have that turn count as the first round of the duration.
 
 This can be important. E.g: The wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will perhaps benefit his friends more if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he probably cannot take any more actions in the round of the casting.
 
@@ -1647,7 +1691,7 @@ This option is available also for spells that take less than 1r to cast.
 
 \subsection*{Keeping spells active}
 %----------------------------------
-Most spells with duration must be kept active by force of will, concentration. Unless otherwise specified, each active spell requires one point of psy dedicated to keeping it from unraveling and dissipating. That point of psy is deducted from the caster's psy while the spell is active.
+Most spells with duration must be kept active by force of will, concentration. Unless otherwise specified, each active spell requires one point of psy dedicated to keeping it from unravelling and dissipating. That point of psy is deducted from the caster's psy while the spell is active.
 
 Some spells with duration do not require any psy to keep active, while others can require several psy, or one or more int, or str, con, dex. Some burn stamina or mana, etc.
 
@@ -1671,16 +1715,16 @@ E.g: Crimson Caster is at mana -1, tries to cast a cost 3 spell and must roll ps
 
 \subsection*{Casting is exhausting}
 %-----------------------------------
-Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spell casting will fail.
+Drawing mana costs stamina. Each point of mana drawn also draws one point of stamina. If the Hero can't draw stamina the spellcasting will fail.
 
 If the Hero tries to draw stamina when starting from 0 or negative stamina he must roll con modified by negative stamina once for the whole spell. The Hero can roll con before starting casting the spell instead of when he finishes casting it if he so wishes. The roll is valid as long as he doesn't loose stamina while casting.
 
 
 \subsection*{Smooth casting}
 %---------------------------
-The caster can spend more xp to train a spell so that it will not draw stamina together with mana. Learning to cast a spell smoothly takes 50\% more xp than the regular cost of learning the spell. Any xp spent learning the spell in the usual fasion can be counted towards learning to cast the spell smoothly.
+The caster can spend more xp to train a spell so that it will not draw stamina together with mana. Learning to cast a spell smoothly takes 50\% more xp than the regular cost of learning the spell. Any xp spent learning the spell in the usual fashion can be counted towards learning to cast the spell smoothly.
 
-E.g: Tired Ture knows how to cast unground. He has spent 11xp to train unground 6. But he's noticed he's often out of breath when he need to cast, so he wants to learn how to cast it smoothly. Since unground is scf 0.33 the smooth cast unground is scf 0.50. He can take the 11xp he's already spent on unground, but that only gets him to lvl 4, for 8xp. So he spends another 1xp to afford smooth cast unground to lvl 5, for 12xp. Tadaa. No more burning stamina when ungrounding his enemies.
+E.g: Tired Ture knows how to cast unground. He has spent 11xp to train unground 6. But he's noticed he's often out of breath when he need to cast, so he wants to learn how to cast it smoothly. Since unground is scf 0.33 the smooth cast unground is scf 0.50. He can take the 11xp he's already spent on unground, but that only gets him to lvl 4, for 8xp. So he spends another 1xp to afford smooth cast unground to lvl 5, for 12xp. Tadaaa. No more burning stamina when ungrounding his enemies.
 
 
 \subsection*{Lacking psy}
@@ -1726,14 +1770,14 @@ A wizard can have more than one item at the same time, but the max bonus is +1. 
 
 \
 
-Optional: It can be fun to limit the creation or replacement speed of trusty old items. Let's say the wizard can't just caugh up 15xp directly, but has to spend 5xp first, then go on an adventure with the staff, then the other 10xp for the mod+1.
+Optional: It can be fun to limit the creation or replacement speed of trusty old items. Let's say the wizard can't just cough up 15xp directly, but has to spend 5xp first, then go on an adventure with the staff, then the other 10xp for the mod+1.
 
 Perhaps even force him to play one adventure without the "trusty old" status and have mod-1 before he can spend the first 5xp to mod=0.
 
 
 \subsection*{The paladin's armour}
 %---------------------------------
-Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spell casting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard's staff. 
+Similar to the wizards staff, the paladin must be able to cast his magic while dressed in combat armour. Heavy armour generally give spellcasting penalties. The paladin can spend xp to cancel the mods. Each mod point costs 5xp to cancel. The armour is then "divine armour", just like a "trusty old" something for the wizard. By spending the extra +10xp set the paladin can push his armour to mod+1, just like the wizard's staff. 
 Or the paladin can get the tank skill to reduce or cancel the armour penalties that way.
 Don't forget to also pay "trusty old" xp to cancel the mods from sword and shield...
 
@@ -1776,7 +1820,7 @@ These simplifications are great for "cannon fodder" critters, and that saves tim
 
 \subsection*{Full complexity for boss monsters}
 %----------------------------------------------
-It's more interesting to have special NPCs and opposition use full complexity, with all the intricate details, specialties, and loop holes. Simply adding things like counter attack, combat group, Oy!, leader, synchronise, etc drastically changes the way the opposition feels. Use it to give spice and make some mobs extra interesting.
+It's more interesting to have special NPCs and opposition use full complexity, with all the intricate details, specialities, and loop holes. Simply adding things like counter attack, combat group, Oy!, leader, synchronise, etc drastically changes the way the opposition feels. Use it to give spice and make some mobs extra interesting.
 
 
 \subsection*{Things to think about}
@@ -1806,7 +1850,7 @@ Intelligent monsters will instead flee, re-group, sound the alarm, make ambushes
 \section*{Miscellaneous GM tips}
 %-------------------------------
 
-As you get used to the game and try different things you'll figure out what works well for you and your group, and what doesn't. Don't be afraid to experiement. Log what you're doing so you don't forget, a few years down the line it's all very fuzzy in the old noggin.
+As you get used to the game and try different things you'll figure out what works well for you and your group, and what doesn't. Don't be afraid to experiment. Log what you're doing so you don't forget, a few years down the line it's all very fuzzy in the old noggin.
 
 
 \subsection*{Nerfing}
@@ -1818,7 +1862,7 @@ During campaign play I strive to not forcibly nerf, and always allow the charact
 
 \subsection*{Hero manual}
 %------------------------
-I recommend that the players copy the skills they choose for their character dirctly to a cheat sheet. Especially if you or your group is tweaking and fiddling with the skills, etc, a lot during the game, it's important to note down what the original version of the skill actually said when the player decided to train it.
+I recommend that the players copy the skills they choose for their character directly to a cheat sheet. Especially if you or your group is tweaking and fiddling with the skills, etc, a lot during the game, it's important to note down what the original version of the skill actually said when the player decided to train it.
 
 This also means that the players will effectively compile a small rule book specifically for their own character. The basic rules, notes, ideas, etc. Very useful. It also offloads the GM, since the player will have a very good understanding of the rules affecting his character.
 
@@ -1870,6 +1914,7 @@ Most groups quickly find common ground naturally, but be aware of the issue and 
 \phantomsection\addcontentsline{toc}{section}{young kids}
 \section*{Playing with young kids}
 %---------------------------------
+\label{sec:youngkids}  % Bitter Candy
 We've successfully played with kids as young as five years old, and without any previous tabletop or role playing experience. It's enough that they can count to 10, add and subtract a bit. So, clever kids, but still.
 
 \
@@ -1878,6 +1923,7 @@ We've successfully played with kids as young as five years old, and without any 
 
 \
 
+% Bitter Candy
 Use physical objects and markers instead of numbers on a paper. Improvise the battle map with everyday objects and use their toys as Hero minis. I had an insane adventure when I playtested with a trio of young girls. I had them build a small play farm on a coffee table, and choose one small toy each. Then told them that an evil bitter taste was spreading throughout the land, making all the candy taste like coffee. They must find the source of the horror and put a stop to it immediately.
 
 Thus Sparkly Pony and two old Rubber Trolls had to venture from their coffee table farmstead, across the Living Room Expanse and the Valley of Hallway, into the Forbidden Kitchen. There they had to climb the Chair Mountains to reach the Oakwood Plateau, whence the miasma originated. Finally, on the high flatland they faced Lord Grapefruit and all his purple and green grape minions. Along the way they had encountered a friendly sock monster who had taught them a useful spell of Stink Cloud, and fought a couple of evil car demons to get a set of SpeedWheel boots. They also had to solve the riddle of the BrassHandle before the DoorMaster allowed them to enter the Forbidden Kitchen.
@@ -1915,7 +1961,7 @@ With markers it's quick and easy to keep track of the character's current stats.
 
 Keep three separate areas:\\
 per round accounting: mods, mp, ap\\
-persistant status: hp, stamina, mana, pain, stun, etc\\
+persistent status: hp, stamina, mana, pain, stun, etc\\
 a marker bank, separate per character to have it close at hand.
 
 Each round the players will fiddle with mp, ap, and mods, so that should be quick and clear without risk of touching and disrupting the heaps of hp, stamina, mana, etc. So, \emph{keep them separate}.
@@ -1934,6 +1980,40 @@ In low light conditions it's easier to approximate light and vision range based 
 
 
 
+
+
+%-------------------------------------------------------------------------------
+% O N L I N E   G A M I N G
+%--------------------------
+
+\phantomsection\addcontentsline{toc}{section}{online}
+\section*{Online gaming}
+%-----------------------
+Face to face, coffee and cake, friends and banter. Gathering around a table is more fun. But for many it's a rare treat. Life and logistics gets in the way. Children and work take priority and when your gaming friends all of a sudden live a continent away the Sunday game commute is perhaps not environmentally defensible any more.
+
+For us, online play, once a week on a fixed weekday evening 2000--2200 has been shown to work well enough to actually be schedulable.
+
+
+\subsection*{Tools: virtual tabletop and voice chat}
+%---------------------------------------------------
+The game is primarily designed for short sessions with fast gaming, and we play mainly online over voice and vtt. As of late 2019 we're still using maptool and mumble. They work well, even for the sometimes enormous battles of the Goblin Destiny campaign. I'm sure other VTTs work fine but maptool is the only one I've found that is self hosted, has vision blocking, fog of war, and individual token vision. It's also quick and easy to work with as a GM. 
+
+For voice chat I recommend mumble + murmur and make sure everyone has a decent headset. \vvsmall(early 2020)\normalsize.~ Don't use webex, skype, teams, etc as those are way too unstable and have horrible sound quality, lag, and jitter. Hangouts and Discord are better than skype but have much longer latency than mumble. Teamspeak and ventrilo were ok, haven't tested for a while, but mumble beats them as well. And since mumble can be self hosted you can have exceptionally good latency and jitter, especially between the GM and every single player. 
+
+\
+
+Since most of my projects have longevity exceeding a decade I've come to rely primarily on open source tools. Proprietary stuff simply doesn't have the survival statistics. Economy, product strategy, and acquisitions kill tools too frequently for me to invest time in them.
+
+% I'd like to find one that also works well on tablets and smartphones.
+
+% some 
+% VTT: maptool, vassal, roll20, fantasy grounds, foundry, ...
+% ? table top simulator on steam?
+
+
+
+
+
 %-------------------------------------------------------------------------------
 % M A P T O O L 
 %--------------
@@ -1941,11 +2021,11 @@ In low light conditions it's easier to approximate light and vision range based 
 \phantomsection\addcontentsline{toc}{section}{maptool}
 \section*{Maptool}
 %-----------------
-Maptool is the only Virtual Table Top system I've used for this game since the inception back in 2008. Not totally accurate, first few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
+Maptool is the only Virtual TableTop system I've used for this game since the inception back in 2008. Not totally accurate, first few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
 
 Open source. Self hosted. You as GM or player have control and access to all the work you create, it's not locked away on a server somewhere, dependent on whether the hosting company survives / changes strategy / gets acquired in the coming years. The code is mainly java so it's fixable if the external community dies. I saw the likelihood of this little hack'n'slash game being long lived, so open source and self hosting were \textit{\textbf{must have}} when I scouted for tools.
 
-Maptool had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your campfire. Great, and something most other tools were lacking. And many still lack today, \vvsmall(early 2020)\normalsize
+Maptool had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your camp fire. Great, and something most other tools were lacking. And many still lack today, \vvsmall(early 2020)\normalsize
 
 Maptool scripting is passable, but horrible to work in. Despite this, I've implemented automation for most everything in the game over the years. Almost all actions as GM is one or two clicks by now, and very little to keep in the noggin between rounds.
 
