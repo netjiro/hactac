@@ -1,0 +1,274 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
+
+
+\input{../../tex/settings.article}
+
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+
+% Manually specify hyphenation for names, etc. 
+% Remember: space separated word list: lead with space.
+% Hyphens can only occur on specified "-" characters, and
+% words without hyphens will never be hyphenated, overrides language rules.
+% see link regarding location of hyphenation block
+% https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation
+\hyphenation{ 
+ Kings-land 
+ Evil-nius Conq 
+ Massa Pawa 
+ Uchly Namen 
+ Edwin Chro-mo-phobe 
+}
+
+
+
+
+%-------------------------------------------------------------------------------
+% title page
+%-----------
+
+
+\thispagestyle{empty}
+
+\null          % make an empty mark, so that following white space will be honoured
+\vspace{1cm}   % not honoured at beginning of page without something above
+
+\begin{center}
+
+\huge         Adventures  \\
+                  in      \\
+              Kingsland   
+
+\vspace{0.3\baselineskip}
+
+\large      Gold and Glory
+
+\vspace{2cm}
+
+\includegraphics[width=120mm]{./fig/skeleton.jpg}
+
+\vspace{2 cm}
+
+
+\normalsize
+          your guide to the local    \\
+            corner of the world
+
+\vfill
+
+\today
+
+\end{center}
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+\clearpage
+\thispagestyle{empty}
+\raggedbottom
+
+\noindent \vsmall 
+This work is licensed under the Creative Commons\\ Attribution-NonCommercial-ShareAlike 4.0 \\
+International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+\normalsize
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% begin main matter
+%------------------
+\cleardoublepage
+\pagestyle{fancy}
+\flushbottom
+
+
+% will mark both left and right pages with an abbreviated section title
+% since this is most likely to be read on screens one page at a time instead of
+% printed in a binder/book with left/right pages visible simultaneously.
+%\markboth{lefttitle}{righttitle}
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
+\section*{Adventures in Kingsland}
+\markboth{Kingsland}{Kingsland}
+
+\noindent
+Play online with your bestest buddies, a couple of hours on weekday evenings when the kids are asleep, easy to schedule, built for vtt and voice.
+Fast and tactically challenging tabletop battles and fantasy themed mini war games, set in cliché role playing campaigns and one shot adventures. 
+Find the optimal monster-murder squad, tinker with skills, weapons, magic, etc, for that special clever edge.
+
+\
+
+\emph{Or}
+
+\
+
+\noindent
+Play with the kids on the dining room table, or across half the house. Use their favourite toys as Hero figs and the dreaded \textsc{LEGO} men as the countless minions of Lord Grapefruit.
+Simple, quick, fun role playing adventures and campaigns, with tricksy tactically deep fights and battles. 
+Huge width of freedom in character creation with a skill based, classless, rule set where you can choose the complexity level you want to find the sweet spot between fast simple fun and challenging depth and complexity.
+
+\
+
+\emph{You choose}
+
+\
+
+\noindent
+The rule set is highly flexible. The basics is simple enough for very young kids. The full complete rule set leaves enough room for a clever scientist to tinker and get lost in.
+
+
+\vspace{2.0\baselineskip}
+
+
+\begin{description}
+
+
+\item[Schedulable:] A couple of hours on weekday evenings is enough. Play online with vtt and voice. Simple, quick, no fuss, everyone can do it. 
+
+\emph{Actually get some gaming done!}
+
+The game is explicitly designed to work well with online play. We've played hundreds of sessions since 2008, even when people have been spread out over different countries, had demanding careers, lots of travel, young kids, etc, etc.
+
+
+\item[Kids:] Starts simple enough for 5yo kids, and scales up through university. Sparkly Pony, Lightning McQueen, and the old Rubber Troll make excellent Heroes as they go explore the dark depths below the dining room table.
+
+Or play with pen and paper, meeples or minis, battle maps or improvised terrain. You don't need much to start, and you already have it at home.
+
+
+\item[Hundreds of hours of adventures:] Built and tested over many years. Loads of adventures and several campaigns. Loads of highly varied experiences, stories, and challenges, all across Kingsland.
+
+
+\item[Share and meet new gamers:] Upload and share your adventures with the greater community. Find new friends, steal cool ideas, adventures, characters, maps, figs, etc, discuss that \emph{awful} rule I just pushed, and how much better it would be \emph{this other way}.
+
+
+%\item[Fast:] Lots of quick rounds. Attack, retreat, sneak around behind, flank, make a stand until the sorcerer has finished his summoning, then disengage and escape through the secret tunnel. All in a fluid and varied battle in the dungeons of the Antorg Slavers.
+%
+%Supports 50+ Heroes and Monsters on the map in full glorious slaughter, but keep it below 20 and no one will get bored.
+
+
+\end{description}
+
+
+%\vspace{2.0\baselineskip}
+\clearpage %--------------------------------------------------------------------
+
+\section*{Gold and Glory awaits the Brave Heroes}
+
+\noindent
+For the very young we have adventures like \texttt{Bitter Candy} where Lord Grapefruit is threatening to make all the sweets in the land taste like coffee. Play with the kids' favourite toys across half the house, or on a table using maps and meeples. Get grapes for the Villain's minions, and have your kids eat their kills.
+
+The rule book also includes the \texttt{Ominous Crown} adventure example which is also suitable for children around 10, or turn it into a small mini campaign for your brave new adult players. I hear wine and cheese, or beer and pretzels, are equally good when the Heroes set out to rescue the Blacksmith's daughter.
+
+\
+
+For a longer newbie campaign we have \texttt{Return of Uchly Namen} where the newbie Heroes travel to Sleepy Cove to help find three missing jewels. Goblins, bandits, monsters, from deep mine shafts to high towers. The Heroes will travel the land and encounter a varied range of opposition, suitable to introduce the game in bite sized pieces.
+
+When they have solved the mystery, as experienced almost-heroes, they can take on the \texttt{Dark Klan}, explore the \texttt{Deep Cave}, and go \texttt{Rescue Nurensachs}, in a mid level campaign arc.
+
+\
+
+Other hiccups that plague the region are \texttt{Overlord Orvar}, and up and coming Dark Lord, hell bent on Death, Destruction, and Domination, and the ashen Lord of Greyness himself, \texttt{Edwin the Chromophobe}. The Heroes must tackle the darkness below to root out the growing evils plaguing the land before it spreads too far.
+
+\
+
+At some point the Heroes should probably also get Certified. \texttt{Ottokar's Test Dungeon lvl 1} awaits. Proper Hero certification is a racket, for sure, but many clueless middle management gnomes insist that they will only bring on Certified Heroes for the task at hand.
+
+\
+
+For the experienced Heroes there is the dangerous mission to \texttt{Destroy the Altar} deep in the goblin warrens. This is not for the faint of heart. And if they survive that, perhaps they will be hired to \texttt{Turn off the Light}. How many Heroes does it take to unscrew a light bulb? How many will die in the process?
+
+\
+
+For experienced players looking for a different kind of challenge we have the \texttt{Goblin Destiny} campaign, which follows the GamGang bandit clan from when they have just moved in to when they meet their Destiny.
+
+
+
+
+\clearpage %--------------------------------------------------------------------
+
+\section*{Built for online gaming}
+
+The rule set and campaign setting was explicitly built for online gaming. Most people want to play more than they can. This is a way to make it happen.
+
+
+\subsection*{A Virtual TableTop}
+
+There are many choices available. Choose which one you and your players feel comfortable with. You don't need much support for special features. The basics are available in all common tools. Import maps from images. Import Hero and Monster tokens from images. Move tokens around on the map. All tools allow all players to access their Heroes on the map and move them around. The GM moves the monsters and NPCs. 
+
+Some tools have support for fog of war for exploration and sight, vision blocking for walls and objects, individual vision for each Hero, dynamic lighting and darkness, etc. But that's not necessary to play and have fun. You don't get that in a regular tabletop game, so you don't strictly need it.\\
+\emph{But it can be a lot of fun to have.} And it allows for some interesting exploration and tactical gameplay. 
+
+Scripting is available in some tools. It allows to build automation for common tasks and offload the old noggin from having to keep track of numbers and details.
+
+\
+
+We've used maptool through the years with good success. It has all the useful bells and whistles, and is open source and self hosted to boot. The scripting language is horrible, but I've managed to cobble together automation with over 90\% coverage of the common tasks.
+
+
+\subsection*{Voice chat}
+
+So many options, but most of them suck donkey balls. Go with what you already like, but \emph{Don't} use skype, webex, or other commercial conferencing tools. They are absolutely horrible.
+
+Mumble is the best option we've found thus far. Great sound quality, best latency and jitter, and some other useful options. Also open source and self hosted. Discord is simpler but has worse latency and quality. The old guard: teamspeak, ventrilo, etc probably still work. Hangouts, et al. are generally worse and less reliable.
+
+\
+
+What the hell, just go with mumble, and if you can't be bothered to set it up, then check out discord.
+
+
+\subsection*{Sketching} Fun to have a shared sketch table. Jarnal works but is very limited. There are a ton of tools on the web, with good and bad.
+
+
+
+
+\clearpage %--------------------------------------------------------------------
+
+\section*{Physical TableTop gaming}
+
+The rule set is very flexible and easy to adapt to \emph{your} player group. Find a good trade off between speed and complexity. Start with the very small and basic rule set, then add interesting rules, skills, details, etc until you feel it's getting slow. Pick and choose as you go. Get rid of things you don't like and test new stuff that you find interesting. The game is exceptionally modular and very easy to tweak. There is an enormous space of interesting \emph{interactions} between all the optional parts, but very few \emph{interdependencies}, meaning you rarely need A to get B working.
+
+
+\subsection*{Young Kids} 
+
+It really is super easy in the simplest basic version, without lots of extras. We've had successful games with a 5yo girls who have never played an adventure game, rpg, or tabletop before. Older kids have had no problem getting into the game. \emph{Keep it fun} and don't overload them.
+
+Their small toys work perfectly well as Hero mini figs. You don't need a map grid, just use paper strips or strings to measure out movement and ranges. Use small pretty pearls and trinkets as hp and mana counters, etc. Be open minded and involve the kids, find something that works, and have fun. Adventure awaits, and it doesn't have to be complicated or involved in the beginning.
+
+If they can count to 10, add and subtract a bit, they can play the game.
+
+
+\subsection*{Battle maps, minis, terrain}
+
+But even if quick sketches on a paper and some improvised tokens is enough to make the game work, it really looks cool with well built terrain, trees, houses, cavern floor, painted minis, and distinct counters.
+
+The game is agnostic. Just use what you can scrounge up. A 40k Genestealer serves perfectly well for a ClawRunner, and that old obscure lead figurine is a great MonsterX.
+
+Be as puritanical as you wish. Excellent imagery awaits and the players will love it, but only if you want to.
+
+
+
+
+
+
+\end{document}
