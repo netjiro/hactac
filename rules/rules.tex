@@ -1816,6 +1816,19 @@ Nerfing rules, skills, abilities, and equipment is no problem unless they are in
 During campaign play I strive to not forcibly nerf, and always allow the character to re-trade his XP and gold for something else if I \emph{really} have to nerf something already in play. Again, consider the long term \emph{player enjoyment} vs the combat balance. Perhaps there are other ways to contextually limit something that has turned out to be overpowered, too complex, or broken.
 
 
+\subsection*{Hero manual}
+%------------------------
+I recommend that the players copy the skills they choose for their character dirctly to a cheat sheet. Especially if you or your group is tweaking and fiddling with the skills, etc, a lot during the game, it's important to note down what the original version of the skill actually said when the player decided to train it.
+
+This also means that the players will effectively compile a small rule book specifically for their own character. The basic rules, notes, ideas, etc. Very useful. It also offloads the GM, since the player will have a very good understanding of the rules affecting his character.
+
+\
+
+% 200218:
+So far, for over a decade, I have always let the player choose to keep the old version of a skill/equipment/whatnot when we tweak and update, or update if they want to.
+It's a bit fun to have the weird legacy stuff circulating even after tweaks.
+
+
 \subsection*{Finding stuff}
 %---------------------------
 Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of asked vs real roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
@@ -1896,18 +1909,18 @@ Not originally designed for actual physical tabletop gaming, we've run both simp
 A few sheets of paper, pencil, eraser, and a small objects are all that's needed. Though much more impressive with cool terrain, props, and minis.
 
 
-\subsection*{markers and minis}
+\subsection*{Markers and Minis}
 %------------------------------
-With markers it's quick and easy to keep track of the character's current stats. Suggest using small tokens like coins, plastic bits, paper balls, whatever of various colour, size, shape to represent: mods, mp, ap, hp, stamina, mana, pain, stun, base mods, duration counters, etc.
+With markers it's quick and easy to keep track of the character's current stats. Suggest using small markers like coins, plastic bits, paper balls, whatever of various colour, size, shape to represent: mods, mp, ap, hp, stamina, mana, pain, stun, base mods, duration counters, etc.
 
 Keep three separate areas:\\
 per round accounting: mods, mp, ap\\
 persistant status: hp, stamina, mana, pain, stun, etc\\
-the token pool, separate per character to have it close at hand.
+a marker bank, separate per character to have it close at hand.
 
-Each round the players take mp, ap, and mods, so that should be quick and clear without risk of touching and disrupting the heaps of hp, stamina, mana, etc. So \emph{keep them separate}.
+Each round the players will fiddle with mp, ap, and mods, so that should be quick and clear without risk of touching and disrupting the heaps of hp, stamina, mana, etc. So, \emph{keep them separate}.
 
-I suggest front loading hp, stamina, mana, so that the pools are filled with "nice tokens" when they are whole and rested, and getting smaller and smaller as time goes by. That way it's easy to see when someone is getting into risky situations: His heaps are getting uncomfortably small.
+I suggest front loading hp, stamina, mana, so that the pools are filled with "nice markers" when they are whole and rested, and getting smaller and smaller as time goes by, while the piles of "nasty markers" like pain, grow. That way it's easy to see when someone is getting into risky situations: His nice heaps are getting uncomfortably small.
 
 
 \subsection*{Simplified tabletop light and vision}
@@ -1928,11 +1941,11 @@ In low light conditions it's easier to approximate light and vision range based 
 \phantomsection\addcontentsline{toc}{section}{maptool}
 \section*{Maptool}
 %-----------------
-Maptool is the only Virtual Table Top system I've used for this game, since the inception back in 2008. Not totally accurate. First few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
+Maptool is the only Virtual Table Top system I've used for this game since the inception back in 2008. Not totally accurate, first few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
 
-Open source. Self hosted. You as GM or player have control and access to all the work you create, it's not locked away on a server somewhere, dependent on whether the hosting company survives / changes strategy / gets acquired in the coming years. The code is mainly java so it's fixable if the external community dies. I saw the likelihood of this game being long lived, so open source and self hosting were \textit{\textbf{must have}} when I scouted for tools.
+Open source. Self hosted. You as GM or player have control and access to all the work you create, it's not locked away on a server somewhere, dependent on whether the hosting company survives / changes strategy / gets acquired in the coming years. The code is mainly java so it's fixable if the external community dies. I saw the likelihood of this little hack'n'slash game being long lived, so open source and self hosting were \textit{\textbf{must have}} when I scouted for tools.
 
-It had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your campfire. Great, and something most other tools were lacking. And still lacking today.
+Maptool had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your campfire. Great, and something most other tools were lacking. And many still lack today, \vvsmall(early 2020)\normalsize
 
 Maptool scripting is passable, but horrible to work in. Despite this, I've implemented automation for most everything in the game over the years. Almost all actions as GM is one or two clicks by now, and very little to keep in the noggin between rounds.
 
@@ -1943,7 +1956,7 @@ It's also reasonably quick to import maps and set vision blocking, as well as ma
 %-------------------------------------
 Set vision range and arc for each character. I've also built standard versions for the various typical npcs.
 
-Light condition multipliers should be set as follows:\\
+Light condition multipliers should be set as follows:
 \small\begin{verbatim}
 normal    all light sources have the specified range: humans, halflings
 dusk      1.5x range of light sources: dwarfs, orcs, goblins
@@ -1951,6 +1964,7 @@ night     2.0x range of light sources: elves
 dark      3.0x range of light sources:
 black     self light up to infra range regardless of light sources
 \end{verbatim}\normalsize
+
 This means an elf standing close to a camp fire has full daylight conditions, and a human with a torch is at most 1r dash away from a monster when he sees it. Hehehe.
 
 Magical dark vision should have different multipliers, or set a personal self light to suitable radius.
