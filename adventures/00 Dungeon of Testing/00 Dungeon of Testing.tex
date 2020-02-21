@@ -1,19 +1,123 @@
-%===============================================================================
-\input{../../tex/settings}
-%\input{../../tex/settings.article}
-
-
-\begin{document}
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
 
 
+\input{../../tex/settings.article}
+
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+
+% Manually specify hyphenation for names, etc. 
+% Remember: space separated word list: lead with space.
+% Hyphens can only occur on specified "-" characters, and
+% words without hyphens will never be hyphenated, overrides language rules.
+% see link regarding location of hyphenation block
+% https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation
+\hyphenation{ 
+ Kings-land 
+ Evil-nius Conq 
+ Massa Pawa 
+}
+
+
+
+%-------------------------------------------------------------------------------
+% title page
+%-----------
+
+
+\thispagestyle{empty}
+
+\null          % make an empty mark, so that following white space will be honoured
+\vspace{1cm}   % not honoured at beginning of page without something above
+
+\begin{center}
+
+\huge         Dungeon  \\
+                of     \\
+              Testing   
+
+\vspace{0.3\baselineskip}
+
+\large     Live and Learn
+
+\vspace{2cm}
+
+\includegraphics[width=120mm]{./fig/noob.jpg}
+
+\vspace{2 cm}
+
+
+\normalsize
+          your first steps into the exciting    \\
+            career of monster murdering
+
+\vfill
+
+\today
+
+\end{center}
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+\clearpage
+\thispagestyle{empty}
+\raggedbottom
+
+\vsmall
+\noindent 
+This work is licensed under a Creative Commons \\
+Attribution-NonCommercial-ShareAlike 4.0 \\
+International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+
+\
+
+\noindent
+All images are temporary placeholders, \\
+most are downloaded and unattributed.\\
+They need to be replaced with licensed art.
+
+\normalsize
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% begin main matter
+%------------------
+\cleardoublepage
+\pagestyle{fancy}
+%\flushbottom
+\raggedbottom
+
+
+
+
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
 \section*{Dungeon of Testing}
 
-This tiny dungeon adventure is meant to be the first introduction to the game that a new character (and player) has before taking on the real dangers out there. It is meant to be a solo experience, with only the one player and character, so as to get a good one on one introduction experience.
+This tiny dungeon adventure is meant to be the first introduction to the game that a new player has with their first character, before taking on the real dangers out there. It is meant to be a solo experience, just the player and the gm, so as to get a good one on one introduction experience. And it's an excellent opportunity to work out the kinks in the player's first, freshly built, newbie Hero.
 
 The monsters in the Dungeon of Testing will not kill a character, which is nice for a first experience. These are test monsters, not like \emph{real} monsters. The peculiar magic of self reflection and re-evaluation that accompanies the Dungeon of Testing is also very good for characters that want to change how they have spent their XP growing up, once they have found some glaring holes in their survival capacity.
 
-A Dungeon of Testing is something most serious towns have, on franchise from Ottokar's Test Dungeons. It will scare some young fools into staying in the village to become farmers or blacksmiths instead of travelling the world as dragon slayers or explore the limited career options of compost. \emph{Compost, i.e. post-adventuring occupation.}
+A Dungeon of Testing is something most serious towns have, on franchise from Ottokar's Test Dungeons. It will scare some young fools into staying in the village to become farmers or blacksmiths instead of travelling the world as dragon slayers or explore the limited career options of compost. \emph{Compost: most common retirement path of ex-adventurers.}
 
 The idea of the Dungeon of Testing is to be slightly too difficult for most new characters so that the player can re-evaluate how the XP are spent before the character goes into real combat in adventures and campaigns.
 
@@ -29,30 +133,34 @@ Welcome young [insert name here]. This is the Dungeon of Testing, designed by Ot
 
 When you have made it out alive, or been carried out as a near dead loser, you will be given the magical ability to change how you have spent your youthful XP growing up.
 
-There is a very weak lantern you may borrow if you so wish, but we do advise that you purchase some decent spelunking equipment before setting out on your adventures: A light source, fire tools, rope, grappling hook, water skin, rations, loot bags, etc, will always come in handy sooner or later.
+There is a weak lantern you may borrow if you so wish, but we do advise that you purchase some decent spelunking equipment before setting out on your adventures: A light source, fire tools, rope, grappling hook, water skin, some rations, loot bags, etc, will always come in handy sooner or later.
 
-Any coins you find you will be allowed to keep, as a starting grant for your newly chosen career path. Weaponry and items you may find have to be returned if you make it out alive.
+Any coins you find you will be allowed to keep, as a starting grant for your newly chosen career path. Weaponry and items you find have to be returned when you leave.
 
 So, off you go. Good Luck and all that.
 \end{readoutloud}
 
+\noindent
+If the wannabe Hero leaves on foot he can keep any coin found and XP earned. If he has to be carried out on a stretcher and resurrected they will take the coin but he'll keep the XP as a lesson to caution. It's good to know when to flee. Or learn how to make new Heroes very quickly.
 
 
+
+
+\clearpage %--------------------------------------------------------------------
+
+\noindent
+\includegraphics[width=0.999\textwidth]{./map/cave.jpg}
+
+\
 
 
 \subsection*{Dungeon mechanics}
 
-Start the Hero by the Heroes' Standard. He may then choose to pick up the weak lantern if he wish. Assign ownership and let the player move the lantern with his character, keep them stacked on the same square, or he can hold it out to the next square if he so wish.
+This is an exceptionally simple dungeon. There are no traps or other problems around, other than the monsters. The dungeon is dark, except for the lantern, torches, and brazier. Remember that carrying a moving light source will make the Hero \emph{very} visible.
 
-This is an exceptionally simple dungeon. There are no traps or other problems around, other than the monsters.
+The weak lantern can be picked up and carried around, it takes one hand of course. The big brazier can be moved, 1sq/r, and the regular strength lanterns can be picked up from the wall hangers and carried. Lantern or torches can be placed on the ground to light an area. These training monsters will not destroy the lanterns to gain advantage by darkness. Note that this is a dangerous thing to do under \emph{real} adventuring conditions.
 
-The weak lantern can be picked up and carried around, it takes one hand of course.
-
-The brazier can be moved, 1sq/r, and the regular strength lanterns can be picked up from the wall hangers and carried.
-
-A lantern can be placed on the ground to light an area. These training monsters will not destroy the lanterns to gain advantage by darkness. Note that this is a dangerous thing to do under \emph{real} adventuring conditions.
-
-
+Start the Hero by the Heroes' Standard. 
 
 
 \subsection*{The opposition}
@@ -112,18 +220,19 @@ The Dungeon of Testing has been played by every new player so far as an introduc
 
 It usually takes about an hour to run through the dungeon, while explaining the rules and having the player get used to MapTool. 
 
-\
 
 
 
 
 
-\vfill
+
+
+
 %-------------------------------------------------------------------------------
 % appendix monsters
 % -----------------
 
-\raggedbottom
+%\raggedbottom
 
 
 \subsection*{The Monsters}
