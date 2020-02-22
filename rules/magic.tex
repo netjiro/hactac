@@ -51,11 +51,27 @@ Mana spent for power casting is not counted to the maximum total limit set by th
 
 \item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
-\
-
-\todo fix "pinpoint on map" issues, miss allowance distance = lvl squares.
 
 \item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, GM discretion.
+\\ \todo fix "pinpoint on map" issues, miss allowance distance = lvl squares.
+
+
+\item[Skill scf 2.0: "blood magic":] The dark arts train the caster to perform heinous acts of ritual sacrifice. By bloodletting a victim the caster can convert hp to temporary mana. Blood magic mana points form an ephemeral temporary mana pool which is not added to the caster's mana. It cannot be stored and must be used within victim psy rounds or evaporate. The evaporation timer starts next round after the ritual has finished. Casting from the mana pool is mod-1.
+The caster can't build a sacrificial mana pool larger than his lowest value of psy, magic, and blood magic. The caster can sacrifice more than one victim to build the mana pool, with the lowest victim psy limiting the evaporation timer after the last of the chained rituals finish.
+
+Roll for the blood magic skill at the end of the ritual. A failed sacrifice yields no mana. A success=0 converts bloodlet mana to castable mana at 0.5, success+3 converts at 0.66, success+6 at 0.8, success+9 at 1.0.
+
+Sacrificing other: The ritual requires direct access to the victim. The ritual takes 3r +1r/m, where the caster carves and slashes the victim to carefully bleed him and get 1m/3hp of damage inflicted. If this kills the target the ritual yields the victims psy/3 as bonus mana at time of death.
+The caster can use medicine/3 as bonus to the roll, or a successful first aid as a +1 bonus.
+Both caster and target must be in base contact and stationary during the ritual, and the caster can't move further than psy sq away from the victim before casting. The victim must be willing or restrained during the ritual.
+
+Sacrificing self: The caster can take 1r to draw up to 1 + blood magic/3 mana by sacrificing hp for mana 1:1. Carving and slicing is not needed for self sacrifice. There are no range or movement limitations when sacrificing self.
+
+The blood magic mana are never added to the caster's mana, or stored somewhere. It's ephemeral and temporarily bound to the body of the victim until used for spellcasting or it evaporates.
+
+
+\item[Skill scf 3.0 "drainage ritual":] Similar to blood magic, but drains mana directly from the victim. The ritual takes 5r to start then the caster must pass psy vs psy against the victim each round to drain 1+success/3 mana.
+Roll for drainage ritual skill at the end of the ritual. Fail and success conversions like blood magic. The mana pool has the same range, time, and usage limitations as blood magic mana pool.
 
 
 \end{description}
@@ -427,6 +443,25 @@ snuppel dart   cast 2r, 1m, dam 4, stun 5 +3/m
                range 15 +7/m
                int 6, psy 5
 
+drain          cast 5r 1m, psy/2 vs psy, range contact
+               Drains diff mana points from target,
+               gives caster diff/2 (round up) mana, i.e. half is lost,
+               gained mana goes directly to caster's mana.
+               Must be in contact during whole casting.
+               Cannot drain the target below 0 mana. If draining the target to
+               0 mana the target must roll psy or falls unconscious. 
+               Target roll psy once per round to wake up again.
+               cost 30xp + scf 1.0, int 12, psy 12
+
+revive         cast 10r 5m, psy/2 vs psy +1/m, the dead wanna stay dead.
+               The body must first be healed to at least -con hp before or during
+               the revival ritual.
+               Target 100%hp mod-0, <66%hp mod-1, <33%hp mod-2, <=0hp mod-3
+               The character tends to come back altered from the ordeal in the
+               world of the dead.
+               scf 1.0, int 8, psy 8
+-
+-
 
 ---===### current above ###===---
 \end{verbatim} \normalsize
@@ -752,15 +787,6 @@ mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
 mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
                int 8, psy 8, scf 0.66
 
-drain          cast 3r 1m, psy vs psy +3/m, range contact,
-               drains diff mana points from target
-               gives caster diff/2 (round up) mana, i.e. half is lost
-               Must be in contact during whole casting.
-               Cannot drain the target below 0 mana. If draining the target to
-               0 mana the target must roll psy or falls unconscious. Roll psy 
-               once per round to wake up again.
-               int 5, psy 8
-
 darkvision     cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
                int 3, psy 2
 
@@ -773,13 +799,6 @@ poison gas     cast 3r 2m, , area radius 4 +1/m, duration 10r +5r/m
                dam 1/r penetrating. Damage only if psy vs con +diff +3/m,
                roll once for susceptibility.
                int 4, psy 4
-
-revive         cast 5r 5m, psy vs psy +1/m, the dead wanna stay dead.
-               the body must first be healed to at least 1 hp before or during
-               the revival ritual.
-               The character tends to come back altered from the ordeal in the
-               world of the dead.
-               int 8, psy 10, scf 1.0
 
 fumbly         cast 2r 1m, duration 5r +2/m, range 5 +2/m, target 1 +1/m
                Gives a base mod-3 -1/m to all actions during the duration.
@@ -1048,10 +1067,27 @@ unground
 
 stupid
     cast 2r 1m, range 10sq+5/m, duration 10r+5/m
-    
-
 weak, boring, ...
-otehr base stat reduction spells
+other base stat reduction spells
+
+shrubrunner
+    cast 3r 1m, range touch, duration 10r+5/m
+    grows strange magical claws around hands and feet, 
+    allowing to move very fast in woods and shrubs, but slowly on flat terrain.
+    Shrubs, trees, forest that is normally x2 movement cost is now nomral cost.
+    Flat terrain that would normally be x1 movement cost is now x2 terrain.
+
+bagland
+    cast 3ap, 1m, range 30, duration: current fall (max 1r)
+    int mod=0: can be cast as an interrupt ignoring initiative
+    A falling target will land as a soft bag, taking no damage.
+    Target must pass dex or fall prone on landing.
+    If discussed before the fall/jump no rolls are requierd by caster or target,
+    and the target will land soft and silently.
+    No maintenance.
+-
+
+
 
 -
 

@@ -163,7 +163,7 @@ the regular swords, but durable due to better quality steel and craftsmanship.
 
 Duelling swords can be used with the knife skill at mod-3, above the speciality
 mod-1 if the wielder lacks that training. It's mod-3 even if the str of the
-duealling sword would allow a lower mod for the knife skill.
+duelling sword would allow a lower mod for the knife skill.
 
 Every second attack costs no stamina.
 
@@ -231,7 +231,7 @@ claymore       \todo
 -
 
 Axes gain damage by sacrificing defence. Their swing attack maneuver also builds
-more heft and delivere more extra damage than the sword swing does. The two
+more heft and deliver more extra damage than the sword swing does. The two
 handed axes are especially lethal.
 Axes are more difficult to parry but easier to avoid, and favours brutal damage
 over finesse.
@@ -278,7 +278,7 @@ great axe      \todo
 lochaber       \todo
 2h
 
-Pick axes and tunneling axes are tools that also work reasonably well for 
+Pick axes and tunnelling axes are tools that also work reasonably well for 
 destroying opponents as well as rocks.
 
 pick axe       dam 4, pen 4, abs 4, parry-4, toavoid+2, finesse 2

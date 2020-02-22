@@ -29,10 +29,6 @@ distribution = "small_set"         # small set, any race: 10 dudes, still heroic
 #       10        20        30        40        50        60        70        80
 
 
-# should we gimp magic on ca 50% of characters in the rolled set ?
-gimpmagic = True
-#gimpmagic = False
-
 # First have to declare which race, then choose from those available
 # total 17 dudes are too many, will get too OP stats
 if distribution == "standard_set" :
@@ -316,7 +312,7 @@ class Character:
 # I've generally included the range and division spreads as comments for quick
 # comparisons. Here is a summary.
 #
-# assymetric splits: 5,7-10
+# asymmetric splits: 5,7-10
 #                 d10/10 1-9                 10     0,1  9,1
 #                 d10/9  1-8               9-10     0,1  8,2
 #                 d10/8  1-7               8-10     0,1  7,3

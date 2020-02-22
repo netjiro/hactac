@@ -1,11 +1,8 @@
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
 
-NOT UPDATED TO 2018 skills, maneuvers, weapons, etc missing from lists
 
-NOT UPDATED TO 2017 declare action point changes
-                    weapon changes
-                    minor cost changes
+VERY OLD, NOT UPDATED SINCE SOMETIME 2016
 
 
 
@@ -192,7 +189,7 @@ abilities:
 
 angry               ---       l 20      more damage when in pain
 annoying            ---       l 20,+5   become obvious target for enemies
-ambidextrious       ---       l 120,+50 automatic double
+ambidextrous        ---       l 120,+50 automatic double
 bland               ---       l 30,+5   don't become a target for enemies
 blink               ---       l 20      escape reality for a short while, upgrades available
 breathless          ---       l 20      don't have to breathe
@@ -227,7 +224,7 @@ running teleport    ---       u 10,20,30 move faster and teleport, upgrade to te
 strenuous teleportation ---   l 50      teleport within line of sight, upgrades available
 tasty               ---       l 20      become obvious target for critters
 tingly magic        ---       l 20      detect magic, upgrades available
-uber                ---       l 100     don't fail on a roll of 10
+über                ---       l 100     don't fail on a roll of 10
 wall bug            ---       l 30,40,60,100 attack or move through wall portals
 
 
