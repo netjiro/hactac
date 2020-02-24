@@ -121,36 +121,36 @@ Knives and daggers have flash attack maneuver, costing 20xp to train.
 Rapiers have the deflect parry maneuvers at mod-1 instead of mod-3.
 
 knife          dam 1, abs 1, parry-2, finesse 4
-1h             str 1, max pen+1
-               dex 3: fast 2ap 
-               flash: str 3 dex 6: vfast 1ap, mod-3
+1h             str 1, max pen+1, stam(1,0,0)
+               dex 3: fast 2ap, stam(1,0)
+               flash: str 3 dex 6: vfast 1ap, mod-3, stam(1)
 
 dagger         dam 2, abs 2, parry-2, finesse 4
-1h             str 2, max pen+1
-               dex 4: fast 2ap 
-               flash: str 4 dex 8: vfast 1ap, mod-3
+1h             str 2, max pen+1, stam(1,0,0)
+               dex 4: fast 2ap, stam(1,0)
+               flash: str 4 dex 8: vfast 1ap, mod-3, stam(1)
                poke: mod-1 dam-1 pen+1
 
 large dagger   dam 3, abs 3, parry-2, finesse 4
-1h             str 3, max pen+1
-               dex 5: fast 2ap 
-               flash: str 5 dex 10: vfast 1ap, mod-3
+1h             str 3, max pen+1, stam(1,0,0)
+               dex 5: fast 2ap, stam(1,0)
+               flash: str 5 dex 10: vfast 1ap, mod-3, stam(1)
                poke: mod-1 dam-1 pen+1
 
 small rapier   dam 2, abs 2, parry-1, todefend-2, finesse 9
-1h             str 2                                 
+1h             str 2, no str bonus, stam(1,0)
                dex 2: fast 2ap
                poke: mod-1 dam-1 pen+1
                
 
 plain rapier   dam 3, abs 3, parry-1, todefend-2, finesse 9
-1h             str 4 
+1h             str 4, no str bonus, stam(1,0)
                dex 4: fast 2ap
                poke: mod-1 dam-1 pen+1
                
 
 large rapier   dam 4, abs 4, parry-1, todefend-2, finesse 9
-1h             str 6
+1h             str 6, no str bonus, stam(1,0)
                dex 6: fast 2ap
                poke: mod-1 dam-1 pen+1
 
@@ -205,15 +205,14 @@ grande estoc   \todo
 The parrying dagger and baselard can be used with the knife or sword skills.
 
 parry dagger   dam 3, abs 6, attack-1, parry+1, finesse-4        parrying dagger
-               str 3, max dam+1 pen+1
-               dex 4: fast 2ap
+               str 3, max dam+1 pen+1, stam(1,0,0)
+               dex 4: fast 2ap, stam(1,0)
                every second attack in a round costs no stamina
                poke: mod-1 dam-1 pen+1
 
 baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-4
-               str 3, max pen+2
-               dex 4: fast 2ap
-               fast+1 if str 3 and dex 5
+               str 3, max pen+2, stam(1,0,0)
+               dex 4: fast 2ap, stam(1,0)
                every second attack in a round costs no stamina
                poke: mod-1 dam-1 pen+2
 
@@ -422,16 +421,16 @@ large hammer   dam 10, abs 15, parry-4, toavoid+1, finesse 2
                swing: slow 4ap, mod-1, dam+4, toavoid+2 
 
 plain flail    \todo
-1h
+1h             str 6, max dam+2, finesse 9
 
 large flail    \todo
-1h
+1h             str 8, max dam+2, finesse 9
 
 plain flail    \todo
-2h
+2h             str 8, max dam+2, finesse 9
 
-plain flail    \todo
-2h
+large flail    \todo
+2h             str 10, max dam+2, finesse 9
 
 -
 
