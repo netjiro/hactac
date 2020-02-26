@@ -34,11 +34,11 @@ Weapon damage stats are supposed to be read as 1dX. E.g: the sword does 1d6 dama
 
 \begin{description}
 
-\item[dam] is the maximum damage of the weapon from a normal attack. The attacker rolls for damage in the range [1,dam], where various skills affect how that is done.
+\item[dam] is the maximum damage of the weapon from a normal attack. The attacker rolls for damage in the range [1,dam], where various skills affect how that is done. E.g: dam 7 means damage 1d7, not 1d6+1. Dice sets from 2-20 in increments of 1 can be purchased for tabletop play, or simply use your smartphone dice app. On VTT the roll scripts support any "dice" rolls.
 
-\item[pen] is the penetration of the weapon, how many points of armour the weapon ignores when applying damage. Penetration never converts to damage, and it's always the full value, never rolled.
+\item[pen] is the penetration of the weapon, how many points of armour the weapon ignores when applying damage. Penetration never converts to damage, and it's always the full value, never rolled. E.g: dam 3 pen 2 cannot do more than 3 damage, and always ignore 2 abs armour.
 
-\item[abs] is how much incoming damage the weapon can absorb without taking any damage when e.g. it's being used to parry an incoming blow. If the abs is exceeded by the incoming damage the excess damage is applied to the wielder and there is a risk that the weapon either takes damage or breaks.
+\item[abs] is how much incoming damage the weapon can absorb without taking any damage when e.g. it's being used to parry an incoming blow. If the abs is exceeded by the incoming damage the excess damage is applied to the wielder and there is a risk that the weapon either takes damage or breaks. Armour also has abs but doesn't break by excess damage.
 
 \item[reach] is the range of a melee weapon. Normally a melee weapon can only be used to strike targets adjacent to the wielder, but with reach it is possible to attack targets further away. Using the reach distance usually carries a modifier.
 
