@@ -1182,10 +1182,42 @@ E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires s
 
 
 
+\subsection*{Visible, sneaking, hiding}
+%--------------------------------------
+\todo Three different levels of how discoverable or hidden something is.
+
+
+ *   Plainly visible. Will be found directly when in vision cone, or heard / smelled / felt when within perception range, if possible.
+
+
+ *   Sneaking. Will be found if passed perception check when in vision cone or by sound / smell in perception range, if possible
+Perception rolls can be modified by sneak / hide success, environment, light level, wind, smells, etc.
+
+
+ *   Hidden, camouflaged. Cannot be found by perception. Must be found by actively looking, using find.
+Modified by how well hidden something is, and environment
+
+
+
+sneaking. The seeker will always find if he has find skill and take the time to look, it requires
+
+Something / someone is hidden / camouflaged to the point where the seeker need a successful find roll to discover the hidden. The find roll is negatively modified by the success of the sneak/hide/camouflage roll.
+
+
+This also goes for other senses. Smelling the orc, hearing the metal armour, feeling the cold of the wraith.
+
+
+
+
 
 
 \subsection*{Awareness, spotting, finding}
 %-----------------------------------------
+\todo update passive vs active vs find usage\\
+Passive perception\\
+Actively looking\\
+Using find skill\\
+
 The field of view is the area which is within the view arc, in view range, and sufficiently lit. The perception range is the character's perception value. Perception range and rolls for spotting are modified by the usual action modification stack of the spotter, such as movement, extra ap, pain, low hp, etc. Spotting is best done when standing still, attentive, doing nothing else.
 
 A sneaking/hidden target modifies perception range and perception rolls of the spotter by the success diff of the sneak/hide roll. This is on top of the spotter's own ams mods.
@@ -1255,6 +1287,9 @@ Outside of general action, just roll now and then when environment changes for a
 \subsection*{Surprise}
 %---------------------
 \label{sec:surprise}
+
+\todo surpise, int to get M mp and 3ap, fail int gets total surprise
+
 Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
 
 A successful roll means they are not surprised and cannot be considered unaware. They have full normal ap available and movement speed M.
@@ -1927,7 +1962,7 @@ It's a bit fun to have the weird legacy stuff circulating even after tweaks.
 
 
 \subsection*{Finding stuff}
-%---------------------------
+%--------------------------
 Either roll find/per rolls hidden when needed so that the players won't notice, or ask the players to roll them, and then ask for rolls every now and then even when there is nothing to find. If asking for rolls you probably need to have at least a 2:1 ratio of asked vs real roll situations. This will keep the players anxious on a roll request, but not sure that there will be something to find.
 
 I prefer asking for rolls in most situations, then roll hidden every now and then anyway.

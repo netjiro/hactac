@@ -19,16 +19,16 @@ Skills give the character new options and actions above the base set. Some skill
 
 \
 
-We'll be using \emph{skill} as the general term for all skills, traits, powers, and abilities that are not basic character stats. This includes regular skills like literacy and counting, weapon skills like sword and axe, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Also have magical spells, mental and mystical powers, etc, all baked into one group: \emph{skills}.
+We'll be using \emph{skill} as the general term for all skills, maneuvers, spells, abilities, powers, etc, that are not basic character stats. This includes regular skills like literacy and counting, weapon skills like sword and axe, and maneuvers such as avoid, along with character trait enhancers such as resilient and strong. Also have magical spells, mental and mystical powers, etc, all baked into one group: \emph{skills}.
 
 \
 
 Most skills carry a \emph{skill cost factor} (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
 \\
 The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
-E.g: training axe to 4 is (0.9 * 4*4) = 14.4 \ca 14xp. \\
+E.g: training axe to 4 is \verb|(0.9 * 4*4) = 14.4| \ca 14xp. \\
 Later on after a couple of adventures the Hero wants to increase his axe skill:\\
-E.g: increasing axe from 4 to 6 is (0.9 * (6*6 - 4*4)) = 18xp. \\
+E.g: increasing axe from 4 to 6 is \verb|(0.9 * (6*6 - 4*4)) = 18xp|. \\
 \\
 Skill costs vary, but the general idea goes something like this: \\
 Weapon and main battle skills cost $1.0 \cdot lvl^2$. \\
@@ -46,7 +46,7 @@ Costs written as "cost 20xp" means that the total cost up to that level of the s
 
 % file: magic.tex :
 The skills pertaining to magic can be found in the \hyperref[cpt:magic]{magic section}, page~\pageref{cpt:magic}.
-E.g: magic, power casting, and spells
+E.g: magic, power casting, and spells.
 
 \
 
@@ -57,7 +57,7 @@ Regular skills and maneuvers can be bought and trained from scratch without trai
 Special Abilities require something out of the ordinary and cannot be trained from scratch without some extra step like a strange brew requiring an exotic component, rare book, training from the Old Hermit somewhere, magic mushrooms, radioactive spiders, or whatnot.\\
 Magic spells cannot be bought and trained from scratch without a teacher, spellbook, captured and tortured enemy wizard, or similar.
 
-This has generated interesting side quest, fun episodes, and slows down the rapid munchkin optimizations possible from the most potent abilities. Also provides fun tactical objectives where the Heroes choose to try to capture an enemy spellcaster alive once they see them cast an interesting spell they don't already know.
+This has generated interesting side quest, fun episodes, and slows down the rapid munchkin optimisations possible with the most potent abilities. Also provides fun tactical objectives where the Heroes choose to try to capture enemy spellcasters alive if they cast interesting unknown spells.
 
 %\
 %
@@ -1846,18 +1846,19 @@ If the attack is a failure with the killstab mods it can still be a successful b
 \phantomsection\addcontentsline{toc}{section}{abilities}
 \section*{Abilities}
 
-Special abilities are very rare skills, and a bit expensive, but the mark of Real Heroes. They open interesting possibilities in the fight for gold, glory, and more gold.
+Special abilities are a type of very rare skills, mutations, powers, etc, and a bit expensive, but the mark of Real Heroes. They open interesting possibilities in the fight for gold, glory, and more gold.
 
-Some ability skills have a "combination cost factor" (ccf), which affects the cost of training future ability skills. Once a ccf ability has been trained each subsequent ability skill will have it's cost multiplied by the ccf of all previously trained abilities. The combination cost factor does not affect the upgrade training of its own ability. The ccf does not affect regular skills or maneuvers, just the "ability" skills. 
+Some ability skills have a "combination cost factor" (ccf), which affects the cost of training future \emph{ability} skills. Once a ccf ability has been trained each subsequent ability skill will have it's cost multiplied by the ccf of all previously trained abilities. The combination cost factor does not affect the upgrade training of its own ability, nor multiple purchases of the same ability, unless stated otherwise. Upgrades and multiple purchases does not change the ccf for the base ability, unless stated otherwise. The ccf does not affect regular skills, maneuvers, spells, etc, just the abilities. 
+
 E.g: Dastardly Dennis has trained Incorporeal Double which has ccf=1.5. This means that every ability he trains in the future will cost 1.5 * original cost. If he also trains Dominating Stare, with another ccf=1.5, then Dominating stare will cost him 1.5*50=75xp, and all future abilities will cost 1.5*1.5=2.25 times the original cost.
 
-Upgrading an ability does not affect its ccf. E.g: purchasing regeneration twice still gives regeneration ccf=2.0.
-
-Special "abilities" cannot be purchased and trained by XP without first getting the "special component". Special components can be a blessing from a deity, a piece of mutagenic plutonite, bites from radioactive spiders, strange magic gone wrong, secret lore from a legendary book, tutoring by a far away hermit, training at the dojo of awesomeness, the egg of a phoenix, etc. GM discretion.
+Abilities cannot be purchased and trained by XP, from nothing, without first getting some special component. Special components can be a blessing from a deity, a piece of mutagenic plutonite, bites from radioactive spiders, strange magic gone wrong, secret lore from a legendary book, tutoring by a far away hermit, training at the dojo of awesomeness, the egg of a phoenix, etc. GM discretion.
 
 Such special component items or events can be bought with lots of gold, found as part of adventure loot or rewards, perhaps the end goal for mini quests and adventures, etc. This makes it more tricky and random to get the special abilities. If you, as a GM, want to make an ability available for gold, a good guideline might be to set the price at the XP cost in gold. Special components are always exotic in rarity, and should not always be available even in the largest and richest of trading centres.
 
 But it really is more fun to build a small adventure around the heroes hunting for that elusive Greenulescent Mushroom, rumoured to give anyone who eats it a "Reactive Skin", only to have it give the Hero who eats it a "Damaging Aura" instead. \emph{Muahaha.}
+
+E.g: in \texttt{Goblin Destiny} the Heroes can go lick a magical stone in one side adventure, with a chance of getting a seed of some random mutation ability. They can then later on spend xp to have the mutation mature into the full ability.
 
 
 \openskillslist
@@ -1884,7 +1885,7 @@ cost +50 ccf is set to 1.5: max +3 advantage. Increases one step at a time, requ
 \skill{Ability cost 30xp ccf 1.2 "Captain Cardio":} At the end of each round when the character has not spent any stamina he recovers one extra stamina.
 
 
-\skill{Ability cost 30xp ccf 1.2 "Energizer Bunny":} Always spends one stamina less than required each round. Spending zero does not mean gaining one stamina, unless combined with for example "Captain Cardio".
+\skill{Ability cost 30xp ccf 1.2 "Energizer Bunny":} Always spends one stamina less than required each round. Spending zero does not mean gaining one stamina, unless combined with for example Captain Cardio.
 
 
 \skill{Ability cost 30xp ccf 1.2 "Jack Hammer":} For every attack that the character does pay full stamina for, he is allowed to pay one less stamina for the next attack, within the same round.
@@ -1930,7 +1931,7 @@ When a pc dies: He'll get mod+3 to all actions, maneuver+1 walk+2 run+3 dash+4, 
 The ability will not go into effect if the Hero knows his friend will be able to come back from the dead.
 
 
-\skill{Ability cost 20xp ccf 1.0 "Divine Retribution":} The character has a vengeful god on his side. When he dies his dying corpus will channel the vengeance of his angry god in form of a divine blast that gives penetrating damage to everyone within range 3. Damage equals his total XP/50. The corpse is mod+3 to all kinds of revive after the divine blast, thanks to the remaining empowerment of the god's energy.
+\skill{Ability cost 20xp ccf 1.0 "Divine Retribution":} The character has a vengeful god on his side. When he dies his dying corpus will channel the vengeance of his angry god in form of a divine blast that gives penetrating damage to everyone within range 3. Damage equals his total XP/50. The corpse is mod+3 to all kinds of revive after the divine blast, thanks to the remaining empowerment of the god's energy. The damage roll should be based on a success+9.
 
 Upgrades: \\
 cost +10xp gives damage+1. \\
@@ -1953,18 +1954,21 @@ Stunning Skin: When the Reactive Skin ability does damage it also delivers stun 
 % cost levels: 13, 22, 37, 58, 85, 118  ::  37xp for stun 3, 118xp for stun 6
 
 
-\skill{Ability cost 50xp ccf 2.0 "Regeneration":} The character regenerates 1hp for each 5 rounds regardless of actions. This skill can be purchased several times, with regeneration = 1hp every 5r/lvl (round up). Upgrading does not affect the ccf.
+\skill{Ability cost 50xp ccf 2.0 "Regeneration":} The character regenerates 1hp for each 5 rounds regardless of actions. This skill can be purchased several times, with regeneration = 1hp every 5r/lvl (round up). 
 
 
-%TODO rewrite Hand of Deity to have nr of rounds praying increasing chance and effect, but minimum one round! Make effect capped at roll success, but also random: mod+(max(success/3,1d3)) dam+(max(success,1d6)) duration rounds (max(success,1d10))... Spending XP also gives bonus to chance and effect, and short prayers (<1r) should require XP spending.
-\skill{Ability cost 30xp ccf 1.2 "Hand of \emph{Deity}":} The character can pray to be granted combat bonuses from his god. The chance of the prayers to be answered is equal to his total XP/50. The chance of having the prayers answered are improved if spending extra XP. For each extra XP spent the chance of response is mod+3.
+%\todo rewrite Hand of Deity to have nr of rounds praying increasing chance and effect, but minimum one round! Make effect capped at roll success, but also random: mod+(max(success/3,1d3)) dam+(max(success,1d6)) duration rounds (max(success,1d10))... Spending XP also gives bonus to chance and effect, and short prayers (<1r) should require XP spending.
+\skill{Ability cost 30xp ccf 1.2 "Hand of \emph{Deity}":} The character can pray to be granted combat bonuses from his god. Prayers are full round actions. The chance of the prayers to be answered is equal to his total XP/50. The chance of having the prayers answered are improved if spending XP. For each XP spent the chance of response is mod+3.
 
-The bonus effect is mod+1 and dam+1 to all actions, and the duration is 3 rounds for every round of prayer, up to max 9r duration.
+The bonus effect of a successful prayer is mod+1 and dam+1 to all actions, and the duration is 3 rounds for every round of prayer, up to max 9r duration.
 
-The character can also spend 1xp on a quick 3ap prayer and have a chance of getting a mod+3 dam+3 for the rest of the round. Or he can spend 2xp to have a chance to get mod+6 dam+6 for two actions in the current round, or 3xp to have a chance to get mod+9 dam+9 for one action in the current. %However, the chance for quick prayer is total XP/100 instead of XP/50.
+Prayers are modified by ams, but ignores pain and is positively modified by low hp mods, instead of the normal negative. E.g: Walking mod-3, pain mod-1, and hp <33\% mod-2 is total mod-1 for Hand of \emph{Deity} prayer.
+
+Upgrade "fast prayer" cost +20xp:\\
+The character can also spend 1xp on a quick 3ap prayer and have a chance of getting a mod+3 dam+3 for the rest of the round. Or he can spend 2xp to have a chance to get mod+6 dam+6 for two actions in the current round, or 3xp to have a chance to get mod+9 dam+9 for one action in the current. However, the chance for quick prayer is total XP/100 instead of XP/50.
 
 
-\skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will will deal 1 damage penetrating to enemies ending their round in the damaging aura, willingly or not. The aura has radius 1.
+\skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will deal 1 damage penetrating to enemies ending their round in the damaging aura, willingly or not. The aura has radius 1.
 
 Upgrades:\\
 cost +20 radius+1 \\
@@ -1989,7 +1993,7 @@ cost +50xp gives radius+1.\\
 cost +30xp allow allies to move freely.
 
 
-\skill{Ability cost 30xp ccf 1.2 "Decimating Stare":} The hero with the frosty cold gaze can stare down an opponent to make it stop and reconsider it's current activities. The target will cease all offensive actions, stand and stare, or sometimes just wander off for a while. It will still defend itself, but at mod-3.
+\skill{Ability cost 30xp ccf 1.2 "Decimating Stare":} The Hero with the frosty cold gaze can stare down an opponent to make it stop and reconsider it's current activities. The target will cease all offensive actions, stand and stare, or sometimes just wander off for a while. It will still defend itself, but at mod-3.
 
 The initial stare is a normal 3ap action and costs one mana. The hero must succeed with a psy-3 \vs psy resistance roll to initiate the effect. The target must stand in front of the hero, diagonal is ok, and in base contact.
 
@@ -1998,7 +2002,7 @@ To maintain the effect the hero must spend a normal 3ap action each round, one m
 When a target successfully defends against a decimating stare it has mod+3 against future decimation attempts from the aggressor.
 
 
-\skill{Ability cost 50xp ccf 1.5 "Dominating Stare":} The hero with the flaming eyes can stare down an opponent and gain temporary control over it.
+\skill{Ability cost 50xp ccf 1.5 "Dominating Stare":} A Hero with the flaming eyes can stare down an opponent and gain temporary control over it.
 
 The initial stare is a one round action and costs two mana. The hero must succeed with a psy-6 \vs psy resistance roll to gain control over the opponent. The dominated target is then under the control of the hero, but dazed until the beginning of next turn. The target must stand in front of the hero (diagonal ok), in base contact, and be facing him for the attack to be possible.
 
@@ -2009,13 +2013,13 @@ The monster cannot be commanded to perform actions that would be immediately det
 When a target successfully defends against a dominating stare it has mod+3 against future domination attempts from the aggressor.
 
 
-\skill{Ability cost 50xp ccf 1.5 "Incorporeal Double":} An incorporeal double image, pale and ghostly, can disengage from the hero and move away on it's own. The ghost can pass through other characters and monsters, minor obstacles and doors, but not solid walls. The ghost is immune to normal physical and elemental attacks, but can take damage from magical attacks and weapons. If the ghost is damaged it does not loose hp, but half the damage, penetrating, is applied to the hero. The ghost is visible as a misty apparition or ghost, but is not scary.
+\skill{Ability cost 50xp ccf 1.5 "Incorporeal Double":} An incorporeal double image, pale and ghostly, can disengage from the Hero and move away on it's own. The ghost can pass through other characters and monsters, minor obstacles and doors, but not thick solid walls, e.g: 1sq thickness or so. The ghost is immune to normal physical and elemental attacks, but can take damage from magical attacks and weapons. If the ghost is damaged it does not loose hp, but half the damage, penetrating, is applied to the hero. The ghost is visible as a misty apparition or ghost, but is not scary.
 
 Forming the ghost takes a full round, with no movement or actions, and it disengages from the hero's body to take up an empty adjacent space.
 
 Dissolving the ghost takes a full round, but requires no actions, and it must be in an empty adjacent space.
 
-The ghost moves at walking speed. Spending one mana+stamina/r can move it at running speed. Spending two mana+stamina/r can move it at dashing speed. It always flees back to the hero at full dash for free. Spending one mana and one hp and succeeding with a psy roll can dissolve it immediately without having to have it move back.
+The ghost moves at walking speed. Spending 1 mana/r can move it at running speed. Spending 2 mana/r can move it at dashing speed. It always flees back to the hero at full dash for free. Spending one mana and one hp and succeeding with a psy roll can dissolve it immediately without having to have it move back.
 It has a 360deg vision with range equal to the hero's perception, and of the same vision type as the hero. Everything the ghost sees the hero sees as if he was there as well.
 
 The hero can spend one action and one mana to immediately switch places with the ghost double. There is no acclimatisation period since the hero is aware of the ghost's environment at all times.
@@ -2076,7 +2080,7 @@ E.g: Lars LongArm has Reach+1. He is wielding a spear with reach 1 mod-3. This m
 Reach also works fine with shields, and reach + shield + guard is an excellent combination to defend you friends.
 
 
-\skill{Ability cost 30xp ccf 1.3 "Wall Bug":} The character has found a bug in the mesh of reality. He can insert his arm, including weapon, into a solid, vertical, and reasonably smooth surface, and have it emerge from another similar surface. It costs one mana and one action to push through a wall, and the other surface must be in line of sight, with undisturbed vision path. It takes one action to retract the arm, but costs no mana. Fighting through walls is mod-3.
+\skill{Ability cost 50xp ccf 1.3 "Wall Bug":} The character has found a bug in the mesh of reality. He can insert his arm, including weapon, into a solid, vertical, and reasonably smooth surface, and have it emerge from another similar surface. It costs one mana and one action to push through a wall, and the other surface must be in line of sight, with undisturbed vision path. It takes one action to retract the arm, but costs no mana. Fighting through walls is mod-3.
 
 Level 2: two arms, costs +10xp, but still costs only 1 mana and one action to use. Fighting through walls is mod-3.
 
@@ -2345,6 +2349,10 @@ Fast defence requires that the wielder has dex equal or higher than the weapon's
 For defence actions which are already fast+1, 2ap, the upgrade "lightning defend" at cost +50xp is available giving a vfast+2, 1ap, defence action at mod-6 costing 1 stamina. Lightning defence requires that the wielder has dex equal or higher than the weapon's str requirements +3, unless there are already higher dex requirements.
 
 Fast Defence and Lightning Defence can be stacked together to create a defence that cost 2ap less than normal (to a minimum of 1ap) at mod-9 and costing 2 stamina. When stacked, fast defence + lightning defence requires that the wielder has dex equal to or higher than the weapon's str requirements +6, unless there are already higher dex requirements.
+
+
+% super climb ability, can move on vertical surfaces and upsidedown without rolling for climb. Also works on dusty / wet surfaces. Why not.
+%\skill{Ability cost 30xp ccf 1.0 "gecco grip":}
 
 
 
