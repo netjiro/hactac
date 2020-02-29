@@ -50,6 +50,15 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+
+200229:
+TODO: 00 Dungeon of Testing: move xp to "collect xp tokens"
+      hidden here and there in the cave, set time limit to 100r
+      hidden on the bodies of the monsters
+      can "kill" or steal / pickpocket
+      each token is 1xp when exiting the cave
+
+
 200225:
 TODO: damaging armour ?
       short note already in rules.tex :   search "damaging armour"

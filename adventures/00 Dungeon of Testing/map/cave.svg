@@ -15,7 +15,10 @@
    version="1.1"
    id="svg3177"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="cave-crop-done.svg">
+   sodipodi:docname="cave.svg"
+   inkscape:export-filename="C:\jiro\hactac\adventures\00 Dungeon of Testing\map\cave.png"
+   inkscape:export-xdpi="299.95901"
+   inkscape:export-ydpi="299.95901">
   <defs
      id="defs3171">
     <clipPath
@@ -37,9 +40,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="16.77872"
-     inkscape:cy="560.35633"
+     inkscape:zoom="0.7"
+     inkscape:cx="239.05422"
+     inkscape:cy="214.03289"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -56,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -911,5 +914,11 @@
              id="tspan5150-1-6">rack</tspan></text>
       </g>
     </g>
+    <circle
+       style="opacity:0.33000004;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path176"
+       cx="67.400002"
+       cy="240.10001"
+       r="10" />
   </g>
 </svg>
