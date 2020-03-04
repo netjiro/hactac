@@ -3364,13 +3364,13 @@ chain mail  abs 2 (tank : chain as leather)
 \markboth{GrimGnash}{GrimGnash}
 \label{appendixgrimgnash}
 
-GrimGnash is very difficult. He will burn clusters of heroes, rush and tail swipe them to get them to spread out. Grab then bite/eat the dangerous ones. But he is not invincible. Enough heroes with several attacks, high mobility and avoid skill can drive him off by attrition. And there are other ways, be clever. Monsterology can give hints about what GrimGnash can do and how/where to hit him.
+GrimGnash is very difficult. He will burn clusters of heroes, or rush and tail swipe to scatter them. Grab then toss / bite / eat the dangerous ones. But he is not invincible. Enough heroes with several attacks, high mobility and avoid skill, and enough stamina, can drive him off by attrition. And there are other ways, be clever. Monsterology can give hints about what GrimGnash can do and how / where to hit him.
 
 \
 
 GrimGnash is also very vain. A very high charisma Hero (roll cha-6) who takes the time to be suitably impressed by the Mighty Dragon and loudly praise the decorations of the lair and it's Master's personal appearance will stay an immediate execution. If the Hero proclaims eternal fealty and servitude to the Dragon, GrimGnash will spare him. But GrimGnash has no use for shitty looking, foul smelling, low charisma servants.
 
-An extra fine looking hero, charisma or equipment, can also be captured and put in a cage instead of murdered. Always nice to have a pet around?
+An extra fine looking hero, charisma or equipment, can also be captured and put in a cage instead of murdered. Always nice to have a pet around.
 
 \
 
@@ -3378,7 +3378,7 @@ An extra fine looking hero, charisma or equipment, can also be captured and put 
 GrimGnash                 size Colossal: 6x6
 ============= large  dragon ================
 str 50                    hp 300 abs 4
-dex  6                    m4 w8 r16 d30(fly)
+dex  6                    m4 w8 r16 d24 fly30(mod-3) fly40(mod-6)
 con 20                    stamina -
 int 10                    vision 50 day 360
 psy 15                    mana -
@@ -3388,59 +3388,61 @@ cha  5                    xp -
 \end{verbatim} \goodbreak \begin{verbatim}
 Facing should be seen as orientation of main body.
 Costs 1ap/mp to turn 90deg, 45deg free with action.
-Pain threshold 10, regenerates 5 (below 200hp), regenerates 10 (below 100hp)
+Pain threshold 10, regenerates 5/r (below 200hp), regenerates 10/r (below 100hp)
 avoid: legs 8 2ap, tail 10 3ap, head/neck 12 2ap, body 4 4ap
 Common 10, ancient 10, svartlingo 5, dwarfish 10, elfish 10, dragon 15
-mobile 2, climb 5, 
+mobile 2, veteran 5
+accurate 3
+jump 9, climb 8, (consider body length 6 & 4 legs, when calculating distances)
 --------------------------------------------
 \end{verbatim} \goodbreak \begin{verbatim}
-Requires reach 1 to hit body or reach 2 to hit neck/head,
-unless interrupting a head bite attack.
-ranged attacks anywhere: large target tohit+6
+Requires reach 1 to hit body or reach 2 to hit neck/head, 
+    unless interrupting a head bite attack.
+ranged attacks: large target tohit+6 (no specific body section)
     legs =0, tail +3, body +6, head/neck =0
-melee attacks anywhere (assumes no reach): mod=0
+melee attacks (ignoring reach): mod=0 (no specific body section)
     legs =0, tail =0, body +3, head/neck =0
-scales abs 4, immune to fire, 
-crushing weapons do half damage up to 20(10) then full damage for rest
-head/neck has abs 2 and no crush resistance
-30hp damage to head will knock him out for 1d3 rounds for every further
-hit to the head
+scales abs 4, immune to fire
+    crushing weapons do half damage up to 20(10) then full damage for rest
+    head/neck has abs 2 and no crush resistance
+30 damage to head will knock him out for 1d3-1 rounds for every further
+    >=5 damage hit to the head
 
 \end{verbatim} \goodbreak \begin{verbatim}
-claw swat 14, 3ap, dam 10 knockback 3
+claw swat 14, 2ap, dam 10 knockback 3
 
 \end{verbatim} \goodbreak \begin{verbatim}
-claw grab 12, 2ap, dam 8 penetrating
-then held, str 15 against break free attempts
-resisting break free actions doesn't cost ap for GrimGnash
+claw grab 12, 3ap, dam 8 penetrating
+    then held, str 15 against break free attempts
+    resisting break free actions doesn't cost ap for GrimGnash
 
 \end{verbatim} \goodbreak \begin{verbatim}
 bite (head attack) 9, 6ap, dam16 pen4 
-bite (when already held in claw) 12, 6ap, dam16 pen4
+bite (when already held in claw) 12, 3ap, dam16 pen4
 continued chewing autosuccess, 3ap, dam and pen as bite
 swallow 6ap, certain death in magma stomach(?)
 
 \end{verbatim} \goodbreak \begin{verbatim}
 tail swipe 6ap, range 6sq hits everything outside +/-45deg from facing
-autosuccess dam 6 pen 3 knockback 5
-toavoid-3, unmodified jump(+)acrobatics success cancels toavoid mod
-also hits prone, does not hit flying
+    autosuccess dam 6 pen 3 knockback 5
+    toavoid-3, unmodified (0ap) jump(+)acrobatics success cancels toavoid mod
+    also hits prone, does not hit flying
 
 \end{verbatim} \goodbreak \begin{verbatim}
 throw 10, 2ap, range for anything up to ca 100kg is 15sq
-damage from being thrown/hit by character is dam10 pen3 knockback 3
+    damage from being thrown/hit by character is dam10 pen3 knockback 3
 
 \end{verbatim} \goodbreak \begin{verbatim}
 fire breath 6ap autosuccess up to 3x templates placed without gap
-range 20 template 2sq circular duration 1r
-roll individual damage 5+1d5
-can be reasonable to limit to 10-15 ammo templates for fire breath
+    range 20 template 2sq circular duration 1r
+    damage 5+1d5
+    can be reasonable to limit to 10-15 ammo templates for fire breath
 
 \end{verbatim} \goodbreak \begin{verbatim}
 rush attack 0ap autosuccess, just movement pushing chars away
-targets are pushed away forward or to the sides
-they have to spend mp or take damage and go prone
-max damage is 1 per sq pushed, penetrating, roll individually
+    targets are pushed away forward or to the sides
+    they have to spend mp or take damage and go prone
+    max damage is 1 per sq pushed, penetrating
 ============================================
 \end{verbatim} \end{samepage} \normalsize
 
@@ -3651,10 +3653,17 @@ fine          2h: fast+1 if str 8 and dex 8
 
 leather abs 1
 
+\end{verbatim} \goodbreak \begin{verbatim}
 feedback football - small angry glowing ball (2sq light)  25hp abs5
-    activates when thrown, deactivates when packed away, 8 charges
-    attack on touch or detecting casting within 6sq: destructive feedback
-    draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
+    activates when thrown, deactivates when packed away, 8 charges:
+    attack on touch: disintegrate 6 dam, penetrating
+        reduces abs on touch weapon by dam, on touch armour by 1.
+            magical weapon/armour is protected, instead: blast 6 dam radius 2sq
+            magical weapon loose 1 abs, magical armour does not loose abs
+            and the artefact magic is disabled for dam rounds.
+    attack on detecting casting within 6sq: destructive feedback
+        draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
+
 \end{verbatim} \end{samepage} \ \goodbreak \begin{samepage} \begin{verbatim}
 destructive dispel
     cast 1r, 1m, range 20 +10/m, 
@@ -3722,7 +3731,7 @@ elsewhere
 
 The MutaMonsters are aggressive towards non-mutated folk and animals. They ignore mutated people as long as they are not attacked.
 
-Mutamonster meat is tasty but not good for you. Eating it will slowly weaken the character. After 2+1d3 days start reducing stamina, constitution, hitpoints by 1 each day to a max mod-3, also giving a mod-3 to all actions. The effect starts disappearing at a rate of 1 mod point each 2 days when the character is no longer eating mutameat.
+Mutamonster meat is tasty but not good for you. Eating it will slowly weaken the character. After 1d3 days start reducing stamina, constitution, hitpoints by 1 each day to a max mod-3, also giving a mod-3 to all actions. The effect starts disappearing at a rate of 1 mod point each 2 days when the character is no longer eating mutameat.
 
 \begin{description}
 
@@ -5050,7 +5059,7 @@ A running fight. The goblins are stretched out, trying to get the carts across t
 Session 16:\\                                                           % 181114
 What the Heroes didn't know was that a group of hired knights and a spellslinger was also resting at the inn, summoned to help root out some menace of the land. Being proactive they start getting ready when they hear the patrol soldiers are to go check out a strange band of travelling goblin salesmen: Didn't the summons mention goblins? Why, yes it did!
 
-As the goblins both try to flee and fight off the patrolmen, the knights come thundering out from behind the inn, riding large war horses. Fighting patrolmen is quickly forgotten and all goblins focus on fleeing from the incoming war machines. The last cart and goblin just barely make it off map to safety. One of the Hereos stumbles off map and falls unconscious from negative hp.
+As the goblins both try to flee and fight off the patrolmen, the knights come thundering out from behind the inn, riding large war horses. Fighting patrolmen is quickly forgotten and all goblins focus on fleeing from the incoming war machines. The last cart and goblin just barely make it off map to safety. One of the Heroes stumbles off map and falls unconscious from negative hp.
 
 \
 
@@ -5204,7 +5213,7 @@ So they leave Kegern and travel to the Dread Duns looking for whatever the map i
 
 They cautiously approach the Tower Ruin, but don't scout properly. They see the mad farmer and his dogs. They actually try to talk with him but since he is quite off his rocker they quickly kill him and the dogs. Not scouting is an issue since now they are flanked by the two Tower Guardian monsters.
 
-Generally easy fights, total ca 10-15r, quick damage focus with a bit of positioning. The two tower guardians have reach and lots of hp but no armour. The goblins are too many and have a couple of high damage dealers, especially against opponents without armour. So the Hereos could do a bit of dodging while the rest of the gang just flat out massacred the guardians. They did manage to position properly to limit damage application from the secondary guardian while focusing down the first one.
+Generally easy fights, total ca 10-15r, quick damage focus with a bit of positioning. The two tower guardians have reach and lots of hp but no armour. The goblins are too many and have a couple of high damage dealers, especially against opponents without armour. So the Heroes could do a bit of dodging while the rest of the gang just flat out massacred the guardians. They did manage to position properly to limit damage application from the secondary guardian while focusing down the first one.
 
 \
 
@@ -5219,7 +5228,7 @@ During the fights and following loot search they occasionally have to kill emerg
 % s29 d72 r82-r99 all exit                                              % 190605
 
 Sessions 25-29:\\                                                       % 190220
-\textit{Most of these sessions were short, finishing the dungeon took ca 7h and 99 rounds. Significant time went to discussions about tactics when fighting the wraiths and the boss group. I allowed the players to take a lot of time to discuss becuase it's an interesting tactical problem to solve, and they have a couple of clever Heroes in the group.}
+\textit{Most of these sessions were short, finishing the dungeon took ca 7h and 99 rounds. Significant time went to discussions about tactics when fighting the wraiths and the boss group. I allowed the players to take a lot of time to discuss because it's an interesting tactical problem to solve, and they have a couple of clever Heroes in the group.}
 
 \textbf{In darkness}! \emph{Yep, they forgot to bring any light}. Thankfully one of the goblins have glowing snot since the mutamonster-magic-island episode. So that's how they explore the early parts of the dungeon: he picks his nose and throws small gobs of tiny green snot-lights around. Mmm-hmm, really.
 
@@ -5478,7 +5487,7 @@ Day 83, evening. The Lundqvist force arrives, splits in the heavy core group mar
 
 The Heroes have set up a defensive front line stop plug and a sneaky side assault inside the dark cave, with the idea that the outside force will come in just a round or two after the last Lundqvist have entered.
 
-Lundqvist core march in, follow the funnel and go into heavy melee with the goblin defensive stop plug gaggle. The Heroes' funnelling and surround tactics work reasonably well for a little while but Lundqvist are too focused and coordinated for the goblins to be able to put any main melee line against them and survive. And the stop plug is mostly empty numbers, goblin fighters and warriors. They fall, break, and start fleeing in just a couple of rounds.
+Lundqvist core march in, 10 strong, follow the funnel and go into heavy melee with the goblin defensive stop plug gaggle. The Heroes' funnelling and surround tactics work reasonably well for a little while but Lundqvist are too focused and coordinated for the goblins to be able to put any main melee line against them and survive. The stop plug is mostly empty numbers, mostly SpiderWitch goblin fighters and warriors. They fall, break, and start fleeing in just a couple of rounds.
 
 Meanwhile Lundqvist support force has entered the cave. The Heroes know that there seems to be a little too few Lundqvist around. But since they don't have good enough count of Lundqvist force they assume all have entered and a few have stayed to watch the horses or some such.
 So after a couple of rounds of delay, with hectic whispering back and forth, the Heroes' rear attack force enters the cave and start hacking away at the Lundqvist support troops. \textit{Now Lundqvist last remaining group runs in to the cave entrance to plug it, arriving in a couple of rounds, trapping all the goblins inside.}
@@ -5614,9 +5623,9 @@ They cautiously enter the cave, advance, and spread out to scout. The air smells
 \forceindent Sessions 42-44:\\   
 GrimGnash immediately wakes when they attack, and with his intellect, perception, and psyche he is immediately aware of his surroundings and directly force a more defensive situation by swishing his huge tail, throwing most of the close by heroes several squares further away.
 
-The GrimGnash fight takes about 30r, and rages all across the cave. In the early stages GrimGnash want them clumped up to burn, rush, or tail swipe them. Then when he starts to get wounded he instead moves across large parts of the dungeon forcing them to run around and spread out, keeping their stamina low while he picks them off a few at a time.
+The GrimGnash fight takes about 30r once combat starts, and rages all across the cave. In the early stages GrimGnash want them clumped up to burn, rush, or tail swipe them. Then when he starts to get wounded he instead moves across large parts of the dungeon forcing them to run around and spread out, keeping their stamina low while he picks them off a few at a time.
 
-But the Heroes are very effective against the beast, and get him below 33\% hp a couple of times, but don't have consistent damage application to keep him wounded enough to beat his regeneration when he's wounded. GrimGnash has for example moved their heavy striker to the other side of the cave so he looses many rounds and all stamina trying to run back. GrimGnash has also knocked out their other main damage dealer, almost knocked into the abyss.
+But the Heroes are very effective against the beast, and get him below 33\% hp a couple of times, but don't have consistent  damage application to keep him wounded enough to beat his high regeneration at low hp. GrimGnash has grabbed and moved their heavy striker to the other side of the cave so he looses many rounds and all stamina trying to run back, as well as knocked out the Heroes' other main damage dealer, almost knocked into the abyss.
 
 In the early stages of the fight they were burning penetrating magic bolts to rapidly deal huge damage to the armoured beast, but after a while they figured out that whenever they cast ranged spells the pyre vats spawn small fire elementals. The elementals are not hugely dangerous but force the Heroes to always spread out and keep moving, burning stamina to defeat, making the fight against the Dragon Beast much slower and less effective.
 
@@ -5628,16 +5637,21 @@ In the early stages of the fight they were burning penetrating magic bolts to ra
 
 \
 
+\begin{samepage}
 \begin{readoutloud}
 It was a weird way to defeat GrimGnash. Suited the fun of the situation, suited the logistics of our scheduling. The evening was already quite late and I was leaving for several months. I would not have the possibility to schedule another session for quite a while. It was a good way to close the campaign.
 
 Obviously I could have chosen to have GrimGnash be gone in the darkness for a few rounds and let the Heroes celebrate their victory. Then when they are rolling in his gold, unaware, he crawls back up out of the chasm and attacks them.
+\end{readoutloud}
+\end{samepage}
 
-\
+%\
 
+\begin{samepage}
+\begin{readoutloud}
 GrimGnash will crawl out of the underworld, eventually. Pissed and out for revenge. The GamGang / Old Maz Gang still have most of the Heroes alive, and can be used in future campaigns.
 \end{readoutloud}
-
+\end{samepage}
 
 
 
@@ -5677,11 +5691,13 @@ GrimGnash will crawl out of the underworld, eventually. Pissed and out for reven
 \section*{leftovers}
 \markboth{leftovers}{leftovers}
 
-The idea for this campaign had been slowly crawling around in the back of my skull for quite a while when we were playing \texttt{Edwin the Chromophobe} and \texttt{Destroy the Altar}. I wanted to build a campaign for really crappy Heroes. Overdrive ridiculous. A goblin bandit gang was the obvious way to go. Lots of people have done it before, but it's still a little bit novel for most players.
+The idea for this campaign had been slowly crawling around in the back of my skull for quite a while when we were playing \texttt{Edwin the Chromophobe} and \texttt{Destroy the Altar}. I wanted to build a campaign for really crappy Heroes. Overdrive ridiculous. Turn the common tactical aspect around, so the Heroes have high numbers but low individual combat power. A goblin bandit gang was the obvious way to go. Lots of people have done it before, but it's still a little bit novel for most players.
 
 Then I had a couple of years away from the game while moving around, and when I finally had the time and situation to pick up hosting the game again I had the opportunity to start with a fresh set of Heroes.
 
-All in all, I had a good time and my players were happy with the campaign. Time well spent :)
+\
+
+All in all, I had a good time and my players were happy. Time well spent :)
 
 
 

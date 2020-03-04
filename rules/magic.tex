@@ -666,7 +666,7 @@ seal door      cast 3ap 1m, range 15 +10/m, targets +1/m, duration 10r +5/m
 
 dislocate      cast 2r 1m, range 20 +5/m, target 1 +2/m, psy vs psy +3/m
                target forgets the local location information.
-               (Press ctrl+shift+o in maptools to reset map info to what
+               (Press ctrl+shift+o in maptool to reset map info to what
                the characters can see at the moment, as long as all heroes
                have been successfully dislocated).
                int 5, psy 5
@@ -787,7 +787,7 @@ mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
 mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
                int 8, psy 8, scf 0.66
 
-darkvision     cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
+dark vision    cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
                int 3, psy 2
 
 rot            cast 2r 1m, dam 4 +1/m 1hp/r penetrating, range 8 +2/m,
@@ -922,8 +922,8 @@ disrupt        cast 1r 2m, range 5 +5/m,
                target caster: psy + spell mana
                int 8, psy 8, scf 0.66
 
-dispell        cast 2r 3m, range 3 +3/m,
-               dispell an existing spell effect, requires resistance roll:
+dispel         cast 2r 3m, range 3 +3/m,
+               dispel an existing spell effect, requires resistance roll:
                dispeller: psy-3 + 1/2m
                target spell: psy(caster) + spell mana
                int 8, psy 3, scf 1.0
@@ -996,7 +996,7 @@ More spells on the way, not balanced
 \
 
 \small \begin{verbatim}
-destructive dispell
+destructive dispel
     cast 1r, 1m, range 20 +10/m, 
     psy+3/m vs psy+mana
     blast with range of target spell mana
@@ -1074,7 +1074,7 @@ shrubrunner
     cast 3r 1m, range touch, duration 10r+5/m
     grows strange magical claws around hands and feet, 
     allowing to move very fast in woods and shrubs, but slowly on flat terrain.
-    Shrubs, trees, forest that is normally x2 movement cost is now nomral cost.
+    Shrubs, trees, forest that is normally x2 movement cost is now normal cost.
     Flat terrain that would normally be x1 movement cost is now x2 terrain.
 
 bagland
@@ -1082,7 +1082,7 @@ bagland
     int mod=0: can be cast as an interrupt ignoring initiative
     A falling target will land as a soft bag, taking no damage.
     Target must pass dex or fall prone on landing.
-    If discussed before the fall/jump no rolls are requierd by caster or target,
+    If discussed before the fall/jump no rolls are required by caster or target,
     and the target will land soft and silently.
     No maintenance.
 -
@@ -1094,7 +1094,7 @@ bagland
 burn
 drown
 sprout
-cloud    poison/ligtning/rain
+cloud    poison/lightning/rain
 
 
 \end{verbatim} \normalsize
@@ -1346,7 +1346,7 @@ TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
                Or get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
 Feedback       angry glowing metal ball contraption
-Football       glow 2sq light, destructuve feedback triggered range 6sq
+Football       glow 2sq light, destructive feedback triggered range 6sq
                6 dam drain equal mana
                triggers on touch (pickup, but not kick)
                triggers on any casting in range, 8 charges
@@ -1355,6 +1355,17 @@ Football       glow 2sq light, destructuve feedback triggered range 6sq
                attack on touch or detecting casting within 6sq: destructive 
                feedback draws 1d6 mana for max 6 dam, penetrating : 
                resistance 15 vs psy
+               -- Goblin Destiny -- text --
+    feedback football - small angry glowing ball (2sq light)  25hp abs5
+    .   activates when thrown, deactivates when packed away, 8 charges:
+    .   attack on touch: disintegrate 6 dam, penetrating
+    .       reduces abs on touch weapon by dam, on touch armour by 1.
+    .           magical weapon/armour is protected, instead: blast 6 dam radius 2sq
+    .           magical weapon loose 1 abs, magical armour does not loose abs
+    .           and the artefact magic is disabled for dam rounds.
+    .   attack on detecting casting within 6sq: destructive feedback
+    .       draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
+
 
 Long Sword     dam 8, abs 14, str 8, max +2 str bonus, rest as long sword
 of Irdereng    on successful hit the attacker can choose to roll psy,
@@ -1406,7 +1417,7 @@ There are of course also more normal boring magical items, weapons, and artefact
 \small \begin{verbatim}
 weapon +x     A weapon that is easier to use or does more damage. It can give
               the user a bonus to his weapon skill, or to his damage roll, or
-              to both. Or have exceptional abs resiliance, or ...
+              to both. Or have exceptional abs resilience, or ...
               Weapons like this does not have to be magical. Master or Legendary
               craftsmen can make +1 or even +2 weapons.
 
@@ -1465,11 +1476,11 @@ Don't have \emph{all} summoned stuff be just disposable cannon fodder with unlim
 
 \todo continue how command / control works and limitations
 
-Fun if the summoned demon simply says nope. Textit{Last time you summoned me I got shot at. And I remember you summoned both Leeloo and Guupta and they never returned... I don't trust you any more!}
+Fun if the summoned demon simply says nope. \textit{Last time you summoned me I got shot at. And I remember you summoned both Leeloo and Guupta and they never returned... I don't trust you any more!}
 
 Perhaps summoning demons or critters require that the summoner first go find the critter and agree on a compact / contract for summoning, response time, payment.
 
-Perhaps it is actually just forcing into being a transplanar demon to materialise in the world and through sheer will partially possess or magically command it to execute a limited set of action types. Then it will dematerialise.
+Perhaps it is actually just forcing into being a trans-planar demon to materialise in the world and through sheer will partially possess or magically command it to execute a limited set of action types. Then it will dematerialise.
 % webdm has some notes on this https://www.youtube.com/watch?v=2nWJLwQBk5A
 
 
