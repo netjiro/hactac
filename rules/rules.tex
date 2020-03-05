@@ -1031,11 +1031,11 @@ Normally the bonus from speed/distance of approach is the distance/3.
 A normal action takes "one action (1a)" time to perform and costs 3ap. Some actions cost more, some cost less.
 
 \noindent
-A very fast action costs 1ap (vfast / fast+2) \\
-A fast action costs 2ap (fast / fast+1) \\
+A very fast action costs 1ap (vfast / fast 2) \\
+A fast action costs 2ap (fast / fast 1) \\
 A normal action costs 3ap \\
-A slow action costs 4ap (slow / slow-1) \\
-A very slow action costs 5ap (vslow / slow-2)
+A slow action costs 4ap (slow / slow 1) \\
+A very slow action costs 5ap (vslow / slow 2)
 
 \noindent
 Under special circumstances some actions are 0ap instant actions and take no time at all.
@@ -1288,7 +1288,8 @@ Outside of general action, just roll now and then when environment changes for a
 %---------------------
 \label{sec:surprise}
 
-\todo surprise, int to get M mp and 3ap, fail int gets total surprise
+\todo surprise, int to get Maneuver mp and 3ap, fail int gets total surprise
+\todo or perhaps successful int roll allows declaring success diff ap and success diff/3 mp
 
 Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
 
@@ -1380,9 +1381,9 @@ The target will be knocked down and go prone unless they pass a dex roll modifie
 %% TODO remove? this is already covered by the weapons. ? good to reiterate?
 %\subsection*{Fast and slow weapons}
 %%----------------------------------
-%Attacking or parrying with a fast weapon cost fewer action points then with a normal weapon. An action with fast+1 weapon costs 2ap, and an action with a fast+2 weapon costs 1ap.
+%Attacking or parrying with a fast weapon cost fewer action points then with a normal weapon. An action with fast 1 weapon costs 2ap, and an action with a fast 2 weapon costs 1ap.
 %
-%Attacking or parrying with a slow weapon consequently costs more ap. An action with a slow-1 weapon costs 4ap, and slow-2 costs 5ap.
+%Attacking or parrying with a slow weapon consequently costs more ap. An action with a slow 1 weapon costs 4ap, and slow 2 costs 5ap.
 
 
 \subsection*{Breaking weapons}
@@ -1442,8 +1443,8 @@ E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. 
 % new allocation example, including stronk tank
 E.g: Giant Gerda has str 13, 
 plate armour (str5)
-tower shield (str8 or slow-1 str5)
-great axe (str9 or slow-1 str6)
+tower shield (str8 or slow 1 str5)
+great axe (str9 or slow 1 str6)
 
 
 She has slugger 3, stronk tank 2, fast strength.

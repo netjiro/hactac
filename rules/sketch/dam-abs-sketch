@@ -1,26 +1,26 @@
 damage & abs changes sketch
 
 
-sword     dam=str=0 , pen 0 , abs=dam+0 , finesse 6
-    2h        str+2 
+sword     dam=str+0 , pen 0 , abs=str+0 , finesse 6
+    2h        str+2               str+2
 
-axe       dam=str+1 , pen 0 , abs=dam-2 , finesse 3 , parry-3 , toparry-1 , toavoid+1
-    2h        str+4                                             toparry-2 , toavoid+2
+axe       dam=str+1 , pen 0 , abs=str-1 , finesse 3 , parry-3 , toparry-1 , toavoid+1
+    2h        str+4               str+1                         toparry-2 , toavoid+2
 
-spear     dam=str-1 , pen 0 , abs=dam-3 , finesse 3 , parry-1 , reach+1 mod-3
+spear     dam=str-1 , pen 0 , abs=str-3 , finesse 3 , parry-1 , reach+1 mod-3
     2h        str+1 ,     1                       4        +1
 
-staff     dam=str-2 , pen 0 , abs=dam+1 , finesse 3 , parry+1 , reach+1 mod-4
-    2h        str=0 ,     0                       5        +2
+staff     dam=str-2 , pen 0 , abs=str-1 , finesse 3 , parry+1 , reach+1 mod-4
+    2h        str+0 ,     0                       5        +2
 
-club      dam=str-2 , pen 0 , abs=dam-2 , finesse 1 , parry-2 , toavoid+1 , knockback 1 str+3
-    2h        str=0                               2             toavoid+2 , knockback 1 str+6 
+club      dam=str-2 , pen 0 , abs=str-2 , finesse 1 , parry-2 , toavoid+1 , knockback 1 str+3
+    2h        str+0               str+0           2             toavoid+2 , knockback 1 str+6
 
 bow       dam=str-2 : str-2/3/4 , pen 0/1/2 , range 12/16/18
 
-crossbow  dam=str=0 : str-0/1/2 , pen 1/2/3 , range 10/12/14
+crossbow  dam=str+0 : str-0/1/2 , pen 1/2/3 , range 10/12/14
 
-
+shield                        abs=str+3               parry+(1+str/2)
 
 
 
@@ -39,7 +39,7 @@ staff 1h                2         4         6                      reach 1 mod-5
 bow                    3p0       4p1       5p2                     r15sq             2r mod-0   1r mod-3   3ap mod-9
 crossbow               4p1       6p2       7p3                     r10sq   scf 0.7   3r  /  2r str+dex
 
-short/broad/long sword       5         7         9                 finesse 4, abs+40%, swing+1/2/3
+short/broad/longsword        5         7         9                 finesse 4, abs+40%, swing+1/2/3
 
 longbow                               4p1       5p2                r20sq     
 arbalest                    12                   x                 r20sq
@@ -57,54 +57,54 @@ The blade poke and swing attack maneuvers each cost 5xp to train.
 small sword    dam 4, abs 4, finesse 6,
 1h             str 4, max dam+1
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+1 todefend+2
+               swing: slow 1 mod-1 dam+1 todefend+2
 
 plain sword    dam 6, abs 6, finesse 6,
 1h             str 6, max dam+2
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+2 todefend+2
+               swing: slow 1 mod-1 dam+2 todefend+2
 
 large sword    dam 8, abs 8, finesse 6,
 1h             str 8, max dam+3
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+3 todefend+2
+               swing: slow 1 mod-1 dam+3 todefend+2
 
 -
 
 small sword    dam 8, abs 8, reach 1 mod-6, finesse 6
 2h             str 6, max dam+2
                poke: mod-1 dam-1 pen+1, max pen+2
-               swing: slow-1 mod-1 dam+2 todefend+2
+               swing: slow 1 mod-1 dam+2 todefend+2
 
 plain sword    dam 10, abs 10, reach 1 mod-6, finesse 6
 2h             str 8, max dam+3
                poke: mod-1 dam-1 pen+1, max pen+2
-               swing: slow-1 mod-1 dam+3 todefend+2
+               swing: slow 1 mod-1 dam+3 todefend+2
 
 large sword    dam 12, abs 12, reach 1 mod-6, finesse 6
 2h             str 10, max dam+4
-               poke: mod-1 dam-1 pen+1, max pen+2
-               swing: slow-1 mod-1 dam+4 todefend+2
+               poke: mod-1, dam-1, pen+1, max pen+2
+               swing: slow 1, mod-1, dam+4, todefend+2
 
 -
 
 The military swords are a bit heavier and with less finesse, 
 but are more durable.
 
-short sword    dam 5, abs 7, finesse 4,
+shortsword     dam 5, abs 7, finesse 4,
 1h             str 5, max dam+1
-               poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+1 todefend+2
+               poke: mod-1, dam-1, pen+1, max pen+1
+               swing: slow 1, mod-1, dam+1, todefend+2
 
-broad sword    dam 7, abs 10, finesse 4,
+broadsword     dam 7, abs 10, finesse 4,
 1h             str 7, max dam+2
-               poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+2 todefend+2
+               poke: mod-1, dam-1, pen+1, max pen+1
+               swing: slow 1, mod-1, dam+2, todefend+2
 
-long sword     dam 9, abs 13, finesse 4,
+longsword      dam 9, abs 13, finesse 4,
 1h             str 9, max dam+3
-               poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow-1 mod-1 dam+3 todefend+2
+               poke: mod-1, dam-1, pen+1, max pen+1
+               swing: slow 1, mod-1, dam+3, todefend+2
 
 -
 
@@ -158,18 +158,22 @@ large rapier   dam 4, abs 4, parry-1, todefend-2, finesse 9
 
 Each speciality blade requires its own 5xp speciality or suffer mod-1.
 
-Duelling swords are expensive and often custom made, lighter and thinner than 
-the regular swords, but durable due to better quality steel and craftsmanship.
+Duelling swords and estocs are expensive and often custom made, lighter and 
+thinner than the regular swords, but durable due to better quality steel and 
+craftsmanship.
+
+Duelling swords and estocs have deflect parry at mod-2 instead of mod-3.
 
 Duelling swords can be used with the knife skill at mod-3, above the speciality
 mod-1 if the wielder lacks that training. It's mod-3 even if the str of the
-duelling sword would allow a lower mod for the knife skill.
+duelling sword would allow a lower mod for the knife skill. Estocs have the
+usual similarity mods for heavier blades used with knife skill.
 
-Every second attack costs no stamina.
+Every second attack costs no stamina with duelling swords and estocs.
 
-The duelling sword swish attack costs 5xp to train.
+The duelling sword and estoc swish attack costs 5xp to train.
 
-A heavy duelling sword requires str+2 and gets dam+1 abs+3 finesse-1 
+A heavy duelling sword or estoc requires str+2 and gets dam+1 abs+3 finesse-2
 but also requires dex+2 for the fast 2ap actions.
 
 small duelling sword
@@ -177,7 +181,7 @@ small duelling sword
                str 4, max dam+1
                dex 4: fast 2ap
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow+1 mod-1 dam+1 todefend+1
+               swing: slow 1 mod-1 dam+1 todefend+1
                swish: mod-1 dam-1 todefend-1
 
 plain duelling sword
@@ -185,7 +189,7 @@ plain duelling sword
                str 6, max dam+1
                dex 6: fast 2ap
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow+1 mod-1 dam+1 todefend+1
+               swing: slow 1 mod-1 dam+1 todefend+1
                swish: mod-1 dam-1 todefend-1
 
 large duelling sword
@@ -193,24 +197,32 @@ large duelling sword
                str 8, max dam+1
                dex 8: fast 2ap
                poke: mod-1 dam-1 pen+1, max pen+1
-               swing: slow+1 mod-1 dam+1 todefend+1
+               swing: slow 1 mod-1 dam+1 todefend+1
                swish: mod-1 dam-1 todefend-1
 
-estoc          \todo
-2h
+plain estoc    dam 6, abs 6, todefend-1, finesse 9
+2h             str 6, max dam+2
+               dex 6: fast 2ap
+               poke: mod-1 dam-1 pen+1, max pen+1
+               swing: slow 1 mod-1 dam+1 todefend+1
+               swish: mod-1 dam-1 todefend-1
 
-grande estoc   \todo
-2h
+large estoc    dam 7, abs 6, todefend-1, finesse 9
+2h             str 8, max dam+2
+               dex 8: fast 2ap
+               poke: mod-1 dam-1 pen+1, max pen+1
+               swing: slow 1 mod-1 dam+1 todefend+1
+               swish: mod-1 dam-1 todefend-1
 
-The parrying dagger and baselard can be used with the knife or sword skills.
+The parry dagger and baselard can be used with the knife or sword skills.
 
-parry dagger   dam 3, abs 6, attack-1, parry+1, finesse-4        parrying dagger
+parry dagger   dam 3, abs 6, attack-1, parry+1, finesse 4        parrying dagger
                str 3, max dam+1 pen+1, stam(1,0,0)
                dex 4: fast 2ap, stam(1,0)
                every second attack in a round costs no stamina
                poke: mod-1 dam-1 pen+1
 
-baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-4
+baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse 4
                str 3, max pen+2, stam(1,0,0)
                dex 4: fast 2ap, stam(1,0)
                every second attack in a round costs no stamina
@@ -219,13 +231,17 @@ baselard       dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-4
 bastard sword  dam 8/10, abs 9, reach 1 mod-6, finesse 5
 1h/2h          str 8/8, max dam+3
                poke: mod-1 dam-1 pen+1, max pen+2
-               swing: slow-1 mod-1 dam+3 todefend+2
+               swing: slow 1 mod-1 dam+3 todefend+2
  
-great sword    \todo
-1h
-
-claymore       \todo
-2h
+great sword    dam 10, abs 12, finesse 4,
+1h             str 8, slow 4ap, max dam+4
+               poke: mod-1 dam-2 pen+2, max dam+1 pen+3
+               swing: slow 1 mod-1 dam+3 todefend+2
+               
+claymore       dam 14, abs 16, reach 1 mod-6, finesse 4,
+2h             str 10, slow 4ap, max dam+6
+               poke: mod-1 dam-2 pen+2, max dam+2 pen+4
+               swing: slow 1 mod-1 dam+4 todefend+2
 
 -
 
@@ -237,45 +253,48 @@ over finesse.
 
 small axe      dam 5, abs 3, parry-3, toparry-1, toavoid+1, finesse 3
 1h             str 4, max dam+2
-               swing: slow-1 mod-1 dam+2 toavoid+2
+               swing: slow 1 mod-1 dam+2 toavoid+2
 
 plain axe      dam 7, abs 5, parry-3, toparry-1, toavoid+1, finesse 3
 1h             str 6, max dam+3
-               swing: slow-1 mod-1 dam+3 toavoid+2
+               swing: slow 1 mod-1 dam+3 toavoid+2
 
 large axe      dam 9, abs 7, parry-3, toparry-1, toavoid+1, finesse 3
 1h             str 8, max dam+4
-               swing: slow-1 mod-1 dam+4 toavoid+2
+               swing: slow 1 mod-1 dam+4 toavoid+2
 
 -
 
 small axe      dam 10, abs 8, parry-3, toparry-1, toavoid+1, finesse 3
 2h             str 6, max dam+3
-               swing: slow-1 mod-1 dam+4 toavoid+2
+               swing: slow 1 mod-1 dam+4 toavoid+2
 
 plain axe      dam 12, abs 10, parry-3, toparry-1, toavoid+1, finesse 3
 2h             str 8, max dam+4
-               swing: slow-1 mod-1 dam+5 toavoid+2
+               swing: slow 1 mod-1 dam+5 toavoid+2
 
 large axe      dam 14, abs 12, parry-3, toparry-1, toavoid+1, finesse 3
 2h             str 10, max dam+5
-               swing: slow-1 mod-1 dam+6 toavoid+2
+               swing: slow 1 mod-1 dam+6 toavoid+2
 
 -
 
 Speciality axes all require their own 5xp speciality training or suffer mod-1.
 
-battle axe     \todo
-1h
+battle axe     dam 8, abs 8, parry-2, toparry-2, finesse 4
+1h             str 7, max dam+4
+               swing: slow 1, mod-1, dam+3 toavoid+2
+               poke: mod-2, dam-2, pen+2
 
-battle axe     \todo
-2h
+great axe      dam 12, abs 12, parry-4, toparry-1, toavoid+2, finesse 1
+1h             str 8, slow 4ap, max dam+6
+               swing: slow 1, mod-1, dam+4, toavoid+2
 
-great axe      \todo
-1h
+lochaber       dam 18, abs 18, parry-5, toparry-1, toavoid+2, finesse 2
+2h             str 10, slow 4ap, max dam+9
+               swing: slow 1, mod-1, dam+8, toavoid+2
 
-lochaber       \todo
-2h
+-
 
 Pick axes and tunnelling axes are tools that also work reasonably well for 
 destroying opponents as well as rocks.
@@ -295,10 +314,12 @@ shield breaker dam 8, pen 2, abs 6, parry-6, toavoid+1, finesse 3
 -
 
 Staffs are low damage but have great potential for speed and defence.
+With enough dexterity the wielder has the option to use faster actions,
+trading damage for speed.
 
-Deflect defence maneuvers are mod-2 instead of mod-3.
+Deflect parry maneuvers are mod-2 instead of mod-3.
 
-Heavy staffs require str+2 and get dam+1, abs+3,+4,+5, finesse-1, 
+Heavy staffs require str+2 and get dam+1, abs+3,+4,+5, finesse 1, 
 but also raises the requirement for the 2h fast 2ap mode with
 a total str+4 dex+4. E.g: a heavy small staff requires 2h fast: str 11 dex 11.
 
@@ -319,15 +340,16 @@ large staff    dam 6/7, abs 6, parry+1/+2, finesse 3/5, reach 1 mod-5/-4,
 Spears are versatile and inexpensive, a good allround weapon.
 
 Spear slashing maneuver gives slashing instead of piercing damage,
-and costs 5xp.
-Narrow tip spears are mod-1 pen+1, have all str bonus as pen+2,+3,+4
+and costs 5xp to train.
+Deflect parry maneuvers are mod-2 instead of mod-3.
+Narrow tip spears are mod-1 pen+1, have all str bonus as pen, max +2,+3,+4.
 Broad tip spears are mod-1 dam+1
 Specialities for narrow and broad tip spears remove the mod-1, 
 and cost 5xp each.
 
-Deflect defence maneuvers are mod-2 instead of mod-3.
+Deflect parry maneuvers are mod-2 instead of mod-3.
 
-Heavy spears require str+2 and get dam+1, pen+1, abs+1,+2,+3, finesse-1
+Heavy spears require str+2 and get dam+1, pen+1, abs+1,+2,+3, finesse 1
 
 Long spears have parry-3, reach 1 mod=0, finesse 3
 
@@ -352,6 +374,9 @@ infantry spear dam 6/7 pen 0/1, abs 7, parry-1/+1, finesse 3/5, reach 1 mod-3
 -
 
 The speciality pole arms are generally military issue.
+Pike is used with spear skill. 
+Halberd is used with spear or axe skill.
+Glave is used with spear or sword skill.
 
 pike           \todo
 
@@ -394,11 +419,14 @@ huge club      dam  8/9, abs 10, parry-2, toavoid+1
 
 -
 
-Hammers are simple and durable, but have significant tactical benefits.
+Hammers are simple and durable, less damage but significant tactical benefits.
 
 The hammer strike attack maneuver costs 5xp to train.
 Hammer wielders that strike with knockback can choose whether to apply 
 the knockback effect, and how much.
+
+Heavy hammers require str+3 and get dam+2, slow 1, abs+3, parry-1, toavoid+1,
+with the strike maneuver getting knockback+1.
 
 plain hammer   dam 5, abs 7, parry-4, toavoid+1, finesse 2
 1h             str 6, max dam+4
@@ -467,7 +495,7 @@ hide behind the shield, GM discretion.
 
 Heavy shields require str+2 and get abs+50\%.
 
-Plated shields are slow+1 (4ap) and get abs+100\%.
+Plated shields are slow 1 (4ap) and get abs+100\%.
 
 
 buckler        abs 3, parry+1

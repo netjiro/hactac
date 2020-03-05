@@ -31,7 +31,7 @@
 \hyphenation{ 
  Gammel-Tant 
  Gam-ling 
- Hemske-lina 
+ Hem-ske-lina 
  Go-blan-da 
  Stur-Skurk 
  Hjal-mar Hjäl-te 
@@ -45,7 +45,7 @@
  muta-meat 
  Iffy-Griff 
  Hoo-man Hoo-mans hoo-man hoo-mans 
- Da-tar-i-an Ma-ras No-stro-mo 
+ Da-ta-ri-an Ma-ras No-stro-mo 
 }
 
 
@@ -1354,7 +1354,7 @@ Ifring          magical: dam+1, parry+1, (cursed), thin, light, excellent
 broad sword     dam 8(7), abs 20,
 (cursed)        str 5 (max +3 str bonus), finesse-5
                 poke: mod-1 dam-1 pen+1
-                swing: slow-1 mod-1 dam+2 todefend+2
+                swing: slow 1 mod-1 dam+2 todefend+2
 \end{verbatim} \end{samepage} \normalsize
 
 
@@ -2139,7 +2139,7 @@ brawl grab    14 dam 0 3ap, target is held
 \end{verbatim} \goodbreak \begin{verbatim}
 2h axe   8, dam 13(11) 
     dam 11, abs 11, parry-3, toparry-1, toavoid+1, finesse-3, str 6
-    swing: slow-1 mod-1 dam+3 toavoid+2
+    swing: slow 1 mod-1 dam+3 toavoid+2
 \end{verbatim} \goodbreak \begin{verbatim}
 brigandine    abs 2
     str 3 (str penalties affect all actions),
@@ -2183,14 +2183,14 @@ veteran 4(+2), quick 1, mobile 1
 GammelTant is half orc, and require a full ration each day
 double con against poisons
 \end{verbatim} \goodbreak \begin{verbatim}
-brawl bite 12 dam 4 slow-1
-brawl fist 12 dam 6 fast+1
+brawl bite 12 dam 4 slow 1
+brawl fist 12 dam 6 fast 1
 brawl kick 12 dam 8
 \end{verbatim} \goodbreak \begin{verbatim}
-staff      10 dam 6/8 (5/6), fast+1
+staff      10 dam 6/8 (5/6), fast 1
 1h/2h         abs 8, parry+1/+2, reach 1 mod-3, finesse-6/-9
               str 5/4 (max +1/+2 str bonus)
-              2h: fast+1 if str 6 and dex 6
+              2h: fast 1 if str 6 and dex 6
 money: 5 silver, 14 copper, necklace of large teeth
 --------------------------------------------
 \end{verbatim} \goodbreak \begin{verbatim}
@@ -2199,7 +2199,7 @@ magic      3
 slow       8
            cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
            Movement costs double movement points.
-           All actions are slow-2 (takes +2 extra ap)
+           All actions are slow 2 (takes +2 extra ap)
            Continue slow on psy vs psy +2/m each round (mana paid once
            on cast) up to the max duration. First round auto success.
            Once slow is lost on one target that target is free until
@@ -2263,13 +2263,13 @@ brawl scratch  7 dam 1 2ap (1ap if both hands free)
 \end{verbatim} \goodbreak \begin{verbatim}
 dagger         9 dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
 2x               str 2 (no str bonus)
-                 fast+1 if str 3 and dex 5
+                 fast 1 if str 3 and dex 5
                  every second attack requires no stamina
                  poke: mod-1 dam-1 pen+1
 \end{verbatim} \goodbreak \begin{verbatim}
 throwing knife 8 dam 2, str 2 (no str bonus)
 4x               range 8, short 4 mod+1, long 12 mod-3, vlong 16 mod-6 dam-1
-                 melee: fast+1 if str 2 and dex 4
+                 melee: fast 1 if str 2 and dex 4
                  every second attack require no stamina
 \end{verbatim} \goodbreak \begin{verbatim}
 leather armour   abs 1, well oiled and darkened to no hamper sneaking
@@ -2373,10 +2373,10 @@ strong 2, agile 2, fast 1, rapid 2, veteran 2
 money: 2 gold, 5 silver, 17 copper
 quaff   4x  in quickdraw slots: belt
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
-heavy staff (1h/2h)  12   (2h fast+1 2ap), good quality
+heavy staff (1h/2h)  12   (2h fast 1 2ap), good quality
     dam 6/7, abs 11, parry+1/+2, reach 1 mod-3, finesse-5/-7
     str 7/6 (max +1/+2 str bonus)
-    2h: fast+1 if str 8 and dex 8
+    2h: fast 1 if str 8 and dex 8
 
 brigandine abs 2
     str 3 (str penalties affect all actions)
@@ -2590,11 +2590,11 @@ money: 2 gold, 8 silver, 19 copper
 
 battle axe 1h  13
         dam 8, abs 10, parry-2, toparry-2, finesse-4, str 5
-        swing: slow-1 dam+2 toavoid+2
+        swing: slow 1 dam+2 toavoid+2
         poke: mod-2 dam-3 pen+2
 \end{verbatim} \begin{samepage}   \   \goodbreak \end{samepage} \begin{verbatim}
 tower shield 14(9)
-        abs 14, parry+5, str 8 or slow-1 str 5
+        abs 14, parry+5, str 8 or slow 1 str 5
         Ranged attacks mod-4 when in the way.
         Hiding behind it (3ap) ranged mod-8
         tackle mod+3
@@ -2643,10 +2643,10 @@ veteran 3
 \end{verbatim} \goodbreak \begin{verbatim}
 money: 1 gold, 18 silver, 15 copper
 
-staff 8 2h fast+1
+staff 8 2h fast 1
     dam 4/5, abs 8, parry+1/+2, reach 1 mod-3, finesse-6/-9
     str 5/4 (max +1/+2 str bonus)
-    2h: fast+1 if str 6 and dex 6
+    2h: fast 1 if str 6 and dex 6
 --------------------------------------------
 \end{verbatim} \begin{samepage} \goodbreak \end{samepage} \begin{verbatim}
 ward shield  8
@@ -2660,7 +2660,7 @@ ward shield  8
 slow  7
     cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
     Movement costs double movement points.
-    All actions are slow-2 (takes +2 extra ap)
+    All actions are slow 2 (takes +2 extra ap)
     Full/multi-round actions take +1r
     Continue slow on psy vs psy +2/m each round (mana paid once
     on cast) up to the max duration. First round auto success.
@@ -2716,10 +2716,10 @@ quick 2, mobile 2 , veteran 4(+3), balance 2
 double con against poisons
 money: 4 silver, 4 copper, and 4 large teeth/claws
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
-brawl bite 4 dam 4 slow-1 (3ap if both hands free)
-brawl fist 4 dam 2 fast+1
+brawl bite 4 dam 4 slow 1 (3ap if both hands free)
+brawl fist 4 dam 2 fast 1
 brawl kick 4 dam 4
-brawl scratch dam 2 fast+1 (1ap if both hands free)
+brawl scratch dam 2 fast 1 (1ap if both hands free)
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 heavy spear 1h/2h   9   mainly 1h + shield
     dam 7/8, pen 1/2, abs 8, parry-1/+1, reach 1 mod-3
@@ -2728,7 +2728,7 @@ heavy spear 1h/2h   9   mainly 1h + shield
     broad tip spears are dam+1 mod-1
     finesse-4/-6
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
-large shield   11(7) ,   str 6 or slow-1 str 3
+large shield   11(7) ,   str 6 or slow 1 str 3
     abs 12, parry+4,
     Ranged attacks mod-3 when in the way.
     Hiding behind it (3ap) ranged mod-6
@@ -2769,7 +2769,7 @@ veteran 2, strong 1, balance 2
 goblins can live on half rations, and can eat spoiled food
 money: 1 silver, 6 copper, 4 teeth, 2 stones, 1 feathers, 2 glass beads
 \end{verbatim} \begin{samepage}   \   \goodbreak \end{samepage} \begin{verbatim}
-brawl fist 3, dam 1, fast+1
+brawl fist 3, dam 1, fast 1
 brawl kick 3, dam 4 
 brawl bite 3, dam 2, 3ap (2ap if both hands free)
 brawl scratch 3, dam 1, 2ap (1ap if both hands free)
@@ -2809,7 +2809,7 @@ quick 1, mobile 2, strong 1, veteran 2, balance 2
 goblins can live on half rations, and can eat spoiled food
 money: 1 silver, 6 copper, 4 teeth, 2 stones, 1 feathers, 2 glass beads
 \end{verbatim} \begin{samepage}   \   \goodbreak \end{samepage} \begin{verbatim}
-brawl fist 3, dam 1, fast+1
+brawl fist 3, dam 1, fast 1
 brawl kick 3, dam 4 
 brawl bite 3, dam 2, 3ap (2ap if both hands free)
 brawl scratch 3, dam 1, 2ap (1ap if both hands free)
@@ -2862,12 +2862,12 @@ quick 1, mobile 2, strong 2, fast 2, veteran 2, balance 3
 goblins can live on half rations, and can eat spoiled food
 money: 1 silver, 6 copper, 4 teeth, 2 stones, 1 feathers, 2 glass beads
 \end{verbatim} \begin{samepage}   \   \goodbreak \end{samepage} \begin{verbatim}
-brawl fist 3, dam 2, fast+1
+brawl fist 3, dam 2, fast 1
 brawl kick 3, dam 5 
 brawl bite 3, dam 3, 3ap (2ap if both hands free)
 brawl scratch 3, dam 2, 2ap (1ap if both hands free)
 \end{verbatim} \begin{samepage}   \   \goodbreak \end{samepage} \begin{verbatim}
-staff   9, dam 5, abs 8, parry+2, reach 1 mod-3, finesse-9, mainly 2h fast+1 2ap
+staff   9, dam 5, abs 8, parry+2, reach 1 mod-3, finesse-9, mainly 2h fast 1 2ap
 
 leather armour abs 1, takes 2 rounds to put on or take off
 ============================================
@@ -2979,7 +2979,7 @@ quaff 4x, quickdraw belt
 
 long sword  11, dam 9, abs 18, finesse-4
     poke: mod-1 dam-1 pen+1
-    swing: slow-1 mod-1 dam+3 todefend+2
+    swing: slow 1 mod-1 dam+3 todefend+2
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 heavy javelin-spear  ranged  : dam 7 pen 1 range 10
 burmak special       melee 2h: dam 8 pen 2 abs 10 reach 1 mod-4, deflect mod-2
@@ -3082,7 +3082,7 @@ The Lundqvist group has scouts, messengers, horse and supply handlers so the ent
 Lundqvist himself will fight with a few heavies and send lights and archers to harass and funnel the goblins. They will hire in spellslingers to cancel out dangerous casters, e.g: \hyperref[dogobanthedisruptive]{Dogoban the Disruptive}.
 
 All Lundqvist soldiers are a combat group so the Captain can Oy! them into action at very high initiative, and boost them with high leadership. They often synchronise and have good reach with their spears and form a strong protective phalanx line, able to guard each other. This allows them to sync many spear attacks on one target at a time for certain and rapid kills. 
-The entire Lundqvist force is built to be highly survivable. They all have fast defence, allowing them to make fast+1 (2ap) parry and avoid defence actions at mod-3 if they are beset by a high number of enemies, and they can guard each other.
+The entire Lundqvist force is built to be highly survivable. They all have fast defence, allowing them to make fast 1 (2ap) parry and avoid defence actions at mod-3 if they are beset by a high number of enemies, and they can guard each other.
 
 If you want to make them even tougher, allow them to all have switch maneuver so they can move damaged soldiers backwards and fresh ones to the front.
 
@@ -3142,7 +3142,7 @@ sword & shield: "Retribution" & "SpellBreaker"
     mod+1, dam 11, abs 25,
     str 9, finesse-6
     poke: mod=0 dam-2 pen+2
-    swing: slow-1 mod=0 dam+4 todefend+2
+    swing: slow 1 mod=0 dam+4 todefend+2
     Can hold 1x retribution strike damage boost charge
     recharged from shield spell breaking
     separate damage roll on successful attack or parry:
@@ -3150,7 +3150,7 @@ sword & shield: "Retribution" & "SpellBreaker"
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 "Spell Breaker"   master crafted large tower shield
     mod+1, abs 30, parry+6(5),
-    str 11, or slow-1 str 8
+    str 11, or slow 1 str 8
     Ranged attacks mod-4 when in the way.
     Hiding behind it (3ap) ranged mod-8
     tackle mod+4
@@ -3205,7 +3205,7 @@ heavy spear, lundqvist fine, quickdraw   mainly 1h + shield,  1h/2h
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 tower shield, lundqvist fine, quickdraw
     abs 25, parry+5,
-    str 9, or slow-1 str 6
+    str 9, or slow 1 str 6
     Ranged attacks mod-4 when in the way.
     Hiding behind it (3ap) ranged mod-8
     tackle mod+3
@@ -3258,7 +3258,7 @@ heavy spear, lundqvist fine, mainly 1h + shield,  1h/2h
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 large shield, lundqvist fine
     abs 20, parry+4,
-    str 7, or slow-1 str 4
+    str 7, or slow 1 str 4
     Ranged attacks mod-3 when in the way.
     Hiding behind it (3ap) ranged mod-6
     tackle mod+2
@@ -3314,7 +3314,7 @@ long sword, lundqvist fine
                     dam 9, abs 22,
                     str 8 (max +4 str bonus), finesse-5
                     poke: mod-1 dam-1 pen+1
-                    swing: slow-1 mod-1 dam+3 todefend+2
+                    swing: slow 1 mod-1 dam+3 todefend+2
 20x regular arrows (can be reused)
 10x sharp arrows pen+1 (single use only)
 5x fine arrows mod+1 (single use only)
@@ -3563,7 +3563,7 @@ quaff 2x in quickdraw slots in belt
 staff   8, fighting 2h (ap2), quickdraw, good quality
 1h/2h   dam 4/5, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
         str 5/4 (max +1/+2 str bonus)
-        2h: fast+1 if str 6 and dex 6
+        2h: fast 1 if str 6 and dex 6
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
 summon portal  8  (tiny demons only)
     cast 3r, mana 5, range 5, consumes 1 portal seed
@@ -3649,7 +3649,7 @@ powerdrink 2x   5mana/1r   in quickdraw belt
 
 heavy staff   dam 6/7, abs 13, parry+1/+2, reach 1 mod-3, finesse-3/-5
 1h/2h         str 7/6 (max +1/+2 str bonus)
-fine          2h: fast+1 if str 8 and dex 8
+fine          2h: fast 1 if str 8 and dex 8
 
 leather abs 1
 
@@ -4147,7 +4147,7 @@ no low hp mods (Black Knight 3)
 takes half damage from piercing attacks
 -----------------------------------
 \end{verbatim} \goodbreak \begin{verbatim}
-glave  8 dam 9, pen 2, abs 8, parry-3, slow-1, toavoid+1
+glave  8 dam 9, pen 2, abs 8, parry-3, slow 1, toavoid+1
          reach 0 mod-1, reach 1 mod-0, reach 2 mod-6,
 avoid  7 yield+3
 ===================================
@@ -4192,15 +4192,15 @@ wraith generator autosuccess, 1r, 3 mana, mental remote at any range
 2x exquisite     master crafted: pen 1  abs +50%
 small sword      11, dam 5(4), pen 1(0), abs 12(8), finesse-7(6)
 (duelling spc)   str 2 (max +1 str bonus, max +1 str pen bonus),
-                 fast+1: str 5 dex 7
+                 fast 1: str 5 dex 7
                  poke: mod-1 dam-1 pen+1
-                 swing: slow-1 mod-1 dam+1 todefend+1
+                 swing: slow 1 mod-1 dam+1 todefend+1
 ===================================
 \end{verbatim} \end{samepage} \normalsize
 
 \
 
-Note that the normal use of the swords are at fast+1 (2ap) speed, requiring str 5, meaning he only has one strength bonus for damage. If he use them as regular 3ap he has 2 strength bonus and gets dam+1 pen+1 for dam 5 pen 2 total.
+Note that the normal use of the swords are at fast 1 (2ap) speed, requiring str 5, meaning he only has one strength bonus for damage. If he use them as regular 3ap he has 2 strength bonus and gets dam+1 pen+1 for dam 5 pen 2 total.
 
 
 \goodbreak 
@@ -4388,7 +4388,7 @@ naturally spidery, can climb perfectly, poisonous bite (see knife)
 --------------------------------------------
 \end{verbatim} \goodbreak \begin{verbatim}
 nasty dagger  8, dam 3, pen 1, abs 6, parry-1, toparry-2, toavoid-1, finesse-7
-    fast+1 (str3 dex7), good quality, evil looking, poison str 7 paralysing
+    fast 1 (str3 dex7), good quality, evil looking, poison str 7 paralysing
     poison 7 ap-3 mp-3 until treated, roll each round for poison vs con until
     success, then the effect lasts for one day or until treated.
 \end{verbatim} \end{samepage}   \   \goodbreak \begin{samepage} \begin{verbatim}
@@ -5641,9 +5641,8 @@ With a surprised glance GrimGnash loose grip on the rock with a claw, then anoth
 
 The Heroes look on, silent for a bit. Then, start laughing. 
 
-\
 
-\
+\vspace{3.0\baselineskip}
 
 
 \begin{samepage}
