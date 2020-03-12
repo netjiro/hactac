@@ -287,6 +287,18 @@ Double can also be combined with e.g. whirlwind and different attack maneuvers.
 To train triple, quadruple, etc, the character must be able to actually and effectively wield that many weapons. E.g: have three arms or a magic hovering mind blade.
 
 
+\skill{Skill scf 1.0 "doppel":} is a foreign variant of "double". Still costs an extra stamina for the combined action. Instead of rolling for double then roll for actions separately, doppel instead works as a cap on the skill level for the actions, without a separate doppel roll. E.g: Shield 10 sword 9 doppel 8 means that the Hero has effective shield 8 sword 8 when using both as a combined action, paying only for the slowest of the two combined actions, 3ap in this case.
+
+The doppel cap is also modified by ams as though it was a roll. E.g: doppel 11 ams 4 is doppel cap 7.
+
+The doppel cap can be balance shifted between the two combined actions. Taking a mod-1 on one of the actions gives a mod+1 to the other. But the mods cannot raise the chances higher than the action + ams would be without the doppel cap. E.g: Shield 10 sword 9 doppel 8 ams 3 is effective shield 5 sword 5 for a combined action, and balance shifting cannot raise to more than shield 7 or sword 6.
+
+The doppel cap, or the actions combined within doppel, can also be focus shifted like normal actions.
+
+
+\skill{Skill scf 1.5, 2.0, 2.5, ... "trippel, quippel, peppel, etc":} sililar to "triple, quadruple, etc", but based on the "doppel" base functionality.
+
+
 \skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast 2 (min 1ap).
 
 Before each attack in a whirlwind sequence the character must pay one extra stamina and roll a successful whirlwind check. When the whirlwind roll fails no more attacks can be done in that whirlwind sequence. The first attack can always be performed even if the first whirlwind roll fails though.
@@ -1241,7 +1253,7 @@ Maneuvers are special actions or optional "modifiers" that can be made as part o
 \openskillslist
 
 
-\skill{Maneuver (cost 10) "opportunity":}
+\skill{Maneuver (cost 15) "opportunity":}
 Triggers the right to react when an opponent is trying to move out of melee weapons range after he's already engaged in melee. For weapons with reach it also triggers the right to react if the target is moving \emph{away} into a range with a worse reach mod but still within max reach of the weapon. But it only triggers once per intended movement of the target.
 
 Opportunity does not trigger for the attacking character when the target character moves away as part of a defensive action from the right to react, even if the target doesn't take an action but just moves away. E.g: parry + yield, or avoid and move away, or just take a step back without defending.
@@ -1258,7 +1270,7 @@ Intercept cannot interrupt an incoming charge unless the intercepting hero has h
 
 
 \skill{Maneuver (cost 5) "yield":}
-Can be used together with any defensive action like avoid, parry, deflect, where the user moves to end up at least one square further away from the attacker, and (usually) gains a +3 to the avoid or parry action. Some characters have different bonuses to their yield maneuver. The character must end up at least one square distance further away from the attacker than he was before, or he cannot perform the yield maneuver and get the bonus. Just moving to another square at the same distance from the attacker is not a yield.
+Can be used together with any defensive action like avoid, parry, deflect to move away from the attacker and gain a bonus to the avoid or parry action. The bonus varies between characters, but mod+3 is common. The character must end up at least one square distance further away from the attacker than he was before, or he cannot perform the yield maneuver and get the bonus. Just moving to another square at the same distance from the attacker is not a yield.
 
 Upgrade the yield bonus: \\
 cost   5xp: yield +1 \\
@@ -1268,7 +1280,7 @@ cost  50xp: yield +4 \\
 cost  75xp: yield +5 \\
 cost 100xp: yield +6
 
-E.g: Slow Sebastian has yield+2 bonus to start with. He curses his genes, spends 15xp (25-10=15), and gets yield+3.
+E.g: Sebastian Slouch has yield+2 bonus to start with. He curses his genes, spends 15xp (30-15=15), and gets yield+3.
 
 
 \skill{Maneuver (cost 10) "dodge":}
@@ -1744,10 +1756,10 @@ After rolling the first "1", the Hero must declare a critical attempt, and pay 1
 
 Depending on the success level of the second roll the damage is increased:\\
 fail : it's just normal damage, no critical damage \\
-success+0 : the damage roll is 100\% + normal damage roll, min 10+roll \\
-good success+3 : the damage roll is 200\% + normal damage roll, min 20+roll \\
-very good success+6 : the damage roll is 300\% + normal damage roll, min 30+roll \\
-perfect success+9 : the damage roll is 500\% + normal damage roll, 50+roll
+success+0 : the damage roll is 100\% + normal damage roll, min 5+roll \\
+good success+3 : the damage roll is 200\% + normal damage roll, min 10+roll \\
+very good success+6 : the damage roll is 300\% + normal damage roll, min 15+roll \\
+perfect success+9 : the damage roll is 500\% + normal damage roll, 20+roll
 
 The critical damage roll stacks with accurate, consistent, etc as normal. And it stacks with critical aim.
 
@@ -1782,7 +1794,7 @@ It is another mod-3 to hit both targets for each empty square between them, star
 Upgrade to triple arrow at cost +10xp and damage 66\%, and to quadruple arrow at cost +10xp and damage 50\%.
 
 
-\skill{Maneuver (cost 10) "arrow stab":} Instead of shooting you opponent the Hero can use the projectile to stab the target instead. Damage is 50\% and penetrating 0. The attack is mod-3 to hit, and a regular 3ap action. It counts as one regular attack for sake of stamina. For the attack skill roll the character can use the highest of either: bow,crossbow,throw,knife,rapier,sword,spear skills.
+\skill{Maneuver (cost 10) "arrow stab":} Instead of shooting you opponent the Hero can use the projectile to stab the target instead. Damage is 50\% and penetrating 0. The attack is mod-3 to hit, and a regular 3ap action. It counts as a regular attack for sake of stamina. For the attack skill roll the character can use the highest of either: bow,crossbow,throw,knife,rapier,sword,spear skills.
 It works just as well with rocks, chairs, bottles, and other projectiles as it does with arrows.
 
 This move was made popular by the heroic dancer Leggy-Lars who used it in the movie "Lard of the Sphinx" to stab an orc in the throat before loading the arrow and shooting the next orc inzahead. Since the damage is low it is suggested that it is combined with a "critical damage" maneuver.
@@ -1791,14 +1803,18 @@ This move was made popular by the heroic dancer Leggy-Lars who used it in the mo
 \skill{Maneuver (cost 5) "shoota-inna-back":} Easier to hit and does extra damage when attacking fleeing targets. Even when using melee weapons. The attack is mod+1 dam+1 if the target is running away at run or dash speed.
 
 
-\skill{Maneuver (scf 0.5) "breaker":} Adds extra damage when calculating if a parrying weapon or shield breaks or takes damage when used to parry an attack. A breaker attack is slow 1 and costs 1 stamina extra. Add damage equal to the level of \emph{breaker} when comparing damage vs absorption after a successful parry. The additional breaker damage can only damage the parrying weapon and never the target.
-
-E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a breaker attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
+%\todo ? remove breaker, too powerful?
+%      or change to roll flat dX for breaker extra damage
+%      or have breaker add +lvl to chance of breaking when already 
+%      exceeding abs of parrying weapon/shield
+%\skill{Maneuver (scf 0.5) "breaker":} Adds extra damage when calculating if a parrying weapon or shield breaks or takes damage when used to parry an attack. A breaker attack is slow 1 and costs 1 stamina extra. Add damage equal to the level of \emph{breaker} when comparing damage vs absorption after a successful parry. The additional breaker damage can only damage the parrying weapon and never the target.
+%
+%E.g: Breaker Bob attacks Parrying Pete with a long sword, choosing to make a breaker attack. BB spends one extra stamina for the attack, he hits and rolls damage 8. PP parries successfully with his staff. BB has breaker 4 so he has an effective "damage" of 12 vs PP's staff with abs 8. The staff now has a 40\% risk of breaking and PP rolls 5. The staff holds but looses 2 abs (excess damage / 3 round up). If PP hadn't parried, or missed his parry, BB's strike would have landed, doing the normal rolled 8 damage, of which PP's leather armour would have eaten 1 damage, and PP would have taken 7 hp damage in the end.
 
 
 \skill{Maneuver (cost 10) "knock down" / "trip up":} Two separate attack maneuvers. Both means hit someone so they fall down. "Knockdown" is str based while "trip up" is dex based.
 
-It's a regular attack which costs 1 extra stamina and has mod-3. If successful and not avoided the attacker and target will take a str or dex based resistance roll to determine if the target falls down or not. The attacker takes the knockdown attack success diff as mod to his side of the resistance roll, and the target takes his defence diff (if successful) to his side of the resistance roll.
+It's a regular attack which costs 1 extra stamina and has mod-3. If successful and not avoided the attacker and target will take a str or dex based resistance roll to determine if the target falls down or not. The attacker takes the knockdown attack success diff as mod to his side of the resistance roll, and the target takes his defence diff (positive or negative) to his side of the resistance roll.
 
 
 \skill{Maneuver (cost 30) "killstab":} allows for a massive damage killing maneuver used with backstab / sidestab to quickly take out a target. It's easier to perform with backstab than with sidestab. A killstab attack takes a full round. If successful it adds significant damage to the normal weapon attack damage. The killstab bonus damage replaces the backstab/sidestab bonus damage.
@@ -1814,7 +1830,7 @@ The killstab attack is mod-6 and negatively modified by the target abs. E.g: a t
 Just like backstab/sidestab: first roll for killstab (modified backstab/sidestab), then the regular weapon attack roll. 
 
 \noindent Success:\\
-success+0: dam+20, penetrating\\
+success+0: dam+10, penetrating\\
 success+3: dam+20, penetrating\\
 success+6: dam+30, penetrating\\
 success+9: dam+40, penetrating\\
@@ -1876,7 +1892,7 @@ The character attacks someone else, or takes a non combat action.
 
 The combat advantage does not break when: \\
 The character defends from attacks from other enemies. \\
-The round is over. Combat Advantage persists between rounds.
+The end of the round. Combat Advantage persists between rounds.
 
 Upgrades: \\
 cost +10: multiple advantage. Maintain mod+1 against more than one simultaneous opponent, following the rules above but does not break advantage when attacking another target covered within multiple advantage. Note that the character will loose advantage over any opponent he defends against, but not if he defends against other enemies against which he does not have advantage. The upgrade cost is +10xp per extra target. \\
@@ -1977,10 +1993,11 @@ cost +20 radius+1 \\
 cost +20 dam+1
 
 
-\skill{Ability cost 20xp ccf 1.0 "Breathless":} The character does not have to breath. He is thus immune to most gas attacks, drowning, etc.
+\skill{Ability cost 20xp ccf 1.0 "Breathless":} The character does not have to breathe. He is thus immune to most gas attacks, drowning, etc.
 
 
 \skill{Ability cost 30xp ccf 1.2 "Engaging Opponent":} An opponent must succeed with a psy roll to be able to disengage from melee combat with an "engaging opponent" character. Disengaging is switching to another target or moving outside of weapon range after having made a previous attack against the engaging opponent. It does not mean that the attacker must continue to make attacks, just that he cannot move away and cannot attack anyone else without first rolling a psy roll.
+The effect breaks if the Engaging Opponent moves away.
 
 upgrade: \\
 cost +10 gives target mod-3 to the psy roll. \\
@@ -2032,13 +2049,15 @@ The hero can spend one action and one mana to immediately switch places with the
 %        and perhaps also set 3ap and remove fast teleport, or set to 1r
 %TODO: ? cost ?  at 30+0.2 it costs 50xp for teleport+lvl10
 \skill{Ability cost 30xp + scf 0.2 ccf 1.5 "Teleport":} For thieves and fighters alike.\\
-\emph{"Real Heroes go to the toilet without moving!"}\\
--- Famous quote by Formidable Fabian.\\
+\emph{"Real Heroes go to the toilet without moving!"}\\ 
+-- Formidable Fabian.
+
 Range, target, speed of activation, acclimatisation, and other factors depend on the Hero and can be independently trained. By default it takes one round to teleport to an unblocked square within line of sight. Each attempt costs one mana or stamina, decide when buying the ability and it cannot be changed later. The range is limited to 3x psyche of the Hero. Accuracy is dependent on an int roll. Success means hitting the designated target, and any fail means deviating diff squares from the target in direction 1D8 (1D6 for hex, and 1D360 for gridless). After teleportation the Hero must roll for perception, and any fail diff will be applied as a negative mod for the rest of the round. For multiple teleportations in the same round the acclimatisation mod is cumulative.
 
 It is possible that the Hero materialises on an already occupied square, or within a solid object. In this case the Hero will be shot to the closest empty square suffering (distance)$^2$ penetrating damage as a result. If multiple closest options exist the Hero can choose if he passes a psyche roll, otherwise enumerate and roll for a random final destination. The (distance)$^2$ is also used as a mod for the acclimatisation perception roll, and for an extra dex roll to see if he can remain on his feet.
 
-Teleporting normally takes a full round, but can be done faster. Attempting to teleport in a normal 3ap action is mod-3, and trying for a very fast 1ap action teleport is mod-6. These mods also affect the max range psy calculation and the accuracy int and acclimatisation per rolls. %TODO ? should it really affect the int and per rolls? more fun if not?
+Teleporting normally takes a full round, but can be done faster. Attempting to teleport in a normal 3ap action is mod-3, in 2ap is mod-6, and in 1ap is mod-9. These mods also affect the max range psy calculation and the accuracy int and acclimatisation per rolls. 
+%\todo ? should it really affect the int and per rolls? more fun if not?
 
 Upgrade: Additional Accuracy\\
 cost +5xp per level: each level gives mod+1 to the intelligence targeting roll.

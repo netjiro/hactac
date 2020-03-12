@@ -561,44 +561,50 @@ RedGuard                    (named)
 -----------------------------------
 str  8    hp 25(18) abs 4 (plate + RedGuard ward rune tattoo)
 dex  8(9) m2 w4 r7(8,7) d10(12,10)
-con  7    stamina 12(10)
-int  4    vision 25 160deg
-psy  5    mana 10
-per  6    ap 7(4)
+con  7    stamina 14(10)
+int  6    vision 25 160deg
+psy  7    mana 10
+per  8    ap 8(4)
 cha  4    xp -- ( ca 400-ish )
 ----------
-quick       3
+quick       4
 mobile      2
-focus       2
 overextend  2
-balance     3
+balance     6
 quick draw  6
 consistent  2
 avoid       8 yield+4
 brawl       7
-sharpstaff 12
+staff      12
 whirlwind   7
-shield      6
+shield      8
 sharpstaff  x
 poke        x
 swing       x
+slash       x
+deflect     x
 resilient   7
-enduring    2
+enduring    4
 fast        2
+veteran     3
 ----------
 Ward Rune tattoo: draw 1 mana to absorb 1hp from an incoming strike.
                 Automatic until mana reaches 0, does not over draw.
 
 Quaff 2x        restore 4hp and 4sta in one round, readied quick draw from belt
 
-sharpstaff   12 dam 6/7, penetrating 1, abs 15, parry+0/+1,
-(1h/2h)         reach 1 mod-3, finesse-6
-                str 7/6 (max +1 damage str bonus, max +1 penetrating str bonus)
-                2h: fast+1 with str 8 and dex 8
+RedGuard        12 dam 6/7, penetrating 1, abs 12, parry+1/+2,
+sharpstaff      reach 1 mod-3, finesse-6
+(1h/2h)         str 7/6 (max +1 damage str bonus, max +3 penetrating str bonus)
+                2h: fast 1 with str 8 and dex 8
                 poke: mod-0 dam 4/5 pen 3
-                swing: mod-0 slow-1 dam 8/9 pen 0
+                swing: mod-0 slow 1 dam 8/9 pen 0
+                slash: mod-0 dam 5/6, pen 0
+                deflect: mod-1
+                RedGuard sharpstaff requires specialisation for 15xp 
+                or suffer mod-2, slow 1
 
-heavy RedGuard  abs 3, (less mods than normal plate armour)
+RedGuard heavy  abs 3, (less mods than normal plate armour)
 brigandine      dex-1 yield bonus -0
                 run-1, dash-2
                 str 7 (str penalties affect all actions)
@@ -606,7 +612,6 @@ brigandine      dex-1 yield bonus -0
                 acrobatics mod-3
                 spellcasting mod-1
                 sneak mod-2
-
 ===================================
 Imposing soldier in a strange red plate armour and cloak.
 Armed with a large staff with evil looking metal points in each end.
@@ -649,7 +654,7 @@ fire storm   6 cast 1r 1m, dam 5 +2/m, range self, radius 1 +1/m,
 slow         8 cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
                target cannot move faster than maneuver,
                and any movement gives a mod-3 penalty,
-               and all actions are slow-2, i.e. pushing mod-2 more to ams.
+               and all actions are slow 2, i.e. pushing mod-2 more to ams.
                continue slow on psy \vs psy +2/m each round (mana paid once
                on cast) up to the max duration.
                int 4, psy 3
@@ -725,6 +730,8 @@ legendary longsword: "slash"  mod+1 dam 13(11) abs 30 finesse 8, str 7
 fashionable exquisite brigandine armour abs 2 (behaves as leather), or,
 legendary plate mail abs 3 (behaves as brigandine)
 \end{verbatim} \normalsize \end{samepage}
+
+\
 
 A well known hero. You have heard many songs about his heroic deeds.
 Dressed in fine garments. Blond flowing hair, white glinting teeth.
@@ -944,7 +951,7 @@ swing          x
 short sword    8 dam 5, abs 10,
                  str 3 (max +1 str bonus), finesse-4
                  poke: mod-1 dam-1 pen+1
-                 swing: slow-1 mod-1 dam+1 todefend+2
+                 swing: slow 1 mod-1 dam+1 todefend+2
 small shield   8(6) abs 8, parry+2,
                  str 2
                  Ranged attacks mod-1 when in the way.
@@ -1179,7 +1186,7 @@ accurate  1
 ----------
 punch     8 dam 3, parry-6 (unarmed-3) deflecting
 kick      8 dam 4, parry-6 (unarmed-3) deflecting
-pick axe 11 dam 5, penetrating 2, abs 7, parry-1, slow-1
+pick axe 11 dam 5, penetrating 2, abs 7, parry-1, slow 1
 dagger    7 dam 3, fast+1
 leather armour abs 1
 -----------------------------------
@@ -1213,7 +1220,7 @@ sneak     3
 ----------
 punch     6 dam 3, parry-6 (unarmed-3) deflecting
 kick      6 dam 4, parry-6 (unarmed-3) deflecting
-pick axe  7 dam 5, penetrating 2, abs 6, parry-2, slow-1
+pick axe  7 dam 5, penetrating 2, abs 6, parry-2, slow 1
 dagger    4 dam 3, fast+1
 -----------------------------------
 money ( 0g 1s 8c)
@@ -1237,9 +1244,9 @@ avoid     4 yield+3
 ----------
 pick axe 2h   7
     dam 4, pen 4, parry-3, toavoid+2, finesse-2
-    str 4, slow-1
+    str 4, slow 1
     double damage against stone, doors, etc
-    swing: slow-1 mod-1 dam+1, pen+1, toavoid+2
+    swing: slow 1 mod-1 dam+1, pen+1, toavoid+2
 
 money ( 0g 0s 5c)
 ===================================
@@ -1261,9 +1268,9 @@ avoid     4 yield+3
 ----------
 heavy pick axe 2h  6
     dam 6, pen 4, parry-3, toavoid+2, finesse-2
-    str 6, slow-1
+    str 6, slow 1
     double damage against stone, doors, etc
-    swing: slow-1 mod-1 dam+1, pen+1, toavoid+2
+    swing: slow 1 mod-1 dam+1, pen+1, toavoid+2
 
 money ( 0g 0s 3c)
 ===================================
@@ -1290,7 +1297,7 @@ backstab   5
 1h axe     7
     dam 7, abs 8, parry-3, toparry-1, toavoid+1, finesse-3
     str 4 (max +4 str bonus)
-    swing: slow-1 mod-1 dam+2 toavoid+2
+    swing: slow 1 mod-1 dam+2 toavoid+2
 
 shield  10(7)
     abs 10, parry+3,
@@ -2311,6 +2318,8 @@ It is possible to talk to the demons if a character can speak ancient, but the H
 At this point the Heroes should be quite powerful, but the Grey Stalkers are difficult to fight. The horn charge, blink, teleport, and explosion effects make them quite deadly. One can charge then blink out while the next charges, staggered attacks, then they blink in together. And as they get damaged they flee back to the big one by teleport.
 
 It's likely that the Heroes will only be able to drive the stalkers away.
+
+\
 
 \begin{samepage} \vsmall \begin{verbatim}
 Grey Stalkers:

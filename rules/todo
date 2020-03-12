@@ -51,6 +51,25 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+
+200309:
+TODO: rewrite / rebalance skill "breaker"
+      perhaps increase skill cost?
+      as is, it's too easy to remove shields/weapons
+TODO: clean-write "doppel", obtuse writing currently
+
+
+200307:
+TODO: resurrection perhaps require something really interesting:
+      life for a life: requires still beating heart of the one who killed the target
+                       i.e: sacrifice the killer to resurrect the target
+
+
+200305:
+TODO: cleanup surprise
+TODO: cleanup sneaking, spotting, detection ,--  visible, sneaking, camouflaged
+
+
 200305:
 TODO: finish up the goblin weaponry under equipment.tex  search "gobliny"
 
