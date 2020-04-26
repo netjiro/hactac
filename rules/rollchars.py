@@ -170,8 +170,23 @@ def r2d20():
 def flat(min,max):
     return min + random.randint(0,(max-min))
 
+def bell2(min,max):
+    if (max-min)%2 != 0:
+        raise NameError("bell2("+str(min)+","+str(max)+") has range " \
+                +str(max-min+1)+", which is not evenly divisible by 2.")
+    dx = (max-min)/2 +1
+    return min-2 + die(dx) + die(dx)
+
+def bell3(min,max):
+    if (max-min)%3 != 0:
+        raise NameError("bell3("+str(min)+","+str(max)+") has range "\
+                +str(max-min+1) +", which is not evenly divisible by 3.")
+    dx = (max-min)/3 +1
+    return min-3 + die(dx) + die(dx) + die(dx)
+
+
 def pad2(string):
-    if len(string) > 1:
+    if len(string) >= 2:
         return string
     else:
         return " " + string
@@ -262,14 +277,10 @@ class Character:
             print(sepline)
             for bonus in self.bonuses :
                 print(bonus)
-        print(sepline)
-        skillset = []
-        for skill, lvl in self.skills.items() :
-            if lvl != 0:
-                skillset.append(skill +" "+ str(lvl))
-        skillset.sort()
-        for skill in skillset :
-            print(skill)
+        if len(self.skills.items()) > 0:
+            print(sepline)
+            for skill, lvl in self.skills.items() :
+                print(skill+" "+str(lvl))
         if len(self.maneuvers) > 0:
             #print(sepline)
             for maneuver in self.maneuvers :
@@ -557,8 +568,8 @@ def rollOrc():
     char.per = r2d5()                     #  2 - 10   6
     char.cha = r2d5() -3                  # -1 -  7   3
     # secondary                                       1,2,3,4,5,6,7,8,9
-    char.hp = 7 + r2d10()                 #  9 - 25  18
-    char.m = 1 + int(d10() / 5)           #  1 -  3   4,5,1
+    char.hp = 6 + r2d10()                 #  8 - 24  17
+    char.m = 1 + int(d10() / 9)           #  1 -  2   8,2
     char.w = 2 + int(d10() / 3)           #  2 -  5     2,3,3,2
     char.r = 4 + int(d10() / 3)           #  4 -  7         2,3,3,2
     char.d = 6 + int(d10() / 3)           #  6 -  9             2,3,3,2
