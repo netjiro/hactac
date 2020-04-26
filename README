@@ -102,16 +102,16 @@ Most of the file space is binary: images and campaign files, and I don't general
 The history
 -----------
 
-The hactac rules and world setting have evolved sporadically since early 2008. I was working on a post doc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
+The hactac rules and world setting have evolved sporadically since early 2008. I was working a postdoc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
 
-So that's why I wrote this stuff, which together with maptool, jarnal, and mumble conferencing works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, a bit silly, but with significant tactical depth.
+So that's why I wrote this stuff, which together with maptool and mumble works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, a bit silly, but with significant tactical depth.
 
 I inject these adventures to fill the void found in between sessions of our long running role playing campaigns and the occasional one shot board game days.
-We play this for a couple of hours in the evenings every now and then after people have put their kids to sleep.
+We play this for a couple of hours in the evenings every now and then after people have put their kids to sleep. Periodically, during campaigns, it's 2-3h on a fixed weekday evening.
 
-Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor power balance. We also play some Descent occasionally, but that requires gathering for a full day, and I usually prefer campaigns instead of one shot adventures.
+Back in the day we briefly had a Warhammer Quest "campaign" running. It was fun, but quickly deteriorated and died due to the horribly poor balance. We also played some Descent occasionally, but that requires gathering for a full day, and I usually prefer campaigns instead of one shot adventures.
 
-Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my real rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world. That was my base idea when I started working on this package.
+Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a "silly campaign" when we couldn't get all the people gathered for my regular rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world. That was my base idea when I started working on this package, but I wanted to see how much tactical depth we could get from simple rules.
 
 I've split the rules into the very basic fundamentals, and the rest. Just choose what to include to the point where it is a good fit for your group. Find your own trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set is more suitable for a script assisted virtual tabletop like maptool, etc.
 
