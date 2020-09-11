@@ -33,16 +33,16 @@ axe 1h                  5         7         9                      parry-3, topa
 sword 2h                          8        10        12            finesse 6, reach 1 mod-6
 axe 2h                           10        12        14            sdf
 
-staff 1h                2         4         6                      reach 1 mod-5, finesse 4
-      2h           3         5         7                           reach 1 mod-4, finesse 5
+staff 1h                2         4         6                      reach 1 mod-5, finesse 4         staff 1h & 2h are the same weapon, 
+      2h           3         5         7                           reach 1 mod-4, finesse 5         just different grip handling
 
 bow                    3p0       4p1       5p2                     r15sq             2r mod-0   1r mod-3   3ap mod-9
-crossbow               4p1       6p2       7p3                     r10sq   scf 0.7   3r  /  2r str+dex
+crossbow               4p1       5p2       6p3                     r10sq   scf 0.7   3r  /  2r str+dex  ,   crossbow reload increases +1r per size increase
 
 short/broad/longsword        5         7         9                 finesse 4, abs+40%, swing+1/2/3
 
 longbow                               4p1       5p2                r20sq     
-arbalest                    12                   x                 r20sq
+arbalest                    12                   x                 r20sq 6r
 
 
 

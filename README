@@ -1,7 +1,4 @@
-================================================================================
-
-
-hactac: rpg-ish tabletop game for dead tree and digital tables alike
+Gold and Glory: rpg-ish tabletop game, for dead tree and digital tables alike
 
 
 
@@ -15,7 +12,7 @@ or similar if you prefer alternative output. All latex environments I've tried h
 The adventures are built individually. Each adventure has one main .tex file named after the adventure, so simply run pdflatex on that file. E.g:
 > pdflatex "00 Dungeon of Testing.tex"
 
-If you're new to latex, please run the first local build of a project thrice. Either see it as the magic of the layout demons, or learn why: https://tex.stackexchange.com/questions/53235 (latex, bibtex, latex, latex)
+If you're new to latex, please run the first local build of a project thrice. Either see it as the magic of the layout demons, or learn why: https://tex.stackexchange.com/questions/53235
 
 
 
@@ -37,7 +34,7 @@ It is well tested, hundreds of hours since 2008. There are several campaigns rea
 
 This is my personal notes package, not draft quality material intended for publication. There is still a lot of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc. I'm updating this package whenever I have the time and inclination.
 
-It is however quite complete. We have been using it for many years. I'll be adding the rest of the campaigns and adventures as I get the time to clean them up somewhat.
+It is however quite complete. We have been using it for many years. I'll add the rest of the campaigns and adventures as I get the time to clean them up somewhat.
 
 Anything you want to change or add? Contact me! Or even better: go to github https://github.com/netjiro/hactac and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I might dig out some time to improve the quality to something closer to a publication draft.
 
@@ -102,7 +99,7 @@ Most of the file space is binary: images and campaign files, and I don't general
 The history
 -----------
 
-The hactac rules and world setting have evolved sporadically since early 2008. I was working a postdoc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
+The Gold and Glory rules and world setting have evolved sporadically since early 2008. I was working a postdoc contract at Utrecht University and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. Due to family and work requirements for most of us it was also evident from earlier on that we needed a new arrangement to keep gaming at a reasonable frequency. The proper get together rpg games are tricky to schedule when people have kids and live spread out over different countries.
 
 So that's why I wrote this stuff, which together with maptool and mumble works quite well for playing quick, simple, fun adventures and campaigns. It is not meant to get even close to the real gather-together-and-eat-homebrew-guck role playing. Instead it's just fun sporadic gaming, a bit silly, but with significant tactical depth.
 

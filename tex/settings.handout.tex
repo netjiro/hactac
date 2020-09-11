@@ -16,9 +16,11 @@
 % \usepackage{layouts}                                 <<< in preamble
 % textwidth: \printinunitsof{mm}\prntlen{\textwidth}   <<< in document
 % linewidth: \printinunitsof{mm}\prntlen{\linewidth}   <<< in document
-\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
-% These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
-% meaning a 300dpi image is around 1600 pixels wide
+% handout use thinner single column page format, 15mm binding, 40mm margins
+\usepackage[a4paper,inner=55mm,outer=40mm,top=40mm,bottom=40mm,pdftex]{geometry}
+% \textwidth and \linewidth  reports 115mm for these margin settings
+% images 1.0\linewidth around 115mm wide
+% at 300dpi it's around 1360px wide    (11.811px/mm)
 \usepackage{graphicx}   % For eps figures
 \usepackage{epsfig}     % Alternative package
 \usepackage[hang,small,bf]{caption}
@@ -82,7 +84,7 @@
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
 
 
-\usepackage{ifthen}
+%\usepackage{ifthen}
 
 
 % \needspace{5\baselineskip}      << reserves approximately 5 lines, leaves raggedbottom, more efficient
@@ -90,28 +92,6 @@
 % \Needpsace*{5\baselineskip}     << leaves flushbottom if \flushbottom is in effect, otherwise ragged
 \usepackage{needspace}
 
-
-
-% \skill{blabla}
-\newboolean{skillsaslist}
-\setboolean{skillsaslist}{true}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
-\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
-
-% \action{blabla}
-\newboolean{actionsaslist}
-\setboolean{actionsaslist}{true}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
-\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
-
-% \eqitem{blabla}
-\newboolean{itemsaslist}
-\setboolean{itemsaslist}{true}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\eqitem}[1]{\subsubsection*{#1}}}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
-\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
 
 
 \newenvironment{readoutloud}%

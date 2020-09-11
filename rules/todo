@@ -1113,3 +1113,5 @@ DONE: smooth casting spells
       That way it's an optional
       can re-learn spell and count in the .33 heavy casting learning xp onto the
       new 0.50 smooth casting skill level for casting without drawing stamina.
+200616:
+DONE: make it count  -  roll to get extra damage, 1stam, 0/1ap for risk/mitigation

@@ -5,12 +5,17 @@
 %\usepackage{fontspec}        % searchable ligatures in pdf
 %% utf8 inputenc is ignored for xelatex utf8 based default
 
+% mmap or cmap ?   mmap is newer, works for math as well, etc
 % for pdflatex, faster older, ligatures break search in pdf:   << fix with cmap
 \usepackage{mmap}    % add letter sequences to pdf info for searchable ligatures
 \usepackage[T1]{fontenc}    % ligatures break search in pdf    << fix with cmap
 % set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
 \usepackage[utf8]{inputenc}
 
+% set page format, use following lines to show \textwidth and \linewidth
+% \usepackage{layouts}                                 <<< in preamble
+% textwidth: \printinunitsof{mm}\prntlen{\textwidth}   <<< in document
+% linewidth: \printinunitsof{mm}\prntlen{\linewidth}   <<< in document
 \usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
 % These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
 % meaning a 300dpi image is around 1600 pixels wide
