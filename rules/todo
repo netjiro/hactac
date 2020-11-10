@@ -48,8 +48,16 @@ TODO: move to milestone xp payouts + session xp
 
 
 
+200929:
+TODO: ? should heavy strike and massive strike be dam+20% / dam+33% 
+      instead of 33/50 ?     +50% is insanely heavy for large weapons
+      eg 2h large sword sketch dam12 str10 gets dam18. ie cannot be parried 
+      and must be avoided instead
 
 
+200926:
+TODO: CHECK that veteran skill influences the pass out / wake up rolls from 
+      "come on and die already" damage below 0hp.
 
 
 200309:
@@ -776,8 +784,11 @@ NOPE: unfazed skall höja initiativ för turn med lvl istället för interrupt
       remove unfazed, reduces tactical depth
 190705:
 SKIP: använd stun knapp 99 istället för paralyze knapp: paralyse knapp
-
-
+201002:
+NOPE: this will often double effective damage to target
+      ?? should 2h be +3 over 1h as std ?
+      tex: str 8 sword 75% dam:   6 / 8-9 , after armour 3 / 5-6  !!
+      
 
 
 
@@ -1115,3 +1126,5 @@ DONE: smooth casting spells
       new 0.50 smooth casting skill level for casting without drawing stamina.
 200616:
 DONE: make it count  -  roll to get extra damage, 1stam, 0/1ap for risk/mitigation
+200929:
+DONE: added heavy strike at dam+33% and 1ap faster than massive strike at dam+50%

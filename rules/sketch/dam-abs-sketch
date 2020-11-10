@@ -11,16 +11,19 @@ spear     dam=str-1 , pen 0 , abs=str-3 , finesse 3 , parry-1 , reach+1 mod-3
     2h        str+1 ,     1                       4        +1
 
 staff     dam=str-2 , pen 0 , abs=str-1 , finesse 3 , parry+1 , reach+1 mod-4
-    2h        str+0 ,     0                       5        +2
+    2h        str+0 ,                             5        +2
 
-club      dam=str-2 , pen 0 , abs=str-2 , finesse 1 , parry-2 , toavoid+1 , knockback 1 str+3
-    2h        str+0               str+0           2             toavoid+2 , knockback 1 str+6
+club      dam=str-2 , pen 0 , abs=str+1 , finesse 1 , parry-2 , toavoid+1 , knockback 1 str
+    2h        str+0               str+3           2             toavoid+2 , knockback 1 str+3
 
-bow       dam=str-2 : str-2/3/4 , pen 0/1/2 , range 12/16/18
+hammer    dam=str+0 , pen 0 , abs=str+0 , finesse 3 , parry-3 , toparry-1, toavoid+1            slow 4ap, knockback 1
+    2h        str+2                  +2                         toparry-2, toavoid+2
 
-crossbow  dam=str+0 : str-0/1/2 , pen 1/2/3 , range 10/12/14
+bow       dam=str-2 : str-2/3/4 , pen 0/1/2 , range 15/15/15                                     rof 2r
 
-shield                        abs=str+3               parry+(1+str/2)
+crossbow  dam=str+0 : str-0/1/2 , pen 1/2/3 , range 10/10/10                                     rof 3r/4r/5r
+
+shield                        abs=str+3               parry+1+(str/2)
 
 
 
@@ -31,18 +34,18 @@ sword 1h                4         6         8                      finesse 6
 axe 1h                  5         7         9                      parry-3, toparry-1, toavoid+1, finesse 3
 
 sword 2h                          8        10        12            finesse 6, reach 1 mod-6
-axe 2h                           10        12        14            sdf
+axe 2h                           10        12        14            -
 
 staff 1h                2         4         6                      reach 1 mod-5, finesse 4         staff 1h & 2h are the same weapon, 
       2h           3         5         7                           reach 1 mod-4, finesse 5         just different grip handling
 
 bow                    3p0       4p1       5p2                     r15sq             2r mod-0   1r mod-3   3ap mod-9
-crossbow               4p1       5p2       6p3                     r10sq   scf 0.7   3r  /  2r str+dex  ,   crossbow reload increases +1r per size increase
+crossbow               4p1       5p2       6p3                     r10sq   scf 0.7   3r  /  2r str+dex mod-3  ,  1r fire action if preloaded or 3ap mod-3
 
 short/broad/longsword        5         7         9                 finesse 4, abs+40%, swing+1/2/3
 
-longbow                               4p1       5p2                r20sq     
-arbalest                    12                   x                 r20sq 6r
+longbow                               4p1       5p2                r20sq 
+arbalest                    7p4                                    r15sq , 5r  /  4r str+dex mod-3,  1r fire action if preloaded or 3ap mod-3
 
 
 
@@ -61,12 +64,12 @@ small sword    dam 4, abs 4, finesse 6,
 
 plain sword    dam 6, abs 6, finesse 6,
 1h             str 6, max dam+2
-               poke: mod-1 dam-1 pen+1, max pen+1
+               poke: mod-1 dam-1 pen+1, max pen+2
                swing: slow 1 mod-1 dam+2 todefend+2
 
 large sword    dam 8, abs 8, finesse 6,
 1h             str 8, max dam+3
-               poke: mod-1 dam-1 pen+1, max pen+1
+               poke: mod-1 dam-1 pen+1, max pen+3
                swing: slow 1 mod-1 dam+3 todefend+2
 
 -
@@ -78,12 +81,12 @@ small sword    dam 8, abs 8, reach 1 mod-6, finesse 6
 
 plain sword    dam 10, abs 10, reach 1 mod-6, finesse 6
 2h             str 8, max dam+3
-               poke: mod-1 dam-1 pen+1, max pen+2
+               poke: mod-1 dam-1 pen+1, max pen+3
                swing: slow 1 mod-1 dam+3 todefend+2
 
 large sword    dam 12, abs 12, reach 1 mod-6, finesse 6
 2h             str 10, max dam+4
-               poke: mod-1, dam-1, pen+1, max pen+2
+               poke: mod-1, dam-1, pen+1, max pen+4
                swing: slow 1, mod-1, dam+4, todefend+2
 
 -
@@ -98,12 +101,12 @@ shortsword     dam 5, abs 7, finesse 4,
 
 broadsword     dam 7, abs 10, finesse 4,
 1h             str 7, max dam+2
-               poke: mod-1, dam-1, pen+1, max pen+1
+               poke: mod-1, dam-1, pen+1, max pen+2
                swing: slow 1, mod-1, dam+2, todefend+2
 
 longsword      dam 9, abs 13, finesse 4,
 1h             str 9, max dam+3
-               poke: mod-1, dam-1, pen+1, max pen+1
+               poke: mod-1, dam-1, pen+1, max pen+3
                swing: slow 1, mod-1, dam+3, todefend+2
 
 -
@@ -117,42 +120,48 @@ Rapiers can be used with the rapier or sword skills.
 Rapiers and knives can be used with the other rapier or knife skill at mod-1.
 
 Knives and daggers have flash attack maneuver, costing 20xp to train.
+Knives and daggers have murder attack maneuver, costing 10 + scf 1.0 xp to train.
 
 Rapiers have the deflect parry maneuvers at mod-1 instead of mod-3.
 
 knife          dam 1, abs 1, parry-2, finesse 4
-1h             str 1, max pen+1, stam(1,0,0)
+1h             str 1, max pen+2, stam(1,0,0)
                dex 3: fast 2ap, stam(1,0)
+               poke: mod-1 dam-0 pen+1  (dam-1 if final damage above 0)
                flash: str 3 dex 6: vfast 1ap, mod-3, stam(1)
+               murder: 4ap, mod-3-abs, dam+murder, penetrating, stam(1)
 
 dagger         dam 2, abs 2, parry-2, finesse 4
-1h             str 2, max pen+1, stam(1,0,0)
+1h             str 2, max pen+3, stam(1,0,0)
                dex 4: fast 2ap, stam(1,0)
-               flash: str 4 dex 8: vfast 1ap, mod-3, stam(1)
                poke: mod-1 dam-1 pen+1
+               flash: str 4 dex 8: vfast 1ap, mod-3, stam(1)
+               murder: 4ap, mod-3-abs, dam+murder, penetrating, stam(1)
 
 large dagger   dam 3, abs 3, parry-2, finesse 4
-1h             str 3, max pen+1, stam(1,0,0)
+1h             str 3, max pen+4, stam(1,0,0)
                dex 5: fast 2ap, stam(1,0)
-               flash: str 5 dex 10: vfast 1ap, mod-3, stam(1)
                poke: mod-1 dam-1 pen+1
+               flash: str 5 dex 10: vfast 1ap, mod-3, stam(1)
+               murder: 4ap, mod-3-abs, dam+murder, penetrating, stam(1)
 
 small rapier   dam 2, abs 2, parry-1, todefend-2, finesse 9
 1h             str 2, no str bonus, stam(1,0)
                dex 2: fast 2ap
                poke: mod-1 dam-1 pen+1
-               
+               slash: +1ap, mod-1, dam+1
 
 plain rapier   dam 3, abs 3, parry-1, todefend-2, finesse 9
 1h             str 4, no str bonus, stam(1,0)
                dex 4: fast 2ap
                poke: mod-1 dam-1 pen+1
-               
+               slash: +1ap, mod-1, dam+1
 
 large rapier   dam 4, abs 4, parry-1, todefend-2, finesse 9
 1h             str 6, no str bonus, stam(1,0)
                dex 6: fast 2ap
                poke: mod-1 dam-1 pen+1
+               slash: +1ap, mod-1, dam+1
 
 -
 

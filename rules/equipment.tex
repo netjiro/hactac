@@ -824,8 +824,9 @@ Quick shot is 1r/9ap at mod-3. For every ap reduced below quick shot the
 archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8, 
 since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
 An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
-Rapid fire from bows include reload from accessible quiver, arrows stuck 
-in the ground, or similar.
+Rapid fire from bows include reload from accessible quiver as normal, 
+arrows stuck in the ground, or similar ammo arrangement. It does not need 
+quick draw
 
 small bow         dam 3,
                   range 12
@@ -861,13 +862,13 @@ sharp arrows      pen+1
 fire arrows       mod-2 dam-1 range-25%
                   oil splash dam 3/r for 5r
                   light source as fire, burns 5r
-                  light 1a with fire source
+                  ignite 1a with fire source
 torch arrows      mod-2 dam-2 range-25%
                   light source as torch, burns 10r
-                  light 1a with fire source
+                  ignite 1a with fire source
 candle arrows     mod-2 dam-2 range-25%
                   light source as candle, burns 20r
-                  light 1a with fire source
+                  ignite 1a with fire source
 Most regular arrows can be recovered and reused of they strike a soft target.
 Specialty arrows often cannot be reused.
 Special bows sometimes require special arrows.
@@ -947,7 +948,7 @@ Ballistas take very long to reload and require at least two people.
 Aiming and firing the ballista is still a cumbersome thing to do.
 
 Firing loaded weapon:
-normal  3r  mod=0
+normal  3r mod=0
 aimed   4r mod+1
 quick   2r mod-3
 snap    1r mod-6

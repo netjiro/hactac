@@ -15,7 +15,7 @@
 \chapter*{Skills}
 \chaptermark{skills}
 
-Skills give the character new options and actions above the base set. Some skills tweak or change how rules work or apply in different situations, sometimes drastically. E.g: a character without the skill swim cannot cross water on his own and without climb he cannot get over a wall. To be able to attack with a sword or parry with a shield he requires the skills sword and shield. A hero with the skill leader can give bonuses to his followers and a scary dude can get opponents to run away. Bring a rabbit's foot hero along to have a chance of rerolling if you don't like the outcome of the dice.
+Skills give the character new options and actions beyond the base set. Some skills tweak or change how rules work or apply in different situations, sometimes drastically. E.g: a Hero without the swim skill cannot cross wide deep water on his own and without climb he cannot get over a significant wall. To be able to attack with a sword or parry with a shield he requires the skills sword and shield. A hero with the leader skill can give bonuses to his followers and a scary dude can get opponents to run away. Bring a rabbit's foot hero along to have a chance of rerolling if you don't like the outcome of the dice.
 
 \
 
@@ -26,7 +26,7 @@ We'll be using \emph{skill} as the general term for all skills, maneuvers, spell
 Most skills carry a \emph{skill cost factor} (scf), which determines how much the skill costs to train to a certain level. The cost is always rounded down to the nearest whole experience point.\\
 \\
 The cost of training a skill to a certain level is generally $scf \cdot lvl^2$. \\
-E.g: training axe to 4 is \verb|(0.9 * 4*4) = 14.4| \ca 14xp. \\
+E.g: training axe to 4 is \verb|(0.9 * 4*4) = 14.4xp| which is \ca 14xp. \\
 Later on after a couple of adventures the Hero wants to increase his axe skill:\\
 E.g: increasing axe from 4 to 6 is \verb|(0.9 * (6*6 - 4*4)) = 18xp|. \\
 \\
@@ -40,7 +40,7 @@ Low power abilities cost 20xp. \\
 High power abilities cost 30xp. \\
 Massive abilities cost 50xp or more.
 
-Costs written as "cost 20xp" means that the total cost up to that level of the skill is 20xp. If it's written as "cost +20xp" then the cost to increase the skill from the previous level to to the target level is 20xp. See the tank skill for an example of both.
+Costs written as "cost 20xp" means that the total cost up to that level of the skill is 20xp. When the cost is written as "cost +20xp" the cost to increase the skill from the previous level to to the target level is 20xp. See the \hyperref[skill:tank]{tank skill} for an example of both.
 
 \
 
@@ -50,16 +50,20 @@ E.g: magic, power casting, and spells.
 
 \
 
-Some skills are difficult to come by. They might only be trainable from a specific master, or learned from a musty old book somewhere, or gained by eating or drinking something strange which was bought or found and then paying the xp. Exotic skills and abilities can therefore be difficult to come by, while basic skills can be learned almost anywhere. Figure out what you want for your group and world setting.
+Some skills are difficult to come by. They might only be trainable from a specific master, or learned from a musty old book somewhere, or gained by eating or drinking something strange. Exotic skills and abilities can therefore be difficult to come by, while basic skills can be learned almost anywhere. Figure out what you want for your group and world setting.
+Even if a special thingamajing or old hermit is required the Hero must still, usually, pay the XP as well.
 
-Optional: I've used a simple rule of thumb: \\
-Regular skills and maneuvers can be bought and trained from scratch without training and prior knowledge. \\
+I've used a simple rule of thumb: \\
+Regular skills and maneuvers can be bought by XP and trained from scratch without a teacher and prior knowledge. \\
 Special Abilities require something out of the ordinary and cannot be trained from scratch without some extra step like a strange brew requiring an exotic component, rare book, training from the Old Hermit somewhere, magic mushrooms, radioactive spiders, or whatnot.\\
 Magic spells cannot be bought and trained from scratch without a teacher, spellbook, captured and tortured enemy wizard, or similar.
 
 This has generated interesting side quest, fun episodes, and slows down the rapid munchkin optimisations possible with the most potent abilities. Also provides fun tactical objectives where the Heroes choose to try to capture enemy spellcasters alive if they cast interesting unknown spells.
 
-%\
+
+
+
+%\  childhood professions 
 %
 % NOPE: childhoods and professions are removed for now.
 %       left in file: childhood-and-profession.tex
@@ -108,7 +112,7 @@ crossbow       scf 0.7
 \end{samepage}
 
 \textbf{Sword} skill covers all blade weapons including knives, rapiers, etc. \\
-\textbf{Knife} is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons with strength requirements $\leq$3 are the primary use, with no mods. Blade weapons with str 4 have mod-1, while str 5 and 6 have mod-2. All heavier have mod-3. Thus sword skill can be trained from knife-3.\\
+\textbf{Knife} is a limited variant of the sword skill aimed at smaller lighter blades. Blade weapons with strength requirements $\leq$3 are the primary use, with no mods. Blade weapons with str 4 have mod-1, while str 5 and 6 have mod-2. All heavier have mod-3. The sword skill can be trained from knife-3 if a Hero wants to convert later.\\
 \textbf{Rapier} is specialised at fancy rapier play. It's mod-3 to knife and sword.
 
 Some weapons are similar:\\
@@ -126,17 +130,17 @@ Note: brawl and martial arts do not have similarity modifiers with any melee wea
 
 % OLD - NOTE: important that no melee weapon skills cost <0.6 or >1.0 since that is very close to break even where buying lvl 12 in club (scf 0.6) would be cheaper than buying lvl 9 in sword (scf 1.0)...  Same goes for the relative cost of bow and crossbow.
 
-Starting to train a new weapon skill while knowing a similar one should start from the shared modified base. Make a note of it on the character sheet history since it can be important to know later on as the characters progress.
+Starting to train a new weapon skill while knowing a similar one should start from the shared modified base. Make a note of it on the character sheet history since it can be important to know later on as the character progresses.
 
 Melee weapons gives the user the ability to make attack and parry actions, while ranged weapons only allows for attack actions, and cannot be used for parrying.
 
-Most weapons have one or more optional attack/defend action alternatives. Sometimes they require further xp expenditures to learn. Most cost 5xp and simply give minor alteration to the weapon stats, e.g. dam-1 pen+1 mod-1.
+Most weapons have optional attack/defend action alternatives. Sometimes they require further xp expenditures to learn. Most cost 5xp and simply give minor alteration to the weapon stats, e.g. dam-1 pen+1 mod-1.
 
 
 \skill{Skill cost special "speciality weapon X":} allows to use speciality weapons without the mod-1 that they otherwise impose. Each speciality weapon requires it's own speciality skill. They usually cost 5xp.
 
 
-\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat and ranged weapons as well as melee weapons.
+\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat, melee and ranged weapons.
 
 
 \skill{Skill scf 0.5 "brawl":} is brute unarmed combat. A character generally has two fists and one kick to use. This can be used with the skills double and triple. Some perhaps have claw and bite attacks.\\
@@ -145,24 +149,24 @@ Kicks do 2+str/3 damage
 
 Some unarmed attacks have mods to the brawl skill. E.g: scratch (mod+2), where Gomar the Goblin has brawl 5: fist attack 5, scratch attack 7.
 
-Unarmed parry with hands/arms/legs are parry-6 against weapons, or parry-3 if opponent is unarmed. Unarmed parry is always a type of deflect but without the additional deflect mod-3. All parried weapon hits will still do 50\% of the rolled damage, and all parried unarmed hits will still do 33\% of the rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
+Unarmed parry with hands/arms/legs are parry-6 against weapon attacks, or parry-3 against unarmed attacks. Unarmed parry is always a type of deflect but without the additional deflect mod-3. All parried weapon hits will still do 50\% of the rolled damage, and all parried unarmed hits will still do 33\% of the rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
 
-Brawling also includes grab, hold, break loose actions. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both participants if the target is resisting.     %previous wrestle
-Each arm/tentacle/other used in the grab/hold/break actions allows the character to use 50\% of their str or dex unless the appendage has specific str/dex values specified.
-If the target cannot pay the 3ap cost of the resistance roll action the grabbing/breaking character wins success=0 by default.
+Brawling also includes grab, hold, break loose actions. They are resistance rolls where both participant uses brawl + the lowest of their str and dex, and costs 3ap for both participants.     %previous wrestle
+Each arm / tentacle / other used in the grab / hold / break actions allows the character to use 50\% of their str or dex unless the appendage has specific str/dex values specified.
+If the target cannot pay the 3ap cost of the resistance roll action the initiating character adds mod+9 to his side of the resistance roll.
 
-Holding a target doesn't cost actions until he tries to break free. But it means the holding Hero can't move, and a few arms are occupied holding. A held character cannot move either, and must break free first. All physical actions other than break free suffers mod-3 when held.
+Holding a target doesn't cost actions until it tries to break free. But it means the holding Hero can't move, and some arms / legs / tentacles are probably occupied holding the grip. A held character cannot move either, and must break free first. All physical actions other than break free suffers mod-3 when held.
 When held, a target can only make one break free attempt per round even if he has more ap available. If he is re-grabbed in the same round he can make another break free attempt in the same round as long as he has enough ap.
 
-Brawl skill allows for use of knives, daggers, and clubs at mod-3, capped to 9.
+Brawl skill allows for use of knives, daggers, and clubs at mod-3 capped to 9, and throw mod-4 capped to 6.
 
 
 \skill{Skill scf 1.3 "martial arts":} allows for more effective unarmed combat. A character generally has two fists and two kicks to use. This can be combined with the skills "quadruple", "triple", "double". \\
-Fists do (str+dex)/3 damage, toparry-3, toavoid-3, fast 1. \\
+Fists do (str+dex)/3 damage, toparry-3, toavoid-3, fast 2ap. \\
 Kicks do 2+(str+dex)/3 damage.\\
 Fist attacks cost stamina for the first attack followed by two free.\\
 Kick attacks have every second attack at no stamina cost. \\
-Martial arts parrying is parry-3 against weapons, or parry-0 against unarmed attacks. The parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3.
+Martial arts parrying is parry-3 against weapons, or parry-0 against unarmed attacks. The parry is always deflect but without the extra deflect mod-3. Parried weapon attacks (not unarmed attacks) will still do 33\% of rolled damage. A success+3 will reduce the end damage with 1, a success+6 will reduce it by 2, and a success+9 will reduce it by 3. Parried unarmed attacks do no damage.
 
 \skill{Skill scf 0.5 "lightning strike" (martial arts upgrade):} allows for very fast fist and kick attacks but at the cost of a -25\% dam penalty. Fist attacks are fast 2 (1ap) instead of fast 1 (2ap), and kick attacks are fast 1 (2ap) instead of normal (3ap).
 
@@ -371,7 +375,7 @@ E.g: Samuel Strong, has a sword with str 5 requirement, and he has str 7. With h
 
 \skill{Skill (cost ---) "rush":} is not quite a tackle. Just forces targets to move out of the way or get pushed/dragged along. The attacker simply moves through the targets. The rush is itself not an action and costs no ap. 
 
-This skill is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + rush, the rushing monster must have at least 10 points higher heaviness than any target it rushes. Otherwise it's a tackle attack instead.
+This skill is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + rush, the rushing monster must have at least twice the heaviness of any target it rushes. Otherwise it's a tackle attack.
 
 Normally this does dam (movement speed)/3 for every sq pushed/dragged along after all avoidance mp are spent. E.g: Rushing Monster has declared W8 giving speed/3 = 2 dam/sq. Pushed Patrik cannot move out of the way and is pushed along 4sq. Deft Dave is only pushed 3sq. PP can take max damage 8 and RM rolls damage 1d8=3 for PP. DD has max damage 6 and RM rolls 1d6=5 for DD. Both PP and DD are now off balance and prone, and RM selects new placement for them on the board, in accordance with the distance pushed/dragged.
 
@@ -384,16 +388,16 @@ E.g: a colossal (6x6) Purple Steam Gobbler rushes through a group of heroes who 
 
 \skill{Skill (cost ---) "trample":} is a variation of rush. Instead of pushing the target along and out of the way, it's brought prone and stomped on when the trampler is passing.
 
-Like rush, trample is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + trample, the rushing monster must have at least 10 points higher heaviness than any target it tramples. Otherwise it's a tackle attack instead.
+Like rush, trample is only available for really large/strong/heavy monsters, usually at least "large" (2x2) and strength above 20. If calculating "heaviness" as size (squares)*5 + strength + trample, the rushing monster must have at least twice the heaviness of any target it tramples. Otherwise it's just a tackle attack.
 
-Trample has the same avoidance behaviour as rush, but the damage is determined by the monster's trample damage instead of the movement speed.
+Trample has the same avoidance behaviour as rush, but the damage is determined by the monster's specified trample damage instead of the movement speed.
 
 Any target who cannot manage to get out of the way is automatically prone and off balance, stationary in the square where it got trampled.
 
 
-\skill{Skill scf 0.5 "backstab":} is used to do increased max damage with a melee weapon when attacking unaware opponents. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll. The attacker is probably "behind" the target (outside field of vision), unless he is exceptionally good at sneaking. A backstab attempt costs +1ap extra above the cost of the normal attack.
+\skill{Skill scf 0.5 "backstab":} is used to do increased max damage with a melee weapon when attacking unaware opponents. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll. The attacker is probably "behind" the target (outside field of vision), unless he is exceptionally good at sneaking. A backstab attempt costs +1ap and +1 stamina extra above the cost of the normal attack.
 
-First roll for the backstab. If the backstab fails, the action reverts to a normal attack, still costing the extra +1ap but giving no bonus damage.\\
+First roll for the backstab. If the backstab fails, the action reverts to a normal attack, still costing the extra ap and stamina but giving no bonus damage.\\
 A failed backstab roll has no effect, just a normal attack.\\
 A successful +0 backstab attack gives dam+3 pen+1 \\
 A good +3 backstab attack gives dam+6 pen+2 \\
@@ -401,7 +405,7 @@ A very good +6 backstab attack gives dam+9 pen+3 \\
 A perfect +9 backstab attack gives dam+12 pen+4 \\
 And so on...
 
-The final damage done by the backstab and weapon attack is based on the success of the weapon attack roll. Add the backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total max damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen[2].
+The final damage done by the backstab and weapon attack is based on the success of the weapon attack roll. Add the backstab bonus damage to the weapon damage and resolve from there like a normal attack. E.g: Backstab with a shortsword, a backstab roll success+4 gives dam+6 pen+2, added to the regular shortsword weapon damage of 5 gives a total max damage 10 penetrating 2. Assume the attacker has consistent 2 and rolled a weapon attack success+5 after the backstab success+4, then the final damage will be rolled dam[4,11] pen2.
 
 Backstab attacks gain a bonus on angling/flanking positioning. \\
 Attacking at 90\degrees from target facing is mod+1, \\
@@ -420,7 +424,7 @@ A very slow 2 5ap weapon or slower are mod-3.
 
 \
 
-An unaware target can still be considered unaware or surprised enough to allow a backstab attack even if it detects the backstabber just before the attack. See the \hyperref[sec:surprise]{surprise} and \hyperref[sec:unaware]{unaware} rules on page~\pageref{surprise}.
+An unaware target can still be considered unaware or surprised enough to allow a backstab attack even if it detects the backstabber just before the attack. See the \hyperref[sec:surprise]{surprise} and \hyperref[sec:unaware]{unaware} rules on page~\pageref{sec:surprise}.
 An unaware target cannot take a defence action against a backstab. A surprised target still counts as unaware enough to allow a backstab, but can take a surprise modified defence reaction action and movement to for example parry or avoid a backstab attack.
 
 %\todo Perhaps change so that backstab can be done with a ranged weapon, at time cost +1r, mod-3.
@@ -429,9 +433,9 @@ An unaware target cannot take a defence action against a backstab. A surprised t
 %todo remove note later on when stabilised
 
 
-\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike against the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar. If the ally has higher initiative he can first activate the sidestabber with Oy!, or similar, then they coordinate the attack. The sidestabber can choose to roll and resolve the sidestab attack at the same time as the ally's attack, giving the target the choice of which attack to parry first, or after the ally's attack and target's reaction, risking that the target moves away during his reaction to the ally's attack before the sidestab attack can be made.
+\skill{Skill scf 1.0 "sidestab":} allow the attacker to time his strike against the target to coincide with an ally's attack, increasing damage. A sidestab costs +1ap and +1 stamina extra above the normal attack. The sidestabbing attacker must have higher initiative than his other attacking ally and the target, and be waiting on the ally or activating the ally with an action, Oy!, or similar. If the ally has higher initiative he can first activate the sidestabber with Oy!, or similar, then they coordinate the attack. The sidestabber can choose to roll and resolve the sidestab attack at the same time as the ally's attack, giving the target the choice of which attack to parry first, or after the ally's attack and target's reaction, risking that the target moves away during his reaction to the ally's attack before the sidestab attack can be made. Intended sidestab attack must be communicated to the target player before he makes the choice on what to parry.
 
-Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the +1ap. The extra damage from sidestab is the same as from backstab. Resolve final damage just like with backstab. Sidestab gets the same angling/flanking positional bonuses as backstab, and sidestab takes the same mods as backstab for larger and slower weapons.
+Just like with backstab, a failed sidestab roll has no extra effect and reverts to a normal attack, still costing the extra ap and stamina. The extra damage from sidestab is the same as from backstab. Resolve final damage just like with backstab. Sidestab gets the same angling/flanking positional bonuses as backstab, and sidestab takes the same mods as backstab for larger and slower weapons.
 
 Note: a sidestab is not automatically a synchronised attack. A target can still parry a sidestab just like a normal attack. It stacks with synchronise just like a normal attack.
 
@@ -444,11 +448,12 @@ Note: a sidestab is not automatically a synchronised attack. A target can still 
 
 
 \skill{Skill cost 1.0 "make it count":} Can increase damage of a hit.
-Declare to make the next attack count, and how, before rolling the attack. A declared make it count attack must be made regardless of the outcome of the make it count roll. A successful roll will add the success diff as damage to the attack. The make it count damage is added on top of the rolled attack damage. 
+Declare to make the next attack count, and how, before rolling the attack. A declared make it count attack must be made regardless of the outcome of the make it count roll. A successful roll will add the success diff as damage to the weapon damage, before the final damage roll. The make it count roll is modified by ams as usual.
 
-A make it count attempt costs 1 stamina above the usual attack. The Hero can choose to either spend 1 ap extra \emph{or} risk getting a more difficult attack. This must be decided before rolling. Without spending extra ap, a failed make it count roll will pass the fail diff as negative mods to the attack roll. Spending 1 ap extra removes that possible negative mod.
+A make it count attempt costs 1 stamina above the usual attack. The Hero can choose to either spend +1 ap extra \emph{or} risk getting a more difficult attack. This must be decided before rolling. Without spending extra ap, a failed make it count roll will pass the fail diff as negative mods to the attack roll. Spending the +1 ap extra before the roll removes that possible negative mod.
 
 
+\phantomsection \label{skill:tank}
 \skill{Skill cost special "tank":} Can reduce some penalties of heavy armour, while keeping the good stuff. Penalties and requirements of the armour is reduced a bit depending of the level of tank, e.g: mods to dexterity, encumbrance, movement, vision, strength requirements, time to strap on/take off, etc.\\
 lvl 1, cost  5: leather has the modifications of a cozy nightgown\\
 lvl 2, cost 10: chain mail has the mods of leather \\
@@ -1268,7 +1273,7 @@ E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's 
 
 
 \skill{Maneuver (cost 15) "intercept":}
-Triggers the right to react when someone not engaged in melee is moving into melee range (incl reach if relevant). The Hero can choose where in the movement to intercept if more than one movement squares are within melee range.
+Triggers the right to react when an opponent not already engaged in melee is moving into the Hero's melee range (incl reach if relevant). The Hero can choose where in the movement to intercept if more than one movement squares are within melee range. The Hero cannot move during an intercept reaction activation.
 
 If an attacking opponent without intercept moves into melee range to attack, the intercepting Hero can strike first. But if both the attacker and the Hero have intercept the initiative decides who strikes first. But the Hero can still force the attack to come from an earlier square in the movement even if the attacking opponent strikes first.
 
@@ -1644,7 +1649,7 @@ Attack maneuvers can be combined with fancy as long as the weapon has enough fin
 \skill{Maneuver (cost 5) "poke":} allows for a poke attack which is available with some weapons. It usually has a mod-1 dam-1 pen+1 effect, but some weapons have different effects.
 
 
-\skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow 1 mod-1 dam+2 toavoid+2 effect, but some weapons have differ.
+\skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow 1 mod-1 dam+2 toavoid+2 effect, but some weapons have different effects.
 
 
 \skill{Maneuver (cost 10) "shield bash":} attack the opponent with your shield. This attack maneuver takes the shield parry mod as a negative mod, costs 1 stamina more than the normal shield parry action, and does (strength + shield mod)/3 damage. E.g: bashing with a normal shield wielded by a strength 8 character with shield 9 is bash mod-3, 1 stamina, damage (8+3)/3 = 3, with a chance to hit at 6. While the same character with a large shield would have 4 damage and to hit at 5.
@@ -1701,12 +1706,15 @@ Roll attack success and damage separately for the two weapons.
 Roll attack success and damage separately for the two weapons.
 
 
-\skill{Maneuver (cost 10) "dual parry":} requires two weapons and gives a mod+2 to the parry at the cost of 1 stamina extra and 1ap extra. As baseline, choose the ap cost and parry chance of one of the two weapons. Then add half of the other weapon abs when calculating weapon breakage against incoming damage.
+\skill{Maneuver (cost 10) "dual parry":} requires two weapons and gives a mod+2 to the parry at the cost of 1 stamina extra and 1ap extra. As baseline, choose the ap cost and parry chance of one of the two weapons. Then add half of the other weapon's abs when calculating weapon breakage against incoming damage.
 
 Dual parry cannot be used with shields.
 
 
-\skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-1, toavoid+1, 150\% dam. Takes one extra stamina.
+\skill{Maneuver (cost 10) "heavy strike":} costs +2ap for normal or slower weapons and +1ap for fast or vfast weapons, and is mod-1, toavoid+1, +33\% dam. Takes one extra stamina.
+
+
+\skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-1, toavoid+2, +50\% dam. Takes one extra stamina.
 
 
 \skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} triggers right to react and allows the Hero to take an extra free movement step and make a followup attack against the target. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can continue to move further away. The target can still yield and continue to move as a reaction to the followup attack.
@@ -2217,10 +2225,10 @@ cost +10xp: +5 extra resistance, can be purchased any mount of times.
 \skill{Ability cost 100xp ccf 1.0 "Ünder":} The True Hero is so lucky that a roll of 1 is an automatic success=0 instead of a fail if he had 0 or lower chance of success.
 
 
-\skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Buy twice for two extra arms. And once more for a tentacle? Perhaps you'd prefer a third leg, or some other extra appendage? People will probably look at you really strangely from now on...
+\skill{Ability cost 50xp ccf 1.3 "Extra Extremity":} The character grows another arm. Can be bought multiple times. A fourth arm? How about a tentacle? Perhaps you'd prefer a third leg, or some other extra appendage? People will probably look at you really strangely from now on...
 
 
-\skill{Ability cost 20xp + scf 0.5 ccf 1.0 "Switcheroo":} The character can change target of an attack after the attack and damage rolls have been made, but before the target spends his reaction action. Both the declared target and the target  switched to have the right to react to the attack.
+\skill{Ability cost 20xp + scf 0.5 ccf 1.0 "Switcheroo":} The character can change target of an attack after the attack and damage rolls have been made, but before the target spends his reaction action. Both the originally declared target and the switched to target have the right to react to the attack.
 
 The new target cannot be further away from the declared target than the level of switcheroo. The new target cannot be harder to hit than the original target.
 
