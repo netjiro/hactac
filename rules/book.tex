@@ -209,20 +209,44 @@
 % local defines
 
 
+% block listing, verbatim ------------------------------------------------------
+
 % remove forced implicit vertical whitespace before and after verbatim environment
 \makeatletter
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \makeatother
 
+% old pattern for block listing:
+%\goodbreak
+%\raggedbottom
+%\small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{1.5\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{2\baselineskip} \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize
+%\flushbottom
+%\goodbreak
+
+% simpler with blocklistgap:
+\newcommand{\blocklistgap}{\goodbreak \vspace{\baselineskip}}
+%\raggedbottom     % looks in raggedbottom flow, no stretching baselineskip
+%\goodbreak \small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \blocklistgap \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize \goodbreak
+%\flusbottom       % perhaps restore flushbottom at some point
+
+%-------------------------------------------------------------------------------
+
 
 % need a nice easily visible TODO marker
-\newcommand{\todo}{\textbf{TODO:}~}
-\newcommand{\TODO}{\LARGE\textbf{TODO:}\normalsize~}
+\newcommand{\todo}{\noindent\textbf{TODO:}~}
+\newcommand{\TODO}{\noindent\LARGE\textbf{TODO:}\normalsize~}
 
 
 % allow to force indentation of first line in section
 % \indent is not working, so workaround \hspace{\parindent} works
 \newcommand{\forceindent}{\hspace{\parindent}}
+%\noindent  is a standard command
 
 
 % couldn't find a degrees marker circle, so here's a quick'n'ugly version
@@ -400,6 +424,23 @@
 {\end{ttfamily}}%
 
 
+% temporary separation line
+%\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
+%\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt} =xtl-  0.25
+%\rule[0.8ex]{0.5\textwidth}{0.5pt} =xtl-  0.8ex
+\newcommand{\tmpsepline}{
+    
+    \
+    
+    \rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}
+    
+    \
+    
+}
+
+
+
+
 
 
 
@@ -515,10 +556,10 @@ If you want to use it in any other fashion please contact the author.
 
 \
 
-\noindent
-All images are temporary placeholders, \\
-most are downloaded and unattributed.\\
-They need to be replaced with licensed art.
+%\noindent
+%All images are temporary placeholders, \\
+%most are downloaded and unattributed.\\
+%They need to be replaced with licensed art.
 
 \normalsize
 
@@ -527,57 +568,54 @@ They need to be replaced with licensed art.
 
 
 %-------------------------------------------------------------------------------
-% introduction and contribution notes on one sheet
-%-------------------------------------------------
-\cleardoublepage                   % force next printed page a right hand page
+% introduction and contribution notes on one sheet, front & back %---------------------------------------------------------------
+\cleardoublepage                   % force coming text on a right hand page
 \thispagestyle{empty}
 \raggedbottom
-%\pagestyle{empty}
 
 \chaptermark{hello}
 \chapter*{hello :)}
 %\addcontentsline{toc}{section}{introduction}
 
 The \textbf{Gold and Glory} rules and world setting have evolved sporadically since early 2008. I was working on a postdoc contract in Utrecht and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. 
-For a while it had been apparent for most of us that we needed new arrangements to keep gaming at a reasonable frequency. Family and work obligations made it difficult to schedule our traditional full day rpg campaign sessions when people had small kids and lived spread out across different countries.
+For a while it had been apparent that we needed new arrangements to keep gaming at a reasonable frequency. Family and work obligations made it difficult to schedule our traditional full day rpg campaign sessions when people had small kids and lived spread out across different countries.
 
-So that's why I wrote this stuff. Easy to schedule, quick online gaming, fun light hearted rpg adventures, and deep interesting tactical fights. Designed primarily to run with voice chat, virtual tabletop, and perhaps shared write and sketch space, it has also turned out to work very well, in basic simple form, for playing quick tabletop fights and adventures, even for young kids. Much of the tactical depth that make the fights interesting is emergent from the very simplest basic rules.
+So I wrote this stuff. Easy to schedule, quick online gaming, fun light hearted rpg adventures, and deep interesting tactical fights. Designed primarily to run with voice chat, virtual tabletop, and perhaps shared write and sketch space. It has also turned out to work very well, simplified, for playing quick tabletop fights and adventures, even with young kids. Much of the tactical depth that makes the fights interesting is emergent from the simplest basic rules.
 It is not meant to compete with the real gather-together-and-eat-homebrew-guck pen and paper role playing experience. It's for short, fun, and easy to schedule gaming.
 
-We play this for a couple of hours in the evenings, after people have put their kids to sleep. It quickly became a once a week fixture. E.g: Wed 2000--2200. Simple.
+We play this for a couple of hours in the evenings, after people have put their kids to sleep. It quickly became a once-a-week fixture. E.g: Wed 2000--2200. Simple.
 
 \
 
-Back in the days we briefly tried a Warhammer Quest "campaign". It was fun, but quickly died due to the horribly poor balance. We played some 1st ed Descent, but it was slow and required gathering for a full day. The best of them is the old Space Hulk. It's fast and with the right opponent it can be very tactically challenging and interesting. That's what I want to capture, but with campaignability.
+Back in the days we briefly tried a Warhammer Quest "campaign". It was fun, but quickly died due to the poor design and horrible balance. We played some 1st ed Descent, but it was slow and required gathering for a full day. The best of them is the old Space Hulk. It's fast and with the right opponent it can be very tactically challenging and interesting. That's what I want to capture, but with campaign play.
 
-Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a comedy campaign when we couldn't gather the full crowd for my real rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world.
+%Many years ago, in my pre-teens, I experimented with writing a very simple rule set and world setting, to use for a comedy campaign when we couldn't gather the full crowd for my real rpg campaign. That turned out quite well. It was fun despite the extreme simplicity of both the rules and the world.
 
 \
 
-I've split the rules into the very basic fundamentals, and the rest. Just pick and choose for a good fit for your group. Find your trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set requires noggin engagement, or virtual tabletop scripting.
+I've split the rules into the basic fundamentals, and the rest. Just pick and choose for a good fit for your group. Find your trade off between speed and complexity. The basic stuff is very fast and straight forward, while the full set requires noggin engagement, or virtual tabletop scripting.
 
-Baseline is simple enough for young kids. Full complexity requires quite a bit more since I have tuned it for my regular players who are mostly engineers and scientists.
+Baseline is simple enough for clever young kids. Full complexity requires quite a bit more since I have tuned it for my regular players who are mostly engineers and scientists.
 
-Fast gaming is crucial for us since we only have a couple of hours each session. The battles must be tactically interesting and the role playing fun. Coordination, timing, positioning, complementary skills and battle maneuvers are very important. Just charging in for dps dice rally doesn't work. This makes fights interesting. The role playing aspects are written for comedy. Fun, cliché, and quite ridiculous.
-
-
+Fast gaming is crucial for us since we only have a couple of hours each session. The battles must be tactically interesting and the role playing fun. Coordination, timing, positioning, complementary skills and battle maneuvers are very important. Just charging in for dps dice rally doesn't work. This makes fights interesting. The role playing aspects are written for comedy. Fun, cliché, ridiculous.
 
 
-%\newpage
+
+%-------------------------------------------------------------------------------
 \clearpage
 \thispagestyle{empty}
 \section*{note: versions}
 %------------------------
 This is my personal notes package, not a draft for publication. There are still lots of stuff in progress of being updated, with inconsistencies, notes, TODOs etc.
-I'm updating whenever I have the time and inclination. Use a good diff tool to find what's changed, removed or added. Easiest is of course to go directly to the \LaTeX{} source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested 
+I'm updating whenever I have the time and inclination. Use a good diff tool to find what has changed, been removed or added. Easiest is of course to go directly to the \LaTeX{} source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested 
 \vvsmall(late 2017)\normalsize~
 \url{https://draftable.com/compare} 
-and find it ... \emph{acceptable} ... for a simple 2-way diff. %, though lacking block move, 3-way, etc.
+and find it ... \emph{passable} ... for a simple 2-way diff, but lacking block move, 3-way, etc.
 
 
 \section*{note: shitty writing}
 %------------------------------
-Most errors in grammar, spelling, style, etc are probably actual errors. However, I will somewhat consistently break some proper style rules. Always feel free to point out or fix my errors.
+Most errors in grammar, spelling, style, etc are probably actual errors. However, I will somewhat consistently break some proper style rules, by intent. Always feel free to point out or fix my errors.
 
 
 \section*{note: comments and contributions}
@@ -585,11 +623,11 @@ Most errors in grammar, spelling, style, etc are probably actual errors. However
 Anything you want to change or add? Contact me! My handle is \emph{netjiro} on github and gmail. Or even better: go to github \url{https://github.com/netjiro/hactac} and check out the source. Make your changes and send me a pull request. Even small stuff like spelling, grammar, clarifications, etc are appreciated. If enough people have interest in it I will \emph{try} to dig out some time to improve the quality to something closer to an early draft for publication review.
 
 
-\section*{note: pronouns}
-%------------------------
-In Swedish we have the newfangled "hen" which essentially indicates someone where the gender is irrelevant in the context. Since the closest I can find in English is s/he or they, which I don't like, I'll keep using "he, him, his". Just read it as whatever offends you the least.
-
-%And just to be unnecessarily clear on this. For me, \emph{personally}: in my mind a "dude" is also of irrelevant gender, and I generally refer to my fun female friends as "dudes"... But I don't do that for boring women ... so I guess I'm not that well reformed after all.
+%\section*{note: pronouns}
+%%------------------------
+%In Swedish we have "hen" which essentially indicates someone where the gender is irrelevant in the context. In English is s/he or they, which I don't like. Here I use "he, him, his". Just read it as whatever offends you the least, or run substitution, easy peasy.
+%
+%%And just to be unnecessarily clear on this. For me, \emph{personally}: in my mind a "dude" is also of irrelevant gender, man/woman/other. But a dude can't be boring.
 
 
 

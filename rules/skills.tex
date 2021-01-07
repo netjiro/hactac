@@ -140,7 +140,7 @@ Most weapons have optional attack/defend action alternatives. Sometimes they req
 \skill{Skill cost special "speciality weapon X":} allows to use speciality weapons without the mod-1 that they otherwise impose. Each speciality weapon requires it's own speciality skill. They usually cost 5xp.
 
 
-\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including unarmed combat, melee and ranged weapons.
+\skill{Skill scf 4.0 "weapon master":} is the dude who knows how to handle just about any weapon imaginable, including obscure varieties of unarmed combat.
 
 
 \skill{Skill scf 0.5 "brawl":} is brute unarmed combat. A character generally has two fists and one kick to use. This can be used with the skills double and triple. Some perhaps have claw and bite attacks.\\
@@ -179,7 +179,7 @@ A character cannot have a higher skill level in thunder strike than he has in ma
 
 \skill{Skill scf 0.8 "avoid":} is used to try to avoid the incoming melee attack. The user must of course be aware of the incoming attack. Avoid can be used with the yield maneuver option, for (usually) a mod+3. To avoid is a defence action, just like parrying. \\
 To avoid falling objects and sprung traps, etc, is generally mod-3 to mod-6 and that usually includes a required yield step to get away from the trapped/target square. \\
-To avoid fast missiles such as arrows, the special maneuver missile parry is required, and is generally mod-9.
+To avoid fast missiles such as arrows the special maneuver missile parry is required, which also works with avoid, and is generally mod-9.
 
 
 \skill{Skill scf 0.5 "disengage":} allows for the character to make a safer movement \emph{out} of opponent's weapon reach modifying the (possibly) incoming right to react attacks triggered by the movement if the opponent has \emph{opportunity}. The level of disengage directly modifies the opponent's attack against the disengaging target.
@@ -266,16 +266,46 @@ If RR gets blocked at D$>$E he stops at D. When it's his initiative again he can
 E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attack with a fancy attack mod-4 and rolls a 6, which is a success+1. His target, Unfortunate Urban, now has a mod-4 to parry the incoming attack. Since he has sword 7, he will probably not succeed.
 
 
+\skill{Skill scf 1.0 "mind games":} The clever death dealer can spend time and put intellect to good use finding weak aspects of their opponents' reactions. 
+
+\todo rewrite mind games
+% why spend 1r for one attack, when the opponent can spend a second action to attack the hero who now has 0ap left for defence ?
+
+\tmpsepline
+
+A mind games attack consumes the rest of the Hero's ap for the round, up to a maximum of 9ap. Unless he has declared more than 9ap the Hero is then done for the round. 
+Any action taken that round before the mind games attack gives mod-3 to the mind games roll, above ams, etc, but does not modify the mind games weapon attack roll.
+
+A mind games attack probably happens near the end of the round, and the Hero must not have made any other attacks during the round. Defence actions taken to counter incoming attacks from the target give no mods to the mind games attack, but defence against other opponents, or any other actions, each give mod-3 to the mind games attack.
+
+bla bla
+
+\tmpsepline
+
+Each mind games attack takes 1r. Roll for mind games, if successful the diff goes to modify an int vs int resistance roll against the target. The result of the resistance roll gives the target a negative mod todefend. The mind games mods todefend do not require weapon finesse and stack on top of any fancy attacks or similar mods.
+The attacker still has to make the actual weapon attack roll to conclude the mind games attack. The weapon attack is not modified by mind games mods, only the targets defence actions take todefend mods resulting from the mind games attack.
+
+Each successful mind games attack that damages the opponent gives a cumulative mod+1 to the next mind games attack against that opponent, to a maximum of mod+(mind games)/3. The bonus persists against that target until it changes weapons or armour, or train to improve their weapon skill or intelligence, even across adventures.
+
+The opponent who also know mind games can make a full round defence against incoming mind games attacks. If successful they can add their success diff to the intelligence resistance roll. A successful mind games defence will reduce any cumulative mind games mods for that specific attacker. The mod cannot go negative.
+
+E.g: Sam Slick is a clever bugger. He is fighting Brave Bozo who is very good at his defensive play. SS has mind games 6, int 7, knife 12, fancy attacks 5. BB has int 4. SS sits on ams-1 for the round and makes a mind games attack: $6 -1 -d10$ roll 3 = success+2. SS must now roll for weapon skill for the actual weapon attack as part of mind games. He chooses to make it fancy 3: $11 -3 -1 -d10$ roll 5 = success+2, so the complete mind games attack is successful. BB wants to avoid the incoming attack. SS vs BB int resistance: $(8 +2) - (4) + (5-d10)$ roll 6 = success+5 for SS. 
+BB now has mod-8 to his defence action: mod-5 from mind games and mod-3 from fancy attack.
+Next time SS plays mind games with BB he has mod+1 to the mind games roll.
+
+Note: that the attacker cannot spend ap on other attack maneuvers to stack with mind games since the mind games attack takes a full round, eating all ap. But the attacker can declare multitasking or similar to get extra ap for attack maneuvers. In those cases mind games todefend mods stack with the attack maneuver mods. Also note that fancy attacks require no ap to use and can thus be used together with mind games without digging up extra ap elsewhere.
+
+
 \skill{Skill scf 1.0 "double":} allows for combining two weapon actions into one single action. The user must have two weapons (or shield), one in each hand. He can then make two attacks, two defends, or one of each, in one single action. The skill must be rolled before the combined action and costs one stamina extra. If the roll fails the combined action falls back to one normal action for each weapon, one after the other. A weapon skill roll must still be taken for each weapon, and the stamina for the attacks must be paid as usual.
 
 The double action requires action points equal to the slowest of the actions combined within the double action. E.g: Double with a rapier and a dagger costs 2ap. Double with a broad sword and a heavy shield costs 4ap since the heavy shield is normally slow 1 (4ap).
 
 Double attack actions can be parried like normal actions, with two separate successive parry actions, as long as the defender has two weapons, one for each of the incoming attacks. E.g: if the defender has a shield and a sword, and defends against a double axe attack, he can parry one axe with the shield and one with the sword, spending two actions. If he does not have two weapons to parry with he can only parry against one of the incoming attacks. E.g: a defender with a two handed sword can only parry one of the double attacks.\\
-If the defender succeeds with a double roll before parrying, and has two weapons/shields, he can parry the two attacks with one double action.
+If the defender succeeds with a double roll before parrying, and has two implements, he can parry the two attacks with one double action.
 
 It is possible to parry a double attack with one parry and one avoid action, but then both suffer mod-3.\\
 It is possible to completely avoid a double attack with two avoid actions, both at mod-6.\\
-For the really slick avoider it is possible to avoid a double attack with one single avoid action but at mod-9.
+For the really slick avoider it is possible to avoid a double attack with one single avoid action but at mod-9.\\
 
 Combining a double defence with yield or dodge bonus applies the bonus to both defence actions if the double skill roll is successful, but only to one of the defence actions if they are performed as separate successive actions.
 
@@ -297,10 +327,10 @@ The doppel cap is also modified by ams as though it was a roll. E.g: doppel 11 a
 
 The doppel cap can be balance shifted between the two combined actions. Taking a mod-1 on one of the actions gives a mod+1 to the other. But the mods cannot raise the chances higher than the action + ams would be without the doppel cap. E.g: Shield 10 sword 9 doppel 8 ams 3 is effective shield 5 sword 5 for a combined action, and balance shifting cannot raise to more than shield 7 or sword 6.
 
-The doppel cap, or the actions combined within doppel, can also be focus shifted like normal actions.
+The actions combined within doppel, can also be focus shifted like normal actions.
 
 
-\skill{Skill scf 1.5, 2.0, 2.5, ... "trippel, quippel, peppel, etc":} sililar to "triple, quadruple, etc", but based on the "doppel" base functionality.
+\skill{Skill scf 1.5, 2.0, 2.5, ... "trippel, quippel, peppel, etc":} similar to "triple, quadruple, etc", but based on the "doppel" base functionality.
 
 
 \skill{Skill scf 1.0 "whirlwind":} The character can make several fast attacks within an extended whirlwind action. The first attack is done at normal speed for the weapon but each following attack is fast 2 (min 1ap).
@@ -967,7 +997,7 @@ Issuing a command takes 1a and the companion must be within earshot. Commanding 
 A character with companion command can control as many companions as his skill level/2 (round up). Companions can be trained as combat units, so each unit counts as one companion when you calculating command control numbers.
 
 
-\skill{Skill scf 0.5 "meditate":} means sitting down and taking no other actions while resting. Successfully meditating regains extra stamina beyond just resting, with every success level regaining one extra stamina, roll once per round meditating, and the roll is affected by all normal mods. E.g: meditate success+4 regains +2 stamina above the normal resting stamina recovery.
+\skill{Skill scf 0.5 "meditate":} means sitting down and taking no other actions while resting. Successfully meditating regains extra stamina beyond just resting, with every success level regaining one extra stamina, roll once per round meditating, and the roll is affected by all normal mods. E.g: meditate success+5 regains +2 stamina above the normal resting stamina recovery.
 
 Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
 
@@ -1035,13 +1065,13 @@ Note that even if focus does stack with overextend, it is not be what you want t
 
 \skill{Skill scf 2.0 "overextend":} to use more action points than was declared for the round. Overextended ap come at a high price and overextend can only be used once per round.
 \begin{itemize}
-    \item When using overextend to get more ap for a round each ap adds mod-1 to the mod stack \emph{before} the action is taken.
+    \item When using overextend to get more ap during a round each ap adds mod-1 to the mod stack immediately, \emph{before} the intended action is taken.
     \item The overextended ap are subtracted from the declared ap in the next round.
     \item The overextended ap mod is carried over to the next round.
     \item Overextend costs one stamina to use.
 \end{itemize}
 
-E.g: Overambitious Oscar wants to make two more attacks with his fast daggers (fast 1 actions, 2ap each) but he only has 1 ap left. Luckily, he has overextend 5. Since overextend can only be used once per round he pulls out 3 extra ap, giving him a total of 4 ap. Immediately he takes a mod-3 to his mod stack for this round, one for each extra ap. He pays one stamina. He then makes the two attacks. Then the round ends. In the new round OO now has a mod-3 from the 3 ap overextended, as well as deducting 3 from his declared ap. This round is not looking good ...
+E.g: Overambitious Oskar wants to make two more attacks with his fast daggers (2ap each) but he only has 1 ap left. Luckily, he has overextend 5. Since overextend can only be used once per round he pulls out 3 extra ap, giving him a total of 4 ap. Immediately he takes a mod-3 to his mod stack for this round, one for each extra ap. He pays one stamina. He then makes the two attacks. Then the round ends. In the new round OO now has a mod-3 from the 3 ap overextended, as well as deducting 3 from his declared ap. This round is not looking good ...
 
 
 \skill{Skill scf 2.0 "multitasking":} allows to declare extra ap to do something else at the same time as performing full round or multi-round actions. Multitasking costs one stamina to use. Remember that most multi-round actions will take the highest mod incurred during any round of the action.
@@ -1107,16 +1137,15 @@ Black cat is a 0ap interrupt effect ignoring initiative.
 %TODO: anything else go missing together with black cat when it disappeared?
 
 
-\skill{Skill scf 1.0 "prescient packing":} The character can pack his luggage with uncanny knowledge of the future. Whenever he needs a special item he can roll for prescient packing. If he succeeds, that item can now be found in his backpack. If he fails, he cannot try again for that item until he re-packs. If he succeeds he can roll for another unit of the same item later on as well.
+\skill{Skill scf 1.0 "prescient packing":} The character can pack his luggage with uncanny knowledge of the future. Whenever he needs a special item he can roll for prescient packing. If he succeeds, that item can now be found in his backpack. If he fails, he cannot try again for that item, or anything too similar, until he re-packs. If he succeeds he can roll for another unit of the same item later on as well.
 The character must already own the items produced, or he can use prescient shopping to have already bought them.
 
-The character must also pre-pack his luggage with \emph{useful bundles} that take up space and weight until they are unwrapped and produced as useful items. Prescient packing cannot be used when there are no more useful bundles left in the luggage.
-
-Prescient packing is negatively modified by the weight (encumbrance) of the item, rounded to nearest whole value.
-
-Prescient packing is modified beneficially by the amount of useful bundles left in the luggage. Each bundle gives mod+1.
-
+The character must pre-pack his luggage with \emph{useful bundles} that take up space and weight until they are unwrapped, revealing useful items. Prescient packing cannot be used when there are not enough useful bundles left in the luggage to cover the encumbrance value of the sought item.
 Each useful bundle is enc 1 and takes one slot in the pack. When successful, the appropriate amount of bundles are replaced with the item, to cover the item's encumbrance value.
+
+Prescient packing is negatively modified by the weight and size (encumbrance) of the item, rounded to nearest whole value.
+Prescient packing is modified beneficially by the amount of useful bundles left in the luggage. Each bundle gives mod+1.
+The roll ignores ams.
 
 Prescient packing takes a whole rummage action session to attempt. The item is found on a successful roll, otherwise not.
 
@@ -1128,12 +1157,18 @@ Bundles are divided into basic, special, exotic. Basic bundles can produce basic
 
 One cannot unwrap items that are worth more than the total value of the bundles of that or a more special type, and each item draws its cost from the value pool of the bundles.
 
-This skill cannot be used to produce custom magical equipment, etc, unless it is clearly available at a previous shopping location, and the massive amounts of gold have been pre-paid.
+The prescient shopping roll is negatively modified by high cost and positively modified by the amount of money spent on bundles, \emph{above} the cost of the item. The amount of bundles is irrelevant, just the money pool total value in gold currency. Basic, special, and exotic are treated as separate pools. Round to nearest when calculating mods.\\
+basic: mod $- \sqrt{value} + \sqrt{pool-value}$\\
+special: mod $- \sqrt{value/3} + \sqrt{(pool-value)/3}$\\
+exotic: mod $- \sqrt{value/10} + \sqrt{(pool-value)/10}$\\
+The roll ignores ams.
+
+This skill cannot be used to produce custom equipment, etc, unless it is clearly available at a previous shopping location, and the massive amounts of gold have been pre-paid, and the time for manufacturing the item was taken into account in the story.
 
 Prescient shopping goes great with prescient packing.
 
 
-\skill{Skill scf 1.0 "prescient training":} The character can save XP, and spend them on skills and abilities whenever he chooses, not just in the lulls between dungeons and adventures. The character can insta-train at most one level of skills and abilities per level of prescient training per session/dungeon/adventure, i.e. in the gaps between normal lull training times.
+\skill{Skill scf 1.0 "prescient training":} The character can save XP, and spend them on skills and abilities whenever he chooses, not just in the lulls between dungeons and adventures. The character can insta-train at most one level of skills and abilities per level of prescient training per session / dungeon / adventure, i.e. in the gaps between normal lull training times.
 
 
 \skill{Skill scf 1.0 "forgiving forgetfulness":} The character can forget skill levels in a skill or ability and get back 50\% of the spent XP. Those regained xp goes back to the pool, and the other 50\% are lost.
@@ -1269,7 +1304,9 @@ Triggers the right to react when an opponent is trying to move out of melee weap
 
 Opportunity does not trigger for the attacking character when the target character moves away as part of a defensive action from the right to react, even if the target doesn't take an action but just moves away. E.g: parry + yield, or avoid and move away, or just take a step back without defending.
 
-E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's right to react. PP parries and yields and moves away another step. AA can't claim opportunity from PP leaving base contact, but DD can since it's not DD's attack that triggered PP's right to react action.
+A yielding defender triggering incoming opportunity attacks can make all the defence actions with the same one yield step.
+
+E.g: Angry Arne and DangerDave attack Parrying Pete. AA attacks triggering PP's right to react. PP parries and yields and moves away another step. AA can't claim opportunity from PP leaving base contact, but DD can since it's not DD's attack that triggered PP's right to react action. PP makes another parry and can still benefit from the same yield he began in response to AA's attack.
 
 
 \skill{Maneuver (cost 15) "intercept":}
@@ -1295,7 +1332,8 @@ E.g: Sebastian Slouch has yield+2 bonus to start with. He curses his genes, spen
 
 
 \skill{Maneuver (cost 10) "dodge":}
-Gives a bonus to to a defend action if the Hero moves one step with the action. In contrast with yield, dodge does not require that the Hero moves away from the target. Any movement enables dodge, even towards the enemy.
+Gives a bonus to to a defend action if the Hero moves one step with the action. In contrast with yield, dodge does not require that the Hero moves away from the target. Any movement enables dodge, even towards the enemy. Whenever "yield" is discussed in relation to other actions and skills a dodge has the same behaviour, unless specifically specified.\\
+\todo go through and make sure to specifically disqualify dodge where relevant.
 
 Upgrade the dodge bonus:\\
 cost  10xp: dodge +1 \\
@@ -1342,7 +1380,10 @@ A character can for example extend his movement with 2sq by first going off bala
 \skill{Maneuver (cost 30) "defensive step":} allows for the character to take one extra movement point per round if yielding or dodging, after his original movement has already been used up. This does not force the character to go off balance, but it costs one stamina.
 
 
-\skill{Maneuver (cost 15) "runaway reserve":} allows the hero to declare run or dash speeds even if he has below 33\% hp. He must declare 0ap and run away from the opposition, GM discretion. He does not need to roll for stamina even if he has negative stamina to begin with, as long as he does not have negative stamina below -con. The stamina cost for the movement has to be paid as normal though.
+\skill{Maneuver (cost 50) "assault step":} allows for the character to take one extra movement point per round together with, but before, an attack action, after his original movement has already been used up. This does not force the character to go off balance, but it costs two stamina.
+
+
+\skill{Maneuver (cost 15) "run away reserve":} allows the hero to declare run or dash speeds even if he has below 33\% hp. He must declare 0ap and run away from the opposition, GM discretion. He does not need to roll for stamina even if he has negative stamina to begin with, as long as he does not have negative stamina below -con. The stamina cost for the movement has to be paid as normal though.
 
 
 \skill{Maneuver (cost 15) "cornering":} allows to make diagonal movement across corners which are otherwise blocked by walls, objects, or an enemy. 
@@ -1363,13 +1404,13 @@ Upgrading to ignore +1 knockback costs +10xp. This can be purchased multiple tim
 Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
-\skill{Maneuver (cost special) "extra gear X"} is a new movement speed, beyond M/W/R, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the next higher base movement: An extra gear based on Maneuver cannot exceed Walk speed, one based on Walk speed cannot exceed Run speed, and one based on Run cannot exceed the maximum Dash movement of the character.
+\skill{Maneuver (cost special) "extra gear X"} is a new movement speed, somewhere between M/W/R/D, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the next higher base movement: An extra gear based on Maneuver cannot exceed Walk speed, one based on Walk speed cannot exceed Run speed, and one based on Run cannot exceed the maximum Dash movement of the character.
 
 E.g: Discerning Doris has M1 W4 R6 D9 and want to learn a movement speed that gives her 3mp. She starts from M1 and adds 2mp and mod-2 to create "extra gear 3". Her declarable movement speed options are then M1,EG3,W4,R6,D9 at mod=0,mod-2,mod-3,mod-6,mod-9 respectively. An EG5 based on W4 would give mod-4.
 
 The EGX mode has the same stamina cost and initiative bonus as the base movement speed. Any modifications or changes to the EGX base movement (m/w/r) also applies to the EGX movement. \\
 E.g: Full plate armour gives run-2sq, meaning an EGX based on run also suffers -2sq: R7 with EG9 will be R5(7) with EG7(9) with full plate. \\
-E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any EGX based on R/D.\\
+E.g: Mortally wounded Heroes cannot declare run or dash movement speed, and hence cannot declare any EGX based on run.\\
 E.g: DD trains fast 4, changing M1 to M2, and thus EG3 to EG4.
 
 The cost of an extra gear starting from Maneuver speed is 15xp per extra movement point, from Walk speed is 10xp per extra movement point, and from Run speed is 5xp per extra movement point.
@@ -1403,7 +1444,7 @@ cost 30xp switching is a very fast (1ap) action
 One would think that any SlowMo attacks would be easier to defend against, but nooo. They are simply too cool. No effects other than the mod+1 to succeed.
 
 
-\skill{Maneuver (cost 20) "careful":} allows the character to make an action with a mod+1 to succeed, and where the "10" roll is not an automatic failure.\\
+\skill{Maneuver (cost 20) "careful":} allows the character to make an action or movement with a mod+1 to succeed, and where the "10" roll is not an automatic failure. Being careful costs 1 stamina extra. \\
 For actions which are normally faster than a round, (1-9ap), careful adds +3ap.\\
 For actions which normally take 1 round or more, careful doubles the time.\\
 E.g: Shooting a bow normally takes 2r, and with careful it takes 4r. 
@@ -1649,7 +1690,7 @@ Attack maneuvers can be combined with fancy as long as the weapon has enough fin
 \skill{Maneuver (cost 5) "poke":} allows for a poke attack which is available with some weapons. It usually has a mod-1 dam-1 pen+1 effect, but some weapons have different effects.
 
 
-\skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow 1 mod-1 dam+2 toavoid+2 effect, but some weapons have different effects.
+\skill{Maneuver (cost 5) "swing":} allows for a great slow swing attack which is available with some weapons. It usually has a slow 1 mod-1 dam+2 toavoid+2 effect, but depends on the weapon.
 
 
 \skill{Maneuver (cost 10) "shield bash":} attack the opponent with your shield. This attack maneuver takes the shield parry mod as a negative mod, costs 1 stamina more than the normal shield parry action, and does (strength + shield mod)/3 damage. E.g: bashing with a normal shield wielded by a strength 8 character with shield 9 is bash mod-3, 1 stamina, damage (8+3)/3 = 3, with a chance to hit at 6. While the same character with a large shield would have 4 damage and to hit at 5.
@@ -1658,14 +1699,14 @@ Attack maneuvers can be combined with fancy as long as the weapon has enough fin
 \skill{Maneuver (cost 10) "fjutt":} is a very weak and flimsy but fast attack. It can be performed with any melee weapon unless specified. It costs one extra stamina. The standard stats are:\\
 fast 1 (minimum 1ap) mod-3 with damage 50\% of normal.
 
-\
 
-\todo: fix feint, make it more interesting
 \skill{Maneuver (cost 10) "feint":} is like a regular attack but is fast 1 (minumum 1ap), costs 1 stamina less than a normal attack (minumum 0 stamina), and does 0 damage. Very good to weaken out the opponent with lots of annoying attacks.
 
+\todo: fix feint, make it more interesting
+
 If the target chooses to ignore a feint it can be upgraded to either a weak or full attack, keeping the rolled attack result:\\
-With a \emph{weak attack} upgrade the whole maneuver has max 50\% damage and costs the usual ap for the attack with that weapon, and one extra stamina.\\
-With a \emph{full attack} upgrade the whole maneuver has full damage but costs +1ap more than a normal attack with that weapon, and one extra stamina.
+With a \emph{weak attack} upgrade the whole maneuver has max 50\% damage, mod-1, takes the usual ap for the attack with that weapon, and costs one extra stamina.\\
+With a \emph{full attack} upgrade the whole maneuver has full damage, mod-1, takes +1ap more than a normal attack with that weapon, and costs one extra stamina.
 
 E.g: Feinting Fabio attacks with his rapier, feinting. Target Tom parries. FF's feint costs only 1ap (rapier is fast 1 to begin with), and TT's parry costs 3ap (normal shield). FF continues to attack feint. This time TT ignores the feint, and FF chooses to upgrade to a regular attack at normal damage. FF pays 2ap extra above the 1ap he has already paid for the feint, along with 1 stamina (0 for second attack in round with rapier and 1 extra for the feint upgrade). If this feint combo had been done with a regular sword he would have had to pay two stamina, since he has already done one (feint) attack earlier in the round.
 
@@ -1702,26 +1743,28 @@ Roll attack success and damage separately for the two weapons.
 Roll attack success and damage separately for the two weapons.
 
 
-\skill{Maneuver (cost 10) "dual trick":} requires two weapons and gives a difficult combination of the two attack. Costs +1ap above the sum of the two normal attacks, mod-3, todefend-6, 75\% dam. Costs 1 stamina extra above the normal cost for the two attacks.
-Roll attack success and damage separately for the two weapons.
+%\todo too powerful compared to roundabout. check and balance both with wayward
+%\skill{Maneuver (cost 10) "dual trick":} requires two weapons and gives a difficult combination of the two attack. Costs +1ap above the sum of the two normal attacks, mod-3, todefend-6, 75\% dam. Costs 1 stamina extra above the normal cost for the two attacks.
+%Roll attack success and damage separately for the two weapons.
 
 
 \skill{Maneuver (cost 10) "dual parry":} requires two weapons and gives a mod+2 to the parry at the cost of 1 stamina extra and 1ap extra. As baseline, choose the ap cost and parry chance of one of the two weapons. Then add half of the other weapon's abs when calculating weapon breakage against incoming damage.
 
-Dual parry cannot be used with shields.
+\noindent Dual parry cannot be used with shields.
 
 
-\skill{Maneuver (cost 10) "heavy strike":} costs +2ap for normal or slower weapons and +1ap for fast or vfast weapons, and is mod-1, toavoid+1, +33\% dam. Takes one extra stamina.
+\skill{Maneuver (cost 10) "heavy strike":} costs +2ap for normal or slower weapons and +1ap for fast or vfast weapons, and is mod-2, toavoid+1, +33\% dam. Takes one extra stamina.
 
 
-\skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-1, toavoid+2, +50\% dam. Takes one extra stamina.
+\skill{Maneuver (cost 10) "massive strike":} costs +3ap for normal or slower weapons and +2ap for fast or vfast weapons, and is mod-3, toavoid+2, +50\% dam. Takes one extra stamina.
 
 
-\skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} triggers right to react and allows the Hero to take an extra free movement step and make a followup attack against the target. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can continue to move further away. The target can still yield and continue to move as a reaction to the followup attack.
-
-The followup attack costs two extra stamina, one for the extra step and one for the next attack, but costs no movement points, even if it's a second diagonal and would normally cost 2mp.
-
-Weapons with reach has an extra mod+1 when used for a followup attack, regardless of whether reach is used for the attack.
+%\todo meh, don't like mixing in the extra movement
+%\skill{Maneuver (cost 20) "followup attack":} When a target yields during defence \emph{followup attack} triggers right to react and allows the Hero to take an extra free movement step and make a followup attack against the target. The Hero moves one sq towards the target, and makes the followup attack immediately before the target can continue to move further away. The target can still yield and continue to move as a reaction to the followup attack.
+%
+%The followup attack costs two extra stamina but costs no movement points, even if it's a second diagonal and would normally cost 2mp. Followup attack can only be used once per round.
+%
+%Weapons with reach has an extra mod+1 when used for a followup attack, regardless of whether reach is used for the attack.
 
 
 \skill{Maneuver (cost 10) "counter attack":} The user can parry and make a counter attack in the same action using the "counter attack" maneuver. Both the parry and attack rolls are at mod-3. The attack is dam 75\%. Requires two weapons, one in each hand, e.g. sword and shield. The entire counter attack action cost ap equal to the slowest of the weapons. It costs one extra stamina above the normal cost of the attack.
@@ -1730,7 +1773,7 @@ Weapons with reach has an extra mod+1 when used for a followup attack, regardles
 \skill{Maneuver (cost 30) "riposte":} The Hero can make something similar to a counter attack but using only one weapon, at a cost of +1ap above the usual defence/attack ap (assuming they are the same), one extra stamina above the usual cost of the attack, taking mod-4 to both the parry and attack rolls, and the attack is dam 75\%. E.g: riposte with a sword is 4ap, and with a rapier it's 3ap.
 
 
-\skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage or penetration depending on the weapon stats. For each +3 excessive strength he gets damage +1, or penetrating +1, depending on the weapon.
+\skill{Maneuver (cost 5) "strength bonus":} The Strong Hero can use extra strength above the weapon requirement to do extra damage or penetration depending on the weapon stats. For each +3 excessive strength he gets damage +1, or penetrating +1, depending on, and limited by, the weapon.
 
 
 \skill{Maneuver (cost special) "slugger":} gives extra damage with weapons that have extra strength bonuses. Each level of slugger gives excessive strength damage bonus counted as (extra str)/1 instead of (extra strength)/3 as per "strength bonus". Limited to the maximum of the weapon. Slugger also gives damage bonuses to brawl and martial arts equal to the level of slugger, without requiring extra str points. \\
@@ -1740,13 +1783,14 @@ lvl  3  costs  30 \\
 lvl  4  costs  50 \\
 lvl  5  costs  75 \\
 lvl  6  costs 100 \\
-lvl +1  costs +30 for 7-9, +50 for 10-12, +100 for 13-15, then doubling per 3.
+lvl +1  costs +30 for 7-9, +50 for 10-12.
 
-E.g: HammerHand Helga has str 8 and does dam 2 with her fist attack. With slugger 3 she would do dam 5. With strong 1 and slugger 3 she would do dam 6 with str 9(8). But with a 2h axe (dam 12 requiring str 6) that would be dam 15! 
+E.g: HammerHand Helga has str 8 and does dam 2 with her fist attack. With slugger 3 she would do dam 5. With strong 1 and slugger 3 she would do dam 6 with str 9(8). But with a 2h axe (dam 12 requiring str 6) that would be dam 15!
 
-%TODO: perhaps worth capping slugger at lvl6 as possible maximum ?
-Tiny characters are limited to slugger 3, small to slugger 6, normal to 9, large to 12, and so on...
+%TODO: perhaps worth capping slugger at lvl6 as possible maximum ? 
+Tiny characters are limited to slugger 3, small to slugger 6, normal to 9, large to 12.
 % for a high power halfling: str9 dex12 martial arts and max slugger would give damage 13 fist and 15 kick.
+
 
 \skill{Maneuver (cost 10) "easy grip":} The character can trade a +3 excessive strength damage bonus to get one attack per round that that cost one less stamina than normal.
 
@@ -1833,7 +1877,7 @@ It's a regular attack which costs 1 extra stamina and has mod-3. If successful a
 
 \skill{Maneuver (cost 30) "killstab":} allows for a massive damage killing maneuver used with backstab / sidestab to quickly take out a target. It's easier to perform with backstab than with sidestab. A killstab attack takes a full round. If successful it adds significant damage to the normal weapon attack damage. The killstab bonus damage replaces the backstab/sidestab bonus damage.
 
-The attacker must know where to hit. Pass an int roll for normal targets (human, dwarf, elf, halfling, orc, goblin) and a monsterology or similarly relevant roll for other targets. Any knowledge of first aid or medicine can be added to mod the normal int roll.
+The attacker must know where to hit. Pass an int roll for normal targets (human, dwarf, elf, halfling, orc, goblin) or a monsterology or similarly relevant roll for other targets. Any knowledge of first aid or medicine can be added to mod the normal int roll. Some monsters can only be killstabbed in certain locations or from certain angles. E.g: Decomposing Dave would not recommend trying to killstab a dragon in the tail.
 
 When used with backstab:\\
 A killstab attack is mod-3 and negatively modified by the target abs. E.g: a target in chain mail is total mod-5 to the backstab roll.
@@ -2001,6 +2045,11 @@ The character can also spend 1xp on a quick 3ap prayer and have a chance of gett
 
 
 \skill{Ability cost 50xp ccf 1.5 "Damaging aura":} The character will deal 1 damage penetrating to enemies ending their round in the damaging aura, willingly or not. The aura has radius 1.
+
+%\TODO: or should the damage apply once per round at the initiative of the character? Or an active instant 0ap action to activate the aura pulse?
+% ? which version is more interesting ?
+% ? should it have friendly fire as well, if manually activated ?
+% At end of round: it's better if the char has low initiative, to move in and park for damage after everyone else has already spent their movement. 
 
 Upgrades:\\
 cost +20 radius+1 \\

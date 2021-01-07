@@ -47,15 +47,39 @@
 }
 
 
+% block listing, verbatim ------------------------------------------------------
+
 % remove forced implicit vertical whitespace before and after verbatim environment
 \makeatletter
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \makeatother
 
+% use this pattern for block listing:
+%\goodbreak
+%\raggedbottom
+%\small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{1.5\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{2\baselineskip} \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize
+%\flushbottom
+%\goodbreak
+
+% simpler with blocklistgap:
+\newcommand{\blocklistgap}{\goodbreak \vspace{\baselineskip}}
+%\raggedbottom     % looks in raggedbottom flow, no stretching baselineskip
+%\goodbreak \small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \blocklistgap \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize \goodbreak
+%\flusbottom       % perhaps restore flushbottom at some point
+
+%-------------------------------------------------------------------------------
+
 
 % allow to force indentation of first line in section
 % \indent is not working, so workaround \hspace{\parindent} works
 \newcommand{\forceindent}{\hspace{\parindent}}
+%\noindent is a standard command
 
 
 \newcommand{\degrees}{$^\circ$~}
@@ -121,7 +145,15 @@
 
 
 % need a nice easily visible TODO marker
-\newcommand{\todo}{\textbf{TODO:}~}
-\newcommand{\TODO}{\LARGE\textbf{TODO:}\normalsize~}
+\newcommand{\todo}{\noindent\textbf{TODO:}~}
+\newcommand{\TODO}{\noindent\LARGE\textbf{TODO:}\normalsize~}
+
+
+
+% temporary separation line
+%\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
+%\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt} =xtl-  0.25
+%\rule[0.8ex]{0.5\textwidth}{0.5pt} =xtl-  0.8ex
+\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
 
 

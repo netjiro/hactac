@@ -9,11 +9,11 @@
 % for a handful of newbie characters, fresh out of the Dungeon of Testing.
 
 
-% TODO: update to dap
+% note, ed 180208: mostly updated to DAP ...
+
+% TODO: update to dap  (2017)
 % It's not updated properly to current rule set. I'll do that if/when I have
 % the time. The current campaign "Goblin Destiny" has time priority.
-
-% note, ed 180208: mostly updated to DAP ...
 
 % this means it's written for an older rule set version.
 % Mainly: "capacity" should be replaced with "action points"
@@ -35,6 +35,26 @@
 \input{../../tex/settings}
 
 \begin{document}
+
+
+% settings
+
+
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1}
+% This way I don't have to use chapter*{} or section*{} together with manually adding the table of contents lines, which also screws up the page headers.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %-------------------------------------------------------------------------------
@@ -119,11 +139,52 @@ They need to be replaced with licensed art.
 
 \normalsize
 
-%\vspace*{\fill}
-%\vfill
 
 
-% Add a table of contents
+
+% some notes
+\vfill
+
+\section*{notes}
+
+Some of the maps and token images I've found on various rpg and table top user gallery sites and shamelessly used here without proper attribution. If you find your material in here and either want me to remove it or want proper attribution, please contact me.
+
+\
+
+First playthrough of the campaign ran 2009-12-02 to 2010-05-17. Total game time around 50h over 21 weekday evening sessions. 
+The early sessions had some technical issues that stole time. Back then we found that MapTool-1.2-b32, Jarnal-917 and Teamspeak3 worked reasonably. Other tools not so much. If I get the time I might update the campaign files to modern MapTool format.
+
+\noindent The campaign chronology of the first run-through can be found at \\
+\url{forums.rptools.net/viewforum.php?f=48} \\
+and the discussion forum for this campaign is located at \\
+\url{add.url.here.org/sothat/wecan/readit} \\
+The original write-up is attached here as an appendix, with minor cleanup.
+%TODO fix the URLs above
+
+\
+
+\emph{Sometime 2015:} Well now I'm sitting here taking a deep breath and going through the files and dreading all the boring work needed to redo this as maptool version 1.3 campaign files. Blaurgh! Well, we'll just have to see if I have the stamina... or I might need a Quaff! So, it's not happening anytime soon.
+
+\
+
+\emph{Late 2019:} Got a bit of cleanup done for this campaign doc at least. Progress!
+
+\
+
+\emph{Late 2020:} Eeeh, fixing modern campaign files for MapTool is not happening anytime soon...
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% table of contents
+%------------------
+
+% toc will fit on a single page
+
 \clearpage              % don't allow anything else, above, on the TOC pages.
 \flushbottom
 \tableofcontents        % Always compile twice if you have changed much
@@ -131,9 +192,6 @@ They need to be replaced with licensed art.
 
 
 
-% disables chapter, section and subsection numbering
-\setcounter{secnumdepth}{-1}
-% This way I don't have to use chapter*{} or section*{} together with manually adding the table of contents lines, which also screws up the page headers.
 
 
 
@@ -141,12 +199,20 @@ They need to be replaced with licensed art.
 
 
 
+%-------------------------------------------------------------------------------
+% notes on the back side of TOC
+%------------------------------
+
+% nope, put them on back face of first leaf instead.
+
+\raggedbottom
+\thispagestyle{empty}
+\clearpage
+%\section*{notes}
+% bla bla bla
 
 
-
-
-
-
+%TODO perhaps put a nice full size sketch picture on this page ?
 
 
 
@@ -163,53 +229,37 @@ They need to be replaced with licensed art.
 %\mainmatter  -- nope, not in article or report ?
 \setcounter{page}{1}
 \flushbottom
+
 \phantomsection\addcontentsline{toc}{section}{introduction}
 \section*{Introduction}
 \chaptermark{introduction}
-Hello, good folk. This is a simple newbie campaign from the old days. It is the first one I wrote for what has become the Gold \& Glory rules and world setting. Intended as a first introductory campaign for new players and characters, to showcase some world intro, basic maps, fighting techniques, etc.
 
-Some of the maps and token images I've found on various rpg and table top user gallery sites and shamelessly used here without proper attribution. If you find your material in here and either want me to remove it or want proper attribution, please contact me.
+Hello, good folk. This is a simple newbie campaign from the old days. It is the first one I wrote for what has become the Gold \& Glory rules and world setting. Intended as a first introductory campaign for new players and characters, to showcase a world intro, basic maps, fighting techniques, etc.
 
-The campaign consists of a series of adventures linked together around the return of the demon Uchly Namen and the problems he causes. This is meant to be played as tongue-in-cheek old style gaming and is supposed to be fun and entertaining. Don't bother about realism, dark intrigue, etc. Happily portray the npc characters as cliché cardboard cut-outs, use silly voices, be flexible with the rules, and so on. Maximum fun!
+The campaign consists of a series of adventures linked together around the return of the demon Uchly Namen and the problems he causes. Intended for tongue-in-cheek old style gaming, fun and entertaining. Don't bother about realism, dark intrigue, etc. Happily portray the NPCs as cliché cardboard cut-outs, use silly voices, be flexible with the rules, and so on. Go for quick and cheap fun!
 
 \begin{readoutloud}
-Text looking like this is supposed to be read to your player in true old school style. Don your best silly voice acting hat.
+Text looking like this is supposed to be read to your player in stilted old school style. Don your best silly voice acting hat.
 \end{readoutloud}
 
-I've tried to balance the encounters to fit a group of a few 100xp newbies character, straight rolled and without serious optimisation beyond what is recommended in the campaign section of the rule book.
-It is recommended that all players roll up characters and run through the \emph{Dungeon of Testing} adventure to get used to maptool and the rules. That is also a good way to find glaring tactical holes in the newly created characters.
+I've tried to balance the early encounters to fit a group of a few 100xp newbie character, straight rolled and without serious optimisation.
+It is recommended that all players roll up characters and run through the \texttt{Dungeon of Testing} adventure to get used to maptool and the rules. \texttt{DoT} is a good way to find glaring tactical holes in new Heroes.
 
-There are plenty of opportunities where HareBrained Heroes can charge into Gory Glory and Certain Death, but there are usually less risky alternative paths to take if the players explore and assess the situation before hammering their head into the wall. If a Hero falls, have the player make a new one and let it inherit some of the xp from the previous. E.g: First Fred dies after gaining 50xp from the first few adventures. Second Sam can then be built with +30xp inherited? Discuss it with the players to balance the loss against keeping pace with the rest of the party.
+There are plenty of opportunities where HareBrained Heroes can charge into Gory Glory and Certain Death. Less risky alternative paths are usually available if the players explore and assess the situation before hammering their head into the wall. If a Hero falls, have the player make a new one at a suitable xp level. E.g: First Fred dies after gaining 50xp from the first few adventures. Second Sam can then be built with +30xp inherited? Or perhaps 200xp is a good fit for the rest of the party and upcoming adventures? Discuss it with the players.
 
-If you run this campaign for a larger group, more experienced players, or better characters please adjust the opposition. The easiest way is to just increase the amount of critters, or upgrading a couple of them to more potent variants. Most maps have nooks and crannies where reinforcements or hidden reserves can be spawned without breaking the logic of the encounter. Also, if the enemies seem to be overwhelmingly difficult, just delete some of them. Encounters should be dangerous. Deadly for the careless, but manageable if the players are smart.
+If you run this campaign for a larger group or more experienced players please adjust the opposition. E.g. increase the amount of critters or upgrade a couple of them to more dangerous variants. Most maps have nooks and crannies where reinforcements or hidden reserves can be spawned without breaking the logic of the encounter. Remove or weaken enemies that are overwhelmingly difficult. Encounters should be dangerous. Deadly for the careless, but manageable if the players are smart.
 
-Before actually playing each sub-quest, try to run it through in your mind and consider some possible actions and choices your players might make, and their consequences in terms of outcome and losses. Don't be afraid to kill a character or two every now and then if they are reckless, but the players should be given reasonable warning before heading into a trap which they cannot get out of. Also, it is good to provide avenues of escape and retreat if possible, so that they can flee from enemies that turn out to be too powerful. Live and wisen up for the future.
+Before playing each adventure, try to run it through in your mind and consider some possible actions and choices your players might make, and their consequences in terms of outcome and losses. Don't be afraid of character death. The game is intended to be hard. But the players should be given reasonable warning before heading into a trap which they cannot get out of. Also, it is good to provide avenues of escape and retreat if possible, so that they can flee from enemies that turn out to be too powerful. Live to wisen up for the future. Total party kills are generally boring and disruptive.
 
-The different sub-quests are designed to showcase different tactical issues with the Gold \& Glory rule set and world. The combat power of new player groups vary quite a bit so it's likely that the encounters need to be adjusted to suit your particular group of murderers. Also, veteran tabletop players will probably be better at the early stage optimisation of their characters, which means their characters will have more combat prowess per xp than characters created by newbie players.
-
-\
-
-The first run through of the campaign was 2009-12-02 to 2010-05-17. It took a total of 21 weekday evening sessions, of 2-3h each for a total game time around 50h. The early sessions had some technical issues that took some time to work through, but all in all the MapTool-1.2-b32 worked quite well, as did Jarnal-917. We started out with skype for voice chat but had to switch since it was way too unreliable and problematic. Teamspeak3 worked much better, but with some minor issues regarding latency. Mumble should be a great replacement, but has not been tested yet. \emph{Note: In late 2017 we run exclusively with mumble and mostly with MapTool-1.4.0.5, with Jarnal collecting dust for quite a while.}
-
-If I get the time I might update the campaign files to MapTool-1.3 series format, but in the mean time the 1.2-b32 release works well enough.\\
+The adventures are designed to showcase different tactical issues with the Gold \& Glory rule set and world setting. The combat power of new player groups vary quite a bit so it's likely that the encounters need to be adjusted to suit your particular group of murderers. Veteran tabletop players will probably be better at the early stage optimisation of their characters, which means their characters will have more combat prowess per xp than characters created by newbie players.
 
 \
 
-...
+First playthrough took about 50h over 21 evening sessions. Some technical issues with old tools slowed us down, and the players were new with the rules. MapTool and Mumble has worked best for us.
+A quick write-up of \hyperref[sec:playthrough]{the first playthrough} is included in the appendix, page~\pageref{sec:playthrough}.
 
-\
 
-\emph{sometime 2015:} Well now I'm sitting here taking a deep breath and going through the files and dreading all the boring work needed to redo this as maptool version 1.3 campaign files. Blaurgh! Well, we'll just have to see if I have the stamina... or I might need a Quaff! So, it's not happening anytime soon.
 
-\
-
-The campaign chronology of the first run-through can be found at \\
-\url{http://forums.rptools.net/viewforum.php?f=48} \\
-and the discussion forum for this campaign is located at \\ \url{http://add.url.here.org/sothat/wecan/readit}
-
-I have also reproduced it here as an appendix. The \hyperref[sec:playthrough]{"Playthrough section"} is the original posted chronology, but cleaned up.
-
-\
 
 
 %TODO: \\
@@ -228,21 +278,23 @@ I have also reproduced it here as an appendix. The \hyperref[sec:playthrough]{"P
 
 
 
+
 %The Return of Uchly Namen
 %-------------------------
 \clearpage
 \section*{Return of Uchly Namen}
 
-The Baron Evilnius Conq is trying to win more power and wealth by taking over the lands and castle of Baron Massa Pawa. But he cannot do it by ordinary means. Instead he has hired the wizard Deville Sneexious.
-She managed to find a way, by summoning the demon Uchly Namen to do her bidding, and let the demon break into the Pawa castle and kill the nobleman and his guard captain.
+Baron Evilnius Conq is trying to win more power and wealth by taking the lands and castle of Baron Massa Pawa. But he cannot do it by ordinary means. Instead he has hired the wizard Deville Sneexious.
+She has managed to find a way, by summoning the demon Uchly Namen to do her bidding. She will force the the demon to break into the Pawa castle and kill the nobleman and his guard captain.
 
 The thing is that the demon has been summoned once before, to do exactly the same thing, some 200 years ago, and between the ancestors of the Conq and Pawa lines no less: Moronius Conq, who felt he wanted to kill and supplant Lotsa Pawa, hired the wizard Trygain John to summon the demon and have it attack Castle Pawa. Trygain was a bit fumbly and did a piss poor job of the summoning and subsequent binding, as well as giving the demon very vague commands. The demon attacked the castle half-heartedly for a while, then considered itself finished with the command and went on a rampage across the region for a week or two. Back then some stalwart Heroes with the wizard Honorbliz Wize on point managed to force him back to the summoning site, and finally out and away from this realm. After the fight Honorbliz Wize took upon himself to seal the demon from this world and scatter the binding artefact, a large necklace, in four pieces.
 
-Sneexious have located one of the pieces, the necklace itself, but is missing three gem stones. She knows approximately where they are, but have not been able to find them. The last gang she sent went missing after recovering the RedStone. The village of Sleepy Cove has few heroes, so she has had to lower her standards. And just then the stalwart group of noobs land in the harbour on a warm summer evening...
+Sneexious have located one of the pieces, the necklace itself, but is missing three gem stones. She knows approximately where they are, but have not been able to find them. The last gang she sent went missing recovering the RedStone. The village of Sleepy Cove has few heroes, so she has had to lower her standards. And just then the stalwart group of noobs land in the harbour on a warm summer evening...
 
 \
 
-Sneexious is living in Sleepy Cove under the guise of a wise woman scholar, Dyslexia Marigt. An elderly lady who only does good for the fellow villagers around her. The nice old Dyslexia Marigt have dug up the horrible secret of the "Return of Uchly Namen". She will talk to the adventurers and present her plight as follows: \\
+Sneexious is living in Sleepy Cove under the guise of a wise woman scholar, Dyslexia Marigt. An elderly lady who only does good for the fellow villagers around her. The nice old Dyslexia Marigt have dug up the horrible secret of the "Return of Uchly Namen". She will talk to the adventurers and present her plight as follows:
+
 If they cannot find all three gems: RedStone, GreenStone, BlueStone, and bring them to her before the end of the summer, the Demon of Old, Uchly Namen, will rise again. As he did once before, he will lay waste to the region. This happened already some 200 years ago, and the stars are coming into alignment for it to happen again. She must rebuild the binding artefact to prevent the demon from entering this realm.
 
 Now, if the heroes would please be so kind as to find all three gem stones and bring them to her, she will take them to the gate site to "sacrifice the binding artefact" and close the gate \emph{forever}!
@@ -274,10 +326,10 @@ It is possible that the Heroes choose to get involved with the problems at Pawa 
 \item[01] Search for the goblin bandits in the south forest, kill them all, get the RedStone.
 
 
-\item[02] Travel to Eisenkrafs, search for Coal-Black-George, find a way into the mine, down shaft 5-1, into the natural cavern, while getting set up by the mining boss. Find the body of Coal-Black-George and get the GreenStone. Survive to find another way out, since the boss and his gang will kill those who try to leave the way they came in.
+\item[02] Travel to Eisenkrafs, search for Coal-Black-George, find a way into the mine, down shaft 5-1, into the natural cavern, while getting set up by the mining boss. Find the body of Coal-Black-George and get the GreenStone. Survive to find another way out. The boss and his gang will attack those who insist to leave the way they came in.
 
 
-\item[03] Travel to Honorbliz Wize tower, see the fight between the wizard and Sam Slick. Take side perhaps. Search the tower for the BlueStone, while fighting off the shadow servants. Perhaps figure out that Honorbliz helped banish the demon the first time, that the effective weapons are in Castle Pawa, and that something is wrong with Dyslexia Marigt's story.
+\item[03] Travel to Honorbliz Wize tower, see the fight between the wizard and Sam Slick. Take sides perhaps. Search the tower for the BlueStone, while fighting off the shadow servants. Perhaps figure out that Honorbliz helped banish the demon the first time, that the effective weapons are in Castle Pawa, and that something is wrong with Dyslexia Marigt's story.
 
 
 \item[intermission] Rest and recuperate. Decide whether to continue helping Dyslexia Marigt for some more gold. Perhaps figure out that Dyslexia Marigt is planning on using human sacrifice in her "gate sealing" ritual. Also a good time to go back to Eisenkrafs to take revenge on Goebbels, clear out the bandits, etc.
@@ -1691,11 +1743,13 @@ If they don't spy on Dyslexia Marigt themselves, Sam Slick will contact them and
 
 When Sam enters "Sleeping with the Fishes" to speak to the Heroes, Bling SwordSlash is there as well. Bling nods to Sam, saying a short "Sam", in a displeased manner. Sam in turn nods to Bling, replying with a short "Bling", also not pleased.
 
-Bling will interrupt Sam when he tries to sell information to the Heroes.
+\
+
+\noindent Bling will interrupt Sam when he tries to sell information to the Heroes:
 \begin{readoutloud}
 I wouldn't trust Sam Slick if I were you. He is a shady character, and lacks the strong moral compass that decent people such as myself has.
 \end{readoutloud}
-Sam looks irritated, but keeps quiet. Then he says to the Heroes
+Sam looks irritated, but keeps quiet. Then he says to the Heroes:
 \begin{readoutloud}
 Bullshit. His strong moral compass and unwavering righteousness has killed more people than most prolific assassins manage in a lifetime. Now, 5 gold for something that will save your lives?
 \end{readoutloud}
@@ -2427,16 +2481,16 @@ In the future, the heroes will often hear the ballad of Sleepy Cove, where the v
 
 \raggedbottom
 
-The playthrough was originally posted as a "Running Campaign" reporting on the maptool forums (091210-100518). Unfortunately, the file hosting was removed so all the illustrations and screen shots disappeared, but the original text is still available. Here I've done a little clean up and put it together. I've also found a source for the lost illustrations and screenshots.
+The playthrough was originally posted as a "Running Campaign" reporting on the maptool forums (091210-100518). Unfortunately, the file hosting was removed so all the illustrations and screen shots disappeared, but the original text is still available. Here I've done a little clean up and put it together, also found a source for the lost illustrations and screenshots.
 
-Note that I did some fails as a GM when leading this campaign, and that I changed a few things in the campaign from post game notes. Hence, some details in the chronicle differ from what is likely to happen resulting from a new playthrough.
+Note that I made some GM fails when running RoUN the first time, so I've changed a few things in the campaign based on post game notes. Hence, some details in the chronicle differ from what is likely to happen a modern playthrough.
 
 
 \subsubsection*{Sessions 1-2: Welcome to Sleepy Cove, Here be Goblins}
 % originally posted 091210
 \noindent\small
 The first sessions are always a bit of a hassle with technical issues, etc, that take up a majority of the time. The folks using linux have had no problems yet. Those using vista are encountering significant weirdness, although most are not related to the game tools. One guy running w7 gets disconnected every now and then from maptool, but has had no other technical issues.
-It always takes a bit of time to get things set up and running, and getting people used to the tools. That's all to be expected I guess. I expect the future sessions to run smoother. Running with: maptool-1.2-b32 (waiting for that stable 1.3 ?), jarnal-917, skype.
+It always takes a bit of time to get things set up and running, and getting people used to the tools. That's all to be expected I guess. I expect the future sessions to run smoother. Running with: maptool-1.2-b32 (waiting for that stable 1.3 ?), jarnal-917, skype (\emph{hooorrible!}).
 \normalsize
 
 The stalwart heroes Mandak, Datarian Blood, and Nostromo have set out upon their first adventure as Fresh Hero Wannabes. Their first stop was the small village of Sleepy Cove, where they after some time located the old scholar and wise woman Dyslexia Marigt. The sweet old lady explained the horrendous back story and the tasks the Heroes would be required to undertake as her employees. As she talked the glitter of future gold got a bit much for Nostromo, who embarked upon a resilient haggling campaign.
@@ -2618,7 +2672,7 @@ Just beyond the slaughter site they find the way out of the cave system, and an 
 In Sleepy Cove they give the GreenStone to Dyslexia Marigt and get their reward before taking a day to rest and shop. Next up is the Tower of Ho-Bliz Wayze, to persuade him to sell the BlueStone.
 
 
-\subsubsection*{Session 11: Is the BlueStone perchance for sale?}
+\subsubsection*{Session 11: Is the BlueStone for sale, perchance?}
 % originally posted 100324
 The heroic trio: Mandak, Anomali, and Datarian start the day with some light shopping, before setting out towards the Dark Tower of Ho-Bliz Wayze. The trip is uneventful and takes about three days.
 When they reach the tower they see a fast hooded figure fighting with a white haired wizard. The colourful lights and strange sounds of Fireballs and Shock Fields fill the battle ground.
@@ -2891,11 +2945,14 @@ The campaign, documents, maps, tokens, campaign files, etc, will be released on 
 
 \
 
-\emph{Note, 180208: The whole campaign was uploaded to the rptools user gallery, but that site quickly went down and disappeared, taking the files with it. I still have the originals. Hmm, will continue to clean out given time, and push the whole package somewhere.}
+The adventures of Nostromo, Mandak, Datarian, Anomali, Maras, and Farsalos will continue ... in "Dark Klan".
 
 \
 
-The adventures of Nostromo, Mandak, Datarian, Anomali, Maras, and Farsalos will continue ... in "Dark Klan".
+\
+
+\emph{Note, 180208: The whole campaign was uploaded to the rptools user gallery, but that site quickly went down and disappeared, taking the files with it. I still have the originals. Hmm, will continue to clean out given time, and push the whole package somewhere.}
+
 
 
 

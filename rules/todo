@@ -42,10 +42,41 @@ TODO: move to milestone xp payouts + session xp
 -     milestones: 10-30, session 5, cool/fun/etc 1-10 per item
 
 
+201221: PIN!
+TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round 
+      regardless of how many attacks are made?
+      ? perhaps it should cost 1 stamina to overdeclare AP though ?
+      That way it will still cost 2 stamina to make lots of actions with fast 
+      weapons, and it will also cost 1 stamina if taking lots of defence actions
+-     since it will require to declare extra AP beyond base ap each round.
+      ! but then it will cost LOTS of stamina to make many attacks with regular
+      weapons: eg base ap 5, overdeclare 6 for 2x attack:
+      6ap 1stam, 2x attack 2stam  = 3stam, instead of 2stam
+      
 
 
 
+201220:
+%TODO: change stamina recovery when resting in maptools
+       normal: +1/r
+       rest: +1 extra if passing con roll mod by full stack, 
+       but mods calculated after declared rest: 0ap 0mp
 
+
+201205:
+TODO: mer magiska pyssel som inte gör skada
+      kladdig mark, hål, vägg, grus, rök, mörker, ljus, slippery
+      tentakler ur marken, djur anfaller, lightning/regn/is/dimma suger sig till mål
+      långsammare/snabbare mark, städa lik, loota kvickt, 
+      göra någon svårare/lättare att träffa ?
+      sänker / höjer moral
+      etc
+
+
+201118:
+TODO: fix cost of yield and dodge. compare with avoid/parry skill costs
+      dodge should be yield+50% or so, and they should not be more expensive
+      than raising eg avoid or sword by similar skill level as bonuses
 
 
 200929:
@@ -147,6 +178,7 @@ TODO: ISSUE 2 shot /r bow    - see "comparison efficiency"
       when building a 2/r shot bow char ca 220xp in bow skills
       ? PERHAPS ?  set quickshot to 1.0, making it reasonable to go bow and qs
       in tandem when improving.
+
 
 200107:
 TODO: fix all \verb|bla bla| to \texttt{bla bla} in all latex files
@@ -355,7 +387,6 @@ TODO: Goblin Destiny : add gossip lists for situations where they meet ppl
 
 
 181205:
-TODO: skall man sänka stavars abs med 1 ?
 TODO: för billigt att skaffa sig snabba boltar ?
       och se till att massa folk inte har någon magi, eller
       mycket magic -3mod modifikationer eller så från födsel
@@ -1128,3 +1159,5 @@ DONE: smooth casting spells
 DONE: make it count  -  roll to get extra damage, 1stam, 0/1ap for risk/mitigation
 200929:
 DONE: added heavy strike at dam+33% and 1ap faster than massive strike at dam+50%
+old:
+DONE: skall man sänka stavars abs med 1 ?  yep, sänkt abs och skada och parry

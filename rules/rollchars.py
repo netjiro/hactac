@@ -13,8 +13,9 @@ import sys
 
 # ------------- for regular quick roll selection, just change here -------------
 #distribution = "standard_set"      # standard selection: 17 dudes, too heroic
-distribution = "small_set"         # small set, any race: 10 dudes, still heroic
-#distribution = "min_set"           # minimal set, 6 dudes
+#distribution = "small_set"         # small set, any race: 10 dudes, still heroic
+distribution = "tiny_set"          # small set, any race: 8 dudes, still good
+#distribution = "min_set"           # minimal set, 6 dudes, one of each race
 #distribution = "goblin_destiny"    # special set for goblin destiny campaign
 #distribution = "goblin_destiny_5"  # special set for goblin destiny campaign
 #distribution = "goblin_destiny_3"  # special set for goblin destiny campaign
@@ -48,6 +49,16 @@ if distribution == "small_set" :
     halflings =    2
     orcs =         1
     goblins =      3
+
+# 8 total, reasonable representation if choosing from all races
+# still give high chance of OP characters in each set.
+if distribution == "tiny_set" :
+    humans =       2
+    dwarves =      1
+    elves =        1
+    halflings =    1
+    orcs =         1
+    goblins =      2
 
 # 6 total, minimal set if choosing from all races
 # but distribution will make less interesting race spread
@@ -304,7 +315,7 @@ class Character:
 # the various distributions check out something like: https://anydice.com/
 # which can give you a better grasp on how the rolls spread.
 #
-# Here are some other common distributions, scores and percentages
+# Here are some distributions, scores and percentages
 # 
 #  2d6:               2d5:               2d4:          2d3:
 #   2    2.78          2    4.00          2    6.25     2   11.11
@@ -323,14 +334,14 @@ class Character:
 # I've generally included the range and division spreads as comments for quick
 # comparisons. Here is a summary.
 #
-# asymmetric splits: 5,7-10
+# asymmetric distributions: 5,7-10
 #                 d10/10 1-9                 10     0,1  9,1
 #                 d10/9  1-8               9-10     0,1  8,2
 #                 d10/8  1-7               8-10     0,1  7,3
 #                 d10/7  1-6               7-10     0,1  6,4
 #                 d10/5  1-4      5-9        10     0-2  4,5,1
 #
-# symmetric splits: 2-4,6
+# symmetric distributions: 2-4,6
 #                 d10/6  1-5               6-10     0,1  5-5
 #                 d10/4  1-3      4-7      8-10     0-2  3-4-3
 #                 d10/3  1-2   3-5   6-8   9-10     0-3  2-3-3-2
@@ -391,7 +402,7 @@ def rollDwarf():
     char.str = r2d5() +2                  #  4 - 12   8
     char.dex = r2d4()                     #  2 -  8   5
     char.con = r2d5() +2                  #  4 - 12   8
-    char.int = r2d5()                     #  2 - 10   6
+    char.int = r2d4() +2                  #  4 - 10   7
     char.psy = r2d4() +3                  #  5 - 11   8
     char.per = r2d5()                     #  2 - 10   6
     char.cha = r2d5() -1                  #  1 -  9   5
@@ -404,7 +415,7 @@ def rollDwarf():
     char.stam = 5 + r2d5()                #  7 - 15  11
     char.visRange = 15 + d5()             # 16 - 20  18
     char.visArc = 150 + d60()             # 151-210 180
-    char.visMode = "infra/dusk"
+    char.visMode = "infra+dusk"
     char.mana = r2d10()                   #  2 - 20  11
     char.ap = 3 + int(d10() / 9)          #  3 -  4   8,2
     char.xp = 105 + d20()                 # 106-125 115

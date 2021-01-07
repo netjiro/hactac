@@ -1,0 +1,20 @@
+
+
+str requirements are not directly connected with heaviness or range/span to enable higher dimensionality / variability in the tactical play.
+
+heaviness:         against opponents heaviness
+any diff outside +/-(span) goes against difficulty
+
+
+stamina cost:    norm sqrt(heaviness)
+attack:   full stamina cost
+defense:  half stamina cost
+
+
+
+? is it worth connecting with base stats, or better to keep it completely seperate ?
+weapon weight span is dependent on str      ?
+weapon range span is dependent on dex       ?
+weapon stamina cost is dependent on con     ?
+
+

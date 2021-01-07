@@ -271,6 +271,7 @@ quiver 50            0 3 0       1.5  +0.5*load (arrows/bolts)
 \goodbreak
 \phantomsection\addcontentsline{toc}{section}{basic equipment}
 \section*{Basic equipment price list}
+\label{sec:basicequipmentpricelist}
 
 Most basic equipment can be found in any village or town. Prices can vary quite a bit.
 
@@ -288,16 +289,21 @@ Most basic equipment can be found in any village or town. Prices can vary quite 
 
 knife                    5       0.25
 
-first aid kit          5 0       1.5    has 10 uses, refill for 3s
-medical kit          2 0 0       2.0    has 10 uses, refill for 10s
+scabbard/sheath/loop 0.1*weapon  0.1  ensures reliable weapon draw without roll
 
-simple food 5 days       1       5.0    simple food weigh 1enc per day's ration
-food & room 1 day        1       ---    common room sleeping, simple food
-provisions 1 day         1       0.5
-travel rations 1d        5       0.3    high quality travel food, last a while
-1l beer                  1       0.5
-10l barrel             1 0       5.0
-bottle of wine           2       0.5
+first aid kit          5 0       1.5  has 10 uses, refill for 3s
+medical kit          2 0 0       2.0  has 10 uses, refill for 10s
+
+food is generally poured or wrapped and then packed in flasks/bags/etc
+containers not included in the listed prices
+
+simple food 3 days       1       3.0  1enc per day's ration, spoils in 3 days
+food & room 1 day        1       ---  common room sleeping, simple food
+provisions 1 day         1       0.5  lasts a week
+travel rations 1d        5       0.25 high quality travel food, lasts for weeks
+large beer               1       1.0  enc when in flask/closed cup
+small beer barrel      1 0       5.0  10 large servings of beer
+bottle of wine           2       1.0
 coffee                   1       0.1  enough for a one cup dose, must be brewed
 spirits                  1       0.1  enough for a one swig dose.
 health elixir          3 0       0.1  heal 3hp (1/3r) draws 3mana+3stamina
@@ -312,7 +318,7 @@ warm clothing          5 0       2.0 (only when packed)
 
 blanket                  5       2.0
 bed roll               1 0       3.0
-tarp, waterproof       3 0       4.0 enough for a nice lean-to
+tarp, waterproof       3 0       4.0  enough for a nice lean-to
 
 belt 1 item  2.0 enc     5       0.2 (only when packed)
 belt 2 items 3.0 enc     8       0.3 (only when packed)
@@ -342,8 +348,8 @@ war horse           25 0 0       ~15 leagues/day    carries 90enc
 More expensive horses can travel further per day, and might give bonus to ride.
 Cheaper horses get tired faster and might give negative mods to ride.
 
-hand cart            1 0 0       load 10*(str-2) enc (max 50, str7) size 1x1
-small cart           3 0 0       1 pony/donkey, load 100 enc, size 1x1 or 2x2
+hand cart / barrow   1 0 0       load 10*(str-2) enc (max 50, str7) size 1x1
+small cart           2 0 0       1 pony/donkey, load 100 enc, size 1x1 or 2x2
 cart                 5 0 0       1 horse, load 200 enc, size 2x2
 wagon               10 0 0       1-2 horses, 2-6 ppl, load 300 enc, size 2x2 / 2x3
 large wagon         15 0 0       2-4 horses, 4-10 ppl, load 500 enc
@@ -504,7 +510,7 @@ glow fly             0 2 0  training command mod-3 +1/s, glow strength +1/s
 %\end{samepage}
 \normalsize
 
-Master crafted weapons can be purchased as "special" equipment, and usually cost 5x-10x the list value of the weapon plus a few gold as baseline cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
+Master crafted weapons can be purchased as special equipment, and usually cost 5x-10x the list value of the weapon plus a few gold as baseline cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
 
 A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of base value plus an extra gold or two. A custom weapon should not cost less than 3g.
 
@@ -553,7 +559,7 @@ Exotic equipment can sometimes be found in large cities, or just randomly here a
 
 antidote             1g/str      0.25  many different versions exist with
                                        different strengths, colours, etc.
-                                       for exotic poisons
+                                       for various poisons and venoms
 
 cure                 1g/str      0.25  various concoctions that might cure
                                        strange and exotic diseases
@@ -563,16 +569,16 @@ stamina potion       5 0 0       0.25  restores 12sta 6sta/r
 mana potion          5 0 0       0.25  restores 20mana in 1r
 pain killer          5 0 0       0.25  relieves 5 pain after 1r
 
-revival powder      15 0 0       1.0   resurrects a character in 10r incl prep
-                                       must also heal the character
-                                       to at least hp=1 (first aid/medic/pot).
+revival powder      15 0 0       1.0   resurrects a character in 9+d6 rounds,
+                                       remember to also "heal" the corpse first
+                                       to at least hp=1 (first aid/medic/potion)
                                        Large bag of white glittery powder.
 
 blast off            2 0 0       0.25  restores 5+1d5hp and all stamina in 5r
-                                       handle with care.
-                                       Can detonate: stun 9-3/sq from target.
+                                       handle with care:
+                                       can detonate: stun 9 -3/sq from target.
 
-exploway             4 0 0       0.25  maginade: stun 15-3/sq from target.
+exploway             4 0 0       0.25  maginade: stun 15 -3/sq from target.
 
 time fly             5 0 0       0.1   instant rewinds time one action, 
                                        ignores initiative.
