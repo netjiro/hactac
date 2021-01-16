@@ -1,3 +1,16 @@
+setup fresh maptool install (tested 1.4, 1.7):
+
+
+
+distances 1,2,1,2,...
+menu > edit > preferences > interactions >
+    Maps:
+        Movement metric :  ONE_TWO_ONE
+        New maps have Fog of War  :  check
+        New maps visible to players  :  no
+        New Map Light : DAY
+    Chat:
+        use tooltips for inline rolls  :  check
 
 
 
@@ -11,28 +24,29 @@ bottom right:
 		On Vertices  check
 
 
-enable fog of war on all maps, tooltips
-maptool 1.4:
-menu > edit > preferences:
-top left:
-	New maps have fog of war   check
-top right:
-	use tooltip for inline rolls
+
+menu > edit > campaign properties >
+    Token Properties >
+        import :  campaignproperties.mtprops       <<  remember to press "Update" and "OK"
 
 
 
+Import GM quick button functions (global macros):
+menu > Window >
+    Global  :  check
+in Global subwindow:
+    right click > import macro set  :  global.mtmacset
 
-Import functions (global):
-file: global-macros.mtmacset
 
 
 library function (library token)
-file: Lib_util.rptok
-name: Lib:util       <<  CRUCIAL !!  the imported token must be named "Lib:util"
+file: Lib_util.rptok    <<  name with "_" for windows compatibility, should be ":"
+name: Lib:util       <<  CRUCIAL !!  the imported token must be named "Lib:util" in game
 Must be added to ONLY ONE map in the campaign file.
+I usually use a hidden map "! playground" for lib token, auto spawn tokens, effect templates, various general region tokens, etc
+
 
 
 campaign functions (specific for each campaign)
-
-
+got nothing here yet, usually use global for GM and token specific macros
 

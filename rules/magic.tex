@@ -36,7 +36,8 @@ The magic skill is also used when trying to understand magical texts and foreign
 Note: Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power, and some items are powered by themselves or other sources.
 
 
-\item[Skill cost special "spell caster":] is required to be able to learn and cast spells. It is not required for the use of magical items nor to train the magic skill.
+%"spellcaster":] "spell caster":]
+\item[Skill cost special "spellcaster":] is required to be able to learn and cast spells. It is not required for the use of magical items nor to train the magic skill.
 
 The xp cost to train spell caster varies depending on the total xp of the character, increasing as the character advances:\\
 If trained at character creation it costs 20xp.\\
@@ -44,7 +45,7 @@ After that it costs 20 + (total xp / 10).\\
 E.g: For a 123xp Hero it costs 33xp, and for a 358xp Hero it costs 56xp to train spell caster.
 
 
-\item[Skill scf 1.0: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more mana than his skill in power casting. This cannot be used to raise the end total chance of success above 9.
+\item[Skill scf 1.0: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more extra mana than his skill in power casting. This cannot be used to raise the final total chance of success above 9.
 
 Mana spent for power casting is not counted to the maximum total limit set by the caster's magic skill level.
 
@@ -52,22 +53,25 @@ Mana spent for power casting is not counted to the maximum total limit set by th
 \item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
 
-\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight, and similar, GM discretion.
-\\ \todo fix "pinpoint on map" issues, miss allowance distance = lvl squares.
+\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight (int roll), and similar, GM discretion.
+\\ \todo finish "indirect strike" with "pinpoint on map" issues, miss allowance distance = lvl squares.
 
 
-\item[Skill scf 2.0: "blood magic":] The dark arts train the caster to perform heinous acts of ritual sacrifice. By bloodletting a victim the caster can convert hp to temporary mana. Blood magic mana points form an ephemeral temporary mana pool which is not added to the caster's mana. It cannot be stored and must be used within victim psy rounds or evaporate. The evaporation timer starts next round after the ritual has finished. Casting from the mana pool is mod-1.
-The caster can't build a sacrificial mana pool larger than his lowest value of psy, magic, and blood magic. The caster can sacrifice more than one victim to build the mana pool, with the lowest victim psy limiting the evaporation timer after the last of the chained rituals finish.
+\item[Skill scf 2.0: "blood magic":] The dark arts train the caster to perform heinous acts of ritual sacrifice. By bloodletting a victim the caster can convert hp to temporary mana. Blood magic mana points form an ephemeral temporary mana pool which is not added to the caster's mana. It cannot be stored and must be used within victim psy rounds or start to evaporate at 1 mana per round. The evaporation timer starts next round after the ritual has finished. Casting from the blood magic mana pool is mod-1.
 
-Roll for the blood magic skill at the end of the ritual. A failed sacrifice yields no mana. A success=0 converts bloodlet mana to castable mana at 0.5, success+3 converts at 0.66, success+6 at 0.8, success+9 at 1.0.
+The caster can't build a sacrificial mana pool larger than his lowest value of psy and magic, plus the lvl of blood magic. The caster can sacrifice more than one victim to build the mana pool by killing one victim after the other, or have henchmen help out. Each victim adds +1 to the evaporation timer, but it is the victim with the lowest psy that sets the base value for the evaporation timer after the last of the chained rituals finish. \emph{So make sure your goons don't bring you substandard victims.}
+
+Roll for the blood magic skill at the end of the ritual. A failed sacrifice yields no mana. A success=0 converts bloodlet mana to the mana pool at 0.5, success+3 converts at 0.66, success+6 at 0.8, success+9 at 1.0.
 
 Sacrificing other: The ritual requires direct access to the victim. The ritual takes 3r +1r/m, where the caster carves and slashes the victim to carefully bleed him and get 1m/3hp of damage inflicted. If this kills the target the ritual yields the victims psy/3 as bonus mana at time of death.
 The caster can use medicine/3 as bonus to the roll, or a successful first aid as a +1 bonus.
-Both caster and target must be in base contact and stationary during the ritual, and the caster can't move further than psy sq away from the victim before casting. The victim must be willing or restrained during the ritual.
+Both caster and target must be in base contact and stationary during the ritual, and the caster can't move further than psy sq away from the victim before casting. The victim must be restrained, or willing, during the ritual.
 
 Sacrificing self: The caster can take 1r to draw up to 1 + blood magic/3 mana by sacrificing hp for mana 1:1. Carving and slicing is not needed for self sacrifice. There are no range or movement limitations when sacrificing self.
 
 The blood magic mana are never added to the caster's mana, or stored somewhere. It's ephemeral and temporarily bound to the body of the victim until used for spellcasting or it evaporates.
+
+Henchmen helping out with the sacrifice rituals must train "bloody handy" for 10xp, but are limited by their own psy in how many mana points they can extract from the victim.
 
 
 \item[Skill scf 3.0 "drainage ritual":] Similar to blood magic, but drains mana directly from the victim. The ritual takes 5r to start then the caster must pass psy vs psy against the victim each round to drain 1+success/3 mana.
@@ -102,7 +106,7 @@ Spells that have range don't allow for short,long,vlong,extreme range modificati
 
 \begin{description}
 
-\item[Skill scf x.x: \emph{spell}] Most spells have a default skill cost factor of 0.33. Some spells are cheaper, some more expensive. Some spells have minimum requirements on psy or int. 
+\item[Skill scf x.x: \emph{spell}] Most spells have a default skill cost factor of 0.33. Some spells are cheaper, some more expensive. Some spells have minimum requirements on psy or int.
 
 If the character does not meet the int requirements, then the cost of the spell is doubled for each missing int point: e.g: Wizard Woolhead has int 4 and wants to learn an int 7 spell. He is missing 3 int points, thus the spell costs $2^3=8$ times as much to learn. He then spends his xp on a simpler spell.
 
@@ -157,7 +161,7 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 % ok to have psy+3 dam+pen + scale (psy+3)/4 per mana for 1-2r casting
 % range 10 as baseline, trade 1dam/pen for 5 range
 % usually no extended ranges, all based on one max range, some with long etc
-% 
+%
 
 
 
@@ -190,11 +194,11 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 % no shield defence or cover for bolts
 % no shooting into melee mods
 % no movement speed mods
-% 
+%
 % base dam  psy+2
 % base range 10
 % base cast 2r for spear and strike, 3r for bolt
-% 
+%
 % dam class time    base int   dam/psy
 % dam 1-3    1a/3ap  int6       dam = psy    4ap : dam=psy+1 or extra effect ?
 % dam 4-6    1r      int5       dam = psy+1  or psy=dam +pen1
@@ -203,7 +207,7 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 %
 % ? but can't generally scale base damage higher than (psy dam) / mana
 % ? even at long times
-% 
+%
 % treat penetrating as dam+3 on average,   trade dam <> pen equally
 %
 %
@@ -229,7 +233,7 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 %
 % treat bolt as one class higher than spear or strike :  more useful, no target mods
 % treat ball as two classes higher than spear and strike  :  are effect, no mods
-% 
+%
 %
 % Trade cast time and range against damage and psy int requirements
 % DONT trade more than one time class !!!  NOT 3r > 2r > 1r for int+6 psy+6
@@ -237,13 +241,13 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 % cast 3r > 2r        dam-3 /  psy+3 & int+3
 % cast 2r > 1r        dam-3 /  psy+3 & int+3
 % cast 1r > 3ap       dam-3 /  psy+3 & int+3
-% 
+%
 % range 10 > 15       dam-2 / cast+1r
 % range 10 > 20       dam-3 / cast+1r
 % allow long @dam-2   dam-1
 % area effect         dam-2 per radius+1  /alt  cast+1r per radius
-% 
-% 
+%
+%
 % int 3 as base for normal complexity
 % int+2 for multi target
 % int+2 for area effect, int+1 per extra radius+1
@@ -256,7 +260,7 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 % trade range-5 for int-1
 % trade range touch for int-3 ?
 %
-% 
+%
 % Examples below are BOLTS and thus +1r casting
 % comparable spear/strike should be   3r >> 2r,   2r >> 1r,   1r >> 3ap
 %
@@ -266,21 +270,21 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 %              range +5/m                   int+1
 %              >>                           int 6, psy 9
 %
-% shock bolt   cast 3r  !! dam 9 fundament  range 20  dam-3 
+% shock bolt   cast 3r  !! dam 9 fundament  range 20  dam-3
 %              dam psy+0 dam+/m ppp         base psy+2, dam-2 ppp, int+1
 %              range 20                     range 20  dam-3
 %              range long @dam-3            dam-1, but take int+2 instead ?
 %              range+/m                     int+1
 %              >>                           int 8, psy 9
-% 
+%
 % force bolt   cast 1r      (2r>>3ap : dam-3, psy+3 & int+3)  psy+2,-3=psy-1
 %              range 10                     --
-%              
 %
 %
 %
 %
-% stun effects ?   
+%
+% stun effects ?
 %
 % add stun:   int+1,  stun3 = dam-1
 
@@ -301,14 +305,14 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 %\openspellslist
 %
 %\spell{Ur Bolt} int 3, psy 3, scf 0.33, \\
-%cast 2r 1m, 
-%dam 6, 
+%cast 2r 1m,
+%dam 6,
 %range 10 \\
 %\textit{Of Ebedan Ur, oldest of bolts, archetypical of the ancient spellcasting arts of killing. A quick flash of clear blue light, sharp crack, smell of dry parchment. But when cast less eloquently it's well known to produce the soft quack of a drunk duck and a faint smell of old wine.}
 %
 %\spell{Onsager Spear} int 6, psy 7, scf 0.33, \\
-%cast 3r 1m, 
-%dam 10 +3/m, 
+%cast 3r 1m,
+%dam 10 +3/m,
 %range 10 +5/m \\
 %\textit{The Onsager battle monks developed a simple martial spellcasting creed, and the Spear is their most classic, simple, and well known infantry battle spell. It's unknown how they managed to bring their massed infantry to the required mental capacity.}
 %
@@ -316,14 +320,14 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 %
 %\spellslistnote{Jeremiah Black, with no imagination and well known to never drink anything stronger than the milk of his two headed goats. Survived only by his most traditional, efficient, and horribly boring Black Bolts. They tend to have high requirements but have been shown to be highly effective in a wide range of situations.}
 %
-%\spell{Black Bolt} cast 2r 1m, 
+%\spell{Black Bolt} cast 2r 1m,
 %dam 9 +3/m penetrating,
 %range 10 +5/m,
 %int 6 psy 7 \\
 %\textit{A faster cast, medium power version, of Black's bolt library.}
 %
 %\spell{Black Bolt} int 6, psy 9, scf 0.33, \\
-%    cast 1r 1m, 
+%    cast 1r 1m,
 %    dam 6 +2/m penetrating,
 %    range 10 +5/m,
 %    int 6 psy 9\\
@@ -344,7 +348,7 @@ When the spells are new they are in flux. Prototypes. And they have to be tested
 
 \subsection*{Bolts, lances, missiles, strikes, sparks, etc}
 %----------------------------------------------------------
-Many offensive spells have similar general mechanics. 
+Many offensive spells have similar general mechanics.
 
 \begin{description}
 
@@ -356,7 +360,7 @@ These spells are more powerful than the spear or strike categories and often req
 
 
 \item[spear, lance, dart, arrow, quarrel, missile:]
-These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mod the spell casting roll directly. These are the same to-hit target mods as a firing arrows from a bow would take. 
+These work similar to projectiles. The spells take target \emph{to hit} mods directly as casting mods. Target size, target movement speed, partial cover, shields in the way, shooting into melee, fire, etc all mod the spell casting roll directly. These are the same to-hit target mods as a firing arrows from a bow would take.
 
 %TODO: think there are edge cases where this will not work right
 
@@ -367,7 +371,7 @@ Often the spell formation shoots in a rapid line to hit the target, or whatever 
 Since the spell behaves like a projectile, taking mods like a bow or crossbow, skills like sniper, lead target, etc work to alleviate those mods, just like for bows.
 
 
-\item[strike, chock, flash:] 
+\item[strike, chock, flash:]
 These are mental target lock spells that take casting mods based on target psy, actions, and magic training. Thus they tend to be less useful against other spellcasters. The casting roll takes the following mods, stacking, based on target:\\
 mod -(target psy / 3)\\
 mod -3 if target takes a 3ap action to resist the spell\\
@@ -376,9 +380,9 @@ mod -(target magic lvl / 3) (rd) E.g: magic 4 : mod-2
 %              ignores target move mods, shooting into melee mods
 %              BUT: they take cast mods for target psy, if target resists,
 %                   and if the target knows magic skill.
-%                   mod -(target psy / 3), 
-%                   mod -3 if target takes a 3ap action to resist 
-%                   mod -(target magic lvl) 
+%                   mod -(target psy / 3),
+%                   mod -3 if target takes a 3ap action to resist
+%                   mod -(target magic lvl)
 %              Hence, almost useless against wizards
 
 
@@ -406,7 +410,7 @@ Keregt Strike  cast 2r, 1m, dam 8,
 ---------------
 
 black bolt     cast 3r 1m, dam 9 +3/m, penetrating,
-               range 10, 
+               range 10,
                int 5, psy 9
 
 black bolt     cast 2r 1m, dam 6 +2/m, penetrating,
@@ -449,7 +453,7 @@ drain          cast 5r 1m, psy/2 vs psy, range contact
                gained mana goes directly to caster's mana.
                Must be in contact during whole casting.
                Cannot drain the target below 0 mana. If draining the target to
-               0 mana the target must roll psy or falls unconscious. 
+               0 mana the target must roll psy or falls unconscious.
                Target roll psy once per round to wake up again.
                cost 30xp + scf 1.0, int 12, psy 12
 
@@ -468,7 +472,7 @@ revive         cast 10r 5m, psy/2 vs psy +1/m, the dead wanna stay dead.
 
 \
 
-\noindent 
+\noindent
 The spells listed below are not re-balanced yet.\\
 See balance guidelines in comment segment above.
 
@@ -654,7 +658,7 @@ open door      cast 3ap 1m, range 15 +10/m, targets +1/m
 
 close door     cast 3ap 1m, range 15 +10/m, targets +1/m
                Close a door.
-               If caster has seen the door before he doesn't need line of 
+               If caster has seen the door before he doesn't need line of
                sight if he can pass an int-3 roll.
                scf 0.2
 
@@ -802,13 +806,13 @@ poison gas     cast 3r 2m, , area radius 4 +1/m, duration 10r +5r/m
 
 fumbly         cast 2r 1m, duration 5r +2/m, range 5 +2/m, target 1 +1/m
                Gives a base mod-3 -1/m to all actions during the duration.
-               Failures under fumbly have more severe effects than 
+               Failures under fumbly have more severe effects than
                normal failures.
                int 4, psy 4
 
 fumble         cast 3ap 1m, duration 1r +2/m, range 10 +5/m, target 1 +1/m
                Gives base mod-3 -1/m to all actions during the duration.
-               Failures under fumble have more severe effects than 
+               Failures under fumble have more severe effects than
                normal failures.
                int 4, psy 4
 
@@ -995,13 +999,13 @@ hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
 
 \
 
-More spells on the way, not balanced 
+More spells on the way, not balanced
 
 \
 
 \small \begin{verbatim}
 destructive dispel
-    cast 1r, 1m, range 20 +10/m, 
+    cast 1r, 1m, range 20 +10/m,
     psy+3/m vs psy+mana
     blast with range of target spell mana
     damage is target spell mana
@@ -1044,13 +1048,13 @@ one hand
     cast 3r 1m, range 10 +5/m, duration 5r +3/m
     One of the target's limbs is paralysed and useless.
     psy+3/m vs psy each round to maintain spell after first round.
-    
+
 other's hand
     cast 3r 1m, range 10 +5/m, duration 5r +3/m
     The caster takes control of one of the target's limbs.
     Any actions taken with the limb are paid from the caster's ap, and are
     slow 1 ap from usual cost. Any action requires a roll to succeed limited by
-    the minimum of any skill the action requires and the success diff of the 
+    the minimum of any skill the action requires and the success diff of the
     psy vs psy control roll for the round:
     Control: psy+3/m vs psy each round to maintain spell after first round.
     Maintenance: int-1, psy-1
@@ -1076,7 +1080,7 @@ other base stat reduction spells
 
 shrubrunner
     cast 3r 1m, range touch, duration 10r+5/m
-    grows strange magical claws around hands and feet, 
+    grows strange magical claws around hands and feet,
     allowing to move very fast in woods and shrubs, but slowly on flat terrain.
     Shrubs, trees, forest that is normally x2 movement cost is now normal cost.
     Flat terrain that would normally be x1 movement cost is now x2 terrain.
@@ -1114,7 +1118,7 @@ I fully expect some people to really dislike this stuff. So, just ignore it. Tha
 
 \small \begin{verbatim}
 skipround
-    the target of the spell skips his next turn, or X turns. 
+    the target of the spell skips his next turn, or X turns.
     Cannot take action or movement.
 
 untargetable
@@ -1126,7 +1130,7 @@ declaration lock
     X future rounds.
 
 southblock   (northblock, eastblock, westblock)
-    the target cannot, under any circumstances, move further south than his 
+    the target cannot, under any circumstances, move further south than his
     current coordinates on the map.
 \end{verbatim} \normalsize
 
@@ -1172,8 +1176,8 @@ Blast Off      Beautiful crystal vial of clear liquid. Costs ~5gold.
 
 The Seeking    mod+3, dam 5, range 16, str 3 (no str bonus)
 Bow            range mods as regular bow, rate of fire as regular bow,
-               The arrows will always curve and re-target to the largest 
-               creature within range 10 regardless where it is aimed 
+               The arrows will always curve and re-target to the largest
+               creature within range 10 regardless where it is aimed
                (except user). Outside range 10 it gives a mod+1 to hitting the
                selected target. Largest is decided by base size, or str.
                Fuck-off Fred swears it seems to like friendly fire.
@@ -1196,7 +1200,7 @@ Morningstar    and forcibly draws 1 mana from the user,
 
 Terribly       A magical torch with a perpetual soft bioluminescence (range 8).
 Tasty          It grows magical glowing mushrooms from the top.
-Torch          They are very tasty. Any monsters nearby (distance 3) must 
+Torch          They are very tasty. Any monsters nearby (distance 3) must
                succeed a psy roll or get the torch and eat the top mushrooms.
                They grow back in a day, but the torch is dark without them.
                Eating the mushrooms will cause "frenzy" (see spell)
@@ -1206,7 +1210,7 @@ Torch          They are very tasty. Any monsters nearby (distance 3) must
 The DMT of     The last person who found out what DMT stood for died in the
 Dread and      process. It is a box of tools, and it gives off a soft "ping"
 Utility        at regular intervals. A hammer is missing.
-               It gives a +6 to mechanical, locks, traps rolls, 
+               It gives a +6 to mechanical, locks, traps rolls,
                and +3 to McGyverism, find, dungeoneering rolls
 
 The Shiny      The helmet really shines. Provides a 20 distance bright light.
@@ -1344,8 +1348,8 @@ Plate Mail     (round to nearest). Thus for heavy opponents it can
                useless.
 
 TurBoots       Magical stuffed fish slippers. Spend a mana and increase your
-               movement: m+1 w+2 r+4 d+8. Must roll dex at end of movement 
-               or fall. Take mod+3 to the roll if going off balance. Or just do 
+               movement: m+1 w+2 r+4 d+8. Must roll dex at end of movement
+               or fall. Take mod+3 to the roll if going off balance. Or just do
                a faceplant as a controlled fall.
                Or get the maneuver "TurBoot Shuffle" (5xp) to skip the dex roll.
 
@@ -1356,8 +1360,8 @@ Football       glow 2sq light, destructive feedback triggered range 6sq
                triggers on any casting in range, 8 charges
                -- TODO: -- alt text --
                activates when thrown, deactivates when packed away, 8 charges
-               attack on touch or detecting casting within 6sq: destructive 
-               feedback draws 1d6 mana for max 6 dam, penetrating : 
+               attack on touch or detecting casting within 6sq: destructive
+               feedback draws 1d6 mana for max 6 dam, penetrating :
                resistance 15 vs psy
                -- Goblin Destiny -- text --
     feedback football - small angry glowing ball (2sq light)  25hp abs5

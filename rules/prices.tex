@@ -65,8 +65,6 @@ Not all equipment or properties can be boosted like this. An abs 2 leather armou
 \section*{Weapons and armour}
 
 
-
-
 % try keeping the price list looking good.
 % just insert the line blow to allow page break at a good place
 %\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
@@ -194,24 +192,24 @@ heavy javelin          2 5       0.66
 dart                     5       0.1
 
 
-short bow              3 0       0.75
+small bow              3 0       0.75
 bow                    6 0       1.0
-heavy bow            1 0 0       1.5
+large bow            1 0 0       1.5
 longbow              1 2 0       2.0   military, much cheaper in bulk
 heavy longbow        1 8 0       2.5
 
 normal arrows          1 0       0.33  10 arrow bundle
-cheap arrows             1       0.33  10 arrow bundle
-for special arrows, see special equipment section
+cheap arrows             1       0.33  10 arrow bundle, mod-1 dam-1, no reuse
+for special arrows, see below
 
 
 small crossbow       1 0 0       1.0   military, much cheaper in bulk
 crossbow             2 0 0       1.5   military, much cheaper in bulk
-heavy crossbow       3 0 0       2.0   military, much cheaper in bulk
+large crossbow       3 0 0       2.0   military, much cheaper in bulk
 
 normal bolts           1 0       0.25  10 bolt bundle
-cheap bolts              1       0.25  10 bolt bundle
-for special bolts, see special equipment section
+cheap bolts              1       0.25  10 bolt bundle, mod-1 dam-1, no reuse
+for special bolts, see below
 
 
 arbalest             6 0 0       3.0   special military, cheaper in bulk
@@ -228,36 +226,52 @@ heavy ballista      50 0 0     200.0 mounted weapon
 ballista ammunition, ca 5-50 copper per shot
 
 
-\end{verbatim} \normalsize
-
-\
-
-\TODO remove old price list, go through to carry things over to new list above
-
-
-%\small \begin{samepage} \begin{verbatim}
-\small \begin{verbatim}
                      g s c    encumbrance
                      -----    -----------
 
+Speciality bolts and arrows tend to be single use, or possibly a few times.
+They easily break or get damaged to the point where their extra properties
+are lost to damage. At which point they are useless or work as regular arrows
+with some negative mods: mod-1 / dam-1 / pen-1
 
-crossbow             1 0 0       1.0   military, much cheaper in bulk
-heavy crossbow       2 0 0       1.5
-arbalest             6 0 0       2.0
-light ballista      20 0 0      10.0
-ballista            30 0 0      20.0
+Specialty arrows and bolts are special equipment and not readily available eveyrwhere, but most fletchers can manufacture a few specials on request, at higher cost.
 
-bowstring            0 0 2       0.1
-10 arrows            0 0 1       0.33
-10 bolts             0 0 1       0.25
-quiver 10            0 0 5       0.5  +0.5*load (arrows/bolts)
-quiver 20            0 0 8       0.8  +0.5*load (arrows/bolts)
-quiver 30            0 1 0       1.0  +0.5*load (arrows/bolts)
-quiver 50            0 3 0       1.5  +0.5*load (arrows/bolts)
+bow arrows:
+10 normal arrows       1 0       0.33  no mods
+10 cheap arrows          1       0.33  mod-1 dam-1, cannot be reused
+10 fine arrows       1 0 0       0.33  mod+1
+10 barbed arrows       5 0       0.33  dam+1
+10 sharp arrows        5 0       0.33  pen+1
+10 piercing arrows     2 0       0.33  mod-1 dam-1 pen+1
+10 broadhead arrows    2 0       0.33  mod-1 dam+1 pen-1
+10 fire arrows         3 0       0.5   mod-2 dam-1 range-25%
+                                       oil splash dam 3/r for 5r or until doused
+                                       light source as torch, burns 5r
+                                       light 1a with fire source
+10 torch arrows        3 0       0.5   mod-2 dam-2 range-25%
+                                       light source as torch, burns 10r
+                                       light 1a with fire source
+10 candle arrows       3 0       0.5   mod-2 dam-2 range-25%
+                                       light source as candle, burns 20r
+                                       light 1a with fire source
 
+crossbow bolts:
+10 normal bolts        1 0       0.25  no mods
+10 cheap bolts         0 1       0.25  mod-1 dam-1, cannot be reused
+10 fine bolts        1 0 0       0.25  mod+1
+10 barbed bolts        5 0       0.25  dam+1
+10 sharp bolts         5 0       0.25  pen+1
+10 piercing bolts      2 0       0.25  mod-1 dam-1 pen+1
+10 broadhead bolts     2 0       0.25  mod-1 dam+1 pen-1
+
+arbalest bolts:
+10 broadhead bolts     3 0       0.5   see arbalest
+10 spikehead bolts     5 0       0.5   see arbalest
+10 blunthead bolts     5 0       0.5   see arbalest
+10 fine version      2 0 0       0.5   mod+1
 \end{verbatim} \normalsize
-%\end{verbatim} \end{samepage} \normalsize
-\goodbreak
+
+
 
 
 
@@ -267,8 +281,6 @@ quiver 50            0 3 0       1.5  +0.5*load (arrows/bolts)
 %basic equipment
 %---------------
 
-%\begin{samepage}
-\goodbreak
 \phantomsection\addcontentsline{toc}{section}{basic equipment}
 \section*{Basic equipment price list}
 \label{sec:basicequipmentpricelist}
@@ -276,14 +288,8 @@ quiver 50            0 3 0       1.5  +0.5*load (arrows/bolts)
 Most basic equipment can be found in any village or town. Prices can vary quite a bit.
 
 
-% try keeping the price list looking good.
-% just insert the line blow to page break at a good place
-%\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
-
-
 \small
-%samepage started before the section heading
-\goodbreak \begin{verbatim}
+\begin{verbatim}
                      g s c    encumbrance
                      -----    -----------
 
@@ -376,7 +382,7 @@ large snare          0 1 0       1.0 or 0.2 when packed. trap: 1sq 66%
 trigger snare        0 5 0       2.0 or 0.5 when packed. trap: 1sq 90%
 rock wedge / piton   0 0 5       0.25  anchoring str 20
 dirt wedge / piton   0 1 0       0.5   anchoring str 10
-\end{verbatim} %\end{samepage} \goodbreak
+\end{verbatim}
 \normalsize
 
 
@@ -398,50 +404,6 @@ The prices vary quite a bit, half or double price is nothing strange.
 
 \small
 \begin{verbatim}
-                     g s c    encumbrance
-                     -----    -----------
-
-Speciality bolts and arrows tend to be single use, or possibly a few times.
-They easily break or get damaged to the point where their extra properties
-are lost to damage. At which point they are useless or work as regular arrows
-with some negative mods: mod-1 / dam-1 / pen-1
-
-bow arrows:
-10 normal arrows       1 0       0.33  no mods
-10 cheap arrows          1       0.33  random: mod-1 or dam-1, cannot be reused
-10 fine arrows       1 0 0       0.33  mod+1
-10 barbed arrows       5 0       0.33  dam+1
-10 sharp arrows        5 0       0.33  pen+1
-10 piercing arrows     2 0       0.33  mod-1 dam-1 pen+1
-10 broadhead arrows    2 0       0.33  mod-1 dam+1 pen-1
-10 fire arrows         3 0       0.5   mod-2 dam-1 range-25%
-                                       oil splash dam 3/r for 5r or until doused
-                                       light source as torch, burns 5r
-                                       light 1a with fire source
-10 torch arrows        3 0       0.5   mod-2 dam-2 range-25%
-                                       light source as torch, burns 10r
-                                       light 1a with fire source
-10 candle arrows       3 0       0.5   mod-2 dam-2 range-25%
-                                       light source as candle, burns 20r
-                                       light 1a with fire source
-
-crossbow bolts:
-10 normal bolts        1 0       0.25  no mods
-10 cheap bolts         0 1       0.25  random: mod-1 or dam-1, cannot be reused
-10 fine bolts        1 0 0       0.25  mod+1
-10 barbed bolts        5 0       0.25  dam+1
-10 sharp bolts         5 0       0.25  pen+1
-10 piercing bolts      2 0       0.25  mod-1 dam-1 pen+1
-10 broadhead bolts     2 0       0.25  mod-1 dam+1 pen-1
-
-arbalest bolts:
-10 broadhead bolts     3 0       0.5   see arbalest
-10 spikehead bolts     5 0       0.5   see arbalest
-10 blunthead bolts     5 0       0.5   see arbalest
-10 fine version      2 0 0       0.5   mod+1
-
-
-\end{verbatim} \goodbreak \begin{verbatim}
 antidote             1s/str      0.25  many different versions exist with
                                        different strengths, colours, etc.
 
@@ -507,7 +469,6 @@ glow fly             0 2 0  training command mod-3 +1/s, glow strength +1/s
 
 
 \end{verbatim}
-%\end{samepage}
 \normalsize
 
 Master crafted weapons can be purchased as special equipment, and usually cost 5x-10x the list value of the weapon plus a few gold as baseline cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
@@ -580,7 +541,7 @@ blast off            2 0 0       0.25  restores 5+1d5hp and all stamina in 5r
 
 exploway             4 0 0       0.25  maginade: stun 15 -3/sq from target.
 
-time fly             5 0 0       0.1   instant rewinds time one action, 
+time fly             5 0 0       0.1   instant rewinds time one action,
                                        ignores initiative.
 
 sentinel base        5 0 0       5.0   15 charge ghost warrior

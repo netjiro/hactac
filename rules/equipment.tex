@@ -59,7 +59,7 @@ And while we're at it, I also have this wonderful ...
 
 Weapons vary greatly in how they behave in game. Damage, absorption, penetration, speed, reach, modifications to attacks or parries, or how difficult they are to parry or avoid, special versions of attacks, and so on.
 
-The weapons listed below are the common weapon types and sizes. Custom made weapons are treated further down. 
+The weapons listed below are the common weapon types and sizes. Custom made weapons are treated further down.
 
 There is no realism here. Weapon and equipment names, general and relative statistics, etc, have nothing to do with the real world. Everything is chosen simply to sound interesting and convey some colour to general players who have not spent time studying historical weapons, armour, and equipment. Lots of names like longsword, baselard, estoc, etc, have been heretically misappropriated for fun and flair. These are all fantasy weapons, imagine them like fairytale and fantasy story illustrations, not like actually really useful items.
 
@@ -88,11 +88,11 @@ Damage stats are supposed to be read as 1dX. E.g: the sword does 1d6 damage not 
 
 \item[todefend] modifier applied to the target for any defensive action against the incoming attack, including avoid, parry, deflect, etc.
 
-\item[toparry] modifier applied to the target for a defensive parry or deflect action against the incoming attack. 
+\item[toparry] modifier applied to the target for a defensive parry or deflect action against the incoming attack.
 
 \item[toavoid] modifier applied to the target for a defensive avoid action against the incoming attack.
 
-\item[finesse] is an inherent limitation of the weapon on how extra difficult the attacks can be made for the target to defend against when the attacker is using the fancy attacks skill or tricky attack maneuvers. 
+\item[finesse] is an inherent limitation of the weapon on how extra difficult the attacks can be made for the target to defend against when the attacker is using the fancy attacks skill or tricky attack maneuvers.
 
 E.g: Fancy Fred has fancy attacks 5 but swinging an axe which has finesse 3 and toparry-1 toavoid+1. FF cannot make the attacks more difficult than toparry-4 and toavoid-2, since the weapon finesse is the limiting factor. With a proper sword with finesse 6 FF could use his whole fancy attacks 5 giving his attacks a todefend-5 difficulty.
 
@@ -372,17 +372,17 @@ large pick axe      dam 6, pen 4, parry-3, toavoid+2, finesse-2
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Staffs and Spears
-spear slash maneuver costs 5xp and does slashing instead of piercing damage, 
+spear slash maneuver costs 5xp and does slashing instead of piercing damage,
 but with dam-1 modifier.
 
-Spears, pikes and halberds with enough reach can be used to attack over 
-the shoulder or shield of a friend in a two layer formation. This requires 
-phalanx of both characters. A three layer formation is possible if the 
+Spears, pikes and halberds with enough reach can be used to attack over
+the shoulder or shield of a friend in a two layer formation. This requires
+phalanx of both characters. A three layer formation is possible if the
 first front line is kneeling or formed of shorter characters.
 
 heavy versions of staffs and spears have +2dam +4abs -1finesse for +2str
 but also raising the fast 1 for staffs to double strength and dex requirements
-and rasing max str bonus by +1 for staves 
+and rasing max str bonus by +1 for staves
 and and max str and pen bonus by +1 for spears.
 and adding slow 1 to spears unless additional +2 str are met (+4 total)
 
@@ -666,6 +666,7 @@ thick cloth    str 1 (str penalties affect all actions)
                martial arts mod-1
                sneak mod-1
                spellcasting mod-1
+               swim mod-1
                takes 2 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
 chain mail     abs 2 ring, scale, brigantine, etc
@@ -677,6 +678,7 @@ brigandine     dex-1
                martial arts mod-2
                spellcasting mod-2
                sneak mod-3
+               swim mod-3
                takes 3 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
 plate mail or  abs 3 plate armour of various sorts, incl helmet
@@ -688,6 +690,7 @@ h brigandine   dex-2, yield bonus -1
                martial arts mod-3
                spellcasting mod-3
                sneak mod-4
+               swim mod-4
                avoid mod-1
                max stamina mod-1
                Turning as separate actions cost more ap:
@@ -705,6 +708,7 @@ full plate     abs 4 full plate armour with full helmet
                tackle mod+1
                spellcasting mod-4
                sneak mod-5
+               swim mod-5
                avoid mod-2
                max stamina mod-2
                Turning as separate action cost more ap:
@@ -722,6 +726,7 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                tackle mod+2
                spellcasting mod-6
                sneak mod-6
+               swim mod-6
                avoid mod-3
                max stamina mod-3
                Turning as separate action cost more ap:
@@ -732,7 +737,7 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
 
 \
 
-Custom armour can have different stats, but keep in mind that an extra +1 abs is a very potent and heavy customisation, better to start at the given abs and look at what penalty mods you want to change for the custom armour. E.g: an expensive darkened matte black leather armour without the sneak mod, for a much higher price.
+Custom armour can have different stats, but keep in mind that an extra +1 abs is a very potent and heavy customisation. Better to start at the given abs and look at what penalty mods you want to change for the custom armour. E.g: an expensive darkened matte black leather armour without the sneak mod, for a much higher price.
 
 
 \subsection*{Ranged weapons}
@@ -747,10 +752,11 @@ Thrown weapons can also be used as poor versions of similar melee weapons in a p
 
 \
 
+\todo rewrite throwing weapons
 \goodbreak \small \begin{samepage} \begin{verbatim}
-Throwing an already held weapon is a regular 3ap action. Drawing and throwing 
-in one go is a 1r action. Faster throwing gives mods which can be mitigated by 
-quick shot. Manually drawing with quickdraw then throwing as already held might 
+Throwing an already held weapon is a regular 3ap action. Drawing and throwing
+in one go is a 1r action. Faster throwing gives mods which can be mitigated by
+quick shot. Manually drawing with quickdraw then throwing as already held might
 be better if the user is skilled in quickdraw.
 
 Draw and throw:
@@ -794,7 +800,7 @@ throwing dagger   dam 3 : or : dam 3 mod-(target abs)
 small throwing    dam 4
 axe               range 6 + max(str,dex)/3
                   str 2 (str bonus: dam+1)
-                  melee: mod-1, dam 4, abs 3, parry-4, toparry-1, toavoid+1, 
+                  melee: mod-1, dam 4, abs 3, parry-4, toparry-1, toavoid+1,
                   finesse-2
                   str 2 (str bonus: dam+1)
                   swing: slow 1 mod-1 dam+2 toavoid+2
@@ -802,7 +808,7 @@ axe               range 6 + max(str,dex)/3
 throwing axe      dam 6
                   range 5 + max(str,dex)/3
                   str 4 (str bonus: dam+1)
-                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1, 
+                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1,
                   finesse-2
                   str 4 (str bonus: dam+2)
                   swing: slow 1 mod-1 dam+2 toavoid+2
@@ -810,7 +816,7 @@ throwing axe      dam 6
 large throwing    dam 8
 axe               range 4 + max(str,dex)/3
                   str 6 (str bonus: dam+2)
-                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1, 
+                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1,
                   finesse-2
                   str 6 (str bonus: dam+3)
                   swing: slow 1 mod-1 dam+2 toavoid+2
@@ -829,7 +835,7 @@ large javelin     dam 5, penetrating 1,
 \end{verbatim} \blocklistgap \begin{verbatim}
 improvised:
 
-stones            dam = 1+str/3, range = max(str,dex) 
+stones            dam = 1+str/3, range = max(str,dex)
                   select stones to trade between damage and range:
                   trade dam-1 for range+3
 \end{verbatim} \blocklistgap \begin{verbatim}
@@ -844,7 +850,7 @@ club:  mod-2, dam-2, range 5
 \
 
 
-\noindent Bows, crossbows, arbalests, and ballistas use arrows, bolts, darts, javelins, spears, or stones as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar.
+\noindent Bows, crossbows, arbalests, and ballistas use arrows, bolts, darts, javelins, spears, or stones as ammunition. All rate of fire info below assumes that arrows are available from a readied easy to reach quiver, stuck in the ground, or similar. The ammo container does not have to be in a quickdraw slot for the ammo to be drawn quickly without rolls.
 
 If you choose the optional rule that characters need to keep track of their ammunition instead of just assuming "enough arrows" it might be worth investing some xp in arrow recovery.
 
@@ -861,11 +867,11 @@ quick  mod-3 1r / 9ap
 
 snap / rapid fire for bows:
 Quick shot is 1r/9ap at mod-3. For every ap reduced below quick shot the
-archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8, 
+archer takes another mod-1. E.g: rapid fire bow at 4ap thus takes mod-8,
 since quick is mod-3 and another mod-5 to reduce 9ap to 4ap.
 An archer cannot bring the rapid fire ap cost below 3ap, mod-9.
-Rapid fire from bows include reload from accessible quiver as normal, 
-arrows stuck in the ground, or similar ammo arrangement. It does not need 
+Rapid fire from bows include reload from accessible quiver as normal,
+arrows stuck in the ground, or similar ammo arrangement. It does not need
 quick draw
 \end{verbatim} \blocklistgap \begin{verbatim}
 small bow         dam 3,
@@ -880,9 +886,9 @@ large bow         dam 5, pen 2,
                   range 16
                   str 6 (no str bonus)
 \end{verbatim} \blocklistgap \begin{verbatim}
-The longbows tend to be military infantry issue and tailored for str 5 baseline 
-and focus on range instead of damage, though often used with broadhead or 
-piercing arrows to increase the damage or penetration based on the composition 
+The longbows tend to be military infantry issue and tailored for str 5 baseline
+and focus on range instead of damage, though often used with broadhead or
+piercing arrows to increase the damage or penetration based on the composition
 of the enemy forces.
 
 longbow           dam 4, pen 1,
@@ -894,6 +900,8 @@ large longbow     dam 5, pen 2,
                   str 7 (no str bonus)
 \end{verbatim} \blocklistgap \begin{verbatim}
 Bows allow the use of different kinds of arrows:
+regular arrows    no mods
+cheap arrows      mod-1 dam-1, 50% reusable
 piercing arrows   mod-1 dam-1 pen+1
 broadhead arrows  mod-1 dam+1 pen-1
 fine arrows       mod+1
@@ -914,6 +922,7 @@ Specialty arrows often cannot be reused.
 Special bows sometimes require special arrows.
 
 Heavy bows tend to have str+2, dam+1, pen+1, range+2
+and require special heavy arrows
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
@@ -921,20 +930,21 @@ Heavy bows tend to have str+2, dam+1, pen+1, range+2
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Crossbows tend to be military infantry issue, and tailored for a str 5 baseline.
 
-Attacking with a crossbow requires no stamina, but reloading costs 1 stamina per 
+Attacking with a crossbow requires no stamina, but reloading costs 1 stamina per
 round. E.g: reloading a crossbow requires a total of 3 stamina, 1 per round for
-three rounds. But only 2 stamina if the loader is strong enough for a 2r fast 
+three rounds. But only 2 stamina if the loader is strong enough for a 2r fast
 reload.
-With quickdraw it's possible to effectively support a good shooter with a 
+With quickdraw it's possible to effectively support a good shooter with a
 couple of strong loaders and a bunch of crossbows. Handing the spent weapons
 over for loading and receiving ready to fire ones back in return.
 
-Rate of fire for crossbow, heavy crossbows and arbalests:
+Rate of fire for crossbows and arbalest:
 Split between reload and fire actions.
-Shooting a loaded crossbow is reasonably fast. Reloading takes a while though.
-The reload times assume readily available bolts in a quiver, stuck in ground, 
+Shooting a loaded crossbow is reasonably fast. Reloading takes a while.
+The reload times assume readily available bolts in a quiver, stuck in ground,
 or similar.
 
+fire actions:
 normal  mod=0 1r
 aimed   mod+1 2r
 quick   mod-3 3ap, mod-6 2ap, mod-9 1ap
@@ -955,8 +965,8 @@ large crossbow    dam 7, penetrating 3,
                   reload 4r (str 14 dex 10 : 3r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 arbalest          broadhead: dam 12
-special           spikehead: dam 9, penetrating
-                  blunthead: dam 10, knockback
+special           spikehead: dam 9 pen 5
+                  blunthead: dam 10, knockback 1
                   range 20
                   carried: str 9, mounted str 5 reload+3r, no str bonus
                   reload 5r (str 16 dex 12 : 4r)
@@ -972,8 +982,8 @@ repeater type     as the regular crossbows except that they take one round
 crossbows         less to reload, but at str+1, and have a bolt magazine
 exotic            which when empty must be reloaded manually taking
                   2r + 1r / bolt in the magazine.
-                  These machines are exceptionally rare and expensive, 
-                  manufactured only by legendary mechanismiths and 
+                  These machines are exceptionally rare and expensive,
+                  manufactured only by legendary mechanismiths and
                   enginartificers.
 \end{verbatim} \blocklistgap \begin{verbatim}
 Some crossbows allow the use of speciality bolts:
@@ -998,7 +1008,7 @@ quick   2r mod-3
 snap    1r mod-6
 blind   3ap mod-9
 
-Ballistas are designed to shoot at large stationary objects far away 
+Ballistas are designed to shoot at large stationary objects far away
 and have different range tohit and damage mods:
 short       0.5 mod+1 dam+10%
 long        2.0 mod-3 dam-10%
@@ -1097,11 +1107,11 @@ goblin klyvva  4ap dam 8, abs 3, parry-4, toparry-1, toavoid+1, finesse-2
 2h             str 4, max dam+2
 axe skill      dex 7: optional 3ap dam-2
                dex 10: 3ap no dam mod
-               swing: slow 1 mod-1 dam+2 toavoid+2 
+               swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 goblin swisha  4ap dam 5, abs 3, finesse-4
 1h             str 4, max dam+1
-knife skill    
+knife skill
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
@@ -1130,7 +1140,7 @@ orc war shield      abs 13, parry+3,
                     Hiding behind it (3ap) ranged mod-5
                     tackle mod+3
 \end{verbatim} \blocklistgap \begin{verbatim}
-orc cleaver         dam 11, abs 12, parry-4/-3, toparry-2, toavoid+2, 
+orc cleaver         dam 11, abs 12, parry-4/-3, toparry-2, toavoid+2,
 1h/2h               reach 1 mod-4, finesse-2
 (speciality 10xp)   str 11/9, or slow 1 str 8/6
                     swing: slow 1 mod-1 dam+3 toparry-1 toavoid+2
@@ -1160,7 +1170,7 @@ dwarven battle axe  dam=str+3, abs=dam*2, parry-2, toparry-2, finesse-5
 (speciality 5xp)    swing: slow 1 mod-1 dam+2 toavoid+1   (5xp)
                     poke: mod-2 dam-3 pen+2               (5xp)
                     Each axe requires its own speciality 5xp.
-                    Each axe has 1 points to improve either: 
+                    Each axe has 1 points to improve either:
                     parry / toparry / toavoid / finesse
 \end{verbatim} \blocklistgap \begin{verbatim}
 dwarven breaker     abs 10+str*2, parry+4,
@@ -1175,7 +1185,7 @@ dwarven clan axe    dam=str+6, abs=dam*2, parry-2, toparry-2, finesse-5
 (speciality 10xp)   swing: slow 1 mod-1 dam+3 toavoid+1   (5xp)
                     fast parry: 2ap mod-3 (dex=str+2)     (10xp)
                     Each axe requires its own speciality 10xp.
-                    Each axe has 2 points to improve either: 
+                    Each axe has 2 points to improve either:
                     parry / toparry / toavoid / finesse
                     with max one point on any one stat.
 \end{verbatim} \blocklistgap \begin{verbatim}
@@ -1256,7 +1266,7 @@ Most basic equipment is mundane and not explained below. Just look at the \hyper
 
 \small \begin{samepage} \begin{verbatim}
 sheath/scabbard/straps/etc  A good place to keep your weapon is critical if you
-               want to be sure you can draw it reliably when needed. 
+               want to be sure you can draw it reliably when needed.
                A good scabbard will always ensure the weapon can be drawn and
                sheathed without having to roll and risk a failure.
 \end{verbatim} \blocklistgap \begin{verbatim}
@@ -1283,7 +1293,7 @@ coffee         5r to take effect, 2r if hot (use a thermos perhaps?)
                increases current and max stamina by one for each dose (max+3),
                OR if inebriated, then cancels all effects of one dose of
                alcohol per dose of coffee.
-               Above con/3 doses the hero is jittery and must pass a psy roll 
+               Above con/3 doses the hero is jittery and must pass a psy roll
                each round he tries to rest. Effect remains until next day.
 \end{verbatim} \blocklistgap \begin{verbatim}
 health elixir  heals 3hp, 1hp/3r, and draws 3mana and 3stamina immediately
@@ -1444,11 +1454,11 @@ trigger snare: size 1sq 90% chance of triggering.
 The common way to anchor snares is around tree trunks or other protruding solid
 objects. Other ways is to use dirt wedges to anchor it in the ground. A dirt
 wedge can be hammered down using heavy blunt object in 2r and can be retrieved
-in 1d5 rounds using similar objects. 
+in 1d5 rounds using similar objects.
 Snares can also be anchored in some stone walls using rock wedges. A rock wedge
 can be inserted in a crevice using a hammer, butt of an axe, stone, or similar,
-in 2r. It can be retrieved using similar tools in 1d5r. 
-Dirt and rock wedges hold a certain strength, usually 5-20, depending on object 
+in 2r. It can be retrieved using similar tools in 1d5r.
+Dirt and rock wedges hold a certain strength, usually 5-20, depending on object
 and environment.
 \end{verbatim} \blocklistgap \begin{verbatim}
 spike arm:
@@ -1784,11 +1794,11 @@ repeater            str 7 (no str bonus)
 (specialty 10xp)    reload 2r (str 10 dex 10 : 1r)
                     magazine 12 (8r manual reload, 4r if dex 10)
                     requires special bolts: mod+1, pen+1, range+10
-A truly remarkable piece of legendary artisinal mechanickery. 
+A truly remarkable piece of legendary artisinal mechanickery.
 It can fire twin whistling arrows in a single action, or separately, and sings
 beautifully when the reload mechanism is pulled.
-It is rumoured that BronzeBolt paid over 300 gold for the machine and has to 
-pay 1 gold per bolt. Only one craftsman can make the ammunition and it takes 
+It is rumoured that BronzeBolt paid over 300 gold for the machine and has to
+pay 1 gold per bolt. Only one craftsman can make the ammunition and it takes
 him several days to make a bundle of bolts.
 \end{verbatim} \end{samepage} \normalsize
 

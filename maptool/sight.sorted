@@ -1,4 +1,3 @@
------below-are-chars----: circle distance=0.5 r0.5
 dwarf average: cone arc=165 distance=20 x1.5 r3.5
 dwarf good: cone arc=210 distance=25 x1.5 r4.5
 dwarf poor: cone arc=120 distance=15 x1.5 r2.5
@@ -31,6 +30,7 @@ ze blinded: circle distance=1 r1
 ze magic 30: circle distance=30 r30
 ze smell 6: circle distance=6 r6.5
 ze start area 5: circle distance=5 r5
+-----below-are-chars----: circle distance=0.5 r0.5
 zz Anomali: cone arc=299 distance=25 x3 r1
 zz Asar: cone arc=266 distance=16 x1.5 r1
 zz Besar: cone arc=188 distance=19 x1.5 r1
@@ -44,7 +44,7 @@ zz Maras Blackhammer: cone arc=125 distance=18 x2 r1
 zz Nostromo: cone arc=160 distance=15 x2 r1
 zz Piggelina: cone arc=240 distance=24 r1
 zz Toby Bloodletter: cone arc=340 distance=16 r1.5
-zz blomling: cone arc=315 distance=23 r1
+zz Blomling: cone arc=315 distance=23 r1
 zz gobbo Grawa: cone arc=217 distance=20 x1.5 r1.5
 zz gobbo Kizraz: cone arc=237 distance=25 x1.5 r1.5
 zz gobbo Old Maz: cone arc=253 distance=18 x1.5 r1.5

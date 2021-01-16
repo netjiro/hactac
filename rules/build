@@ -1,10 +1,10 @@
 #!/bin/bash
 
-latex book.tex
-latex book.tex
-latex book.tex
+pdflatex book.tex
+pdflatex book.tex
+pdflatex book.tex
 
-dvipdf book.dvi
+#dvipdf book.dvi
 #pdftex book.tex
 
 #cp book.pdf ~/dl/"rules.`date +%y%m%d:%H%M`.pdf"
@@ -15,4 +15,8 @@ rm *{.log,.aux,.toc,.dvi,.out}
 
 #aplay ~/doc/sound/softpop.wav
 
-okular ./book.pdf &
+okular ./book.pdf 1> /dev/null 2>&1 &
+#okular ./book.pdf 1> /dev/null 2> /dev/null &
+#okular ./book.pdf &> /dev/null &
+
+

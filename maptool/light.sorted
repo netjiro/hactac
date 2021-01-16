@@ -2,6 +2,7 @@ hacknslash
 ----
 embers: circle 2
 candle: circle 4
+candleweak: circle 3
 lamp: circle 7
 torch: circle 10
 fire: circle 15
@@ -15,7 +16,7 @@ glow2: circle 2#008811
 glow3: circle 3#009922
 glow4: circle 4#00aa44
 glow5: circle 5#00bb66
---- auras below use extra .5 to fully fill target square to edges ---
+--- auras use +.5 to fill target square to edges, note ",/." locale shit ---
 NPCleader3: aura GM circle 3,5#0000bb
 NPCleader5: aura GM circle 5,5#0000bb
 NPCleader8: aura GM circle 8,5#0000bb
@@ -30,9 +31,3 @@ scary5: aura circle 5,5#aa0000
 scary6: aura circle 6,5#aa0000
 scary7: aura circle 7,5#aa0000
 scary8: aura circle 8,5#aa0000
-
-
-
-
-
-

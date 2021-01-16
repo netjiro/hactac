@@ -15,7 +15,7 @@ For campaign gaming you'll need a group of players that is somewhat consistent a
 
 The players should probably build their own heroes if they are going to stick with them for a while, but provide some pre-built Heroes that suit your campaign just in case. Traditionally we start our campaigns from scratch with 100xp newbies, but there's nothing to stop you from starting with 300xp experienced journeymen or 1000xp superheroes if you want. Keep in mind, though, that a high xp character is much more complicated to play than a low xp newbie. Really!
 
-If the players are new to the game and starting from 100xp newbies, then introduce them to the game individually with the \texttt{Dungeon of Testing}. Once that's done they can continue as a group with for example the \texttt{Return of Uchly Namen} newbie introduction campaign, or something else. 
+If the players are new to the game and starting from 100xp newbies, then introduce them to the game individually with the \texttt{Dungeon of Testing}. Once that's done they can continue as a group with for example the \texttt{Return of Uchly Namen} newbie introduction campaign, or something else.
 
 There are already several released campaigns available, and more is on the way. Ping the author if you want the notes from the still unreleased adventures and campaigns. We have hundreds of hours worth of adventures available, spanning several campaigns.
 
@@ -44,7 +44,7 @@ We'll continue with the usual disconnected reality clichés, either by rules, ci
 \item If this is your first time, play through the \texttt{Dungeon of Testing} solo with your GM to see if your character has enough survival potential to leave his childhood homestead and venture into the World Outside for Danger and Adventure in Far Away Lands, or the village next by.
 \end{enumerate}
 % edit below (200205): hmm, fun, but gives the wrong impression actually, mortality has been shown to be lower than originally expected. Most characters survive well past 0.3k maturity. Approximated mortality is <20% up to 0.5k
-%Don't spend too much time creating your first character, it will probably die soon anyway, and you'll have to make another, and another, and yet another one again. 
+%Don't spend too much time creating your first character, it will probably die soon anyway, and you'll have to make another, and another, and yet another one again.
 %It might even be a good idea to create a bunch of them in the first place so that you have the queue already waiting by the mouth of the dungeon, ready to charge into the darkness in search of a quick and painful death.
 
 Now, all depending on game style: For combat oriented gaming there are a few things you should consider. It might be worth it to focus the character on a single role when creating a 100xp newbie. He will not have enough points to get good at several different tasks in the very beginning. Skills you expect to use regularly should have level 5 or better, and the main combat skill at lvl 7 or more is a good start. If possible, try to spread out some basic support or campaign skills over the Heroes in the party.
@@ -58,7 +58,7 @@ You can find some example Heroes at various experience levels in the \hyperref[c
 
 \subsection*{Rolling character stats}
 %------------------------------------
-Further below are lists of different races and their specific stat rolls. The GM together with the player group should decide how to roll up characters. Straight up one roll? Rerolls? How many? Best of 3? Roll then distribute? Points scheme? How many points?
+Further below are lists of different races and their specific stat rolls. The GM together with the player group should decide how to roll up characters. Straight up, single roll? Rerolls? How many? Best of 3? Roll then distribute? Points scheme? Escalating? How many points?
 
 I recommend using the \verb|rollchars.py| script to roll up a set of characters that the player can choose from. Easy to tweak how many characters of the different races should be in a fresh rolled noob set.
 
@@ -71,14 +71,14 @@ I recommend using the \verb|rollchars.py| script to roll up a set of characters 
 
 \subsection*{Buying skills}
 %--------------------------
-The cost of buying skills is the "skill cost factor" (scf) times the square of the skill level, round down. \verb|cost = scf * sl^2|. However, a skill will always cost at least 1xp. \\
+The cost of buying skills is the "skill cost factor" (scf) times the square of the skill level, round down. \verb|cost = scf * lvl^2|. However, a skill will always cost at least 1xp. \\
 E.g: skill cost factor 1.3 to level 4 costs 1.3*16=20.8 round down ~20. \\
 E.g: raise same skill from 4 to 6: 1.3*(36-16)=26. \\
 Note that it can be a little bit cheaper to raise skills a little bit at a time instead of a lot in one go. However, if you want to do this you have to go adventuring between every skill purchase.
 
 Sometimes characters start with some free skills rolled up with the character. Those are free above the rolled up starting xp value. Save your original pristine rolled up noob version of your character, as is, before spending any xp.
 
-Generally we allow for buying skills during down time, between adventures, when the Heroes are safe resting. E.g: Chase away the goblins. Rest and heal for a few days. Raise a skill or two. Go explore the old ruins. Stumble back to the inn for a few days. Get Maud Merry instead of Mad. Raise a skill or two. And so on.
+Generally we allow for buying skills during down time, between adventures, when the Heroes are safe resting. E.g: Chase away the goblins. Rest and heal for a few days. Raise a skill or two. Go explore the old ruins. Stumble back to the inn for a few days to hire henchmen, get Merry Maud instead of Mad Mary. Raise a skill or two. And so on. Perhaps allow to raise skills between sessions even if in the middle of combat, but not train new ones?
 
 
 %\subsubsection*{some skills to consider}
@@ -161,16 +161,16 @@ Woodsman's backpack (cost 5xp):
     water bottle, food for 3+1d3 days, fishing gear, snares,
     flint & steel, tinder, 1d3 torches,
     water proof hooded cape, 5+D10 copper.
-\end{verbatim}\goodbreak\begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Uncle Smith's well wishes (cost 8xp):
-    sword, shield, warm cape, water bottle, 20+D10 copper.
-\end{verbatim}\goodbreak\begin{verbatim}
+    sword, shield, warm cape, water bottle, 3 days provisions, 20+D10 copper.
+\end{verbatim} \goodbreak \begin{verbatim}
 Farmer Johns goodbye (cost 4xp):
     knife, staff / axe, shoulder sack, water bottle, food for 5+D10 days,
     flint \& steel, warm blanket, 10+D10 copper.
-\end{verbatim}\goodbreak\begin{verbatim}
+\end{verbatim} \goodbreak \begin{verbatim}
 Auntie's present (cost 5xp):
-    3x healing salve, first aid kit, warm sweater, 5+D10 copper.
+    3x healing salve, first aid kit, warm sweater, 3 days food, 5+D10 copper.
 \end{verbatim} \end{samepage} \normalsize
 
 \
@@ -201,9 +201,9 @@ If ignoring combat power balance for the moment, different races have typical pe
 \begin{description}
 \item[Humans] are the normal folk of most of the land. Found just about anywhere and in all occupations. Individually and culturally highly varied.
 \item[Dwarves] are rough, stern, determined, disciplined, with a lovely sense of humour that few outsiders understand. They have strong collective responsibility.
-\item[Elves] few and far between, artistic, aloof, or austere, all in all quite a bit strange. 
+\item[Elves] few and far between, artistic, aloof, or austere, all in all quite a bit strange.
 \item[Halflings] are usually happy with a great appetite for life, merriment, good food and drink.
-\item[Orcs] have grit, nothing is too heavy or too dangerous. But don't get them angry, fighting is fun.
+\item[Orcs] have grit, nothing is too heavy or too dangerous. But don't get them angry, fighting is fun. And why carry something if I can beat someone else into taking the load?
 \item[Goblins] have difficulties: lazy, impulsive, short sighted, wildly swinging between aggressive and meek, cowardly and blood thirsty, usually hungry, and with a nasty inkling towards schadenfreude and dangerous ill thought through pranks. Loads of fun to play!
 \end{description}
 
@@ -249,12 +249,15 @@ Odds are high that this will yield some overpowered newbie characters, but it wi
 
 \
 
+%edit label: pos:charsheet
+\raggedbottom % set ragged on this page forward due to the large verbatim segments that will destroy sane layout
+
+\begin{samepage}
 Here is the basic character sheet layout. It has already been explained above, in the \hyperref[sec:charsheet]{character sheet section}, page \pageref{sec:charsheet}.
 
 \
 
-\goodbreak
-\begin{samepage} \begin{verbatim}
+\begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -275,11 +278,11 @@ magic, spells
 equipment
 money ( g s c )
 ===================================
-\end{verbatim} \end{samepage}
+\end{verbatim}
+\end{samepage}
 
 \
 
-\goodbreak 
 \begin{samepage}
 \noindent The basic stat acronyms:
 \begin{verbatim}
@@ -457,7 +460,7 @@ yield+1, avoid+2, sneak+2,
 common-2, svartlingo-1
 round up for all half values.
 
-As the runt grows up to be a grown goblin he will snap into the full 
+As the runt grows up to be a grown goblin he will snap into the full
 rolled values and loose his runt bonuses.
 \end{verbatim} \end{samepage}
 
@@ -474,9 +477,9 @@ rolled values and loose his runt bonuses.
 \subsection*{Example characters}
 %-------------------------------
 
-A set of example newbie characters can be found in the 
-\hyperref[cpt:characters]{characters section}, 
-page \pageref{cpt:characters}, 
+A set of example newbie characters can be found in the
+\hyperref[cpt:characters]{characters section},
+page \pageref{cpt:characters},
 amongst those: \\
 Morten Flaff, an all round fighter neophyte. \\
 MistaMuhda and GrabbaKill, two violent young goblins. \\
@@ -491,7 +494,10 @@ A few examples of more experienced characters can also be found after the newbie
 
 \
 
-\todo update and clean up the various remaining example characters
+%\todo update and clean up the various remaining example characters
+%      this is partially done, some left, but not so important any longer,
+%      no drastic glaring errors left anymore since 210116 move out of the
+%      very old hero character listings
 
 
 
@@ -507,6 +513,8 @@ A few examples of more experienced characters can also be found after the newbie
 %===============================================================================
 % A D V E N T U R E S   A N D   C A M P A I G N   G A M I N G
 %------------------------------------------------------------
+
+\flushbottom % re-set flushbottom here since we're no longer in the large verbatim sections below pos:charsheet
 
 \phantomsection\addcontentsline{toc}{section}{adventures and campaigns}
 \section*{Adventures and campaign gaming}
@@ -564,7 +572,7 @@ There are a bunch of adventures and campaigns already available, in various stat
     \item[00 Return of Uchly Namen] is the first campaign for the game and world setting. Intended for newbie characters and containing a bunch of diverse interconnected adventures through a cohesive campaign arc with a few off-shoots.
     \item[01 Dark Clan, Deep Cave, Rescue Nurensachs] are three linked adventures forming a mini campaign of it's own, intended for more experienced characters.
     \item[02a Overlord Orvar] is a stand alone adventure, somewhat classical in nature. Easy to insert as a significant side quest in an existing campaign.
-    \item[02b Edwin the Chromophobe] is a stand alone adventure, a large dungeon hack with impact on the regional world map. 
+    \item[02b Edwin the Chromophobe] is a stand alone adventure, a large dungeon hack with impact on the regional world map.
     \item[03 Ottokar's Test Dungeon lvl 1] is for experienced Heroes who want to get a proper license for taking Hero Adventure jobs.
     \item[04 Destroy the Altar] is a Hero Adventurers' job for experienced characters and players. It's small but has some challenging oddities.
     \item[05 Turn off the Light] is another Hero Adventurers' job for very experienced and tough Heroes and skilled players. The initial challenge is tactically very different from the previous experiences and can be quite lethal.

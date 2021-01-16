@@ -5,7 +5,6 @@ import random
 
 import sys
 
-
 #import pyparsing
 
 
@@ -14,14 +13,9 @@ import sys
 # ------------- for regular quick roll selection, just change here -------------
 #distribution = "standard_set"      # standard selection: 17 dudes, too heroic
 #distribution = "small_set"         # small set, any race: 10 dudes, still heroic
-distribution = "tiny_set"          # small set, any race: 8 dudes, still good
+distribution = "tiny_set"          # small set, any race: 8 dudes, still strong
 #distribution = "min_set"           # minimal set, 6 dudes, one of each race
-#distribution = "goblin_destiny"    # special set for goblin destiny campaign
-#distribution = "goblin_destiny_5"  # special set for goblin destiny campaign
-#distribution = "goblin_destiny_3"  # special set for goblin destiny campaign
 #-------------------------------------------------------------------------------
-
-
 
 
 
@@ -29,16 +23,19 @@ distribution = "tiny_set"          # small set, any race: 8 dudes, still good
 #--------|---------|---------|---------|---------|---------|---------|---------|
 #       10        20        30        40        50        60        70        80
 
+# clean zero set:
+humans = dwarves = elves = halflings = orcs = goblins = 0
+
 
 # First have to declare which race, then choose from those available
-# total 17 dudes are too many, will get too OP stats
+# total 16 dudes are too many, will get too OP stats
 if distribution == "standard_set" :
     humans =       3
     dwarves =      2
     elves =        2
     halflings =    3
     orcs =         2
-    goblins =      5
+    goblins =      4
 
 # 10 total, reasonable representation if choosing from all races
 # still give too high chance of OP characters in each set.
@@ -71,32 +68,22 @@ if distribution == "min_set" :
     goblins =      1
 
 
-# Goblin Destiny campaign: 8 total, 5 goblins
-if distribution == "goblin_destiny" :
-    humans =       1
-    dwarves =      0
-    elves =        0
-    halflings =    1
-    orcs =         1
-    goblins =      5
-# 5 gobbos for first selection of 2 heroes
-if distribution == "goblin_destiny_5" :
-    humans =       0
-    dwarves =      0
-    elves =        0
-    halflings =    0
-    orcs =         0
-    goblins =      5
-# 3 gobbos for replacement selection of 1 hero
-if distribution == "goblin_destiny_3" :
-    humans =       0
-    dwarves =      0
-    elves =        0
-    halflings =    0
-    orcs =         0
-    goblins =      3
 
-    
+
+#--------|---------|---------|---------|---------|---------|---------|---------|
+#       10        20        30        40        50        60        70        80
+
+# check command line arguments, will override any set value
+
+if len(sys.argv) != 1 :
+    if len(sys.argv) == 3 :
+        humans = dwarves = elves = halflings = orcs = goblins = 0   # clear set
+        locals()[sys.argv[1]] = int(sys.argv[2])                    # race,number
+    else :
+        print ("USAGE: rollchars.py [race number]")
+        print ("  e.g: rollchars.py orcs 3")
+        print ("       note race plural form")
+        exit(1)
 
 
 
@@ -104,48 +91,17 @@ if distribution == "goblin_destiny_3" :
 #--------|---------|---------|---------|---------|---------|---------|---------|
 #       10        20        30        40        50        60        70        80
 
-
-# make some dice functions
 def die(n):
     return random.randint(1,n)
-def d2():
-    return die(2)
-def d3():
-    return die(3)
-def d4():
-    return die(4)
-def d5():
-    return die(5)
-def d6():
-    return die(6)
-def d7():
-    return die(7)
-def d8():
-    return die(8)
-def d9():
-    return die(9)
-def d10():
-    return die(10)
-def d12():
-    return die(12)
-def d15():
-    return die(15)
-def d20():
-    return die(20)
-def d30():
-    return die(30)
-def d40():
-    return die(40)
-def d50():
-    return die(50)
-def d60():
-    return die(60)
-def d90():
-    return die(90)
-def d100():
-    return die(100)
 
-# NOPE!! can't overload functions in python just by argument
+# make some dice functions on the form: dN()
+for n in {2,3,4,5,6,7,8,9,10,12,15,20,30,40,50,60,90,100}:
+    exec("def d"+str(n)+"(): return die("+str(n)+")")
+
+# and some more dice functions on the form: r2dN()
+for n in {3,4,5,6,7,8,10,20}:
+    exec("def r2d"+str(n)+"(): return d"+str(n)+"() + d"+str(n)+"()")
+
 
 # true if rolled less than or equal value on a d100 [1,100]
 def roll(chance):
@@ -160,23 +116,6 @@ def flip():
         return False
     else:
         return True
-
-def r2d3():
-    return d3() + d3()
-def r2d4():
-    return d4() + d4()
-def r2d5():
-    return d5() + d5()
-def r2d6():
-    return d6() + d6()
-def r2d7():
-    return d7() + d7()
-def r2d8():
-    return d8() + d8()
-def r2d10():
-    return d10() + d10()
-def r2d20():
-    return d20() + d20()
 
 def flat(min,max):
     return min + random.randint(0,(max-min))
@@ -246,9 +185,8 @@ class Character:
         self.maneuvers = []
 
     def printSheet(self, i):
-        # create left column text
+        # create left column text, 26 cols
         pad20 = " " * 20
-        #nr = pad2(str(i))
         nr = str(i)
         str_hp =   "str " + pad2(str(self.str)) + pad20
         dex_move = "dex " + pad2(str(self.dex)) + pad20
@@ -316,19 +254,19 @@ class Character:
 # which can give you a better grasp on how the rolls spread.
 #
 # Here are some distributions, scores and percentages
-# 
+#
 #  2d6:               2d5:               2d4:          2d3:
 #   2    2.78          2    4.00          2    6.25     2   11.11
 #   3    5.56          3    8.00          3   12.50     3   22.22
 #   4    8.33          4   12.00          4   18.75     4   33.33
 #   5   11.11          5   16.00          5   25.00     5   22.22
 #   6   13.89          6   20.00          6   18.75     6   11.11
-#   7   16.67          7   16.00          7   12.50    
-#   8   13.89          8   12.00          8    6.25    
-#   9   11.11          9    8.00    
-#  10    8.33         10    4.00    
-#  11    5.56    
-#  12    2.78    
+#   7   16.67          7   16.00          7   12.50
+#   8   13.89          8   12.00          8    6.25
+#   9   11.11          9    8.00
+#  10    8.33         10    4.00
+#  11    5.56
+#  12    2.78
 
 
 # I've generally included the range and division spreads as comments for quick

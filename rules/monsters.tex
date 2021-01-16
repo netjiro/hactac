@@ -135,7 +135,7 @@ In general:\\
 10-30hp : normal size \\
 20-60hp : large (2x2) \\
 30-100hp : huge (3x3) \\
-Haven't used anything larger yet.
+I rarely use larger monsters, but ... sometimes you just gotta. A 6x6 >300hp pops up i a late adventure.
 
 Some examples:\\
 All standard low hp goblin mobs are set to small size even if they only have a couple of hp, while all runt are set to tiny even if they have upwards of 10hp in some cases.\\
@@ -277,12 +277,12 @@ no pain or low hp mods
 -----------------------------------
 
 They attack on "sight"(smell), ca 10sq. There is a 50\% chance that they
-will become hostile and attack each round when a potential target is in 
-their smell range. Mostly they just mill around slowly, independent 
-and uncoordinated. They will however attack any non-bug who has bug 
+will become hostile and attack each round when a potential target is in
+their smell range. Mostly they just mill around slowly, independent
+and uncoordinated. They will however attack any non-bug who has bug
 blood/gore on them, since it signals an enemy.
-Killing a bug risks spreading gore on the attacker if he's close. Use e.g: 
-splatterchance : 3*overkill on a d10. Gore takes several rounds to clean 
+Killing a bug risks spreading gore on the attacker if he's close. Use e.g:
+splatterchance : 3*overkill on a d10. Gore takes several rounds to clean
 off and requires water.
 \end{verbatim} \normalsize \end{samepage}
 
@@ -364,8 +364,8 @@ smaller black bugs to attack in a coordinated fashion. It can also
 start spawning more black bug critters if attacked. Spawning one
 black bug per round for 1d5 rounds, then one every 3 rounds.
 
-Screech-Whistle (3ap action) will call all small black bugs to immediately 
-come to the aid of the Big Black Bug. They will then attack everything in 
+Screech-Whistle (3ap action) will call all small black bugs to immediately
+come to the aid of the Big Black Bug. They will then attack everything in
 their path.
 
 BBB can coordinate small black bugs in intelligent movement, timing,
@@ -612,9 +612,7 @@ monsterology+3 : it's an iffygriff
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[1]
-\goodbreak
-%\phantomsection \addcontentsline{toc}{subsection}{lizard men}
+\clearpage
 \phantomsection \addcontentsline{toc}{section}{lizard men}
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
@@ -650,9 +648,9 @@ str  3    hp 4 abs 1
 dex  7    m2 w4 r8 d16
 int  3    vision 20
 psy  3    mana 3
-per  7    initiative 12 (quick to flee)
+per  7    ap 6, init 12 (quick to flee)
 ----------
-mobile       3 (m-0 w-0 r-3 d-6)
+mobile       3
 claw         6 dam 1, 2x mod-2
 short sword  4 dam 5, abs 8
 short bow    5 dam 4, quick 1r mod-3, shot 2r mod-0, aimed 3r mod+3
@@ -674,10 +672,11 @@ str  4    hp 6 abs 1
 dex  5    m1 w4 r8 d12
 int  2    vision 15
 psy  4    mana 2
-per  5    initiative 10 (careful)
+per  5    ap 6(4), init 5+2+d4 (careful)
 ----------
-quick         3 (-0 -0 -3 -6)
-mobile        3 (m-0 w-0 r-3 d-6)
+quick         2
+mobile        3
+rapid         2
 claw          4 dam 1, 2x mod-2
 sword         5 dam 6, abs 10,
 small shield  5 abs 10, parry+2
@@ -696,10 +695,11 @@ str  8    hp 12 abs 2
 dex  6    m1 w3 r6 d10
 int  3    vision 10
 psy  5    mana 4
-per  5    initiative 8 (aggressive)
+per  5    ap 6(4), init 6+3+d4 (aggressive)
 ----------
 quick     2
 mobile    2
+rapid     3
 claw      6 dam 2, 2x mod-2
 sword     7 dam 6 abs 13, toparry-1, str 4  (str bonus is toparry-1, fast)
 shield    6 abs 15, parry+3
@@ -720,11 +720,12 @@ dex   8   m1 w3 r6 d8
 con  10   stamina 20
 int   6   vision 10
 psy   6   mana 10
-per   6
-cha   4   initiative 8+1d4
+per   6   ap 7(4)
+cha   4   initiative 8+4+1d4
 ----------
-quick      4 (-0, -0, -2, -5)
+quick      3
 mobile     2
+rapid      4
 claw       8 dam 3, 2x mod-2
 2h sword  10 dam 10, abs 18, toparry-2, fast+1, reach 1 mod-6
              str 6 (str bonus is toparry-2, fast+1)
@@ -784,7 +785,7 @@ str  3    hp 4 abs 0
 dex  5    m1 w3 r5 d7
 int  2    vision 12 dusk (set goblin average)
 psy  2    ap 4
-per  6    initiative 7, ap 3, chicken
+per  6    initiative 7, chicken
 ----------
 sneak         7
 charge        3
@@ -812,8 +813,8 @@ goblin fighter           (goblin02,05)   set small token size
 str  3    hp 5 abs 0
 dex  6    m1 w3 r5 d7
 int  2    vision 10 dusk
-psy  3    mana 0
-per  5    initiative 8, ap 4, chicken
+psy  3    ap 4
+per  5    initiative 8, chicken
 ----------
 sneak         5
 charge        4
@@ -840,8 +841,8 @@ goblin warrior           (goblin07)   set small token size
 str  4    hp 6 abs 1
 dex  7    m1 w3 r5 d7
 int  3    vision 12 dusk
-psy  3    mana 0
-per  6    initiative 9, ap 5, chicken
+psy  3    ap 5
+per  6    initiative 9, chicken
 ----------
 sneak         4
 charge        6
@@ -862,8 +863,8 @@ goblin champion          (goblin09)   set small token size
 str  6    hp 8 abs 1
 dex  8    m2 w3 r5 d8
 int  3    vision 12 dusk
-psy  4    mana 4
-per  6    initiative 11, ap 7, careful
+psy  4    ap 7
+per  6    initiative 11, careful
 ----------
 quick         2
 mobile        2
@@ -885,8 +886,8 @@ goblin soldier           (goblin01)   set small token size
 str  4    hp 6 abs 1 (leather)
 dex  5    m1 w3 r5 d7
 int  2    vision 10 dusk
-psy  3    mana 0
-per  4    initiative 7
+psy  3    ap 4
+per  4    initiative 7, careful
 ----------
 short sword   6 dam 5, abs 8
 small shield  7 abs 8, parry+2
@@ -915,8 +916,8 @@ goblin elite soldier    (goblin01b)  set small token size
 str  5    hp 8 abs 2 (thin plate)
 dex  6    m1 w3 r5 d7
 int  3    vision 10 dusk
-psy  4    mana 0
-per  5    initiative 9
+psy  4    ap 6
+per  5    initiative 9, careful
 ----------
 quick         1
 mobile        1
@@ -952,8 +953,8 @@ dex  2    m1 w2 r3 d4 (very fat)
 con  4    stamina 3
 int  6    vision 12 dusk
 psy  5    mana 10
-per  4
-cha  2
+per  4    ap 4
+cha  2    initiative 8, careful
 ----------
 short sword   3(4) dam 4(5), abs 8,       (mod-1 (weak))
 rot           6 cast 3r 1m, dam 4 +1/m 1hp/r, range 8 +2/m, penetrating
@@ -972,8 +973,8 @@ goblin runt          (goblinrunt01)   set small token size
 str 1     hp 2 abs 0
 dex 4     m1 w2 r4 d6
 int 1     vision 10 dusk
-psy 1     mana 1
-per 4     initiative 7
+psy 1     ap 5
+per 4     initiative 8
 ----------
 claw      4 dam 1, 2x -3
 bite      4 dam 1
@@ -991,8 +992,8 @@ goblin runt knifer   (goblinrunt02)   set small token size
 str 2     hp 3 abs 0
 dex 5     m2 w3 r4 d6
 int 1     vision 10 dusk
-psy 1     mana 1
-per 6     initiative 9
+psy 1     ap 6
+per 6     initiative 11
 ----------
 claw      4 dam 1, autodouble 2x -3
 bite      4 dam 2
@@ -1057,7 +1058,6 @@ int  4    mana 5
 psy  4    initiative 9
 per  6    ap 5
 ----------
-focus          2
 veteran        6 (incl race bonus)
 vlarge club    7 dam 10(8), abs 15, str 5, finesse-3
 shield         5 abs 13, parry+3, str 4
@@ -1084,7 +1084,6 @@ int  3    vision 10 dusk
 psy  3    mana 2
 per  5    initiative 7
 ----------
-focus          3
 veteran        6 (incl race bonus)
 axe/spear      8
 shield         7 abs 13, parry+3, str 4
@@ -1124,8 +1123,8 @@ psy  5    mana 8
 per  7    (@ xp ~334)
 cha  3    initiative 8+d4
 ----------
-quick       3 (-0 -0 -3 -6)
-mobile      3 (-0 -0 -3 -6)
+quick       3
+mobile      3
 veteran     9 (incl race bonus)
 2h axe      9 dam 16(12), abs 12, parry-3, toparry-2, str 6, finesse-3
               fast+1 if dam12 with maneuver fast strength
@@ -1260,7 +1259,7 @@ avoid       3 yield+2
 charge      6
 tackle      5
 wrestle     5
-roar        - 15 vs (psy+str)
+roar        - 12 vs (psy+str)
             success+0: target cannot attack melee 1d3 rounds & initiative-5
             success+3: target must flee, until successful psy roll (1/r)
 ===================================
@@ -1279,27 +1278,23 @@ thrown        range 6, short 3 mod+3, long 12 mod-3,
 ===================================
 basic ogre                 (ogre01)  (set token size large (2x2))
 -----------------------------------
-str  20   hp 30 abs 1 (skin) large target  ranged tohit+3
+str  20   hp 40 abs 1 (skin) large target  ranged tohit+3
 dex   7   m3 w6 r9 d12
 con  13   stamina 25
 int   3   vision
-psy   8   mana
-per   6   initiative 10
-cha   1   ap 5
+psy   8   initiative 10
+per   6   ap 5
 ----------
-reach 1
 veteran 6 pain threshold 5
-punch
-kick
-claw sweep
-wrestle
-
-skills
-----------
-spells
-----------
-equipment
-money
+punch 8 3ap dam 7 knockback reach 1
+kick 7 4ap dam 9 knockback 2 reach 1
+claw sweep (90deg sweep reach 1)  8 4ap dam 6 knockdown / grab
+throw rock 6 3ap range 8 (100kg rock dam12 knockback+down)
+throw hero 5 2ap range 6 (100kg hero dam10 knockback+down)
+roar   15 vs (psy+str)
+       success+0: target cannot melee attack troll 1d3 rounds & initiative-5
+       success+3: target must flee, until successful psy roll (1/r)
+       success+6: roll int or stunned 1r, too afraid to move
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 

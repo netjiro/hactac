@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# old laptop 1024x768 edit 
 # set size to 80 columns by 100 rows, that will maximize the window vertically.
 # 51 rows just barely fits in 768 vertical.
 # 80 cols give a window that is 595 px wide
