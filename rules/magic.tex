@@ -23,21 +23,21 @@ All magic skills and spells must be learned from a teacher, book, or similar. Th
 
 Teachers can be the village witch, a professor at the City Magic College, an ally in the party who happen to know that spell, or the enemy wizard you captured a few weeks ago and been torturing ever since (\emph{but would you trust him?}). When creating a new character with magic skills and spells it's assumed that he had access to some magic training when growing up, perhaps 1d3 spells.
 
-Some magic items can be used without any magic skills, others require that the user has some knowledge of the \emph{magic} skill. To learn and cast spells it is necessary to have trained \emph{spell caster}, and that is least expensive directly when the character is created.
+Some magic items can be used without any magic skills, others require that the user has some knowledge of the \emph{magic} skill. To learn and cast spells it is necessary to have trained \emph{spellcaster}, and that is least expensive directly when the character is created.
 
 
-\begin{description}
+\openskillslist
 
 
-\item[Skill scf 2.0: "magic":] The caster can not spend more mana on each spell casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round, or how much mana he can use to activate or power a magical item.
+\skill{Skill scf 2.0: "magic":} The caster can not spend more mana on each spell casting than his level in magic. This also limits the amount of mana he can pump into an already active spell each round, or use to activate or power a magical item.
 
 The magic skill is also used when trying to understand magical texts and foreign spells and devices, etc. Or when activating certain magical items. It also provides some protection against certain types of spells.
 
-Note: Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power, and some items are powered by themselves or other sources.
+Not all magical devices, gadgets, trinkets, and weapons require the magic skill to use. Some just require being drawn, calling an activation word, or other circumstance. Some gadgets will also draw mana from the user by themselves without the user needing the magic skill to infuse them with power. Some don't even bother with consent or intent from the user. Rare items items are sometimes powered by themselves or other sources.
 
 
-%"spellcaster":] "spell caster":]
-\item[Skill cost special "spellcaster":] is required to be able to learn and cast spells. It is not required for the use of magical items nor to train the magic skill.
+%"spellcaster":} "spell caster":}
+\skill{Skill cost special "spellcaster":} is required to be able to learn and cast spells. It is not required for the use of magical items nor to train the magic skill.
 
 The xp cost to train spell caster varies depending on the total xp of the character, increasing as the character advances:\\
 If trained at character creation it costs 20xp.\\
@@ -45,19 +45,19 @@ After that it costs 20 + (total xp / 10).\\
 E.g: For a 123xp Hero it costs 33xp, and for a 358xp Hero it costs 56xp to train spell caster.
 
 
-\item[Skill scf 1.0: "power casting":] is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more extra mana than his skill in power casting. This cannot be used to raise the final total chance of success above 9.
+\skill{Skill scf 1.0: "power casting":} is when the spellcaster pays extra mana power to increase his chances for the casting roll. The caster gains mod+1 for each mana spent. The caster can not spend more extra mana than his skill in power casting. This cannot be used to raise the final total chance of success above 9.
 
 Mana spent for power casting is not counted to the maximum total limit set by the caster's magic skill level.
 
 
-\item[Maneuver cost 10: "held spell":] delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
+\skill{Maneuver cost 10: "held spell":} delays the final touch of the spell so that the effect can appear on very short notice. Can with good effect be used together with anticipate to inject the effects of a prepared multi-round-casting spell at a precise point in the action sequence of a battle round. It costs 3ap to cast a held spell. Holding a spell is free in the first few rounds but costs 1 mana per every exceeded period of 1 + int/3 rounds.
 
 
-\item[Maneuver cost 5 + scf 0.5: "indirected strike":] allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight (int roll), and similar, GM discretion.
+\skill{Maneuver cost 5 + scf 0.5: "indirected strike":} allows the casting of \emph{strike, chock, flash} spells without direct line of sight to the target. By taking a mod-3 or 1r extra casting time the wizard can set a target for the spell by an approximate location, such as a description from a spotter communicated in 1 action (3ap), guesstimated location from recently seeing the target move out of sight (int roll), and similar, GM discretion.
 \\ \todo finish "indirect strike" with "pinpoint on map" issues, miss allowance distance = lvl squares.
 
 
-\item[Skill scf 2.0: "blood magic":] The dark arts train the caster to perform heinous acts of ritual sacrifice. By bloodletting a victim the caster can convert hp to temporary mana. Blood magic mana points form an ephemeral temporary mana pool which is not added to the caster's mana. It cannot be stored and must be used within victim psy rounds or start to evaporate at 1 mana per round. The evaporation timer starts next round after the ritual has finished. Casting from the blood magic mana pool is mod-1.
+\skill{Skill scf 2.0: "blood magic":} The dark arts train the caster to perform heinous acts of ritual sacrifice. By bloodletting a victim the caster can convert hp to temporary mana. Blood magic mana points form an ephemeral temporary mana pool which is not added to the caster's mana. It cannot be stored and must be used within victim psy rounds or start to evaporate at 1 mana per round. The evaporation timer starts next round after the ritual has finished. Casting from the blood magic mana pool is mod-1.
 
 The caster can't build a sacrificial mana pool larger than his lowest value of psy and magic, plus the lvl of blood magic. The caster can sacrifice more than one victim to build the mana pool by killing one victim after the other, or have henchmen help out. Each victim adds +1 to the evaporation timer, but it is the victim with the lowest psy that sets the base value for the evaporation timer after the last of the chained rituals finish. \emph{So make sure your goons don't bring you substandard victims.}
 
@@ -74,17 +74,19 @@ The blood magic mana are never added to the caster's mana, or stored somewhere. 
 Henchmen helping out with the sacrifice rituals must train "bloody handy" for 10xp, but are limited by their own psy in how many mana points they can extract from the victim.
 
 
-\item[Skill scf 3.0 "drainage ritual":] Similar to blood magic, but drains mana directly from the victim. The ritual takes 5r to start then the caster must pass psy vs psy against the victim each round to drain 1+success/3 mana.
+\skill{Skill scf 3.0 "drainage ritual":} Similar to blood magic, but drains mana directly from the victim. The ritual takes 5r to start then the caster must pass psy vs psy against the victim each round to drain 1+success/3 mana.
 Roll for drainage ritual skill at the end of the ritual. Fail and success conversions like blood magic. The mana pool has the same range, time, and usage limitations as blood magic mana pool.
 
 
-\end{description}
+\closeskillslist
 
 
 
 
 
 
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
 %-------------------------------------------------------------------------------
 %S P E L L S
 %-----------
@@ -104,15 +106,15 @@ When casting a spell, each mana pumped into the spell, including casting cost, r
 Spells that have range don't allow for short,long,vlong,extreme range modifications of any sort unless explicitly stated. E.g: a black bolt r10 will not reach a target 11sq away from caster, but a shock bolt r20 can reach 30sq at dam-3.
 
 
-\begin{description}
+\openskillslist
 
-\item[Skill scf x.x: \emph{spell}] Most spells have a default skill cost factor of 0.33. Some spells are cheaper, some more expensive. Some spells have minimum requirements on psy or int.
+\skill{Skill scf x.x: \textit{spell}} Most spells have a default skill cost factor of 0.33. Some are cheaper, others more expensive. Most spells have minimum requirements on psy and int.
 
-If the character does not meet the int requirements, then the cost of the spell is doubled for each missing int point: e.g: Wizard Woolhead has int 4 and wants to learn an int 7 spell. He is missing 3 int points, thus the spell costs $2^3=8$ times as much to learn. He then spends his xp on a simpler spell.
-
+If the character does not meet the int requirements, the cost of the spell is doubled for each missing int point: e.g: Wizard Woolhead has int 4 and wants to learn an int 7 spell. He is missing 3 int points, thus the spell costs $2^3=8$ times as much to learn. He then spends his xp on a simpler spell.
 If the character does not meet the psy requirements he will have mod-1 per missing psy when casting the spell.
 
-\end{description}
+\closeskillslist
+
 
 These spells should be seen as examples, different masters teach their students different variations, some better, some worse, some just different. It is likely that most wizards' spells will be different from each other.
 
@@ -392,6 +394,9 @@ These are area effect spells. They can be targeted on characters, objects, or lo
 
 \end{description}
 
+
+Please note that all spells, unless specified otherwise, have full friendly fire effects. E.g: fear centered on self means even allies will get afraid of you, and centering fear on other means the caster also have to roll. Fireball will burn friendlies just as easily as foes. Trap embedded blasts will trigger just as quickly on forgetful friendlies as unaware unwelcomes.
+
 \
 
 \small \begin{verbatim}
@@ -413,21 +418,9 @@ black bolt     cast 3r 1m, dam 9 +3/m, penetrating,
                range 10,
                int 5, psy 9
 
-black bolt     cast 2r 1m, dam 6 +2/m, penetrating,
-               range 10,
-               int 5, psy 9
-
-shock bolt     cast 3r 1m, dam 5 +2/m, penetrating,
-               range 20 +10/m, long dam-3,
-               int 8, psy 8
-
 shock bolt     cast 2r 1m, dam 4, penetrating,
                range 15 +7/m, long dam-2,
                int 6, psy 6
-
-force bolt     cast 1r 1m, dam 3
-               range 10
-               int 7, psy 4
 
 force bolt     cast 1r 1m, dam 5 +1/m
                range 10 +5/m, long -2dam,
@@ -439,10 +432,6 @@ bright arrow   cast 2r, 1m, dam 6
                range 10 +5/m
                int 4, psy 4
 
-bright arrow   cast 1r, 1m, dam 5
-               range 10 +5/m
-               int 7, psy 7
-
 snuppel dart   cast 2r, 1m, dam 4, stun 5 +3/m
                range 15 +7/m
                int 6, psy 5
@@ -452,10 +441,11 @@ drain          cast 5r 1m, psy/2 vs psy, range contact
                gives caster diff/2 (round up) mana, i.e. half is lost,
                gained mana goes directly to caster's mana.
                Must be in contact during whole casting.
+               Target takes drained amount in damage, penetrating.
                Cannot drain the target below 0 mana. If draining the target to
                0 mana the target must roll psy or falls unconscious.
                Target roll psy once per round to wake up again.
-               cost 30xp + scf 1.0, int 12, psy 12
+               cost 30xp + scf 1.0, int 8, psy 8
 
 revive         cast 10r 5m, psy/2 vs psy +1/m, the dead wanna stay dead.
                The body must first be healed to at least -con hp before or during
@@ -464,7 +454,6 @@ revive         cast 10r 5m, psy/2 vs psy +1/m, the dead wanna stay dead.
                The character tends to come back altered from the ordeal in the
                world of the dead.
                scf 1.0, int 8, psy 8
--
 -
 
 ---===### current above ###===---
@@ -486,10 +475,6 @@ fire ball      cast 3r 2m, dam 5 +1/m, range 10 +5/m, radius 2 +1/m,
                duration 3r +2/m, damage each round
                int 8, psy 8
 
-fire ball      cast 2r 2m, dam 4 +1/m, range 10 +5/m, radius 1 +1/m,
-               duration 1r +1/m, damage each round
-               int 7, psy 6
-
 fire blast     cast 1r 2m, dam 3 +1/m, range 5 +5/m, radius 1 +1/m,
                int 6, psy 6
 
@@ -502,29 +487,25 @@ fire storm     cast 1r 1m, dam 5 +2/m, range self, radius 1 +1/m,
                each movement speed declared for the round.
                int 6, psy 8
 
-minion missile cast 1r 1m, dam 4 +2/m, speed 20, seeking 10 -2/r,
+minion missile cast 1r 1m, dam 4+2/m, speed 20, seeking 10 -2/r,
                penetrating 1, lifetime 20r +10/m,
+               Lifetime is since cast.
+               Seek deterioration since targeted 10,8,6,...
                Hover by caster until target assigned,
                then seeks target until missed seeking or max lifetime.
+               Corners 45deg/2sq.
                Seeking does not fail on roll of 10 as normal.
                They are smart enough to curve around objects and avoid obstacles
-               unless they miss their seek roll (one per rnd). The target does
-               not have to be in line of sight from the caster once assigned.
-               Seeking penalty only after target assignment, not total time
-               since summon.
+               unless they miss their seek roll (once per round).
+               The target does not have to be in line of sight from the caster
+               once assigned. Seeking penalty only after target assignment,
+               not total time since summon.
                Assigning one or more bolts to one target is a
                very fast action (1ap).
                int 6, psy 7
 
 ward shield    cast 2r 2m, range touch, duration 5r +3r/m
                charge 5 +3/m (pay on cast)
-               Absorbs incoming damage before it strikes the character
-               or his equipment. Each absorbed damage point costs
-               one charge from the spell.
-               Ignores penetrating, i.e. penX just passes through the spell.
-
-ward shield    cast 1r 2m, range touch, duration 5r +3r/m
-               charge 4 +2/m (pay on cast)
                Absorbs incoming damage before it strikes the character
                or his equipment. Each absorbed damage point costs
                one charge from the spell.
@@ -608,13 +589,13 @@ slow           cast 1r 1m, +1target/2m, range 15 +5/m, duration 5r +2/m
                int 4, psy 3
 
 hasten         cast 2r 2m, +1target/3m, range touch, duration 3r +1/m
-               Adds 3ap +1/m to target each round for the duration.
+               Adds 3ap +1/m to target.
                Adds movement: M+1mp, W+2mp, R+3mp, D+4mp
                Initiative is raised by 3+3/m.
                int 8, psy 8
 
 hold           cast 1r 2m, +1target/2m, range 10 +5/m, duration 3r +1/m
-               Target cannot do movement at all, but stationary actions can
+               Target cannot take movement points, but stationary actions can
                can be performed without penalty.
                Continue hold on psy vs psy +2/m each round (mana paid
                once on cast)
@@ -623,15 +604,9 @@ hold           cast 1r 2m, +1target/2m, range 10 +5/m, duration 3r +1/m
 paralyse       cast 2r 2m, +1target/2m, range 10 +5/m, duration 3r +2/m
                Target cannot move or take actions that require any movement,
                even if it is only with the hands.
-               Continue paralyse on psy-3 vs psy +2/m each round
+               Continue paralyse on psy-3 vs psy +1/m each round
                (mana paid once on cast).
                int 7, psy 9
-
-paralyse       cast 2r 2m, psy vs psy +1/m, range 5 +2/m,
-               Target cannot move or take actions that require any movement,
-               even if it is only with the hands.
-               duration diff+1r +2r/m (pay on cast, diff from psy vs psy roll)
-               int 7, psy 8
 
 strengthen     cast 2r 2m, +1target/2m, range touch, duration 5 +2/m
                The target gets strength+3 +2/m for the duration of the spell.
@@ -641,7 +616,9 @@ fortify        cast 2r 2m, +1target/2m, range touch, duration 5r+2/m
                The target gets constitution+3 +2/m for the duration of the spell
                int 5, psy 5
 
-fear           cast 1r 1m, psy vs psy +2/m, range 5 +2/m, area aura,
+fear           cast 1r 1m, psy vs psy +2/m, radius 5 +2/m, aura from self
+               +1m: touch other to center aura on target,
+               self/center target is unaffected.
                duration 2*diff +3r/m
                int 4, psy 6
 
@@ -658,8 +635,8 @@ open door      cast 3ap 1m, range 15 +10/m, targets +1/m
 
 close door     cast 3ap 1m, range 15 +10/m, targets +1/m
                Close a door.
-               If caster has seen the door before he doesn't need line of
-               sight if he can pass an int-3 roll.
+               If caster has opened the door himself he doesn't need
+               line of sight if he can pass an int-3 roll.
                scf 0.2
 
 seal door      cast 3ap 1m, range 15 +10/m, targets +1/m, duration 10r +5/m
@@ -671,8 +648,9 @@ seal door      cast 3ap 1m, range 15 +10/m, targets +1/m, duration 10r +5/m
 dislocate      cast 2r 1m, range 20 +5/m, target 1 +2/m, psy vs psy +3/m
                target forgets the local location information.
                (Press ctrl+shift+o in maptool to reset map info to what
-               the characters can see at the moment, as long as all heroes
-               have been successfully dislocated).
+               the character can see at the moment.
+               As long as all heroes have been successfully dislocated,
+               or using individual views and strict token ownership.)
                int 5, psy 5
 
 pilfer         cast 2r 1m, range 5 +5/m,
@@ -696,31 +674,16 @@ heroism        cast 2r 1m, range 10 +5/m, duration 10r +5/m
                detrimental to his goal.
                int 5, psy 5
 
-heal           cast 2r 1m, heal 3 +2/m, time 2hp/r, range contact
-               int 5, psy 4
-
-heal           cast 2r 1m, heal 2 +2/m, time 3hp/r, range contact
-               int 7, psy 6
-
-heal           cast 3r 1m, heal 5 +3/m, time 1hp/r, range contact
-               int 7, psy 7
-
-heal           cast 1r 1m, heal 1 +1/m, time 3hp/r, range contact
-               int 6, psy 6
-
-heal           cast 2r 1m, heal 1 +1/m, time 5hp/r, range contact
-               int 9, psy 7
-
-heal all       cast 3r 1m, heal 1 +1/m, time 2r/hp, range 3 +1/m
-               heals all creatures within range.
-               int 7, psy 7
+heal           cast 3r 1m, heal 3 +2/m, time 1hp/r, range contact
+               int 5, psy 5
+               scf 0.5
 
 force wall     cast 1r 1m, size 3 +1/m, duration 10r +5/m
                psy vs str +3/m to stop anyone passing the blocked passage
                attacks and thrown or shot objects are always blocked
                int 3, psy 6
 
-force wall     cast 2r 2m, size 3 +1/m, duration 10r +5/m
+friendly wall  cast 2r 1m, size 3 +1/m, duration 10r +5/m
                psy vs str +3/m to stop enemies passing through the blocked
                passage, friendlies can pass at maneuver speed
                attacks and thrown or shot objects are always blocked
@@ -771,30 +734,10 @@ control dead   cast 2r 1m, psy vs psy +1/m +diff
 lower dead     cast 3r 1m, psy vs psy +1/m, range 5 +5/m
                int 5, psy 7
 
-mass raise     cast 10r 3m, duration 10r + 3*diff +20/m, range 5 +5/m
-               target diff +1/m
-               int 8, psy 8, scf 0.66
-
-mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
-               duration 3*diff +10r/m, range 30 +10/m
-               Activates automatically after successfully raising the dead.
-               Must roll psy vs psy +1/2m +diff each round to keep control,
-               mana spent once when casting or activating.
-               Simplify if necessary to: duration is reduced by the chance of
-               breaking free squared.
-               When control is lost it can be regained by casting again.
-               The caster is aware of his minion's surroundings as though
-               being there. Vision is min(psy-caster|psy-target).
-               duration 3*diff +10r/m, range 50 +20/m
-               int 10, psy 10, scf 0.66
-
-mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
-               int 8, psy 8, scf 0.66
-
 dark vision    cast 2r 1m, vision 15+5/m arc 180+90/m, duration 20r+20r/m
                int 3, psy 2
 
-rot            cast 2r 1m, dam 4 +1/m 1hp/r penetrating, range 8 +2/m,
+rot            cast 2r 1m, dam 6 +3/m 1hp/r penetrating, range touch,
                magical rotting disease is doing the damage.
                one pain per damage dealt.
                int 6, psy 5
@@ -852,13 +795,6 @@ levitate       cast 2r 1m, target 1 +1/m, duration 5r +5/m,
                range group base contact, speed 2 +1/m
                int 4, psy 5
 
-levitate       cast 2r 2m, range 5sq +5/m, duration 5r +5/m, target 1 +1/m
-               Gives the targets the ability to levitate slowly at the maximum
-               movement of walk. Targets must stay within the range of the
-               caster.
-               Unwilling targets must be forced by psy vs psy.
-               int 6, psy 6
-
 boiler plate   cast 1r 1m, range vision, duration 1r +1/m, target 1 +1/3m
                If the target has a metal armour he takes damage per round equal
                to the abs of the armour, penetrating.
@@ -902,14 +838,6 @@ sentinel       cast 3r 3m, duration 100r +30/m, charge 10 +3/m, range 3
                is light source range 3, soft blue white
                int 8, psy 8, scf 0.66
 
-detect magic   cast 1r 1m, radius 5r +3/m, power per/3 +1/m
-               The caster will be aware of all unhidden spells within the
-               radius. Hidden spells that are hidden with lower power than
-               the detect spell are also detected. Hidden spells that are
-               hidden with higher power are not detected. Spells which are
-               hidden at equal power are detected 50\% of the time.
-               int 5 psy 5
-
 big boss' eye  cast 2r 1m, duration 10r +5/m, move 5sq/r +3/m,
                vision 20 +10/m 360deg +dusk=1m +night=2m
                Creates an almost invisible eye per-6 to notice, which floats
@@ -918,23 +846,6 @@ big boss' eye  cast 2r 1m, duration 10r +5/m, move 5sq/r +3/m,
                The caster will see everything the eye sees as if he was there.
                Great for getting sight to other spell targets...
                int 9, psy 6
-
-identify       cast 10r 1m, duration 10-int (min 3),
-               Identifies up to 1mana spell +1/m, not hidden spells
-               Hidden spells at power 0 +1/m
-               int 9, psy 5, scf 0.5
-
-disrupt        cast 1r 2m, range 5 +5/m,
-               disrupt a spell being cast, requires resistance roll.
-               disruptor: psy-3 + 1/2m
-               target caster: psy + spell mana
-               int 8, psy 8, scf 0.66
-
-dispel         cast 2r 3m, range 3 +3/m,
-               dispel an existing spell effect, requires resistance roll:
-               dispeller: psy-3 + 1/2m
-               target spell: psy(caster) + spell mana
-               int 8, psy 3, scf 1.0
 
 distribute     cast 1r 1m, range 5 +5/m,
                move one item +1/m from one willing character to another
@@ -945,6 +856,7 @@ teamspeak      cast 2r 1m, range 10 +10/m, duration 10 +10/m,
                Select targets which will be able to hear each other without
                as long as they are within range of each other (not caster)
                even if they whisper.
+               int 3, psy 3
 
 boost          cast 1r 1m, range psy +5/m, duration 5 +5/m,
                targets 1 +1/2m
@@ -952,37 +864,20 @@ boost          cast 1r 1m, range psy +5/m, duration 5 +5/m,
                (str,dex,con,int,psy,per,cha) by 2 +1/m for the duration.
                Casting is mod+1 if touching target.
                Once cast the target can move out of range
+               int 3, psy 6
 
+detect magic   cast 1r 1m, radius 5r +3/m, power per/3 +1/m
+               The caster will be aware of all unhidden spells within the
+               radius. Hidden spells that are hidden with lower power than
+               the detect spell are also detected. Hidden spells that are
+               hidden with higher power are not detected. Spells which are
+               hidden at equal power are detected 50\% of the time.
+               int 5 psy 5, scf 0.5
 
-
-summon demon   ! don't buy this yet, not finished with the background work
-               cast 3r 3m, power 0 +3/m, duration 5r +5/m
-               Summons a demon for the duration of the spell
-               roll list dX: (common demon 5 slots, rare 1 slot)
-                1 -  5  grey stalker
-                6 - 10  green mouth
-               11 - 15
-               xx - +1  large grey stalker
-
-
-
-perhaps a magic trap can come in handy sometimes
-------------------------------------------------
-
-embed magic    cast 3r 1m, duration 100r +100r/m, capacity 5 +5/m
-               Can embed another magic formula in an inanimate object to be
-               triggered by touch, destruction, or other "mechanical"
-               disturbance. The capacity limits the power of the embedded spell.
-               int 7, psy 5, scf 0.25
-
-trigger rune   cast 5r 1m, duration 100r +100r/m, range 10 +5/m
-               Can trigger one or more embedded formula within range.
-               Triggers can be complex combinations of mechanical disturbance,
-               sound, light, etc, with complex logic, but very limited
-               "intelligence".
-               It can react to triggering conditions within its range, and can
-               target guide the triggered embedded spells.
-               int 7, psy 5, scf 0.25
+identify       cast 10r 1m, duration 10-int (min 3),
+               Identifies up to 1mana spell +1/m, not hidden spells
+               Hidden spells at power 0 +1/m
+               int 9, psy 5, scf 0.66
 
 hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
                Hides a formula being cast so that it cannot be detected by
@@ -990,16 +885,33 @@ hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
                The power is set against the sensitivity of the detector.
                The capacity must be equal or larger than the total mana of the
                spell that is to be hidden.
-               int 8, psy 8, scf 0.25
+               int 8, psy 8
 
+disrupt        cast 1r 2m, range 5 +5/m,
+               disrupt a spell being cast, requires resistance roll.
+               disruptor: psy + 1/m
+               target caster: psy + spell mana
+               int 8, psy 8, scf 0.66
+
+dispel         cast 2r 3m, range 3 +3/m,
+               dispel an existing spell effect, requires resistance roll:
+               dispeller: psy-3 + 1/2m
+               target spell: psy(caster) + spell mana
+               int 8, psy 3, scf 1.0
+
+trap           cast 3r 1m, duration 100r +100r/m, capacity 5 +5/m
+               Embed a magic spell in an object and seal with a trigger rune,
+               to have it activate later on.
+               Trigger can be simple things like timer, touch,
+               someone coming close, etc.
+               Complex triggers require more mana and int rolls.
+               int 8, psy 5
 
 \end{verbatim} \normalsize
 
-
-
 \
 
-More spells on the way, not balanced
+More spells on the way, still not balanced, lets try them out
 
 \
 
@@ -1009,7 +921,8 @@ destructive dispel
     psy+3/m vs psy+mana
     blast with range of target spell mana
     damage is target spell mana
-    i.e. target spell disintegrates in a blast with damage and radius equal to mana
+    i.e. target spell disintegrates in a blast with damage and radius
+    equal to mana
 
 destructive feedback
     cast 1r, 1m, range 20
@@ -1041,7 +954,7 @@ fiery eye        int 5 psy 5
     creates fire, light source r10sq +5/m
     the caster gets vision 360deg from the fire source.  (wish for tool to limit
     default day vision, +1m dusk, +1m night, +1m dark     rate of turning of arc
-    range to target object is unlimited                   eg 90deg, 45deg/r rate
+    range to target object is unlimited once cast.        eg 90deg, 45deg/r rate
                                                           of rotation)
 
 one hand
@@ -1096,23 +1009,20 @@ bagland
 -
 
 
-
--
-
 burn
 drown
 sprout
 cloud    poison/lightning/rain
 
-
 \end{verbatim} \normalsize
 
+\
 
 \subsection*{Meta Magic}
 %-----------------------
 Some spells affect the fundamental rule mechanics.
 
-I fully expect some people to really dislike this stuff. So, just ignore it. That's the whole point of this rule system: Just use what you like, and ignore, or change, the rest.
+I fully expect some people to really dislike this stuff. If so, just ignore it. It is supposed to be your game. That's the whole point here: Just use what you like, and ignore, or change, the rest.
 
 \
 
@@ -1154,6 +1064,8 @@ southblock   (northblock, eastblock, westblock)
 \section*{Magical equipment}
 
 Wizards and Warriors alike can gain great power by wielding the arcane artefacts imbued with various magical energies. Below are some suggestions of magical items and artefacts. Make up your own to suit your adventure.
+
+Except for Quaff! most stuff is exotic equipment or custom made stuff.
 
 \
 
@@ -1212,6 +1124,7 @@ Dread and      process. It is a box of tools, and it gives off a soft "ping"
 Utility        at regular intervals. A hammer is missing.
                It gives a +6 to mechanical, locks, traps rolls,
                and +3 to McGyverism, find, dungeoneering rolls
+               enc 5
 
 The Shiny      The helmet really shines. Provides a 20 distance bright light.
 Helmet         It will draw one mana at the start of every 30 rounds.
@@ -1368,14 +1281,14 @@ Football       glow 2sq light, destructive feedback triggered range 6sq
     .   activates when thrown, deactivates when packed away, 8 charges:
     .   attack on touch: disintegrate 6 dam, penetrating
     .       reduces abs on touch weapon by dam, on touch armour by 1.
-    .           magical weapon/armour is protected, instead: blast 6 dam radius 2sq
+    .           magical weapon/armour is protected, instead: blast dam6 radius 2
     .           magical weapon loose 1 abs, magical armour does not loose abs
     .           and the artefact magic is disabled for dam rounds.
     .   attack on detecting casting within 6sq: destructive feedback
     .       draws 1d6 mana for max 6 dam, penetrating : resistance 15 vs psy
 
 
-Long Sword     dam 8, abs 14, str 8, max +2 str bonus, rest as long sword
+Longsword      dam 10, abs 16, str 8, max +2 str bonus, rest as long sword
 of Irdereng    on successful hit the attacker can choose to roll psy,
                if successful the attack does diff (psy roll) extra damage,
                penetrating, and draws one mana point from the user.
@@ -1387,7 +1300,8 @@ Angus' Shield  abs 20, parry+3, str 4
 
 The Very Evil  dam 2 pen 1 abs 5 (no str bonus), parry-3, todefend-3, finesse 9
 sacrificial    Starting a ritual sacrifice takes 10r of mumbling mumbo jumbo.
-dagger         Drains-converts 1hp to 1m per round (after 10r start).
+dagger         Drains-converts hp/2(ru) to mana per round (after 10r start).
+               The drained mana evaporates 1/r after target psy rounds.
                Cannot drain from dead/undead targets.
 
 crystal ball   holds 20 mana, transfer 1m/r in/out

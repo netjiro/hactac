@@ -5,7 +5,7 @@
 
 
 % Return of Uchly Namen was the first campaign I wrote for what has now become
-% gold and glory rule set and world setting. It is intended to be an intro start 
+% gold and glory rule set and world setting. It is intended to be an intro start
 % for a handful of newbie characters, fresh out of the Dungeon of Testing.
 
 
@@ -122,7 +122,7 @@
 \thispagestyle{empty} % no header on this page
 
 \vsmall
-\noindent 
+\noindent
 This work is licensed under a Creative Commons \\
 Attribution-NonCommercial-ShareAlike 4.0 \\
 International License. (CC BY-NC-SA 4.0).\\
@@ -151,7 +151,7 @@ Some of the maps and token images I've found on various rpg and table top user g
 
 \
 
-First playthrough of the campaign ran 2009-12-02 to 2010-05-17. Total game time around 50h over 21 weekday evening sessions. 
+First playthrough of the campaign ran 2009-12-02 to 2010-05-17. Total game time around 50h over 21 weekday evening sessions.
 The early sessions had some technical issues that stole time. Back then we found that MapTool-1.2-b32, Jarnal-917 and Teamspeak3 worked reasonably. Other tools not so much. If I get the time I might update the campaign files to modern MapTool format.
 
 \noindent The campaign chronology of the first run-through can be found at \\
@@ -422,7 +422,7 @@ Open the game by showing the players the region map. Say they all come from the 
 The newbie Heroes have all arrived in Trade Town last week. They have been looking for work, but it has been difficult to get anything worthy of a true Hero wannabe.
 Then suddenly they find an old advertisement proclaiming:
 
-%\begin{center} 
+%\begin{center}
 %\begin{minipage}{0.6\textwidth}
 \small \begin{verbatim}
 Dyslexia Marigt, Scholar Supreme,
@@ -653,7 +653,7 @@ sharpstaff      reach 1 mod-3, finesse-6
                 swing: mod-0 slow 1 dam 8/9 pen 0
                 slash: mod-0 dam 5/6, pen 0
                 deflect: mod-1
-                RedGuard sharpstaff requires specialisation for 15xp 
+                RedGuard sharpstaff requires specialisation for 15xp
                 or suffer mod-2, slow 1
 
 RedGuard heavy  abs 3, (less mods than normal plate armour)
@@ -1567,27 +1567,27 @@ This time when they deliver the BlueStone to Dyslexia Marigt, she will pay up, b
 The Heroes should each get a 10xp reward after delivering the BlueStone to Dyslexia Marigt. Another 5xp each if they have figured out that Honorbliz Wize has battled it before and all that. And another 5xp each if they have figured out that they can get the weapons to fight the demon at castle Pawa.
 
 
-\raggedbottom
+\raggedbottom  % big blocks will kill flush layout, re-set afterwards
 
 \goodbreak \begin{samepage} \vsmall \begin{verbatim}
 ===================================
 Honorbliz Wize              (named)
 -----------------------------------
 str  5       hp 12 abs 0
-dex  5       m1 w3 r6 d8
-con  6       stamina 10
+dex  5       m1 w3 r5 d7
+con  8       stamina 10
 int  9       vision 23
 psy 12       mana 25
-per  7       cap 10
-cha  3       xp --
+per  7       ap 7
+cha  3       init 10
 ----------
-skills
+skills - lots
 ----------
 fireball
 shock blast
 etc...
 ----------
-equipment
+equipment - not much on him
 money ( g s c)
 ===================================
 
@@ -1606,7 +1606,6 @@ con  3       stamina --
 int  3       vision 15 night
 psy  3       mana 5
 per  3       ap 9
-cha  -       xp --
 ----------
 scary         3 approach mod-0, melee mod-3, ranged mod-0,
                 fail-3 retreat, fail-6 flee
@@ -1638,53 +1637,40 @@ cha  8       xp 20 (ca 1000xp)
 strong 3, agile 4, tough 2, perceptive 3
 resilient 5, enduring 4, fast 4, rapid 5
 quick 3, focus 3, overextend 3, mobile 3
+balance 6, jump 6, climb 6, swim 6
+veteran 6, quick draw 7
 luck 3, black cat 3
-balance    6, jump 6, climb 6, swim 6
-veteran    6
-
-sneak     12
-avoid     10 yield+4
-double     8
-sword     12
-fancy attacks  5
-backstab   9
-throw      9
-quick draw 7
-
-find      10
-Common     8
-literate   6
-counting   4
-haggle     8
+sneak 12, find 10, backstab 9
+avoid 10 yield+4
+sword 12, double 8, fancy 5, deflect, feint, counter attack
+throw 9
+Common 8, literate 6, counting 4, haggle 8
 ----------
-deflect, feint, counter attack,
-----------
-2x fast blades   10 dam 6(5), abs 12, fast+1
+2x fast blades   12 dam 6(5), abs 12, fast+1
                     str 4 (max +1 str bonus), finesse-6
                     fast+1: str 7 dex 9
 
 8x throwing daggers 8 dam 3, penetrating 1, fast+1
-poisoned              range 8, short 4 mod+3, long 12 mod-3,
+poisoned              range 8, short 4 mod+1, long 12 mod-3,
                       vlong 16 mod-6 dam-1,
                       str 2 (no str bonus)
-                      first three attacks do not require stamina
 
 Poisons his blades: poison is paralysing and damaging
-                    strength 12, dam is str vs con diff: 1hp/r,
-                    paralysed for 3r per diff.
+                    dam is diff str12 vs con: 1hp/r,
+                    paralysed for 1r per diff, after (10-diff)/3r
 
 Amulet of Freedom. Counters magic that hinders the movement or actions
 of the bearer. Will also unbind rope knots and unlock shackles that bind
-the bearer. Draws 3 mana per automatic use.
+the bearer. Draws 3 mana per automatic use. (for SS it is 2mana/autouse)
 
-money ( 13g 15s 12c)
+money 13g 15s 12c
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
-\flushbottom
-
+%\flushbottom
+% meh, nothing here before next page, so setting flushbottom there instead
 
 
 
@@ -1705,6 +1691,7 @@ money ( 13g 15s 12c)
 
 
 \clearpage
+\flushbottom
 \phantomsection\addcontentsline{toc}{section}{intermission, all three stones}
 \section*{All three stones -- Sleepy Cove}
 \chaptermark{all three stones}
@@ -1724,7 +1711,7 @@ If the Heroes refuse to give her the stones before full payment she whines a bit
 
 If they still won't hand over the last gem she will after a day produce the extra money owed, but complain a lot about it, and say she had to borrow from the townspeople and sell some things. She has indeed sold some old crap at the general store. She is preparing to leave quickly after getting paid by Baron Conq.
 
-She now starts assembling the necklace properly. It will take two days. She also practices the ritual a bit. Sneaking up on her in the woods at night one can observe and roll for int to understand that there will be live sacrifice involved.
+She now starts assembling the necklace properly. It will take two days. She also practices the ritual a bit. Sneaking up on her in the woods at night one can observe and roll for int-3 or magic+3 to understand that there will be live sacrifice involved.
 
 
 \subsection*{Gossip in Sleepy Cove: general}
@@ -1747,7 +1734,7 @@ When Sam enters "Sleeping with the Fishes" to speak to the Heroes, Bling SwordSl
 
 \noindent Bling will interrupt Sam when he tries to sell information to the Heroes:
 \begin{readoutloud}
-I wouldn't trust Sam Slick if I were you. He is a shady character, and lacks the strong moral compass that decent people such as myself has.
+I wouldn't trust Sam Slick if I were you. He is a shady character, and lacks the strong moral compass that decent people such as myself have.
 \end{readoutloud}
 Sam looks irritated, but keeps quiet. Then he says to the Heroes:
 \begin{readoutloud}

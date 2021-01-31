@@ -26,7 +26,7 @@
 %for pdflatex:              % old pdflatex, need more stuff for modern works
 \usepackage{mmap}           % add info to pdf, searchable ligatures, cmap is old
 \usepackage[T1]{fontenc}    % set font encoding T1 to allow "|" ">" "<" etc
-\usepackage[utf8]{inputenc} % set utf8 input file encoding 
+\usepackage[utf8]{inputenc} % set utf8 input file encoding
 
 %% for xelatex:              % default utf8, need less stuff to work
 %\usepackage{fontspec}       % searchable ligatures in pdf: https://tex.stackexchange.com/questions/67848/can-pdf-search-find-words-with-ligatures-in-xelatex-documents
@@ -429,14 +429,45 @@
 %\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt} =xtl-  0.25
 %\rule[0.8ex]{0.5\textwidth}{0.5pt} =xtl-  0.8ex
 \newcommand{\tmpsepline}{
-    
+
     \
-    
+
     \rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}
-    
+
     \
-    
+
 }
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% \cleartoleftpage
+%     open to an empty left page, so to fill two opposed pages
+%     cleardoublepage opens to a right page (usually odd page number)
+% https://tex.stackexchange.com/questions/11707/how-to-force-output-to-a-left-or-right-page
+\makeatletter
+\newcommand*{\cleartoleftpage}{%
+  \clearpage
+    \if@twoside
+    \ifodd\c@page
+      \hbox{}\newpage
+      \if@twocolumn
+        \hbox{}\newpage
+      \fi
+    \fi
+  \fi
+}
+\makeatother
+%-------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
@@ -455,14 +486,14 @@
 
 
 
-% Manually specify hyphenation for names. 
+% Manually specify hyphenation for names.
 % Remember: space separated word list: lead with space
 % hyphens can only occur on specified "-" characters
 % words without "-" will never be hyphenated, overrides rules
-\hyphenation{ 
- cam-paign-ab-il-ity 
- Thing-a-ma-jig 
- milli-fort-night 
+\hyphenation{
+ cam-paign-ab-il-ity
+ Thing-a-ma-jig
+ milli-fort-night
 }
 
 
@@ -546,7 +577,7 @@
 \raggedbottom
 
 \vsmall
-\noindent 
+\noindent
 This work is licensed under a Creative Commons \\
 Attribution-NonCommercial-ShareAlike 4.0 \\
 International License. (CC BY-NC-SA 4.0).\\
@@ -577,7 +608,7 @@ If you want to use it in any other fashion please contact the author.
 \chapter*{hello :)}
 %\addcontentsline{toc}{section}{introduction}
 
-The \textbf{Gold and Glory} rules and world setting have evolved sporadically since early 2008. I was working on a postdoc contract in Utrecht and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming. 
+The \textbf{Gold and Glory} rules and world setting have evolved sporadically since early 2008. I was working on a postdoc contract in Utrecht and wanted to stay in contact with friends Up North in Scandinavia for some occasional gaming.
 For a while it had been apparent that we needed new arrangements to keep gaming at a reasonable frequency. Family and work obligations made it difficult to schedule our traditional full day rpg campaign sessions when people had small kids and lived spread out across different countries.
 
 So I wrote this stuff. Easy to schedule, quick online gaming, fun light hearted rpg adventures, and deep interesting tactical fights. Designed primarily to run with voice chat, virtual tabletop, and perhaps shared write and sketch space. It has also turned out to work very well, simplified, for playing quick tabletop fights and adventures, even with young kids. Much of the tactical depth that makes the fights interesting is emergent from the simplest basic rules.
@@ -607,9 +638,9 @@ Fast gaming is crucial for us since we only have a couple of hours each session.
 \section*{note: versions}
 %------------------------
 This is my personal notes package, not a draft for publication. There are still lots of stuff in progress of being updated, with inconsistencies, notes, TODOs etc.
-I'm updating whenever I have the time and inclination. Use a good diff tool to find what has changed, been removed or added. Easiest is of course to go directly to the \LaTeX{} source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested 
+I'm updating whenever I have the time and inclination. Use a good diff tool to find what has changed, been removed or added. Easiest is of course to go directly to the \LaTeX{} source, but a decent pdf diff tool is perhaps sufficient? If you don't have something lying around I've tested
 \vvsmall(late 2017)\normalsize~
-\url{https://draftable.com/compare} 
+\url{https://draftable.com/compare}
 and find it ... \emph{passable} ... for a simple 2-way diff, but lacking block move, 3-way, etc.
 
 
@@ -675,7 +706,7 @@ Anything you want to change or add? Contact me! My handle is \emph{netjiro} on g
 \input{magic}
 \input{campaign}
 
-% Here the basic chapters are finished, 
+% Here the basic chapters are finished,
 % the rest are appendices, switch fill layout to raggedbottom
 \appendix
 \raggedbottom

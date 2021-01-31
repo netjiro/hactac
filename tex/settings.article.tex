@@ -23,7 +23,7 @@
 \usepackage{epsfig}     % Alternative package
 \usepackage[hang,small,bf]{caption}
 
-\usepackage[british]{babel}       
+\usepackage[british]{babel}
 
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{--}
@@ -151,9 +151,28 @@
 
 
 % temporary separation line
-%\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
+\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
 %\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt} =xtl-  0.25
 %\rule[0.8ex]{0.5\textwidth}{0.5pt} =xtl-  0.8ex
-\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
 
 
+
+%-------------------------------------------------------------------------------
+% \cleartoleftpage
+%     open to an empty left page, so to fill two opposed pages
+%     cleardoublepage opens to a right page (usually odd page number)
+% https://tex.stackexchange.com/questions/11707/how-to-force-output-to-a-left-or-right-page
+\makeatletter
+\newcommand*{\cleartoleftpage}{%
+  \clearpage
+    \if@twoside
+    \ifodd\c@page
+      \hbox{}\newpage
+      \if@twocolumn
+        \hbox{}\newpage
+      \fi
+    \fi
+  \fi
+}
+\makeatother
+%-------------------------------------------------------------------------------

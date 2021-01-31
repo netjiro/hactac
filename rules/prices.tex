@@ -38,6 +38,15 @@ The list prices and equipment stats are for regular equipment. Well made equipme
 Not all equipment or properties can be boosted like this. An abs 2 leather armour will cost much more than 5 gold (10x leather armour base price), if it is even possible to make, and would probably require the hide from some very exotic and dangerous monster.
 
 
+\section*{Custom made items}
+%---------------------------
+It's possible to order custom made items adapted specifically for the stats of the Hero. It costs a lot more, and should always be treated as special equipment, or even exotic in cases where the Hero wants something far out of the ordinary.
+
+For reasonable customisations, e.g. a little bit larger / smaller sword, prices usually start with a starting cost of a few gold, plus 3-5x the base price of the normal item.
+
+Heavy weapons are a normal customisation, and costs 1-3g base plus 3x the base price of the regular item. Should be treated as well made with "special equipment" availability, and usually takes a week or so to make.
+E.g: a heavy large longbow is a typical request for very strong infantry archers. Buying a single one or a couple of them will cost 1g + 3x base, ca 6-7g, and the required special heavy arrows cost, lets say, 1s per order + 3x base price, so around 1g for a 30 arrow order. Buing large orders of bows and arrows is much cheaper since it is essentially still based on military somewhat regular stuff.
+
 
 
 % testing table ...
@@ -185,21 +194,24 @@ heavy plate         50 0 0       5.0 worn 15.0 packed
                      g s c    encumbrance
                      -----    -----------
 
-throwing knife         1 0       0.2
-throwing axe           2 0       0.33
+dart / star            1 0       0.1
+throwing knife         1 5       0.2
+throwing dagger        3 0       0.4
+small throwing axe     4 0       0.6
+throwing axe           5 0       0.8
+large throwing axe     8 0       1.1
 javelin                1 5       0.5
-heavy javelin          2 5       0.66
-dart                     5       0.1
+large javelin          2 5       0.66
 
 
 small bow              3 0       0.75
 bow                    6 0       1.0
 large bow            1 0 0       1.5
 longbow              1 2 0       2.0   military, much cheaper in bulk
-heavy longbow        1 8 0       2.5
+large longbow        1 8 0       2.5   military, much cheaper in bulk
 
 normal arrows          1 0       0.33  10 arrow bundle
-cheap arrows             1       0.33  10 arrow bundle, mod-1 dam-1, no reuse
+cheap arrows             3       0.33  10 arrow bundle, mod-1 dam-1, no reuse
 for special arrows, see below
 
 
@@ -208,7 +220,7 @@ crossbow             2 0 0       1.5   military, much cheaper in bulk
 large crossbow       3 0 0       2.0   military, much cheaper in bulk
 
 normal bolts           1 0       0.25  10 bolt bundle
-cheap bolts              1       0.25  10 bolt bundle, mod-1 dam-1, no reuse
+cheap bolts              3       0.25  10 bolt bundle, mod-1 dam-1, no reuse
 for special bolts, see below
 
 
@@ -238,7 +250,7 @@ Specialty arrows and bolts are special equipment and not readily available eveyr
 
 bow arrows:
 10 normal arrows       1 0       0.33  no mods
-10 cheap arrows          1       0.33  mod-1 dam-1, cannot be reused
+10 cheap arrows          3       0.33  mod-1 dam-1, cannot be reused
 10 fine arrows       1 0 0       0.33  mod+1
 10 barbed arrows       5 0       0.33  dam+1
 10 sharp arrows        5 0       0.33  pen+1
@@ -269,6 +281,9 @@ arbalest bolts:
 10 spikehead bolts     5 0       0.5   see arbalest
 10 blunthead bolts     5 0       0.5   see arbalest
 10 fine version      2 0 0       0.5   mod+1
+
+ballista shots/bolts/spears/etc
+1 shot               5-50c       0.5-2.0  see ballista
 \end{verbatim} \normalsize
 
 
@@ -296,6 +311,7 @@ Most basic equipment can be found in any village or town. Prices can vary quite 
 knife                    5       0.25
 
 scabbard/sheath/loop 0.1*weapon  0.1  ensures reliable weapon draw without roll
+quiver / bolt pack       -       ---  comes with the arrows/bolts
 
 first aid kit          5 0       1.5  has 10 uses, refill for 3s
 medical kit          2 0 0       2.0  has 10 uses, refill for 10s
@@ -431,6 +447,9 @@ pain killer            3 0       0.25  eliminates 2 pain after 3r
 pain killer            5 0       0.25  eliminates 3 pain after 3r damages 1hp
 
 \end{verbatim} \goodbreak \begin{verbatim}
+exquisit quiver      8 0 0       0.33  holds 10 arrows, alleviates bow snap shot
+                                       mods by 1 due to smooth reloads.
+
 staff light paste    1 0 0       0.25  stafflight 1 for 100r, spread on item
                                        takes 2r to apply.
                                        light as lamp
@@ -471,31 +490,43 @@ glow fly             0 2 0  training command mod-3 +1/s, glow strength +1/s
 \end{verbatim}
 \normalsize
 
-Master crafted weapons can be purchased as special equipment, and usually cost 5x-10x the list value of the weapon plus a few gold as baseline cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
 
-A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of base value plus an extra gold or two. A custom weapon should not cost less than 3g.
+\subsection*{Master crafted and Customised weapons}
+%--------------------------------------------------
+Master crafted weapons can be purchased as special equipment, and usually cost 5x-10x the list value of the weapon plus 5-10 gold as baseline starting cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
 
-Then it's possible to make a custom master crafted weapon, combining custom requirements with master crafted bonuses, but at even higher prices, 10g minimum.
+A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of standard list value plus 1-3 gold as a baseline starting cost. A custom weapon should not cost less than 3g.
+
+Then it's possible to make a custom master crafted weapon, combining custom requirements with master crafted bonuses, but at even higher prices, and 10g minimum. Perhaps 10-15x list price and 10 gold baseline starting cost.
 
 It probably takes a week for a master craftsman to make high quality or custom weapon, provided he has enough of the high quality materials available. Otherwise there are always heroes around who can take it upon themselves to go out and find that rare lump of sky iron, or barrel of basilisk blood.
 
 \
 
-Magical potions and single use or multi use items are mostly custom made special or exotic equipment. A few magical potions and items are made in quantity and thus much cheaper, like Quaff! But mostly it's just a few custom items, expensive, time consuming
+Common customisations like heavy weapons or plated shields are relatively normal and should lie at the lower end of the customisation price range. E.g: a heavy broadsword should be 1g baseline start cost plus 3x the normal list price.
 
+Heavy customisation usually adds 20-40\% encumbrance and 30-50\% abs. Master crafted heavy customisation can have perhaps upwards of 50-75\% higher abs than standard list value. Exotic level master crafted perhaps even 100\% higher abs with only 33\% higher encumbrance.
+
+\
+
+Magical potions and single use or multi use items are mostly custom made special or exotic equipment. A few brands and types of magical potions and items are made in quantity and thus much cheaper, like Quaff! But most items are custom made to order, produced singularly or in small batches, expensive, time consuming.
+
+\noindent
 The cost of a custom made magical potion can be estimated to:\\
 \verb|1 + (0.25 * (mana+1) * scf * psy) gold| \\
 E.g: a potion of firestorm with 3 mana would cost approximately:\\
 \verb|1 + (0.25 * (3+1) * 0.33 * 8 ) = 3.6 gold|
 
+\noindent
 The cost of a custom made magical single use or multi use magical item can be estimated to: \\
 \verb|single use:  3 + (0.25 * (mana+2) * scf * psy) gold| \\
 \verb|multi use : 5 + uses * (0.25 * (mana+2) * scf * psy) gold| \\
 E.g: a single use wand and one with 4 charges of 3 mana shock bolts would cost approximately: \\
 \verb|3 + ( 0.25 * (3+2) * 0.33 * 7 ) = 5.9 gold| \\            % 3 + 2.8875
-\verb|5 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 16.55 gold| \\      % 5 + 4 * 2.8875
+\verb|5 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 16.55 gold|         % 5 + 4 * 2.8875
 
-\noindent Permanent magical items are much more expensive.
+\noindent
+Permanent magical items are much more expensive.
 
 
 

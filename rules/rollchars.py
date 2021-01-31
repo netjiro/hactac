@@ -12,8 +12,8 @@ import sys
 
 # ------------- for regular quick roll selection, just change here -------------
 #distribution = "standard_set"      # standard selection: 17 dudes, too heroic
-#distribution = "small_set"         # small set, any race: 10 dudes, still heroic
-distribution = "tiny_set"          # small set, any race: 8 dudes, still strong
+distribution = "small_set"         # small set, any race: 10 dudes, still heroic
+#distribution = "tiny_set"          # small set, any race: 8 dudes, still strong
 #distribution = "min_set"           # minimal set, 6 dudes, one of each race
 #-------------------------------------------------------------------------------
 
@@ -486,7 +486,7 @@ def rollHalfling():
         gossipbonus = d3()
         char.bonuses.append("gossip bonus +" + str(gossipbonus))
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
-    char.extras.append("Halflings gain psy+1 for 24h when eating good food (2x price)")
+    char.extras.append("Halflings gain psy+1 for 24h when eating good food (3x price)")
     # skills
     char.skills["Common"] = flat(3,6)
     char.skills["avoid"] = flat(1,3)
@@ -517,7 +517,7 @@ def rollOrc():
     char.per = r2d5()                     #  2 - 10   6
     char.cha = r2d5() -3                  # -1 -  7   3
     # secondary                                       1,2,3,4,5,6,7,8,9
-    char.hp = 6 + r2d10()                 #  8 - 24  17
+    char.hp = 6 + r2d9()                  #  8 - 24  16
     char.m = 1 + int(d10() / 9)           #  1 -  2   8,2
     char.w = 2 + int(d10() / 3)           #  2 -  5     2,3,3,2
     char.r = 4 + int(d10() / 3)           #  4 -  7         2,3,3,2

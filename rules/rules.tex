@@ -337,7 +337,6 @@ Some terrain types or obstacles are difficult to pass, and may cost more movemen
 
 If a character tries, or is forced, to move more than he has movement points to do he will fall down into the square he's moving to, going prone, and get a persistent mod-3 to the rest of the round and the entire next round. Skills like off balance, defensive step, etc modifies this.
 
-
 Diagonal movement around corners and between objects is usually restricted.
 Objects or terrain with corners that leave a lot of space to the corner of the square can be treated as "round corners" Friendly Heroes also have "round corners".
 Object corners that go mostly or completely to the corner of the square are "sharp corners". Enemy units also have "sharp corners".
@@ -420,11 +419,14 @@ All characters can react to actions being performed to them. This means that a s
 The right to react gives the right to perform one action, including movement before and/or after that action. The reaction action does not have to target the attacking character, but can be a non target action or target any other character.
 
 The reaction action can be interrupted by characters with higher initiative, just like any other action, \emph{but not by the original attacker}.
-E.g: Attacking Astrid moves in and attacks Defending Doris. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action. Or if AA misses his attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
+
+E.g: Attacking Astrid moves in and attacks Defending Doris. AA has higher initiative and can move and attack before DD can do anything at all. DD can then for example parry the attack with one action as right to react. Or if AA misses her attack DD can make a return attack under the right to react before AA can move out of reach or make another attack.
 
 Right to react continues in a chain if the two keep attacking each other.
 E.g: Attacking Astrid attacks Defending Doris but misses. DD attacks AA under right to react, but also misses. Then AA can attack DD if she wants, still under right to react. And so on until they don't attack each other any more due to lack of action points, other interests, moved out of combat, attacked someone else, etc.\\
 Note: If AA attacks DD, hits, and DD successfully defends, there is no continuation within right to react. AA took an action and DD reacted. Finished.
+
+A right to react reaction chain can be interrupted at any point by characters with higher initiative, but it continues once the interruption and any reactions have been resolved.
 
 % is this correct, or should a right to react chain always proceed at fixed initiative of the initial attack? There are edge cases hiding here...  :
 If using the rule where spending action points decreases in round initiative it is possible that the participants drop in initiative order to the point where other characters can interrupt and intervene in a right to react action chain. However, the right to react by the target will not disappear even if a third party injects an action in the chain. The target still has right to react to the first action even after a second attacker has interrupted the response action and the target has taken a reaction action to the interrupt action.
@@ -435,7 +437,7 @@ With multiple people interrupting this can get gnarly, but essentially, just kee
 
 Note: defence actions are treated slightly differently from other reactive actions. A defence action, e.g. parry, does not allow for movement or turning \emph{before} the attack-defence sequence is resolved. The defender can still move or turn as part of, during or after, the defence action but only after the attack-defend is resolved and completed at present location and facing.
 
-Attack actions are also a little different in that the attacker cannot move away after an attack before the target has taken their right to react action.
+Attack actions are also a little different in that the attacker cannot move away after an attack before the target has taken their right to react action. But can move away as part of the attack before the target moves as part of the reaction action, provided that the attacker had higher initiative when the attack was initiated.
 
 %E.g: Attacking Astrid strikes Defending Dave. DD choose to parry + yield + move three steps away to negate further attacks from AA. In sequence: 1) the attack is rolled, and is successful. 2) the defence is declared, the yield bonus is applied to the parry, but DD is not moved yet. 3) the parry defence action is rolled, and fails. 4) damage is applied. 5) DD is moved for the yield maneuver. 6) DD is moved for the further movement. Note: that DD could not have chosen to move 3sq then skip the defence on grounds that by then AA would be out of reach. If DD had higher initiative than AA she could have interrupted AA's attack by moving away, but then it would have happened before AA spent the attack ap and rolled for the attack action.
 
@@ -529,13 +531,15 @@ Attack, parry, avoid are typical combat actions and generally cost 3 action poin
 \action{Action: "jump"} an obstacle or chasm is a normal 3ap action and requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll, and a 4sq creek is mod-9.
 
 Jump action does not take any negative modifications from movement speed. It instead gets mod +speed/3, where speed is the speed of approach: the number of squares moved in a straight line \emph{before} the jump, (\hyperref[approach]{see below}).
-E.g: Dashing 7sq before the jump gives Flying Fritz a jump mod+2..
+E.g: Dashing 7sq before the jump gives Leaping Laban a jump mod+2.
 
 The jump movement also costs movement points as normal. If the character moves further than his max movement including the jump he will continue the jump but fall on landing unless he can go off balance enough to cover the difference.
 
 On a fail -1 to -2 the character came up short and missed the mark but managed to grab hold with his hands. He now hangs from the ledge, if that is possible on the material and square, and must climb up next round. On a fail-3 or worse jump roll, the distance short is fail/3. Then the character is probably on his way towards a spiky/fiery/wet meeting further down.
 
 The jump skill will improve the odds when jumping. A roll of 10 is not an automatic failure for the jump. The result diff decides. Note that the jump action roll ignores the usual movement mods, but it does not ignore other mods to actions such as having declared high ap, low hp, off balance, or other effects.
+
+Jump rolls are modified heavily from being over encumbered, with mod-3 per over encumbrance point instead of the usual mod-1.
 
 
 \action{Action: "climb"} allows to climb one vertical square per 3ap action and requires a normal dex roll. Fail -1 to -2 means the character is stuck this round. Fail-3 means slip down one square, and fail-6 means falling. Each climb action also costs one movement point (1mp) even if no movement is made. A roll of 10 is not an automatic fail for the climb. The result diff decides.
@@ -549,7 +553,7 @@ Better success allows for faster climbing if the Hero has enough mp to spend. Su
 
 \action{Action: "unpack/rummage"} is used to take something out of a container, like a backpack, sack, etc. It takes 2+1dX rounds: \\
 One round to take off / open the container. \\
-1dX rounds to find and take out the item. X = (number of items in the pack) / (perception) round up. \\
+1dX rounds to find and take out the item. X = number of items in that compartment of the container. Where a successful int or per roll will halve the time.\\
 And finally one round to close and put back the container.
 
 
@@ -974,7 +978,7 @@ On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 Attacks from the side or back are more difficult to defend against. Attacks incoming at 90deg from the character's facing are mod-3 to parry. At 145deg it's mod-6 and at 180deg it's mod-9.\\
 For hex boards: 60\degrees is mod=1, 90\degrees (reach) is mod-3, 120\degrees is mod-6, and 180\degrees is mod-9.
 
-The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45\degrees turn together with the action after the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
+The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45\degrees turn together with the action \emph{after} the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
 
 The target is also not allowed to spend ap or mp before a defensive action unless he has a higher initiative, since the right to react only allows for one activation, where the defend (parry, avoid, etc) must come first.
 
@@ -1015,6 +1019,8 @@ Some squares contain difficult terrain, such as rubble, debris, etc. These squar
 Moving through difficult terrain or partially blocked squares require a dex+9 roll, modified by ams as usual and the terrain modification of the square.
 
 Attacking around a blocked corner gives mod-3 to the attack. Enemies are not considered to have blocked "sharp" corners for this situation.
+
+Failing a roll when moving through difficult terrain could me the character has to pay extra movement points, or that they fall down, or that they can't move again that round. In some cases the terrain allows for a recovery action, where the Hero can spend 3ap to
 
 
 \subsection*{Crawl spaces and tight tunnels}
@@ -1131,9 +1137,6 @@ E.g: Wizard Willful is casting StaffLight which takes him 5r. He maneuvers slowl
 %\phantomsection\addcontentsline{toc}{section}{stamina}
 %\section*{Stamina}
 
-
-
-
 \subsection*{Stamina}
 %--------------------
 Stamina is a measure of how long the character can keep up with high power activity, such as hard battling, running, etc. When the stamina runs out the character will have problems performing taxing actions and movements. \\
@@ -1147,8 +1150,8 @@ Some skills and maneuvers also require drawing stamina.
 
 %\todo: should it cost 1 stamina to declare extra AP? or perhaps 1 stamina per extra 3 ap: stamina cost = extra ap / 3 (round up as usual)
 
-Characters regain one stamina at the start of every round.
-If stamina reaches 0, they must start rolling for con for every action or movement declaration that requires drawing stamina. The roll is penalty modified by negative stamina but ignores the mod stack. If the con roll succeeds the character will go into negative stamina.
+Characters regain one stamina at the start of every round. They can rest to recuperate faster.
+If stamina reaches 0, they must start rolling for con for every action or movement declaration that requires drawing stamina. The con roll is penalty modified by negative stamina but ignores the mod stack, etc. If the con roll succeeds the character will go into negative stamina.
 If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. Failing a con roll when declaring walk / run / dash means the character will be limited to maneuver movement speed for the round.
 
 With negative stamina, all actions are also modified by the negative stamina, above the normal mod stack.
@@ -1197,10 +1200,11 @@ If a character carries too much stuff he gets encumbered and will have modificat
 \noindent
 Encumbrance is calculated as: \verb|encumbrance = total weight carried / str.|
 
-E.g: Trekking Tom has str 6, and carries a total load of 4.0 weight. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 weight he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. With another 4.0 weight he has encumbrance 13.0/6 rd to 2. He will then have a mod-2 encumbrance penalty which will affect actions and movement.
+E.g: Trekking Tom has str 6, and carries a total load of 4.0 weight. His encumbrance is then 4.0/6 = 0.66 which is rounded down to 0. He thus has no encumbrance modifiers. When he then packs on another 5.0 weight he has encumbrance 9.0/6 = 1.5, rounded down to encumbrance 1. With another 4.0 weight he has encumbrance 13.0/6 $\approx$ 2. He will then have a mod-2 encumbrance penalty which will affect actions and movement.
 
 \
 
+\begin{samepage}
 \noindent
 Each full encumbrance gives modifications: \\
 All actions are mod-1 per encumbrance \\
@@ -1208,7 +1212,8 @@ Dash speed is -1 sq/r and +1 stamina per encumbrance \\
 Run speed is -1 sq/r and +1 stamina per encumbrance/2 \\
 Walk speed is -1 sq/r and +1 stamina per encumbrance/3 \\
 Maneuver speed is -1 sq/r and +1 stamina per encumbrance/4 \\
-Long distance travel is also reduced by 1 per encumbrance. \\
+Long distance travel is also reduced by 1 per encumbrance.
+\end{samepage}
 
 Also, stuff has to be carried somewhere. Item slots are hands, one each, shoulder and back, three slots: slung left, right and centred. Some belts have carry slots. Some sheaths and quivers can be fastened along arms or legs, etc. Shields can be carried on an arm or outside a backpack.
 
@@ -1322,14 +1327,16 @@ The GM can of course roll the perception rolls hidden from the players, but that
 
 \subsection*{Sneaking and Spotting}
 %----------------------------------
-Roll for sneak: All environmental modifiers apply to the sneaking roll, then the sneak roll diff is applied as a mod to the perception and find spotting rolls.
+\label{sec:sneakspot}
+Sneaking and hiding, both self and other objects, are done with the sneak skill.
+Conceptually the sneaking or hidden Hero or object is not necessarily fully hidden from view, just partially obstructed, in shadow, or placed / moving so that it is less likely to be noticed.
 
-Sneaking and hiding, both self and other objects, are done with the sneak skill. Conceptually equivalent to some extent in that the target is not really hidden from view, just partially obstructed, in shadow, or placed/moving so that it is less likely to be noticed.
+The sneak roll is modified by ams as usual and by various environmental modifiers. The success diff of the sneak is applied as mod to the perception / find rolls of the opponents. A failed sneak does not make the Hero easier to notice than if he had not tried sneaking.
 
 Some basic sneak modifiers:\\
 area is clean/open -3\\
 area has some stuff around =0\\
-area is cluttered +3\\
+area is clutered with large objects +3\\
 daylight or otherwise well lit -3\\
 lighting by torch and otherwise dark =0\\
 night or unlit dark area +3\\
@@ -1337,9 +1344,7 @@ weather is calm, still and quiet -3\\
 weather is as usually, some wind and moving vegetation =0\\
 weather is loud and everything moves, e.g. stormy  +3
 
-Spending rounds, not actions, to seriously camouflage a character or hide an object will require a find roll to detect them. The environment modifiers are still applied to the sneak roll and then the diff is applied as modifier to the find roll.
-
-For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
+Spending rounds, not actions, to seriously camouflage a character or hide an object will require a find roll to detect them. The environment modifiers are still applied to the sneak roll and the success diff is applied as modifier to the find roll.
 
 Spotting by characters that are inattentive, sleepy, or fiddling with something else is generally a mod-3 to the perception roll even if the spotter has mod-0 ams. Spotting when actively engaged in moving or actions are modified by ams as normal.
 
@@ -1348,14 +1353,20 @@ Spotting by characters that are inattentive, sleepy, or fiddling with something 
 %---------------------------------------------------------
 Under normal action conditions roll for sneak once per round when the character is moving in an area where he might get noticed, in view or detection range. And the same for perception for the spotting opponents.
 
-Outside of general action, just roll now and then when environment changes for a general success diff to apply to any guards that get close.
+For quick and easy sneaking around when scouting outside of combat one can simply roll for sneak occasionally when the environment changes to determine the spotting mods. Then only roll for detection by those opponents who have high enough perception, as long as the sneaky bastard doesn't run straight past the nose of the tired guard.
+
+
+\subsection*{Unaware opponents}
+%------------------------------
+\label{sec:unaware}
+Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
 
 
 \subsection*{Surprise}
 %---------------------
 \label{sec:surprise}
 
-\todo surprise, int to get Maneuver mp and 3ap, fail int gets total surprise
+\todo surprise, roll int to get Maneuver mp and 3ap, fail int gets total surprise
 \todo or perhaps successful int roll allows declaring success diff ap and success diff/3 mp
 
 Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
@@ -1363,12 +1374,6 @@ Unaware and relaxed characters can be surprised. It then takes them one round to
 A successful roll means they are not surprised and cannot be considered unaware. They have full normal ap available and movement speed M.
 
 A failed roll means they take the fail diff as mods to all actions for the rest of the round, have only half ap (ru), and can move at most 1sq. They can still expand one action to a full round action if they don't have enough ap.
-
-
-\subsection*{Unaware opponents}
-%------------------------------
-\label{sec:unaware}
-Unaware characters, such as city guards, and goblins too focused on their stamp collections, are easy targets. They have perception mod-3, and will take some time to react. When attacked, startled, or succeeding a perception roll to notice the advancing hero, they will still require an int roll to get in gear. Otherwise they will be surprised and not do much until the next turn.
 
 
 \subsection*{Long range vision}
@@ -1415,7 +1420,7 @@ Some attacks have special effects that take place when the attacks succeeds. Som
 
 
 \item[Poison]
-Poisons do damage or other effect over time. Most poisons has a few characteristics: strength, duration, and damage per round. Each round roll poison strength \vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
+Poisons do damage or other effect over time. Most poisons has a few characteristics: strength, duration, and damage per round. Each round roll poison strength vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
 
 Poisons do not have to do damage, they may just paralyse the victim, confuse it, or have other strange effect. Perhaps the target must pass con rolls or go into frenzy attacking the nearest person.
 
@@ -1453,11 +1458,13 @@ Weapons with the \emph{snag} property can be used to intentionally entangle the 
 The target is moved one space away for each point of knockback.
 Large targets, with size more than one square, ignore one point of knockback for each occupied square after the first one. E.g: a 2x2sq troll ignores 3 knockback points.
 Some creatures have knockback reductions even if they are smaller than multiple squares.
-The target must pass a dex roll or go prone, mod-3 per extra square.
+The target must pass a dex roll or go prone, mod-3 per extra square beyond the first.
+
+Some knockback effects have a str value which is then used in a str vs str against the target to see if the knockback occurs.
 
 
 \item[Knockdown]
-The target will be knocked down and go prone unless they pass a dex roll. Some knockdown have a str value which is then
+The target will be knocked down and go prone unless they pass a dex roll. Some knockdown have a str value which is then used in a str vs str against the target to see if the knockdown occurs.
 
 
 \end{description}
@@ -1499,7 +1506,7 @@ Excess damage above the weapon abs both continues into the target and damages th
 %\subsection*{Damaging armour}
 %%----------------------------
 %\todo armour also has hp, and takes damage when overpenetrated.
-%E.g: armour takes dam/3 as well. When hp reaches 0 it reduces abs by 1, and resets hp at half hp. plate abs 3 hp 30 will be damaged plate 2 hp 15 then ruined plate 1 hp 7. \\
+%E.g: armour takes dam/3 as well. When hp reaches 0 it reduces abs by 1, and resets hp at half hp. Plate armour abs 3 hp 30 will be damaged plate 2 hp 15 then ruined plate 1 hp 7. \\
 %? Hmm How to automate ?
 %? relevant ?
 
@@ -1507,11 +1514,12 @@ Excess damage above the weapon abs both continues into the target and damages th
 \subsection*{Hacking through objects}
 %------------------------------------
 Hacking away at large objects such as doors, walls, statues, etc are at mod+6. If you have skills that improve damage for good strikes it should be quick work.
-Some weapons are not meant to be used against objects. Using your sword or axe to hack away at a stone statue or stone wall will have a 10\% chance each strike to reduce the abs of the weapon by 1.
+Some weapons are not meant to be used against objects. Using your sword or axe to hack away at a stone statue or stone wall will have a 10\% chance each strike to reduce the abs of the weapon by 1. Axes works well against wooden objects.
 
 Pick axes and hammers are meant to be used against objects, and suffer no damage. They usually also do extra damage to objects of certain type or material.
 
 
+% lacking strength or dexterity
 \subsection*{Insufficient strength or dexterity penalties}
 %---------------------------------------------------------
 All weapons require a certain strength. If that is not met all actions with that weapon takes a mod-1 dam-1 penalty for each missing str. For weapons with a minimum dexterity requirement each lacking dex point will cause a mod-1 and cost (lacking dex)/3 round up extra action points.
@@ -1524,7 +1532,7 @@ And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder req
 %--------------------------------
 \todo meh, rewrite excessive strength bonus points allocation structure
 
-Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
+Heroes with higher strength than the weapon / armour / action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
 Always use the highest base strength requirement of all equipment, maneuvers, skills, etc when calculating the free excessive strength points.
 E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
@@ -1653,7 +1661,7 @@ After having escaped from combat a character cannot immediately re-enter the map
 
 \subsection*{Hunger and thirst}
 %------------------------------
-The character must eat and drink. Each day he is without food his max stamina drops by -1. Each day he is without water his max stam drops with -3. Note: when max stam goes below zero it's difficult to draw stamina for actions, and all actions take the negative stamina as mods, above ams, meaning it's going to get very difficult to do anything.\\
+The character must eat and drink. Each day he is without food his max stamina drops by -1. Each day he is without water his max stam drops with -3. Note: when max stam goes below zero it's difficult to draw stamina for actions, and all actions take the negative stamina as mods, above ams, meaning it's going to get very difficult to do anything.
 The character dies from thirst or starvation when max stam reaches -con.
 
 When food and water is available again the character recovers max stam at con/3 per day.
@@ -1671,7 +1679,7 @@ When food and water is available again the character recovers max stam at con/3 
 
 \subsection*{Ranged weapons}
 %---------------------------
-Ranged weapons have the benefit of attacking distant targets and cannot be parried. But they have slow rate of fire and do not do as much damage as melee weapons.
+Ranged weapons have the benefit of attacking distant targets and cannot generally be parried. But they have slow rate of fire and do not do as much damage as melee weapons.
 
 
 \subsection*{Short and long range}
@@ -1776,6 +1784,26 @@ Most shields have a modifier against ranged attacks that is a form of cover, whe
 Heroes hiding behind their shields can choose which 90\degrees arc they are protecting with the shield, announced when they start the action. Hiding behind a shield is a normal action but requires no roll and remains active indefinitely without spending further ap until the character does something else. Some actions can be taken while still hiding behind the shield, GM discretion.
 
 
+\subsection*{Mounted combat}
+%---------------------------
+\todo go through the mounted combat issues
+
+Ride rolls
+
+ride limits skills
+
+strength bonus application - speed of mount
+
+cornering
+
+ride fails, deviations, falling off
+
+mounting / unmounting
+
+large mounts - shifting position
+
+continue movement when mounting / unmounting
+
 
 
 
@@ -1784,14 +1812,16 @@ Heroes hiding behind their shields can choose which 90\degrees arc they are prot
 
 \subsection*{No rules? Just figure something out.}
 %-------------------------------------------------
-There can never be rules for everything. The tiny basics cover at least 90\% of what is usually attempted during regular play. The extended rules probably 95-98\%. But there will always be edge cases. Figure out something that could work, and makes sense alongside the rest of the game.
+There can never, and should not, be rules for everything. The tiny basics cover perhaps 90\% of regular play. The extended rules probably 95-98\%, mostly in details, edge cases, options, flavour. But there will always be more obscurities and combinatorial hmmm-what-if. Just figure out something that could work, and makes sense alongside the rest of the game, for your group.
 
 E.g: Tossing and shooting a loaded crossbow.
-Trigger Tom just fired his crossbow at the brutal orc running towards him. No way can he reload another arrow in time. Loaded Laban has already loaded his crossbow. They get the bright idea: Laban tosses his crossbow to Tom so Tom can fire again quickly. What? No rule for rate of fire when tossing loaded crossbows?
+Trigger Tom just fired his crossbow at the brutal orc running towards him. No way can he reload in time. Loaded Laban has his crossbow ready but no target. They get this bright idea: LL tosses his crossbow to TT so TT can fire again quickly. What? No rule for rate of fire when tossing loaded crossbows?
 
-The toss - catch is almost a regular give \& receive relay action. And a quick throw attack action is 3ap as well, with mod-3. So, approximate: throwing something to a friendly target who is trying to catch it is perhaps easier than throwing at a moving target with intent to damage, so skip the quick throw mod-3. Instead of a dex+9 on either side let's say it's a dex+throw on either side to throw and catch. If either side misses it falls to the ground. A good throw is easier to catch, so let the throw success diff mod the catch action.
+The toss-catch is almost a regular give \& receive relay action. And throwing a held weapon is 3ap attack action as well. So, approximate: throwing 3ap, and with sufficient quickdraw the give \& receive is 1r or 3ap (or faster). Bake it together: 1r total without quickdraw (limited by give \& receive), 3ap with quickdraw (limited by throw). Both LL and TT spend ap, and they can spend different. Lowest initiative, or if the faster can trigger the other.
 
-But both sides also have quickdraw, which covers relay, so let them roll for quickdraw to see if that will reduce the ap cost for either of them. More fun when things stack nicely.
+They still have to pass throw rolls. Let's say it's a throw for LL and a throw or dex for TT to catch. And what it the crossbow discharges in the handling? What's the quality of the crossbow? How about range? Based on LL throw and strength?
+
+\noindent Or just say: "1r, throw rolls".
 
 
 
@@ -1821,12 +1851,14 @@ Sorcerers, wizards, mages, witches, and warlocks bend reality to their will by f
 
 \subsection*{When and how spells can be cast}
 %--------------------------------------------
+Almost anyone can use a simple magical device, but to actually cast a spell without tools the Hero must have the skills "magic" and "spellcaster". Further skills can help.
+
 Casting spells require concentration, voice, and gestures. Spellcasting often takes several rounds and the spell takes effect in the last round of casting following order of initiative.
 
 The cast roll is subject to the highest action stack modification that the character has had during the casting period. \hyperref[multiroundactions]{See \emph{actions that take more than one round} above.}
 
-%TODO: rewrite all Xa spells to Xap instead.
-Some spells have casting time counted in actions, 1a, 2a, etc, and should be treated just like normal actions at 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells follow initiative unless stated otherwise.
+%\TODO: rewrite all Xa spells to Xap instead.
+Some spells have casting time counted in actions, 1a, 2a, etc, and should be treated just like normal actions at 3ap per action. Some spells have their casting time specified directly in action points. Some spells have 0a casting time and thus cost no action points. But even 0a/0ap spells take "actions" and follow initiative unless stated otherwise.
 
 Spells that take one round or less to cast can be cast whenever in the round, following order of initiative, just like performing regular actions. That means they can also be cast as reactionary defence actions, like a parry, or retaliations after incoming attacks.
 E.g: it's possible to summon a 1r ward flash defence to reduce the damage of an incoming attack, just like parrying with a regular shield.
@@ -1864,7 +1896,7 @@ There are spells which require the caster to remain within range for the duratio
 \subsection*{Duration of spells}
 %-------------------------------
 Spellcasting completes in the last round it is being cast, in order of initiative. The spellcaster can now choose when the spell should begin to take effect: \\
-The spell's effect can start immediately after casting and then that round counts as the first round of it's duration. Or: \\
+The spell's effect can start immediately after casting, in which case that round counts as the first round of it's duration. Or: \\
 The effect can start at the very beginning of the next turn, ignoring initiative, and have that turn count as the first round of the duration.
 
 This can be important. E.g: The wizard casts a spell which takes one round to cast and has one round of duration. If the duration starts and ends with the same round he casts it then it will perhaps benefit his friends more if he casts it before his friend's perform their actions. However, it he wants to take advantage of it himself he would better have the effect start with the next round since he probably cannot take any more actions in the round of the casting.
@@ -1985,7 +2017,7 @@ E.g: A paladin in full plate with tank 4 has a spellcasting mod from his armour 
 \phantomsection\addcontentsline{toc}{section}{howto monster}
 \section*{Playing the monsters}
 %------------------------------
-It is necessary to simplify the workload for the GM who has to manage all the monsters. Monsters are not generally long lived. They usually die within a few rounds of appearing. Most monsters can be very simplified and their handling made quicker by ignoring a lot of effects.
+It is necessary to simplify the workload for the GM who has to manage all the monsters, villains, goons, etc which the Heroes encounter. Monsters are not generally long lived. Many usually die or flee within a dozen or two rounds of appearing. Most monsters can be significantly simplified and their handling made quicker by ignoring many effects and rules.
 
 
 \subsection*{Some simplifications}
@@ -2082,7 +2114,7 @@ Generally: role playing limits tactical optimal planning and behaviour. Make sur
 
 In the most severe option on one side you can use individual fog of war and vision for each Hero, and insist that all players share information of the battle map \emph{in character} and time what they say into actions and rounds for their Hero. Remember that it's possible to shout and murder at the same time. This is definitely doable with some tools and it can be a whole lot of fun, but in my experience not what most people prefer or have the most fun with.
 
-The other extreme is the shared battle map and open collaborative reasoning between all players without time limits for every round and individual action. This can be a lot of fun and very social, but some players will zone out and participate less. It tends to lead to where one or a small clique of players mastermind the whole party, essentially just giving suggestions or orders across the table or chat, and the rest of the players just executing.
+The other extreme is the shared battle map and open collaborative reasoning between all players without time limits for every round and individual action. This can be a lot of fun and more social, but some players will zone out and participate less. It tends to lead to where one or a small clique of players mastermind the whole party, essentially just giving suggestions or orders across the table or chat, and the rest of the players just executing.
 
 Most groups quickly find common ground naturally, but be aware of the issue and discuss.
 
@@ -2094,7 +2126,7 @@ Most groups quickly find common ground naturally, but be aware of the issue and 
 
 \subsection*{Larger maps}
 %------------------------
-Gold and Glory tactical gameplay requires larger maps than normal because there is often a lot more movement and positioning going on during the fights than in most games. Most battle maps I build are at least 30x30sq, sometimes upwards of 100x100sq.
+Gold and Glory tactical gameplay requires larger maps than normal because there is often a lot more movement and positioning going on during the fights than in most games. Most battle maps I build are at least 30x30sq, sometimes larger than 100x100sq.
 
 Be careful when using smaller pre-made battle maps. It's best if they have firm walls or enclosure visible around the battle area, otherwise they have a tendancy to feel artificially cramped when the players want to move around. Or simply expand the map by sketching surroundings, cut'n'paste, or similar. It won't be as pretty, but allows more movement.
 

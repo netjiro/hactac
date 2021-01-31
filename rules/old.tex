@@ -10,6 +10,174 @@ cleaning out old text and blocks
 
 
 
+================================================================================
+210123: clean out spells
+
+
+
+fire ball      cast 2r 2m, dam 4 +1/m, range 10 +5/m, radius 1 +1/m,
+               duration 1r +1/m, damage each round
+               int 7, psy 6
+
+ward shield    cast 1r 2m, range touch, duration 5r +3r/m
+               charge 4 +2/m (pay on cast)
+               Absorbs incoming damage before it strikes the character
+               or his equipment. Each absorbed damage point costs
+               one charge from the spell.
+               Ignores penetrating, i.e. penX just passes through the spell.
+
+paralyse       cast 2r 2m, psy vs psy +1/m, range 5 +2/m,
+               Target cannot move or take actions that require any movement,
+               even if it is only with the hands.
+               duration diff+1r +2r/m (pay on cast, diff from psy vs psy roll)
+               int 7, psy 8
+
+
+
+heal           cast 2r 1m, heal 2 +2/m, time 3hp/r, range contact
+               int 7, psy 6
+
+heal           cast 3r 1m, heal 5 +3/m, time 1hp/r, range contact
+               int 7, psy 7
+
+heal           cast 1r 1m, heal 1 +1/m, time 3hp/r, range contact
+               int 6, psy 6
+
+heal           cast 2r 1m, heal 1 +1/m, time 5hp/r, range contact
+               int 9, psy 7
+
+heal all       cast 3r 1m, heal 1 +1/m, time 2r/hp, range 3 +1/m
+               heals all creatures within range.
+               int 7, psy 7
+
+
+
+mass raise     cast 10r 3m, duration 10r + 3*diff +20/m, range 5 +5/m
+               target diff +1/m
+               int 8, psy 8, scf 0.66
+
+mass control   cast 3r 2m and psy-3 vs psy +1/2m +diff
+               duration 3*diff +10r/m, range 30 +10/m
+               Activates automatically after successfully raising the dead.
+               Must roll psy vs psy +1/2m +diff each round to keep control,
+               mana spent once when casting or activating.
+               Simplify if necessary to: duration is reduced by the chance of
+               breaking free squared.
+               When control is lost it can be regained by casting again.
+               The caster is aware of his minion's surroundings as though
+               being there. Vision is min(psy-caster|psy-target).
+               duration 3*diff +10r/m, range 50 +20/m
+               int 10, psy 10, scf 0.66
+
+mass lower     cast 5r 2m, psy-3 vs psy +1/2m, range 5 +5/m
+               int 8, psy 8, scf 0.66
+
+levitate       cast 2r 2m, range 5sq +5/m, duration 5r +5/m, target 1 +1/m
+               Gives the targets the ability to levitate slowly at the maximum
+               movement of walk. Targets must stay within the range of the
+               caster.
+               Unwilling targets must be forced by psy vs psy.
+               int 6, psy 6
+
+summon demon   ! don't buy this yet, not finished with the background work
+               cast 3r 3m, power 0 +3/m, duration 5r +5/m
+               Summons a demon for the duration of the spell
+               roll list dX: (common demon 5 slots, rare 1 slot)
+                1 -  5  grey stalker
+                6 - 10  green mouth
+               11 - 15
+               xx - +1  large grey stalker
+
+perhaps a magic trap can come in handy sometimes
+------------------------------------------------
+
+embed magic    cast 3r 1m, duration 100r +100r/m, capacity 5 +5/m
+               Can embed another magic formula in an inanimate object to be
+               triggered by touch, destruction, or other "mechanical"
+               disturbance. The capacity limits the power of the embedded spell.
+               int 7, psy 5, scf 0.25
+
+trigger rune   cast 5r 1m, duration 100r +100r/m, range 10 +5/m
+               Can trigger one or more embedded formula within range.
+               Triggers can be complex combinations of mechanical disturbance,
+               sound, light, etc, with complex logic, but very limited
+               "intelligence".
+               It can react to triggering conditions within its range, and can
+               target guide the triggered embedded spells.
+               int 7, psy 5, scf 0.25
+
+hide casting   cast 1r 1m, duration 5r +5r/m, capacity 5 +3/m, power 0 +1/m.
+               Hides a formula being cast so that it cannot be detected by
+               detect magic spells, tingling magic ability, etc.
+               The power is set against the sensitivity of the detector.
+               The capacity must be equal or larger than the total mana of the
+               spell that is to be hidden.
+               int 8, psy 8, scf 0.25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+210117: clean out some spells
+
+black bolt     cast 2r 1m, dam 6 +2/m, penetrating,
+               range 10,
+               int 5, psy 9
+
+shock bolt     cast 3r 1m, dam 5 +2/m, penetrating,
+               range 20 +10/m, long dam-3,
+               int 8, psy 8
+
+force bolt     cast 1r 1m, dam 3
+               range 10
+               int 7, psy 4
+
+bright arrow   cast 1r, 1m, dam 5
+               range 10 +5/m
+               int 7, psy 7
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ================================================================================

@@ -142,12 +142,15 @@ Military issue weapons tend to require a baseline 5, with possible alternate ver
 % axe      +3   +3/+6                         parry-3 toparry-1 toavoid+1 [2-12]
 % staff    -1   -1/+1 parry +1/+2             fast, reach                 [2-6]
 % spear    +1   +1/+2 pen 0/1 parry -1/+1     reach                       [2-6]
+% club     =0
 % brawl    -3                                 (at str 6)
 %   fist   -4                                 fast, deflect
 %   kick   -2                                 deflect
 %
 % bow      +1   --/=0 pen 0-2                 range, pen, 1/2r
 % crossbow +3   --/++ pen 1-3                 range, pen, 1/3r
+%
+% hammer   +1                                 slow, knockback
 
 
 
@@ -349,12 +352,12 @@ battle axe          dam 8, abs 10, parry-2, toparry-2, finesse-4
 \end{verbatim} \blocklistgap \begin{verbatim}
 great axe           dam 12, abs 14, parry-4, toparry-3, toavoid+2, finesse-2
 1h                  str 6 slow 1
-                    str 9 normal speed
+                    str 9 dex 6 normal speed
                     swing: slow 1 mod-1 dam+4 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 lochaber            dam 16, abs 20, parry-4, toparry-3, toavoid+2, finesse-2
 2h                  str 8 slow 1
-                    str 11 normal speed
+                    str 11 dex 8 normal speed
                     swing: slow 1 mod-1 dam+4 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 pick axe            dam 4, pen 4, parry-3, toavoid+2, finesse-2
@@ -382,19 +385,20 @@ first front line is kneeling or formed of shorter characters.
 
 heavy versions of staffs and spears have +2dam +4abs -1finesse for +2str
 but also raising the fast 1 for staffs to double strength and dex requirements
-and rasing max str bonus by +1 for staves
+and rasing max str bonus by +1 for staffs
 and and max str and pen bonus by +1 for spears.
 and adding slow 1 to spears unless additional +2 str are met (+4 total)
+and dex requirement at str requirement -3.
 
-small staff         dam 1/2, abs 5, parry+1/+2, reach 1 mod-4, finesse-3/-5
+small staff         dam 1/2, abs 5, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 2/1 (max +1/+2 str bonus)
                     2h: fast 1 if str 4 and dex 4
 \end{verbatim} \blocklistgap \begin{verbatim}
-staff               dam 3/4, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5
+staff               dam 3/4, abs 7, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 4/3 (max +1/+2 str bonus)
                     2h: fast 1 if str 6 and dex 6
 \end{verbatim} \blocklistgap \begin{verbatim}
-large staff         dam 5/6, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
+large staff         dam 5/6, abs 9, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 6/5 (max +1/+2 str bonus)
                     2h: fast 1 if str 8 and dex 8
 \end{verbatim} \blocklistgap \begin{verbatim}
@@ -618,6 +622,10 @@ Plated heavy shields have double abs but are either
 slow 2 (5ap) or require str+3 and equal dex to be slow 1 (4ap)
 or str+6 and equal dex to be normal speed (3ap).
 
+2h shields have -2 strength requirements.
+
+Small characters (halflings, goblins) have extra mod-1 to incoming ranged attacks when shield is "in the way" or when they are "hiding behind" the shield.
+
 buckler             abs 6, parry+1
                     str 0
                     fast 1 if str 4 and dex 6
@@ -748,11 +756,11 @@ Are the monsters a little too far away for your sword? Are you just a bit too la
 
 \noindent Thrown weapons include anything from knives and javelins to improvised missiles like beer bottles, rocks, and mistuned musical instruments.
 
-Thrown weapons can also be used as poor versions of similar melee weapons in a pinch and with some mods. Regular melee weapons can often also be used as thrown weapons but often with mod-3 to mod-6 and 33\% to 66\% of the normal damage. When a thrown weapon is used as a temporary melee weapon it uses the melee weapon class skill, and when a melee weapon is used as a thrown weapon it uses the throw skill.
+Thrown weapons can also be used as poor versions of similar melee weapons in a pinch and with some mods. Regular melee weapons can often also be used as thrown weapons but with penalty mods and reduced damage. When a thrown weapon is used as a temporary melee weapon it uses the melee weapon class skill, and when a melee weapon is used as a thrown weapon it uses the throw skill.
 
 \
 
-\todo rewrite throwing weapons
+%\todo rewrite throwing weapons  -  210130 sort of ok now
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Throwing an already held weapon is a regular 3ap action. Drawing and throwing
 in one go is a 1r action. Faster throwing gives mods which can be mitigated by
@@ -768,83 +776,93 @@ Throwing already drawn weapon:
 normal  3ap     mod=0
 aimed   6ap/1r  mod+1
 quick   1ap     mod-3
-
+\end{verbatim} \blocklistgap \begin{verbatim}
 Thrown weapons have normal range tohit and damage mods:
 short       mod+1          0.5 * normal range
 long        mod-3 dam-1    1.5 * normal range
 very long   mod-6 dam-2    2.0 * normal range
 extreme     mod-9 dam-3    3.0 * normal range
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing dart     dam 1 pen 2 : or : dam 1 mod-(target abs)
+throwing dart     dam 1 pen 2 : OR : mod-(target abs) dam 1 penetrating
 throwing star     range 8 + max(str,dex)/3
-                  extended range: pen-1, vlong pen-2, extreme range not possible
+                  long range: pen-1, vlong pen-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 2, no str bonus
                   every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing knife    dam 2 : or : dam 2 mod-(target abs)
+throwing knife    dam 2 : OR : mod-(target abs) dam 2 penetrating
                   range 6 + max(str,dex)/3
+                  long range: dam-1, vlong dam-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 2, no str bonus
                   every second attack require no stamina
                   melee: knife mod-1, dam 2, abs 2, finesse-3
-                  fast 1 if str 2 and dex 4
-                  every second attack require no stamina
+                         fast 1 if str 2 and dex 4
+                         every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing dagger   dam 3 : or : dam 3 mod-(target abs)
-                  range 5 + max(str,dex)/3
+throwing dagger   dam 3 : OR : mod-(target abs) dam 3 penetrating
+                  range 6 + max(str,dex)/3
+                  long range: dam-1, vlong dam-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 3, no str bonus
                   every second attack require no stamina
                   melee: knife mod-1, dam 3, abs 3, finesse-3
-                  fast 1 if str 2 and dex 4
-                  every second attack require no stamina
+                         fast 1 if str 2 and dex 4
+                         every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
 small throwing    dam 4
-axe               range 6 + max(str,dex)/3
+axe               range 5 + str/3
                   str 2 (str bonus: dam+1)
                   melee: mod-1, dam 4, abs 3, parry-4, toparry-1, toavoid+1,
-                  finesse-2
-                  str 2 (str bonus: dam+1)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                         finesse-2
+                         str 2 (str bonus: dam+1)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 throwing axe      dam 6
-                  range 5 + max(str,dex)/3
-                  str 4 (str bonus: dam+1)
-                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1,
-                  finesse-2
+                  range 5 + str/3
                   str 4 (str bonus: dam+2)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1,
+                         finesse-2
+                         str 4 (str bonus: dam+2)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 large throwing    dam 8
-axe               range 4 + max(str,dex)/3
-                  str 6 (str bonus: dam+2)
-                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1,
-                  finesse-2
+axe               range 5 + str/3
                   str 6 (str bonus: dam+3)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1,
+                         finesse-2
+                         str 6 (str bonus: dam+3)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 javelin           dam 3, penetrating 1
                   range 8 + str/2
                   str 4 (str bonus: dam+1, pen+1)
                   melee: spear mod-1, dam 3, abs 3, reach 1 mod-5, finesse-3
-                  str 4 (str bonus: dam+1, pen+1)
+                         str 4 (str bonus: dam+1, pen+1)
 \end{verbatim} \blocklistgap \begin{verbatim}
 large javelin     dam 5, penetrating 1,
-                  range 7 + str/2
+                  range 8 + str/2
                   str 6 (str bonus: dam+1, pen+2)
                   melee: spear mod-1, dam 5, abs 5, reach 1 mod-5, finesse-3
-                  str 6 (str bonus: dam+1, pen+2)
+                         str 6 (str bonus: dam+1, pen+2)
 \end{verbatim} \blocklistgap \begin{verbatim}
 improvised:
 
-stones            dam = 1+str/3, range = max(str,dex)
+stones            dam = 1+str/3, range = 4 + str/3
                   select stones to trade between damage and range:
                   trade dam-1 for range+3
 \end{verbatim} \blocklistgap \begin{verbatim}
+bottle / keg / flask / stool / chair / kettle / skillet
+                  mod-1 to mod-3 depending on how unwieldy
+                  dam = 1+str/3, range = 3 + str/3
+                  larger objects force trade range for damage: range-2 dam+1
+\end{verbatim} \blocklistgap \begin{verbatim}
 examples of throwing regular melee weapons, still roll for throw:
-knife: mod-1, dam-1, range 5
-sword: mod-3, dam-3, range 4
-axe:   mod-2, dam-2, range 5
-spear: mod-1, dam-1, range 6
-club:  mod-2, dam-2, range 5
+knife: mod-1, dam-1, range 4 + max(str,dex)/3
+sword: mod-3, dam-3, range 2 + str/3
+axe:   mod-2, dam-2, range 4 + str/3
+spear: mod-1, dam-1, range 6 + str/2
+club:  mod-2, dam-2, range 3 + str/3
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
@@ -886,11 +904,17 @@ large bow         dam 5, pen 2,
                   range 16
                   str 6 (no str bonus)
 \end{verbatim} \blocklistgap \begin{verbatim}
-The longbows tend to be military infantry issue and tailored for str 5 baseline
-and focus on range instead of damage, though often used with broadhead or
-piercing arrows to increase the damage or penetration based on the composition
-of the enemy forces.
+The longbows and shortbows are military infantry or cavalry issue.
+Tailored for str 5 baseline and focus on range instead of damage,
+though often used with broadhead or piercing arrows to increase the damage or
+penetration based on the composition of the enemy forces.
 
+shortbow          dam 3
+                  range 15
+                  str 3 (no str bonus)
+                  mods when rapid fire improved by 1
+                  mod limitations from ride improved by 1
+\end{verbatim} \blocklistgap \begin{verbatim}
 longbow           dam 4, pen 1,
                   range 20
                   str 5 (no str bonus)
@@ -1061,6 +1085,14 @@ spear (1h/2h):
 club (1h/2h):
     dam str+0/+2, abs 2*str+2, knockback 1 str-vs-str
 \end{verbatim} \end{samepage} \normalsize \goodbreak
+
+\
+
+Heavy weapons are common customisations. They usually mean either another str+2 step up, or a slow 1 with damage and other stats as though a str+3 was applied, but with unchanged str requirements. Usually with significant increase in abs.
+
+Customised weapons should at least be treated as special equipment, with the reduced availability. Significant customisations might even push them to exotic. They usually need to be ordered at least a week in advance. Common customisations might be available off the shelf in large well stocked city shops.
+
+Typical vanity items like the back seat general's heavy longsword, with flame decorations, have a reasonable chance of being available off the shelf even in Trade Town.
 
 \
 

@@ -43,31 +43,41 @@ TODO: move to milestone xp payouts + session xp
 
 
 201221: PIN!
-TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round 
+TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round
       regardless of how many attacks are made?
       ? perhaps it should cost 1 stamina to overdeclare AP though ?
-      That way it will still cost 2 stamina to make lots of actions with fast 
+      That way it will still cost 2 stamina to make lots of actions with fast
       weapons, and it will also cost 1 stamina if taking lots of defence actions
 -     since it will require to declare extra AP beyond base ap each round.
       ! but then it will cost LOTS of stamina to make many attacks with regular
       weapons: eg base ap 5, overdeclare 6 for 2x attack:
-      6ap 1stam, 2x attack 2stam  = 3stam, instead of 2stam
-      
+-     6ap 1stam, 2x attack 2stam  = 3stam, instead of 2stam
 
+
+
+
+
+210130:
+TODO: fear psy mods depending on environment:
+      forest, city, dungeon, dark, light,
+      numerical advantage / disadvantage
+      Idea from halfling extra psy when eating good food:
+      improved / reduced psy based on environment
 
 
 201220:
-%TODO: change stamina recovery when resting in maptools
-       normal: +1/r
-       rest: +1 extra if passing con roll mod by full stack, 
-       but mods calculated after declared rest: 0ap 0mp
+TODO: change stamina recovery when resting in maptools
+      normal: +1/r
+      rest: +1 extra if passing con roll mod by full stack,
+      but mods calculated after declared rest: 0ap 0mp
 
 
 201205:
 TODO: mer magiska pyssel som inte gör skada
       kladdig mark, hål, vägg, grus, rök, mörker, ljus, slippery
-      tentakler ur marken, djur anfaller, lightning/regn/is/dimma suger sig till mål
-      långsammare/snabbare mark, städa lik, loota kvickt, 
+      tentakler ur marken, djur anfaller, lightning/regn/is/dimma
+      suger sig till mål
+      långsammare/snabbare mark, städa lik, loota kvickt,
       göra någon svårare/lättare att träffa ?
       sänker / höjer moral
       etc
@@ -80,15 +90,10 @@ TODO: fix cost of yield and dodge. compare with avoid/parry skill costs
 
 
 200929:
-TODO: ? should heavy strike and massive strike be dam+20% / dam+33% 
+TODO: ? should heavy strike and massive strike be dam+20% / dam+33%
       instead of 33/50 ?     +50% is insanely heavy for large weapons
-      eg 2h large sword sketch dam12 str10 gets dam18. ie cannot be parried 
+      eg 2h large sword sketch dam12 str10 gets dam18. ie cannot be parried
       and must be avoided instead
-
-
-200926:
-TODO: CHECK that veteran skill influences the pass out / wake up rolls from 
-      "come on and die already" damage below 0hp.
 
 
 200309:
@@ -137,7 +142,7 @@ TODO: go through and make sure all speed / fast actions and maneuvers are tied
 
 200218:
 TODO: change mana recovery ?  Or have as alternate mana recovery
-      
+
 
 200216:
 TODO: ? remove free 45deg turns with actions ?
@@ -174,7 +179,7 @@ TODO: add more fun spells, like illusions, etc
 200206:
 TODO: ISSUE 2 shot /r bow    - see "comparison efficiency"
       with bow at cost 1.0 it's cheaper to go for bow 12 + quick shot 6
-      than to go for bow 9 and quick shot 9 
+      than to go for bow 9 and quick shot 9
       when building a 2/r shot bow char ca 220xp in bow skills
       ? PERHAPS ?  set quickshot to 1.0, making it reasonable to go bow and qs
       in tandem when improving.
@@ -191,9 +196,9 @@ TODO: fix backstab - sidestab - killstab
       sidestab is much more useful than backstab since it can be used multiple
       times each round while backstab gives one attack against unaware opponent.
       killstab is _very_ potent, how much damage should it do?
-      sidestab cost ?  1.0 ?  ap cost +1ap? +2ap? +3ap?, 
+      sidestab cost ?  1.0 ?  ap cost +1ap? +2ap? +3ap?,
       waiting to sync with initiative is already costing ap ?
-      killstab cost? killstab damage?  should be at least 50/50 to kill normal 
+      killstab cost? killstab damage?  should be at least 50/50 to kill normal
       human with dagger and a normal backstab success and normal damage roll
 TODO: fix extra strength bonus problems:
       allocation based on free points, count down from top?
@@ -211,8 +216,8 @@ TODO: giving up, fleeing, willpower, morale, etc
 
 191204:
 TODO: add new difficult to parry maneuvers that require dual wielding weapons
-TODO: add followup attack skill, requires dual wielding, 
-      second strike takes 1ap less than normal but requires dual wielding 
+TODO: add followup attack skill, requires dual wielding,
+      second strike takes 1ap less than normal but requires dual wielding
       and is done by the other weapon
       not quite as good as "double" but still really useful
 
@@ -264,7 +269,7 @@ TODO: ölhjälm, med 2x quaff och sugrör
 
 
 190807:
-TODO: knock back skill? heroic? vs slag som 
+TODO: knock back skill? heroic? vs slag som
 TODO: skill persuade/charm el likn
 TODO: build with dungeoneering, locks & traps, mcgyverism ?
 
@@ -296,14 +301,14 @@ TODO: right to react : NO move shoot move - before target can move and strike
 TODO: fixa regler kring styrka och kasta saker : range, damage
 TODO: tohit mounted target is mod-1, avoid action when mounted is mod-3
       avoid action for mount requires that mount has avoid skill, or rider avoid mod-6
-TODO: distraction on miss, tungt vapen smackar i backen och skrämmer folk 
+TODO: distraction on miss, tungt vapen smackar i backen och skrämmer folk
 TODO: skog ger penalties för movement och huggande
 TODO: skill som tar bort penaltis för skog
 TODO: kolla mod scripts för overextend extra step etc
-TODO: attack maneuver : synchronized side attack : 
+TODO: attack maneuver : synchronized side attack :
       target cannot choose which of multiple synchronized or double/triple/etc attacks he wants to parry. The attacker chooses which the target must parry
 TODO: discerning defender: choose what to parry with more info
-      for multiple incoming simultaneous attacks (double, synchronised, etc) the defender can see the attack damage and effects before choosing which of the attacks to parry. Also negates the synchronised side attack 
+      for multiple incoming simultaneous attacks (double, synchronised, etc) the defender can see the attack damage and effects before choosing which of the attacks to parry. Also negates the synchronised side attack
 
 
 190626:
@@ -312,7 +317,7 @@ TODO: fixa så att inte formler drar mana om stamina fails
 TODO: fixa litfeldts stamina bössor med frislag etc
 TODO: bygg rest status på gubben
 TODO: rest borde flytta ner initiativ
-TODO: check large target archer +1 istället för +3 !!!  
+TODO: check large target archer +1 istället för +3 !!!
 TODO: mcgyverism eller engineering skill för att kunna bygga pyssel
       tex fyrspann för åsnor att dra stora vagnen
       ev locks and traps ??
@@ -320,12 +325,12 @@ TODO: skill "a cunning plan" för att kunna ditt och datt ?
 
 
 1906++:
-TODO: sidestab: - som backstab, backstab, 
-      men gäller i strid när någon annan distraherar målet. tex 
+TODO: sidestab: - som backstab, backstab,
+      men gäller i strid när någon annan distraherar målet. tex
       target distracted, attacker roll first per vs per-3/engaged other excl sidestabber to find a gap to stab (similar to backstab have to sneak up behind, or target not aware).
       then roll sidestab, 1ap? (similar to backstab 1ap or double 1stam ?
       similar damage multipliers as backstab ?
-TODO: rapid strike : heroic ? 
+TODO: rapid strike : heroic ?
       allows for more than one strike not triggering right to react if target is not aware of attacker before first attack.
       1) must remain above target in initiative list
       2) must succeed rapid strike
@@ -333,7 +338,7 @@ TODO: rapid strike : heroic ?
 
 1905++:
 TODO: with stamina changes: go through all skills etc and remove all
-      "first two attacks require no stamina" and similar 
+      "first two attacks require no stamina" and similar
 TODO: light weapons should cost less stamina to use
       eg: every other attack should be free
 TODO: fix util.declareMove() to also accept mp numbers as argument
@@ -348,8 +353,8 @@ TODO: skriv inte exhausted för kritter utan stamina !!
 190605:
 TODO: bug: script: hidden msg not enough stamina, but still draws stamina
       Kizraz:
-      makes heavy staff 2h attack « roll = D10 = roll = 5 = 5 » « result = skill + focmod - CurrentTotalModification + mod - roll = result = (12 + 0 - -1 + 0 - 5) = 8 » success = 8 with roll 5. doing damage = 5 pen 1   « msg = NOT ENOUGH STAMINA »   drawing 1 stamina 
-TODO: skriv equipment, tent, bedroll, tarp, 
+      makes heavy staff 2h attack « roll = D10 = roll = 5 = 5 » « result = skill + focmod - CurrentTotalModification + mod - roll = result = (12 + 0 - -1 + 0 - 5) = 8 » success = 8 with roll 5. doing damage = 5 pen 1   « msg = NOT ENOUGH STAMINA »   drawing 1 stamina
+TODO: skriv equipment, tent, bedroll, tarp,
 
 
 190410:
@@ -423,12 +428,12 @@ TODO: skadetyper slashing/piercing/crushing/magic/[elemental]
 TODO: skall man tvingas deklarera W för att gå genom knölig mark med 1mp M ?
 TODO: skill AFK  - ger xp även om man inte är med på passet
 TODO: skill "I Almost Had Him"  full XP även för folk som flyr
-TODO: kolla om det skall vara minus på magi genom eld  
+TODO: kolla om det skall vara minus på magi genom eld
       NOPE enligt tidigare diskussion, omvärdera nu med olika typer av formler ?
 
 
 181122:
-TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin 
+TODO: skriv klarifikation att reactive skin - agressive skin - stunning skin
       inte skall ha ccf från reactive skin, se räkneexemplet
 
 
@@ -494,7 +499,7 @@ TODO: all abilities should have at least ccf 1.1, so that it matters which and
       when to buy.
 TODO: kass hp (neg hp) borde sänka initiativ
 TODO: helmet pot holder, with drinking straws
-TODO: köpa fler off balance, precis som yield, 
+TODO: köpa fler off balance, precis som yield,
       ? behöver fixa macron som räknar extra steg ?
 TODO: clarify defensive step must be in yield.
 TODO: clarify acrobatics yield works
@@ -819,7 +824,7 @@ SKIP: använd stun knapp 99 istället för paralyze knapp: paralyse knapp
 NOPE: this will often double effective damage to target
       ?? should 2h be +3 over 1h as std ?
       tex: str 8 sword 75% dam:   6 / 8-9 , after armour 3 / 5-6  !!
-      
+
 
 
 
@@ -1027,17 +1032,17 @@ DONE: enforce negative stamina affects ams. mod=-stam
 DONE: write which abilities and spells that can train without purchasing or finding.
 190316:
 DONE: stamina changes: always stam+1/r, M0,W1,R2,D3, all attacks costs stam-1
-      rest: M 0ap, stam +con/3 
+      rest: M 0ap, stam +con/3
 190320:
 DONE: fire damate at order of initiative - inherits initiative from
-      when the spell is cast. 
+      when the spell is cast.
       Can force chars to declare high speed to get initiative enough to flee
       out of area before the fire does second damage again.
 190411:
 DONE: FIXED : ändrade stamina draw i alla attack scripts
       stamina dras även om con=0 och om stamina = =0
       ELLER: antagligen attacker som drar stamina oavsett !!
-      stamina rest el likn för con måste ha floor inte float 
+      stamina rest el likn för con måste ha floor inte float
 DONE: FIXED : update character doesn't flag state.Dead == 1 as state.Done=1
       dead skall ta bort done
 DONE: clearLights() called in util.damage() death section
@@ -1064,7 +1069,7 @@ DONE: remove unfazed, eller flytta till heroic abilities
 DONE: HADE TYDLIGEN TVÅ STAMINA BLOCK ??  i primary attack macro
       kolla bug kring stamina hantering.
       kizras slog en gång, men tydligen drogs två stamina
-DONE: build stun macro - checked: stun macro 
+DONE: build stun macro - checked: stun macro
       checked: util.updateNewRound(), util.declareMovement(), util.declareMP(), util.declareAP()
 190705:
 DONE: fixat stun macro, update, declareAP/MP för stun, stun effect state.Paralyzed
@@ -1082,7 +1087,7 @@ DONE: flagging "done" state now sets InRoundInitiative to 0
       only if it was previously higher than 0, does not raise negative initiative to 0
       calc in util.update()
 DONE: !! kolla om detta är fixat eller ej !! ??
-      flaggad "done" kan inte attackera eller göra andra offensiva actions även om 
+      flaggad "done" kan inte attackera eller göra andra offensiva actions även om
       circumstances change, bara defensiva.
 DONE: Stronk Tank
       light strength / tank strength strength bonus for armour mods
@@ -1115,14 +1120,14 @@ DONE: rolling gut: "sixth sense"   mechanic for spot checks
 191209:
 DONE: initiative will increase only by "overdeclared" AP   -  saved cmpgn 191209a
       fix initiative calculation to not add all ap declared,
-      just add "overdeclared" ap, e.g. base ap 3, quick 2, declare 6, 
+      just add "overdeclared" ap, e.g. base ap 3, quick 2, declare 6,
       then add +1 to initiative
-DONE: resting, declaring resting ap=0 mp=0 will allow hero to regain 
+DONE: resting, declaring resting ap=0 mp=0 will allow hero to regain
       1 extra stamina for the round if he passes a con roll (mod by neg stam)
 PREV: see util.totmod()   CurrentNegativeStaminaMod  &  Tireless
-      all rolls carries negative stamina as mods, 
+      all rolls carries negative stamina as mods,
       according to stamina section in rules.tex 191209
-DONE: re-added black cat. 
+DONE: re-added black cat.
       ? WTF why had it disappeared ?
       ? did anything else disappear ?
 DONE: fixed swim
@@ -1134,7 +1139,7 @@ DONE: encumbrance stacks directly on ams, affecting all actions
       skill "pack mule" helps with carrying lots of stuff without raising str
 191229:
 DONE: fixed "accurate": +9 gives 5 dice instead of 4, average ca 84% instead of 80%
-DONE: changed backstab and sidestab to not be multiple of damage, 
+DONE: changed backstab and sidestab to not be multiple of damage,
       but instead be a fixed number increasing with success
       makes it very useful for small weapons but less interesting for larger weapons
       circumventing the ballista backstab problem
@@ -1142,7 +1147,7 @@ DONE: killstab
 200114:
 DONE: added rules on fleeing off map to safety, chasing down prey, etc
 DONE: reduce initiative by 3 for every initiated movement.
-      see rules.tex : Spending movement points lowers initiative, just like 
+      see rules.tex : Spending movement points lowers initiative, just like
       actions.  discussion in comments
 DONE: update subsection*{Moving} Stutter Step to reflect that each initiated
       movement lowers initiative just like a normal action
@@ -1161,3 +1166,7 @@ DONE: make it count  -  roll to get extra damage, 1stam, 0/1ap for risk/mitigati
 DONE: added heavy strike at dam+33% and 1ap faster than massive strike at dam+50%
 old:
 DONE: skall man sänka stavars abs med 1 ?  yep, sänkt abs och skada och parry
+200926:  CHECKED: YES
+DONE: CHECK that veteran skill influences the pass out / wake up rolls from
+      "come on and die already" damage below 0hp.
+DONE: thrown weapons / throwing weapons review  210130
