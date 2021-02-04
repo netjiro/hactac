@@ -1,12 +1,12 @@
 #!/bin/bash
 
-
+#aspell -d en_GB -p ./gng.wordlist -t --dont-tex-check-comments --encoding="utf-8" -c <file>
 
 # rule book components
 
-for f in rules/{book,cam,cha,equ,mag,mon,pri,rul,ski}*.tex
+for f in rules/{book,cam,cha,equ,mag,mon,npc,pri,rul,ski}*.tex
 do
-    aspell -d british -p ./british.dict \
+    aspell -d en_GB -p ./gng.wordlist \
         -t --dont-tex-check-comments \
         --encoding="utf-8" \
         --dont-backup \
@@ -19,7 +19,7 @@ done
 
 for f in adventures/*/*tex
 do
-    aspell -d british -p ./british.dict \
+    aspell -d en_GB -p ./gng.wordlist \
         -t --dont-tex-check-comments \
         --encoding="utf-8" \
         --dont-backup \
