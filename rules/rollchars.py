@@ -99,7 +99,7 @@ for n in {2,3,4,5,6,7,8,9,10,12,15,20,30,40,50,60,90,100}:
     exec("def d"+str(n)+"(): return die("+str(n)+")")
 
 # and some more dice functions on the form: r2dN()
-for n in {3,4,5,6,7,8,10,20}:
+for n in {3,4,5,6,7,8,9,10,20}:
     exec("def r2d"+str(n)+"(): return d"+str(n)+"() + d"+str(n)+"()")
 
 
@@ -208,7 +208,7 @@ class Character:
         #print("================== "+self.race+" "+nr+" ==================")
         linelength = 44
         sepline = "-" * linelength
-        title = " " + self.race + " " + nr + " "
+        title = " " + self.race + " " + (nr+1) + " "
         pre = "=" * int((linelength - len(title)) / 2)
         post = "=" * (linelength - len(pre) - len(title))
         header = pre + title + post

@@ -17,7 +17,7 @@ done
 
 # adventures
 
-for f in adventures/*/*tex
+for f in adventures/*/[0-9]*.tex
 do
     aspell -d en_GB -p ./gng.wordlist \
         -t --dont-tex-check-comments \

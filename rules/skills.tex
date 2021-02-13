@@ -190,12 +190,34 @@ To avoid falling objects and sprung traps, etc, is generally mod-3 to mod-6 and 
 To avoid fast missiles such as arrows the special maneuver missile parry is required, which also works with avoid, and is generally mod-9.
 
 
-\skill{Skill scf 0.5 "disengage":} allows for the character to make a safer movement \emph{out} of opponent's weapon reach modifying incoming attacks in response to the movement. The level of disengage directly modifies the opponent's attack against the disengaging target.
+
+
+\
+
+\closeskillslist
+\todo fix disengage and engage
+\openskillslist
+
+
+\skill{Skill scf 0.5 "disengage":} allows for the character to make a safer movement \emph{out} of opponent's weapon reach modifying incoming attacks which are triggered or declared in response to the movement. The level of disengage directly modifies the opponent's attack against the disengaging target. This is not an action and is "always on" when an attacker declares an attack on the disengaging hero \emph{after} the Hero has declared moving out of weapon reach. Regardless of whether the attack is triggered by opportunity, higher initiative, etc. Any incoming attacks are resolved \emph{before} the movement step is executed on the board. Multiple attackers triggering attacks on the movement all get the same disengage mods.
+Disengage cannot be used passively like this if the attack is declared \emph{before} the disengage movement, and thus cannot be used as a right to react defence, such as a parry or avoid.
+
+Disengage can also be used as a defensive action, 3ap, similar to avoid + yield. This action requires that the Hero moves from inside to outside the attacker's weapon's reach as part of the action. Active disengage action does not modify the incoming attacks. Instead the Hero rolls for disengage, like a normal defence action. Attack mods that apply to avoid or avoid+yield/dodge apply to a disengage defensive action as well.
+Active disengage defensive actions can be declared \emph{after} an incoming attack has been declared and rolled, as a right to react defence action, just like a parry or avoid.
+The attack - defence is resolved \emph{before} the movement step is executed on the board.
+Yield and dodge bonuses are not applied to an active disengage action roll.
 
 
 \skill{Skill scf 0.5 "engage":} allows for the character to make a safer movement \emph{into} opponent's weapon reach modifying the incoming attacks. The level of engage directly modifies the opponent's attack against the engaging target.
+Just like disengage, engage is also not an action and "always on".
 
-It's only the first incoming attack directly following the movement that is modified. E.g: Moving Morgan engages Stand-Still-Steve, attacks but misses, and then his engage 4 gives SSS mod-4 tohit when he immediately reacts. But if MM had hit and SSS parried, the next attack from SSS would not be modified by MM engage.
+It's only the first incoming attack directly triggered or declared in response to the movement that is modified, for each attacker.
+E.g: Moving Morgan moves in and engages Stand-Still-Steve. MM executes the movement on the board then attacks but misses. MM's engage 4 gives SSS mod-4 tohit when SSS immediately reacts with a response attack. But if MM had hit and SSS parried, the next attack from SSS would not be modified by MM engage.
+If SSS had his compadre Permanently-Planted-Pete by his side, also coming into weapons reach when MM moves in, then the first attack from PPP as response to the movement would also have the engage mods from MM.
+If the incoming attack is a combination attack action, e.g. double, then both the attack rolls take the penaly, because they are done in the same action.
+
+Engage also has an active 3ap action mode, similar to disengage, if the opponent has managed somehow to declare a movement triggered attack before the Hero declares the engage movement. Applies only when the Hero moves from outside the opponent's weapon's reach to inside.
+Yield or dodge bonuses are not applied to the active engage action roll.
 
 
 \skill{Skill scf 0.5 "charge":} reduces movement penalties by one for each skill level when the user moves to attack an opponent. The initiative for the attack is also increased equal to the level of "charge". However, the maximum initiative bonus and movement penalty reduction is limited by the distance of approach moved to reach the opponent. Also, the attack's maximum damage is increased by one for each three speed of approach. A charge costs one stamina above the normal cost of the attack.
@@ -214,7 +236,7 @@ Charge also works the same when attacking from horseback etc.
 \openskillslist
 
 \skill{Skill scf 0.5 "tackle":} someone to push them out of the way. Tackling is a 3ap attack action and costs 1 stamina. The attacker declares tackle and tries to move into or through the square currently occupied by the target. If the tackle sequence is successful the tackling Hero will push the target out of the way.
-The target can choose to defend against the tackle. Afterwards both parties roll dex for balance or fall down.
+The target can choose to defend against the tackle. Afterwards both parties roll dex for balance check or fall down.
 
 A tackle sequence is a dance for two, and it can go a few different ways:
 \begin{itemize}
@@ -222,13 +244,13 @@ A tackle sequence is a dance for two, and it can go a few different ways:
     Tackler: str + tackle + speed/3 \\
     Target: str + tackle or block \\
     where speed is the distance of approach \\
-    The target takes success/3 damage, but the tackler does not take damage from a fail. Both parties must roll dex for balance modified by the tackle resistance roll diff, or fall down. The dex roll is also modified by ams, terrain, etc as usual.
-    \item If the target takes a yield + avoid action, succeeds, and moves out of the way the tackler simply move to occupy the original target square and nothing else happens.
+    The looser takes diff/3 damage. Both parties must roll dex for balance check modified by the tackle resistance roll diff, or fall down. The balance check is also modified by ams, terrain, etc as usual.
+    \item If the target takes a yield + avoid action, succeeds, and moves out of the way the tackler simply move to occupy or pass through the original target square and nothing else happens.
     \item If the target chooses not to, or can't, take action to resist the tackle, then proceed with the resistance roll and effects as above but with the target strength set to str/2 and without tackle or block skill as bonus.
 \end{itemize}
 After a tackle success the target is knocked back 1 + success/3 sq away in suitable direction, chosen by the tackler (GM discretion). The movement costs mp and can force the target to go off balance or fall from lack of mp.
 
-\emph{Note} that a character must have some level in tackle or block to be able to take tackle or block actions. E.g: resisting a tackle also requires tackle or block skill, otherwise the target resistance result is set to str/2, as above, since he can't spend an action to resist.
+\emph{Note} that the characters must have some level in tackle or block to be able to take tackle or block actions. E.g: resisting a tackle also requires tackle or block skill, otherwise the target resistance result is set to str/2, as above, since he can't spend an action to resist.
 
 
 %TODO: should block also allow for some 1ap overwatch style fixed position sentry ?
@@ -446,7 +468,7 @@ Any target who cannot manage to get out of the way is automatically prone and of
 \skill{Skill scf 0.5 "backstab":} is used to do increased max damage with a melee weapon when attacking unaware opponents. Usually it's preceded by a successful sneak, but it's enough that the target are unaware of the attacker and fails the perception roll. The attacker is probably "behind" the target (outside field of vision), unless he is exceptionally good at sneaking. A backstab attempt costs +1ap and +1 stamina extra above the cost of the normal attack.
 
 First roll for the backstab. If the backstab fails, the action reverts to a normal attack, still costing the extra ap and stamina but giving no bonus damage.\\
-A failed backstab roll has no effect, just a normal attack.\\
+A failed backstab roll has no extra effect, just a normal attack.\\
 A successful +0 backstab attack gives dam+3 pen+1 \\
 A good +3 backstab attack gives dam+6 pen+2 \\
 A very good +6 backstab attack gives dam+9 pen+3 \\
@@ -496,9 +518,21 @@ Note: a sidestab is not automatically a synchronised attack. A target can still 
 
 
 \skill{Skill cost 1.0 "make it count":} Can increase damage of a hit.
-Declare to make the next attack count, and how, before rolling the attack. A declared make it count attack must be made regardless of the outcome of the make it count roll. A successful roll will add the success diff as damage to the weapon damage, before the final damage roll. %The make it count roll is modified by ams as usual. -- stop writing this, it's declared in the beginning as norm.
+Declare to make the next attack count, and how, before rolling the attack. A declared make it count attack must be made regardless of the outcome of the make it count roll. A successful roll will add the success diff as damage to the weapon damage, before the final damage roll.
 
 A make it count attempt costs 1 stamina above the usual attack. The Hero can choose to either spend +1 ap extra \emph{or} risk getting a more difficult attack. This must be decided before rolling. Without spending extra ap, a failed make it count roll will pass the fail diff as negative mods to the attack roll. Spending the +1 ap extra before the roll removes that possible negative mod.
+
+
+\skill{Skill cost 0.5 "critical damage":} The Hero has a small chance of doing much higher damage on some attack hits if the dice favour him.
+
+Any successful attack on a roll of "1" can do extra damage if the hero then passes a critical damage roll. After rolling the first "1" for the attack, the Hero can declare a critical attempt, pay 1 stamina, and roll for critical damage.
+
+Depending on the success level of the critical damage roll the total damage is increased:\\
+fail : it's just normal damage, rolled as usual, no critical damage \\
+success+0 : total damage is rolled +50\% of max, min +3 \\
+good success+3 : total damage is rolled +100\% of max, min +6 \\
+very good success+6 : total damage is rolled +200\% of max, min +9 \\
+perfect success+9 : total damage is rolled +300\% of max, min +12
 
 
 \phantomsection \label{skill:tank}
@@ -858,6 +892,13 @@ A regular fail means you didn't manage to disarm the trap, but didn't trigger it
 Setting traps takes time. Each kind of trap has its own time requirement. A good success+3 reduces the time by 25\%, A very good success+6 reduces the time by 50\%, and an excellent success+9 reduces the time by 75\%.
 
 
+\skill{Skill scf 1.0 "blindfight":} reduces any action mods from being blinded by the level of blindfight. Also for actions which are not usual "fight" actions.
+
+Passing a blindfight roll allows for attempting right to react defence actions when blinded. The defence takes the same int and per roll fail mods as normal actions when blinded, and blindfight alleviates those mods as specified above.
+
+Also great when fighting in total darkness etc.
+
+
 \skill{Skill scf 1.0 "McGyverism":} is the ability to turn miscellaneous everyday objects and debris into improvised useful gadgets and contraptions. The use of this skill is very much dependent on GM discretion and player inventiveness.
 
 All contraptions are built from "stuff", using "tools". A suggested contraption is given "stuff" and "tools" requirements by the GM, along with time and difficulty. This is the minimum requirements to be able to complete the task on regular time and with the expected result. Any lacking points "stuff" is mod-1 and any lacking points of "tools" is mod-3.
@@ -900,6 +941,12 @@ Success +6 found enough for three people. \\
 Success +9 found enough for five people.
 
 If the tracker also succeeds with traps, sneak, bow / crossbow rolls each doubles his food production, to a max of 5x. Traps roll require that the hunter carries traps in equipment, or succeeds with MacGyverism.
+
+\
+
+Navigating the region map requires successful track rolls. Following roads is mod+6, plais mod+3, moors=0, hills and forests mod-3, mountains and deep forests mod-6. Weather and time of day or night can also play a big role.
+
+Having a map gives mods as long as the character has int enough or literate. Most maps give positive mods but very poor maps, or inentionally misleading maps, can give negative mods. Equipment like compass, spyglass, etc also helps. Histography can also help with navigation if there are relevant landmarks or sites in the area.
 
 
 \skill{Skill scf 0.5 "literate":} reading and writing, reading maps, road signs, here be dragons, beware of the beholder, things like that. A quick sign takes an action to read. A note perhaps a round or two. A letter can take ten to a hundred rounds perhaps. \\
@@ -998,6 +1045,10 @@ Site of regional importance: mod=0\\
 Smaller site: mod-3 to mod-9
 
 E.g: Useful tidbits regarding the lord of the neighbouring domain, who lived 100 years ago: mod-3. Lord Bramblebush of the nearby BushLands was known for his large boar hunting parties. So this ancient but exquisite hunting spear could well be from his personal armoury.
+
+\
+
+The histography skill also aids in navigating the region as long as there are any relevant landmarks or important sites: of historical, religious, social, or economical relevance. If so, apply 1/3rd or 2/3rd of histography as mods to the track roll.
 
 
 \skill{Skill scf 0.5 "first aid":} heals 1 hp and 1 pain. Max 1 success per wound. "First aid" can be attempted on one self with a mod-3. A healing attempt takes 2+1d4 rounds. The practitioner needs a "first aid kit" to use the skill, or suffer a mod-3. First aid kits usually have limited amount of uses before they need to be restocked.
@@ -1452,7 +1503,13 @@ Upgrading to ignore +1 knockback costs +10xp. This can be purchased multiple tim
 Anchor also gives mods to resist knock down effects with mod+3 per anchor level.
 
 
-\skill{Maneuver (cost special) "extra gear X"} is a new movement speed, somewhere between M/W/R/D, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the next higher base movement: An extra gear based on Maneuver cannot exceed Walk speed, one based on Walk speed cannot exceed Run speed, and one based on Run cannot exceed the maximum Dash movement of the character.
+\skill{Maneuver (cost special) "fast shield":} allows the shield bearer to make shield defence actions at 2ap instead of 3ap. Available in 3 levels:\\
+lvl 1, cost 5xp: buckler 2ap if str$\geq$(base requirement +4) \& dex$\geq$(1.5*str)\\
+lvl 2, cost 10xp: small shield 2ap if str$\geq$(br +4) \& dex$\geq$(1.5*str)\\
+lvl 3, cost 20xp: regular shield 2ap if str$\geq$(base requirement +4) \& dex$\geq$(1.5*str)\\
+
+
+\skill{Maneuver (cost special) "extra gear X":} is a new movement speed, somewhere between M/W/R/D, where X is the amount of movement points that movement speed allows. Each "extra gear X" is a different maneuver skill and has individual xp cost. To create an "extra gear X" skill for your character: start with the movement speed (M/W/R) that is closest under the X, then add mod+1 per mp+1 you want. An extra gear X cannot exceed the next higher base movement: An extra gear based on Maneuver cannot exceed Walk speed, one based on Walk speed cannot exceed Run speed, and one based on Run cannot exceed the maximum Dash movement of the character.
 
 E.g: Discerning Doris has M1 W4 R6 D9 and want to learn a movement speed that gives her 3mp. She starts from M1 and adds 2mp and mod-2 to create "extra gear 3". Her declarable movement speed options are then M1,EG3,W4,R6,D9 at mod=0,mod-2,mod-3,mod-6,mod-9 respectively. An EG5 based on W4 would give mod-4.
 
@@ -1474,6 +1531,9 @@ The cost of an extra gear starting from Maneuver speed is 15xp per extra movemen
 Allows the Hero to march on up to double con each day when travelling the world map. Max stamina is reduced by one for each extra step taken above con until the Hero has rested a full day.
 
 Pushing successive days will go into negative stamina, provided the Hero passes a con roll modified by current negative stamina. One roll for each extra step attempted. Failed roll means either break for the day, or have the entire party loose one step for a resting pause before trying again.
+
+Heroes with the travel skill still use the extra con for pushing extra travel:\\
+distance = con + travel + (extra con). Where the extra con gives the mods. Same for riding or other means of travel. The extra con extends the travel distance and gives mods.
 
 
 \skill{Maneuver (cost 10) "switch":} allows for two friendly willing characters in base contact who both have switch to each take a 3ap action and switch places. They must pay the movement cost for the move as well. The switch happens in the order of initiative of the character with the lowest initiative. However, the faster character can take one extra action to "activate" the slower character and thus initiate the switch.
@@ -1681,6 +1741,13 @@ lvl 3 cost +10xp: loot in 0ap instead of 1ap, long loot at 20\% of time
 If the attempt fails the character stops and the door remains closed. The Halted Hero must pass a dex roll to not fall down.
 
 
+\skill{Maneuver (cost 5) "curve runner":} The Hero can calculate \hyperref[approach]{speed of approach} through mild turns. Every 3sq he can make one 45deg turn and still count the distance before the turn as speed of approach.
+
+\noindent
+Upgrades:\\
+cost +5: can make a 45deg turn every 2sq
+cost +10xp: can make a 45deg turn every square
+
 \
 
 \
@@ -1863,22 +1930,6 @@ A slow 2 (5ap) weapon requires str+3 and dex$\geq$3 to be slow 1 (4ap).\\
 A slow 1 (4ap) weapon requires str+6 and dex$\geq$6 to be normal (3ap).\\
 A normal (3ap) weapon requires str+9 and dex$\geq$9 to be fast 1 (2ap).\\
 A fast 1 (2ap) weapon requires str+12 and dex$\geq$12 to be fast 2 (1ap).
-
-
-\skill{Maneuver (cost 20) "critical damage":} The Hero has a small chance of doing much higher damage on some attack hits if the dice favour him.
-
-Any attack hit on a roll of "1" can do extra damage if the hero then passes a second skill test. The second skill test is modified just like the first one but doesn't cost any ap, stamina, etc. It's just a roll to determine if the critical damage happens.
-
-After rolling the first "1", the Hero must declare a critical attempt, and pay 1 stamina, to get the second roll for the critical damage check.
-
-Depending on the success level of the second roll the damage is increased:\\
-fail : it's just normal damage, no critical damage \\
-success+0 : the damage roll is 100\% + normal damage roll, min 5+roll \\
-good success+3 : the damage roll is 200\% + normal damage roll, min 10+roll \\
-very good success+6 : the damage roll is 300\% + normal damage roll, min 15+roll \\
-perfect success+9 : the damage roll is 500\% + normal damage roll, 20+roll
-
-The critical damage roll stacks with accurate, consistent, etc as normal. And it stacks with critical aim.
 
 
 \skill{Maneuver (cost spc) "stronk tank":}

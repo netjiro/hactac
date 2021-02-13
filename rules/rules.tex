@@ -976,7 +976,7 @@ On a hex grid 60deg is free, 120deg is 1ap, 180deg is 2ap.
 \subsection*{Flanking attacks}
 %-----------------------------
 Attacks from the side or back are more difficult to defend against. Attacks incoming at 90deg from the character's facing are mod-3 to parry. At 145deg it's mod-6 and at 180deg it's mod-9.\\
-For hex boards: 60\degrees is mod=1, 90\degrees (reach) is mod-3, 120\degrees is mod-6, and 180\degrees is mod-9.
+For hex boards: 60\degrees is mod=-1, 90\degrees (reach) is mod-3, 120\degrees is mod-5, and 180\degrees is mod-9.
 
 The target can not change facing before taking a defensive action. Not even if that action is avoid + yield. He can generally take a free 45\degrees turn together with the action \emph{after} the defensive roll, or pay extra ap or mp for a larger turn, or together with any movement \emph{after} the defence roll.
 
@@ -1008,6 +1008,15 @@ The enemy must be within the cone of vision for the attack to be possible at all
 These are the same mods as for parrying incoming strikes from the sides or behind.
 
 On a hex grid it's: 60deg mod=1, 90deg mod-3 (reach attack), 120deg mod-6, 180deg mod-9.
+
+
+\subsection*{Small and large targets, partially hidden targets}
+%--------------------------------------------------------------
+Small targets are mod-1 to hit, very small targets are mod-2 to hit, tiny targets are mod-3 to hit. Large targets are mod+1 to hit, very large mod+2, huge mod+3.
+
+Normal sized targets are humans, elves, dwarves, orcs. Small are goblins and halflings, dogs, panthers, eagles. Very small are goblin runts, small dogs, large cats, snakes. Tiny are
+
+Partially hidden targets are protected by the coverage. Half figure is mod-3, head only is mod-6. Peeping through slit is mod-9.
 
 
 \subsection*{Partial squares, corners and difficult terrain}
@@ -1063,6 +1072,18 @@ If the character makes a turn in the move it's only the final straight line that
 Normally the bonus from speed/distance of approach is the distance/3.
 
 
+\subsection*{Collision}
+%----------------------
+One dude running into another, by intent or otherwise, on foot or riding a mount. It's a resistance roll str vs str.
+Both parties have the option to take a 3ap action to resist the collision. Taking an action allows that character to use full strength, not taking an action forces him to use half strength. Both parties can add speed/3 to their side of the resistance roll, where speed is the distance of approach.
+The winner will occupy the collision target square and the looser will be pushed away or stopped in track, GM decides final location.
+
+Both parties must then roll dex for a balance check, modified by the strength resistance roll diff, success or failure for winner and looser respectively. Failed balance check means falling down.
+
+If mounted use the strength of the mount instead, and add the ride skill of the rider. After collision the mount must roll balance check and the rider must make a ride check, both modified by the str resistance diff/3.
+
+To do it right, use tackle and block skills.
+
 
 
 
@@ -1111,7 +1132,7 @@ In some cases it's relevant to calculate divisions of rounds, in which case a ro
 Unless otherwise specified, any action taking 0-9ap can be expanded into a 1r action, regardless of what base ap the character can declare. E.g: Slow Sune has base ap of 4, and want to perform a strange ritualistic wavy-arms-move requiring 6ap. Instead of declaring 6ap and taking mod-2 for the action, and round, he simply expands 6ap action into a full round action, declaring his normal max 4ap, and taking no mods.
 
 For actions taking over 9ap it's possible to expand into multiple round actions:\\
-\verb|rounds = round up (ap / 9)|
+\verb|rounds = ap/9 (round up)|
 
 
 \subsection*{Actions that take more than one round}
@@ -1256,7 +1277,7 @@ E.g: Rock and Cliff are carrying a stretcher with loot. The stretcher requires s
 
 \subsection*{Visible, sneaking, hiding}
 %--------------------------------------
-\todo Three different levels of how discoverable or hidden something is.
+\todo Three different levels of how discoverable or hidden something is:
 
 
  *   Plainly visible. Will be found directly when in vision cone, or heard / smelled / felt when within perception range, if possible.
@@ -1419,7 +1440,7 @@ Some attacks have special effects that take place when the attacks succeeds. Som
 \begin{description}
 
 
-\item[Poison]
+\item[poison]
 Poisons do damage or other effect over time. Most poisons has a few characteristics: strength, duration, and damage per round. Each round roll poison strength vs constitution to see if the poison does damage or not. This will persist until the poison duration expires. Common poisons have str 5, duration 5 rounds, and does 1 hp damage per round. Strong poisons probably have str 10 and does 2 hp damage per round. Other poisons can be slow, and only does damage every other, or third round, etc...
 
 Poisons do not have to do damage, they may just paralyse the victim, confuse it, or have other strange effect. Perhaps the target must pass con rolls or go into frenzy attacking the nearest person.
@@ -1427,13 +1448,13 @@ Poisons do not have to do damage, they may just paralyse the victim, confuse it,
 Antidotes, first aid, and medicine can be used to counter or limit the effects of poisons.
 
 
-\item[Stun]
+\item[stun]
 A stunned target will get a stun mod that affects his actions and movements. Each stun point removes one movement point, one action point, and pushes a mod-1 to the mod stack. At the end of each round the character will remove stun points equal to his constitution value.
 
 E.g: Stunned Steve was bitten by an Elequito and got a stun 5. He immediately looses 5mp, 5ap, and has mod-5 to all actions. He has con 4, so at the end of the round he removes 4 stun points, giving him a stun 1 for the next round. For the next round he starts with 1mp less than declared, 1ap less than declared, and mod-1 to all actions. Before the third round his con removes the remaining stun 1.
 
 
-\item[Web, ensnare, etc]
+\item[web, ensnare, etc]
 Web effects usually comes from a spider's spin attack, some magical hold field, or similar. Web effects reduce mobility and give action mods.
 A typical spider web effect is dex-2, move-2, mod-3 to all actions until the effect is broken. Multiple web effects stack up to completely immobilise a target.
 
@@ -1446,7 +1467,7 @@ Friends can help break loose by adding their str, and can help clean by spending
 Items accumulate mod-1 when used to parry spin web attacks, until cleaned off. Cleaning off requires a regular 3ap mod+9 action.
 
 
-\item[Snag]
+\item[snag]
 The attacker's weapon and target or target's blocking weapon are entangled until the end of the round, unless some cool maneuver or action can untangle them quicker.
 
 It is possible to make a tug of war to rip weapons out of the opponents hands when they are snagged. Roll str vs str (unmodified). If any side wins with +3 or more he has managed to rip the opponent's weapon loose. It's also possible to tug or push a snagged opponent off balance.
@@ -1454,7 +1475,7 @@ It is possible to make a tug of war to rip weapons out of the opponents hands wh
 Weapons with the \emph{snag} property can be used to intentionally entangle the parrying weapon or shield. Snagging with the snag maneuver is tricky and carries a mod-x. Snag can also happens on a fail-6 or worse with a roll of 10 if you do not try to snag, even with weapons that don't have the snag attack property.
 
 
-\item[Knockback] % knock back
+\item[knockback] % knock back
 The target is moved one space away for each point of knockback.
 Large targets, with size more than one square, ignore one point of knockback for each occupied square after the first one. E.g: a 2x2sq troll ignores 3 knockback points.
 Some creatures have knockback reductions even if they are smaller than multiple squares.
@@ -1463,11 +1484,25 @@ The target must pass a dex roll or go prone, mod-3 per extra square beyond the f
 Some knockback effects have a str value which is then used in a str vs str against the target to see if the knockback occurs. Diff modifies the dex roll.
 
 
-\item[Knockdown] % knock down
+\item[knockdown] % knock down
 The target will be knocked down and go prone. Some knockdown have a str value which is then used in a str vs str against the target to see if the knockdown occurs.
 
 Knockdown target does not get a dex roll to try to remain on their feet, knockdown is purely str based.
 
+
+\item[blinding]
+Blinded Heroes cannot make defence actions based on seeing an incoming attack, such as parry, deflect, avoid, etc.
+They are still triggered on right to react though, like trying to run away after being hit.
+
+Any attack or other actions that usually relies on vision to find a target, where to put ones feet, etc, need to first first takes mod-3 baseline. Additionally, make both int and per rolls, with any fail values applied as cumulative mods to the action:\\
+action mod = -3 + (int fail) + (per fail)\\
+E.g: Target Terry is blinded and tries to make an attack. Has total ams-2 from wounds and movement. Rolls success on the int but fail-4 on the per. He now has total mod-9, including ams, to the attack roll.
+
+Taking movement when blinded also require int and per rolls to head in the right direction. Fails will head off elsewhere, GM discretion. Total fail:\\
+-1: 45deg off somewhere on the path\\
+-3: 90deg off, 45 from beginning then 45 along the path somewhere\\
+-6: 135deg off with muptiple knees along the path\\
+-9: 180deg off with multiple knees along the path
 
 \end{description}
 
@@ -1628,15 +1663,19 @@ if tracking wounds list for pain purposes, wounds heal one point at a time in or
 
 \subsection*{Travelling the region and area maps}
 %-----------------------------------------------
-When moving around between encounters the heroes probably traverse a regional map. The scale is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution. The travel skill improves long distance travelling speed.
+When moving around between encounters the heroes probably traverse a regional map. The scale is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution. The travel skill improves long distance travelling speed. Difficult terrain, such as mountains or forests cost extra to cross. Roads are normal cost, plains and moors perhaps 30-50\% more. Woods and hills perhaps 100\% more, Deep woods and mountains perhaps 2-300\% more.
 
 The party's vision on the regional map is equal to the highest value of the track skill of any member. Parties without track only have regional vision of the square they are currently occupying.
+
+Navigating the map requires successful track rolls. Following roads is mod+6, plais mod+3, moors=0, hills and forests mod-3, mountains and deep forests mod-6.
+Having a map can help, as can other equipment. Knowledge of the region helps. Weather, day or night, affects.
+Failing a navigation track roll means the Heroes actually move the wrong way. Roll once or a few times per day, at least every 3-5sq.
 
 Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride) but also limited by the quality of the horse. A horse has a cruise speed rated in leagues per day. A decent horse is around 10-15 steps/day.
 
 When riding in a wagon or cart the distance is not based on the character's con and ride skill, but only determined by the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
 
-Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as grassland, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severely limited even in hilly terrain.
+Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as plains, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severely limited even in hilly terrain.
 
 
 %Region maps generally have the scale of 1 sq = 1 league. And a league is about how far a character with con=1 can travel per day. A con=5 character can travel 5 leagues per day.
@@ -2088,15 +2127,9 @@ During campaign play I strive to not forcibly nerf, and always allow the charact
 
 \subsection*{Hero manual}
 %------------------------
-I recommend that the players copy the skills they choose for their character directly to a cheat sheet. Especially if you or your group is tweaking and fiddling with the skills, etc, a lot during the game, it's important to note down what the original version of the skill actually said when the player decided to train it.
+I recommend that the players copy the skills they choose for their character directly to a cheat sheet. It is important to note down what the original version of the skill actually said when the player decided to train it. Especially if you or your group is tweaking and fiddling with the skills and rules a lot during the game.
 
-This also means that the players will effectively compile a small rule book specifically for their own character. The basic rules, notes, ideas, etc. Very useful. It also offloads the GM, since the player will have a very good understanding of the rules affecting his character.
-
-\
-
-% 200218:
-So far, for over a decade, I have always let the player choose to keep the old version of a skill/equipment/whatnot when we tweak and update, or update if they want to.
-It's a bit fun to have the weird legacy stuff circulating even after tweaks.
+This also means that the players will effectively compile a small rule book specifically for their own character. The basic rules, notes, ideas, etc. Very useful. It offloads the GM since the player will have a good understanding of the rules affecting his character.
 
 
 \subsection*{Finding stuff}
@@ -2108,7 +2141,7 @@ I prefer asking for rolls in most situations, then roll hidden every now and the
 
 \subsection*{Role Playing vs Tactical Optimisation}
 %--------------------------------------------------
-Generally: role playing limits tactical optimal planning and behaviour. Make sure you've discussed this with your group so you all know what level of rp vs tactics you're all comfortable with. This also involves what level of metagaming and information leakage you have across the table, battle map, or voice chat.
+Generally: role playing limits tactically optimal planning and behaviour. Make sure you've discussed this with your group so you all know what level of rp vs tactics you're all happy with. This also involves what level of metagaming and information leakage you have across the table, battle map, or voice chat.
 
 \
 
@@ -2116,9 +2149,10 @@ Generally: role playing limits tactical optimal planning and behaviour. Make sur
 
 \
 
-In the most severe option on one side you can use individual fog of war and vision for each Hero, and insist that all players share information of the battle map \emph{in character} and time what they say into actions and rounds for their Hero. Remember that it's possible to shout and murder at the same time. This is definitely doable with some tools and it can be a whole lot of fun, but in my experience not what most people prefer or have the most fun with.
+\noindent
+In the most severe option on one side you can use individual fog of war and vision for each Hero, and insist that all players share information of the battle map \emph{in character} and time what they say into actions and rounds for their Hero. Remember that it's possible to shout and murder at the same time. This is definitely doable with some tool setups and it can be a whole lot of fun, but in my experience not what most people prefer or have the most fun with.
 
-The other extreme is the shared battle map and open collaborative reasoning between all players without time limits for every round and individual action. This can be a lot of fun and more social, but some players will zone out and participate less. It tends to lead to where one or a small clique of players mastermind the whole party, essentially just giving suggestions or orders across the table or chat, and the rest of the players just executing.
+The other extreme is the shared battle map and open collaborative reasoning between all players without time limits for every round and individual action. This can be a lot of fun and more social, but some players will zone out and participate less. It sometimes lead to situations where one or a small clique of players mastermind the whole party, essentially just giving suggestions or orders across the table or chat, and the rest of the players just executing.
 
 Most groups quickly find common ground naturally, but be aware of the issue and discuss.
 
@@ -2132,7 +2166,11 @@ Most groups quickly find common ground naturally, but be aware of the issue and 
 %------------------------
 Gold and Glory tactical gameplay requires larger maps than normal because there is often a lot more movement and positioning going on during the fights than in most games. Most battle maps I build are at least 30x30sq, sometimes larger than 100x100sq.
 
-Be careful when using smaller pre-made battle maps. It's best if they have firm walls or enclosure visible around the battle area, otherwise they have a tendency to feel artificially cramped when the players want to move around. Or simply expand the map by sketching surroundings, cut'n'paste, or similar. It won't be as pretty, but allows more movement.
+Be careful when using smaller pre-made battle maps. It is best if they have firm walls or enclosure visible around the battle area, otherwise they have a tendency to feel artificially cramped when the players want to move around. Or simply expand the map by sketching surroundings, cut'n'paste, or similar. It won't be as pretty, but allows more movement.
+
+I often add entry/exit boxes or borders. Cross those boundries and the Hero has left the battle and cannot return.
+
+
 
 
 
@@ -2149,7 +2187,7 @@ Be careful when using smaller pre-made battle maps. It's best if they have firm 
 \section*{Playing with young kids}
 %---------------------------------
 \label{sec:youngkids}  % Bitter Candy
-We've successfully played with kids as young as five years old, and without any previous tabletop or role playing experience. It's enough that they can count to 10, add and subtract a bit. So, clever kids, but still.
+We've successfully played with kids as young as five years old, without any previous tabletop or role playing experience. It's enough that they can count to 10, add and subtract a bit. So, clever kids, but still.
 
 \
 
@@ -2165,7 +2203,7 @@ Use physical objects and markers instead of numbers on a paper. Improvise the ba
 
 I had a tiny adventure when I playtested with a trio of young girls. I had them build a small play farm on a coffee table, and choose one small toy each. Then told them that an evil bitter taste was spreading throughout the land, making all the candy taste like coffee. They must find the source of the horror and put a stop to it immediately.
 
-Thus, Sparkly Pony and two old Rubber Trolls had to venture from their coffee table farmstead, across the Living Room Expanse and the Valley of Hallway, to reach the Forbidden Kitchen. There they had to climb the Chair Mountains to reach the Oakwood Plateau, whence the miasma originated. Finally, on the high flatland they faced Lord Grapefruit and all his purple and green grape minions. Along the way they had encountered a friendly sock monster who had taught them a useful spell of Stink Cloud, and fought a couple of evil car demons to get a set of SpeedWheel boots. They also had to solve the riddle of the BrassHandle before the DoorMaster allowed them to enter the Forbidden Kitchen.
+Sparkly Pony and two old Rubber Trolls had to venture from their coffee table farmstead, across the Living Room Expanse and the Valley of Hallway, to reach the Forbidden Kitchen. There they had to climb the Chair Mountains up to the Oakwood Plateau, whence the miasma originated. Finally, on the high flatland, they faced Lord Grapefruit and all his purple and green grape minions. Along the way they had encountered a friendly sock monster who had taught them a useful spell of Stink Cloud, and fought a couple of evil car demons to get a set of SpeedWheel boots. They also had to solve the riddle of BrassHandle before the DoorMaster allowed them to enter the Forbidden Kitchen.
 
 Bonus that they got to eat all the grapes they defeated, though they were kind enough to leave the carcass of Lord Grapefruit for their mother.
 
@@ -2260,15 +2298,15 @@ Since most of my projects have longevity exceeding a decade I've come to rely pr
 \phantomsection\addcontentsline{toc}{section}{maptool}
 \section*{Maptool}
 %-----------------
-Maptool is the only Virtual TableTop system I've used for this game since the inception back in 2008. Not totally accurate, first few experiments we just used jarnal and doodled our way through a couple of mini test encounters.
+Maptool is the only Virtual TableTop system I've used for this game since the inception back in 2008. First prototype experiments we just used jarnal and doodled our way through a couple of mini test encounters.
 
 Open source. Self hosted. You as GM or player have control and access to all the work you create, it's not locked away on a server somewhere, dependent on whether the hosting company survives / changes strategy / gets acquired in the coming years. The code is mainly java so it's fixable if the external community dies. I saw the likelihood of this little hack'n'slash game being long lived, so open source and self hosting were \textit{must have} when I scouted for tools.
 
-Maptool had rudimentary support for fog of war and vision / vision blocking. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your camp fire. Great, and something most other tools were lacking. And many still lack today. \vvsmall(early 2020)\normalsize
+Maptool had rudimentary support for fog of war and vision / vision blocking early on, and by now it's pretty good. This adds such a great feeling of exploration and immersion when playing, and lots of tactical depth. The experience of entering a dark dungeon, lighting a torch, and carefully sneaking around corners is wonderful, even in a simplified top down view. Just as having enemies hide in the long shadows cast by trees and bushes in the light from your camp fire. Great, and something most other tools were lacking. And many still lack today. \vvsmall(early 2020)\normalsize
 
-Maptool scripting is passable for very simple stuff but horrible to work with. Despite this, I've implemented automation for most everything in the game over the years. Almost all actions as GM is one or two clicks by now, and very little to keep in the noggin between rounds.
+Maptool scripting is passable for very simple stuff but horrible to work with. Despite this, I've implemented automation for most infrastructure in the game over the years. Almost all actions as GM is one or two clicks by now, and very little to keep in the noggin between rounds.
 
-It's also reasonably quick to import maps and set vision blocking, as well as make improvised maps.
+It's also reasonably quick to import maps and set vision blocking, as well as make improvised maps. Though not quick enough that I'm happy to do it live during a session.
 
 
 \subsection*{Maptool light and vision}

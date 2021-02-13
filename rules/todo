@@ -20,6 +20,10 @@ reverse chronological order of TODO items
 
 
 
+210208: PIN !
+TODO: break apart rules, skills, etc and skills sections to
+      a "basic" and a "complete" book
+
 
 200213: PIN!
 TODO: change weapon and shield abs so they actually break more often
@@ -55,6 +59,22 @@ TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round
 
 
 
+
+210209:
+TODO: disengage as defence on right to react?  -  just run away ?
+
+
+210208:
+TODO: magic   effects range duration etc not only by adding mana
+      but also by accepting casting mods
+      eg mod-1 to gain a bit of range or mod-1 to gain a bit of damage
+      also eg mod-1 to increase damage per mana or range per mana ?
+      ? should it be possible to cast faster this way ?
+      each mana pumped in beyond base line also gives mod-1
+TODO: magic   spells sometimes require concentration to keep running,
+      and perhaps some spells should also require int or psy set aside
+      or perhaps also other stats or properties ?
+      part of hp, or stamina, or strength/dexterity ?
 
 
 210130:
@@ -1170,3 +1190,8 @@ DONE: skall man sänka stavars abs med 1 ?  yep, sänkt abs och skada och parry
 DONE: CHECK that veteran skill influences the pass out / wake up rolls from
       "come on and die already" damage below 0hp.
 DONE: thrown weapons / throwing weapons review  210130
+210210:
+DONE: was issue with old MWRD buttons, not the latest version in global
+      stuff got lost somewhere along the way between migrations lin-win-lin
+      multiple times 2018-2021
+      BUG:  något fungerar inte med stamina, stamina dras ej för run

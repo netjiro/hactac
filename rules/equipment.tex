@@ -628,19 +628,19 @@ Small characters (halflings, goblins) have extra mod-1 to incoming ranged attack
 
 buckler             abs 6, parry+1
                     str 0
-                    fast 1 if str 4 and dex 6
+                    fast 1 if str 4 and dex 6 and fast shield 1
                     Ranged attacks mod-0 when in the way.
                     Hiding behind it (3ap) ranged mod-1
 \end{verbatim} \blocklistgap \begin{verbatim}
 small shield        abs 8, parry+2,
                     str 2
-                    fast 1 if str 6 and dex 9
+                    fast 1 if str 6 and dex 9 and fast shield 2
                     Ranged attacks mod-1 when in the way.
                     Hiding behind it (3ap) ranged mod-2
 \end{verbatim} \blocklistgap \begin{verbatim}
 shield              abs 10, parry+3,
                     str 4, or slow 1 str 1
-                    fast 1 if str 8 and dex 12
+                    fast 1 if str 8 and dex 12 and fast shield 3
                     Ranged attacks mod-2 when in the way.
                     Hiding behind it (3ap) ranged mod-4
                     tackle mod+1
@@ -667,7 +667,7 @@ infantry shield     abs 13, parry+3,
 \
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
-leather armour abs 1
+leather armour abs 1 mostly like thick clothing made to take a punch
 thick cloth    str 1 (str penalties affect all actions)
                dash-1
                acrobatics mod-1
@@ -675,6 +675,7 @@ thick cloth    str 1 (str penalties affect all actions)
                sneak mod-1
                spellcasting mod-1
                swim mod-1
+               max stamina -1
                takes 2 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
 chain mail     abs 2 ring, scale, brigantine, etc
@@ -687,6 +688,7 @@ brigandine     dex-1
                spellcasting mod-2
                sneak mod-3
                swim mod-3
+               max stamina -2
                takes 3 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
 plate mail or  abs 3 plate armour of various sorts, incl helmet
@@ -700,7 +702,7 @@ h brigandine   dex-2, yield bonus -1
                sneak mod-4
                swim mod-4
                avoid mod-1
-               max stamina mod-1
+               max stamina -3
                Turning as separate actions cost more ap:
                45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
@@ -718,7 +720,7 @@ full plate     abs 4 full plate armour with full helmet
                sneak mod-5
                swim mod-5
                avoid mod-2
-               max stamina mod-2
+               max stamina -4
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=3ap)
@@ -736,7 +738,7 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                sneak mod-6
                swim mod-6
                avoid mod-3
-               max stamina mod-3
+               max stamina -5
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=4ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=4ap)
@@ -974,39 +976,57 @@ fire actions:
 normal  mod=0 1r
 aimed   mod+1 2r
 quick   mod-3 3ap, mod-6 2ap, mod-9 1ap
+
+crossbows have no str bonus
 \end{verbatim} \blocklistgap \begin{verbatim}
 small crossbow    dam 5, penetrating 1,
                   range 12
-                  str 3 (no str bonus)
+                  carried: str 3
+                  mounted: str 1 reload +1r
                   reload 2r (str 9 dex 6 : 1r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 crossbow          dam 6, penetrating 2,
                   range 15
-                  str 5 (no str bonus)
+                  carried: str 5
+                  mounted: str 3 reload+1r
                   reload 3r (str 12 dex 8 : 2r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 large crossbow    dam 7, penetrating 3,
                   range 18
-                  str 7 (no str bonus)
-                  reload 4r (str 14 dex 10 : 3r)
+                  carried: str 7
+                  mounted: str 5 reload+1r
+                  reload 4r (str 15 dex 10 : 3r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 arbalest          broadhead: dam 12
-special           spikehead: dam 9 pen 5
+(special)         spikehead: dam 9 pen 5
                   blunthead: dam 10, knockback 1
                   range 20
-                  carried: str 9, mounted str 5 reload+3r, no str bonus
-                  reload 5r (str 16 dex 12 : 4r)
-                  quick shot is extra mod-3, above normal crossbow mods.
+                  carried: str 9
+                  mounted: str 5 reload+1r
+                  reload 5r (str 18 dex 12 : reload 4r if custom built)
+                  quick shot is +1ap, above normal crossbow mods
+\end{verbatim} \blocklistgap \begin{verbatim}
+mounted arbalest  broadhead: dam 18
+(special)         spikehead: dam 14 penetrating
+                  blunthead: dam 15 knockback 2
+                  range 22
+                  mounted: two man team, str 5, reload 6r
+                  mounted: single man, str 8, reload 8r
+                  carried: single man, str 12, reload 7r
+                      (str 21 dex 14 : reload 6r if custom built)
+                  quick shot is +2ap, above normal crossbow mods
+The mounted arbalest is 8 enc: 4 for the weapon and 4 for the tripod.
+They are not meant to be carried around. Usually used by a two man team.
 \end{verbatim} \blocklistgap \begin{verbatim}
 double type       as the regular crossbows except that they have two first
 crossbows         shots, which can be used at the same time or separately.
-exotic            They also require str+2, and take 1r longer to reload.
+(exotic)          They also require str+2, and take 1r longer to reload.
                   If both shots are fired at the same time (same action)
                   you should still roll each bolt separately.
 \end{verbatim} \blocklistgap \begin{verbatim}
 repeater type     as the regular crossbows except that they take one round
 crossbows         less to reload, but at str+1, and have a bolt magazine
-exotic            which when empty must be reloaded manually taking
+(exotic)          which when empty must be reloaded manually taking
                   2r + 1r / bolt in the magazine.
                   These machines are exceptionally rare and expensive,
                   manufactured only by legendary mechanismiths and
