@@ -60,6 +60,13 @@ TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round
 
 
 
+210216:
+TODO: parry-slap  -  parera och samtidigt lappa till lite lätt
+                     för små critter
+TODO: boomerang    kastvapen: om man missar så kommer den tillbaka
+                   upgrade till återvända till skidan
+
+
 210209:
 TODO: disengage as defence on right to react?  -  just run away ?
 
@@ -1130,7 +1137,7 @@ DONE: stun removes ap, mp, pushes mod == to stun points
 DONE: skriv om : sätt att suga-magi växlar tex 2-till-1, istället för 1:1
       skall kosta 1m att kasta också...
 190930:
-DONE: multiple rerolls should escalage as quadratic: 1,4,9,16xp
+DONE: multiple rerolls should escalate as quadratic: 1,4,9,16xp
 191009:
 DONE: shield bash attack maneuver - shield skill (mod: neg shield mod)
       dam: (str+shieldmod)/3
@@ -1195,3 +1202,13 @@ DONE: was issue with old MWRD buttons, not the latest version in global
       stuff got lost somewhere along the way between migrations lin-win-lin
       multiple times 2018-2021
       BUG:  något fungerar inte med stamina, stamina dras ej för run
+210218:
+DONE: bygg crit knapp som inte lägger in success LastResult
+      eftersom det skriver över själva attackresultatet när man tar roll knapp
+DONE: maptool: tillåt inte dash och run med för lite hp
+210221:
+DONE: attack macros automatically pre-check and draw stamina
+DONE: rollchars.py  will no longer add basic skills like avoid, yield, etc.
+210224:
+DONE: ordning vid död: move to back för att bli av med liken
+      sendToBack()  tested working again

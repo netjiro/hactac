@@ -4,6 +4,10 @@ pdflatex book.tex
 pdflatex book.tex
 pdflatex book.tex
 
+pdflatex intro.tex
+pdflatex intro.tex
+pdflatex intro.tex
+
 #dvipdf book.dvi
 #pdftex book.tex
 

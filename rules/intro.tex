@@ -1,0 +1,128 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+%-------------------------------------------------------------------------------
+
+
+\input{../tex/settings.book}
+
+\usepackage{svg}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+
+% too many words in common across docs nowadays
+\input{../gng.hyphenation}
+
+
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1}
+
+
+
+
+%-------------------------------------------------------------------------------
+% make a simple title page
+%-------------------------
+
+\begin{titlepage}
+\thispagestyle{empty}
+
+\begin{center}
+
+   \vspace{40mm}
+
+   \textbf{\Large{intro to}}
+
+   \
+
+   \textbf{\Huge{Gold and Glory}}
+
+   \
+
+   \textbf{\Large{rpg-ish tabletop hacknslash\\
+             for dead tree and digital tables alike}}\\
+
+
+   \vspace{20mm}
+
+   \includegraphics[width=100mm]{./figs/teddyhero.jpg}
+
+   \vspace{20mm} % make it look better in html rendering.
+
+   \
+
+   \large{
+       fast and flexible game rules and setting\\
+       for interesting tactical monster hack battles\\
+       wrapped in old school silly and cliché role playing
+   }
+
+
+
+   \vfill % Puts what's below at the bottom of the page
+
+%   \textbf{\Large{netjiro}} %\hspace{5 cm} \large{author2}}
+
+   \ % empty paragraph
+
+   %\large{Csol}
+
+   %\large{General Academy of Bloody Murder}
+
+   \ % Empty paragraph
+
+   \normalsize{\today}
+
+\end{center}
+
+%\thispagestyle{empty} % No page number on title page.
+
+\end{titlepage}
+
+
+
+
+%-------------------------------------------------------------------------------
+% copyright etc on the back side of the title page
+%-------------------------------------------------
+\clearpage
+\thispagestyle{empty}
+\raggedbottom
+
+\vsmall
+\noindent
+This work is licensed under a Creative Commons \\
+Attribution-NonCommercial-ShareAlike 4.0 \\
+International License. (CC BY-NC-SA 4.0).\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/} \\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode} \\
+If you want to use it in any other fashion please contact the author.
+
+\
+
+%\noindent
+%All images are temporary placeholders, \\
+%most are downloaded and unattributed.\\
+%They need to be replaced with licensed art.
+
+\normalsize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

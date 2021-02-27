@@ -1,0 +1,480 @@
+%--------|---------|---------|---------|---------|---------|---------|---------|
+%       10        20        30        40        50        60        70        80
+
+
+% set the general page layout
+\documentclass[11pt, twoside, titlepage, a4paper]{report}
+
+% adjust the margins: 15mm inner binding, 25mm frame all around
+\usepackage[a4paper,inner=40mm,outer=25mm,top=25mm,bottom=25mm,pdftex]{geometry}
+
+
+%-------------------------------------------------------------------------------
+% Want searchable ligatures, e.g: diff, stuff, fine           << mmap OR xelatex
+% pdflatex: fontenc  T1  <<  not searchable in sumatrapdf, add mmap/cmap
+% xelatex: fontspec  TU  <<  supposedly work, needs xelatex instead of pdflatex
+%                    TU is default for fontspec xelatex
+
+%for pdflatex:              % old pdflatex, need more stuff for modern works
+\usepackage{mmap}           % add info to pdf, searchable ligatures, cmap is old
+\usepackage[T1]{fontenc}    % set font encoding T1 to allow "|" ">" "<" etc
+\usepackage[utf8]{inputenc} % set utf8 input file encoding
+
+%% for xelatex:              % default utf8, need less stuff to work
+%\usepackage{fontspec}       % searchable ligatures in pdf: https://tex.stackexchange.com/questions/67848/can-pdf-search-find-words-with-ligatures-in-xelatex-documents
+%% setup for searchable ligatures in pdfs, need fontspec instead of fontenc
+%% should be called before inputenc:  https://tex.stackexchange.com/questions/44694/fontenc-vs-inputenc/44699
+%% set utf8 encoding, and set font encoding T1 to allow "|" ">" "<" etc
+%\usepackage[utf8]{inputenc}    << actually ignored in xelatex
+
+
+%-------------------------------------------------------------------------------
+% set UK british hyphenation [english] sets US
+\usepackage[british]{babel}
+
+
+%-------------------------------------------------------------------------------
+% set iso date format with ndash separator
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
+
+
+%-------------------------------------------------------------------------------
+% These page settings give images 1.0\linewidth around 135-140mm wide (ca 138mm)
+% meaning a 300dpi image is around 1600 pixels wide
+
+% For encapsulated postscript figures
+% Use:
+%
+%   \includegraphics{width=10cm, height=10cm}{fig.eps}    or:
+%   \includegraphics{width=10cm, height=10cm, keepaspectratio}{fig.eps}
+%
+% where width and height are optional
+\usepackage{graphicx}   % For eps figures
+
+
+% To get figures, tables, etc. where you want them.
+% Use:
+%
+%   \begin{figure}[H]
+%
+%\usepackage{here}
+
+
+
+%-------------------------------------------------------------------------------
+% For nicer captions
+%
+% Valid options (between []) are:
+%
+% Indentation: hang, center, centerlast, nooneline
+% Size: scriptsize, small, normalsize, large, Large
+% Style: up, it, sl, sc, md, bf, rm, sf, tt
+%
+\usepackage[hang,small,bf]{caption}
+
+
+%-------------------------------------------------------------------------------
+% Want to change font?
+%
+% Uncomment your choice, if all uncommented, Computer Modern Roman is
+% used. Note that some of these don't seem to work properly
+%
+%\usepackage{utopia}
+%\usepackage{pspalatino}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{charter}
+%\usepackage{pifont}
+%\usepackage{chancery}
+%\usepackage{bookman}
+%\usepackage{avant}
+%\usepackage{helvet}
+%\usepackage{zapfchan}
+%\usepackage{courier}
+%\usepackage{newcent}
+
+
+%-------------------------------------------------------------------------------
+% Some optional packages:
+%
+
+%-------------------------------------------------------------------------------
+% Index section
+%
+% Put a \index{keyword} at the word in the text, a \printindex where
+% you want the index printed, and run "makeindex <reportname>.idx
+% after LaTeX-compiling (and compile a second time)
+%
+%\usepackage{makeidx} %Index-section
+%\makeindex
+
+%-------------------------------------------------------------------------------
+% Fancier enumeration
+% You get a new \begin{enumerate}[XXX] where you can specify XXX to be
+% text {i,I,a,A,1}, for example \begin{enumerate}[Uppg. a)] to get a
+% Uppg. a)/b)/c) list.
+%
+%\usepackage{enumerate}
+
+
+
+%-------------------------------------------------------------------------------
+% add nicer headers and footers
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}   % make space for the rule
+\fancypagestyle{plain}{%                  % for plain pages:
+    \fancyhead{}%                         % get rid of headers
+    \renewcommand{\headrulewidth}{0pt}%   % and the line
+}
+
+
+%-------------------------------------------------------------------------------
+% Nicer headers and footers (like 94 F dd reports)
+%
+% \fancyhead[L/C/R]{} to change headers
+% \fancyfoot[L/C/R]{} to change footers
+%\usepackage{fancyhdr}
+%\fancyhead[L]{Left page header}
+%\fancyhead[R]{Right page header}
+%\footrulewidth 0.5pt % Insert a line above the footer
+%\pagestyle{fancy}
+
+
+%-------------------------------------------------------------------------------
+%\usepackage{pdftex}
+
+%enable good pdf conversions with links and index, etc
+%\usepackage[pdftex, colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%\usepackage[%pdftex,%
+%bookmarks=true,%
+%bookmarksopen=true,%
+%pdfpagelabels,%
+%pagebackref,%
+%colorlinks=true,%
+%linkcolor=blue,%
+%linkbordercolor=white,%
+%citecolor=blue,%
+%citebordercolor=white,%
+%urlcolor=blue,%
+%urlbordercolor=white,%
+%plainpages=false]{hyperref}
+% provide some extra pdf information
+%\pdfinfo{\Title{§title§}\Author{netjiro}\Keywords{game rpg role-playing tabletop tactical virtual}}
+
+% this is the block used in the masters thesis instead of the one in the PhD thesis
+%\usepackage{hyperref}
+%%\hypersetup{pdftex=true}
+%\hypersetup{pdftex}
+%\hypersetup{bookmarks=true}
+%\hypersetup{bookmarksopen=true}
+%\hypersetup{colorlinks=true}
+%\hypersetup{linkcolor=blue}
+%\hypersetup{pagecolor=blue}
+%\hypersetup{citecolor=blue}
+%\hypersetup{urlcolor=blue}
+
+
+%\usepackage[pdftex, colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%          \pdfinfo{
+%            /Title      (Main title goes here)
+%            /Author     (Author Authorson)
+%            /Keywords   (list of keywords)
+%          }
+
+
+
+
+
+
+
+
+
+
+
+%===============================================================================
+% local defines
+
+
+% block listing, verbatim ------------------------------------------------------
+
+% remove forced implicit vertical whitespace before and after verbatim environment
+\makeatletter
+\preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
+\makeatother
+
+% old pattern for block listing:
+%\goodbreak
+%\raggedbottom
+%\small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{1.5\baselineskip} \begin{verbatim}
+%\end{verbatim} \goodbreak \vspace{2\baselineskip} \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize
+%\flushbottom
+%\goodbreak
+
+% simpler with blocklistgap:
+\newcommand{\blocklistgap}{\goodbreak \vspace{\baselineskip}}
+%\raggedbottom     % looks in raggedbottom flow, no stretching baselineskip
+%\goodbreak \small \begin{samepage} \begin{verbatim}
+%\end{verbatim} \blocklistgap \begin{verbatim}
+%\end{verbatim} \end{samepage} \normalsize \goodbreak
+%\flusbottom       % perhaps restore flushbottom at some point
+
+%-------------------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------------------
+% need a nice easily visible TODO marker
+\newcommand{\todo}{\noindent\textbf{TODO:}~}
+\newcommand{\TODO}{\noindent\LARGE\textbf{TODO:}\normalsize~}
+
+
+%-------------------------------------------------------------------------------
+% allow to force indentation of first line in section
+% \indent is not working, so workaround \hspace{\parindent} works
+\newcommand{\forceindent}{\hspace{\parindent}}
+%\noindent  is a standard command
+
+
+%-------------------------------------------------------------------------------
+% couldn't find a degrees marker circle, so here's a quick'n'ugly version
+% the trailing tilde adds an unbreakable, unshrinkable, unenlargable space
+\newcommand{\degrees}{$^\circ$~}
+\newcommand{\degree}{$^\circ$}
+%\newcommand{\degs}{$^\circ$}    << command \deg already defined (also skip degs)
+%\newcommand{\deg}{$^\circ$~}    << command \deg already defined (also skip degs)
+
+
+%-------------------------------------------------------------------------------
+% can't seem to get this working right for spacing, and when exporting to ebook
+\newcommand{\vs}{$\backslash\ $}  % "versus" slash
+\newcommand{\bs}{$\backslash\ $}  % just backslash
+\newcommand{\ca}{$\approx$}
+% without the last backslash space it would take two spaces to get a space in the text, but with it you will always get a space weather you want or not. This is weird.
+
+
+%-------------------------------------------------------------------------------
+% want clear dash insert commands
+\newcommand{\dash}{-}     % just a normal hyphen dash  "-"
+\newcommand{\ndash}{--}   % n-dash "--"
+\newcommand{\mdash}{---}  % m-dash "---"
+
+
+%-------------------------------------------------------------------------------
+%link new command names to the original font sizes,
+%for easier to remember smaller font size
+\newcommand{\vsmall}{\footnotesize}  % simpler to remember
+\newcommand{\vvsmall}{\scriptsize}   %
+%\newcommand{\vvvsmall}{\tiny}
+
+
+%-------------------------------------------------------------------------------
+% don't want outlines and crap around links in the document.
+% notoriously annoying package.
+% info can be found here:
+% http://theory.uwinnipeg.ca/localfiles/infofiles/teTeX/latex/hyperref/manual.pdf
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+
+%-------------------------------------------------------------------------------
+% I want the possibility of switching between different styles for skills and actions. Either have them as list items or subsections/subsubsections, but without toc entries.
+\usepackage{ifthen}
+
+
+%-------------------------------------------------------------------------------
+% Below I will now define \openXlist and \closeXlist list commands
+% as well as \skill{} and \action{} itemizers.
+% Then they can be used in the docs as
+%
+% \openskillslist
+% \skill{name1}
+% \skill{name2}
+% \closeskillslist
+%
+% \openactionslist
+% \action{name1}
+% \action{name2}
+% \closeactionslist
+%
+% handy if I want to switch easily between item listing for the pdf version
+% and headings for the html doc version.
+% Just change the \setboolean{skillsaslist} to true or false.
+
+
+
+
+% With skillsaslist defined we can use \ifskillsaslist{\begin{description}}
+% as well as \ifskillsaslist{\end{description}} around the skill listings
+\newboolean{skillsaslist}
+\setboolean{skillsaslist}{true}
+
+% Define the \skill{name} to make either of
+%    \item[name]
+%    \subsubsection{name}
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\skill}[1]{\item[#1]}}{\newcommand{\skill}[1]{\subsubsection*{#1}}}
+
+% Define the \openskillslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\openskillslist}{\begin{description}}}{\newcommand{\openskillslist}{}}
+
+% Define the \closeskillslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{skillsaslist}}{\newcommand{\closeskillslist}{\end{description}}}{\newcommand{\closeskillslist}{}}
+
+
+
+
+% With actionsaslist defined we can use \ifactionsaslist{\begin{description}}
+% as well as \ifactionsaslist{\end{description}} around the skill listings
+\newboolean{actionsaslist}
+\setboolean{actionsaslist}{true}
+
+% Define the \action{name} to make either of
+%    \item[name]
+%    \subsubsection{name}
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\action}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openskillslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\openactionslist}{\begin{description}}}{\newcommand{\openactionslist}{}}
+
+% Define the \closeskillslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{actionsaslist}}{\newcommand{\closeactionslist}{\end{description}}}{\newcommand{\closeactionslist}{}}
+
+
+
+
+% With itemsaslist defined we can use \ifactionsaslist{\begin{description}}
+% as well as \ifactionsaslist{\end{description}} around the skill listings
+\newboolean{itemsaslist}
+\setboolean{itemsaslist}{true}
+
+% Define the \eqitem{name} to make either of
+%    \item[name]
+%    \subsubsection{name}
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\eqitem}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openitemslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\openitemslist}{\begin{description}}}{\newcommand{\openitemslist}{}}
+
+% Define the \closeitemslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{itemsaslist}}{\newcommand{\closeitemslist}{\end{description}}}{\newcommand{\closeitemslist}{}}
+
+
+
+
+% With spellsaslist defined we can use \ifspellsaslist{\begin{description}}
+% as well as \ifspellsaslist{\end{description}} around the spell listings
+\newboolean{spellsaslist}
+\setboolean{spellsaslist}{true}
+
+% Define the \spell{name} to make either of
+%    \item[name]
+%    \subsubsection{name}
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\spell}[1]{\item[#1]}}{\newcommand{\action}[1]{\subsubsection*{#1}}}
+
+% Define the \openspellslist to either of
+%    \begin{description}
+%    -- nothing --
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\openspellslist}{\begin{description}}}{\newcommand{\openspellslist}{}}
+
+% Define the \closespellslist to either of
+%    \end{description}
+%    -- nothing --
+\ifthenelse{\boolean{spellsaslist}}{\newcommand{\closespellslist}{\end{description}}}{\newcommand{\closespellslist}{}}
+
+
+
+%-------------------------------------------------------------------------------
+% comment notes escaping list segment, if spellsaslists is set
+\ifthenelse{\boolean{spellsaslist}} {
+    \newcommand{\spellslistnote}[1]{
+        \closespellslist \textit{#1} \openspellslist
+    }
+} {
+    \newcommand{\spellslistnote}[1]{
+        \textit{#1}
+    }
+}
+
+
+
+
+%-------------------------------------------------------------------------------
+% readoutloud italic quote sections
+\newenvironment{readoutloud}%
+{\begin{quote}\begin{itshape}}%
+{\end{itshape}\end{quote}}%
+
+
+% can't find ttshape, like itshape in "readoutloud" environment
+\newenvironment{ttshape}%
+{\begin{ttfamily}}%
+{\end{ttfamily}}%
+
+
+
+
+%-------------------------------------------------------------------------------
+% temporary separation line
+%\newcommand{\tmpsepline}{\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}}
+%\rule[0.25\baselineskip]{0.5\textwidth}{0.5pt} =xtl-  0.25
+%\rule[0.8ex]{0.5\textwidth}{0.5pt} =xtl-  0.8ex
+\newcommand{\tmpsepline}{
+
+    \
+
+    \rule[0.25\baselineskip]{0.5\textwidth}{0.5pt}
+
+    \
+
+}
+
+
+
+
+
+%-------------------------------------------------------------------------------
+% \cleartoleftpage
+%     open to an empty left page, so to fill two opposed pages
+%     cleardoublepage opens to a right page (usually odd page number)
+% https://tex.stackexchange.com/questions/11707/how-to-force-output-to-a-left-or-right-page
+\makeatletter
+\newcommand*{\cleartoleftpage}{%
+  \clearpage
+    \if@twoside
+    \ifodd\c@page
+      \hbox{}\newpage
+      \if@twocolumn
+        \hbox{}\newpage
+      \fi
+    \fi
+  \fi
+}
+\makeatother
+%-------------------------------------------------------------------------------
+

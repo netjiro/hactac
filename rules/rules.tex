@@ -42,7 +42,7 @@ the Lundqvist force in the \texttt{Goblin Destiny}
 campaign.
 
 It's primarily designed for fast, online, tactically deep, tabletop and rpg campaign gaming. And specifically to make it easy to schedule game sessions for busy people and still have interesting gameplay that requires some thinking.
-%\todo My players are mostly engineers and scientists, so the difficulty level can get quite high.
+%\TODO: My players are mostly engineers and scientists, so the difficulty level can get quite high.
 
 Cooperation and coordination, movement, positioning, and clever use of character skills is much more important than commonly found in monster hack games of today and yesteryear.
 
@@ -170,7 +170,7 @@ Be careful with the combinatorial complexity. Adding things easily creates combi
 %--------------------------
 This here is a dire tome stuffed with stuff, but it is all meant as suggestions. You \emph{should} build your own monsters, weapons, skills, spells, adventures, etc. Make the world your own. That goes for the world setting, campaigns, adventures, towns, npcs as well. The adventures and campaigns can be played just fine right out of the box, but more fun if you tweak them specifically to the game style you and your players have the most fun with.
 
-Great if you post your stuff as you go. Don't be shy.
+Post your stuff as you go. Don't be shy.
 
 
 
@@ -205,6 +205,10 @@ failure -9 is a critical failure or fumble
 
 A roll of 10 is always a failure, regardless of skill level and modifications. This is to get more chance into the game, so that you cannot guarantee a certain behaviour even if you plan it well and have mighty skills.
 It is not a fumble.
+
+\
+
+\textit{The D10 is of course a flat distribution ]0-1[, D100 percentage, with granularity of 10. 1-10 is fast and simple for even pre-school kids to count and keep in their head, while still giving good enough resolution.}
 
 
 \item[Modification, penalty, bonus (mod):]
@@ -512,14 +516,14 @@ Attack, parry, avoid are typical combat actions and generally cost 3 action poin
 \openactionslist
 
 
-\action{Actions: "give \& receive"} hand over an item between characters. It takes a normal 3ap action to give something and a normal 3ap action to receive something. Both actions requires a dex+9 roll, or they have dropped the item. Normally this will not fail but when the action and movement mods are piling up the chances can drop.
+\action{Actions: "give \& receive"} hand over an item between characters. It takes a full round action to give something and a full round action to receive something. Both actions requires a dex+9 roll, or they have dropped the item. Normally this will not fail but when the action and movement mods are piling up the chances can drop.
 % give, receive, hand over, handover, relay
 
 
+\action{Actions: "pick up, put down, drop"} are full round actions with a dex+9 roll. Just dropping things takes no time and requires no rolls, but carefully putting something down and grabbing an item always does.
+
+
 \action{Action: "draw, sheath/holster/put away"} take something from inventory and make it ready for use, or put it back again, takes a full round as long as the item is easy to reach and not stuffed in a container. E.g: drawing or sheathing a sword, hanging a bow, etc. It's an easy dex+9 roll.
-
-
-\action{Actions: "pick up, put down, drop"} are normal 3ap actions with a dex+9 roll. Just dropping things takes no time and requires no rolls, but carefully putting something down and grabbing an item always does.
 
 
 \action{Action: "drink a potion"} is a full round action (1r) and requires a dex+9 roll. This does not include drawing the flask from equipment, or putting it back.
@@ -528,7 +532,7 @@ Attack, parry, avoid are typical combat actions and generally cost 3 action poin
 \action{Actions: "crouch, sit, lie, stand"} all takes a normal 3ap action that requires no roll. Rising after falling or when off balance is a normal 3ap action with a dex+9 roll.
 
 
-\action{Action: "jump"} an obstacle or chasm is a normal 3ap action and requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll, and a 4sq creek is mod-9.
+\action{Action: "jump"} an obstacle or chasm is a full round action and requires a dex roll, modified by distance and speed. A mod-3 for every square the character tries to jump over beyond the first. E.g: jumping over a one square chasm is a regular dex roll mod-0, a two square burning pit is a dex-3 roll, and a 4sq stream is mod-9.
 
 Jump action does not take any negative modifications from movement speed. It instead gets mod +speed/3, where speed is the speed of approach: the number of squares moved in a straight line \emph{before} the jump, (\hyperref[approach]{see below}).
 E.g: Dashing 7sq before the jump gives Leaping Laban a jump mod+2.
@@ -542,13 +546,25 @@ The jump skill will improve the odds when jumping. A roll of 10 is not an automa
 Jump rolls are modified heavily from being over encumbered, with mod-3 per over encumbrance point instead of the usual mod-1.
 
 
-\action{Action: "climb"} allows to climb one vertical square per 3ap action and requires a normal dex roll. Fail -1 to -2 means the character is stuck this round. Fail-3 means slip down one square, and fail-6 means falling. Each climb action also costs one movement point (1mp) even if no movement is made. A roll of 10 is not an automatic fail for the climb. The result diff decides.
+\action{Action: "climb"} a wall or tree. Allows to climb one vertical square per full round action and requires a normal dex roll. Fail -1 to -2 means the character is stuck this round. Fail-3 means slip down one square, and fail-6 means falling. Each climb action also costs one movement point (1mp) even if no movement is made.
+%\todo: remove: A roll of 10 is not an automatic fail for the climb. The result diff decides.
 
 Climbing is modified by the difficulty of the wall. A regular cliff face or uneven castle wall is mod-0. A smooth castle wall is mod-3 or mod-6. A simple tree is mod+3. Equipment such as rope is also helpful, e.g. mod+3. Claws help on suitable surfaces, tail or tentacles on others, and so on.
 
 The climb skill will improve the chances of climbing. Climbing assumes the character has nothing in his hands. One hand occupied is mod-6. Heroes with extra hands get a mod+3 per extra hand. Carrying a heavy load makes climbing difficult. Each encumbrance gives mod-3 to climb.
 
-Better success allows for faster climbing if the Hero has enough mp to spend. Success+3 allows 2sq 2mp climb in a 3ap climb action. Success+6 3sq, +9 4sq, etc.
+
+\action{Action: "swim"} or sink. Swimming is a full round action and the Hero moves 1sq/r. Roll dex or take con penalty. If your con drops below 0 you start drowning. Roll well and regain control and con.\\
+\verb|con = +diff/3 (ru)|
+E.g: fail-4, loose 1 con, fail-6 loose 2 con, success+2 regain 1 con.\\
+Resting out of the water regains 1+con/3 con each round.
+
+Just staying afloat and threading water is mod+3 and does not fail on a roll of 10, but the Hero does not move forward.
+
+Every round the Hero is $\leq$0 con he must roll against psy modified by con or be panicked for the round. Panicked Heroes the psy fail diff as mods to all actions.
+
+%\TODO: old "swim" skill version:
+%Roll each round and every fail gives diff/3(ru) mod to con. Recover +1 con each round of successful swimming or out of water. Just staying afloat is mod+3 and also does not fail on roll of 10, but gives no movement.
 
 
 \action{Action: "unpack/rummage"} is used to take something out of a container, like a backpack, sack, etc. It takes 2+1dX rounds: \\
@@ -1501,7 +1517,7 @@ E.g: Target Terry is blinded and tries to make an attack. Has total ams-2 from w
 Taking movement when blinded also require int and per rolls to head in the right direction. Fails will head off elsewhere, GM discretion. Total fail:\\
 -1: 45deg off somewhere on the path\\
 -3: 90deg off, 45 from beginning then 45 along the path somewhere\\
--6: 135deg off with muptiple knees along the path\\
+-6: 135deg off with multiple knees along the path\\
 -9: 180deg off with multiple knees along the path
 
 \end{description}
@@ -1567,17 +1583,19 @@ And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder req
 
 \subsection*{Excessive str bonus}
 %--------------------------------
-\todo meh, rewrite excessive strength bonus points allocation structure
+\todo meh, rewrite excessive strength bonus handling
 
 Heroes with higher strength than the weapon / armour / action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
 Always use the highest base strength requirement of all equipment, maneuvers, skills, etc when calculating the free excessive strength points.
-E.g: A character with strength 8 carrying a heavy shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
+E.g: A character with strength 8, clad in plate mail (str 5), carrying a large shield (str6 at normal speed) and a spear (str4 in 1h grip) has 2 points of excessive strength available.
 
 %TODO: rewrite example, after changes to stamina
+\todo: out of date -- fix after stamina changes\\
 E.g: str9 with a weapons that requires str3 gives +6 excessive strength points. With the skills "strength bonus" and "easy grip" the extra strength can be used for dam+2 \emph{or} for two attacks that do not require stamina, or for dam+1 and one attack without stamina cost.
 
-% new allocation example, including stronk tank
+%\TODO: new allocation example, including stronk tank
+\todo new example perhaps ?\\
 E.g: Giant Gerda has str 13,
 plate armour (str5)
 tower shield (str8 or slow 1 str5)
@@ -1663,20 +1681,21 @@ if tracking wounds list for pain purposes, wounds heal one point at a time in or
 
 \subsection*{Travelling the region and area maps}
 %-----------------------------------------------
-When moving around between encounters the heroes probably traverse a regional map. The scale is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution. The travel skill improves long distance travelling speed. Difficult terrain, such as mountains or forests cost extra to cross. Roads are normal cost, plains and moors perhaps 30-50\% more. Woods and hills perhaps 100\% more, Deep woods and mountains perhaps 2-300\% more.
+When moving around between encounters the heroes probably traverse a regional map. The scale is in leagues, generally at 1 sq = 1 league. A character can walk a number of leagues each day equal to his level of constitution without getting tired enough to have extra mods. The party's movement is therefore limited by the character with the lowest constitution, but can be improved by skills.
 
 The party's vision on the regional map is equal to the highest value of the track skill of any member. Parties without track only have regional vision of the square they are currently occupying.
 
-Navigating the map requires successful track rolls. Following roads is mod+6, plais mod+3, moors=0, hills and forests mod-3, mountains and deep forests mod-6.
+Navigating the map requires successful track rolls. Following roads is mod+6, plains mod+3, moors=0, hills and forests mod-3, mountains and deep forests mod-6.
 Having a map can help, as can other equipment. Knowledge of the region helps. Weather, day or night, affects.
 Failing a navigation track roll means the Heroes actually move the wrong way. Roll once or a few times per day, at least every 3-5sq.
+
+Terrain also modifies the distance they can travel per day. Roads, plains and moors are all equally fast to traverse on foot. Hills and light forest takes twice as long. Low mountains and deep forest three times as long, and high mountains four times as long.
 
 Riding is faster. A characters can ride a distance equal to his constitution plus ride skill (con+ride) but also limited by the quality of the horse. A horse has a cruise speed rated in leagues per day. A decent horse is around 10-15 steps/day.
 
 When riding in a wagon or cart the distance is not based on the character's con and ride skill, but only determined by the draft animals travel distance and the wagon's mods. Someone needs the skill ride to drive the cart though.
 
 Travelling by horse and cart is fast and convenient in many cases as long as there are roads or easily navigable terrain such as plains, moors, steppe, or some such. It can be very slow or impossible in forests, hills, and mountains. A donkey with a small cart can perhaps travel 10 leagues on roads, 5 leagues on grassland, 2 leagues in hills, 1 league in forest, and cannot enter mountains. A larger wagon cannot travel in forest either and is severely limited even in hilly terrain.
-
 
 %Region maps generally have the scale of 1 sq = 1 league. And a league is about how far a character with con=1 can travel per day. A con=5 character can travel 5 leagues per day.
 %
@@ -1685,9 +1704,20 @@ Travelling by horse and cart is fast and convenient in many cases as long as the
 %In historical reality a league was often the flexible distance that someone walks in about an hour on easy terrain. A Hero with con X will travel X leagues per day without being overly tired afterwards. If you \emph{really must} have a real world reference, think of it as about 5km.
 
 
+Walking along roads or across fields, plains, moors is done at normal speed. Light forest and hills take twice as long, deep forest, low mountains, marshland take three times as long, and high mountains take four times as long.
+
+Riding in light forest takes three times as long. Deep forest and marshland takes five times as long and horses cannot cross high mountains.
+
+Wagons have normal speed on roads. Plains, moors, fields take twice as long. Hills and Light forest takes four times as long. Wagons cannot cross deep forest, mountains, or marshland.
+
+Goblins and orcs on foot have one level reduced penalty in deep forests and marshlands. Elves have reduced penalty in deep forests, mountains, and marshland. Dwarves have reduced penalty in hills, mountains, but increased penalty in marshlands. Halflings have reduced penalty in all terrain.
+
+It is the terrain you stand in that determines the cost of movement, not the terrain you enter. Entering the mountains from the plains is simple normal cost. Exiting the mountains to reach the hills takes three times as long.
+
+
 \subsection*{Escaping combat, fleeing, giving chase}
 %---------------------------------------------------
-A character has successfully escaped from combat when he has moved off the edge of the battle map. It's a simple and fun rule, creating chase scenes and affecting positioning and tactics for increased tactical depth. It's not meant to be realistic.
+A character has successfully escaped from combat when he has moved off the edge of the battle map or reached some escape region. It's a simple and fun rule, creating chase scenes and affecting positioning and tactics for increased tactical depth. It's not meant to be realistic.
 
 Allow the track, travel cruise speed, and exhaustion to determine if the pursuers catch up, and how fast. Then make a new improvised battle map to describe where they catch up, based on the terrain in that location on the regional map.\\
 If the fleeing party is run down it's the chasing party that has most influence on the positioning on the new battle map.\\
@@ -1856,7 +1886,7 @@ continue movement when mounting / unmounting
 There can never, and should not, be rules for everything. The tiny basics cover perhaps 90\% of regular play. The extended rules probably 95-98\%, mostly in details, edge cases, options, flavour. But there will always be more obscurities and combinatorial hmmm-what-if. Just figure out something that could work, and makes sense alongside the rest of the game, for your group.
 
 E.g: Tossing and shooting a loaded crossbow.
-Trigger Tom just fired his crossbow at the brutal orc running towards him. No way can he reload in time. Loaded Laban has his crossbow ready but no target. They get this bright idea: LL tosses his crossbow to TT so TT can fire again quickly. What? No rule for rate of fire when tossing loaded crossbows?
+Trigger Tom just fired his crossbow at the brutal orc running towards him. No way can he reload in time. Loaded Laban has his crossbow ready but no target. They get this bright idea: LL tosses his crossbow to TT so TT can fire again quickly.\\ \emph{What? No rule for rate of fire when tossing loaded crossbows?}
 
 The toss-catch is almost a regular give \& receive relay action. And throwing a held weapon is 3ap attack action as well. So, approximate: throwing 3ap, and with sufficient quickdraw the give \& receive is 1r or 3ap (or faster). Bake it together: 1r total without quickdraw (limited by give \& receive), 3ap with quickdraw (limited by throw). Both LL and TT spend ap, and they can spend different. Lowest initiative, or if the faster can trigger the other.
 
@@ -2168,7 +2198,7 @@ Gold and Glory tactical gameplay requires larger maps than normal because there 
 
 Be careful when using smaller pre-made battle maps. It is best if they have firm walls or enclosure visible around the battle area, otherwise they have a tendency to feel artificially cramped when the players want to move around. Or simply expand the map by sketching surroundings, cut'n'paste, or similar. It won't be as pretty, but allows more movement.
 
-I often add entry/exit boxes or borders. Cross those boundries and the Hero has left the battle and cannot return.
+I often add entry/exit boxes or borders. Cross those boundaries and the Hero has left the battle and cannot return.
 
 
 
@@ -2195,7 +2225,7 @@ We've successfully played with kids as young as five years old, without any prev
 
 \
 
-% Bitter Candy
+\noindent
 Use physical objects and markers instead of numbers on a paper. Improvise the battle map with everyday objects and use their toys as Hero minis. Any toy up to the size of a hand works great.
 
 

@@ -7,6 +7,9 @@
 # skip compiled pdf files in all directories
 **/*.pdf
 
+# nela 2020 workdir hactac
+/ze-extras
+
 # nela näthack maptool directory structure
 /snapshots
 /maillist

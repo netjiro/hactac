@@ -333,8 +333,13 @@ small beer barrel      1 0       5.0  10 large servings of beer
 bottle of wine           2       1.0
 coffee                   1       0.1  enough for a one cup dose, must be brewed
 spirits                  1       0.1  enough for a one swig dose.
-health elixir          3 0       0.1  heal 3hp (1/3r) draws 3mana+3stamina
-health wafer           2 5       0.1  heal 3hp (1/10r) max stam-1 until slept
+health elixir          5 0       0.1  heal 3hp (1/3r) draws 3mana 3stam
+health wafer           4 0       0.1  heal 2hp (1/10r) max stam -2 until slept
+healing tea            2 0       0.1  heal 1d3hp in 100r, draws 1mana,
+                                      risk of poisoning
+healing salve          1 0       0.1  heal 1hp in 100r, +1 pain until slept
+                                      max 1 use per wound per day,
+                                      risk of poisoning
 
 rag clothing             5       1.0 (only when packed)
 simple clothing        2 0       1.0 (only when packed)
@@ -431,28 +436,22 @@ antidote             1s/str      0.25  many different versions exist with
 cure                 1s/str      0.25  various concoctions that might cure
                                        diseases
 
-Quaff!               1 0 0       0.25  (TM) "Get the Real Stuff!"  (4hp+4sta 1r)
+Quaff!               1 0 0       0.25  "Get the Real Stuff!" (+4hp +4sta 1r)
 
-healing potion         5 0       0.25  restores 3hp 1hp/r
-healing potion         8 0       0.25  restores 5hp 1hp/r
-healing potion       1 0 0       0.25  restores 8hp 1hp/r
-healing potion       2 0 0       0.25  restores 6hp 2hp/r
+healing potion       1 0 0       0.25  restores 3hp 1hp/r
+healing potion       2 0 0       0.25  restores 5hp 1hp/r
 
 stamina potion         5 0       0.25  restores 4sta 2sta/r
 stamina potion         8 0       0.25  restores 6sta 2sta/r
-stamina potion       1 0 0       0.25  restores 10sta 2sta/r
-stamina potion       2 0 0       0.25  restores 8sta 4sta/r
 
-mana potion            5 0       0.25  restores 5mana in 1r
-mana potion          1 0 0       0.25  restores 10mana 5mana/r
-mana potion          2 0 0       0.25  restores 10mana in 1r
+mana potion          1 0 0       0.25  restores 5mana in 1r
 
 pain killer            1 0       0.25  eliminates 1 pain after 3r
 pain killer            3 0       0.25  eliminates 2 pain after 3r
 pain killer            5 0       0.25  eliminates 3 pain after 3r damages 1hp
 
 \end{verbatim} \goodbreak \begin{verbatim}
-exquisite quiver      8 0 0       0.33  holds 10 arrows, alleviates bow snap shot
+exquisite quiver     8 0 0       0.33  holds 10 arrows, alleviates bow snap shot
                                        mods by 1 due to smooth reloads.
 
 staff light paste    1 0 0       0.25  stafflight 1 for 100r, spread on item
@@ -460,18 +459,20 @@ staff light paste    1 0 0       0.25  stafflight 1 for 100r, spread on item
                                        light as lamp
 
 thermos              1 0 0       0.5   for that hot cup of coffee
+                                       or healing tea
 
 compartmentalised    backpack price +50% per compartment
 back pack                              for faster rummaging
 
 lock picks             5 0       0.2
-fine lock pick       2 0 0       0.2   mod+3 to pick lock
+fine lock pick       2 0 0       0.2   mod+1 to pick lock
 
 grappling hook       1 0 0       0.3   foldable, takes 1r to fold/unfold.
 
 tool box             2 0 0       2.0   mod+3 to handling trap
 
-cave cart            2 0 0
+cave cart            2 0 0             str3 to drag around, drag: stam-1/r
+                                       holds 50enc
 
 tunnel plug          5 0 0
 tunnel plug large    8 0 0

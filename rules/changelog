@@ -1,6 +1,13 @@
 yymmdd:
 
 
+
+2018-ish, pre goblins:
+switch to declare ap instead of cap accumulation
+
+
+
+
 190306:
 Changed "drink a potion" basic action to take 1r instead of 3ap. This was the original intent and writ as far as I can recall.
 Why: because drinking potions for healing etc should be slow and difficult during normal action situation. With successful quickdraw and häfva it will generally take 2a, 6ap, to draw and drink. With a quaff in quick draw slot and successful quick draw and häfva it will be a single 3ap action instead.

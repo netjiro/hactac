@@ -180,23 +180,45 @@ A N I M A L S
 -------------
 
 The usual stuff you'll find in the forest. Wolves, bears, snakes, etc.
+\end{verbatim} \normalsize \end{samepage}
 
+\
 
+\subsection*{Wolf pack}
+Wolves usually travel in packs of 4+. Single odd strays can be encountered, perhaps sick, deranged, aggressive. They will chase down and surround, harass, then overpower. Wounded wolves retreat until the prey are weakened. They try to pry off a single target to gang up on.
+
+Facing a wolf pack is dangerous. Heroes being chased must roll psy+(nr heroes) to stop and fight. Mod+3 if they find a good spot and pass an int roll.
+
+\
+
+Wolves can clamp down after a successful bite.
+Clamped target has mod-3 to all actions per clamped wolf.
+Moving when clamped requires a 3ap action str vs str against wolf.
+Wolves can make a thrash attack when clamped, 3ap but max once per round:
+thrash: 3ap autohit dam6 pen2   (bite+pen)     max once per round
+A clamped wolf cannot take avoid action, but will likely let go when hit.
+Wolves can drag a clamped target: str vs str, drag 1+diff/3 sq, 1r action.
+
+Single wolves have psy-3. Long term single wolves go deranged.
+
+\
+
+\small \begin{verbatim}
 ===================================
 wolf                       (wolf02)
 -----------------------------------
 str  7    hp 10 abs 0
-dex 10    m2 w6 r12 d20
-psy  5    vision 15, dusk
-per  8    initiative 12, ap 6
+dex 12    m2 w6 r12 d18
+psy  5    vision 15, dusk, sniff 10
+per 13    ap 6
 ----------
-balance 6
-bite    7 dam 6
-claw    5 dam 3
-charge  6, mobile 1
-avoid   3 yield+3
-===================================
-\end{verbatim} \normalsize \end{samepage}
+bite    7 3ap dam 6
+claw    5 2ap dam 3
+thrash  autohit dam6 pen2 3ap max once per turn
+avoid   5 yield+3
+charge  6, mobile 2, balance 6
+-----------------------------------
+\end{verbatim} \normalsize
 
 \
 
@@ -205,38 +227,42 @@ avoid   3 yield+3
 large wolf                 (wolf??)
 -----------------------------------
 str  9    hp 14 abs 0
-dex 12    m2 w7 r14 d21
-psy  7    vision 15, dusk
-per  9    initiative 14, ap 6
+dex 10    m2 w7 r14 d21
+psy  7    vision 15, dusk, sniff 10
+per 15    ap 6
 ----------
-balance 6
-bite    9 dam 7, pen 1
-claw    7 dam 3
-charge  9, mobile 2
-avoid   6 yield+3
-consistent 1
-veteran 2
-===================================
+bite    9 3ap dam 8 pen 1, consistent 1
+claw    7 2ap dam 3
+thrash  autohit dam8 pen3 3ap max once per turn
+avoid   7 yield+3
+charge  9, mobile 4, balance 6, veteran 2, rapid 3
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
+
+%\
+
+
+\begin{samepage}
+\subsection*{Bear}
+Bears are usually encountered alone or with a cub or two. They will sniff you down and they are not afraid. Charge in, knockdown, claws and bite. Seriously wounded bears will flee.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\small \begin{verbatim}
 ===================================
 bear                        (token)
 -----------------------------------
-str 14    hp 25 abs 1 skin
-dex  8    m1 w4 r10 d16
-psy  8    vision 15
-per  8    initiative 10
+str 15    hp 25 abs 1 skin
+dex  9    m1 w4 r10 d16
+psy  8    vision 15, sniff 20
+per 12    initiative 10
 ----------
-balance 6
-bite    8 dam 10, pen 1
-claw    7 dam 5, knockback 1
-charge  3
+bite    8 dam 10 pen 1
+claw    7 dam 6 knockback 1
 avoid   2 yield+2
+charge  3, balance 6
 pain threshold 4, veteran 1
-===================================
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -245,22 +271,20 @@ pain threshold 4, veteran 1
 ===================================
 large bear                  (token)
 -----------------------------------
-str 19    hp 35 abs 1 skin
-dex  9    m2 w5 r12 d18
-psy  9    vision 15
-per  8    initiative 12
+str 20    hp 35 abs 1 skin
+dex  7    m2 w5 r12 d18
+psy 10    vision 15, sniff 20
+per 14    initiative 12
 ----------
-balance 6
-bite   10 dam 12, pen 2
-claw    7 dam 5, knockback 1
-charge  6, mobile 1
+bite   10 dam 12 pen 2, consistent 1
+claw    8 dam 8 knockback 1
+charge  6, mobile 1, balance 6
 avoid   2 yield+2
-consistent 1
 pain threshold 5, veteran 2
-===================================
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
-\
+%\
 
 
 
@@ -286,15 +310,11 @@ minds of game masters and story tellers.
 ===================================
 bug                      (beetle01)    set tiny token size
 -----------------------------------
-str  1    hp 2 abs 1    tohit-3 tiny target    cannot block movement
-dex  6    m3 w5 fly10   tohit-6 when flying    cannot be blocked
+str  1    hp 2 abs 1    tohit-3 tiny target   tiny, does not block movement
+dex  6    m3 w5 fly10   tohit-6 when flying   their movement cannot be blocked
 per  2    initiative 10, ap 5
-bite      5 dam 1, penetrating:
-            armour affects the bug's bite skill instead of damage
-            armour abs > 3 counts as armour 3 (full coverage)
-no pain or low hp mods
+bite 6-abs dam 1, penetrating: armour mods the bug's bite skill not dam
 -----------------------------------
-
 They attack on "sight"(smell), ca 10sq. There is a 50\% chance that they
 will become hostile and attack each round when a potential target is in
 their smell range. Mostly they just mill around slowly, independent

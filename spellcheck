@@ -2,9 +2,22 @@
 
 #aspell -d en_GB -p ./gng.wordlist -t --dont-tex-check-comments --encoding="utf-8" -c <file>
 
+# misc
+
+for f in rules/{README,LICENSE}
+do
+    aspell -d en_GB -p ./gng.wordlist \
+        -t --dont-tex-check-comments \
+        --encoding="utf-8" \
+        --dont-backup \
+        -c "${f}"
+done
+
+
+
 # rule book components
 
-for f in rules/{book,cam,cha,equ,mag,mon,npc,pri,rul,ski}*.tex
+for f in rules/{book,cam,cha,equ,mag,mon,npc,pri,rul,ski,intro}*.tex
 do
     aspell -d en_GB -p ./gng.wordlist \
         -t --dont-tex-check-comments \

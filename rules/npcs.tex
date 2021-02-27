@@ -219,21 +219,21 @@ about their lives, happening to cross paths with the Heroes in their travels.
 =============== farmer, human ==============
 str  5                    hp 10 abs 0
 dex  5                    m1 w3 r6 d9
-con  5                    stamina 5
+con  6                    stamina 5
 int  5                    vision 20 day 180, human average
-psy  5                    mana 0
-per  5                    action points 3
-cha  5                    xp ca 100, worth 2xp
+psy  6                    mana 2
+per  4                    action points 3
+cha  4                    xp ca 100, worth 2xp
 --------------------------------------------
-Common 6, counting 2, haggle 4
+Common 6, haggle 4, gossip 3, count 2
 brawl 3, throw 3
 knife/axe/spear/bow 6
-avoid 5, yield +3, off balance
+avoid 5, yield +1, off balance
 ride 3, animal command 3
 --------------------------------------------
-money: 0 gold, 1d3 silver, 1d10 copper
 carries a knife and an axe/spear/bow
 --------------------------------------------
+money: 1d3 silver, 1d10 copper
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -268,23 +268,18 @@ feel any significant danger. Then come back in greater numbers.
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ============== Watchman, human =============
 str  6                    hp 12 abs 1
-dex  5                    m1 w3 r6 d9
-con  4                    stamina 5
+dex  5                    m1 w3 r6 d8(9)
+con  4                    stamina 4(5)
 int  4                    vision 24 day 256  human good
-psy  3                    mana 0
-per  5                    action points 3
+psy  4                    mana 2
+per  6                    action points 3
 cha  6                    xp 3 (ca 110), worth 3xp
 --------------------------------------------
-Common 7, gossip 7, haggle 4
-spear 6, shield 5, phalanx
-brawl 7, throw 5
-avoid 5, yield+3, off balance
-veteran 2, quick draw 2
+Common 7, gossip 7, haggle 4, count 2
+brawl 7, throw 4, spear 6, shield 4
+avoid 5, yield+1, off balance
+veteran 1
 --------------------------------------------
-money: 0 gold, 1d3 silver, 5+1d10 copper
-All equipment is standard of normal quality, see rules:equipment for full stats.
-quick draw: spear, shield
-
 spear 6, mainly 1h + shield, 1h/2h
     dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
 small shield 7(5), abs 8, parry+2, tackle+1
@@ -292,6 +287,7 @@ small shield 7(5), abs 8, parry+2, tackle+1
     hiding behind it (3ap) ranged mod-4,
 leather armour   abs 1
 --------------------------------------------
+money: 1d4 silver, 5+1d10 copper
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -302,7 +298,7 @@ together as a group and are quick to flee if they can't see a victory without
 significant losses. Their main mission is to handle small things and report any
 larger force so the rest of the law or military can handle it.
 
-A Patrol Group has tents, cook pot, lamp, 1d200r oil, horse, saddle,
+A Patrol Group has tents, cook pot, lamp, 50+1d100r oil, horse, saddle,
 saddle bags, rope, 2d3 prisoner hand/foot locks and chains, travel rations
 for 1d3 days, 1d3 snares. Perhaps some extra spears, shields, ammunition.
 \end{verbatim} \normalsize \end{samepage}
@@ -313,25 +309,18 @@ for 1d3 days, 1d3 snares. Perhaps some extra spears, shields, ammunition.
 ========== Patrol Soldier, human ===========
 str  5                    hp 14 abs 2
 dex  4(5)                 m1 w4 r7 d9(10)
-con  7                    stamina 7
+con  7                    stamina 5(7)
 int  4                    vision 24 day 256  human good
-psy  4                    mana 0
+psy  4                    mana 2
 per  5(6)                 action points 3
 cha  4                    xp 3 (ca 110), worth 4xp
 --------------------------------------------
-Common 7, gossip 5, haggle 3
-crossbow 5, spear 7
-shield 5, phalanx
-brawl 5, throw 4
-avoid 3, yield+3, off balance
-travel 4, track 3, ride 5
-veteran 1, quick draw 4
+Common 7, gossip 2, haggle 2, count 1
+crossbow 5, spear 7, shield 5, phalanx
+brawl 3, throw 3, avoid 3, yield+2, off balance
+travel 4, ride 4, veteran 1, quickdraw 2 (spear, shield)
 --------------------------------------------
-money: 0 gold, 1d3 silver, 5+1d10 copper
-All equipment is standard of normal quality, see rules:equipment for full stats.
-quick draw: quiver, crossbow, spear, shield
-
-spear 7, mainly 1h + shield, 1h/2h
+spear 7, mainly 1h + shield, 1h/2h    quickdraw
     dam 5/6, pen 1/2, abs 6, parry-1/+1, reach 1 mod-3
 shield 8(5), abs 10, parry+3, tackle+1
     ranged attacks mod-2 when in the way,
@@ -340,9 +329,9 @@ crossbow 5, dam 5, pen 1, range 12, 30 bolts quiver
     shot 1r mod=0, aimed mod+1 2r, quick mod-3 3ap
     reload 1r from quick draw quiver
 chain mail abs 2, dex-1, dash-1, per-1
-
-Travels with bedroll, flint and steel, knife, water skin.
+Travels with bedroll, flint and steel, knife, water skin, 1d3 days provisions
 --------------------------------------------
+money: 1d3 silver, 5+1d10 copper
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -388,317 +377,266 @@ shield line of swordsmen can keep the horde of goblins at bay.
 
 \
 
+%TODO: updated 210216 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hireling swordsman, human   (165xp)
+Hireling swordsman, human   (205xp)
 -----------------------------------
-str	7         hp 18(16) abs 2
+str	6         hp 18(16) abs 2
 dex	5(6)      m1 w3 r6 d8(9)
-con	7         stamina 10(8)
-int 5         vision 20 arc 240, human average
-psy	6         mana 4
-per	5(6)      ap 5(3)
-cha	4         xp 2 (165), worth 5xp
+con	6         stamina 8(8)
+int 5         vision (human average)
+psy	6         mana 3
+per	5(6)      ap 4(3)
+cha	4         xp 3 (205), worth 5xp
 ----------
-Common 6, counting 2, haggle 3
-sword 8, poke, swing
-shield 8, phalanx
-throw 3
-avoid 4, yield +3, off balance
-quick draw 3, häfva 4
-veteran 2
-quick 2, mobile 1
-resilient 2, enduring 2
-lucky 2
+quick 1, mobile 1, resilient 2, enduring 2
+Common 6, haggle 4, count 2
+sword 8, poke, swing, brawl 3, throw 3
+shield 8, phalanx, avoid 4, yield +2, off balance
+quickdraw 3, veteran 2, luck 2
 ----------
-broad sword	8 (1 quick draw slot)
+broad sword	8     quickdraw
     dam 7, abs 14, str 5 (max +2 str bonus), finesse-4
     poke: mod-1 dam-1 pen+1
     swing: slow-1 dam+2 todefend+2
-
-infantry shield	10(7) (1 quick draw slow)
+infantry shield	10(7)    quickdraw
     abs 13, parry+3, str 5
     Ranged attacks mod-2 when in the way.
     Hiding behind it (3ap) ranged mod-4
     tackle mod+1
-
 chain mail abs 2
     str 3 (str penalties affect all actions)
     dex-1, dash-1, per-1
     acrobatics mod-3, martial arts mod-1
     spellcasting mod-1, sneak mod-3
     takes 3 rounds to put on or take off
-
-Quaff	x1, belt: 1 quick draw slot
-
-money	1g 15s 25c
+Quaff	x1, belt, quickdraw
 ===================================
+money	3+1d5s 10+1d20c
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
+%TODO: updated 210216 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hireling swordsman, human     (300)
+Hireling swordsman, human     (375)
 -----------------------------------
 str	7       hp 21(18) abs 2
-dex	7       m1 w3 r6 d9
-con	7       stamina 12(9)
-int 5       vision 20 arc 240
+dex	7       m1 w3 r6 d8(9)
+con	7       stamina 11(9)
+int 6       vision (human average)
 psy	7       mana 5
-per	5       ap 6(4)
-cha	5       xp 4 (ca 300), worth 8xp
+per	6       ap 6(4)
+cha	5       xp 4 (ca 375), worth 8xp
 ----------
-Common 8, counting 2, haggle 4
-sword   9
-shield  9
-phalanx, counter attack, intercept, poke, swing
-avoid 6, yield +3, off balance
-quick draw 4, häfva 5
-veteran 3, balance 3
-quick 2, mobile 2
-resilient 3, enduring 3, rapid 2
-tank 1
-lucky 2, black cat 1
-accurate 1
+quick 2, mobile 2, resilient 3, enduring 3, rapid 2
+Common 7, haggle 4, counting 2,
+sword 9, poke, swing, counter attack, intercept
+shield 9, phalanx, avoid 6, yield+2, off balance
+veteran 3, balance 3, quickdraw 4, häfva 5
+accurate 1, tank 1, luck 2, black cat 1
 ----------
-long sword  9             1 quick draw slot
+long sword  9       quickdraw
     dam 9, abs 18,
     str 7 (max +3 str bonus), finesse-4
     poke: mod-1 dam-1 pen+1
     swing: slow-1 mod-1 dam+3 todefend+2
-
-large shield  13(9)        1 quick draw slot
+large shield  13(9)  quickdraw
     abs 12, parry+4,
     str 6, or slow-1 str 3
     Ranged attacks mod-3 when in the way.
     Hiding behind it (3ap) ranged mod-6
     tackle mod+2
-
 chain mail  abs 2,   tank 1: mod as leather
     str 4 (str penalties affect all actions)
     dex-1, dash-1, per-1
     acrobatics mod-3, martial arts mod-1
     spellcasting mod-1, sneak mod-3
     takes 3 rounds to put on or take off
-
-Quaff	x2, belt, 2 quick draw slot
-
-money	11g 23s 46c
+Quaff	x2, belt, 2x quickdraw
 ===================================
+money	5+1d5s 10+1d20c
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
+%TODO: updated 210216 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hireling archer, human        (165)
+Hireling archer, human        (205)
 -----------------------------------
 str	5         hp 16(14) abs 1
 dex	5         m1 w3 r6 d10(9)
 con	5         stamina 8(7)
-int 5         vision 25 arc 240, human good
-psy	5         mana 3
-per	5         ap 3
-cha	5         xp 2 (165), worth 4xp
+int 5         vision (human good)
+psy	4         mana 3
+per	7         ap 3                                       (bow 3ap 2, 1r 8, 3r 9)
+cha	4         xp 4 (ca 205), worth 5xp
 ----------
-Common 7, counting 2, haggle 3
-bow	8, quick shot 3
-avoid 6
-yield +3, off balance
-knife 4
-sneak 6
-quick draw 2, häfva 4
-veteran 2
-mobile 2
-resilient 2, enduring 1, fast 1
-lucky 1
+mobile 2, resilient 2, enduring 2, fast 2
+Common 7, haggle 3, count 2
+bow	8, quick shot 3, knife 4
+avoid 6, yield +3, off balance, sneak 5
+veteran 2, balance 3, quickdraw 2, lucky 1
 ----------
-leather abs 1
-
 longbow	8 (1 quick draw slot)   :    1r-0 2r-0 3r+1
-	dam 5, penetrating 1,
-	range 14, short 7 mod+3, long 21 mod-3,
-	vlong 28 mod-6 dam-1, extreme 42 mod-9 dam-2,
-	str 5 (no str bonus)
+    dam 5, penetrating 1,
+    range 14, short 7 mod+3, long 21 mod-3,
+    vlong 28 mod-6 dam-1, extreme 42 mod-9 dam-2,
+    str 5 (no str bonus)
 quiver	30 arrows  (1 quickdraw slot)
-
 dagger 4
     dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
     str 2 (no str bonus)
     fast+1 if str 4 and dex 5
     every second attack in a round costs no stamina
     poke: mod-1 dam-1 pen+1
-
+leather abs 1
 Quaff	x1, belt, 1 quick draw slot
-
-money	1g 5s 30c
-===================================
+-----------------------------------
+money	3+1d5s 10+1d20c
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
+%TODO: updated 210220 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hireling archer, human        (280)
+Hireling archer, human        (380)
 -----------------------------------
 str	6         hp 18(15) abs 1
-dex	7         m1 w3 r6 d11(10)
-con	6         stamina 8(6)
-int 5         vision 25 arc 240
+dex	7         m1 w3 r7(6) d12(10)
+con	6         stamina 10(8)
+int 5         vision (human good)
 psy	5         mana 4
-per	7         ap 5(3)
-cha	5         xp 5 (280), worth 5xp
+per	7         ap 6(4)                                   (bow 3ap 6, 1r 9, 3r 10)
+cha	5         xp 7 (380), worth 5xp
 ----------
+quick 2, mobile 2, fast 2, resilient 3, enduring 2
 Common 7, counting 2, haggle 4
-bow 9, quick shot 3, sniper	2, lead target 2
-knife 6
-phalanx
-avoid 8, yield +3, off balance
-quick draw 4, häfva	5
-sneak 6
-quick 2, mobile 2, fast 1
-resilient 3, enduring 2
-veteran 2, balance 2
-consistent	1
-lucky 2, black cat 1
+bow 9, quick shot 6, sniper	2, lead target 2, knife 6,
+consistent 1, phalanx
+avoid 8, yield +3, off balance, sneak 6
+quick draw 4, häfva	5, veteran 2, balance 2, lucky 2, black cat 1
 ----------
-leather abs 1
-
 longbow	9 (1 quick draw slot): 1r-0 2r-0 3r+1
-	dam 5, penetrating 1,
-	range 20, short 10 mod+3, long 30 mod-3,
-	vlong 40 mod-6 dam-1, extreme 60 mod-9 dam-2,
-	str 6 (no str bonus)
+    dam 5, penetrating 1,
+    range 20, short 10 mod+3, long 30 mod-3,
+    vlong 40 mod-6 dam-1, extreme 60 mod-9 dam-2,
+    str 6 (no str bonus)
 quiver	30 arrows
-
-dagger 4
+dagger 6
     dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
     str 2 (no str bonus)
     fast+1 if str 4 and dex 5
     every second attack in a round costs no stamina
     poke: mod-1 dam-1 pen+1
-
+leather abs 1
 Quaff	x2, belt, 2 quick draw slot
-
-money	2g 1d10s 1d20c
-===================================
+-----------------------------------
+money	5+1d5s 10+1d20c
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
+%TODO: updated 210220 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hireling archer, human        (500)
+Hireling archer, human        (645)
 -----------------------------------
-str	8(6)      hp 18(15) abs 2
-dex	7         m1 w4 r7 d10
-con	6         stamina 9(7)
-int 5         vision 25 arc 240
+str	8(6)      hp 19(16) abs 2
+dex	8         m1 w4(3) r8(7) d12(10)
+con	6         stamina 11(8)
+int 5         vision (human good)
 psy	6         mana 6
-per	7         ap 6(3)
-cha	5         xp 11 (500), worth 6xp
+per	8         ap 6(4)                                        (bow 3ap 10, 3r 11)
+cha	5         xp 9 (645), worth 6xp
 ----------
-Common 8, counting 3, haggle 5
-bow 10, quick shot 6, sniper 3, lead target 3
-knife 8
-phalanx
-avoid 8, yield +3, off balance
-quick draw 8, häfva 6
-sneak 8
-veteran 3, balance 3
-quick 3, mobile 2
-strong 2, resilient 3, enduring 2	1.0 4
-consistent 2, precise 1
-tank 1
-lucky 2, black cat 2
+quick 2, mobile 3, fast 3, resilient 4, enduring 3, strong 2              111
+Common 8, counting 3, haggle 5, literate 2                                 37
+bow 10, quick shot 9, sniper 3, lead target 3, knife 8                    243
+consistent 2, precise 1, phalanx, tank 2                                   70
+avoid 8, yield +3, off balance, sneak 8                                   108
+veteran 3, balance 3, quick draw 8, häfva 6, lucky 2, black cat 2          67
 ----------
-heavy longbow  10 (1 quick draw slot) : 3ap-3(roll qd) 1r-0 2r-0 3r+1
+large longbow  10 (1 quick draw slot) : 3ap-3(roll qd) 1r-0 2r-0 3r+1
     dam 6, penetrating 2,
     range 22, short 9 mod+3, long 33 mod-3,
     vlong 44 mod-6 dam-1, extreme 66 mod-9 dam-2,
     str 8 (no str bonus)
 quiver	30 arrows
-
-dagger 4
+dagger 8
     dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
     str 2 (no str bonus)
     fast+1 if str 4 and dex 5
     every second attack in a round costs no stamina
     poke: mod-1 dam-1 pen+1
-
 brigandine	abs 2 (tank 1: as leather)
     str 4 (str penalties affect all actions)
     dex-1, dash-1, per-1
     acrobatics mod-3, martial arts mod-1
     spellcasting mod-1, sneak mod-3
     takes 3 rounds to put on or take off
-
-Quaff	x2, belt, 2 quick draw slot
-
+Quaff	x3, belt, 3 quick draw slot
 money	1g 1d20s 1d20c
 ===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
 
+%TODO: updated 210220 post cost changes to quick, mobile, avoid, yield, offbal
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ===================================
-Hired knight, human           (400)
+Hired knight, human           (590)
 -----------------------------------
 str	8        hp 22(17) abs 4
 dex	5(7)     m1 w3 r5(6) d7(9)
-con	8        stamina 11(8)
+con	8        stamina 9(8)
 int 5        vision 16(20) arc 200(240), human average
 psy	7        mana 5
 per	5(6)     ap 6(4)
-cha	5        xp 5 (400), worth 15 xp
+cha	5        xp 5 (590), worth 15 xp
 ----------
-Common 8, literate 4, counting 4, haggle 4
-sword 11
-shield 9
-fancy attacks 3, counter attack, poke, swing
-phalanx, intercept
-avoid 6, yield +2(+3), off balance
-quick draw 4, häfva 6
-veteran 4, balance 2
-quick 2, mobile 2
-resilient 5, enduring 4, tireless 3
-slugger 1, tank 4
-lucky 1
+quick 2, mobile 2, resilient 5, enduring 4, tireless 3, rapid 3, fast 1
+Common 8, literate 4, counting 4, haggle 4, histography 2
+sword 12, fancy attacks 3, counter attack, poke, swing
+shield 10, avoid 6, yield +2(+3), off balance
+consistent 2, phalanx, intercept, str bonus, slugger 1, tank 4
+veteran 4, balance 2, quick draw 4, häfva 6, lucky 2, black cat 2
 ----------
 long sword  11 (1 quick draw slot)
     dam 10(9), abs 18,
     str 7 (max +3 str bonus), finesse-4
     poke: mod-1 dam-1 pen+1
     swing: slow-1 mod-1 dam+3 todefend+2
-
 tower shield   14(9) (1 quick draw slot)
     abs 14, parry+5,
     str 8 or slow-1 str 5
     Ranged attacks mod-4 when in the way.
     Hiding behind it (3ap) ranged mod-8
     tackle mod+3
-
-full plate    abs 4 full plate armour with full helmet
-    --- tank 4: penalties as plate mail ---
-    str 5 (str penalties affect all actions)
-    dex-2, yield bonus -1, run-1, dash-2,
-    per-2, vision-20%, cone vision -20% max 270 deg
-    acrobatics mod-6, climb-1, jump-1
-    martial arts mod-3, spellcasting mod-2
-    sneak mod-4, avoid mod-1
-    max stamina mod-1
+full plate abs 4, tank 4: mods below as plate mail
+    max stamina -3, run-1, dash-3
+    dex-2, yield bonus -1, per-2, vision-20%, cone vision -20% max 270 deg
+    acrobatics mod-6, climb-1, jump-1, martial arts mod-3
+    spellcasting mod-3, sneak mod-4, swim mod-4, avoid mod-1
     Turning as separate actions cost more ap:
     45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
     (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
     takes 4 rounds to put on or take off
-
-Quaff x2, belt, 2 quick draw slot
-
+Quaff x2, belt, 2x quick draw slot
+-----------------------------------
 money 1+1d2g, 5+1d10s, 10+1d20c
-===================================
 \end{verbatim} \normalsize \end{samepage}
+
+\
+
+\vfill
+%TODO:
+\TODO: UPDATE: post cost changes to quick, mobile, avoid, yield, offbal
+
 
 
 
