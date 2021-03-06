@@ -1,6 +1,6 @@
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-
+%                                                                               12345
 
 
 
@@ -283,7 +283,7 @@ E.g: Sneaky Sebastian has fancy attacks 5 and sword 11. He makes a primary attac
 
 \skill{Skill scf 1.0 "mind games":} The clever death dealer can spend time and put intellect to good use finding weak aspects of their opponents' reactions.
 
-\todo rewrite mind games
+\todo rewrite mind games, this old version is broken
 % why spend 1r for one attack, when the opponent can spend a second action to attack the hero who now has 0ap left for defence ?
 
 \tmpsepline
@@ -1467,14 +1467,18 @@ cost 30xp switching is a very fast (1ap) action
 One would think that any SlowMo attacks would be easier to defend against, but nooo. They are simply too cool. No effects other than the mod+1 to succeed.
 
 
-\skill{Maneuver (cost 20) "careful":} allows the character to make an action or movement with a mod+1 to succeed, and where the "10" roll is not an automatic failure. Being careful costs 1 stamina extra. \\
+\skill{Maneuver (cost 20) "careful":} allows the character to make an action or movement with a mod+1 to succeed, and where the "10" roll is not an automatic failure. Being careful takes longer time.
+
+\todo rewrite careful, too many unwanted pathological edge cases
+
+Being careful costs 1 stamina extra. \\
 For actions which are normally faster than a round, (1-9ap), careful adds +3ap.\\
 For actions which normally take 1 round or more, careful doubles the time.\\
 E.g: Shooting a bow normally takes 2r, and with careful it takes 4r.
 
 It is possible to combine with other effects that speed up actions. E.g: A serious quick shot with a bow can for example take 4ap. That can be combined with a careful (+3ap,mod+1), for a total of 7ap, but where a rolled "10" is not an automatic fail.
 
-\todo clarify that careful cannot be used to switch a regular 3ap action into a full round careful action without any penalties for the extra required ap.
+\todo clarify that careful cannot be used to switch a regular 3ap action into a careful full round action without any penalties for the extra required ap.
 
 However. It is not possible to expand a [0,9]ap action into a 1r action as usual if using careful. When careful it expands to twice as long: \\
 \verb|rounds = 2 * round up (ap / 9)|

@@ -94,13 +94,13 @@ large rapier         3 0 0       0.8
 
 duelling sword      10 0 0       0.9
 large duell. sword  15 0 0       1.1
-parrying dagger        7 0       0.7
-baselard               7 0       0.6
+parrying dagger      1 0 0       0.7
+baselard             2 0 0       0.6
 bastard sword       10 0 0       1.5
 great sword         10 0 0       2.0
 claymore            15 0 0       3.0
 estoc               12 0 0       1.3
-grande estoc        15 0 0       1.5
+grande estoc        20 0 0       1.5
 
 
 small 1h axe           3 0       0.8   tools, cheaper in bulk
@@ -147,7 +147,7 @@ heavy clubs          +30%        +30%
 1h hammer              1 0       0.8   tools, cheaper in bulk
 large 1h hammer        3 0       1.2   tools, cheaper in bulk
 2h hammer              4 0       1.4   tools, cheaper in bulk
-large 2h hammer      1 5 0       2.2   tools, cheaper in bulk
+large 2h hammer      1 2 0       2.2   tools, cheaper in bulk
 
 1h flail             3 0 0       0.8
 large 1h flail       5 0 0       1.2
@@ -203,16 +203,16 @@ cheap arrows             1       0.33  10 arrow bundle, mod-1 dam-1, no reuse
 for special arrows, see below
 
 
-small crossbow       1 0 0       1.0   military, much cheaper in bulk
+small crossbow       1 5 0       1.0   military, much cheaper in bulk
 crossbow             2 0 0       1.5   military, much cheaper in bulk
-large crossbow       3 0 0       2.0   military, much cheaper in bulk
+large crossbow       4 0 0       2.0   military, much cheaper in bulk
 
 normal bolts           1 0       0.25  10 bolt bundle
 cheap bolts              1       0.25  10 bolt bundle, mod-1 dam-1, no reuse
 for special bolts, see below
 
 
-arbalest             6 0 0       3.0   special military, cheaper in bulk
+arbalest            10 0 0       3.0   special military, cheaper in bulk
 broadhead              3 0       0.5   10 bolt bundle, special
 spikehead              5 0       0.5   10 bolt bundle, special
 blunthead              5 0       0.5   10 bolt bundle, special
@@ -293,7 +293,7 @@ Most basic equipment can be found in any village or town. Prices can vary quite 
                      g s c    encumbrance
                      -----    -----------
 
-knife                    5       0.25
+knife                  1 0       0.25
 
 scabbard/sheath/loop 0.1*weapon  0.1  ensures reliable weapon draw without roll
 
@@ -315,11 +315,12 @@ spirits                  1       0.1  enough for a one swig dose.
 health elixir          3 0       0.1  heal 3hp (1/3r) draws 3mana+3stamina
 health wafer           2 5       0.1  heal 3hp (1/10r) max stam-1 until slept
 
-rag clothing             5       1.0 (only when packed)
+(don't calculate encumbrance for normal clothes when worn, only when packed)
+rag clothing             5       1.0 (only when packed) gossip-1
 simple clothing        2 0       1.0 (only when packed)
 good clothing          5 0       1.5 (only when packed)
 fine clothing        1 0 0       2.0 (only when packed)
-extravagant clothing 3 0 0       3.0 (only when packed)
+extravagant clothing 5 0 0       3.0 (only when packed) gossip+1
 warm clothing          5 0       2.0 (only when packed)
 
 blanket                  5       2.0
@@ -337,13 +338,13 @@ sack 5 enc               1       1.0 + 0.75 * load (0.25 packed)
 sack 10 enc              2       1.5 + 0.75 * load (0.5 packed)
 leather bag 5 enc        3       1.0 + 0.66 * load (0.5 packed)
 leather bag 10 enc       5       1.5 + 0.66 * load (1.0 packed)
-backpack 5 enc         1 0       0.5 + 0.50 * load
-backpack 10 enc        2 0       1.0 + 0.50 * load
-backpack 15 enc        4 0       1.5 + 0.50 * load
+backpack 5 enc         1 0       0.5 + 0.50 * load  = 3.0 full
+backpack 10 enc        2 0       1.0 + 0.50 * load    6.0
+backpack 15 enc        4 0       1.5 + 0.50 * load    9.0
 
-saddle bag 5 enc       2 0       2.0 + 0.50 * load
-saddle bag 10 enc      4 0       3.0 + 0.50 * load
-pack bag 25 enc        6 0       5.0 + 0.50 * load      tot fully loaded = 17.5
+saddle bag 5 enc       2 0       1.5 + 0.50 * load  = 4.0 full  (2x = 8.0)
+saddle bag 10 enc      4 0       2.0 + 0.50 * load    7.0            14.0
+pack bag 25 enc        6 0       2.5 + 0.50 * load   15.0
 saddle etc             5 0       7.0
 donkey               1 0 0       10 leagues/day     carries 50enc, ride-3
 pony                 2 0 0       10 leagues/day     carries 50enc

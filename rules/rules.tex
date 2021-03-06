@@ -1,6 +1,6 @@
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-
+%                                                                               12345
 
 %===============================================================================
 %
@@ -306,7 +306,7 @@ Some actions take no mods, or some other set of modifications. E.g: jump, possum
 
 \
 
-\todo I know there are exceptions I've forgotten to clarify. \emph{Please let me know when you find them!}
+\todo I know there are exceptions I've missed/forgotten to clarify. \emph{Please let me know when you find them!}
 
 
 \subsection*{Simultaneous turns during rounds}
@@ -892,7 +892,7 @@ To get away from this problem we add:
 \item[wait on other] will set the initiative of the character to one lower than the target he's waiting for. It does not cost any AP. The waiting character moves down the initiative list and gets a new initiative, one lower than the character he is waiting on. The waiting character must be able to see the target he's waiting on.
 \item[wait] will retain the initiative but costs one AP. This flags the character with a clearly visible "wait" marker in the initiative list and makes it clear he's ready to jump into action at any time. The player must clearly and quickly speak up when he wants to take action again. He will not be asked by the GM.
 \item[done] flags that the character is more or less done for the round, unless something happens to him. The character's initiative is set to 0 and he moves down the initiative list. Mark the character with a clear "DONE" marker.
-\todo setting done should give a bonus to next round to encourage it.
+%\todo setting done should give a bonus to next round to encourage it. Can't use a penalty mod-1 since that would slow things down.
 \end{description}
 
 With this it's possible to enforce a rule where the top initiative always have to take some action or choose a wait state. The Hero can wait on a target for free, but sacrifices initiative, wait flexibly, without target, costing 1ap, or flagging as done but can only take reactive actions if the situation around him changes significantly.
@@ -1355,7 +1355,7 @@ Outside of general action, just roll now and then when environment changes for a
 %---------------------
 \label{sec:surprise}
 
-\todo surprise, int to get Maneuver mp and 3ap, fail int gets total surprise
+\todo surprise, int to get Maneuver mp and 3ap, fail int gets total surprise \\
 \todo or perhaps successful int roll allows declaring success diff ap and success diff/3 mp
 
 Unaware and relaxed characters can be surprised. It then takes them one round to gather their wits. Roll int to see if they gather their wits fast enough.
@@ -1522,7 +1522,7 @@ And Fumbly Fabian has dex 5 but his new found exotic rapier of pointy murder req
 
 \subsection*{Excessive str bonus}
 %--------------------------------
-\todo meh, rewrite excessive strength bonus points allocation structure
+\todo meh, rewrite excessive strength bonus points allocation structure.
 
 Heroes with higher strength than the weapon/armour/action requires can use certain skills and maneuvers to get bonus effects to damage, reduced stamina or action point cost, etc. Each point of excessive strength can only be used for one effect at a time, but enough points allow for combining effects.
 
