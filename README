@@ -32,7 +32,7 @@ Current state
 
 It is well tested, hundreds of hours since 2008. There are several campaigns ready with multiple adventures each. Works well for both regular table top play and for virtual table top software. The GM and players can choose the level of complexity they are comfortable with.
 
-This is my personal notes package, not draft quality material intended for publication. There is still a lot of stuff which is in progress of being updated, with inconsistencies, notes, TODOs etc. I'm updating this package whenever I have the time and inclination.
+This is my personal notes package, not draft quality material intended for publication. Lots in progress of being updated, with inconsistencies, notes, TODOs etc. I'm updating this package whenever I have the time and inclination.
 
 It is however quite complete. We have been using it for many years. I'll add the rest of the campaigns and adventures as I get the time to clean them up somewhat.
 
@@ -54,7 +54,7 @@ the book: rules, setting, skills, equipment, monsters, etc
 Coming soon(tm)
 ---------------
 
-I'll be adding the campaigns as i get the time to clean them up enough to be readable for public consumption:
+I'll be adding the campaigns as I get the time to clean them up enough to be readable for public consumption:
 
 01 Dark Klan, Deep Cave, Rescue Nurensachs
 02a Overlord Orvar
@@ -62,6 +62,7 @@ I'll be adding the campaigns as i get the time to clean them up enough to be rea
 03 Ottokar's Test Dungeon lvl1
 04 Destroy the Altar
 05 Turn Off the Light
+07 Eviction
 
 
 
@@ -89,8 +90,8 @@ hactac
     templates        << maptool: map effect template marker images
     tex              << latex include settings
     tmp              <<
-    tokens           << maptool: token images
-    tokpic           << maptool: maptool specific token files
+    tokpic           << maptool: token images
+    tokens           << maptool: maptool specific token files
 
 Most of the file space is binary: images and campaign files, and I don't generally put them under version control.
 

@@ -4,6 +4,10 @@ pdflatex book.tex
 pdflatex book.tex
 pdflatex book.tex
 
+pdflatex intro.tex
+pdflatex intro.tex
+pdflatex intro.tex
+
 #dvipdf book.dvi
 #pdftex book.tex
 
@@ -15,8 +19,8 @@ rm *{.log,.aux,.toc,.dvi,.out}
 
 #aplay ~/doc/sound/softpop.wav
 
-okular ./book.pdf 1> /dev/null 2>&1 &
-#okular ./book.pdf 1> /dev/null 2> /dev/null &
-#okular ./book.pdf &> /dev/null &
+#okular ./book.pdf 1> /dev/null 2>&1 &
+##okular ./book.pdf 1> /dev/null 2> /dev/null &
+##okular ./book.pdf &> /dev/null &
 
 

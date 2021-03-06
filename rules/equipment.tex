@@ -142,12 +142,15 @@ Military issue weapons tend to require a baseline 5, with possible alternate ver
 % axe      +3   +3/+6                         parry-3 toparry-1 toavoid+1 [2-12]
 % staff    -1   -1/+1 parry +1/+2             fast, reach                 [2-6]
 % spear    +1   +1/+2 pen 0/1 parry -1/+1     reach                       [2-6]
+% club     =0
 % brawl    -3                                 (at str 6)
 %   fist   -4                                 fast, deflect
 %   kick   -2                                 deflect
 %
 % bow      +1   --/=0 pen 0-2                 range, pen, 1/2r
 % crossbow +3   --/++ pen 1-3                 range, pen, 1/3r
+%
+% hammer   +1                                 slow, knockback
 
 
 
@@ -220,29 +223,33 @@ longsword           dam 9, abs 18,
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Knives and fast blades
 
-knife               dam 2, abs 3, parry-2, toparry-2, toavoid-1, finesse-9
+knife               dam 2, abs 2, parry-2, toparry-1, toavoid-2, finesse-9
                     str 1 (no str bonus)
                     fast 1 if str 3 and dex 4
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
+                    gap: mod-abs dam-1 penetrating
 \end{verbatim} \blocklistgap \begin{verbatim}
-dagger              dam 3, abs 4, parry-1, toparry-2, toavoid-1, finesse-9
+dagger              dam 3, abs 3, parry-1, toparry-1, toavoid-2, finesse-9
                     str 2 (no str bonus)
                     fast 1 if str 4 and dex 5
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
+                    gap: mod-abs dam-1 penetrating
 \end{verbatim} \blocklistgap \begin{verbatim}
-rapier              dam 4, abs 4, toparry-2, toavoid-1, finesse-9
+rapier              dam 4, abs 4, toparry-1, toavoid-2, finesse-9
                     str 3 (no str bonus)
                     fast 1 if str 5 and dex 6
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
+                    gap: mod-abs dam-1 penetrating
 \end{verbatim} \blocklistgap \begin{verbatim}
-large rapier        dam 5, abs 5, toparry-2, toavoid-1, finesse-9
+large rapier        dam 5, abs 5, toparry-1, toavoid-2, finesse-9
                     str 4 (no str bonus)
                     fast 1 if str 6 and dex 7
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
+                    gap: mod-abs dam-1 penetrating
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
@@ -250,14 +257,14 @@ large rapier        dam 5, abs 5, toparry-2, toavoid-1, finesse-9
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Speciality Blades   costs 5xp to learn speciality, or suffer mod-1
 
-duelling sword      dam 6, abs 6, toparry-2, toavoid-1, finesse-9
+duelling sword      dam 6, abs 6, toparry-1, toavoid-2, finesse-9
                     str 5, (no str bonus)
                     fast 1 if str 7 and dex 9
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-1 pen+1
                     swing: slow 1 mod-1 dam+1 todefend+2
 \end{verbatim} \blocklistgap \begin{verbatim}
-large duell. sword  dam 7, abs 7, toparry-2, toavoid-1, finesse-9
+large duell. sword  dam 7, abs 7, toparry-1, toavoid-2, finesse-9
                     str 6, (no str bonus)
                     fast 1 if str 8 and dex 10
                     every second attack in a round costs no stamina
@@ -276,32 +283,34 @@ baselard            dam 2, pen 1, abs 3, parry-3, toparry-1, finesse-6
                     every second attack in a round costs no stamina
                     poke: mod-1 dam=1 pen+2
 \end{verbatim} \blocklistgap \begin{verbatim}
-bastard sword       dam 7/9, abs 12, finesse-6
-(1h/2h)             str 5/5
+bastard sword       dam 7/9, abs 12, finesse-5/-6
+(1h/2h)             str 5/5 (max +2/+3 str bonus)
                     poke: mod-1 dam-1 pen+1
                     swing: slow 1 mod-1 dam+2 todefend+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 great sword         dam 10, abs 20, toavoid+1, finesse-4
-1h                  str 6 slow 1, str 9 normal speed
+1h                  4ap: str 6 (max dam+4 str bonus)
+                    3ap: str 9 dex 6
                     poke: mod-1 dam-1 pen+1
                     swing: slow 1 mod-1 dam+3 todefend+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 claymore            dam 14, abs 28, toavoid+1, finesse-4
-2h                  str 8 slow 1, str 11 normal speed
+2h                  4ap: str 8 (max dam+4 str bonus)
+                    3ap: str 11 dex 8
                     reach 1 mod-6
                     poke: mod-1 dam-1 pen+1
                     swing: slow 1 mod-1 dam+3 todefend+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 estoc               dam 7, abs 8, toparry-1, toavoid-1, finesse-9
-2h                  str 5 (no str damage bonus, max +1 penetrating bonus)
-                    fast 1 if str 7 and dex 9
+2h                  3ap: str 5 (no str damage bonus, max +1 penetrating bonus)
+                    2ap: str 7 and dex 9
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow 1 mod-1 dam+2 todefend+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
-2h                  str 7 (no str damage bonus, max +1 penetrating bonus)
-                    fast 1 if str 9 and dex 11
+2h                  3ap: str 7 (no str damage bonus, max +1 penetrating bonus)
+                    2ap: str 9 and dex 11
                     every second attack in a round costs no stamina
                     poke: mod-1 dam-2 pen+2
                     swing: slow 1 mod-1 dam+2 todefend+2
@@ -313,27 +322,27 @@ grande estoc        dam 9, abs 10, toparry-1, toavoid-1, finesse-9
 Regular Axes
 
 small 1h axe        dam 5, abs 6, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 2 (max +2 str bonus)
+                    str 2 (max dam+2 str bonus)
                     swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 1h axe              dam 7, abs 8, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 4 (max +4 str bonus)
+                    str 4 (max dam+4 str bonus)
                     swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 large 1h axe        dam 9, abs 10, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 6 (max +6 str bonus)
+                    str 6 (max dam+6 str bonus)
                     swing: slow 1 mod-1 dam+3 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 small 2h axe        dam 10, abs 9, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 4
+                    str 4 (max dam+6 str bonus)
                     swing: slow 1 mod-1 dam+3 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 2h axe              dam 12, abs 11, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 6
+                    str 6 (max dam+8 str bonus)
                     swing: slow 1 mod-1 dam+3 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 large 2h axe        dam 14, abs 13, parry-3, toparry-1, toavoid+1, finesse-3
-                    str 8
+                    str 8 (max dam+10 str bonus)
                     swing: slow 1 mod-1 dam+4 toavoid+2
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
@@ -343,27 +352,27 @@ large 2h axe        dam 14, abs 13, parry-3, toparry-1, toavoid+1, finesse-3
 Speciality Axes     costs 5xp to learn speciality, or suffer mod-1
 
 battle axe          dam 8, abs 10, parry-2, toparry-2, finesse-4
-1h                  str 5
+1h                  str 5 (max dam+5 str bonus)
                     swing: slow 1 mod-1 dam+2 toavoid+2
                     poke: mod-2 dam-3 pen+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 great axe           dam 12, abs 14, parry-4, toparry-3, toavoid+2, finesse-2
-1h                  str 6 slow 1
-                    str 9 normal speed
+1h                  4ap: str 6 (max dam+6 str bonus)
+                    3ap: str 9 dex 6
                     swing: slow 1 mod-1 dam+4 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 lochaber            dam 16, abs 20, parry-4, toparry-3, toavoid+2, finesse-2
-2h                  str 8 slow 1
-                    str 11 normal speed
+2h                  4ap: str 8  (max dam+12 str bonus)
+                    3ap: str 11 dex 8
                     swing: slow 1 mod-1 dam+4 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 pick axe            dam 4, pen 4, parry-3, toavoid+2, finesse-2
-2h                  str 4, slow 1
+2h                  4ap: str 4  (max dam+2 pen+4 str bonus)
                     double damage against stone, doors, etc
                     swing: slow 1 mod-1 dam+1, pen+1, toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 large pick axe      dam 6, pen 4, parry-3, toavoid+2, finesse-2
-2h                  str 6, slow 1
+2h                  4ap: str 6 (max dam+3 pen+5 str bonus)
                     double damage against stone, doors, etc
                     swing: slow 1 mod-1 dam+1, pen+1, toavoid+2
 \end{verbatim} \end{samepage} \normalsize \goodbreak
@@ -380,64 +389,54 @@ the shoulder or shield of a friend in a two layer formation. This requires
 phalanx of both characters. A three layer formation is possible if the
 first front line is kneeling or formed of shorter characters.
 
-heavy versions of staffs and spears have +2dam +4abs -1finesse for +2str
+heavy versions of staffs and spears have +2dam +4abs -1finesse for +3str
 but also raising the fast 1 for staffs to double strength and dex requirements
-and rasing max str bonus by +1 for staves
+and raising max str bonus by +1 for staffs
 and and max str and pen bonus by +1 for spears.
 and adding slow 1 to spears unless additional +2 str are met (+4 total)
+and dex requirement at str requirement -3.
 
-small staff         dam 1/2, abs 5, parry+1/+2, reach 1 mod-4, finesse-3/-5
+narrow tip spears are dam-1 pen+1 mod-1
+narrow tip spears can have all str bonus as penetrating
+broad tip spears are dam+1 mod-1
+
+small staff         dam 1/2, abs 4, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 2/1 (max +1/+2 str bonus)
                     2h: fast 1 if str 4 and dex 4
 \end{verbatim} \blocklistgap \begin{verbatim}
-staff               dam 3/4, abs 7, parry+1/+2, reach 1 mod-4, finesse-3/-5
+staff               dam 3/4, abs 6, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 4/3 (max +1/+2 str bonus)
                     2h: fast 1 if str 6 and dex 6
 \end{verbatim} \blocklistgap \begin{verbatim}
-large staff         dam 5/6, abs 9, parry+1/+2, reach 1 mod-4, finesse-3/-5
+large staff         dam 5/6, abs 8, parry+1/+2, reach 1/0 mod-4, finesse-3/-5
 1h/2h               str 6/5 (max +1/+2 str bonus)
                     2h: fast 1 if str 8 and dex 8
 \end{verbatim} \blocklistgap \begin{verbatim}
 small spear         dam 3/3, pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
 1h/2h               str 2/1 (str bonus max +1 dam then max +1 pen)
                     2h: fast 1 if str 6 and dex 6
-                    narrow tip spears are dam-1 pen+1 mod-1
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
                     slash: mod-2, dam-1
                     finesse-4/-6
 \end{verbatim} \blocklistgap \begin{verbatim}
-spear               dam 5/5, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
+spear               dam 5/5, pen 0/1, abs 4, parry-1/+1, reach 1 mod-3
 1h/2h               str 4/3 (str bonus max +1 dam then max +2 pen)
-                    narrow tip spears are dam-1 pen+1 mod-1
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
                     slash: mod-2, dam-1
                     finesse-4/-6
 \end{verbatim} \blocklistgap \begin{verbatim}
-large spear         dam 7/7, pen 0/1, abs 8, parry-1/+1, reach 1 mod-3
+large spear         dam 7/7, pen 0/1, abs 6, parry-1/+1, reach 1 mod-3
 1h/2h               str 6/5 (str bonus max +1 dam then max +3 pen)
-                    narrow tip spears are dam-1 pen+1 mod-1
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 pen-1 mod-1
                     slash: mod-2, dam-1
                     finesse-4/-6
 \end{verbatim} \blocklistgap \begin{verbatim}
-long spear          dam 5, pen 1, abs 7, parry-3, reach 1 mod-0
+long spear          dam 5, pen 1, abs 5, parry-3, reach 1 mod-0
 2h                  str 4  (str bonus max +1 dam then max +2 pen)
-                    narrow tip spears are dam-1 pen+1 mod-1
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 pen-1 mod-1
                     finesse-3
 \end{verbatim} \blocklistgap \begin{verbatim}
-large long spear    dam 7, pen 1, abs 9, parry-3, reach 1 mod-0
+large long spear    dam 7, pen 1, abs 7, parry-3, reach 1 mod-0
 2h                  str 6 (str bonus max +1 dam then max +3 pen)
-                    narrow tip spears are dam-1 pen+1 mod-1
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 pen-1 mod-1
                     finesse-3
 \end{verbatim} \blocklistgap \begin{verbatim}
-infantry spear      dam 6/7, pen 0/1, abs 10, parry-1/+1, reach 1 mod-3
+infantry spear      dam 6/7, pen 0/1, abs 9, parry-1/+1, reach 1 mod-3
 1h/2h               str 5 (str bonus max +1 dam then max +3 pen)
                     slash: mod-2, dam-1
                     finesse-3/-5
@@ -452,20 +451,18 @@ They are usually military infantry issue and thus tailored for str 5.
 pike                dam 6, pen 1, abs 8, parry-6, slow 1
 2h                  reach 0 mod-3, reach 1 mod-0, reach 2 mod-3
                     str 5 (max dam+2 str bonus, rest is penetrating)
-                    narrow tip spears can have all str bonus as penetrating
-                    broad tip spears are dam+1 mod-1
                     finesse-2
 \end{verbatim} \blocklistgap \begin{verbatim}
 halberd             dam 10, pen 3, abs 8, parry-6, slow 2 (5ap), toavoid+2
 2h                  reach 0 mod-2, reach 1 mod-0, reach 2 mod-5,
-                    str 5
+                    str 5 (max dam+5 str bonus)
                     finesse-2
                     poke: mod-0 dam-3 pen+2
                     Halberds can be used either with axe or spear skill.
 \end{verbatim} \blocklistgap \begin{verbatim}
 glave               dam 9, pen 2, abs 8, parry-3, slow 1, toavoid+1
 2h                  reach 0 mod-1, reach 1 mod-0, reach 2 mod-6,
-                    str 5
+                    str 5 (max dam+4 str bonus)
                     finesse-4
                     Glaves can be used either with sword or spear skill.
 \end{verbatim} \end{samepage} \normalsize \goodbreak
@@ -513,6 +510,7 @@ monstrous club      dam 10/12, abs 22, parry-1, toavoid+1, finesse-2
                     swing: slow 1 mod-1 dam+3 toavoid+2 knockback roll +3
 \end{verbatim} \blocklistgap \begin{verbatim}
 heavy clubs         dam+2, abs+50%, parry-3, toavoid+2, finesse-1, slow 1
+                    str requirement +3
                     knockback roll +3
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
@@ -618,21 +616,27 @@ Plated heavy shields have double abs but are either
 slow 2 (5ap) or require str+3 and equal dex to be slow 1 (4ap)
 or str+6 and equal dex to be normal speed (3ap).
 
+2h shields have -2 strength requirements.
+
+Small characters (halflings, goblins) have extra mod-1 to incoming ranged
+attacks when shield is "in the way" or when they are "hiding behind"
+the shield.
+
 buckler             abs 6, parry+1
                     str 0
-                    fast 1 if str 4 and dex 6
+                    fast 1 if str 4 and dex 6 and fast shield 1
                     Ranged attacks mod-0 when in the way.
                     Hiding behind it (3ap) ranged mod-1
 \end{verbatim} \blocklistgap \begin{verbatim}
 small shield        abs 8, parry+2,
                     str 2
-                    fast 1 if str 6 and dex 9
+                    fast 1 if str 6 and dex 9 and fast shield 2
                     Ranged attacks mod-1 when in the way.
                     Hiding behind it (3ap) ranged mod-2
 \end{verbatim} \blocklistgap \begin{verbatim}
 shield              abs 10, parry+3,
                     str 4, or slow 1 str 1
-                    fast 1 if str 8 and dex 12
+                    fast 1 if str 8 and dex 12 and fast shield 3
                     Ranged attacks mod-2 when in the way.
                     Hiding behind it (3ap) ranged mod-4
                     tackle mod+1
@@ -659,8 +663,12 @@ infantry shield     abs 13, parry+3,
 \
 
 \goodbreak \small \begin{samepage} \begin{verbatim}
-leather armour abs 1
+Armour movement penalties will leave effective character movement
+at least:      Maneuver=1, Walk=2, Run=3, Dash=4
+
+leather armour abs 1 mostly like thick clothing made to take a punch
 thick cloth    str 1 (str penalties affect all actions)
+               max stamina -1
                dash-1
                acrobatics mod-1
                martial arts mod-1
@@ -671,8 +679,9 @@ thick cloth    str 1 (str penalties affect all actions)
 \end{verbatim} \blocklistgap \begin{verbatim}
 chain mail     abs 2 ring, scale, brigantine, etc
 scale mail     str 3 (str penalties affect all actions)
-brigandine     dex-1
+brigandine     max stamina -2
                run-1, dash-2
+               dex-1
                per-1
                acrobatics mod-3
                martial arts mod-2
@@ -683,8 +692,9 @@ brigandine     dex-1
 \end{verbatim} \blocklistgap \begin{verbatim}
 plate mail or  abs 3 plate armour of various sorts, incl helmet
 heavy scale,   str 5 (str penalties affect all actions)
-h brigandine   dex-2, yield bonus -1
-               run-1, dash-3,
+h brigandine   max stamina -3
+               run-1, dash-3
+               dex-2, yield bonus -1
                per-2, vision-20%, cone vision -20% max 270 deg
                acrobatics mod-6, climb-1, jump-1
                martial arts mod-3
@@ -692,7 +702,6 @@ h brigandine   dex-2, yield bonus -1
                sneak mod-4
                swim mod-4
                avoid mod-1
-               max stamina mod-1
                Turning as separate actions cost more ap:
                45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
@@ -700,8 +709,9 @@ h brigandine   dex-2, yield bonus -1
 \end{verbatim} \blocklistgap \begin{verbatim}
 full plate     abs 4 full plate armour with full helmet
                str 7 (str penalties affect all actions)
+               max stamina -4
+               walk-1, run-2, dash-4
                dex-3, yield bonus -2
-               run-2, dash-4,
                per-3, vision-30%, cone vision -30% max 180 deg
                acrobatics mod-9, climb-3, jump-3
                martial arts mod-6
@@ -710,7 +720,6 @@ full plate     abs 4 full plate armour with full helmet
                sneak mod-5
                swim mod-5
                avoid mod-2
-               max stamina mod-2
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=3ap)
@@ -718,8 +727,9 @@ full plate     abs 4 full plate armour with full helmet
 \end{verbatim} \blocklistgap \begin{verbatim}
 heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                str 9 (str penalties affect all actions)
+               max stamina -5
+               maneuver-1, walk-2, run-3, dash-5
                dex-4, yield bonus -3
-               walk-1, run-3, dash-5,
                per-4, vision-40%, cone vision -40% max 120 deg
                acrobatics mod-12, climb-6, jump-6
                martial arts mod-9
@@ -728,7 +738,6 @@ heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                sneak mod-6
                swim mod-6
                avoid mod-3
-               max stamina mod-3
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=4ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=4ap)
@@ -746,13 +755,20 @@ Are the monsters a little too far away for your sword? Are you just a bit too la
 
 \
 
-\noindent Thrown weapons include anything from knives and javelins to improvised missiles like beer bottles, rocks, and mistuned musical instruments.
+Regarding range: Do not think of range as "how long you can shoot or throw", but how far you can \emph{accurately} shoot or throw.
 
-Thrown weapons can also be used as poor versions of similar melee weapons in a pinch and with some mods. Regular melee weapons can often also be used as thrown weapons but often with mod-3 to mod-6 and 33\% to 66\% of the normal damage. When a thrown weapon is used as a temporary melee weapon it uses the melee weapon class skill, and when a melee weapon is used as a thrown weapon it uses the throw skill.
+%\TODO:
+\todo: Change "range" stat to "accuracy", and actual range and damage / penetration reduction as the multiples of accuracy the weapon can be used at, or separate damage related range factor.
 
 \
 
-\todo rewrite throwing weapons
+\noindent Thrown weapons include anything from knives and javelins to improvised missiles like beer bottles, rocks, and mistuned musical instruments.
+
+Thrown weapons can also be used as poor versions of similar melee weapons in a pinch and with some mods. Regular melee weapons can often also be used as thrown weapons but with penalty mods and reduced damage. When a thrown weapon is used as a temporary melee weapon it uses the melee weapon class skill, and when a melee weapon is used as a thrown weapon it uses the throw skill.
+
+\
+
+%\todo rewrite throwing weapons  -  210130 sort of ok now
 \goodbreak \small \begin{samepage} \begin{verbatim}
 Throwing an already held weapon is a regular 3ap action. Drawing and throwing
 in one go is a 1r action. Faster throwing gives mods which can be mitigated by
@@ -768,83 +784,93 @@ Throwing already drawn weapon:
 normal  3ap     mod=0
 aimed   6ap/1r  mod+1
 quick   1ap     mod-3
-
+\end{verbatim} \blocklistgap \begin{verbatim}
 Thrown weapons have normal range tohit and damage mods:
 short       mod+1          0.5 * normal range
 long        mod-3 dam-1    1.5 * normal range
 very long   mod-6 dam-2    2.0 * normal range
 extreme     mod-9 dam-3    3.0 * normal range
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing dart     dam 1 pen 2 : or : dam 1 mod-(target abs)
+throwing dart     dam 1 pen 2 : OR : mod-(target abs) dam 1 penetrating
 throwing star     range 8 + max(str,dex)/3
-                  extended range: pen-1, vlong pen-2, extreme range not possible
+                  long range: pen-1, vlong pen-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 2, no str bonus
                   every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing knife    dam 2 : or : dam 2 mod-(target abs)
+throwing knife    dam 2 : OR : mod-(target abs) dam 2 penetrating
                   range 6 + max(str,dex)/3
+                  long range: dam-1, vlong dam-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 2, no str bonus
                   every second attack require no stamina
                   melee: knife mod-1, dam 2, abs 2, finesse-3
-                  fast 1 if str 2 and dex 4
-                  every second attack require no stamina
+                         fast 1 if str 2 and dex 4
+                         every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
-throwing dagger   dam 3 : or : dam 3 mod-(target abs)
-                  range 5 + max(str,dex)/3
+throwing dagger   dam 3 : OR : mod-(target abs) dam 3 penetrating
+                  range 6 + max(str,dex)/3
+                  long range: dam-1, vlong dam-2, extreme range not possible
+                  OR if mod by abs: double range mod
                   str 3, no str bonus
                   every second attack require no stamina
                   melee: knife mod-1, dam 3, abs 3, finesse-3
-                  fast 1 if str 2 and dex 4
-                  every second attack require no stamina
+                         fast 1 if str 2 and dex 4
+                         every second attack require no stamina
 \end{verbatim} \blocklistgap \begin{verbatim}
 small throwing    dam 4
-axe               range 6 + max(str,dex)/3
+axe               range 5 + str/3
                   str 2 (str bonus: dam+1)
                   melee: mod-1, dam 4, abs 3, parry-4, toparry-1, toavoid+1,
-                  finesse-2
-                  str 2 (str bonus: dam+1)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                         finesse-2
+                         str 2 (str bonus: dam+1)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 throwing axe      dam 6
-                  range 5 + max(str,dex)/3
-                  str 4 (str bonus: dam+1)
-                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1,
-                  finesse-2
+                  range 5 + str/3
                   str 4 (str bonus: dam+2)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                  melee: mod-1, dam 6, abs 5, parry-4, toparry-1, toavoid+1,
+                         finesse-2
+                         str 4 (str bonus: dam+2)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 large throwing    dam 8
-axe               range 4 + max(str,dex)/3
-                  str 6 (str bonus: dam+2)
-                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1,
-                  finesse-2
+axe               range 5 + str/3
                   str 6 (str bonus: dam+3)
-                  swing: slow 1 mod-1 dam+2 toavoid+2
+                  melee: mod-1, dam 8, abs 6, parry-4, toparry-1, toavoid+1,
+                         finesse-2
+                         str 6 (str bonus: dam+3)
+                         swing: slow 1 mod-1 dam+2 toavoid+2
 \end{verbatim} \blocklistgap \begin{verbatim}
 javelin           dam 3, penetrating 1
                   range 8 + str/2
                   str 4 (str bonus: dam+1, pen+1)
                   melee: spear mod-1, dam 3, abs 3, reach 1 mod-5, finesse-3
-                  str 4 (str bonus: dam+1, pen+1)
+                         str 4 (str bonus: dam+1, pen+1)
 \end{verbatim} \blocklistgap \begin{verbatim}
 large javelin     dam 5, penetrating 1,
-                  range 7 + str/2
+                  range 8 + str/2
                   str 6 (str bonus: dam+1, pen+2)
                   melee: spear mod-1, dam 5, abs 5, reach 1 mod-5, finesse-3
-                  str 6 (str bonus: dam+1, pen+2)
+                         str 6 (str bonus: dam+1, pen+2)
 \end{verbatim} \blocklistgap \begin{verbatim}
 improvised:
 
-stones            dam = 1+str/3, range = max(str,dex)
+stones            dam = 1+str/3, range = 4 + str/3
                   select stones to trade between damage and range:
                   trade dam-1 for range+3
 \end{verbatim} \blocklistgap \begin{verbatim}
+bottle / keg / flask / stool / chair / kettle / skillet
+                  mod-1 to mod-3 depending on how unwieldy
+                  dam = 1+str/3, range = 3 + str/3
+                  larger objects force trade range for damage: range-2 dam+1
+\end{verbatim} \blocklistgap \begin{verbatim}
 examples of throwing regular melee weapons, still roll for throw:
-knife: mod-1, dam-1, range 5
-sword: mod-3, dam-3, range 4
-axe:   mod-2, dam-2, range 5
-spear: mod-1, dam-1, range 6
-club:  mod-2, dam-2, range 5
+knife: mod-1, dam-1, range 4 + max(str,dex)/3
+sword: mod-3, dam-3, range 2 + str/3
+axe:   mod-2, dam-2, range 4 + str/3
+spear: mod-1, dam-1, range 6 + str/2
+club:  mod-2, dam-2, range 3 + str/3
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
@@ -886,11 +912,17 @@ large bow         dam 5, pen 2,
                   range 16
                   str 6 (no str bonus)
 \end{verbatim} \blocklistgap \begin{verbatim}
-The longbows tend to be military infantry issue and tailored for str 5 baseline
-and focus on range instead of damage, though often used with broadhead or
-piercing arrows to increase the damage or penetration based on the composition
-of the enemy forces.
+The longbows and shortbows are military infantry or cavalry issue.
+Tailored for str 5 baseline and focus on range instead of damage,
+though often used with broadhead or piercing arrows to increase the damage or
+penetration based on the composition of the enemy forces.
 
+shortbow          dam 3
+                  range 15
+                  str 3 (no str bonus)
+                  mods when rapid fire improved by 1
+                  mod limitations from ride improved by 1
+\end{verbatim} \blocklistgap \begin{verbatim}
 longbow           dam 4, pen 1,
                   range 20
                   str 5 (no str bonus)
@@ -907,6 +939,7 @@ broadhead arrows  mod-1 dam+1 pen-1
 fine arrows       mod+1
 barbed arrows     dam+1
 sharp arrows      pen+1
+\end{verbatim} \blocklistgap \begin{verbatim}
 fire arrows       mod-2 dam-1 range-25%
                   oil splash dam 3/r for 5r
                   light source as fire, burns 5r
@@ -917,13 +950,41 @@ torch arrows      mod-2 dam-2 range-25%
 candle arrows     mod-2 dam-2 range-25%
                   light source as candle, burns 20r
                   ignite 1a with fire source
+\end{verbatim} \blocklistgap \begin{verbatim}
 Most regular arrows can be recovered and reused of they strike a soft target.
-Specialty arrows often cannot be reused.
+Speciality arrows often cannot be reused.
 Special bows sometimes require special arrows.
 
-Heavy bows tend to have str+2, dam+1, pen+1, range+2
-and require special heavy arrows
+Heavy bows tend to have str+3, dam+1, pen+1, cannot use aimed shot
+with special heavy hardened arrows they get another pen+1
+with normal arrows they take mod-1
 \end{verbatim} \end{samepage} \normalsize \goodbreak
+
+\
+
+
+
+
+%===============================================================================
+\vspace{20mm}
+\tmpsepline
+%TODO:
+\TODO: switch to named style bows:
+\small \begin{verbatim}
+archery bow   precision   low str dam
+hunting bow   regular    normal and large
+war bow       heavy     normal and large  no aim
+
+cavalry bow     shortbow style   ride+3 cap
+longbow         mods per sq movement declared  long range accuracy
+field bow       mod-3 infinite range, rapid BARRAGE, heavy damage no aim no move
+\end{verbatim} \normalsize
+\tmpsepline
+\vspace{20mm}
+%===============================================================================
+
+
+
 
 \
 
@@ -948,39 +1009,57 @@ fire actions:
 normal  mod=0 1r
 aimed   mod+1 2r
 quick   mod-3 3ap, mod-6 2ap, mod-9 1ap
+
+crossbows have no str bonus
 \end{verbatim} \blocklistgap \begin{verbatim}
 small crossbow    dam 5, penetrating 1,
                   range 12
-                  str 3 (no str bonus)
+                  carried: str 3
+                  mounted: str 1 reload +1r
                   reload 2r (str 9 dex 6 : 1r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 crossbow          dam 6, penetrating 2,
                   range 15
-                  str 5 (no str bonus)
+                  carried: str 5
+                  mounted: str 3 reload+1r
                   reload 3r (str 12 dex 8 : 2r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 large crossbow    dam 7, penetrating 3,
                   range 18
-                  str 7 (no str bonus)
-                  reload 4r (str 14 dex 10 : 3r)
+                  carried: str 7
+                  mounted: str 5 reload+1r
+                  reload 4r (str 15 dex 10 : 3r)
 \end{verbatim} \blocklistgap \begin{verbatim}
 arbalest          broadhead: dam 12
-special           spikehead: dam 9 pen 5
+(special)         spikehead: dam 9 pen 5
                   blunthead: dam 10, knockback 1
                   range 20
-                  carried: str 9, mounted str 5 reload+3r, no str bonus
-                  reload 5r (str 16 dex 12 : 4r)
-                  quick shot is extra mod-3, above normal crossbow mods.
+                  carried: str 9
+                  mounted: str 5 reload+1r
+                  reload 5r (str 18 dex 12 : reload 4r if custom built)
+                  quick shot is +1ap, above normal crossbow mods
+\end{verbatim} \blocklistgap \begin{verbatim}
+mounted arbalest  broadhead: dam 18
+(special)         spikehead: dam 14 penetrating
+                  blunthead: dam 15 knockback 2
+                  range 22
+                  mounted: two man team, str 5, reload 6r
+                  mounted: single man, str 8, reload 8r
+                  carried: single man, str 12, reload 7r
+                      (str 21 dex 14 : reload 6r if custom built)
+                  quick shot is +2ap, above normal crossbow mods
+The mounted arbalest is 8 enc: 4 for the weapon and 4 for the tripod.
+They are not meant to be carried around. Usually used by a two man team.
 \end{verbatim} \blocklistgap \begin{verbatim}
 double type       as the regular crossbows except that they have two first
 crossbows         shots, which can be used at the same time or separately.
-exotic            They also require str+2, and take 1r longer to reload.
+(exotic)          They also require str+2, and take 1r longer to reload.
                   If both shots are fired at the same time (same action)
                   you should still roll each bolt separately.
 \end{verbatim} \blocklistgap \begin{verbatim}
 repeater type     as the regular crossbows except that they take one round
 crossbows         less to reload, but at str+1, and have a bolt magazine
-exotic            which when empty must be reloaded manually taking
+(exotic)          which when empty must be reloaded manually taking
                   2r + 1r / bolt in the magazine.
                   These machines are exceptionally rare and expensive,
                   manufactured only by legendary mechanismiths and
@@ -1007,7 +1086,7 @@ aimed   4r mod+1
 quick   2r mod-3
 snap    1r mod-6
 blind   3ap mod-9
-
+\end{verbatim} \blocklistgap \begin{verbatim}
 Ballistas are designed to shoot at large stationary objects far away
 and have different range tohit and damage mods:
 short       0.5 mod+1 dam+10%
@@ -1032,7 +1111,6 @@ heavy ballista    dam 40, penetrating, knockback 3
 \end{verbatim} \end{samepage} \normalsize \goodbreak
 
 \
-
 
 \subsection*{custom weapons}
 %---------------------------
@@ -1061,6 +1139,14 @@ spear (1h/2h):
 club (1h/2h):
     dam str+0/+2, abs 2*str+2, knockback 1 str-vs-str
 \end{verbatim} \end{samepage} \normalsize \goodbreak
+
+\
+
+Heavy weapons are common customisations. They usually mean a slow 1 with damage and other stats as though a str+2 was applied but with unchanged str requirement, OR, increasing requiring str+3. Usually with significant increase in abs, +30-50\%. So heavy weapons loose 1 str damage efficiency for the benefit of very high abs.
+
+Customised weapons should at least be treated as special equipment, with the reduced availability. Significant customisations might even push them to exotic. They usually need to be ordered at least a week in advance. Common customisations might be available off the shelf in large well stocked city shops.
+
+Typical vanity items like the back seat general's heavy longsword, with flame decorations, have a reasonable chance of being available off the shelf even in Trade Town.
 
 \
 
@@ -1120,7 +1206,7 @@ knife skill
 \goodbreak
 \noindent Orcs produce simple and heavy weapons. They have higher abs, lower finesse, higher str requirements. The market price is -50\% of human made weapons and their encumbrance is +33\%. When taking damage to abs they loose double abs.
 
-Wielding orc weapons also require the specialty orcish, cost 5xp, or suffer mod-1.
+Wielding orc weapons also require the speciality orcish, cost 5xp, or suffer mod-1.
 All npc orcs have it innately, and Hero orcs starting with orc weapons get it for free.
 
 \
@@ -1285,8 +1371,8 @@ pain killer    small white pills, red pills, liquids, etc, with different
 \end{verbatim} \blocklistgap \begin{verbatim}
 alcohol        5r to take effect.
                reduces pain by -1 per dose,
-               adds an inebriation mod-1 per dose above con/3 (round down)
-               to future rounds ams, OR counters one dose of coffee.
+               adds an inebriation mod-1 per dose above con/3 (round down),
+               OR counters one dose of coffee.
                Effect remains until next day, or until countered.
 \end{verbatim} \blocklistgap \begin{verbatim}
 coffee         5r to take effect, 2r if hot (use a thermos perhaps?)
@@ -1300,8 +1386,23 @@ health elixir  heals 3hp, 1hp/3r, and draws 3mana and 3stamina immediately
                when quaffed. It has no effect if the mana or stamina draw rolls
                fail.
 \end{verbatim} \blocklistgap \begin{verbatim}
-health wafer   heals 3hp, 1hp/10r, and modifies max stam-1 until the Hero has
-               slept.
+health wafer   heals 2hp, 1hp/10r, and modifies max stam -2
+               until the Hero has slept.
+\end{verbatim} \blocklistgap \begin{verbatim}
+healing salve  heals 1hp in 100r, max 1 application per wound per day.
+               gives +1 pain per use until the target has slept.
+               applying more than 1+con/3 per day gives risk of poisoning:
+               roll con-(nr applications) or suffer mod-3 whole day
+               until successful, cumulative mod+1/d
+\end{verbatim} \blocklistgap \begin{verbatim}
+health tea     takes a fire and 100r to brew, must be served hot,
+               heals 1d3 hp in next 100r at cost of 1 mana,
+               no effect if mana draw fails.
+               The mana can be paid by the target drinking,
+               or by the one preparing the tea.
+               Drinking more than con/3 per day gives risk of poisoning:
+               roll con-(nr doses) or suffer mod-3 whole day
+               until successful, cumulative mod+1/d
 \end{verbatim} \blocklistgap \begin{verbatim}
 lock picks     mod+X to "pick lock" skill.
                X depends on the quality of the picks.
@@ -1332,7 +1433,7 @@ Special items are not so easy to come by and their prices vary a bit.
 \
 
 \small \begin{samepage} \begin{verbatim}
-cave cart      A small (1sqr) cart that can be dragged (str 5 walk) into the
+cave cart      A small (1sq) cart that can be dragged (str 5 walk) into the
                narrow spaces of the caves where monsters and treasure hide.
                It can load 100 enc. Rummaging on the cart is same as in a normal
                container, except effective item number is items/10 round up.
@@ -1341,7 +1442,7 @@ Rucksack with  Regular backpack but with a few compartments, which makes it
 compartments   faster when rummaging through it for the required item.
                Divide the amount of items by 2-4 when calculating rummage time.
 \end{verbatim} \blocklistgap \begin{verbatim}
-tunnel plug    A small (1sqr) cart with a very large and sturdy shield that can
+tunnel plug    A small (1sq) cart with a very large and sturdy shield that can
                be flipped into position to block up to three square wide so
                pursuing monsters cannot pass or attack through it.
                The cart can be dragged (str 3 walk) into the narrow spaces of
@@ -1791,10 +1892,10 @@ Master BronzeBolt's Twin Whistler
 heavy crossbow      dam 6, penetrating 2, mod+1
 double bow          range 15
 repeater            str 7 (no str bonus)
-(specialty 10xp)    reload 2r (str 10 dex 10 : 1r)
+(speciality 10xp)    reload 2r (str 10 dex 10 : 1r)
                     magazine 12 (8r manual reload, 4r if dex 10)
                     requires special bolts: mod+1, pen+1, range+10
-A truly remarkable piece of legendary artisinal mechanickery.
+A truly remarkable piece of legendary artisanal mechanickery.
 It can fire twin whistling arrows in a single action, or separately, and sings
 beautifully when the reload mechanism is pulled.
 It is rumoured that BronzeBolt paid over 300 gold for the machine and has to

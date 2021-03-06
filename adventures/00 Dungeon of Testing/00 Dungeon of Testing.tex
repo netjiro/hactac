@@ -12,17 +12,8 @@
 \begin{document}
 
 
-% Manually specify hyphenation for names, etc. 
-% Remember: space separated word list: lead with space.
-% Hyphens can only occur on specified "-" characters, and
-% words without hyphens will never be hyphenated, overrides language rules.
-% see link regarding location of hyphenation block
-% https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation
-\hyphenation{ 
- Kings-land 
- Evil-nius Conq 
- Massa Pawa 
-}
+% too many words in common across docs nowadays
+\input{../../gng.hyphenation}
 
 
 
@@ -40,7 +31,7 @@
 
 \huge         Dungeon  \\
                 of     \\
-              Testing   
+              Testing
 
 \vspace{0.3\baselineskip}
 
@@ -76,7 +67,7 @@
 \raggedbottom
 
 \vsmall
-\noindent 
+\noindent
 This work is licensed under a Creative Commons \\
 Attribution-NonCommercial-ShareAlike 4.0 \\
 International License. (CC BY-NC-SA 4.0).\\
@@ -177,11 +168,11 @@ The cave is suitably dark and dank. No light except from the four lanterns in th
 
 \
 
-\textbf{The central room} is wide and open with a large old worn sigil at the center. The trap is the centeral nine squares of the sigil. All five tunnels look more or less the same, but there comes a very faint soft glow from the tunnel leading to the goblins' room.
+\textbf{The central room} is wide and open with a large old worn sigil at the center. The trap is the central nine squares of the sigil. All five tunnels look more or less the same, but there comes a very faint soft glow from the tunnel leading to the goblins' room.
 
 \
 
-\textbf{The altar rooms} are both the same. The altars can be opened with a traps \& locks mod+3 or a str mod-3 roll. They both contain an old sacrificial dagger each, but nothing of value. Beside the altars are small braziers where the Hero can light fires if he want some light. They shine like torches and some of the light will illuminate the cental room.
+\textbf{The altar rooms} are both the same. The altars can be opened with a traps \& locks mod+3 or a str mod-3 roll. They both contain an old sacrificial dagger each, but nothing of value. Beside the altars are small braziers where the Hero can light fires if he want some light. They shine like torches and some of the light will illuminate the central room.
 
 \
 
@@ -335,7 +326,7 @@ per  5    initiative 7
 large 2h club   5 dam 9, abs 18, parry-1, toavoid+1
 bite           	5 dam 4
 punch          	7 dam 3 fast 1 (2ap)
-kick            6 dam 5 
+kick            6 dam 5
 avoid          	4 yield+3
 charge         	5
 tackle         	4

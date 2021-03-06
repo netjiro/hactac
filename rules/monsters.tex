@@ -7,9 +7,11 @@
 \phantomsection\addcontentsline{toc}{chapter}{monsters}
 \chapter*{Monsters}
 \chaptermark{monsters}
+\label{cpt:monsters}
 
 Monsters, critters, adversaries and other evil doers. The monster stats below should be seen as examples. I suggest creating personalised monsters for your encounters. Change a stat here and there to make things more interesting. A good idea is to still keep the critters at the approximate "standard" potency level though, so that your players don't kill their 300xp characters by attacking a goblin soldier. That would likely get them pissed off.
 
+\null \label{sec:statsheets}
 Below follows a few empty stat sheets for different styles of monsters. The first and second are for "real" intelligent adversaries, full and simplified. The rest are for unintelligent monsters, and then just mindless monsters and animals.
 
 
@@ -38,7 +40,11 @@ Below follows a few empty stat sheets for different styles of monsters. The firs
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+%two column
+\noindent
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}                   % [t] top align both boxes
+\small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -56,12 +62,12 @@ spells
 ----------
 equipment
 money
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
+-----------------------------------
+\end{verbatim} \normalsize
+\end{minipage}
+\hfill  % don't double break here since that would make two paragraphs, vertical
+\begin{minipage}[t]{0.45\textwidth}                   % [t] top align both boxes
+\small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -76,12 +82,20 @@ skills
 spells
 ----------
 equipment
-===================================
-\end{verbatim} \normalsize \end{samepage}
+-----------------------------------
+\end{verbatim} \normalsize
+\end{minipage}
+\end{center}
 
-\
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\vspace{2.0\baselineskip}
+
+
+%two column
+\noindent
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}                   % [t] top align both boxes
+\small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -90,27 +104,28 @@ dex       m w r d
 psy       initiative
 per       ap
 ----------
-attacks
 skills
-===================================
-\end{verbatim} \normalsize \end{samepage}
-
-\
-
-\goodbreak \begin{samepage} \small \begin{verbatim}
+spells
+attacks
+-----------------------------------
+\end{verbatim} \normalsize
+\end{minipage}
+\hfill  % don't double break here since that would make two paragraphs, vertical
+\begin{minipage}[t]{0.45\textwidth}                   % [t] top align both boxes
+\small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
 str       hp abs
 dex       m w r d
 per       initiative, ap
-attacks
+attacks, spells
 -----------------------------------
-\end{verbatim} \normalsize \end{samepage}
+\end{verbatim} \normalsize
 
-\
+\vspace{2.0\baselineskip}
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\small \begin{verbatim}
 ===================================
 name                        (token)
 -----------------------------------
@@ -119,8 +134,11 @@ m w r d
 initiative, ap
 attacks
 -----------------------------------
-\end{verbatim} \normalsize \end{samepage}
+\end{verbatim} \normalsize
+\end{minipage}
+\end{center}
 
+\
 
 
 
@@ -152,8 +170,9 @@ Jumping spider spawns are set to tiny, while black bug spawns are set to small s
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{animals}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -161,23 +180,45 @@ A N I M A L S
 -------------
 
 The usual stuff you'll find in the forest. Wolves, bears, snakes, etc.
+\end{verbatim} \normalsize \end{samepage}
 
+\
 
+\subsection*{Wolf pack}
+Wolves usually travel in packs of 4+. Single odd strays can be encountered, perhaps sick, deranged, aggressive. They will chase down and surround, harass, then overpower. Wounded wolves retreat until the prey are weakened. They try to pry off a single target to gang up on.
+
+Facing a wolf pack is dangerous. Heroes being chased must roll psy+(nr heroes) to stop and fight. Mod+3 if they find a good spot and pass an int roll.
+
+\
+
+Wolves can clamp down after a successful bite.
+Clamped target has mod-3 to all actions per clamped wolf.
+Moving when clamped requires a 3ap action str vs str against wolf.
+Wolves can make a thrash attack when clamped, 3ap but max once per round:
+thrash: 3ap autohit dam6 pen2   (bite+pen)     max once per round
+A clamped wolf cannot take avoid action, but will likely let go when hit.
+Wolves can drag a clamped target: str vs str, drag 1+diff/3 sq, 1r action.
+
+Single wolves have psy-3. Long term single wolves go deranged.
+
+\
+
+\small \begin{verbatim}
 ===================================
 wolf                       (wolf02)
 -----------------------------------
 str  7    hp 10 abs 0
-dex 10    m2 w6 r12 d20
-psy  5    vision 15, dusk
-per  8    initiative 12, ap 6
+dex 12    m2 w6 r12 d18
+psy  5    vision 15, dusk, sniff 10
+per 13    ap 6
 ----------
-balance 6
-bite    7 dam 6
-claw    5 dam 3
-charge  6, mobile 1
-avoid   3 yield+3
-===================================
-\end{verbatim} \normalsize \end{samepage}
+bite    7 3ap dam 6
+claw    5 2ap dam 3
+thrash  autohit dam6 pen2 3ap max once per turn
+avoid   5 yield+3
+charge  6, mobile 2, balance 6
+-----------------------------------
+\end{verbatim} \normalsize
 
 \
 
@@ -186,38 +227,42 @@ avoid   3 yield+3
 large wolf                 (wolf??)
 -----------------------------------
 str  9    hp 14 abs 0
-dex 12    m2 w7 r14 d21
-psy  7    vision 15, dusk
-per  9    initiative 14, ap 6
+dex 10    m2 w7 r14 d21
+psy  7    vision 15, dusk, sniff 10
+per 15    ap 6
 ----------
-balance 6
-bite    9 dam 7, pen 1
-claw    7 dam 3
-charge  9, mobile 2
-avoid   6 yield+3
-consistent 1
-veteran 2
-===================================
+bite    9 3ap dam 8 pen 1, consistent 1
+claw    7 2ap dam 3
+thrash  autohit dam8 pen3 3ap max once per turn
+avoid   7 yield+3
+charge  9, mobile 4, balance 6, veteran 2, rapid 3
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
+
+%\
+
+
+\begin{samepage}
+\subsection*{Bear}
+Bears are usually encountered alone or with a cub or two. They will sniff you down and they are not afraid. Charge in, knockdown, claws and bite. Seriously wounded bears will flee.
 
 \
 
-\goodbreak \begin{samepage} \small \begin{verbatim}
+\small \begin{verbatim}
 ===================================
 bear                        (token)
 -----------------------------------
-str 14    hp 25 abs 1 skin
-dex  8    m1 w4 r10 d16
-psy  8    vision 15
-per  8    initiative 10
+str 15    hp 25 abs 1 skin
+dex  9    m1 w4 r10 d16
+psy  8    vision 15, sniff 20
+per 12    initiative 10
 ----------
-balance 6
-bite    8 dam 10, pen 1
-claw    7 dam 5, knockback 1
-charge  3
+bite    8 dam 10 pen 1
+claw    7 dam 6 knockback 1
 avoid   2 yield+2
+charge  3, balance 6
 pain threshold 4, veteran 1
-===================================
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -226,22 +271,20 @@ pain threshold 4, veteran 1
 ===================================
 large bear                  (token)
 -----------------------------------
-str 19    hp 35 abs 1 skin
-dex  9    m2 w5 r12 d18
-psy  9    vision 15
-per  8    initiative 12
+str 20    hp 35 abs 1 skin
+dex  7    m2 w5 r12 d18
+psy 10    vision 15, sniff 20
+per 14    initiative 12
 ----------
-balance 6
-bite   10 dam 12, pen 2
-claw    7 dam 5, knockback 1
-charge  6, mobile 1
+bite   10 dam 12 pen 2, consistent 1
+claw    8 dam 8 knockback 1
+charge  6, mobile 1, balance 6
 avoid   2 yield+2
-consistent 1
 pain threshold 5, veteran 2
-===================================
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
-\
+%\
 
 
 
@@ -251,9 +294,9 @@ pain threshold 5, veteran 2
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{monsters}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -267,15 +310,11 @@ minds of game masters and story tellers.
 ===================================
 bug                      (beetle01)    set tiny token size
 -----------------------------------
-str  1    hp 2 abs 1    tohit-3 tiny target    cannot block movement
-dex  6    m3 w5 fly10   tohit-6 when flying    cannot be blocked
+str  1    hp 2 abs 1    tohit-3 tiny target   tiny, does not block movement
+dex  6    m3 w5 fly10   tohit-6 when flying   their movement cannot be blocked
 per  2    initiative 10, ap 5
-bite      5 dam 1, penetrating:
-            armour affects the bug's bite skill instead of damage
-            armour abs > 3 counts as armour 3 (full coverage)
-no pain or low hp mods
+bite 6-abs dam 1, penetrating: armour mods the bug's bite skill not dam
 -----------------------------------
-
 They attack on "sight"(smell), ca 10sq. There is a 50\% chance that they
 will become hostile and attack each round when a potential target is in
 their smell range. Mostly they just mill around slowly, independent
@@ -763,7 +802,7 @@ sneak     8
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{goblins}
 
 
@@ -1014,9 +1053,9 @@ sneak     8
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{orcs}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -1226,9 +1265,9 @@ very heavy leather armour abs 2
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{svartfolk}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -1309,9 +1348,9 @@ roar   15 vs (psy+str)
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[2]
-\goodbreak
+\clearpage
 \phantomsection\addcontentsline{toc}{section}{dead and undead}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -1334,7 +1373,8 @@ grapple     5 dam 1, penetrating 1, mod+1/zombie in base contact with target
               break free on (dex|str) vs str, mod-1 / zombie in bc w/ target
 bite        5 dam 3, when grappled
 tear apart  5 dam 5, penetrating 3, when grappled
------------------------------------
+takes half damage from piercing attacks
+===================================
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1460,10 +1500,9 @@ life drain  - psy\\psy drain diff mana/rnd 1try/rnd, when in base contact
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[4]
-%\goodbreak
 \clearpage
 \phantomsection\addcontentsline{toc}{section}{demons}
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 ================================================================================
@@ -1472,6 +1511,8 @@ D E M O N S
 
 Horrible visitors from otherworlds and different dimensions, bla bla bla...
 \end{verbatim} \normalsize \end{samepage}
+
+\
 
 \
 
@@ -1500,6 +1541,7 @@ int  6    vision 30 arc 360 night
 psy 12    mana 12
 per  8    initiative 10, ap 6
 ----------
+pain threshold 5
 balance        6
 sneak          10
 veteran        3
@@ -1510,12 +1552,11 @@ bite           6 dam 8 slow-1
 horn charge    8 dam 8+dst/3, acts like tackle
 leg stab       9 dam 6 fast+1
 ----------
-summon         8 1r 3m +1stalker/3m  summons a grey stalker
-                 duration is until the big grey stalker dies
+summon         8 1r 3m +1stalker/3m summons a small grey stalker
 explosion      8 1r 2m dam 5 +1/r penetrate 1
                  range 10 radius 1 +1/2m
-portal home    6 10r 6m duration 10r   creates a one way portal home.
-===================================
+portal home    6 5r 6m duration 10r   creates a one way portal home.
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1540,10 +1581,10 @@ bite           5 dam 6 slow-1
 horn charge    7 dam 6+dst/3, acts like tackle
 leg stab       8 dam 4 fast+1
 ----------
-summon         4 100r 8m   summons one big grey stalker
-                 duration is permanent
+summon         4 10r 8m summons a big grey stalker
+                 mod+1 per assisting grey stalker
 teleport       6 1r 2m teleport to the big grey stalker
-===================================
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 
@@ -1555,18 +1596,20 @@ teleport       6 1r 2m teleport to the big grey stalker
 
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-%\pagebreak[4]
-%\goodbreak
 \clearpage
+
 
 \goodbreak \begin{samepage} \small \begin{verbatim}
 Blackscale Antorgs:
 The Blackscale Antorg critters usually live underground, and are rarely seen.
-They live in social gangs, where they can metamorphose to suit their role.
-It is not known if they are demons or not, but they have been found in more than
-one world reality. This of course makes them more demon than monster...
+They live in social gangs, where they can metromorphose to suit their role.
 They dig for copper, and keep slaves of various races to work the digs sites.
 They travel through magical portals which the antorg masters create.
+
+It is debated whether they are true demons or not, but they have been found
+in more than one world reality. This of course makes them more demon than
+monster. But which world is their origin? If it is this world they are
+surely monsters rather than demons. And Therephant Velasier observes that...
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1579,27 +1622,29 @@ str 15    hp 30  abs 5 (melee&ranged) tohit+3    set size large (2x2)
 dex  5    m1 w2 r4 d6
 int 12    vision 30 magical
 psy 12    mana 30
-per 10    initiative 5
+per 10    ap 3, initiative 5
 ---skills-------
+pain threshold   5
 bite             8 dam 7
 thunder stick    7 dam 4 +2/charge parry-3  25charges
                    stun 6 +6/charge
-                   charge effects add to all effects with each charge
+                   charge effects add to both dam and stun simultaneously
 lightning rod    6 dam 5 pen 2 range 10, 15 charges
                    short 5 mod+3 dam+2, long 15 mod-3 pen 0
                    normal shot 1a mod-0,
                    quick shot 1a fast+1 mod-3
                    aimed shot 1r mod+3
-ancient          5
-common           3
-dwarvish         6
-svartlingo       6
+Ancient          5
+Common           3
+Dwarvish         6
+Svartlingo       6
 literate         8
 counting         6
 \end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 ---magic-------
-magic 6
-power casting 3
+spellcaster
+magic            6
+power casting    3
 force bolt   7  cast 1a 1m, dam 5, range 10, long -2dam, penetrating 1
                cast time 1a means it can be cast multiple times per round
                with the normal -3 cumulative mod per action
@@ -1629,6 +1674,7 @@ sleep gas    7 cast 3r 2m, range 10sq +5/m, area radius 4 +1/m, duration 5r +3/m
                each round to see if wakes up.
 blind        6 cast 1r 1m, range 15 +5/m, duration 5r +2/m
                target gets vision=1 for the duration.
+\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
 heal         8 cast 3r 1m, heal 5 +3/m, time 2hp/r, range contact
 mana transfer 5 cast 2r, transfer 3m/r +3/m, range 5,
                 willing target or object only, in/out
@@ -1639,15 +1685,7 @@ drain        7 cast 2r 0m, psy vs psy +3/m, range contact,
                drains diff mana points
 slow spells (10+r):
 mass teleport, open gate vortex, close gate vortex
-\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
---equipment--------
-thunder rod
-lightning staff
-
-===================================
-hp 30 abs5   : 30
-mana 30 :30
-no pain
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1660,9 +1698,19 @@ str 8     hp 15 abs 3
 dex 8     m1 w2 r5 d8
 int 8     vision 30 magical
 psy 6     mana 10
-per 8     initiative 7
+per 8     ap 5, initiative 7
 ---skills-------
+bite             8 dam 6 toparry-3 toavoid-3
+thunder stick    7 dam 4 +2/charge penetrating parry-3  25charges
+                   stun 6 +6/charge
+                   charge effects add to both dam and stun simultaneously
+lightning rod    6 dam 5 pen 2 stun 3, range 10, 15 charges
+                   short 5 mod+3 dam+2, long 15 mod-3 pen 0
+                   normal shot 1a mod-0,
+                   quick shot 1a fast+1 mod-3
+                   aimed shot 1r mod+3
 ---spells-------
+spellcaster
 magic          3
 powercasting   3
 heal           7 cast 1r 1m, heal 1 +1/m, time 3hp/r, range 5
@@ -1671,22 +1719,7 @@ ward flash     8 cast 1a 1m, range personal, duration 1 attack and 1r,
                  It is only active during the round it has been cast.
                  Absorbs incoming damage before it strikes the character
                  or his equipment.
----equipment-------
-bite             8 dam 6 toparry-3 toavoid-3
-thunder stick    7 dam 4 +2/charge parry-3  25charges
-                   stun 6 +6/charge
-                   charge effects add to all effects with each charge
-lightning rod    6 dam 5 pen 2 stun 3, range 10, 15 charges
-                   short 5 mod+3 dam+2, long 15 mod-3 pen 0
-                   normal shot 1a mod-0,
-                   quick shot 1a fast+1 mod-3
-                   aimed shot 1r mod+3
-===================================
-hp 15 abs3      : 15
-mana 10 : 10
-no pain
-ammo ts : 25
-ammo lr : 15
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 \
@@ -1699,24 +1732,8 @@ str 12     hp 20 abs 4
 dex 6      m2 w4 r6 d10
 int 8      vision 30 magical
 psy 8      mana 15
-per 10     initiative 10
+per 10     ap 5, initiative 10
 ---skills-------
-quick           2
-mobile          2
-quick draw	6	thunder stick and lightning rod in quick draw slots
-claw slash	11 dam7 fast+1
-claw grab	8 dam4
-wrestle	        6
----spells-------
-magic           3
-powercasting    3
-heal            8 cast 1r 1m, heal 1 +1/m, time 3hp/r, range 5
-ward flash      11 cast 1a 1m, range personal, duration 1 attack and 1r,
-                 absorbs 5dam +3dam/m on the first attack that hits the caster.
-                 It is only active during the round it has been cast.
-                 Absorbs incoming damage before it strikes the character
-                 or his equipment.
----equipment-------
 bite             8 dam 6 toparry-3 toavoid-3
 thunder stick    9 dam 4 +2/charge, parry-3,  25charges
                    stun 6 +6/charge
@@ -1729,12 +1746,21 @@ lightning rod    8 dam 5 pen 2 stun 3, range 10, 15 charges
                    normal shot 1a mod-0,
                    quick shot 1a fast+1 mod-3
                    aimed shot 1r mod+3
-===================================
-hp20 abs4      : 20
-mana 15 : 15
-no pain
-ammo ts : 25
-ammo lr : 15
+mobile      2
+quick draw	6	thunder stick and lightning rod in quick draw slots
+claw slash 11   dam7 fast+1
+claw grab	8   dam4
+wrestle	        6
+---spells-------
+magic           3
+powercasting    3
+heal            8 cast 1r 1m, heal 1 +1/m, time 3hp/r, range 5
+ward flash      11 cast 1a 1m, range personal, duration 1 attack and 1r,
+                 absorbs 5dam +3dam/m on the first attack that hits the caster.
+                 It is only active during the round it has been cast.
+                 Absorbs incoming damage before it strikes the character
+                 or his equipment.
+-----------------------------------
 \end{verbatim} \normalsize \end{samepage}
 
 
@@ -1745,9 +1771,6 @@ ammo lr : 15
 
 
 
-
-% change back to normal font size
-%\normalsize
 
 % \raggedbottom command at the top tells to :
 % don't add glue spacing between segments, allow ragged bottoms instead
