@@ -1,0 +1,16 @@
+#!/bin/bash
+
+pdflatex 07*.tex
+pdflatex 07*.tex
+pdflatex 07*.tex
+
+#dvipdf 07*.dvi
+
+rm *{.log,.aux,.toc,.dvi,.out}
+
+aplay ~/doc/sound/softpop.wav
+
+#okular ./07*.pdf 1> /dev/null 2>&1 &
+##okular ./07*.pdf 1> /dev/null 2> /dev/null &
+##okular ./07*.pdf &> /dev/null &
+

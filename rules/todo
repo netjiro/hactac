@@ -23,6 +23,7 @@ reverse chronological order of TODO items
 210208: PIN !
 TODO: break apart rules, skills, etc and skills sections to
       a "basic" and a "complete" book
+      INTRO  --  MORE  --  LOTS
 
 
 200213: PIN!
@@ -31,11 +32,6 @@ TODO: change weapon and shield abs so they actually break more often
       setting up a base when exploring in a dungeon etc
       e.g: sword dam=str abs=dam
 -          axe   dam=str+1 abs=dam-2
-
-
-200213: PIN!
-TODO: build starter childhoods, some basic skill sets:
--     1d3 for 0.5 skills and 1d2 for 1.0 skills
 
 
 200204: PIN!
@@ -58,6 +54,41 @@ TODO: ? should light/fast weapons (low damage/abs) cost max 1 stam per round
 -     6ap 1stam, 2x attack 2stam  = 3stam, instead of 2stam
 
 
+
+
+
+210518:
+TODO:   skall sentinel ha group vision ???   track 9
+        ? alt sätta den som "npc" eller vision 0 men bara light source
+        ? praktisk nytta med vision ?
+
+
+210413:
+TODO: dirty fighting :  bonus på attack mot prone
+      kick them when they're down :
+
+
+210406:
+TODO: parry should also block resist for tackle
+
+
+210330:
+TODO: dela med sig xp - skill
+
+
+210309:
+TODO: fire support + target pointer  &  challenge D&D4ed
+      fire support     cost 5xp  per mod man tar bort ?
+      target pointer   5xp  oavsett storlek ?
+      pointer   vill ha ut något direkt på sina actions när han lägger
+          xp för att någon annan skall ha lättare att ge support
+          tex att det blir lättare att träffa nästa attack
+          att arrow hit on target ger mod till defense vid
+          kommande pointer melee attack
+          e.g: trigger right to react after target has been activated   ???
+               and mod-1 to defence per 3 dam of arrow,                 ???
+               capped by level of pointer                               ???
+TODO: CHECK OUT D&D 4ed: challenge
 
 
 210216:
@@ -197,6 +228,13 @@ TODO: when on nela and proper search and replace tools in batch / stream mode:
       or: actually read through and change all base speed declarations to the
       fixed Xap cost 1ap, 2ap, 3ap, 4ap, 5ap, 6ap, and change all relative speed
       modifiers to fast-X, slow+X ap.
+
+
+200213:
+TODO: build starter childhoods, some basic skill sets:
+-     1d3 for 0.5 skills and 1d2 for 1.0 skills
+?     is it relevant with moving climb and swim to base actions?
+?     and when adding limits to number of skills
 
 
 200210:
@@ -1212,3 +1250,6 @@ DONE: rollchars.py  will no longer add basic skills like avoid, yield, etc.
 210224:
 DONE: ordning vid död: move to back för att bli av med liken
       sendToBack()  tested working again
+210330:
+DONE: rest knapp skall sätta DONE
+DONE: rest knapp - kolla att fungerar som det skall
