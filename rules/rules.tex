@@ -56,16 +56,16 @@ Please, when reading and playing, keep you eyes open and head in gear. If the ru
 \textbf{Game targets:}
 \begin{itemize}
     \item Schedulable: Interesting even in short online game sessions.
-    \item Allow GM and players to select the level of complexity.
+    \item Allow GM and players to select suitable level of complexity.
     \item Flexibility and options, with consequences and tradeoffs.
     \item Fast, dynamic, flowing fights.
-    \item Keep the rounds short and quick.
+    \item Keep the rounds short and quick. More rounds, more options.
     \item Tactical depth, movement and actions matter, no dice rally.
     \item Terrain and layout matters, positioning, movement, timing matters.
     \item Many different viable combat styles and character types.
     \item Require player coordination for combat success.
     \item Offensive and defensive combat styles.
-    \item Initiatives that favour the fast through higher flexibility.
+    \item Initiative favours the fast through higher flexibility.
     \item Numerical advantage is synergistic, not just linear dps.
     \item Action coordination is highly advantageous.
     \item Specialities of characters to have significant influence.
@@ -87,13 +87,13 @@ Please, when reading and playing, keep you eyes open and head in gear. If the ru
     \item Faster movement makes it harder to succeed with actions.
     \item Characters with high initiative can decide when to act in a round.
     \item Relative positioning, facing, direction gives mods to actions.
-    \item Attack, defence, movement, damage, etc are multidimensional, not one value.
-    \item Actually care about how probabilities works.
+    \item Attack, defence, movement, damage, etc are multidimensional, not single axis.
+    \item Actually care about how probability works.
 \end{itemize}
 
 \
 
-Just charging into the opponents and hacking away will lead to disaster and gruesome death. Instead there are tactical considerations that enhance survival and make the battles more interesting. Ganging up on an opponent to overcome defences, coordinate actions and positioning to create openings, or distracting him to allow the others to get in better hits, are all very powerful tactics. Moving and positioning to get the upper hand in a battle will make a world of difference, especially when fighting many on many, or in complex terrain and map layout. Always analyse the terrain when planning your next segment of the fight. Be ready to reassess the combat plan as the circumstances change. Fights are fluid and variable, not static line dancing with sharp sticks. The rules set the scene for flexible shuffling of offensive or defensive focus and tactical initiative. Coordination of timing and ordering of actions between characters will have a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
+Just charging into the opponents and hacking away will lead to disaster and gruesome death. Instead there are tactical considerations that enhance survival and make the battles more interesting. Ganging up on an opponent to overcome defences, coordinate actions and positioning to create openings, or distracting him to allow the others to get in better hits, are all very powerful tactics. Moving and positioning to get the upper hand in a battle will make a world of difference, especially when fighting many on many, or in complex terrain and map layout. Always analyse the terrain when planning your next segment of the fight. Be ready to reassess the combat plan as the circumstances change. Fights are fluid and variable, not static line dancing with sharp sticks. The rules set the scene for flexible shuffling of offensive or defensive focus and tactical initiative. Coordination of timing and ordering of actions between characters has a large impact on any battle. Smart positioning, timing, and coordination of actions can be devastating to the opposition if done right.
 
 \
 
@@ -113,10 +113,10 @@ Really large fights with 50+ combatants can run upwards of 10-15min per round. T
 There are more rounds per battle than in most common games, but each round is short and quick. Exploring and clearing a small dungeon can creep into 50+ rounds, but can be done in an hour or two even when explaining the rules to a first timer. This has been demonstrated many times in the dreaded \texttt{Dungeon of Testing} scenario that has been used to introduce new players to the game.
 %demonstrated in the introductory screencast
 
-Standard encounters for a few players and twice their number in regular opposition take perhaps 20-30 rounds and 20-40min. More complex fights take longer. In the advanced \texttt{Goblin Destiny} campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
+Standard encounters for a few players and similar number of regular opposition take perhaps 20-30 rounds and 20-40min. More complex fights take longer. In the advanced \texttt{Goblin Destiny} campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
 % I consider the time consumption a design failure on my part of that specific campaign. I should have done it differently. But the players loved the campaign and reported it as one of the best so I have not done any significant changes to it.
 
-Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, lighting, and vision.
+Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, lighting, and vision. It works for the players moving and talking, and for me as GM moving and reacting with the opposition under fog of war.
 
 
 \section*{simplified or complex}
@@ -1188,7 +1188,7 @@ Some skills and maneuvers also require drawing stamina.
 %\todo: should it cost 1 stamina to declare extra AP? or perhaps 1 stamina per extra 3 ap: stamina cost = extra ap / 3 (round up as usual)
 
 Characters regain one stamina at the start of every round. They can rest to recuperate faster.
-If stamina reaches 0, they must start rolling for con for every action or movement declaration that requires drawing stamina. The con roll is penalty modified by negative stamina but ignores the mod stack, etc. If the con roll succeeds the character will go into negative stamina.
+If stamina reaches 0 or below, they must roll for con for every action or movement declaration that requires drawing stamina. The con roll is penalty modified by negative stamina but ignores the mod stack, etc.
 If the con roll fails the character can just stand there catching his breath, still loosing the action ap anyway. Failing a con roll when declaring walk / run / dash means the character will be limited to maneuver movement speed for the round.
 
 With negative stamina, all actions are also modified by the negative stamina, above the normal mod stack.
@@ -1646,7 +1646,9 @@ Black Knight can ignore some mods like this.
 
 \subsection*{Come on and die already}
 %------------------------------------
-Characters die when they reach -con hp. When a character reaches 0 hp or below he is in bad shape and in risk of dying. For every round he is not fully resting he needs to roll con modified with the negative hp, ignoring ams. If he fails he is down on the ground, disabled for the round, risk loosing consciousness, or similar. To get back to action or regain consciousness is also a con roll modified by negative hp, ignoring ams. Passed out characters can roll at the beginning of each round. The veteran skill helps to reduce the modification of the con rolls.
+Characters die when they reach -con hp. When a character reaches 0 hp or below he is in very bad shape and in risk of dying. For every round he is not fully resting he needs to roll con modified with the negative hp, ignoring ams. If he fails he is down on the ground, disabled and incapacitated for the round. To get back to action is also a con roll modified by negative hp, ignoring ams.
+Incapacitated characters roll to
+Passed out characters can roll at the beginning of each round. The veteran skill helps to reduce the modification of the con rolls.
 
 E.g: AlmostDeadDave has 11 hp when whole and con 7. At -3 hp he must pass a con-3 = 4 roll or pass out each round he tries do do anything more than maneuver with no actions. Since he has con 7 he dies at -7 hp.
 
