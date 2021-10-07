@@ -2,7 +2,17 @@
 %       10        20        30        40        50        60        70        80
 
 
+%===============================================================================
+%
+% characters
+%
+%===============================================================================
+
+
+% force start on right side page
 \cleardoublepage
+\raggedbottom
+
 
 \phantomsection\addcontentsline{toc}{chapter}{characters}
 \chapter*{Characters}
@@ -523,12 +533,14 @@ encumbrance 9/7 : dumps the sack and blanket when fighting
 \phantomsection\addcontentsline{toc}{section}{experienced heroes}
 \section*{Experienced Heroes}
 %----------------------------
-In practice, so far, we've tested hundreds of hours of game time with dozens of characters ranging around 100-1000xp. We haven't had any super high level adventures yet, so we haven't really tested 1000xp+ Heroes. The game scales very well up to 1k, and probably a bit beyond. We just don't have the data.
+So far we have tested dozens of characters around 100-1000xp over hundreds of hours of game time. We have not run any High Level adventures yet and lack significant data above 1k Heroes.
+The game scales very well up to 1k. Limited testing shows it behaves quite well far beyond. We just don't have enough data up there.
+It can be fun around 50-100xp as well, but player options are quite limited down there.
 
 
 \subsection*{Tråk-Ture}
 %----------------------
-Tråk-Ture is a very typical, uninspired, example Hero at 250xp. Intended to show new players how to build a simple character for the \texttt{07 Eviction} adventure. Though the base roll for the character was unusually good, with high str, dex, hp, stamina, movement, vision, ap.
+Tråk-Ture is a very typical, uninspired, example Hero at 250xp. Intended to show new players how to build a simple character for the \texttt{07 Eviction} adventure. The character roll was unusually good, with high str, dex, hp, stamina, movement, vision, ap.
 
 There is nothing wrong with Typical Heroes, but it can be more fun to build gubbins that have some non standard aspects and opportunities. For first time players it's easier to get a quick feel for the game with a standard Hero which is simpler to play reasonably well.
 
@@ -585,7 +597,7 @@ chain mail  abs 2                                 4 0 0   2.0/4.0
 
 % moved the old not updated characters stuff to old.tex 210116
 
-%\todo would be nice to have a cool sketch of heroes here
+%\todo would be nice to have a fun sketch of caricature heroes here
 
 
 
@@ -639,16 +651,16 @@ Tactician 2
 quick 1
 strong 2
 tough 1
---------------------------------------------------
+---------------------------------------------
 magic 3, spellcaster
 force bolt 11
 heal 6
 drain 9
 slow 8
---------------------------------------------
+---------------------------------------------
 yield
 off balance
------------------------------------------------
+---------------------------------------------
 \end{verbatim} \end{samepage} \clearpage \begin{samepage} \begin{verbatim}
 Force bolt
 cast 3ap 1m, dam 6 +1/m, penetrating 2,
@@ -702,13 +714,13 @@ horse+ saddle 2 saddlebag
 
 \small \begin{verbatim}
 ================== Maxkeles Grapplebottom ==================
-str  5(2)                    hp 14 abs 1
+str  5(2)                hp 14 abs 1
 dex 11                   m 2 (1) w5 (4) r7 (5) d10 (6)
-con  6 (4)                   stamina 7 (5)
-int  5                    vision 24 dusk 204
-psy  3                    mana 6
-per  4                    action points 6 (4)
-cha  1                    xp 41 (339)
+con  6 (4)               stamina 7 (5)
+int  5                   vision 24 dusk 204
+psy  3                   mana 6
+per  4                   action points 6 (4)
+cha  1                   xp 41 (339)
 --------------------------------------------
 yield bonus 3
 sneak bonus +2
@@ -742,11 +754,10 @@ Tough 2
 yield
 off balance
 --------------------------------------------
-\end{verbatim} \end{samepage} \clearpage \begin{samepage} \begin{verbatim}
 goblins can live on half rations, and can eat spoiled food
 bite 3 dam 2 3ap (2ap if both hands free) scf 0.5
 scratch 5 dam 1 2ap (1ap if both hands free) scf 0.5
-
+\end{verbatim} \end{samepage} \clearpage \begin{samepage} \begin{verbatim}
 chain mail     abs 2 ring, scale, brigantine, etc
                str 3 (str penalties affect all actions)
                dex-1,

@@ -11,7 +11,7 @@
 
 % force start on right side page
 \cleardoublepage
-
+\flushbottom
 
 % set fancyhdr heading
 \chaptermark{rules}
@@ -33,7 +33,7 @@ The rule set is here to \emph{help} create a fun game experience, not to kill it
 The idea is to create more tactical elements in tabletop/digital rpg-hacknslash. Inspired by some concepts from classic tabletop games like space hulk, descent, etc, but striving for more interesting battles, and tying it together with role playing game style adventures and campaigns.
 
 This game is not for everyone, but it is designed to be easy to scale and tweak over a wide range of preferences: In it's simplest form it works well as a small and fast framework for quick gaming with young kids, on a table or across the living room. At full complexity it is a very challenging online tactical tabletop game wrapped in a lighthearted role playing game environment.
-For examples of scaling: At the very simple end see
+E.g: At the very simple end see
 \hyperref[sec:youngkids]{\texttt{Bitter Candy}}, page~\pageref{sec:youngkids} and
 \hyperref[sec:basicenough]{\texttt{Ominous Crown}}, page~\pageref{sec:basicenough},
 and for really complex examples look at the adventure
@@ -51,20 +51,19 @@ The \textbf{Gold and Glory} rule set, game setting, and adventure campaigns are 
 Please, when reading and playing, keep you eyes open and head in gear. If the rules don't make sense, seem unbalanced, or should be more fun in a different way, \emph{please tell me about it}. Ping me an email or make a change and send a pull request. My handle is \emph{netjiro} on gmail and github.
 
 
-\
+%\
 
+\cleartoleftpage
 \textbf{Game targets:}
 \begin{itemize}
     \item Schedulable: Interesting even in short online game sessions.
     \item Allow GM and players to select suitable level of complexity.
     \item Flexibility and options, with consequences and tradeoffs.
-    \item Fast, dynamic, flowing fights.
-    \item Keep the rounds short and quick. More rounds, more options.
+    \item Dynamic, flowing fights, but still fast to play.
     \item Tactical depth, movement and actions matter, no dice rally.
     \item Terrain and layout matters, positioning, movement, timing matters.
     \item Many different viable combat styles and character types.
     \item Require player coordination for combat success.
-    \item Offensive and defensive combat styles.
     \item Initiative favours the fast through higher flexibility.
     \item Numerical advantage is synergistic, not just linear dps.
     \item Action coordination is highly advantageous.
@@ -74,21 +73,26 @@ Please, when reading and playing, keep you eyes open and head in gear. If the ru
     \item Freedom in character building, no classes or similar limitations.
 \end{itemize}
 
-\
+These are lofty goals. Things I want out of gaming. Most tabletop games I have tried fall short.
 
+%\
+
+%\cleartorightpage
+\clearpage
 \textbf{How to get there:}
 \begin{itemize}
-    \item Simple core rules that create inherent depth, optional addons for variety.
+    \item Simple core rules that create inherent depth.
+    \item Optional addons for variety.
     \item Effects and options stack together and can be combined.
     \item The degree of success or failure have real effects, not just success/fail.
     \item Trade realism for interesting options and effects.
-    \item Many fast rounds give more alternatives than a few long rounds.
     \item Doing more things in a round makes it harder to succeed with actions.
     \item Faster movement makes it harder to succeed with actions.
     \item Characters with high initiative can decide when to act in a round.
     \item Relative positioning, facing, direction gives mods to actions.
     \item Attack, defence, movement, damage, etc are multidimensional, not single axis.
     \item Actually care about how probability works.
+    \item Keep the rounds short and quick. More rounds, more options.
 \end{itemize}
 
 \
@@ -106,17 +110,23 @@ round 10-20: heavy violence and tactical movement to exploit weaknesses. \\
 round 15-25: flights, chases, mopping up the stragglers, or flee to fight another day.
 
 Larger or more complex fights of course take longer to complete. In hot areas several small skirmishes will meld into long rolling fights with positioning for control and advantage, contact, rallies, restructuring, support or withdraw, defensive short rest periods, and so on, as the Heroes try to accomplish their goals.
-Really large fights with 50+ combatants can run upwards of 10-15min per round. This should be avoided. It's just a lot of dead time for most of the participants.
+Really large fights with 50+ combatants can run upwards of 10-15min per round. This should be avoided. It creates a lot of dead time for most of the participants.
 
 \
 
-There are more rounds per battle than in most common games, but each round is short and quick. Exploring and clearing a small dungeon can creep into 50+ rounds, but can be done in an hour or two even when explaining the rules to a first timer. This has been demonstrated many times in the dreaded \texttt{Dungeon of Testing} scenario that has been used to introduce new players to the game.
+There are more rounds per battle than in most common games, but each round is short and quick. Exploring and clearing a small dungeon can creep into 50+ rounds, but can be done in an hour or two even when explaining the rules to a first timer. This has been demonstrated many times in the dreaded \texttt{Dungeon of Testing} scenario, used to introduce new players to the game.
 %demonstrated in the introductory screencast
 
 Standard encounters for a few players and similar number of regular opposition take perhaps 20-30 rounds and 20-40min. More complex fights take longer. In the advanced \texttt{Goblin Destiny} campaign playthrough we had six players control two goblins each, plus sidekicks and allies, and there were usually 20-40 fighters on the board in most battles. Then the rounds can sometimes creep upwards of 10min. This is not recommended. Keep battles small and fast, as that is more enjoyable for the players.
 % I consider the time consumption a design failure on my part of that specific campaign. I should have done it differently. But the players loved the campaign and reported it as one of the best so I have not done any significant changes to it.
 
 Several times we've had dungeon crawl adventures stretch to hundreds of rounds with skirmishes and lulls. As long as each round is fast this does not take much game time. In some cases the GM can call for things like "take 3r" since he knows nothing significant can happen for a little bit. Or fast forward even quicker. I've found that 3r movement increments are good when exploring through fog of war, movement, facing, lighting, and vision. It works for the players moving and talking, and for me as GM moving and reacting with the opposition under fog of war.
+
+\
+
+One design choice that slows down the gameplay is the action -- reaction dynamic and the possibility to mix movement and actions. This will take longer since it switches between players very often. I belive the benefit is worth it. It gives the reacting player options on how to tackle problems imposed on the Hero and can give rise to interesting reaction chains allowing to better collaboration and coordination between Heroes.
+
+For the alternative design, see e.g. Space Hulk where the target of an action has no options for reactions, and the target defense is baked into the attack roll. But it is faster since the one player runs through a whole round of all his units before switching to the other player. Note how much slower it is to advance against overwatch.
 
 
 \section*{simplified or complex}

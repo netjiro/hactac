@@ -10,4 +10,4 @@ rm *{.log,.aux,.toc,.dvi,.out}
 
 aplay ~/doc/sound/softpop.wav
 
-okular 00*pdf &
+#okular 00*pdf &
