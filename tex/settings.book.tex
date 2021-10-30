@@ -29,7 +29,7 @@
 
 
 %-------------------------------------------------------------------------------
-% set UK british hyphenation [english] sets US
+% set UK british hyphenation. default [english] sets US
 \usepackage[british]{babel}
 
 
@@ -289,6 +289,17 @@
 % info can be found here:
 % http://theory.uwinnipeg.ca/localfiles/infofiles/teTeX/latex/hyperref/manual.pdf
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+
+
+%-------------------------------------------------------------------------------
+% Want to be able to request enough vertical space available
+% or force a new page
+% \needspace{5\baselineskip}      << reserves approximately 5 lines, leaves raggedbottom, more efficient
+% \Needspace{5\baselineskip}      << reserves exactly 5 lines, leaves raggedbottom, less efficient
+% \Needpsace*{5\baselineskip}     << leaves flushbottom if \flushbottom is in effect, otherwise ragged
+\usepackage{needspace}
+
 
 
 %-------------------------------------------------------------------------------
