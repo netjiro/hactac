@@ -94,11 +94,11 @@ if len(sys.argv) != 1 :
 def die(n):
     return random.randint(1,n)
 
-# make some dice functions on the form: dN()
+# create more dice functions on the form: dN()
 for n in {2,3,4,5,6,7,8,9,10,12,15,20,30,40,50,60,90,100}:
     exec("def d"+str(n)+"(): return die("+str(n)+")")
 
-# and some more dice functions on the form: r2dN()
+# create more dice functions on the form: r2dN()
 for n in {3,4,5,6,7,8,9,10,20}:
     exec("def r2d"+str(n)+"(): return d"+str(n)+"() + d"+str(n)+"()")
 
@@ -122,14 +122,14 @@ def flat(min,max):
 
 def bell2(min,max):
     if (max-min)%2 != 0:
-        raise NameError("bell2("+str(min)+","+str(max)+") has range " \
+        raise NameError("bell2("+str(min)+","+str(max)+") has range "
                 +str(max-min+1)+", which is not evenly divisible by 2.")
     dx = (max-min)/2 +1
     return min-2 + die(dx) + die(dx)
 
 def bell3(min,max):
     if (max-min)%3 != 0:
-        raise NameError("bell3("+str(min)+","+str(max)+") has range "\
+        raise NameError("bell3("+str(min)+","+str(max)+") has range "
                 +str(max-min+1) +", which is not evenly divisible by 3.")
     dx = (max-min)/3 +1
     return min-3 + die(dx) + die(dx) + die(dx)
@@ -195,10 +195,11 @@ class Character:
         cha_xp =   "cha " + pad2(str(self.cha)) + pad20
         # create right column text
         str_hp = str_hp + "hp " + str(self.hp) + " abs 0"
-        dex_move = dex_move + "m" + str(self.m) + " w" + str(self.w) \
-                + " r" + str(self.r) + " d" + str(self.d)
+        dex_move = (dex_move + "m" + str(self.m) + " w" + str(self.w)
+                + " r" + str(self.r) + " d" + str(self.d))
         con_stam = con_stam + "stamina " + str(self.stam)
-        int_vis = int_vis + "vision " + str(self.visRange) + " " + str(self.visMode) + " " + str(self.visArc)
+        int_vis = (int_vis + "vision " + str(self.visRange) + " "
+                + str(self.visMode) + " " + str(self.visArc))
         psy_mana = psy_mana + "mana " + str(self.mana)
         per_ap = per_ap + "action points " + str(self.ap)
         cha_xp = cha_xp + "xp " + str(self.xp)
@@ -308,7 +309,7 @@ def rollHuman():
     char.mana = r2d10()                   #  2 - 20  11
     char.ap = 3 + int(d10() / 8)          #  3 -  4   7,3
     char.xp = 100 + d20()                 # 101-120 110
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
@@ -346,7 +347,7 @@ def rollDwarf():
     char.mana = r2d10()                   #  2 - 20  11
     char.ap = 3 + int(d10() / 9)          #  3 -  4   8,2
     char.xp = 105 + d20()                 # 106-125 115
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
@@ -361,11 +362,13 @@ def rollDwarf():
     dungeoneeringbonus = 0
     if dungeoneeringbonus > 0:
         char.bonuses.append("dungeoneering bonus +" + str(dungeoneeringbonus))
-    char.money = str(d10())+" gold, "+str(d20())+" silver, "+str(d20())+" copper" + ", and a gemstone worth " + str(5+d6()) + " gold"
+    char.money = (str(d10())+" gold, "+str(d20())+" silver, "+str(d20())+" "
+            +" copper" + ", and a gemstone worth " + str(5+d6()) + " gold")
     char.extras.append("con bonus +3 against poisons")
-    char.extras.append("Dwarves without any gems, and/or with less than 5 gold \n" \
-            + "total coin suffer psy-1 mod until wealthy again.")
-    char.extras.append("Dwarves with 50+ gold in coins and gems gain psy+1 mod while wealthy.")
+    char.extras.append("Dwarves without any gems, and/or with less than "
+            +"5 gold \n"+"total coin suffer psy-1 mod until wealthy again.")
+    char.extras.append("Dwarves with 50+ gold in coins and gems gain psy+1 "
+            +"mod while wealthy.")
     # skills
     char.skills.append("Dwarvish " + str(flat(4,5+int(char.int/3))))
     char.skills.append("Common " + str(flat(3,4+int(char.int/3))))
@@ -399,22 +402,23 @@ def rollElf():
     char.mana = r2d10() +4                #  6 - 24  15
     char.ap = 3 + int(d10() / 5)          #  3 -  5   4,5,1
     char.xp = 110 + d20()                 # 111-130 120
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
     hagglebonus = -flat(1,3)
     avoidbonus = flat(0,2)
-    char.bonuses.append("haggle bonus -" + str(hagglebonus))
+    char.bonuses.append("haggle bonus " + str(hagglebonus))
     if avoidbonus > 0:
         char.bonuses.append("avoid bonus +" + str(avoidbonus))
-    char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
-    char.money = "What for? Well I have "+ str(d5()) + " silver and " + str(d10()) + " copper somewhere here"
+    char.money = ("What for? Well I have "+ str(d5()) + " silver and "
+            + str(d10()) + " copper somewhere here")
     char.extras.append("immune to poisons")
-    char.extras.append("Elves who are staying in a city or cave without access to nature \n"+
-                       "suffer psy-1 mod per week to max -3.")
-    char.extras.append("This is immediately restored to mod-0 when returning to nature.")
+    char.extras.append("Elves who are staying in a city or cave without "
+            +"access to nature \n"+"suffer psy-1 mod per week to max -3.")
+    char.extras.append("This is immediately restored to mod-0 when "
+            +"returning to nature.")
     # skills
     char.skills.append("Elvish " + str(flat(5,6+int(char.int/3))))
     char.skills.append("Common " + str(flat(2,4)))
@@ -452,12 +456,13 @@ def rollHalfling():
     char.mana = r2d10()                   #  2 - 20  11
     char.ap = 3 + int(d10() / 4)          #  3 -  5   3,4,3
     char.xp = 100 + d20()                 # 101-120 110
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
-    char.bonuses.append("tackle and block penalty -" + str(d2()))
+    tacklebonus = -flat(1,2)
+    char.bonuses.append("tackle and block bonus " + str(tacklebonus))
     sneakbonus = 0
     if roll(50):
         sneakbonus = flat(1,3)
@@ -471,7 +476,8 @@ def rollHalfling():
         gossipbonus = flat(1,3)
         char.bonuses.append("gossip bonus +" + str(gossipbonus))
     char.money = str(d4())+" gold, "+str(d8())+" silver, "+str(d20())+" copper"
-    char.extras.append("Halflings gain psy+1 for 24h when eating good food (3x price)")
+    char.extras.append("Halflings gain psy+1 for 24h when eating good "
+            +"food (3x price)")
     # skills
     char.skills.append("Common " + str(flat(3,4+int(char.int/3))))
     # done
@@ -504,7 +510,7 @@ def rollOrc():
     char.mana = r2d10() -5                # -3 - 15   6
     char.ap = 3 + int(d10() / 9)          #  3 -  4   8,2
     char.xp = 90 + d20()                  # 91 -110 100
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
@@ -515,15 +521,16 @@ def rollOrc():
     brawlbonus = flat(0,3)
     if brawlbonus > 0:
         char.bonuses.append("brawl bonus +" + str(brawlbonus))
-    char.money = str(d6())+" silver, "+str(d10())+" copper\n    "\
-            + str(d4()) + " large teeth/claws"
+    char.money = (str(d6())+" silver, "+str(d10())+" copper\n    "
+            +str(d4()) + " large teeth/claws")
     # skills
     char.skills.append("Svartlingo " + str(flat(2,4)))
     char.skills.append("Common " + str(flat(1,3)))
     #char.skills["veteran (incl bonus)"] = max(veteranbonus, d3())
     brawlskill = flat(1,4-brawlbonus)
     if brawlbonus > 0:
-        char.skills.append("brawl "+str(brawlskill+brawlbonus)+"("+str(brawlskill)+"+"+str(brawlbonus)+")")
+        char.skills.append("brawl "+str(brawlskill+brawlbonus)
+                +"("+str(brawlskill)+"+"+str(brawlbonus)+")")
     else:
         char.skills.append("brawl "+str(brawlskill))
     # maneuvers
@@ -537,16 +544,19 @@ def rollOrc():
     bitedam = flat(1,5)
     fistdam = int(char.str/3)                          # 1-4 (1,3,3,2)
     kickdam = int(char.str/3)+2                        # 3-6
-    char.extras.append("brawl fist: "+str(brawlskill)+" dam "+str(fistdam) + " fast+1")
+    char.extras.append("brawl fist: "+str(brawlskill)+" dam "
+            +str(fistdam) + " fast+1")
     char.extras.append("brawl kick: "+str(brawlskill)+" dam "+str(kickdam))
-    char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam) + " slow-1, gives +1 extra pain")
+    char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam)
+            +" slow-1, gives +1 extra pain")
     if roll(33):
         clawdam = fistdam -1
         if roll(50):
             clawdam = fistdam +1
             if roll(25):
                 clawdam = fistdam +2
-        char.extras.append("brawl claw: "+str(brawlskill)+" dam "+str(clawdam)+" fast+1 first two attacks don't require stamina")
+        char.extras.append("brawl claw: "+str(brawlskill)+" dam "
+                +str(clawdam)+" fast+1 first two attacks don't require stamina")
     # done
     return char
 
@@ -577,19 +587,20 @@ def rollGoblin():
     char.mana = r2d8()-4                  # -2 - 12   5
     char.ap = 3 + int(d10() / 4)          #  3 -  5   3,4,3
     char.xp = 80 + d20()                  # 81 -100  90
-    # fixup
+    # fixup movement speeds
     char.w = max(char.m + 1, char.w)
     char.r = max(char.w + 1, char.r)
     char.d = max(char.r + 1, char.d)
     # tertiary
-    char.bonuses.append("tackle and block penalty -" + str(1+d2()))
+    tacklebonus = -flat(2,3)
+    char.bonuses.append("tackle and block " + str(tacklebonus))
     sneakbonus = d3()
     sneakskill = d2() -1
     sneaktot = sneakskill + sneakbonus
     char.bonuses.append("sneak bonus +" + str(sneakbonus))
     # ? Nullskull
     if char.mana < 0 and roll(50):
-        char.mana = -9
+        char.mana = -99
         char.skills.append("Nullskull")
     # skills
     char.skills.append("Svartlingo " + str(flat(2,4)))
@@ -597,18 +608,24 @@ def rollGoblin():
     brawlskill = flat(1,3)
     char.skills.append("brawl " + str(brawlskill))
     # extras
-    char.extras.append("goblins can live on half rations and can eat spoiled food")
+    char.extras.append("goblins can live on half rations "
+            +"and can eat spoiled food")
     fistdam = int(char.str/3)                          # 1-4 (1,3,3,2)
     kickdam = int(char.str/3)+2                        # 3-6
     bitedam = 1+int(d10()/3)                                     # 1-4 (2,3,3,2)
     scratchdam = int(1+d10()/10)                                 # 1-2 (9,1)
-    char.extras.append("brawl fist: "+str(brawlskill)+" dam "+str(fistdam) + " fast+1")
-    char.extras.append("brawl kick: "+str(brawlskill)+" dam "+str(kickdam))
-    char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam)+" 3ap (2ap if both hands free)")
-    char.extras.append("brawl scratch: "+str(brawlskill)+" dam "+str(scratchdam)+" 2ap (1ap if both hands free)\n" + "    every second attack costs 0 stamina")
-    char.money = str(int(d10()/4))+" silver, "+str(d12())+" copper\n    "\
-            + str(d4())+" teeth, " + str(d3())+ " stones, "\
-            + str(d2())+ " feathers, "+ str(d3())+" glass beads"
+    char.extras.append("brawl fist: "+str(brawlskill)+" dam "
+            +str(fistdam) + " fast+1")
+    char.extras.append("brawl kick: "+str(brawlskill)+" dam "
+            +str(kickdam))
+    char.extras.append("brawl bite: "+str(brawlskill)+" dam "+str(bitedam)+" "
+            +"3ap (2ap if both hands free)")
+    char.extras.append("brawl scratch: "+str(brawlskill)+" dam "
+            +str(scratchdam)+" 2ap (1ap if both hands free)\n" + "    "
+            +"every second attack costs 0 stamina")
+    char.money = (str(int(d10()/4))+" silver, "+str(d12())+" copper\n    "
+            +str(d4())+" teeth, " + str(d3())+ " stones, "
+            +str(d2())+ " feathers, "+ str(d3())+" glass beads")
     # done
     return char
 

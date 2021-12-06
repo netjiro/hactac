@@ -33,34 +33,68 @@ Old used equipment can be found at greatly reduced prices, 50\% or even 25\% of 
 %--------------------------
 The list prices and equipment stats are for regular equipment. Well made equipment has better stats perhaps, or weighs 10-30\% less, but costs 3-5 times more than regular quality. Master craftsman quality costs 5-10 times more than regular quality, and at least a few of gold. They cost a lot but has better stats, maybe a point or two extra damage or a tohit bonus, and weighs less and/or has 30-50\% better absorption, lower str or dex requirements, etc.
 
-%A master craftsman sword can have a +1 to damage, or +1 bonus to the weapon skill, or +5 higher abs or 33\% lower weight. Or some such bonus or beneficial property.
-
-Not all equipment or properties can be boosted like this. An abs 2 leather armour will cost much more than 5 gold (10x leather armour base price), if it is even possible to make, and would probably require the hide from some very exotic and dangerous monster.
+Not all equipment or properties can be boosted like this. An abs 2 leather armour will cost much more than 5 gold (10x leather armour base price), if it is even possible to make, and would probably require the hide from some very exotic and dangerous monster. An acid resistant shield requires perhaps the stomach lining of some rare nasty, notorious for their bad temper and insatiable apetite.
 
 
 \section*{Custom made items}
 %---------------------------
-It's possible to order custom made items adapted specifically for the stats of the Hero. It costs a lot more, and should always be treated as special equipment, or even exotic in cases where the Hero wants something far out of the ordinary.
+It's possible to order custom made items adapted specifically for the stats of the Hero. It costs a lot more, and should always be treated as special or exotic equipment.
 
 For reasonable customisations, e.g. a little bit larger / smaller sword, prices usually start with a starting cost of a few gold, plus 3-5x the base price of the normal item.
 
 Heavy weapons are a normal customisation, and costs 1-3g base plus 3x the base price of the regular item. Should be treated as well made with "special equipment" availability, and usually takes a week or so to make.
 E.g: a heavy large longbow is a typical request for very strong infantry archers. Buying a single one or a couple of them will cost 1g + 3x base, ca 6-7g, and the required special heavy arrows cost, lets say, 1s per order + 3x base price, so around 1g for a 30 arrow order. Buying large orders of bows and arrows is much cheaper since it is essentially still based on military somewhat regular stuff.
+A custom made weapon should not cost less than 3g.
+
+Common customisations like heavy weapons or plated shields are relatively normal and should lie at the lower end of the customisation price range. E.g: a heavy broadsword should be 1g baseline start cost plus 3x the normal list price.
+The heavy customisation usually adds 20-40\% encumbrance and 30-50\% abs.
+
+It probably takes a craftsman a couple of days to make a custom sword for example, but much longer for a full custom suit of armour.
+
+
+\subsection*{Master craftsmanship}
+%---------------------------------
+Master crafted weapons are expensive and rare. Usually cost 5x-10x the list value of the weapon plus 5-10 gold as baseline starting cost. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
+Ordering a customised master crafted weapon costs more. Perhaps 10-15x list price and 10 gold baseline starting cost.
+
+Master crafted heavy customisation can have perhaps upwards of 50-75\% higher abs than standard list value. Exotic level master crafted perhaps even 100\% higher abs with only 33\% higher encumbrance.
+
+It probably takes a week for a master craftsman to make a high quality or custom weapon, provided he has enough of the exotic materials available. Otherwise there are always heroes around who can take it upon themselves to go out and find that rare lump of sky iron, or barrel of basilisk blood.
+
+
+\subsection*{Magical stuff}
+%--------------------------
+Magical potions and single use or multi use items are mostly custom made special or exotic equipment. A few brands and types of magical potions and items are made in quantity and thus much cheaper, like Quaff! But most items are custom made to order, produced singularly or in small batches, expensive. Probably time consuming and may require rare ingredients the Heroes must hunt down.
+
+\noindent
+The cost of a custom made magical potion can be estimated to:\\
+\verb|1 + (0.25 * (mana+1) * scf * psy) gold| \\
+E.g: a potion of firestorm with 3 mana would cost approximately:\\
+\verb|1 + (0.25 * (3+1) * 0.33 * 8 ) = 3.6 gold|
+
+\noindent
+The cost of a custom made magical single use or multi use magical item can be estimated to: \\
+\verb|single use:  3 + (0.25 * (mana+2) * scf * psy) gold| \\
+\verb|multi use : 5 + uses * (0.25 * (mana+2) * scf * psy) gold| \\
+E.g: a single use wand and one with 4 charges of 3 mana shock bolts would cost approximately: \\
+\verb|3 + ( 0.25 * (3+2) * 0.33 * 7 ) = 5.9 gold| \\            % 3 + 2.8875
+\verb|5 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 16.6 gold|         % 5 + 4 * 2.8875
+
+\noindent
+Permanent magical items are much more expensive.
 
 
 
-% testing table ...
 
-%\begin{tabular}{lccclcll}
-%item             &   g & s & c & ~ ~ & enc  & ~ ~ & notes \\
-%\hline
-%dagger           &   0 & 2 & 0 & & 0.5  & & \\
-%rapier           &   0 & 8 & 0 & & 0.75 & & \\
-%short sword      &   0 & 6 & 0 & & 0.75 & & blajblaj \\
-%\hline
-%\end{tabular}
 
-% nah, I'll stick with verbatim small
+
+
+
+
+
+
+
+
 
 
 
@@ -69,18 +103,12 @@ E.g: a heavy large longbow is a typical request for very strong infantry archers
 % weapons and armour
 %-------------------
 
-\goodbreak
+\goodbreak \needspace{10\baselineskip}
 \phantomsection\addcontentsline{toc}{section}{weapons and armour}
 \section*{Weapons and armour}
 
 
-% try keeping the price list looking good.
-% just insert the line blow to allow page break at a good place
-%\end{verbatim} \end{samepage} \goodbreak \begin{samepage} \begin{verbatim}
-
-
 \small
-%\begin{samepage}
 \begin{verbatim}
                      g s c    encumbrance
                      -----    -----------
@@ -289,7 +317,8 @@ arbalest bolts:
 
 ballista shots/bolts/spears/etc
 1 shot               5-50c       0.5-2.0  see ballista
-\end{verbatim} \normalsize
+\end{verbatim}
+\normalsize
 
 
 
@@ -301,6 +330,7 @@ ballista shots/bolts/spears/etc
 %basic equipment
 %---------------
 
+\goodbreak \needspace{10\baselineskip}
 \phantomsection\addcontentsline{toc}{section}{basic equipment}
 \section*{Basic equipment price list}
 \label{sec:basicequipmentpricelist}
@@ -421,8 +451,7 @@ dirt wedge / piton   0 1 0       0.5   anchoring str 10
 %special equipment
 %-----------------
 
-%\begin{samepage}
-\goodbreak
+\goodbreak \needspace{10\baselineskip}
 \phantomsection\addcontentsline{toc}{section}{special equipment}
 \section*{Special equipment price list}
 
@@ -451,7 +480,6 @@ pain killer            1 0       0.25  eliminates 1 pain after 3r
 pain killer            3 0       0.25  eliminates 2 pain after 3r
 pain killer            5 0       0.25  eliminates 3 pain after 3r damages 1hp
 
-\end{verbatim} \goodbreak \begin{verbatim}
 exquisite quiver     8 0 0       0.33  holds 10 arrows, alleviates bow snap shot
                                        mods by 1 due to smooth reloads.
 
@@ -478,7 +506,6 @@ cave cart            2 0 0             str3 to drag around, drag: stam-1/r
 tunnel plug          5 0 0
 tunnel plug large    8 0 0
 
-\end{verbatim} \goodbreak \begin{verbatim}
 fightlight           5 0 0       2.0 2r setup, then light, 90deg 40sq
 fightlight small     3 0 0       1.0 2r setup, then light, 90deg 20sq
 fastfire addon      +3gold       0.5 takes only 1a to light
@@ -498,42 +525,6 @@ glow fly             0 2 0  training command mod-3 +1/s, glow strength +1/s
 \normalsize
 
 
-\subsection*{Master crafted and Customised weapons}
-%--------------------------------------------------
-Master crafted weapons can be purchased as special equipment, and usually cost 5x-10x the list value of the weapon plus 5-10 gold as baseline starting cost to make even staffs and short swords expensive when master crafted. These weapons usually have 30-50\% improved abs, and perhaps a mod+1 to attack and/or parry or dam+1 properties as well. Master crafted weapon should not cost less than 5g.
-
-A master craftsman can also make customised weapons. E.g: an axe or a sword that is suited specifically for the properties of the customer, with the damage and strength requirements matched perfectly. Custom items usually cost 3-5x of standard list value plus 1-3 gold as a baseline starting cost. A custom weapon should not cost less than 3g.
-
-Then it's possible to make a custom master crafted weapon, combining custom requirements with master crafted bonuses, but at even higher prices, and 10g minimum. Perhaps 10-15x list price and 10 gold baseline starting cost.
-
-It probably takes a week for a master craftsman to make high quality or custom weapon, provided he has enough of the high quality materials available. Otherwise there are always heroes around who can take it upon themselves to go out and find that rare lump of sky iron, or barrel of basilisk blood.
-
-\
-
-Common customisations like heavy weapons or plated shields are relatively normal and should lie at the lower end of the customisation price range. E.g: a heavy broadsword should be 1g baseline start cost plus 3x the normal list price.
-
-Heavy customisation usually adds 20-40\% encumbrance and 30-50\% abs. Master crafted heavy customisation can have perhaps upwards of 50-75\% higher abs than standard list value. Exotic level master crafted perhaps even 100\% higher abs with only 33\% higher encumbrance.
-
-\
-
-Magical potions and single use or multi use items are mostly custom made special or exotic equipment. A few brands and types of magical potions and items are made in quantity and thus much cheaper, like Quaff! But most items are custom made to order, produced singularly or in small batches, expensive, time consuming.
-
-\noindent
-The cost of a custom made magical potion can be estimated to:\\
-\verb|1 + (0.25 * (mana+1) * scf * psy) gold| \\
-E.g: a potion of firestorm with 3 mana would cost approximately:\\
-\verb|1 + (0.25 * (3+1) * 0.33 * 8 ) = 3.6 gold|
-
-\noindent
-The cost of a custom made magical single use or multi use magical item can be estimated to: \\
-\verb|single use:  3 + (0.25 * (mana+2) * scf * psy) gold| \\
-\verb|multi use : 5 + uses * (0.25 * (mana+2) * scf * psy) gold| \\
-E.g: a single use wand and one with 4 charges of 3 mana shock bolts would cost approximately: \\
-\verb|3 + ( 0.25 * (3+2) * 0.33 * 7 ) = 5.9 gold| \\            % 3 + 2.8875
-\verb|5 + 4 * ( 0.25 * (3+2) * 0.33 * 7 ) = 16.55 gold|         % 5 + 4 * 2.8875
-
-\noindent
-Permanent magical items are much more expensive.
 
 
 
@@ -544,8 +535,7 @@ Permanent magical items are much more expensive.
 %exotic equipment
 %----------------
 
-%\begin{samepage}
-\goodbreak
+\goodbreak \needspace{10\baselineskip}
 \phantomsection\addcontentsline{toc}{section}{exotic equipment}
 \section*{Exotic equipment price list}
 
@@ -582,18 +572,20 @@ exploway             4 0 0       0.25  maginade: stun 15 -3/sq from target.
 time fly             5 0 0       0.1   instant rewinds time one action,
                                        ignores initiative.
 
+ear whisper          3 0 0       0.1   small worms you stick in your ear for
+                                       instant communication between wearers
+                                       price is per worm in a batch.
+
 sentinel base        5 0 0       5.0   15 charge ghost warrior
                                        skill 8, dam 4
 
-\end{verbatim} \goodbreak \begin{verbatim}
-Banor's Gate        30 0 0       str   size 2x2, str 15
-Banor's Gate        60 0 0       str   size 1x1, str 8
+Banor's Gate        30 0 0       str   size 2x2, require tot str 15 to carry
+Banor's Gate        60 0 0       str   size 1x1, require tot str 8 to carry
 
 Wunjee kit          10 0 0       ---   anchor + cord
 Wunjee recharge      3 0 0
 
 PortaPortal         10 0 0    2x 5.0   10r, 1sq, activates in 2r
-
 
 trained darkwing         8g  training command mod-3 +1/g
 trained wolverine        8g  training command mod-3 +1/g
@@ -601,7 +593,6 @@ empowering brightwing   25g  training command mod-3 +1/g
 medicinal serpent       50g  training command mod-3 +1/g
 
 \end{verbatim}
-%\end{samepage}
 \normalsize
 
 
