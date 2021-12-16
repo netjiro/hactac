@@ -762,7 +762,7 @@ Miscellaneous skills that are not necessarily combat related.
 
 \skill{Skill scf 0.5 "jump":} mod+1 to jump actions the for each skill level of jump. It also reduces jump skill/3 movement point cost from the jumped distance.
 
-Taking a mod-3 allows the Hero to attempt a 3ap jump action instead of a full round.
+A trained jumper can make a jump in a 3ap action instead of a full round action. It's also possible to use fewer ap, taking a mod-1 for each reduced ap. E.g: a 0ap jump is mod-3.
 
 
 \skill{Skill scf 0.5 "climb":} mod+1 to climb actions for each skill level of climb. Allows to try speed climbing. Each extra sq/r speed above the base 1sq/r is mod-3 to the roll.
@@ -1156,12 +1156,15 @@ A character with companion command can control as many companions as his skill l
 Henchmen under a Hero's control is generally handled by the Hero's player (with GM discretion), while henchmen who are not covered by a Hero's companion command are controlled by the GM.
 
 
-\skill{Skill scf 0.5 "meditate":} means sitting down and taking no other actions while resting. Successfully meditating regains extra stamina beyond just resting, with every success/3 regaining one extra stamina. Roll once per round meditating. E.g: meditate success+5 regains +2 stamina above the normal resting stamina recovery.
+\skill{Skill scf 0.5 "meditate":} Sit down and concentrate to rest faster. Roll once per round meditating. Regain +1+success/3 stamina above normal rest.
+E.g: meditate success+5 regains +2 stamina above the normal resting stamina recovery. Success=0 rest+1, success=3 rest+2.
 
 Meditating in a combat zone is mod-3. Need "calm" in range 10-psy.
+During meditation the Hero has per-6.
 
 
-\skill{Skill scf 1.0 "tunnelist":} This Heroic digger can carve out tunnels and hack through objects at amazing speed. Each level of "tunnelist" increases digging/hacking speed by 50\% of base speed. E.g: A tunnelist 5 is hacking away at 3x the normal speed.
+\skill{Skill scf 1.0 "tunnelist":} This Heroic digger can carve out tunnels and hack through objects at amazing speed. Each level of "tunnelist" increases digging/hacking speed by 50\% of base speed.
+E.g: A tunnelist 5 is hacking away at 3x the normal speed.
 
 Base speed: dirt 5r/sq requires shovel, stone 15r/sq requires pick-axe.
 
@@ -1249,17 +1252,17 @@ Note: that in round two she could just as well have declared 8ap just like in th
 
 % list cost to quick for different levels:
 %
-% 3 -> 4 : 16-9=  7    @2 = 14    @3 = 21    @4 = 28
-% 3 -> 5 : 25-9= 16    @2 = 32    @3 = 48    @4 = 64
-% 3 -> 6 : 36-9= 27    @2 = 54    @3 = 81    @4 =108
+% 3 ->  4 : 16-9=  7    @2 = 14    @3 = 21    @4 = 28
+% 3 ->  5 : 25-9= 16    @2 = 32    @3 = 48    @4 = 64
+% 3 ->  6 : 36-9= 27    @2 = 54    @3 = 81    @4 =108
 %
-% 3 -> 7 : 49-9= 40    @2 = 80    @3 =120    @4 =160
-% 3 -> 8 : 64-9= 55    @2 =110    @3 =165    @4 =220
-% 3 -> 9 : 81-9= 72    @2 =144    @3 =216    @4 =288
+% 3 ->  7 : 49-9= 40    @2 = 80    @3 =120    @4 =160
+% 3 ->  8 : 64-9= 55    @2 =110    @3 =165    @4 =220
+% 3 ->  9 : 81-9= 72    @2 =144    @3 =216    @4 =288
 %
-%     10         91        182
-%     11        112        224
-%     12        135        270
+% 3 -> 10         91        182
+% 3 -> 11        112        224
+% 3 -> 12        135        270
 %
 % 50xp raises sword from 7->10,   (100-49 = 51), so already there it's worth
 % raising to double actions @2 !,    too early perhaps ?
@@ -1295,8 +1298,15 @@ Note: that in round two she could just as well have declared 8ap just like in th
 % +6    14 - 8 / (11 - 5)   132 +  67 = 199          200           140
 
 
+%\TODO: perhaps set quick cost as a list,
+%       10, 25, 45, 70, 100, 135                 +10,+15,+20,+25,+30,+35
+%       15, 35, 60, 90, 125, 165                 +15,+20,+25,+30,+35,+40
+%       (10 * lvl) +  (4 * lvl^2):
+%       14, 36, 66, 104, 150, 204                +14,+22,+30,+38,+46,+54
 \skill{Skill scf 6.0 "quick":} gives one extra action point per level. \\
 E.g: base max action points 4 and quick 3 means the Hero can declare 8ap and only take mod-1 action penalty for that round.
+
+\noindent \todo fix quick cost
 
 
 \skill{Skill scf 4.0 "mobile":} reduces the movement penalties from declaring faster movement by one for each skill level. \\
@@ -1793,7 +1803,7 @@ E.g: a 1r quick shot bow prep is mod-3, then a 2r held fire is mod-2, for a tota
 Held fire cannot be used with heavy bows.
 
 
-\skill{Maneuver (cost 10) "draw-fire":} when using a too strong bow the shooter can take one less mod point from missing strength by using the draw-fire technique and spending +1stam avove the normal attack. It cannot be aimed.
+\skill{Maneuver (cost 10) "draw-fire":} when using a too strong bow the shooter can take one less mod point from missing strength by using the draw-fire technique and spending +1stam above the normal attack. It cannot be aimed.
 
 
 \skill{Maneuver (cost 10) "up close":} cancels the contact mod-3 for ranged attacks when in base contact with target. The short mod+1 is not in effect though.
@@ -1824,7 +1834,7 @@ Size small cost 10xp: halfling, goblin, dog, etc. \\
 Size normal cost 20xp: human, orc, dwarf, elf, wolf, etc.
 
 
-\skill{Maneuver (cost 5) "unfriendly fire":} When shooting into melee, unfirendly fire increases the fail gap before the shooter hits an ally in base contact with the target.
+\skill{Maneuver (cost 5) "unfriendly fire":} When shooting into melee, unfriendly fire increases the fail gap before the shooter hits an ally in base contact with the target.
 
 upgrade:\\
 cost 5: increase the fail gap by 3 before hitting an ally \\

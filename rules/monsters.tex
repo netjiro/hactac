@@ -1,6 +1,6 @@
 %--------|---------|---------|---------|---------|---------|---------|---------|
 %       10        20        30        40        50        60        70        80
-
+%-------------------------------------------------------------------------------
 
 \cleardoublepage
 
@@ -199,6 +199,9 @@ thrash: 3ap autohit dam6 pen2   (bite+pen)     max once per round
 A clamped wolf cannot take avoid action, but will likely let go when hit.
 Wolves can drag a clamped target: str vs str, drag 1+diff/3 sq, 1r action.
 
+Wolves can make knockdown claw attacks. Use a charge + claw attack, use 3ap, add the effective charge bonus to the wolf's strength and roll resistance vs the target str, or target str + balance if the target takes an action to resist.
+All wolves get mod+3 to bite attacks against knocked down targets.
+
 Single wolves have psy-3. Long term single wolves go deranged.
 
 \
@@ -212,7 +215,7 @@ dex 12    m2 w6 r12 d18
 psy  5    vision 15, dusk, sniff 10
 per 13    ap 6
 ----------
-bite    7 3ap dam 6
+bite    7 3ap dam 6, clamp down option
 claw    5 2ap dam 3
 thrash  autohit dam6 pen2 3ap max once per turn
 avoid   5 yield+3
@@ -231,8 +234,8 @@ dex 10    m2 w7 r14 d21
 psy  7    vision 15, dusk, sniff 10
 per 15    ap 6
 ----------
-bite    9 3ap dam 8 pen 1, consistent 1
-claw    7 2ap dam 3
+bite    9 3ap dam 8 pen 1, consistent 1, clamp down option
+claw    7 2ap dam 4
 thrash  autohit dam8 pen3 3ap max once per turn
 avoid   7 yield+3
 charge  9, mobile 4, balance 6, veteran 2, rapid 3
@@ -242,7 +245,7 @@ charge  9, mobile 4, balance 6, veteran 2, rapid 3
 %\
 
 
-\begin{samepage}
+\goodbreak \begin{samepage}
 \subsection*{Bear}
 Bears are usually encountered alone or with a cub or two. They will sniff you down and they are not afraid. Charge in, knockdown, claws and bite. Seriously wounded bears will flee.
 

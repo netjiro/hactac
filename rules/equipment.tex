@@ -3,47 +3,18 @@
 
 
 \cleardoublepage
+\flushbottom
 
 \phantomsection\addcontentsline{toc}{chapter}{equipment}
 \chapter*{Equipment}
 \chaptermark{equipment}
 
 \begin{readoutloud}
-It's very brave to journey up the mountain, in the dead dark of winter, to slay the three headed beast which dwells in the cave, wearing nothing but your nightgown ... but why would you? A nice warm padded brigandine armour? Perhaps a sword and a spear? You'd be glad you brought extra when the first one breaks. Don't forget a shiny shield. Why not have your family crest on it? You don't have a crest? I'll have a herald sort that out for you while you wait. A warm cup of coffee afterwards? And a smoulder box to quickly start the fire up there in the icy, dark, stormy winds. Don't forget the lantern, and some extra oil. A few torches to place at strategic corners. Some rope and a hook? A few sacks if the monster has loot stashed away? Almost forgot the water skin. Can't go into battle thirsty. And some rations if the climb takes longer than expected. At this point you'll need a large backpack, but that's heavy. I have this great friendly donkey and two pack bags. He's a great climber up steep terrain. And some oats for the donkey of course, and a few larger water skins as well. And with the donkey to carry things you can easily bring this nice tent, and a comfy bed roll, and this brazier to warm you. A cook pot and some fresh spices perhaps? Goes great with the rations, right? A bottle of wine? But don't drink before taking on the monster.
-
+It's very brave to journey up the mountain, in the dark dead of winter, to slay the three headed beast which dwells in the cave, wearing nothing but your nightgown ... but why would you? A nice warm padded armour? Perhaps a sword and a spear? You'll be glad you brought extra when the monster breaks the first one. Don't forget a shiny shield. Why not have your family crest on it? You don't have a crest? I'll have a herald sort that out for you while you wait. A warm cup of coffee afterwards? And a smoulder box to quickly start the fire up there in the icy, dark, stormy winds. Don't forget the lantern, and some extra oil. A few torches to place at strategic corners. Some rope and a hook? A few sturdy sacks if the monster has loot stashed away? Almost forgot the water skin. Can't go into battle thirsty. And some rations if the climb takes longer than expected. At this point you'll need a large backpack, but that's heavy. I have this great friendly donkey and two pack bags. He's a great climber up steep terrain. And some oats for the donkey of course, and a few larger water skins as well. And with the donkey to carry things you can easily bring this nice tent, and a comfy bed roll, and this brazier to warm you. A cook pot and some fresh spices perhaps? Goes great with the rations, right? A bottle of wine? But don't drink before taking on the monster.
 And while we're at it, I also have this wonderful ...
 \end{readoutloud}
 
 
-
-
-
-
-%---------    equipment.tex   all done changing verbatim listings
-
-
-
-%\
-%
-%%\goodbreak \small \begin{samepage} \begin{verbatim}
-%%\end{verbatim} \blocklistgap \begin{verbatim}
-%%\end{verbatim} \end{samepage} \normalsize \goodbreak
-%%
-%%\
-%%
-%\TODO continue blocklist replacement here
-%
-%
-%\small \begin{samepage} \begin{verbatim}
-%\end{verbatim} \blocklistgap \begin{verbatim}
-%\end{verbatim} \end{samepage} \normalsize
-%
-%\
-%
-
-
-
-%---------
 
 
 
@@ -57,11 +28,10 @@ And while we're at it, I also have this wonderful ...
 \phantomsection\addcontentsline{toc}{section}{weapons and armour}
 \section*{Weapons and armour}
 
-Weapons vary greatly in how they behave in game. Damage, absorption, penetration, speed, reach, modifications to attacks or parries, or how difficult they are to parry or avoid, special versions of attacks, and so on.
-
+Weapons vary greatly: Damage, absorption, penetration, speed, reach, modifications to attacks or parries, or how difficult they are to parry or avoid, special versions of attacks, and so on.
 The weapons listed below are the common weapon types and sizes. Custom made weapons are treated further down.
 
-There is no realism here. Weapon and equipment names, general and relative statistics, etc, have nothing to do with the real world. Everything is chosen simply to sound interesting and convey some colour to general players who have not spent time studying historical weapons, armour, and equipment. Lots of names like longsword, baselard, estoc, etc, have been heretically misappropriated for fun and flair. These are all fantasy weapons, imagine them like fairytale and fantasy story illustrations, not like actually really useful items.
+There is no realism here. Weapon and equipment names, general and relative statistics, etc, have nothing to do with the real world. Everything is chosen simply to sound interesting and convey some colour to general players who have not spent time studying historical weapons, armour, and equipment. Lots of names like longsword, baselard, estoc, etc, have been heretically misappropriated for fun and flair. These are all fantasy weapons, imagine them like fairytale and fantasy story illustrations, not like historical or actually useable items.
 
 \
 
@@ -70,7 +40,7 @@ Damage stats are supposed to be read as 1dX. E.g: the sword does 1d6 damage not 
 
 \begin{description}
 
-\item[dam] is the maximum damage of the weapon from a normal attack. The attacker rolls for damage in the range [1,dam], where various skills affect how that is done. E.g: dam 7 means damage 1d7, not 1d6+1. For physical tabletop games, dice sets from 2-20 in increments of 1 can be purchased, or simply use your smartphone dice / rng app. On VTT the dice roll or rng scripts support any "dice" rolls.
+\item[dam] is the maximum damage of the weapon from a normal attack. The attacker rolls for damage in the range [1,dam], where various skills affect how that is done. E.g: dam 7 means damage 1d7, not 1d6+1. For physical tabletop games, dice sets from 2-20 in increments of 1 can be purchased, or simply use your smartphone dice / rng app. VTT rng scripts support any sided "dice" rolls.
 
 \item[pen] is the penetration of the weapon, how many points of armour the weapon ignores when applying damage. Penetration never converts to damage, and it's always the full value, never rolled. E.g: dam 3 pen 2 cannot do more than 3 damage, and always ignore 2 abs armour.
 
@@ -98,7 +68,7 @@ E.g: Fancy Fred has fancy attacks 5 but swinging an axe which has finesse 3 and 
 
 The same limitation applies with tricky maneuvers like roundabout smack. The maneuver gives a maximum todefend-6 but if the attacker is wielding a broadsword with finesse 4 the attack is only todefend-4.
 
-\item[str] is the strength requirement of the weapon. Any lacking strength from the wielder gives mod-1 dam-1 when using the weapon.
+\item[str] is the strength requirement of the weapon. Each lacking point of strength gives mod-1 dam-1 when using the weapon.
 
 \item[str bonus cap] are limits on how much strength bonus can be used with the weapon. E.g. a max str dam 1 pen 2 limits the strength bonus to damage to 1 with another 2 giving penetration, to a combined maximum of 3.
 
@@ -672,39 +642,39 @@ at least:      Maneuver=1, Walk=2, Run=3, Dash=4
 leather armour abs 1 mostly like thick clothing made to take a punch
 thick cloth    str 1 (str penalties affect all actions)
                max stamina -1
-               dash-1
-               acrobatics mod-1
-               martial arts mod-1
-               sneak mod-1
-               spellcasting mod-1
-               swim mod-1
+               dash -1
+               acrobatics -1
+               martial arts -1
+               sneak -1
+               spellcasting -1
+               swim -1
                takes 2 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
 chain mail     abs 2 ring, scale, brigantine, etc
 scale mail     str 3 (str penalties affect all actions)
 brigandine     max stamina -2
-               run-1, dash-2
-               dex-1
-               per-1
-               acrobatics mod-3
-               martial arts mod-2
-               spellcasting mod-2
-               sneak mod-3
-               swim mod-3
+               run -1, dash -2
+               dex -1
+               per -1
+               acrobatics -3, climb -1, jump -1
+               martial arts -2
+               spellcasting -2
+               sneak -3
+               swim -3
                takes 3 rounds to put on or take off
 \end{verbatim} \blocklistgap \begin{verbatim}
-plate mail or  abs 3 plate armour of various sorts, incl helmet
-heavy scale,   str 5 (str penalties affect all actions)
+plate mail     abs 3 plate armour of various sorts, incl helmet
+heavy scale    str 5 (str penalties affect all actions)
 h brigandine   max stamina -3
                run-1, dash-3
-               dex-2, yield bonus -1
+               dex-2, yield -1, dodge -1
                per-2, vision-20%, cone vision -20% max 270 deg
-               acrobatics mod-6, climb-1, jump-1
-               martial arts mod-3
-               spellcasting mod-3
-               sneak mod-4
-               swim mod-4
-               avoid mod-1
+               acrobatics -6, climb -2, jump -2
+               martial arts -3
+               spellcasting -3
+               sneak -4
+               swim -4
+               avoid -1
                Turning as separate actions cost more ap:
                45deg=0ap, 90deg=1ap, 135deg=2ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=2ap, 180deg=3ap)
@@ -713,16 +683,16 @@ h brigandine   max stamina -3
 full plate     abs 4 full plate armour with full helmet
                str 7 (str penalties affect all actions)
                max stamina -4
-               walk-1, run-2, dash-4
-               dex-3, yield bonus -2
-               per-3, vision-30%, cone vision -30% max 180 deg
-               acrobatics mod-9, climb-3, jump-3
-               martial arts mod-6
-               tackle mod+1
-               spellcasting mod-4
-               sneak mod-5
-               swim mod-5
-               avoid mod-2
+               walk -1, run -2, dash -4
+               dex -3, yield -2, dodge -2
+               per -3, vision-30%, cone vision -30% max 180 deg
+               acrobatics -9, climb -3, jump -3
+               martial arts -6
+               tackle +1
+               spellcasting -4
+               sneak -5
+               swim -5
+               avoid -2
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=3ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=3ap)
@@ -731,16 +701,16 @@ full plate     abs 4 full plate armour with full helmet
 heavy plate    abs 5 very heavy full plate armour with all the trimmings.
                str 9 (str penalties affect all actions)
                max stamina -5
-               maneuver-1, walk-2, run-3, dash-5
-               dex-4, yield bonus -3
-               per-4, vision-40%, cone vision -40% max 120 deg
-               acrobatics mod-12, climb-6, jump-6
-               martial arts mod-9
-               tackle mod+2
-               spellcasting mod-6
-               sneak mod-6
-               swim mod-6
-               avoid mod-3
+               maneuver -1, walk -2, run -3, dash -5
+               dex -4, yield -3, dodge -3
+               per -4, vision -40%, cone vision -40% max 120 deg
+               acrobatics -12, climb -6, jump -6
+               martial arts -9
+               tackle +2
+               spellcasting -6
+               sneak -6
+               swim -6
+               avoid -3
                Turning as separate action cost more ap:
                45deg=1ap, 90deg=2ap, 135deg=3ap, 180deg=4ap
                (hex: 60deg=1ap, 120deg=3ap, 180deg=4ap)
@@ -761,7 +731,7 @@ Are the monsters a little too far away for your sword? Are you just a bit too la
 Regarding range: Do not think of range as "how long you can shoot or throw", but how far you can \emph{accurately} shoot or throw.
 
 %\TODO:
-\todo: Change "range" stat to "accuracy", and actual range and damage / penetration reduction as the multiples of accuracy the weapon can be used at, or separate damage related range factor.
+\todo Change "range" stat to "accuracy", and actual range and damage / penetration reduction as the multiples of accuracy the weapon can be used at, or separate damage related range factor.
 
 \
 
